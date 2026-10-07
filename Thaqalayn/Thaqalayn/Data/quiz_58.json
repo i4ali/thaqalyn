@@ -1,0 +1,485 @@
+{
+  "1": {
+    "id": "58:1",
+    "surah": 58,
+    "index": 1,
+    "range": [
+      1,
+      6
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 1,
+        "prompt": {
+          "en": "In the narration, how did the Messenger of Allah first respond to the woman complaining about her husband?"
+        },
+        "options": [
+          {
+            "en": "No book had come to judge between her and her husband"
+          },
+          {
+            "en": "Zihar no longer counted as a divorce"
+          },
+          {
+            "en": "She must free a slave in expiation"
+          },
+          {
+            "en": "Her husband was now forbidden to her forever"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "In Imam Ali's report the Prophet first said Allah had sent down no book by which he could judge between her and her husband, so she wept and complained to Allah."
+        },
+        "anchor": {
+          "where": "verses.1.narrations.n1",
+          "quote": "Allah has sent down no book by which I may judge between you and your husband"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 1,
+        "prompt": {
+          "en": "Tabatabai reads Allah's 'hearing' here as His ____ her need, not bare perception."
+        },
+        "options": [
+          {
+            "en": "witnessing"
+          },
+          {
+            "en": "doubting"
+          },
+          {
+            "en": "answering"
+          },
+          {
+            "en": "sensing"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The commentary glosses Allah's 'hearing' of the plea as His answering her need, not mere perception, since He responds to her by sending down the ruling."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads Allah's 'hearing' here as His answering her need, not bare perception"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 2,
+        "prompt": {
+          "en": "\"No zihar takes effect in an oath, nor in causing harm, nor in anger.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Baqir sets the conditions for zihar: it does not take effect in an oath, in causing harm, or in anger, but only in a time of purity with two witnesses."
+        },
+        "anchor": {
+          "where": "verses.2.narrations.n3",
+          "quote": "No zihar takes effect in an oath, nor in causing harm, nor in anger"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 3,
+        "prompt": {
+          "en": "According to the passage, the Shia commentators read 'then retract what they said' as the husband's intention to resume relations and undo the zihar."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The Shia commentators, following the Imams, take 'then retract what they said' to mean the intention to resume relations, so intercourse stays unlawful until the expiation is paid."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Shia commentators follow the Imams of the House of Muhammad: the 'return' is the intention to resume relations and so undo the zihar, and intercourse stays unlawful until the expiation is paid"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 6,
+        "prompt": {
+          "en": "According to the essay, what does the passage say will happen on the Day when Allah raises them all?"
+        },
+        "options": [
+          {
+            "en": "The zihar expiation will be doubled for the unrepentant"
+          },
+          {
+            "en": "Khawla will testify against her former husband"
+          },
+          {
+            "en": "The earlier peoples will be subdued a second time"
+          },
+          {
+            "en": "They will be told of deeds they had forgotten but He counted"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay says the passage turns to those who oppose Allah and His Messenger, and that on the Day of raising Allah will inform them of deeds He counted while they forgot."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "on the Day they are raised Allah will tell them of deeds He has counted and they have forgotten, a witness over all things"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:45:07Z",
+      "review_attempts": 2,
+      "reviewed_at": "2026-10-06T12:46:49Z",
+      "assembled_at": "2026-10-06T12:50:52Z"
+    }
+  },
+  "2": {
+    "id": "58:2",
+    "surah": 58,
+    "index": 2,
+    "range": [
+      7,
+      13
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 7,
+        "prompt": {
+          "en": "According to the commentary, what does it mean that God is the 'fourth' whenever three hold a secret talk?"
+        },
+        "options": [
+          {
+            "en": "He completes the three as a literal fourth"
+          },
+          {
+            "en": "He is present by His knowledge, not in body"
+          },
+          {
+            "en": "He is bodily seated among the three"
+          },
+          {
+            "en": "He is far above, unaware of their talk"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the commentators read God's being their fourth as presence by His knowledge, not by completing the number or standing bodily among them, since God is not a body."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The commentators read His being their fourth as presence by knowledge, not by completing the number or standing bodily among them, for God is not a body"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 8,
+        "prompt": {
+          "en": "When they came they greeted him with 'Good morning, good evening,' the greeting of the people of ____."
+        },
+        "options": [
+          {
+            "en": "ignorance"
+          },
+          {
+            "en": "Paradise"
+          },
+          {
+            "en": "the Book"
+          },
+          {
+            "en": "faith"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "In the narration, when those people came they greeted the Messenger with 'Good morning, good evening,' which it calls the greeting of the people of ignorance."
+        },
+        "anchor": {
+          "where": "verses.8.narrations.n3",
+          "quote": "When they came they greeted him with 'Good morning, good evening,' the greeting of the people of ignorance."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 11,
+        "prompt": {
+          "en": "\"The blood of the martyrs will be weighed against the ink of the scholars, and the ink of the scholars will outweigh the blood of the martyrs.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Sadiq taught that on the Day of Resurrection the scales weigh the martyrs' blood against the scholars' ink, and the scholars' ink outweighs the martyrs' blood."
+        },
+        "anchor": {
+          "where": "verses.11.narrations.n7",
+          "quote": "the blood of the martyrs will be weighed against the ink of the scholars, and the ink of the scholars will outweigh the blood of the martyrs"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 12,
+        "prompt": {
+          "en": "According to the essay, sending a charity before a private talk with the Messenger was meant to do what?"
+        },
+        "options": [
+          {
+            "en": "Reward the Messenger"
+          },
+          {
+            "en": "Test the believers' faith"
+          },
+          {
+            "en": "Replace the obligatory zakat"
+          },
+          {
+            "en": "Spare the poor"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay states the believers were asked to send a charity ahead of any private talk with the Messenger, to spare the poor; when they shrank from it the duty was lifted."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the believers are asked to send a charity ahead of any private talk with the Messenger, to spare the poor"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 13,
+        "prompt": {
+          "en": "According to the Shia reports, the verse's 'Allah has turned to you' proves that those who withheld the charity had done no wrong."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The Shia reports read the turning as proof of a sin: Imam Ali asks whether repentance is ever called for except over a sin that was committed, so the withholders had sinned."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Shia reports read it as proof that those who withheld the charity had sinned"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:48:54Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:50:33Z",
+      "assembled_at": "2026-10-06T12:50:52Z"
+    }
+  },
+  "3": {
+    "id": "58:3",
+    "surah": 58,
+    "index": 3,
+    "range": [
+      14,
+      22
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 14,
+        "prompt": {
+          "en": "According to the narration, the hypocrites affirmed with the tongue only, acting out of fear of the sword and to lift the jizya."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration says their oaths were mere affirmation by the tongue, made out of fear of the sword and to lift the jizya, not true belief."
+        },
+        "anchor": {
+          "where": "verses.14.narrations.n1",
+          "quote": "their oaths were affirmation by the tongue, out of fear of the sword and to lift the jizya"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 18,
+        "prompt": {
+          "en": "According to the essay, what do the hypocrites suppose as they swear falsely to God on the Day of Resurrection?"
+        },
+        "options": [
+          {
+            "en": "That God has forgotten their deeds"
+          },
+          {
+            "en": "That the angels will defend them"
+          },
+          {
+            "en": "That the lie can still serve them"
+          },
+          {
+            "en": "That Satan will intercede for them"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says the hypocrites will swear to God on that Day exactly as they swear to the believers now, imagining the lie can still serve them."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "when these men will swear to God exactly as they now swear to the believers, imagining the lie can still serve them"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 21,
+        "prompt": {
+          "en": "This is written and fixed in the Preserved Tablet, the commentators say, a prevailing by ____."
+        },
+        "options": [
+          {
+            "en": "force and arms"
+          },
+          {
+            "en": "proof and argument"
+          },
+          {
+            "en": "wealth and numbers"
+          },
+          {
+            "en": "signs and wonders"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the commentators understand God's decree that He will prevail, fixed in the Preserved Tablet, as a prevailing by proof and argument rather than by force."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "This is written and fixed in the Preserved Tablet, the commentators say, a prevailing by proof and argument"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 22,
+        "prompt": {
+          "en": "\"It is with him, quivering with joy at his good deed and sinking into the earth at his evil deed. We increase the spirit through obedience to Allah.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Kazim"
+          },
+          {
+            "en": "Imam al-Baqir"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked about the spirit God strengthens the believer with, Imam al-Kazim said it rejoices at his good deeds and sinks away at his sins, and grows through obedience."
+        },
+        "anchor": {
+          "where": "verses.22.narrations.n5",
+          "quote": "It is with him, quivering with joy at his good deed and sinking into the earth at his evil deed. We increase the spirit through obedience to Allah."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 22,
+        "prompt": {
+          "en": "According to the perspectives, on what do the two traditions broadly agree in this passage?"
+        },
+        "options": [
+          {
+            "en": "On the hypocrites and their false oaths"
+          },
+          {
+            "en": "On whom the believer may love among kin"
+          },
+          {
+            "en": "On the identity of God's party"
+          },
+          {
+            "en": "On the meaning of faith written in the heart"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives say the two traditions broadly agree on the hypocrites and their false oaths, dividing only over verse 22 and its command about loving God's enemies among kin."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "On the hypocrites and their false oaths, the two traditions broadly agree."
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:47:47Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:49:06Z",
+      "assembled_at": "2026-10-06T12:50:52Z"
+    }
+  }
+}

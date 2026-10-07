@@ -8,10 +8,9 @@
 //  current beat, the narration language (English / Urdu, where the journey is recorded in
 //  both), and the transport controls.
 //
-//  The surface is deliberately always-dark - a darkened, blurred cover in BOTH app themes,
-//  matching the immersive Deep Dive experience it belongs to (DeepDivePalette, gold-on-ink).
-//  The forced dark scheme also makes the theme tokens it reads (the gold accent tint, the
-//  ink on the gold play button) resolve to their Midnight Emerald values under Sage Dawn.
+//  The surface follows the app theme, like the Deep Dive descent it belongs to
+//  (DeepDivePalette): under Midnight Emerald a darkened, blurred night cover with cream
+//  type; under Sage Dawn the cover's watercolor, blurred under a pale wash, with ink type.
 //
 
 import SwiftUI
@@ -26,6 +25,7 @@ struct JourneyListenView: View {
     /// downloads before playback can start. The presenter owns starting playback (after the
     /// download); this view only reflects it.
     @ObservedObject private var presenter = JourneyListenPresenter.shared
+    @Environment(\.colorScheme) private var colorScheme
 
     /// The scrubber's own value. Driven from the player's live `journeyElapsed` via an
     /// explicit subscription (see `scrubber`), except while the user is dragging - so it
@@ -45,17 +45,28 @@ struct JourneyListenView: View {
             ?? SurahExperienceDescriptor.all.first { $0.dive?.id == dive.id }?.coverAssetName
     }
 
-    /// The transport tint: the gold accent (its Midnight value, on this forced-dark surface).
+    /// The transport tint: the theme's gold accent.
     private var tint: Color { themeManager.accentColor }
+
+    /// Neutral type and hairlines at `opacity`: white over the night cover; the Sage Dawn
+    /// ink over the day cover, a step stronger for text so it holds on the pale wash.
+    private func neutral(_ opacity: Double) -> Color {
+        Color(light: Color(hex: "14261E").opacity(opacity < 0.3 ? opacity : min(opacity + 0.12, 1)),
+              dark: Color.white.opacity(opacity))
+    }
+
+    /// Drop-shadow strength: deep under the night cover, soft on the pale one.
+    private func shade(_ opacity: Double) -> Color {
+        Color.black.opacity(colorScheme == .light ? opacity * 0.3 : opacity)
+    }
 
     // MARK: - Body
 
     var body: some View {
         playerSurface
-            // The surface is a darkened, blurred cover in BOTH themes, so it stays dark like a
-            // now-playing screen - fixed rather than themeManager.colorScheme so the status bar,
-            // neutral text and theme tokens stay legible even under Sage Dawn (light).
-            .preferredColorScheme(.dark)
+            // Follows the app theme: the night surface under Midnight Emerald, the dawn
+            // surface (the cover's watercolor) under Sage Dawn.
+            .preferredColorScheme(themeManager.colorScheme)
             .onAppear {
                 // The presenter owns starting playback (for a premium journey it must wait for the
                 // on-demand pack). Only self-start in the plain case: nothing is preparing and a
@@ -105,29 +116,29 @@ struct JourneyListenView: View {
                     .tint(tint)
                 Text("Preparing this journey…")
                     .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(.white.opacity(0.9))
+                    .foregroundColor(neutral(0.9))
                 if progress > 0 {
                     Text("\(Int(progress * 100))%")
                         .font(.system(size: 13, weight: .medium))
-                        .foregroundColor(.white.opacity(0.55))
+                        .foregroundColor(neutral(0.55))
                         .monospacedDigit()
                 }
             case .failed:
                 Image(systemName: "wifi.exclamationmark")
                     .font(.system(size: 30, weight: .light))
-                    .foregroundColor(.white.opacity(0.85))
+                    .foregroundColor(neutral(0.85))
                 Text("Couldn't download this journey")
                     .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(.white.opacity(0.9))
+                    .foregroundColor(neutral(0.9))
                 Text("Check your connection and try again.")
                     .font(.system(size: 13))
-                    .foregroundColor(.white.opacity(0.55))
+                    .foregroundColor(neutral(0.55))
                 Button { presenter.retryPreparing() } label: {
                     Text("Retry")
                         .font(.system(size: 15, weight: .semibold))
                         .foregroundColor(tint)
                         .padding(.horizontal, 24).padding(.vertical, 10)
-                        .background(Capsule().fill(.white.opacity(0.12)))
+                        .background(Capsule().fill(neutral(0.12)))
                 }
                 .padding(.top, 4)
             }
@@ -143,7 +154,7 @@ struct JourneyListenView: View {
         GeometryReader { geo in
             Group {
                 if let cover = coverAssetName {
-                    Image(cover)
+                    Image(CoverArt.asset(cover, for: colorScheme))
                         .resizable()
                         .scaledToFill()
                         .frame(width: geo.size.width, height: geo.size.height)
@@ -153,7 +164,7 @@ struct JourneyListenView: View {
                         .blur(radius: 44, opaque: true)
                         .frame(width: geo.size.width, height: geo.size.height)
                         .clipped()
-                        .overlay(Color.black.opacity(0.55))
+                        .overlay(colorScheme == .light ? Color.white.opacity(0.3) : Color.black.opacity(0.55))
                 } else {
                     DeepDivePalette.bg(0.4)
                 }
@@ -170,7 +181,7 @@ struct JourneyListenView: View {
             Text("NOW LISTENING")
                 .font(.system(size: 12, weight: .bold))
                 .tracking(1.5)
-                .foregroundColor(.white.opacity(0.55))
+                .foregroundColor(neutral(0.55))
 
             HStack {
                 Button { onClose() } label: {
@@ -181,7 +192,7 @@ struct JourneyListenView: View {
                         .background(
                             Circle()
                                 .fill(.ultraThinMaterial)
-                                .overlay(Circle().stroke(Color.white.opacity(0.14), lineWidth: 1))
+                                .overlay(Circle().stroke(neutral(0.14), lineWidth: 1))
                         )
                 }
                 .buttonStyle(EmPressStyle())
@@ -209,9 +220,9 @@ struct JourneyListenView: View {
                 .fill(.ultraThinMaterial)
                 .overlay(
                     RoundedRectangle(cornerRadius: 30, style: .continuous)
-                        .stroke(Color.white.opacity(0.14), lineWidth: 1)
+                        .stroke(neutral(0.14), lineWidth: 1)
                 )
-                .shadow(color: Color.black.opacity(0.45), radius: 34, y: 16)
+                .shadow(color: shade(0.45), radius: 34, y: 16)
         )
     }
 
@@ -219,7 +230,7 @@ struct JourneyListenView: View {
     private var coverThumbnail: some View {
         Group {
             if let cover = coverAssetName {
-                Image(cover).resizable().scaledToFill()
+                Image(CoverArt.asset(cover, for: colorScheme)).resizable().scaledToFill()
             } else {
                 DeepDivePalette.gold.opacity(0.16)
                     .overlay(
@@ -233,9 +244,9 @@ struct JourneyListenView: View {
         .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
         .overlay(
             RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .stroke(Color.white.opacity(0.16), lineWidth: 1)
+                .stroke(neutral(0.16), lineWidth: 1)
         )
-        .shadow(color: Color.black.opacity(0.5), radius: 26, y: 12)
+        .shadow(color: shade(0.5), radius: 26, y: 12)
     }
 
     private var titleBlock: some View {
@@ -283,7 +294,7 @@ struct JourneyListenView: View {
                                     ? AnyShapeStyle(themeManager.accentGradient)
                                     : AnyShapeStyle(.ultraThinMaterial))
                             )
-                            .overlay(Capsule().stroke(Color.white.opacity(isSelected ? 0 : 0.14), lineWidth: 1))
+                            .overlay(Capsule().stroke(neutral(isSelected ? 0 : 0.14), lineWidth: 1))
                     }
                     .buttonStyle(EmPressStyle())
                     .accessibilityLabel("Narration in \(language == .urdu ? "Urdu" : "English")")
@@ -317,11 +328,11 @@ struct JourneyListenView: View {
             HStack {
                 Text(formatTime(scrubValue))
                     .font(.system(size: 12, weight: .medium))
-                    .foregroundColor(.white.opacity(0.55))
+                    .foregroundColor(neutral(0.55))
                 Spacer()
                 Text(formatTime(total))
                     .font(.system(size: 12, weight: .medium))
-                    .foregroundColor(.white.opacity(0.55))
+                    .foregroundColor(neutral(0.55))
             }
         }
         // Track live playback via an explicit subscription (never a captured value), so the
@@ -420,7 +431,7 @@ struct JourneyListenView: View {
         .background(
             Capsule()
                 .fill(.ultraThinMaterial)
-                .overlay(Capsule().stroke(Color.white.opacity(0.14), lineWidth: 1))
+                .overlay(Capsule().stroke(neutral(0.14), lineWidth: 1))
         )
     }
 

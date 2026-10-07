@@ -1,0 +1,324 @@
+{
+  "1": {
+    "id": "63:1",
+    "surah": 63,
+    "index": 1,
+    "range": [
+      1,
+      8
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 1,
+        "prompt": {
+          "en": "The passage explains that the hypocrites were called liars not for their words but for the belief their hearts withheld."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note says their testimony is true in its words, yet Allah calls them liars, because they do not believe in their hearts what their tongues declare."
+        },
+        "anchor": {
+          "where": "verses.1.note",
+          "quote": "Their testimony is true in its words, yet Allah calls them liars, since they do not believe in their hearts what their tongues declare."
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 4,
+        "prompt": {
+          "en": "\"Hadith reaches you from only four kinds, with no fifth. The first is a hypocrite who shows faith and feigns Islam.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam Ali told Sulaym ibn Qays that hadith comes from only four kinds, the first a hypocrite who feigns Islam, whom God described in this verse."
+        },
+        "anchor": {
+          "where": "verses.4.narrations.n5",
+          "quote": "Hadith reaches you from only four kinds, with no fifth. The first is a hypocrite who shows faith and feigns Islam, not scrupling to lie against God's Messenger deliberately."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 6,
+        "prompt": {
+          "en": "According to the passage, why will pleas for the hypocrites' forgiveness never avail, even if repeated?"
+        },
+        "options": [
+          {
+            "en": "Because the Prophet pleaded insincerely"
+          },
+          {
+            "en": "Because they persist in hypocrisy"
+          },
+          {
+            "en": "Because they never asked for forgiveness"
+          },
+          {
+            "en": "Because their sins were too many to count"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The note explains that even repeated pleas for forgiveness will not avail them because they persist in hypocrisy."
+        },
+        "anchor": {
+          "where": "verses.6.note",
+          "quote": "even repeated pleas for forgiveness will not avail them, because they persist in hypocrisy"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 8,
+        "prompt": {
+          "en": "God has entrusted the believer with all his affairs, but has not entrusted him with ____ himself."
+        },
+        "options": [
+          {
+            "en": "debasing"
+          },
+          {
+            "en": "defending"
+          },
+          {
+            "en": "praising"
+          },
+          {
+            "en": "excusing"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Sadiq taught that God entrusted the believer with all his affairs but not with debasing himself; the believer should be mighty, not lowly."
+        },
+        "anchor": {
+          "where": "verses.8.narrations.n7",
+          "quote": "God has entrusted the believer with all his affairs, but has not entrusted him with debasing himself."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 8,
+        "prompt": {
+          "en": "According to the essay, whom did Abdullah ibn Ubayy mean by the mighty and the weak in his boast?"
+        },
+        "options": [
+          {
+            "en": "Himself by the mighty and the Prophet by the weak"
+          },
+          {
+            "en": "The Prophet by the mighty and himself by the weak"
+          },
+          {
+            "en": "The Muhajirun by the mighty and the Ansar by the weak"
+          },
+          {
+            "en": "The believers by the mighty and the hypocrites by the weak"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the commentators name the speaker as Abdullah ibn Ubayy, who on the Banu Mustaliq campaign meant himself by the mighty and the Prophet by the weak."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The commentators name the speaker as Abdullah ibn Ubayy ibn Salul, who on the Banu Mustaliq campaign meant himself by the mighty and the Prophet by the weak."
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:55:38Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:56:37Z",
+      "assembled_at": "2026-10-06T12:56:56Z"
+    }
+  },
+  "2": {
+    "id": "63:2",
+    "surah": 63,
+    "index": 2,
+    "range": [
+      9,
+      11
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 9,
+        "prompt": {
+          "en": "According to the passage, the three verses caution believers against the very traits that breed hypocrisy. Which traits?"
+        },
+        "options": [
+          {
+            "en": "Neglecting the five daily prayers and the fast"
+          },
+          {
+            "en": "Being absorbed in wealth and children, and withholding one's money"
+          },
+          {
+            "en": "Trusting hypocrites and following their counsel"
+          },
+          {
+            "en": "Boasting of charity and seeking a return for it"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the three verses warn against the very traits that breed hypocrisy: being absorbed in wealth and children, and withholding one's money, so a believer guards against all three."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "a caution against the very traits that breed hypocrisy: being absorbed in wealth and children, and withholding one's money"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 10,
+        "prompt": {
+          "en": "\"'give charity' is from almsgiving, and 'become one of the righteous' means that I would perform the hajj.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Ibn Abbas"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked about the dying man's words, Imam al-Sadiq glossed 'give charity' as almsgiving and 'become one of the righteous' as performing the hajj."
+        },
+        "anchor": {
+          "where": "verses.10.narrations.n1",
+          "quote": "'give charity' is from almsgiving, and 'become one of the righteous' means that I would perform the hajj"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 10,
+        "prompt": {
+          "en": "One tradition finds in the dying man's plea proof that a person's power to act precedes the act. What else follows for that tradition?"
+        },
+        "options": [
+          {
+            "en": "That God creates both faith and disbelief in each person"
+          },
+          {
+            "en": "That the dying man's plea is always granted"
+          },
+          {
+            "en": "That wealth and children never distract from remembrance"
+          },
+          {
+            "en": "That God does not create disbelief or hypocrisy in anyone"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The passage says this reading takes the plea as proof that power to act precedes the act and that God creates no disbelief or hypocrisy, else the wish to return would be meaningless."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "that a person's power to act precedes the act, and that God does not create disbelief or hypocrisy in anyone, for otherwise the wish to be returned would carry no meaning"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 11,
+        "prompt": {
+          "en": "With God are inscribed books, from which He advances what He wills and ____ what He wills."
+        },
+        "options": [
+          {
+            "en": "defers"
+          },
+          {
+            "en": "erases"
+          },
+          {
+            "en": "conceals"
+          },
+          {
+            "en": "records"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Baqir says God's inscribed books let Him advance what He wills and defer what He wills, the acts the verse ties to His never respiting a term."
+        },
+        "anchor": {
+          "where": "verses.11.narrations.n3",
+          "quote": "With God are inscribed books, from which He advances what He wills and defers what He wills"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 11,
+        "prompt": {
+          "en": "The passage teaches that it is better to wish for more time at death than to give charity now."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay ends the opposite way: God's awareness of our deeds is a reason to give now rather than to wish, too late, for more time, so the claim is false."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "a reason to give now rather than to wish, too late, for more time"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:54:27Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:55:52Z",
+      "assembled_at": "2026-10-06T12:56:56Z"
+    }
+  }
+}

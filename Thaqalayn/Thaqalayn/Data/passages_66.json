@@ -1,0 +1,665 @@
+{
+  "1": {
+    "id": "66:1",
+    "surah": 66,
+    "index": 1,
+    "range": [
+      1,
+      7
+    ],
+    "title": {
+      "en": "The Prophet's oath and the secret"
+    },
+    "essay": {
+      "en": "The surah opens on an episode in the Prophet's own household: he forbade himself something God had made lawful, hoping to please his wives, and God asks him why. The commentators differ over the occasion [2]: some say he vowed to keep away from his bondwoman Mariya, others that he swore off honey he had drunk. Either way he had taken an oath, and the second verse shows God prescribing how to dissolve it. This reproach does not mean a sin occurred, al-Tusi notes, since one may be reproached over a thing whose opposite was preferable [4]. The next verses turn to the quarrel. The Prophet had confided a secret to one wife; she passed it on, and God informed him, so he told her part and left part unsaid. The two wives are then addressed directly: if they repent it is because their hearts have swerved, and if they back each other against him, God, Gabriel, and the righteous among the faithful stand with him. Shia and Sunni reports alike name that righteous one as Ali [1]. God then warns the wives that He could give His Prophet better wives in their place. The address widens to every believer: save yourselves and your families from a Fire, which al-Tusi reads as a charge to enjoin good and forbid evil, beginning with those nearest [5]. Over that Fire stand angels who never disobey God [3], and to the faithless, no excuse will be heard on that Day."
+    },
+    "verses": [
+      {
+        "verse": 1,
+        "heading": {
+          "en": "Forbidding the lawful"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "اطلعت عائشة وحفصة على النبي صلى الله عليه وآله وهو مع مارية، فقال النبي صلى الله عليه وآله والله ما أقربها، فأمره الله أن يكفر يمينه.",
+            "chain": "Ahmad ibn Idris, from Ahmad ibn Muhammad, from al-Husayn ibn Sa'id, from Ibn Sayyar, from Abu Abdillah",
+            "text": {
+              "en": "Aisha and Hafsa came upon the Prophet while he was with Mariya, so the Prophet said: By God, I will not approach her. Then God commanded him to make expiation for his oath."
+            },
+            "source": "s6"
+          }
+        ]
+      },
+      {
+        "verse": 2,
+        "heading": {
+          "en": "Dissolving the oath"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "فَجَعَلَهَا يَمِيناً وَكَفَّرَهَا رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَآلِه … قَالَ أَطْعَمَ عَشَرَةَ مَسَاكِينَ لِكُلِّ مِسْكِينٍ مُدٌّ.",
+            "chain": "Ali ibn Ibrahim, from his father, from Ibn Abi Najran, from Asem ibn Humayd, from Muhammad ibn Qays, from Abu Jafar",
+            "text": {
+              "en": "He made it an oath, and the Messenger of God expiated it. Asked how he expiated it, he said: He fed ten destitute people, to each one a mudd."
+            },
+            "source": "s38"
+          }
+        ]
+      },
+      {
+        "verse": 4,
+        "heading": {
+          "en": "The righteous among the faithful"
+        },
+        "note": {
+          "en": "The two wives addressed are Aisha and Hafsa, as the reports agree; 'the righteous among the faithful' who supports the Prophet is read as Ali. [1]"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "إن تتوبا إلى الله فقد صغت قلوبكما … وصالح المؤمنين، قال صالح المؤمنين علي بن أبي طالب عليه السلام.",
+            "chain": "Muhammad ibn Jafar, from Muhammad ibn Abdillah, from Ibn Abi Najran, from Asem ibn Humayd, from Abu Basir, from Abu Jafar",
+            "text": {
+              "en": "Concerning 'If the two of you repent to Allah, for your hearts have certainly swerved... and the righteous among the faithful' - he said: the righteous among the faithful is Ali ibn Abi Talib."
+            },
+            "source": "s7"
+          },
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إن رسول الله (صلى الله عليه و آله) عرف أصحابه أمير المؤمنين (عليه السلام) مرتين … و المرة الثانية يوم غدير خم حين قال: من كنت مولاه فعلي مولاه.",
+            "chain": "Muhammad ibn al-Abbas, from Ahmad ibn Idris, from Ahmad ibn Muhammad ibn Isa, from Ibn Fadal, from Abu Jamila, from Muhammad al-Halabi, from Abu Abdillah",
+            "text": {
+              "en": "The Messenger of God pointed out the Commander of the Faithful to his companions twice. Once he asked them who their guardian would be after him and recited this verse, meaning the Commander of the Faithful. The second time was at Ghadir Khumm, when he said: whoever's master I am, Ali is his master."
+            },
+            "source": "s9"
+          }
+        ]
+      },
+      {
+        "verse": 6,
+        "heading": {
+          "en": "Guarding one's family"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "هذه نفسي أقيها فكيف أقي أهلي؟ قال: تأمرهم بما أمرهم الله وتنهاهم عما نهاهم الله عنه فإن أطاعوك كنت قد وقيتهم وإن عصوك فكنت قد قضيت ما عليك.",
+            "chain": "Ahmad ibn Idris, from Ahmad ibn Muhammad, from al-Husayn ibn Sa'id, from al-Nadr ibn Suwayd, from Zur'a ibn Muhammad, from Abu Basir, from Abu Abdillah",
+            "text": {
+              "en": "I said: This is myself, which I guard; how do I guard my family? He said: You command them with what God has commanded them and forbid them what God has forbidden them. If they obey you, you have guarded them; and if they disobey you, you have discharged your duty."
+            },
+            "source": "s8"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "The passage's sharpest divergence is over 'the righteous among the faithful' in verse four. Shia commentators, following reports carried through both Shia and Sunni chains, read it as a single man, Ali, whom the Prophet pointed out by name [1]. Among Sunni authorities the identification varies: many whom al-Tabari cites take it to mean Abu Bakr and Umar, while al-Tabari himself treats the phrase as a generic singular standing for all righteous believers [18]. Both traditions agree, on Umar's own testimony, that the two wives addressed are Aisha and Hafsa [12][15]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on At-Tahrim 1 to 7",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=66&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ووردت الرواية من طرق أهل السنة عن النبي صلى الله عليه وآله وسلم ومن طرق الشيعة عن أئمة أهل البيت عليهم السلام أن المراد بصالح المؤمنين علي"
+        },
+        "gloss": "The report has come both through Sunni chains from the Prophet and through Shia chains from the Imams of the Household that what is meant by 'the righteous among the faithful' is Ali."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Tahrim 1 to 5",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=66&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "اختلف أقوال المفسرين في سبب نزول الآيات"
+        },
+        "gloss": "The commentators differ over the occasion for the revelation of these verses."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Tahrim 6 to 7",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=66&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي هذا دلالة على أن الملائكة الموكلين بالنار معصومون عن القبائح لا يخالفون الله في أوامره ونواهيه"
+        },
+        "gloss": "In this is a proof that the angels charged with the Fire are protected from wrong, not disobeying God in His commands and prohibitions."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Tahrim 1 to 5",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=66&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولا يدل على انه وقعت منه معصية، لان العتاب قد يكون على أمر قد يكون الأولى خلافه"
+        },
+        "gloss": "It does not indicate that any sin occurred from him, because reproach may be over a matter whose opposite would have been preferable."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Tahrim 6 to 7",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=66&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وذلك يقتضي أن الامر بالمعروف والنهي عن المنكر ينبغي ان يكون للأقرب فالاقرب"
+        },
+        "gloss": "This implies that enjoining good and forbidding evil should be directed to the nearest, then the next nearest."
+      },
+      {
+        "id": "s6",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Tahrim 1 to 4",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=66&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "اطلعت عائشة وحفصة على النبي صلى الله عليه وآله وهو مع مارية"
+        },
+        "gloss": "Aisha and Hafsa came upon the Prophet while he was with Mariya."
+      },
+      {
+        "id": "s7",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Tahrim 5",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=66&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال صالح المؤمنين علي بن أبي طالب عليه السلام"
+        },
+        "gloss": "He said: the righteous among the faithful is Ali ibn Abi Talib."
+      },
+      {
+        "id": "s8",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Tahrim 6",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=66&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "تأمرهم بما أمرهم الله وتنهاهم عما نهاهم الله عنه"
+        },
+        "gloss": "You command them with what God commanded them and forbid them what God forbade them."
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Tahrim 1 to 5",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=66&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إن رسول الله (صلى الله عليه و آله) عرف أصحابه أمير المؤمنين (عليه السلام) مرتين"
+        },
+        "gloss": "The Messenger of God pointed out the Commander of the Faithful to his companions twice."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Tahrim 4 to 5",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=66&tAyahNo=4&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "سأل عمر بن الخطاب من اللتان تظاهرتا على رسول الله صلّى الله عليه وآله فقال عائشة وحفصة"
+        },
+        "gloss": "He asked Umar ibn al-Khattab which two women had backed each other against the Messenger of God, and he said: Aisha and Hafsa."
+      },
+      {
+        "id": "s15",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on At-Tahrim 1",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=66&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قلت لعمر بن الخطاب رضي الله عنه: من المرأتان؟ قال: عائشة، وحفصة"
+        },
+        "gloss": "I said to Umar ibn al-Khattab: Who are the two women? He said: Aisha and Hafsa."
+      },
+      {
+        "id": "s18",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on At-Tahrim 4",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=66&tAyahNo=4&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقيل: عني بصالح المؤمنين في هذا الموضع: أبو بكر، وعمر رضي الله عنهما"
+        },
+        "gloss": "It is said that what is meant by 'the righteous among the faithful' here is Abu Bakr and Umar."
+      },
+      {
+        "id": "s38",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 7, hadith 4, cited at At-Tahrim 2",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "حسن"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "فَجَعَلَهَا يَمِيناً وَكَفَّرَهَا رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَآلِه"
+        },
+        "gloss": "He made it an oath, and the Messenger of God expiated it."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T16:52:14Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-10-06T17:16:50Z",
+      "assembled_at": "2026-10-06T17:23:25Z"
+    }
+  },
+  "2": {
+    "id": "66:2",
+    "surah": 66,
+    "index": 2,
+    "range": [
+      8,
+      12
+    ],
+    "title": {
+      "en": "Repentance and four women"
+    },
+    "essay": {
+      "en": "The passage closes Surah at-Tahrim, turning from the Prophet's household to the believers at large. It calls the faithful to sincere repentance, promising that God may absolve their sins and admit them into gardens with streams running in them. It then pictures the day when God will not let down the Prophet and the faithful who are with him, their light moving before them and on their right, which al-Mizan reads as the light of faith ahead of them and the light of deeds on their right [1].\n\nVerse nine commands the Prophet to struggle against the faithless and the hypocrites and to be severe with them. Majma al-Bayan and al-Tibyan explain that the faithless are met with fighting and the hypocrites with deterring speech rather than war [3][4]; Majma adds that the Prophet never fought a hypocrite but only sought to win them over [3].\n\nThe surah ends with two parables. al-Tibyan draws the lesson that no one is helped except by his own deed, and no one is seized for another's crime: nearness to a prophet saved neither the wife of Noah nor the wife of Lot, who betrayed their husbands, while the wife of Pharaoh and Mary were raised by their own faith, though bound to enemies of God [5]. al-Mizan and al-Safi read the two parables as a pointed allusion to the two of the Prophet's wives addressed at the surah's opening, who divulged his secret and conspired against him [2][13]."
+    },
+    "verses": [
+      {
+        "verse": 8,
+        "heading": {
+          "en": "Sincere repentance and light"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "يتوب العبد من الذنب ثم لا يعود فيه",
+            "chain": "Muhammad ibn Yaqub, from a number of our companions, from Ahmad ibn Muhammad ibn Khalid, from Muhammad ibn Ali, from Muhammad ibn al-Fadil, from Abu al-Sabbah al-Kinani, from Abu Abdillah",
+            "text": {
+              "en": "A servant repents from the sin and then does not return to it."
+            },
+            "source": "s10"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "أئمة المؤمنين يوم القيامة تسعى بين أيدي المؤمنين و بأيمانهم حتى ينزلوهم منازل أهل الجنة",
+            "chain": "Ali ibn Muhammad and Muhammad ibn al-Hasan, from Sahl ibn Ziyad, from Muhammad ibn al-Hasan ibn Shammun, from Abdullah ibn Abd al-Rahman al-Asamm, from Abdullah ibn al-Qasim, from Salih ibn Sahl al-Hamdani, from Abu Abdillah",
+            "text": {
+              "en": "The imams of the believers; on the Day of Resurrection they move before the believers and on their right, until they settle them in the dwellings of the people of paradise."
+            },
+            "source": "s10"
+          },
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "فمن كان له نور يومئذ نجا وكل مؤمن له نور",
+            "chain": "In the narration of Abu al-Jarud, from Abu Jafar",
+            "text": {
+              "en": "Whoever has light on that Day is saved, and every believer has light."
+            },
+            "source": "s6"
+          }
+        ]
+      },
+      {
+        "verse": 9,
+        "heading": {
+          "en": "Struggle against faithless and hypocrites"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "هكذا نزلت فجاهد رسول الله صلى الله عليه وآله الكفار وجاهد علي عليه السلام المنافقين فجاهد علي عليه السلام جهاد رسول الله صلى الله عليه وآله",
+            "chain": "al-Husayn ibn Muhammad, from al-Mualla ibn Muhammad, from Ahmad ibn Muhammad ibn Abdullah, from Yaqub ibn Yazid, from Sulayman al-Katib, from one of his companions, from Abu Abdillah",
+            "text": {
+              "en": "This is how it was revealed: the Messenger of God waged struggle against the disbelievers, and Ali waged struggle against the hypocrites; so Ali's struggle was the struggle of the Messenger of God."
+            },
+            "source": "s7"
+          }
+        ]
+      },
+      {
+        "verse": 10,
+        "heading": {
+          "en": "Two wives who betrayed"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "مثل ضربه الله سبحانه لعائشة و حفصة إذ تظاهرتا على رسول الله … و أفشتا سره",
+            "chain": null,
+            "text": {
+              "en": "An example God struck for Aisha and Hafsa, when they conspired against the Messenger of God and divulged his secret."
+            },
+            "source": "s12"
+          },
+          {
+            "id": "n6",
+            "speaker": "Imam al-Baqir",
+            "addressee": "Zurarah",
+            "arabic": "ما ترى من الخيانة في قول الله عز و جل: فَخانَتاهُما؟ ما يعني بذلك إلا الفاحشة",
+            "chain": "Muhammad ibn Yahya, from Ahmad ibn Muhammad, from Ibn Faddal, from Ibn Bukayr, from Zurarah, from Abu Jafar",
+            "text": {
+              "en": "What do you make of the treachery in God's words 'they betrayed them'? By that nothing is meant except the obscene act."
+            },
+            "source": "s12"
+          }
+        ]
+      },
+      {
+        "verse": 11,
+        "heading": {
+          "en": "Pharaoh's wife prays"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "هذا مثل ضربه الله لرقية بنت رسول الله … التي تزوجها عثمان بن عفان",
+            "chain": "Muhammad ibn Ali, from Ali ibn al-Hakam, from Sayf ibn Amira, from Dawud ibn Farqad, from Abu Abdillah",
+            "text": {
+              "en": "This is an example God struck for Ruqayya, daughter of the Messenger of God, whom Uthman ibn Affan married."
+            },
+            "source": "s12"
+          }
+        ]
+      },
+      {
+        "verse": 12,
+        "heading": {
+          "en": "Mary, daughter of Imran"
+        },
+        "narrations": [
+          {
+            "id": "n8",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "مثل ضربة الله لفاطمة … إن فاطمة أحصنت فرجها فحرم الله ذريتها على النار",
+            "chain": "Muhammad ibn Ali, from Ali ibn al-Hakam, from Sayf ibn Amira, from Dawud ibn Farqad, from Abu Abdillah",
+            "text": {
+              "en": "An example God struck for Fatima. Fatima guarded her chastity, so God forbade her offspring to the Fire."
+            },
+            "source": "s12"
+          },
+          {
+            "id": "n9",
+            "speaker": "Prophet Muhammad",
+            "addressee": null,
+            "arabic": "كمل من الرجال كثير ولم يكمل من النساء إلا أربع آسية بنت مزاحم امرأة فرعون ومريم بنت عمران وخديجة بنت خويلد وفاطمة بنت محمد صلى الله عليه وآله",
+            "chain": "From Abu Musa, from the Prophet",
+            "text": {
+              "en": "Many men attained perfection, but of women none attained perfection except four: Asiya daughter of Muzahim the wife of Pharaoh, Mary daughter of Imran, Khadija daughter of Khuwaylid, and Fatima daughter of Muhammad."
+            },
+            "source": "s3"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Both traditions read the faithless women as a warning and the faithful women as proof that each soul is judged by its own faith, not by whom it married. Sunni commentators stress that the wives of Noah and Lot betrayed their husbands in religion, not in chastity, since the wives of prophets are protected from immorality [21]. Al-Razi adds that the parables also caution the Mothers of the Believers, Hafsa and Aisha, for what passed with the Prophet [29]. Among Shia commentators, al-Tibyan likewise holds that no prophet's wife ever committed adultery and that the betrayal lay in religion [4], while al-Mizan reads the parables as a severe censure of the Prophet's wives who conspired against him [2]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on At-Tahrim 8 to 9",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=66&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولا يبعد أن يكون ما بين أيديهم من النور نور الإيمان وما بأيمانهم نور العمل"
+        },
+        "gloss": "It is not unlikely that the light before them is the light of faith, and the light on their right is the light of deeds."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on At-Tahrim 10 to 12",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=66&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي التمثيل تعريض ظاهر شديد لزوجي النبي صلى الله عليه وآله وسلم حيث خانتاه في إفشاء سرّه وتظاهرتا عليه وآذتاه بذلك"
+        },
+        "gloss": "In the parable there is a clear, severe allusion to the two wives of the Prophet, in that they betrayed him by divulging his secret, conspired against him, and hurt him by it."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Tahrim 8 to 12",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=66&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "روي عن أبي عبد الله ع أنه قرأ جاهد الكفار بالمنافقين وقال: إن رسول الله صلى الله عليه وسلم لم يقاتل منافقاً قطّ إنما كان يتألفهم"
+        },
+        "gloss": "It is narrated from Abu Abdillah that he recited 'struggle against the disbelievers by means of the hypocrites' and said: the Messenger of God never fought a hypocrite; he only sought to win them over."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Tahrim 8 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=66&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "جاهد الكفار بالقتال والحرب، والمنافقين بالقول الذي يردع عن القبيح لا بالحرب"
+        },
+        "gloss": "Struggle against the disbelievers by fighting and war, and against the hypocrites by speech that deters from the vile, not by war."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Tahrim 11 to 12",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=66&tAyahNo=11&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أن احداً لا ينفعه إلا عمله ولا يؤخذ بجرم غيره، ولا يثاب على طاعة غيره، وإن كان خصيصاً به وملازماً له"
+        },
+        "gloss": "That no one is benefited except by his own deed, nor seized for another's crime, nor rewarded for another's obedience, even if closely attached to him."
+      },
+      {
+        "id": "s6",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Tahrim 8",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=66&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فمن كان له نور يومئذ نجا وكل مؤمن له نور"
+        },
+        "gloss": "Whoever has light on that Day is saved, and every believer has light."
+      },
+      {
+        "id": "s7",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Tahrim 9",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=66&tAyahNo=9&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هكذا نزلت فجاهد رسول الله صلى الله عليه وآله الكفار وجاهد علي عليه السلام المنافقين"
+        },
+        "gloss": "This is how it was revealed: the Messenger of God waged struggle against the disbelievers, and Ali waged struggle against the hypocrites."
+      },
+      {
+        "id": "s10",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Tahrim 8",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=66&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أئمة المؤمنين يوم القيامة تسعى بين أيدي المؤمنين و بأيمانهم حتى ينزلوهم منازل أهل الجنة"
+        },
+        "gloss": "The imams of the believers; on the Day of Resurrection they move before the believers and on their right, until they settle them in the dwellings of the people of paradise."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Tahrim 10 to 12",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=66&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "مثل ضربه الله سبحانه لعائشة و حفصة إذ تظاهرتا على رسول الله"
+        },
+        "gloss": "An example God struck for Aisha and Hafsa, when they conspired against the Messenger of God."
+      },
+      {
+        "id": "s13",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Tahrim 8 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=66&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفيه تعريض بعائشة وحفصة في خيانتهما رسول الله صلّى الله عليه وآله بافشاء سرّه ونفاقهما ايّاه وتظاهرهما عليه"
+        },
+        "gloss": "In it is an allusion to Aisha and Hafsa in their betrayal of the Messenger of God by divulging his secret, their hypocrisy toward him, and their conspiring against him."
+      },
+      {
+        "id": "s21",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on At-Tahrim 9 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=66&tAyahNo=9&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "نساء الأنبياء معصومات عن الوقوع في الفاحشة لحرمة الأنبياء"
+        },
+        "gloss": "The wives of the prophets are protected from falling into immorality out of respect for the prophets."
+      },
+      {
+        "id": "s29",
+        "kind": "tafsir",
+        "work": "Mafatih al-Ghayb",
+        "author": "Fakhr al-Din al-Razi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on At-Tahrim 10 to 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=4&tSoraNo=66&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي ضمن هذين التمثيلين تعريض بأمي المؤمنين، وهما حفصة وعائشة لما فرط منهما وتحذير لهما على أغلظ وجه وأشده"
+        },
+        "gloss": "Within these two parables there is an allusion to the two Mothers of the Believers, Hafsa and Aisha, for what they committed, and a warning to them in the severest manner."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T16:54:00Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-10-06T17:23:05Z",
+      "assembled_at": "2026-10-06T17:23:25Z"
+    }
+  }
+}

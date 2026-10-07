@@ -1,0 +1,324 @@
+{
+  "1": {
+    "id": "61:1",
+    "surah": 61,
+    "index": 1,
+    "range": [
+      1,
+      9
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 2,
+        "prompt": {
+          "en": "According to the essay, the rebuke about saying what you do not do is aimed at the believers themselves, not only at hypocrites."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reports the reading that this rebuke targets the believers themselves rather than only the hypocrites, since even those with faith can say what they fail to carry out."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Mizan reads this rebuke as aimed at the believers themselves, not at the hypocrites as some had claimed"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 2,
+        "prompt": {
+          "en": "\"The believer's promise to his brother is a vow that carries no expiation. Whoever breaks it has begun by breaking with God and has exposed himself to His hatred.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Sadiq taught that a believer's promise to his brother is a binding vow, and breaking it begins a break with God and invites His hatred."
+        },
+        "anchor": {
+          "where": "verses.2.narrations.n1",
+          "quote": "The believer's promise to his brother is a vow that carries no expiation. Whoever breaks it has begun by breaking with God and has exposed himself to His hatred"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 5,
+        "prompt": {
+          "en": "How does the note explain 'Allah made their hearts swerve' in the story of Moses?"
+        },
+        "options": [
+          {
+            "en": "God forced them to disbelieve from the very start"
+          },
+          {
+            "en": "God turned their hearts toward repentance"
+          },
+          {
+            "en": "God cast doubt into their hearts after they swerved"
+          },
+          {
+            "en": "God hid the meaning of the Torah from them"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The note says God did not force them; only after they themselves swerved from the truth did He cast doubt into their hearts, letting the swerving take hold."
+        },
+        "anchor": {
+          "where": "verses.5.note",
+          "quote": "Here 'Allah made their hearts swerve' is glossed as God casting doubt into their hearts after they themselves swerved from the truth"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 8,
+        "prompt": {
+          "en": "They want to put out the ____ of the Commander of the Faithful with their mouths."
+        },
+        "options": [
+          {
+            "en": "light"
+          },
+          {
+            "en": "wilaya"
+          },
+          {
+            "en": "name"
+          },
+          {
+            "en": "banner"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The narration reads the light of verse 8 as the wilaya of the Commander of the Faithful, which the faithless try to put out with their mouths."
+        },
+        "anchor": {
+          "where": "verses.8.narrations.n7",
+          "quote": "They want to put out the wilaya of the Commander of the Faithful with their mouths"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 9,
+        "prompt": {
+          "en": "On verse 9's promise that the religion will prevail over all, what do both traditions share about its triumph?"
+        },
+        "options": [
+          {
+            "en": "Both hold it was completed in the Prophet's lifetime"
+          },
+          {
+            "en": "Both read the promise as limited to Arabia"
+          },
+          {
+            "en": "Both say it was addressed only to the polytheists"
+          },
+          {
+            "en": "Both place Islam's full triumph in the future"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Though they differ on when, both traditions expect Islam's full triumph in the future, whether at the rising of the Qaim or the descent of Jesus."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Both look to a future in which Islam is made to prevail"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:51:09Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:52:27Z",
+      "assembled_at": "2026-10-06T12:55:59Z"
+    }
+  },
+  "2": {
+    "id": "61:2",
+    "surah": 61,
+    "index": 2,
+    "range": [
+      10,
+      14
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 10,
+        "prompt": {
+          "en": "The offer of the trade is worded as a question. According to the essay, what does that question really mean?"
+        },
+        "options": [
+          {
+            "en": "A genuine request for the believers' consent"
+          },
+          {
+            "en": "A warning aimed only at the hypocrites"
+          },
+          {
+            "en": "A command, a gentle summons to obedience"
+          },
+          {
+            "en": "A reward promised only to the wealthy"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says the offer is cast as a question, but what it means is a command, a gentle summons to sincere obedience, not a real request."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The wording is cast as a question, but what it means is a command, a gentle summons to sincere obedience"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 12,
+        "prompt": {
+          "en": "A palace of pearl in Paradise; in that palace are seventy houses of red ____, and in each house seventy rooms of green emerald."
+        },
+        "options": [
+          {
+            "en": "ruby"
+          },
+          {
+            "en": "coral"
+          },
+          {
+            "en": "gold"
+          },
+          {
+            "en": "sapphire"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "In the narration the Prophet describes the dwellings of Eden as a palace of pearl holding houses of red ruby, each with rooms of green emerald."
+        },
+        "anchor": {
+          "where": "verses.12.narrations.n4",
+          "quote": "A palace of pearl in Paradise; in that palace are seventy houses of red ruby, and in each house seventy rooms of green emerald"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 14,
+        "prompt": {
+          "en": "According to the essay, what does the story of Jesus' community at the passage's close signify for the Prophet's community?"
+        },
+        "options": [
+          {
+            "en": "That belief always spreads faster than disbelief"
+          },
+          {
+            "en": "That the disciples outnumbered their enemies from the start"
+          },
+          {
+            "en": "That Jesus' community never faced any opposition"
+          },
+          {
+            "en": "That it passes through what Jesus' community did"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay reads the closing verse, where one group of Israel believed and one disbelieved and God aided the faithful, as a sign the Prophet's community passes through what Jesus' community did."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "a sign that the Prophet's community passes through what Jesus' community did"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 14,
+        "prompt": {
+          "en": "\"The disciples of Jesus were his Shia, and our Shia are our disciples.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Prophet Muhammad"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Sadiq likens the disciples of Jesus to his Shia and says our Shia are our disciples, no less obedient than the disciples were to Jesus."
+        },
+        "anchor": {
+          "where": "verses.14.narrations.n5",
+          "quote": "The disciples of Jesus were his Shia, and our Shia are our disciples"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 14,
+        "prompt": {
+          "en": "The passage says the Shia narrators drop the historical reading entirely and keep only the rising of the Qa'im."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The perspectives say the Shia narrators keep that history but open a further horizon, adding the rising of the Qa'im, so they do not drop the historical reading."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Shia narrators keep that history but open a further horizon: the near victory also means the rising of the Qa'im"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:54:46Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:55:45Z",
+      "assembled_at": "2026-10-06T12:55:59Z"
+    }
+  }
+}

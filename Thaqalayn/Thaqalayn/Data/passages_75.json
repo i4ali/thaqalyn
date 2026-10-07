@@ -1,0 +1,555 @@
+{
+  "1": {
+    "id": "75:1",
+    "surah": 75,
+    "index": 1,
+    "range": [
+      1,
+      30
+    ],
+    "title": {
+      "en": "The Day of Resurrection"
+    },
+    "essay": {
+      "en": "Surah al-Qiyaama opens by swearing two oaths: by the Day of Resurrection and by the self-critical soul. The commentators dispute the opening word. Tabatabai reads 'la uqsimu' as a genuine oath by the Day of Resurrection, whether its 'la' is an extra particle or a negation [1]. Tabrisi records the same debate over the reading [3], and Tusi reports a reading in which the 'la' rebuts a people who had denied the resurrection, so that God says 'No, it is not as you claim,' then swears [6].\n\nThe surah's quarrel is with a man who supposes God cannot put his scattered bones together again. Not only can God gather them, the verse answers, He can reshape even his fingertips. Tabatabai notes two readings: God restores the fingertips to their intricate form, or He could remake them as one undivided surface like a hoof [1]. What really drives the denial, the commentators hold, is that man wants to keep sinning: he puts the sin first and delays repentance, and asks mockingly when the Day of Resurrection will be [3].\n\nThen come its signs - the eye dazzled, the moon eclipsed, sun and moon joined - and man's cry, 'Where is the escape?' There is no refuge; to his Lord is the destination that Day. Man will be told what he sent ahead and left behind, and he is a witness against himself even as he offers his excuses.\n\nVerses sixteen to nineteen turn to address the Prophet: 'Do not move your tongue with it to hasten it.' Tabatabai, Tabrisi and Tusi read this as an etiquette for receiving revelation - he is not to race ahead of Gabriel, for gathering and reciting the Quran rests with God [2][4][7].\n\nThe rebuke resumes: you love this transitory life and forsake the Hereafter. Two kinds of faces follow - fresh ones looking to their Lord, and scowling ones that sense a back-breaking blow. The stretch ends at the deathbed: when the soul reaches the collar-bones and the shanks clasp, that Day he is driven toward his Lord [5]."
+    },
+    "verses": [
+      {
+        "verse": 2,
+        "heading": {
+          "en": "The self-critical soul"
+        },
+        "note": {
+          "en": "Qummi reads the self-critical soul as Adam's soul, which disobeyed and which God reproached [10]. Tabatabai takes it as the believer's soul, which blames him for sin in this life [1]."
+        },
+        "narrations": []
+      },
+      {
+        "verse": 5,
+        "heading": {
+          "en": "Why man denies"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "the Imams",
+            "addressee": null,
+            "arabic": "يريد أن يفجر أمير المؤمنين (عليه السلام)، بمعنى يكيده",
+            "chain": null,
+            "text": {
+              "en": "God's words, that man desires to go on living viciously, mean he desires to act wickedly against the Commander of the Faithful - that is, to plot against him."
+            },
+            "source": "s25"
+          }
+        ]
+      },
+      {
+        "verse": 14,
+        "heading": {
+          "en": "A witness against himself"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": "Umar ibn Yazid",
+            "arabic": "يا أبا حفص، ما يصنع الإنسان أن يتقرب إلى الله عز و جل بخلاف ما يعلم الله تعالى؟ إن رسول الله (صلى الله عليه و آله) كان يقول: من أسر سريرة رداه الله رداءها، إن خيرا فخير، و إن شرا فشر",
+            "chain": "al-Kulayni, from Muhammad ibn Yahya, from Ahmad ibn Muhammad, from Ali ibn al-Hakam, from Umar ibn Yazid, from Abu Abdillah",
+            "text": {
+              "en": "Abu Hafs, what does it profit a man to seek nearness to God while doing the opposite of what God knows of him? The Messenger of God used to say: whoever hides a secret, God will clothe him in its garment - if good, then good; if evil, then evil."
+            },
+            "source": "s26"
+          }
+        ]
+      },
+      {
+        "verse": 16,
+        "heading": {
+          "en": "An occasion at Ghadir"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "كان سبب نزولها انّ رسول الله صلّى الله عليه وآله دعا الى بيعة عليّ عليه السلام يوم غدير خم … فصعد رسول الله صلّى الله عليه وآله المنبر وهو يريد البراءة منه فأنزل الله { لاَ تُحَرِّكْ بِهِ لِسانَكَ لتعجل به } فسكت رسول الله صلّى الله عليه وآله ولم يسمّه",
+            "chain": null,
+            "text": {
+              "en": "Its occasion of revelation was that the Messenger of God called the people to pledge allegiance to Ali at Ghadir Khumm. He climbed the pulpit intending to disavow the man who had refused, and God sent down 'Do not move your tongue with it to hasten it,' so he fell silent and did not name him."
+            },
+            "source": "s30"
+          }
+        ]
+      },
+      {
+        "verse": 17,
+        "heading": {
+          "en": "Gathering the Quran"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "على آل محمد جمع القرآن وقرآنه",
+            "chain": null,
+            "text": {
+              "en": "Upon the Family of Muhammad lies the gathering of the Quran and its recitation."
+            },
+            "source": "s17"
+          }
+        ]
+      },
+      {
+        "verse": 23,
+        "heading": {
+          "en": "Looking to their Lord"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "يعني مشرقة، تنظر ثواب ربها",
+            "chain": "Ibn Babawayh, from Ibrahim ibn Abi Mahmud, from Ali ibn Musa al-Rida",
+            "text": {
+              "en": "He means the faces are radiant, looking to the reward of their Lord."
+            },
+            "source": "s27"
+          }
+        ]
+      },
+      {
+        "verse": 27,
+        "heading": {
+          "en": "Who will heal him"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "ذلك ابن آدم، إذا حل به الموت قال: هل من طبيب؟ { وَظَنَّ أَنَّهُ ٱلْفِرَاقُ } أيقن بمفارقة الأحبة { وَٱلْتَفَّتِ ٱلسَّاقُ بِٱلسَّاقِ } التفت الدنيا بالآخرة ثم { إِلَىٰ رَبِّكَ يَوْمَئِذٍ ٱلْمَسَاقُ } ، قال: المصير إلى رب العالمين",
+            "chain": "al-Kulayni, from Ali ibn Ibrahim, from his father, from Amr ibn Uthman, from al-Mufaddal ibn Salih, from Jabir, from Abu Ja'far",
+            "text": {
+              "en": "That is the son of Adam: when death reaches him he says, 'Is there a physician?' And he is certain he will part from his loved ones. 'Each shank clasps the other' - this world is entwined with the next; 'to your Lord that Day is the driving' is the return to the Lord of the Worlds."
+            },
+            "source": "s28"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Verse 23 calls the blessed faces 'looking to their Lord,' and the two traditions read it apart. Ibn Kathir takes it literally: the believers will see God plainly with their eyes in the Hereafter, which he calls the agreed teaching of the community, backed by widely transmitted reports likening the sight of God to seeing the full moon [39]. The Shia commentators deny bodily sight of God outright, since whatever the eye sees must face it and hold a direction, which is impossible for God. Tabrisi and Tusi read 'looking' as the soul awaiting the reward and mercy of its Lord, not an act of the eye [4][7]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Qiyaama 1 to 15",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=75&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إقسام بيوم القيامة سواء قيل بكون { لا أقسم } كلمة قسم أو بكون لا زائدة أو نافية على اختلاف الأقوال."
+        },
+        "gloss": "It is an oath by the Day of Resurrection, whether one holds 'la uqsimu' to be a word of oath or the 'la' to be extra or negating, according to the differing views."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Qiyaama 16 to 30",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=75&tAyahNo=16&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "متضمن أدباً إلهياً كلف النبي صلى الله عليه وآله وسلم أن يتأدب به حينما يتلقى ما يوحى إليه من القرآن الكريم فلا يبادر إلى قراءة ما لم يقرأ بعد"
+        },
+        "gloss": "It contains a divine etiquette the Prophet was charged to observe when receiving what is revealed to him of the Quran, so that he does not rush to recite what has not yet been recited."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qiyaama 1 to 15",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=75&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ويجوز أن يريد أنه يسوِّف التوبة ويقدم الأعمال السيئة"
+        },
+        "gloss": "It may be that he puts off repentance and sends his evil deeds ahead."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qiyaama 16 to 25",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=75&tAyahNo=16&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وهذا لا يجوز لأن كل منظور إليه بالعين مشار إليه بالحدقة واللحاظ والله يتعالى عن أن يشار إليه بالعين"
+        },
+        "gloss": "This is not permissible, because everything looked at with the eye is pointed to by the pupil and the glance, and God is far above being pointed to by the eye."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qiyaama 26 to 30",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=75&tAyahNo=26&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ إلى ربك يومئذٍ المساق } أي مساق الخلائق إلى المحشر الذي لا يملك فيه الأمر والنهي غير الله تعالى"
+        },
+        "gloss": "'To your Lord that Day is the driving' means the driving of all creatures to the Gathering, in which none but God holds command or prohibition."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qiyaama 1 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=75&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لكن (لا) ها هنا رد لقوم انكروا البعث وكفروا بالتنزيل. فقال الله { لا } أي ليس كما تقولون"
+        },
+        "gloss": "But here the 'la' is a rebuttal to a people who denied the resurrection and disbelieved in the revelation; so God said 'No,' that is, it is not as you say."
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qiyaama 11 to 25",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=75&tAyahNo=11&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ إلى ربها ناظرة } معناه منتظرة نعمة ربها وثوابه ان يصل اليهم"
+        },
+        "gloss": "'Looking to their Lord' means awaiting the favor and reward of their Lord to reach them."
+      },
+      {
+        "id": "s10",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qiyaama 2",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=75&tAyahNo=2&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "نفس آدم التي عصت فلامها الله عز وجل"
+        },
+        "gloss": "The soul of Adam, which disobeyed and which God reproached."
+      },
+      {
+        "id": "s17",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qiyaama 17",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=75&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "على آل محمد جمع القرآن وقرآنه"
+        },
+        "gloss": "Upon the Family of Muhammad is the gathering of the Quran and its recitation."
+      },
+      {
+        "id": "s25",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qiyaama 1 to 5",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=75&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يريد أن يفجر أمير المؤمنين (عليه السلام)، بمعنى يكيده"
+        },
+        "gloss": "He desires to act wickedly against the Commander of the Faithful, meaning to plot against him."
+      },
+      {
+        "id": "s26",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qiyaama 6 to 15",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=75&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "من أسر سريرة رداه الله رداءها، إن خيرا فخير، و إن شرا فشر"
+        },
+        "gloss": "Whoever hides a secret, God will clothe him in its garment - if good then good, and if evil then evil."
+      },
+      {
+        "id": "s27",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qiyaama 17 to 23",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=75&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يعني مشرقة، تنظر ثواب ربها"
+        },
+        "gloss": "He means radiant, looking to the reward of its Lord."
+      },
+      {
+        "id": "s28",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qiyaama 24 to 30",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=75&tAyahNo=24&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ذلك ابن آدم، إذا حل به الموت قال: هل من طبيب؟"
+        },
+        "gloss": "That is the son of Adam: when death comes upon him he says, 'Is there a physician?'"
+      },
+      {
+        "id": "s30",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qiyaama 16 to 30",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=75&tAyahNo=16&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "كان سبب نزولها انّ رسول الله صلّى الله عليه وآله دعا الى بيعة عليّ عليه السلام يوم غدير خم"
+        },
+        "gloss": "Its occasion of revelation was that the Messenger of God called the people to pledge allegiance to Ali on the day of Ghadir Khumm."
+      },
+      {
+        "id": "s39",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Qiyaama 16 to 30",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=75&tAyahNo=16&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ إِلَىٰ رَبِّهَا نَاظِرَةٌ } أي تراه عياناً كما رواه البخاري رحمه الله تعالى في صحيحه"
+        },
+        "gloss": "'Looking to their Lord' means they see Him plainly, as al-Bukhari related in his Sahih."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:28:21Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-10-06T18:16:37Z",
+      "assembled_at": "2026-10-06T18:16:57Z"
+    }
+  },
+  "2": {
+    "id": "75:2",
+    "surah": 75,
+    "index": 2,
+    "range": [
+      31,
+      40
+    ],
+    "title": {
+      "en": "The denier and the Resurrection"
+    },
+    "essay": {
+      "en": "The surah's closing movement turns from the deathbed scene before it to a portrait of the man who rejected the Day. He is one who neither confirmed the truth nor prayed, but denied it and turned away [1]. Tabatabai reads the confirmation withheld as belief in the true call the Quran carries, and the prayer withheld as the devotional turning to God that is the pillar of religion [1]. Then he went back to his family swaggering, which Tabrisi glosses as strutting with a conceited gait [2]. Over this figure falls a doubled threat, 'Woe to you! Woe to you!', said again in the verse that follows; Tabatabai takes it as a word of threat, repeated to drive it home [1].\n\nThe passage then turns to a question: does man suppose he has been left to futility, neither commanded nor called to account [1]? The answer comes through his own beginning. Was he not a drop of emitted semen, then a clinging mass, which God created and proportioned, making of him the two sexes, male and female? Tabrisi and Tusi record a difference over the reading of yumna, whether the verb is referred to the semen or to the drop [2][3].\n\nFrom this origin the surah draws its final argument: is not the One who shaped a human being from so slight a start able to revive the dead? Tusi holds that whoever could originate this creation is the more able to restore it, and that the verse establishes the soundness of reasoning from the first making to the second [3]. The surah ends by making the proof of the first creation the proof of the Resurrection it had set out to defend [1]."
+    },
+    "verses": [
+      {
+        "verse": 31,
+        "heading": {
+          "en": "He denied and turned away"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "قام ابن هند و تمطى [و خرج] مغضبا، واضعا يمينه على عبد الله بن قيس الأشعري، و يساره على المغيرة بن شعبة، و هو يقول: و الله لا نصدق محمدا على مقالته، و لا نقر عليا بولايته، فنزل: { فَلاَ صَدَّقَ وَلاَ صَلَّىٰ } الآيات",
+            "chain": null,
+            "text": {
+              "en": "Ibn Hind stood up and swaggered, going out in anger, laying his right hand on Abdullah ibn Qays al-Ash'ari and his left on al-Mughira ibn Shu'ba, saying, 'By God, we will not believe Muhammad in what he says, nor acknowledge Ali in his wilaya.' Then was revealed, 'He neither confirmed nor prayed.'"
+            },
+            "source": "s7"
+          }
+        ]
+      },
+      {
+        "verse": 34,
+        "heading": {
+          "en": "The doubled threat"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Jawad",
+            "addressee": "Abd al-Azim al-Hasani",
+            "arabic": "سألت محمد بن علي الرضا (عليه السلام) عن قول الله عز و جل: { أَوْلَىٰ لَكَ فَأَوْلَىٰ * ثُمَّ أَوْلَىٰ لَكَ فَأَوْلَىٰ } [قال]: يقول الله تبارك و تعالى: بعدا لك من خير الدنيا، بعدا لك من خير الآخرة",
+            "chain": "Ibn Babawayh, from Ali ibn Ahmad ibn Muhammad ibn Imran al-Daqqaq, from Muhammad ibn Harun al-Sufi, from Abu Turab Ubaydullah ibn Musa al-Ruyani, from Abd al-Azim ibn Abdullah al-Hasani",
+            "text": {
+              "en": "I asked Muhammad ibn Ali al-Rida about Allah's words, 'Woe to you! Woe to you! Again, woe to you! Woe to you!' He said, 'Allah, blessed and exalted, is saying: Far from you be the good of this world, far from you be the good of the Hereafter.'"
+            },
+            "source": "s7"
+          }
+        ]
+      },
+      {
+        "verse": 36,
+        "heading": {
+          "en": "Not left to futility"
+        },
+        "note": {
+          "en": "Suda means left neglected, with no command, no accountability, and no reward. Tabatabai notes this closing question returns to the surah's opening challenge over whether God will not gather a man's bones (75:3) [1]."
+        },
+        "narrations": []
+      },
+      {
+        "verse": 40,
+        "heading": {
+          "en": "Able to revive the dead"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "The Prophet Muhammad",
+            "addressee": null,
+            "arabic": "عن البراء بن عازب، قال: لما نزلت هذه الآية { أَلَيْسَ ذَلِكَ بِقَادِرٍ عَلَىٰ أَن يُحْيِـيَ ٱلْمَوْتَىٰ } ، قال رسول الله (صلى الله عليه و آله): سبحانك اللهم! و بلى. قال: و هو المروي، عن أبي جعفر و أبي عبد الله (عليهما السلام)",
+            "chain": "al-Tabrisi, from al-Bara ibn Azib",
+            "text": {
+              "en": "When this verse was revealed, 'Is not that One able to revive the dead?', the Messenger of Allah said, 'Glory be to You, O Allah; yes indeed.' This is also narrated from Abu Ja'far and Abu Abdillah."
+            },
+            "source": "s7"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "The two traditions part over whom these verses describe. Sunni commentators read them of Abu Jahl: al-Tabari records that 'Woe to you! Woe to you!' is a threat from God upon a threat against Abu Jahl, tied to the report that the Prophet seized him and spoke these words, to which Abu Jahl retorted that neither Muhammad nor his Lord could do anything to him [11]. The Shia narration tradition reports instead an occasion after Ghadir Khumm: the verses came down when Mu'awiya, leaning on al-Mughira ibn Shu'ba and Abu Musa al-Ash'ari, went off swaggering and refused to acknowledge Ali's wilaya or to believe the Prophet's word about him [7]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Qiyaama 31 to 40",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=75&tAyahNo=31&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والمراد بالتصديق المنفي تصديق الدعوة الحقة التي يتضمنها القرآن الكريم، وبالتصلية المنفية التوجه العبادي إليه تعالى بالصلاة التي هي عمود الدين."
+        },
+        "gloss": "The confirmation that is denied means confirming the true call the Quran contains; the prayer that is denied means the devotional turning to God in the prayer that is the pillar of religion."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qiyaama 31 to 40",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=75&tAyahNo=31&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أي يرجع إليهم يتبختر ويختال في مشيته"
+        },
+        "gloss": "That is, he returns to them strutting and swaggering in his gait."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qiyaama 31 to 40",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=75&tAyahNo=31&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي الآية دلالة على صحة القياس العقلي، وهو أن من قدر على احياء الانسان قادر على احيائه بعد الاماتة."
+        },
+        "gloss": "In the verse is proof of the soundness of rational analogy: that the One able to give man life is able to give him life after death."
+      },
+      {
+        "id": "s7",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qiyaama 31 to 40",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=75&tAyahNo=31&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فاتكأ معاوية على المغيرة بن شعبة و أبي موسى الأشعري، ثم أقبل يتمطى نحو أهله و يقول: و الله لا نقر لعلي بالولاية أبدا، و لا نصدق محمدا مقالته فيه"
+        },
+        "gloss": "Mu'awiya leaned on al-Mughira ibn Shu'ba and Abu Musa al-Ash'ari, then came on swaggering toward his family, saying, 'By God, we will never acknowledge Ali's wilaya, nor believe Muhammad's word about him.'"
+      },
+      {
+        "id": "s11",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Qiyaama 31 to 36",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=75&tAyahNo=31&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هذا وعيد من الله على وعيد لأبي جهل"
+        },
+        "gloss": "This is a threat from God upon a threat against Abu Jahl."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:21:47Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T17:39:01Z",
+      "assembled_at": "2026-10-06T18:16:57Z"
+    }
+  }
+}

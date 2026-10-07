@@ -1,0 +1,655 @@
+{
+  "1": {
+    "id": "68:1",
+    "surah": 68,
+    "index": 1,
+    "range": [
+      1,
+      33
+    ],
+    "title": {
+      "en": "The Pen and the garden"
+    },
+    "essay": {
+      "en": "Al-Qalam opens with an oath, by the Pen and by what they write, and then its answer: by your Lord's blessing, you are not crazy. Al-Mizan reads the whole opening as consolation to the Prophet after the pagans had charged him with madness, reassuring him with a lasting reward, thanking him for his great character, and firmly forbidding him to obey or flatter his accusers [1]. Al-Tabrisi adds that God swears by the Pen for the good it holds for people, since by it the rulings of religion are preserved and the affairs of the world are kept in order [2].\n\nThe verses then turn the charge back on the accusers: You will see and they will see which one of you is crazy, for the Lord alone knows who has strayed from His way and who is guided. A string of commands follows. The Prophet must not obey the deniers, who wish he would soften so that they too might soften, nor obey the vile swearer, the scandal-monger and talebearer, the hinderer of good, the sinful transgressor, the callous and baseborn man. Al-Mizan counts these as nine vices by which God describes enemies of the religion who had been calling the Prophet to compromise, and the warning ends, Soon We shall brand him on his snout [1] - a mark, al-Tibyan says, set on his nose by which the angels will know him as one of the Fire's people [4].\n\nThe surah then lays a parable beside the warning. The People of the Garden swore to harvest at dawn and made no exception, meaning to keep out the poor; a visitation from their Lord passed over it by night, and by morning it lay like a harvested field. They went out sure of their power, found ruin, and confessed they had strayed; the most upright among them recalled his unheeded warning, and they turned to blaming one another. The passage closes on the lesson: the punishment of the Hereafter is surely greater, had they known."
+    },
+    "verses": [
+      {
+        "verse": 1,
+        "heading": {
+          "en": "The Pen and the writing"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إن الله خلق القلم من شجرة في الجنة يقال لها الخلد ثم قال لنهر في الجنة كن مداداً فجمد النهر وكان أشد بياضاً من الثلج وأحلى من الشهد ثم قال للقلم أكتب قال وما أكتب يا رب قال أكتب ما كان وما هو كائن إلى يوم القيامة",
+            "chain": "Ali ibn Ibrahim, from his father, from Ibn Abi Umayr, from Abd al-Rahim al-Qasir, from Abu Abdillah",
+            "text": {
+              "en": "Allah created the Pen from a tree in Paradise called al-Khuld, then said to a river in Paradise, 'Be ink,' and the river froze. Then He said to the Pen, 'Write.' It said, 'What shall I write, my Lord?' He said, 'Write what was and what will be until the Day of Resurrection.'"
+            },
+            "source": "s9"
+          }
+        ]
+      },
+      {
+        "verse": 4,
+        "heading": {
+          "en": "A great character"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "انّ الله عزّ وجلّ ادّب نبيّه فأحسن ادبه فلمّا اكمل له الأدب قال انّك لعلى خلق عظيم",
+            "chain": null,
+            "text": {
+              "en": "Allah disciplined His Prophet and made his discipline excellent, and when He had perfected his discipline for him He said, 'Indeed you possess a great character.'"
+            },
+            "source": "s26"
+          },
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "{ وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ } قال: هو الإسلام",
+            "chain": "from his father, from Sa'd ibn Abdillah, from Ahmad ibn Muhammad, from his father, from Fadala, from Aban, from Abu al-Jarud, from Abu Jafar",
+            "text": {
+              "en": "Concerning Allah's words, 'and indeed you possess a great character,' he said: it is Islam."
+            },
+            "source": "s22"
+          }
+        ]
+      },
+      {
+        "verse": 5,
+        "heading": {
+          "en": "Which of you is crazy"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "لقي فلان أمير المؤمنين عليه السلام فقال يا علي بلغني أنك تتأول هذه الآية فيَّ وفي صاحبي … أفلا أخبرك يا أبا فلان! ما نزل في بني أمية",
+            "chain": null,
+            "text": {
+              "en": "So-and-so met Amir al-Muminin and said, 'O Ali, it has reached me that you interpret this verse - which one of you is crazy - about me and my companion.' Amir al-Muminin replied, 'Shall I not tell you, O father of so-and-so, what was revealed about Banu Umayya?'"
+            },
+            "source": "s11"
+          }
+        ]
+      },
+      {
+        "verse": 13,
+        "heading": {
+          "en": "Callous and baseborn"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "سئل عن قوله تعالى عتلّ بعد ذلك زنيم فقال العتلّ العظيم الكفر والزّنيم المستهتر بكفره",
+            "chain": null,
+            "text": {
+              "en": "He was asked about His words, 'callous and, on top of that, baseborn,' and he said: the callous one is immense in disbelief, and the baseborn one is brazen in his disbelief."
+            },
+            "source": "s26"
+          }
+        ]
+      },
+      {
+        "verse": 16,
+        "heading": {
+          "en": "Branded on the snout"
+        },
+        "note": {
+          "en": "Qummi's narration-tafsir places this branding in the raj'a, the return: when Amir al-Muminin comes back and his enemies return, he marks them on the nose and lips, as cattle are branded [19]."
+        },
+        "narrations": []
+      },
+      {
+        "verse": 17,
+        "heading": {
+          "en": "The People of the Garden"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "إن الرجل ليذنب الذنب فيدرأ عنه الرزق و تلا هذه الآية إذ أقسموا ليصرمنها مصبحين ولا يستثنون فطاف عليها طائف من ربك وهم نائمون",
+            "chain": "Muhammad ibn Yahya, from Abdullah ibn Muhammad, from Ali ibn al-Hakam, from Aban ibn Uthman, from al-Fudayl, from Abu Jafar",
+            "text": {
+              "en": "A man commits a sin and sustenance is turned away from him - and he recited: when they vowed they would gather its fruit at dawn, and they did not make any exception; then a visitation from your Lord visited it while they were asleep."
+            },
+            "source": "s25"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "The Shia narrations read the surah's opening as revealed about Ali. Al-Sadiq relates that a man confronted Amir al-Muminin for applying 'which one of you is crazy' to himself and his companion [11], and they take 'the good' that the vile man withholds to mean Ali himself [23]. The major Sunni commentators read the same verses only as God clearing the Prophet of the Meccans' charge of madness, so that he and his deniers will see which of them is deluded [41], and they identify the vilified man of verses 10 to 13 with al-Akhnas ibn Shariq or al-Aswad ibn Abd Yaghuth [42]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Qalam 1 to 33",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=68&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "بيان السورة تعزّي النبي صلى الله عليه وآله وسلم إثر ما رماه المشركون بالجنون وتطيّب نفسه بالوعد الجميل والشكر على خلقه العظيم وتنهاه نهياً بالغاً عن طاعتهم ومداهنتهم، وتأمره أمراً أكيداً بالصبر لحكم ربه."
+        },
+        "gloss": "The surah consoles the Prophet after the pagans charged him with madness, reassures him with a beautiful promise and with gratitude for his great character, strictly forbids him to obey or flatter them, and firmly commands him to be patient for his Lord's judgment."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qalam 1 to 16",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=68&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والقلم الذي يكتب به أقسم الله به لمنافع الخلق فيه … وبه تحفظ أحكام الدين وبه تستقيم أمور العالمين"
+        },
+        "gloss": "The Pen with which one writes - Allah swore by it for the benefits it holds for creation; by it the rulings of religion are preserved and the affairs of the world are set in order."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qalam 1 to 16",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=68&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ سنسمه على الخرطوم } أي سنعلم على أنفه علامة يعرف بها الملائكة انه من أهل النار"
+        },
+        "gloss": "'Soon We shall brand him on his snout' means We shall set a mark on his nose by which the angels will know that he is of the people of the Fire."
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qalam 1 to 2",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=68&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إن الله خلق القلم من شجرة في الجنة يقال لها الخلد ثم قال لنهر في الجنة كن مداداً فجمد النهر"
+        },
+        "gloss": "Allah created the Pen from a tree in Paradise called al-Khuld, then said to a river in Paradise, 'Be ink,' and the river froze."
+      },
+      {
+        "id": "s11",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qalam 5 to 6",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=68&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لقي فلان أمير المؤمنين عليه السلام فقال يا علي بلغني أنك تتأول هذه الآية فيَّ وفي صاحبي"
+        },
+        "gloss": "So-and-so met Amir al-Muminin and said, 'O Ali, it has reached me that you interpret this verse about me and my companion.'"
+      },
+      {
+        "id": "s19",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qalam 16",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=68&tAyahNo=16&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ سنسمه على الخرطوم } قال: في الرجعة إذا رجع أمير المؤمنين عليه السلام ورجع أعداؤه فيسمهم بميسم معه كما توسم البهائم على الخرطوم والأنف والشفتين"
+        },
+        "gloss": "'Soon We shall brand him on his snout': he said, in the return, when Amir al-Muminin returns and his enemies return, he will brand them with a brand he carries, as beasts are branded, on the snout, nose, and lips."
+      },
+      {
+        "id": "s22",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qalam 4",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=68&tAyahNo=4&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ وَإِنَّكَ لَعَلَىٰ خُلُقٍ عَظِيمٍ } قال: هو الإسلام"
+        },
+        "gloss": "'And indeed you possess a great character': he said, it is Islam."
+      },
+      {
+        "id": "s23",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qalam 5 to 13",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=68&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ مَّنَّاعٍ لِّلْخَيْرِ مُعْتَدٍ أَثِيمٍ } قال: الخير: أمير المؤمنين"
+        },
+        "gloss": "'Hinderer of all good, sinful transgressor': he said, the good is Amir al-Muminin."
+      },
+      {
+        "id": "s25",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qalam 17 to 33",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=68&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إن الرجل ليذنب الذنب فيدرأ عنه الرزق و تلا هذه الآية إذ أقسموا ليصرمنها مصبحين ولا يستثنون"
+        },
+        "gloss": "A man commits a sin and sustenance is turned away from him - and he recited this verse: 'when they swore they would gather its fruit at dawn and made no exception.'"
+      },
+      {
+        "id": "s26",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qalam 1 to 13",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=68&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "انّ الله عزّ وجلّ ادّب نبيّه فأحسن ادبه فلمّا اكمل له الأدب قال انّك لعلى خلق عظيم"
+        },
+        "gloss": "Allah disciplined His Prophet and made his discipline excellent, and when He had perfected his discipline He said, 'Indeed you possess a great character.'"
+      },
+      {
+        "id": "s41",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Qalam 1 to 7",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=68&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فستعلم يا محمد، وسيعلم مخالفوك ومكذبوك، من المفتون الضال منك ومنهم"
+        },
+        "gloss": "You will know, O Muhammad, and your opponents and deniers will know, which of you and them is the deluded, misguided one."
+      },
+      {
+        "id": "s42",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Qalam 8 to 16",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=68&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ويقال هو الأخنس بن شريق الثقفي حليف بني زهرة، وزعم أناس من بني زهرة أن الزنيم الأسود بن عبد يغوث الزهري"
+        },
+        "gloss": "It is said he is al-Akhnas ibn Shariq al-Thaqafi, ally of Banu Zuhra; and some of Banu Zuhra claimed the baseborn one was al-Aswad ibn Abd Yaghuth al-Zuhri."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:08:39Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T17:34:32Z",
+      "assembled_at": "2026-10-06T17:36:09Z"
+    }
+  },
+  "2": {
+    "id": "68:2",
+    "surah": 68,
+    "index": 2,
+    "range": [
+      34,
+      52
+    ],
+    "title": {
+      "en": "The Godwary and the deniers"
+    },
+    "essay": {
+      "en": "The surah's closing movement turns from the deniers it has been warning to the reward waiting for the Godwary: gardens of bliss near their Lord. Against this it sets a sharp question - 'Shall We treat those who submit as We treat the guilty?' Al-Mizan and al-Tabrisi read it as an answer to the deniers, who, hearing of the resurrection, claimed that in the next life they would be at least as well off as the believers, as they were in this one [1][2]. A chain of questions then dismantles the claim: do they hold a scripture that grants them whatever they choose, a pledge binding on God, a guarantor, or partners who could secure it? Each exposes that they have nothing to stand on.\n\nThe scene shifts to the Day itself, when the catastrophe strikes and they are summoned to prostrate but cannot - for in the world they were summoned while sound and able, and refused. Their present ease is itself a trap: 'leave Me with those who deny this discourse' - God will draw them to ruin by degrees, letting one blessing follow another until they forget to give thanks [1].\n\nThen the address turns to the Prophet. Be patient for your Lord's judgement, and do not be like the Man of the Fish - Yunus - who grew impatient and cried out in grief; had a blessing from his Lord not reached him he would have been cast out blamed, but his Lord chose him and made him one of the righteous [3]. Finally the faithless 'almost devour you with their eyes' when they hear the Reminder and call the Prophet mad - which the commentators read as the striking of the evil eye, a real effect they do not deny [1]. The surah then answers that very charge: this is no madness but 'a reminder for all the nations,' so that its close meets the denial of madness with which it opened [1]."
+    },
+    "verses": [
+      {
+        "verse": 36,
+        "heading": {
+          "en": "How do you judge"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "رَغِبُوا عَنِ اخْتِيَارِ الله وَاخْتِيَارِ رَسُولِ الله (صَلَّى اللهُ عَلَيْهِ وَآلِه) وَأَهْلِ بَيْتِهِ إِلَى اخْتِيَارِهِمْ وَالْقُرْآنُ يُنَادِيهِمْ … وَقَالَ ما لَكُمْ كَيْفَ تَحْكُمُونَ أَمْ لَكُمْ كِتابٌ فِيهِ تَدْرُسُونَ إِنَّ لَكُمْ فِيهِ لَما تَخَيَّرُونَ",
+            "chain": "Abu Muhammad al-Qasim ibn al-Ala, raising it, from Abd al-Aziz ibn Muslim",
+            "text": {
+              "en": "They turned from the choice of God, of His Messenger, and of his family to their own choosing, while the Qur'an calls out to them: 'What is the matter with you? How do you judge! Do you have a scripture in which you read that you shall have in it whatever you choose?'"
+            },
+            "source": "s60"
+          }
+        ]
+      },
+      {
+        "verse": 42,
+        "heading": {
+          "en": "The shin laid bare"
+        },
+        "note": {
+          "en": "What Qarai renders 'the catastrophe occurs' is literally 'the shin is laid bare,' which the commentators take as an image for the severity of that Day [1]."
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "حِجابٌ مِن نُورٍ يَكشَفُ فَيِقَعُ الْمُؤْمِنُوُنَ سُجَّداً، وَتُدْمَجُ أَصلابُ المُنافِقِينَ فَلا يَستَطِيعُونَ السُّجُودَ.",
+            "chain": "al-Husayn ibn Ibrahim ibn Ahmad ibn Hisham, from Muhammad ibn Jafar al-Asadi, from Muhammad ibn Ismail al-Barmaki, from al-Husayn ibn al-Hasan, from Bakr ibn Salih, from al-Hasan ibn Said, from Abu al-Hasan al-Rida",
+            "text": {
+              "en": "A veil of light is drawn aside, and the believers fall down in prostration, while the backs of the hypocrites are locked rigid so that they cannot prostrate."
+            },
+            "source": "s67"
+          },
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "سألته عن قول الله عز و جل: (يوم يكشف عن ساق) قال: كشف إزاره عن ساقه، ويده الأخرى على رأسه فقال: سبحان ربي الأعلى.",
+            "chain": "Muhammad ibn al-Hasan ibn al-Walid, from Muhammad ibn al-Hasan al-Saffar, from Ahmad ibn Muhammad ibn Isa, from Ahmad ibn Muhammad ibn Abi Nasr, from al-Husayn ibn Musa, from Ubayd ibn Zurara, from Abu Abdillah",
+            "text": {
+              "en": "I asked him about God's words 'the day the shin is laid bare.' He drew the cloth back from his own shin, placed his other hand on his head, and said: 'Glory be to my Lord, the Most High.'"
+            },
+            "source": "s68"
+          },
+          {
+            "id": "n4",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "يوم يكشف عن الأمور التي خفيت وما غصبوا آل محمد حقهم ويدعون إلى السجود قال يكشف لأمير المؤمنين عليه السلام فتصير أعناقهم مثل صياصي البقر … { فلا يستطيعون } أن يسجدوا وهي عقوبة لأنهم لم يطيعوا الله في الدنيا … وقد كانوا يدعون إلى السجود وهم سالمون قال إلى ولايته في الدنيا وهم يستطيعون.",
+            "chain": null,
+            "text": {
+              "en": "The Day the hidden matters are laid bare, and how they usurped the right of the family of Muhammad. They are summoned to prostrate - it is laid bare for the Commander of the Faithful - and their necks turn like oxen's horns, so they cannot. 'Summoned while sound' means to his guardianship in the world, while they were able."
+            },
+            "source": "s8"
+          }
+        ]
+      },
+      {
+        "verse": 44,
+        "heading": {
+          "en": "Drawn to ruin"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إن الله إذا أراد بعبد خيرا فأذنب ذنبا أتبعه بنقمة و ذكره الاستغفار، و إذا أراد بعبد شرا فأذنب ذنبا أتبعه بنعمة لينسيه الاستغفار و يتمادى بها، و هو قول الله عز و جل: { سَنَسْتَدْرِجُهُمْ مِّنْ حَيْثُ لاَ يَعْلَمُونَ } بالنعم عند المعاصي.",
+            "chain": "Muhammad ibn Yaqub, from a number of our companions, from Ahmad ibn Muhammad, from Ali ibn al-Hakam, from Abdallah ibn Jundab, from Sufyan ibn al-Simt, from Abu Abdillah",
+            "text": {
+              "en": "When God wills good for a servant who sins, He follows it with a setback and reminds him to seek forgiveness. When He wills ill for one who sins, He follows it with a blessing that makes him forget to seek forgiveness and persist - that is His words, 'We will draw them imperceptibly,' through blessings amid their sins."
+            },
+            "source": "s14"
+          }
+        ]
+      },
+      {
+        "verse": 51,
+        "heading": {
+          "en": "They called him mad"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "ذَلِكَ مَوْضِعُ قَدَمِ رَسُولِ الله (صلَّى اللهُ عَلَيْهِ وَآلِه) حَيْثُ قَالَ مَنْ كُنْتُ مَوْلاهُ فَعَلِيٌّ مَوْلاهُ … ذَلِكَ مَوْضِعُ فُسْطَاطِ أَبِي فُلانٍ وَفُلانٍ وَسَالِمٍ مَوْلَى أَبِي حُذَيْفَةَ وَأَبِي عُبَيْدَةَ الْجَرَّاحِ فَلَمَّا أَنْ رَأَوْهُ رَافِعاً يَدَيْهِ قَالَ بَعْضُهُمْ لِبَعْضٍ انْظُرُوا إِلَى عَيْنَيْهِ تَدُورُ كَأَنَّهُمَا عَيْنَا مَجْنُونٍ فَنَزَلَ جَبْرَئِيلُ (عَلَيْهِ السَّلاَم) بِهَذِهِ الآيَةِ وَإِنْ يَكادُ الَّذِينَ كَفَرُوا لَيُزْلِقُونَكَ بِأَبْصارِهِمْ لَمَّا سَمِعُوا الذِّكْرَ وَيَقُولُونَ إِنَّهُ لَمَجْنُونٌ",
+            "chain": "Muhammad ibn Yahya, from Muhammad ibn al-Husayn, from al-Hajjal, from Abd al-Samad ibn Bashir, from Hassan al-Jammal",
+            "text": {
+              "en": "At the Mosque of Ghadir he pointed: that is where the Messenger said, 'Whoever's master I am, Ali is his master.' Then: the tent of so-and-so and so-and-so, Salim, and Abu Ubayda al-Jarrah; when they saw him raise his hands they said, 'Look at his eyes rolling like a madman's,' and Gabriel brought down this verse."
+            },
+            "source": "s72"
+          },
+          {
+            "id": "n7",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "لما أخبرهم رسول الله صلى الله عليه وآله بفضل أمير المؤمنين عليه السلام قالوا هو مجنون فقال الله سبحانه { وما هو } … يعني: أمير المؤمنين عليه السلام { إلا ذكر للعالمين }.",
+            "chain": null,
+            "text": {
+              "en": "When the Messenger of God told them of the excellence of the Commander of the Faithful, they said: he is mad. So God said, 'Yet it is' - meaning the Commander of the Faithful - 'only a reminder for all the nations.'"
+            },
+            "source": "s12"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On verse 42, which Qarai renders 'the catastrophe occurs' but which literally reads 'the shin is laid bare,' both traditions take the phrase as an image of that Day's overwhelming severity [1]. The Shia narrations read it as a veil of light drawn aside and deny any literal shin to God [1]. Among Sunnis, Ibn Kathir transmits a report that God 'uncovers His shin' so that the believers prostrate [27], while al-Razi rejects the literal reading outright, holding a bodily limb to be impossible for God and the words to denote severe hardship [45]. On the metaphor itself, al-Mizan [1] and al-Razi [45] agree."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Qalam 34 to 52",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=68&tAyahNo=34&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والكشف عن الساق تمثيل في اشتداد الأمر اشتداداً بالغاً لما أنهم كانوا يشمّرون عن سوقهم إذا اشتد الأمر للعمل أو للفرار"
+        },
+        "gloss": "Uncovering the shin is a figure for the matter growing extremely severe, since people would roll up their garments from their shins when things grew hard, whether for work or for flight."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qalam 34 to 45",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=68&tAyahNo=34&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وذلك أنهم كانوا يقولون إن كان بعث وجزاء كما يقوله محمد فإن حالنا يكون أفضل في الآخرة كما في الدنيا فأخبر سبحانه أن ذلك لا يكون أبداً"
+        },
+        "gloss": "That is because they used to say: if there is a resurrection and a requital as Muhammad claims, our state in the Hereafter will be better, as in this world; so God declared that this will never be."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qalam 46 to 52",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=68&tAyahNo=46&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ ولا تكن كصاحب الحوت } يعني يونس أي لا تكن مثله في استعجال عقاب قومه وإهلاكهم"
+        },
+        "gloss": "'And do not be like the Man of the Fish' means Yunus - do not be like him in hastening the punishment and destruction of his people."
+      },
+      {
+        "id": "s8",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qalam 42",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=68&tAyahNo=42&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يوم يكشف عن الأمور التي خفيت وما غصبوا آل محمد حقهم ويدعون إلى السجود قال يكشف لأمير المؤمنين عليه السلام فتصير أعناقهم مثل صياصي البقر"
+        },
+        "gloss": "The Day the hidden matters are laid bare, and how they usurped the right of the family of Muhammad; and they are summoned to prostrate - it is laid bare for the Commander of the Faithful - so their necks become like the horns of oxen."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qalam 51 to 52",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=68&tAyahNo=51&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لما أخبرهم رسول الله صلى الله عليه وآله بفضل أمير المؤمنين عليه السلام قالوا هو مجنون فقال الله سبحانه { وما هو } … يعني: أمير المؤمنين عليه السلام { إلا ذكر للعالمين }"
+        },
+        "gloss": "When the Messenger of God told them of the excellence of the Commander of the Faithful, they said: he is mad. So God said, 'Yet it is' - meaning the Commander of the Faithful - 'only a reminder for all the nations.'"
+      },
+      {
+        "id": "s14",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Qalam 44 to 48",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=68&tAyahNo=44&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إن الله إذا أراد بعبد خيرا فأذنب ذنبا أتبعه بنقمة و ذكره الاستغفار، و إذا أراد بعبد شرا فأذنب ذنبا أتبعه بنعمة لينسيه الاستغفار و يتمادى بها، و هو قول الله عز و جل: { سَنَسْتَدْرِجُهُمْ مِّنْ حَيْثُ لاَ يَعْلَمُونَ } بالنعم عند المعاصي"
+        },
+        "gloss": "When God wills good for a servant who then sins, He follows it with a setback and reminds him to seek forgiveness; and when He wills ill for a servant who then sins, He follows it with a blessing to make him forget forgiveness and persist - that is His words 'We will draw them imperceptibly, whence they do not know,' through blessings amid acts of disobedience."
+      },
+      {
+        "id": "s27",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Qalam 42 to 47",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=68&tAyahNo=42&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يكشف ربنا عن ساقه، فيسجد له كل مؤمن ومؤمنة، ويبقى من كان يسجد في الدنيا رياءً وسمعة، فيذهب ليسجد، فيعود ظهره طبقاً واحداً"
+        },
+        "gloss": "Our Lord uncovers His shin, and every believing man and woman prostrates to Him; those who prostrated in the world for show remain, and one of them goes to prostrate but his back becomes a single rigid plate."
+      },
+      {
+        "id": "s45",
+        "kind": "tafsir",
+        "work": "Mafatih al-Ghayb",
+        "author": "Fakhr al-Din al-Razi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Qalam 43",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=4&SoraNo=68&AyahNo=43&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "واعلم أن هذا اعتراف من أهل اللغة بأن استعمال الساق في الشدة مجاز … فإذا أقمنا الدلائل القاطعة على أنه تعالى، يستحيل أن يكون جسماً، فحينئذ يجب صرف اللفظ إلى المجاز"
+        },
+        "gloss": "This is an admission by the lexicographers that using 'shin' for severity is metaphorical; so once we have established decisive proofs that God cannot be a body, the word must then be taken as a metaphor."
+      },
+      {
+        "id": "s60",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 1, cited at Al-Qalam 36",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "لم يخرجه",
+          "مرفوع"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "رَغِبُوا عَنِ اخْتِيَارِ الله وَاخْتِيَارِ رَسُولِ الله (صَلَّى اللهُ عَلَيْهِ وَآلِه) وَأَهْلِ بَيْتِهِ إِلَى اخْتِيَارِهِمْ وَالْقُرْآنُ يُنَادِيهِمْ … وَقَالَ ما لَكُمْ كَيْفَ تَحْكُمُونَ أَمْ لَكُمْ كِتابٌ فِيهِ تَدْرُسُونَ إِنَّ لَكُمْ فِيهِ لَما تَخَيَّرُونَ"
+        },
+        "gloss": "They turned from the choice of God, His Messenger, and his family to their own choosing, while the Qur'an calls out to them: 'What is the matter with you? How do you judge! Do you have a scripture in which you read that you shall have whatever you choose?'"
+      },
+      {
+        "id": "s67",
+        "kind": "hadith",
+        "work": "Uyun akhbar al-Rida",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 14, cited at Al-Qalam 42",
+        "url": "https://thaqalayn.com/book/4",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "حِجابٌ مِن نُورٍ يَكشَفُ فَيِقَعُ الْمُؤْمِنُوُنَ سُجَّداً، وَتُدْمَجُ أَصلابُ المُنافِقِينَ فَلا يَستَطِيعُونَ السُّجُودَ."
+        },
+        "gloss": "A veil of light is drawn aside, and the believers fall in prostration, while the backs of the hypocrites are locked rigid so that they cannot prostrate."
+      },
+      {
+        "id": "s68",
+        "kind": "hadith",
+        "work": "Al-Tawhid",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 3, cited at Al-Qalam 42",
+        "url": "https://thaqalayn.com/book/6",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "سألته عن قول الله عز و جل: (يوم يكشف عن ساق) قال: كشف إزاره عن ساقه، ويده الأخرى على رأسه فقال: سبحان ربي الأعلى."
+        },
+        "gloss": "I asked him about God's words 'the day the shin is laid bare.' He drew the cloth back from his own shin, placed his other hand on his head, and said: 'Glory be to my Lord, the Most High.'"
+      },
+      {
+        "id": "s72",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 4, hadith 2, cited at Al-Qalam 51",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "صحيح على الظاهر"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "ذَلِكَ مَوْضِعُ قَدَمِ رَسُولِ الله (صلَّى اللهُ عَلَيْهِ وَآلِه) حَيْثُ قَالَ مَنْ كُنْتُ مَوْلاهُ فَعَلِيٌّ مَوْلاهُ … قَالَ بَعْضُهُمْ لِبَعْضٍ انْظُرُوا إِلَى عَيْنَيْهِ تَدُورُ كَأَنَّهُمَا عَيْنَا مَجْنُونٍ فَنَزَلَ جَبْرَئِيلُ (عَلَيْهِ السَّلاَم) بِهَذِهِ الآيَةِ"
+        },
+        "gloss": "That is where the Messenger of God stood when he said, 'Whoever's master I am, Ali is his master' ... some of them said to one another, 'Look at his eyes rolling as if they were a madman's eyes,' and Gabriel came down with this verse."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:02:01Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-10-06T17:30:19Z",
+      "assembled_at": "2026-10-06T17:36:09Z"
+    }
+  }
+}

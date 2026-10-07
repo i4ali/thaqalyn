@@ -1,0 +1,493 @@
+{
+  "1": {
+    "id": "65:1",
+    "surah": 65,
+    "index": 1,
+    "range": [
+      1,
+      7
+    ],
+    "title": {
+      "en": "Divorce and trust in Allah"
+    },
+    "essay": {
+      "en": "This opening of the surah named for divorce sets out the procedure in order. Allah addresses the Prophet, yet the ruling is meant for every believer. 'Divorce them at [the conclusion of] their term' is read as divorcing the woman in a period of purity in which there has been no intercourse, after which the husband is to calculate the term and be wary of Allah [2]. He must not turn her out of her home, nor is she to go out; as the verse says, he never knows - Allah may bring about something new. When the term nears its end he must either retain her or part from her honourably, taking the witness of two honest men. The surah then lifts from law to promise: whoever is wary of Allah is given a way out and provided for from whence he does not count upon, and whoever puts his trust in Allah is sufficed by Him alone [1]. Verse 4 fixes the waiting periods of those past menses, those too young for them, and the pregnant, whose term runs until they deliver; verse 5 names all of it Allah's ordinance. The passage closes by binding the man to house the divorcee in accordance with his means, never to harass her, to maintain her while she is pregnant, to pay her for nursing, and to spend from what Allah has given him, for Allah will bring about ease after hardship."
+    },
+    "verses": [
+      {
+        "verse": 1,
+        "heading": {
+          "en": "Divorce at the term"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "ليس بشيء … كل ما خالف كتاب الله و السنة فهو يرد إلى كتاب الله و السنة",
+            "chain": "Abdullah ibn Jafar al-Himyari, by his isnad, from Safwan",
+            "text": {
+              "en": "Of a man who had pronounced three divorces in one sitting he said: It is nothing. ... Everything that goes against the Book of God and the Sunna is referred back to the Book of God and the Sunna."
+            },
+            "source": "s8"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "المطلقة تكتحل و تختضب و تطيب و تلبس ما شاءت من الثياب، لأن الله عز و جل يقول … لعلها أن تقع في نفسه فيراجعها",
+            "chain": "Muhammad ibn Yaqub, from Muhammad ibn Yahya, from Ahmad ibn Muhammad, from Muhammad ibn Khalid, from al-Qasim ibn Urwa, from Zurara, from Abu Abdillah",
+            "text": {
+              "en": "The divorced woman applies kohl, dyes her hands, perfumes herself, and wears what clothes she wishes, because Allah says ... perhaps she will come to appeal to him and he will take her back."
+            },
+            "source": "s8"
+          },
+          {
+            "id": "n3",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "أذاها لأهل الرجل و سوء خلقها",
+            "chain": "Muhammad ibn Yaqub, from Ali ibn Ibrahim, from his father, from one of his companions, from al-Rida",
+            "text": {
+              "en": "The gross indecency is her harming the man's household and her ill conduct."
+            },
+            "source": "s8"
+          }
+        ]
+      },
+      {
+        "verse": 2,
+        "heading": {
+          "en": "Two just witnesses"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Kazim",
+            "addressee": "Abu Yusuf the judge",
+            "arabic": "انّ الله تبارك وتعالى امر في كتابه بالطلاق واكد فيه بشاهدين ولم يرض بهما الاّ عدلين وامر في كتابه بالتزويج فأهمله بلا شهود فأثبتم شاهدين فيما اهمل وابطلتم الشاهدين فيما اكّد",
+            "chain": null,
+            "text": {
+              "en": "Allah commanded divorce in His Book and stressed it with two witnesses, accepting none but two just men; and He commanded marriage and left it without witnesses. Yet you required witnesses where He left it open and set aside the witnesses where He stressed them."
+            },
+            "source": "s12"
+          }
+        ]
+      },
+      {
+        "verse": 3,
+        "heading": {
+          "en": "Trust and provision"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "أغلقوا الأبواب و أقبلوا على العبادة، و قالوا: قد كفينا … إنه من فعل ذلك لم يستجب له دعاؤه، عليكم بالطلب",
+            "chain": "from a number of our companions, from Ahmad ibn Abi Abdillah, from Muhammad ibn Ali, from Harun ibn Hamza, from Ali ibn Abd al-Aziz",
+            "text": {
+              "en": "They shut their doors and gave themselves to worship, saying: We have been provided for. ... Whoever does that, his supplication is not answered; you must seek your livelihood."
+            },
+            "source": "s9"
+          },
+          {
+            "id": "n6",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "من أعطي ثلاثا لم يمنع ثلاثا، من أعطي الدعاء أعطي الإجابة، و من أعطي الشكر أعطي الزيادة، و من أعطي التوكل أعطي الكفاية",
+            "chain": "from a number of our companions, from Sahl ibn Ziyad and Ali ibn Ibrahim from his father, together, from Yahya ibn al-Mubarak, from Abdullah ibn Jabala, from Muawiya ibn Wahb",
+            "text": {
+              "en": "Whoever is given three is not denied three: whoever is given prayer is given the answer, whoever is given gratitude is given increase, and whoever is given trust is given sufficiency."
+            },
+            "source": "s9"
+          }
+        ]
+      },
+      {
+        "verse": 4,
+        "heading": {
+          "en": "Waiting periods"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "عدة المرأة التي لا تحيض، و المستحاضة التي لا تطهر ثلاثة أشهر، و عدة التي تحيض و يستقيم حيضها ثلاثة قروء … ما زاد على شهر فهو ريبة، فلتعتد ثلاثة أشهر",
+            "chain": "Muhammad ibn Yaqub, from Ali ibn Ibrahim, from his father, from Ibn Abi Umayr, from Hammad ibn Uthman, from al-Halabi",
+            "text": {
+              "en": "The waiting period of a woman who does not menstruate, and of one with constant bleeding who does not become pure, is three months; the one who menstruates regularly waits three cycles. ... Whatever exceeds a month is doubt, so let her wait three months."
+            },
+            "source": "s10"
+          }
+        ]
+      },
+      {
+        "verse": 6,
+        "heading": {
+          "en": "Housing and nursing"
+        },
+        "narrations": [
+          {
+            "id": "n8",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إذا طلق الرجل المرأة و هي حبلى، أنفق عليها حتى تضع حملها، فإذا وضعته أعطاها أجرها و لا يضارها إلا أن يجد من هي أرخص أجرا منها، فإن رضيت بذلك الأجر فهي أحق بابنها حتى تفطمه",
+            "chain": "Muhammad ibn Yaqub, from Muhammad ibn Yahya, from Ahmad ibn Muhammad, from Muhammad ibn Ismail, from Muhammad ibn al-Fudayl, from Abi al-Sabah al-Kinani",
+            "text": {
+              "en": "When a man divorces his wife while she is pregnant, he maintains her until she delivers. Then he gives her her nursing wage and does not harm her, unless he finds a cheaper nurse; if she accepts that wage, she has the better right to her child until she weans him."
+            },
+            "source": "s11"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On 'take the witness of two honest men' the two traditions divide. Tusi and the Imami jurists attach the witnessing to the divorce itself and hold it a condition for the divorce to take effect, not a recommendation [4]. Ibn Kathir instead reads the witnesses as called over the return, if the husband resolves to take his wife back, and reports that al-Shafi'i, in one of his two positions, made witnessing the return obligatory, as witnessing is required at the start of a marriage [20]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on At-Talaaq 1 to 7",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=65&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فالله كاف لمن توكل عليه لا غيره"
+        },
+        "gloss": "God suffices the one who trusts Him, and no other does."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Talaaq 1 to 5",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=65&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وذلك أن يطلقها في طهر لم يجامعها فيه"
+        },
+        "gloss": "That is, that he divorces her in a period of purity in which he has not had intercourse with her."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Talaaq 1 to 5",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=65&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فعند أصحابنا أن الاشهاد شرط في وقوع الطلاق"
+        },
+        "gloss": "According to our companions, bringing witnesses is a condition for the divorce to take effect."
+      },
+      {
+        "id": "s8",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Talaaq 1",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=65&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "كل ما خالف كتاب الله و السنة فهو يرد إلى كتاب الله و السنة"
+        },
+        "gloss": "Everything that goes against the Book of God and the Sunna is returned to the Book of God and the Sunna."
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Talaaq 2 to 3",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=65&tAyahNo=2&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "من أعطي التوكل أعطي الكفاية"
+        },
+        "gloss": "Whoever is given trust in God is given sufficiency."
+      },
+      {
+        "id": "s10",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Talaaq 4",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=65&tAyahNo=4&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ما زاد على شهر فهو ريبة"
+        },
+        "gloss": "Whatever exceeds a month of delay is doubt."
+      },
+      {
+        "id": "s11",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Talaaq 6 to 7",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=65&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إذا طلق الرجل المرأة و هي حبلى، أنفق عليها حتى تضع حملها"
+        },
+        "gloss": "When a man divorces his wife while she is pregnant, he maintains her until she delivers."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Talaaq 1 to 2",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=65&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "امر في كتابه بالطلاق واكد فيه بشاهدين ولم يرض بهما الاّ عدلين"
+        },
+        "gloss": "He commanded divorce in His Book and stressed it with two witnesses, accepting none but two just men."
+      },
+      {
+        "id": "s20",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on At-Talaaq 2 to 3",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=65&tAyahNo=2&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أي على الرجعة إذا عزمتم عليها"
+        },
+        "gloss": "That is, [the witnesses are called] over the return, if you resolve upon it."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T16:52:27Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T17:09:18Z",
+      "assembled_at": "2026-10-06T17:09:43Z"
+    }
+  },
+  "2": {
+    "id": "65:2",
+    "surah": 65,
+    "index": 2,
+    "range": [
+      8,
+      12
+    ],
+    "title": {
+      "en": "Defiance, the reminder, seven heavens"
+    },
+    "essay": {
+      "en": "These verses close Surah al-Talaq, turning from its rulings on divorce to warning and promise [1]. God recalls how many a town defied the command of its Lord and His apostles and was called to a severe account and struck with a dire punishment. Al-Tusi glosses this defiance as a plunge into flagrant corruption [4], while Tabatabai reads the 'town' as its people, who both disbelieved in God and rejected His messengers [1]. He takes the dire punishment here as destruction in this world, whereas the severe punishment God has readied is the recompense of the hereafter [1]. From this comes the lesson: be wary of God, O people of understanding who believe. Tabatabai notes that God appeals to their very intellects, for minds that have watched nation after nation perish should turn to God-wariness [1]. God has sent down to them a reminder, a messenger reciting His manifest signs to bring the faithful from darkness into light. Al-Tusi glosses this as the passage from the darkness of disbelief to the light of faith, and reads it against the determinists, since God sent His prophet so that people would be led to belief [5]. Whoever believes and does righteous deeds enters everlasting gardens. The surah ends by naming God as the One who created seven heavens and earths like them, through which His command descends, that His servants may know His power and His all-encompassing knowledge [1]."
+    },
+    "verses": [
+      {
+        "verse": 10,
+        "heading": {
+          "en": "The reminder and the messenger"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "al-Rida",
+            "addressee": null,
+            "arabic": "الذكر: رسول الله (صلى الله عليه و آله)، و نحن أهله، و ذلك بين في كتاب الله عز و جل حيث يقول في سورة الطلاق: { فَٱتَّقُواْ ٱللَّهَ يٰأُوْلِي ٱلأَلْبَابِ ٱلَّذِينَ آمَنُواْ قَدْ أَنزَلَ ٱللَّهُ إِلَيْكُمْ ذِكْراً * رَّسُولاً يَتْلُواْ عَلَيْكُمْ آيَاتِ ٱللَّهِ مُبَيِّنَاتٍ }",
+            "chain": "Ibn Babawayh, from Ali ibn al-Husayn ibn Shadhawayh and Jafar ibn Muhammad ibn Masrur, from Muhammad ibn Abdillah ibn Jafar al-Himyari, from his father, from al-Rayyan ibn al-Salt, from al-Rida",
+            "text": {
+              "en": "al-Rida said: The reminder is the Messenger of Allah, and we are its people. This is plain in Allah's Book, where He says in Surah al-Talaq: 'be wary of Allah, O you who possess intellect and have faith! Allah has already sent down to you a reminder, an apostle reciting to you the manifest signs of Allah.'"
+            },
+            "source": "s7"
+          },
+          {
+            "id": "n2",
+            "speaker": "Ibn Abbas",
+            "addressee": null,
+            "arabic": "النبي ذكره من الله، و علي ذكر من محمد (صلى الله عليه و آله)، كما قال الله: { وَإِنَّهُ لَذِكْرٌ لَّكَ وَلِقَوْمِكَ }",
+            "chain": "Ibn Shahr Ashob, from Ibn Abbas",
+            "text": {
+              "en": "Ibn Abbas said, of 'a reminder, a messenger': The Prophet is a reminder from Allah, and Ali is a reminder from Muhammad, as Allah said: 'Indeed it is a reminder for you and for your people.'"
+            },
+            "source": "s7"
+          }
+        ]
+      },
+      {
+        "verse": 12,
+        "heading": {
+          "en": "Seven heavens and seven earths"
+        },
+        "note": {
+          "en": "Al-Tabrisi notes this is the only verse in the Qur'an that speaks of seven earths matching the seven heavens, a likeness in number, not in nature [3]."
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "al-Rida",
+            "addressee": null,
+            "arabic": "فأما صاحب الأمر فرسول الله (صلى الله عليه و آله)، و الوصي بعد رسول الله (صلى الله عليه و آله) قائم على وجه الأرض، فإنما يتنزل الأمر إليه من فوق السماء من بين السماوات و الأرضين",
+            "chain": "Ali ibn Ibrahim, from his father, from al-Husayn ibn Khalid, from Abu al-Hasan al-Rida",
+            "text": {
+              "en": "al-Rida said: As for the master of the command, it is the Messenger of Allah, and the successor after the Messenger of Allah, standing upon the face of the earth. The command descends to him from above the heaven, from among the heavens and the earths."
+            },
+            "source": "s8"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Both traditions tie the reminder to the messenger. Al-Tabari reports that the reminder is the Qur'an and the messenger is Muhammad, who recites God's signs [12], and Ibn Kathir likewise reads the reminder as the Qur'an [14]. The Shia narrations press a further sense: the reminder is the Messenger himself, and his family declare, 'we are its people,' the ahl al-dhikr [7]. On verse 12 the Shia commentators read the descending command as reaching the Prophet and, after him, his successor who stands upon the earth [1]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on At-Talaaq 8 to 12",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=65&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هذا جزاؤهم في الأخرى كما كان ما في قوله { فحاسبناها حساباً شديداً وعذبناها عذاباً نكراً فذاقت وبال أمرها } جزاءهم في الدنيا"
+        },
+        "gloss": "This is their recompense in the hereafter, just as what is in His words 'then We called it to a severe account and punished it with a dire punishment, so it tasted the evil consequences of its conduct' was their recompense in this world."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Talaaq 11 to 12",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=65&tAyahNo=11&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وليس في القرآن آية تدل على أن الأرضين سبع مثل السماوات إلا هذه الآية"
+        },
+        "gloss": "There is no verse in the Qur'an indicating that the earths are seven, like the heavens, except this verse."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Talaaq 8 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=65&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والعتو الخروج إلى فاحش الفساد"
+        },
+        "gloss": "Defiance (al-utuww) is the going out into flagrant corruption."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Talaaq 11 to 12",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=65&tAyahNo=11&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يعني ظلمات الكفر إلى نور الايمان، وذلك يدل على فساد قول المجبرة"
+        },
+        "gloss": "That is, from the darkness of disbelief to the light of faith; and this shows the falsity of the claim of the determinists."
+      },
+      {
+        "id": "s7",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Talaaq 8 to 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=65&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الذكر: رسول الله (صلى الله عليه و آله)، و نحن أهله"
+        },
+        "gloss": "The reminder is the Messenger of Allah, and we are its people."
+      },
+      {
+        "id": "s8",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Talaaq 12",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=65&tAyahNo=12&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فأما صاحب الأمر فرسول الله (صلى الله عليه و آله)، و الوصي بعد رسول الله (صلى الله عليه و آله) قائم على وجه الأرض، فإنما يتنزل الأمر إليه من فوق السماء"
+        },
+        "gloss": "As for the master of the command, it is the Messenger of Allah, and the successor after the Messenger of Allah, standing upon the face of the earth; the command descends to him from above the heaven."
+      },
+      {
+        "id": "s12",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on At-Talaaq 10 to 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=65&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الذكر: القرآن، والرسول: محمد صلى الله عليه وسلم"
+        },
+        "gloss": "The reminder is the Qur'an, and the messenger is Muhammad."
+      },
+      {
+        "id": "s14",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on At-Talaaq 8 to 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=65&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ قَدْ أَنزَلَ ٱللَّهُ إِلَيْكُمْ ذِكْراً } يعني القرآن"
+        },
+        "gloss": "'Allah has already sent down to you a reminder' means the Qur'an."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T16:49:56Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T17:04:08Z",
+      "assembled_at": "2026-10-06T17:09:43Z"
+    }
+  }
+}

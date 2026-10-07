@@ -286,53 +286,21 @@ private struct EmeraldTodayView: View {
     }
 }
 
-/// The Hijri-calendar season that selects the daily-reminder hero art. The
-/// windows mirror the app's seasonal journeys (see `JourneyAnnouncements`);
-/// every other month falls back to `.everyday`.
-private enum ReminderSeason {
-    case everyday, ramadan, muharram, arbaeen, fatimiyya, hajj
-
-    var assetName: String {
-        switch self {
-        case .everyday:  return "TodayHeroEveryday"
-        case .ramadan:   return "TodayHeroRamadan"
-        case .muharram:  return "TodayHeroMuharram"
-        case .arbaeen:   return "TodayHeroArbaeen"
-        case .fatimiyya: return "TodayHeroFatimiyya"
-        case .hajj:      return "TodayHeroHajj"
-        }
-    }
-
-    /// Resolve from a Hijri (month, day). Order matters: the Muharram/Arbaeen
-    /// split inside month 1 is by day.
-    static func current(month: Int, day: Int) -> ReminderSeason {
-        switch month {
-        case 9:  return .ramadan
-        case 12: return .hajj
-        case 1:  return day <= 10 ? .muharram : .arbaeen
-        case 2:  return day <= 20 ? .arbaeen : .everyday
-        case 5:  return (day >= 8 && day <= 15) ? .fatimiyya : .everyday
-        default: return .everyday
-        }
-    }
-}
-
-// Daily-reminder hero - a Hijri-seasonal cover-art band with the day's verse in
-// cream serif over a legibility scrim (was a flat gold-gradient block).
+// Daily-reminder hero - the day's verse set like a manuscript page: a paper fill,
+// a thin double gold frame inside the card, and the verse centered between small
+// gold diamonds. The verse follows the Reading text-size control, and steps down a
+// size for long verses so the card doesn't tower over the rest of the Today tab.
 private struct EmDailyReminderHero: View {
     @ObservedObject private var themeManager = ThemeManager.shared
-    private var season: ReminderSeason {
-        ReminderSeason.current(
-            month: IslamicCalendarManager.shared.currentIslamicMonth(),
-            day: IslamicCalendarManager.shared.currentIslamicDay()
-        )
-    }
+    @ObservedObject private var readingSettings = ReadingSettingsManager.shared
     let selection: DailyVerseSelection
     let headline: String
     let surahName: String
     let onTap: () -> Void
 
-    /// Latin curly quotes misbehave around RTL text — Urdu renders unquoted.
+    /// Warm paper by day; the card's own elevated surface by night.
+    private static let paper = Color(light: Color(hex: "FBF8EF"), dark: Color.white.opacity(0.07))
+
     private var headlineText: String {
         "\u{201C}\(headline)\u{201D}"
     }
@@ -341,72 +309,86 @@ private struct EmDailyReminderHero: View {
         "\(surahName) \u{00B7} \(selection.surah):\(selection.verse)"
     }
 
+    /// Base verse size before the reading scale: long verses step down so the
+    /// page keeps its proportions.
+    private var verseSize: CGFloat {
+        switch headline.count {
+        case ..<140: return 22
+        case ..<260: return 20
+        default:     return 18
+        }
+    }
+
     var body: some View {
         Button(action: onTap) {
-            VStack(alignment: .leading, spacing: 12) {
-                HStack(spacing: 6) {
-                    Image(systemName: "sparkles").font(.system(size: 13, weight: .semibold))
-                    Text(TodayStrings.reminderEyebrow.uppercased()).emEyebrow(size: 11, tracking: 1.3)
+            VStack(spacing: 14) {
+                HStack(spacing: 10) {
+                    diamond
+                    Text(TodayStrings.reminderEyebrow.uppercased()).emEyebrow(size: 10.5, tracking: 2)
+                    diamond
                 }
-                .foregroundColor(themeManager.accentBright)
+                .foregroundColor(themeManager.accentColor)
 
                 Text(headlineText)
-                    .font(EmType.serif(24, .semiBold))
+                    .font(EmType.serif(verseSize * readingSettings.scale, .medium))
                     .foregroundColor(themeManager.primaryText)
-                    .lineSpacing(3)
+                    .lineSpacing(4 * readingSettings.scale)
+                    .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .shadow(color: .black.opacity(0.55), radius: 10, x: 0, y: 1)
+                    .frame(maxWidth: .infinity)
 
-                Text(sourceLabel)
-                    .font(.system(size: 12.5, weight: .medium))
-                    .foregroundColor(themeManager.primaryText.opacity(0.72))
+                ornament
+
+                Text(sourceLabel.uppercased())
+                    .font(.system(size: 11, weight: .semibold)).tracking(1.6)
+                    .foregroundColor(themeManager.tertiaryText)
             }
-            .padding(20)
-            .frame(maxWidth: .infinity, minHeight: 136, alignment: .leading)
+            .padding(.horizontal, 30)
+            .padding(.vertical, 30)
+            .frame(maxWidth: .infinity)
+            .background(pageFrame)
             .background(
-                GeometryReader { geo in
-                    ZStack {
-                        Image(season.assetName)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: geo.size.width, height: geo.size.height)
-                            .clipped()
-                        // Legibility scrim: darken the text side, keep the warm focal glow.
-                        LinearGradient(
-                            stops: [
-                                .init(color: Color(hex: "06110D").opacity(0.88), location: 0),
-                                .init(color: Color(hex: "06110D").opacity(0.60), location: 0.38),
-                                .init(color: Color(hex: "06110D").opacity(0.16), location: 0.64),
-                                .init(color: Color(hex: "06110D").opacity(0.0),  location: 0.84),
-                            ],
-                            startPoint: .leading, endPoint: .trailing
-                        )
-                        LinearGradient(
-                            colors: [Color(hex: "06110D").opacity(0.5), .clear],
-                            startPoint: .bottom, endPoint: .center
-                        )
-                    }
-                    // Urdu reads right-to-left; mirror the art so its dark, empty
-                    // side stays under the text and the warm glow sits opposite.
-                    
-                }
+                RoundedRectangle(cornerRadius: 22, style: .continuous).fill(Self.paper)
             )
-            .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
             .overlay(
                 RoundedRectangle(cornerRadius: 22, style: .continuous)
-                    .strokeBorder(themeManager.accentColor.opacity(0.14), lineWidth: 1)
+                    .stroke(themeManager.strokeColor, lineWidth: 1)
             )
-            // The art stays dark in both themes, so the text and edge drawn on it
-            // keep their Midnight colors.
-            .environment(\.colorScheme, .dark)
-            .emShadow(.custom(opacity: 0.42, radius: 20, y: 10))
+            .emShadow(.raised)
         }
         .buttonStyle(EmPressStyle())
         .contextMenu {
             ShareLink(item: "\(headlineText) \u{2014} \(sourceLabel)") {
                 Label(TodayStrings.share, systemImage: "square.and.arrow.up")
             }
+        }
+    }
+
+    private var diamond: some View {
+        Rectangle()
+            .fill(themeManager.accentOrnament)
+            .frame(width: 5, height: 5)
+            .rotationEffect(.degrees(45))
+    }
+
+    /// Hairline - diamond - hairline, between the verse and its reference.
+    private var ornament: some View {
+        HStack(spacing: 8) {
+            Rectangle().fill(themeManager.accentOrnament.opacity(0.6)).frame(width: 28, height: 1)
+            diamond
+            Rectangle().fill(themeManager.accentOrnament.opacity(0.6)).frame(width: 28, height: 1)
+        }
+    }
+
+    /// The manuscript frame: two gold hairlines inset from the card edge.
+    private var pageFrame: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                .stroke(themeManager.accentOrnament.opacity(0.55), lineWidth: 1)
+                .padding(10)
+            RoundedRectangle(cornerRadius: 11, style: .continuous)
+                .stroke(themeManager.accentOrnament.opacity(0.3), lineWidth: 0.75)
+                .padding(14)
         }
     }
 }

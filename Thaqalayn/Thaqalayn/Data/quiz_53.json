@@ -1,0 +1,485 @@
+{
+  "1": {
+    "id": "53:1",
+    "surah": 53,
+    "index": 1,
+    "range": [
+      1,
+      25
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 1,
+        "prompt": {
+          "en": "\"God may swear by whatever of His creation He wishes, but His creatures may swear only by God.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked about the oath 'By the star when it sets,' Imam al-Baqir told Muhammad ibn Muslim that God may swear by any of His creation, while people may swear only by God."
+        },
+        "anchor": {
+          "where": "verses.1.narrations.n1",
+          "quote": "God may swear by whatever of His creation He wishes, but His creatures may swear only by God"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 2,
+        "prompt": {
+          "en": "How does Tabatabai read the two denials in the verse 'your companion has neither gone astray, nor amiss'?"
+        },
+        "options": [
+          {
+            "en": "As clearing him only of forgetfulness"
+          },
+          {
+            "en": "As a rebuke aimed at the pagans"
+          },
+          {
+            "en": "As clearing him of leaving the straight path and false belief"
+          },
+          {
+            "en": "As praise for his eloquent speech"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "By 'gone astray' Tabatabai means leaving the straight path, and the second denial means freedom from false belief, so the verse clears the Prophet on both counts."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads 'gone astray' as leaving the straight path and the second denial as freedom from false belief, so the verse clears the Prophet on both counts"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 10,
+        "prompt": {
+          "en": "In the passage, a narration explains the revelation of verse ten as the Prophet being told that Ali is the master of the successors."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration under verse ten has the Prophet, asked about the revelation, answer that it told him Ali is the master of the successors and imam of the god-fearing."
+        },
+        "anchor": {
+          "where": "verses.10.narrations.n5",
+          "quote": "It was revealed to me that Ali is the master of the successors, the imam of the god-fearing"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 19,
+        "prompt": {
+          "en": "Tabatabai explains that the pagans took these as images of the ____, whom they called God's daughters."
+        },
+        "options": [
+          {
+            "en": "angels"
+          },
+          {
+            "en": "jinn"
+          },
+          {
+            "en": "prophets"
+          },
+          {
+            "en": "stars"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "In the closing section the essay glosses the idols Lat, Uzza and Manat as images of the angels, whom the pagans called God's daughters."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai explains that the pagans took these as images of the angels, whom they called God's daughters"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 19,
+        "prompt": {
+          "en": "According to the perspectives, how do the Imams' widespread narrations describe the Prophet's experience on the night of the ascension?"
+        },
+        "options": [
+          {
+            "en": "He saw God directly with his own physical eye"
+          },
+          {
+            "en": "He drew near, saw with his heart, and beheld God's greatest signs"
+          },
+          {
+            "en": "He heard his Lord but saw nothing at all"
+          },
+          {
+            "en": "He fully grasped the essence of his Lord"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives say the Imams' narrations set the scene on the night of the ascension, where the Prophet drew near, saw with his heart, and beheld God's greatest signs, which are other than God Himself."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the Imams' widespread narrations set the scene on the night of the ascension, where the Prophet drew near to his Lord, saw with his heart, and beheld God's greatest signs"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T00:25:21Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T00:27:04Z",
+      "assembled_at": "2026-10-06T00:27:24Z"
+    }
+  },
+  "2": {
+    "id": "53:2",
+    "surah": 53,
+    "index": 2,
+    "range": [
+      26,
+      32
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 26,
+        "prompt": {
+          "en": "According to the passage, when can the many angels' intercession avail?"
+        },
+        "options": [
+          {
+            "en": "Only after God gives leave and is pleased"
+          },
+          {
+            "en": "At any time they wish"
+          },
+          {
+            "en": "Never, under any circumstances"
+          },
+          {
+            "en": "Only through the idols Lat and Uzza"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The passage says the many angels of heaven cannot make their intercession avail until God gives leave and is pleased, so intercession belongs to God alone."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the many angels of heaven cannot make their intercession avail until God gives leave and is pleased"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 30,
+        "prompt": {
+          "en": "Their ____ horizon is the whole reach of their knowledge, and God alone knows who strays and who is guided."
+        },
+        "options": [
+          {
+            "en": "eternal"
+          },
+          {
+            "en": "worldly"
+          },
+          {
+            "en": "spiritual"
+          },
+          {
+            "en": "heavenly"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The passage calls their horizon worldly because, as verse 29 says, these people desire nothing but the life of the world, so their knowledge reaches no further."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Their worldly horizon is the whole reach of their knowledge, and God alone knows who strays and who is guided"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 31,
+        "prompt": {
+          "en": "In the narration from the Prophet on verse 31, a good or evil deed ultimately falls back on whom?"
+        },
+        "options": [
+          {
+            "en": "On his descendants"
+          },
+          {
+            "en": "On the whole community"
+          },
+          {
+            "en": "On the doer himself"
+          },
+          {
+            "en": "On the one he wronged"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The Prophet's narration says whoever does good, it is for himself, and whoever does evil, it is against himself, so each deed returns to its doer."
+        },
+        "anchor": {
+          "where": "verses.31.narrations.n2",
+          "quote": "whoever does good, it is for himself; whoever does evil, it is against himself"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 32,
+        "prompt": {
+          "en": "\"The greatest of the major sins is ascribing partners to God.\" Who said this to Amr ibn Ubayd?"
+        },
+        "options": [
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "When Amr ibn Ubayd asked about the major sins from God's Book, Imam al-Sadiq answered that the greatest of them is ascribing partners to God."
+        },
+        "anchor": {
+          "where": "verses.32.narrations.n4",
+          "quote": "The greatest of the major sins is ascribing partners to God."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 32,
+        "prompt": {
+          "en": "According to the passage, the Imams read al-lamam as a settled habit of sinning rather than an occasional lapse."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The perspectives say the Imams read al-lamam as an occasional sin a believer falls into and seeks forgiveness for, never a settled habit."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "read lamam as an occasional sin a believer falls into from time to time and seeks forgiveness for, never a settled habit"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T00:22:03Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T00:23:11Z",
+      "assembled_at": "2026-10-06T00:27:24Z"
+    }
+  },
+  "3": {
+    "id": "53:3",
+    "surah": 53,
+    "index": 3,
+    "range": [
+      33,
+      62
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 35,
+        "prompt": {
+          "en": "According to the essay, why does the Qur'an ask whether the man has the knowledge of the Unseen?"
+        },
+        "options": [
+          {
+            "en": "Whether he knows when the Hour will come"
+          },
+          {
+            "en": "Whether he can verify who promised to bear his sins"
+          },
+          {
+            "en": "Whether he can see his wealth running out"
+          },
+          {
+            "en": "Whether he knows the scriptures of Moses"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the Qur'an asks whether the man commands the Unseen, so that he could see whether the one who promised to bear his sins was telling the truth."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "whether such a man commands the Unseen, that he can see the one who promised to bear his sins is telling the truth"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 42,
+        "prompt": {
+          "en": "\"When the discourse reaches God, stop. Speak of what is below the Throne.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "This teaching, that one should stop when speech reaches God and speak only of what lies below the Throne, is reported from Imam al-Sadiq, who warned of a people whose minds strayed."
+        },
+        "anchor": {
+          "where": "verses.42.narrations.n2",
+          "quote": "When the discourse reaches God, stop. Speak of what is below the Throne."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 48,
+        "prompt": {
+          "en": "He enriched every person with his ____ and satisfied him with the earning of his own hand."
+        },
+        "options": [
+          {
+            "en": "livelihood"
+          },
+          {
+            "en": "wealth"
+          },
+          {
+            "en": "portion"
+          },
+          {
+            "en": "fortune"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam Ali glosses God's enriching as giving each person his livelihood and making him content with what his own hand earns, so the missing word is livelihood."
+        },
+        "anchor": {
+          "where": "verses.48.narrations.n3",
+          "quote": "He enriched every person with his livelihood and satisfied him with the earning of his own hand"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 53,
+        "prompt": {
+          "en": "A narration identifies the town that was overturned as the people of Basra, and the overturned towns as the people of Lot."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration glosses 'the town that was overturned' as the people of Basra, and 'the overturned towns' as the people of Lot, so the statement matches the passage."
+        },
+        "anchor": {
+          "where": "verses.53.narrations.n4",
+          "quote": "they are the people of Basra; it is the overturned town"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 56,
+        "prompt": {
+          "en": "According to the essay's close, how does the passage name the Prophet?"
+        },
+        "options": [
+          {
+            "en": "The Lord of Sirius worshipped before Islam"
+          },
+          {
+            "en": "The one who gave a little and held off"
+          },
+          {
+            "en": "A bearer of another's burden"
+          },
+          {
+            "en": "A warner like the warners of old"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay's closing paragraph says the passage names the Prophet a warner like the warners of old, before warning that the Hour is near and none but God can lift its veil."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "naming the Prophet a warner like the warners of old"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T00:17:59Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T00:18:54Z",
+      "assembled_at": "2026-10-06T00:27:24Z"
+    }
+  }
+}

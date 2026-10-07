@@ -20,6 +20,8 @@ Every claim must stay inside what the app ships: passage commentary with Ahlul B
 | H8 | the Shia gap | unused |
 | H9 | Fatiha challenge | unused |
 | H10 | dad | unused |
+| H11 | Spotify for the Quran, silent reaction (bedroom-at-night scene) | **reaction cut 2026-10-07**: the user dropped the talking hook as too complicated; Mehdi muted (Seedance 5 s 720p from `~/ugc/thaqalayn/character/bedroom_v1.jpg`, $1.33; the image $0.03), header "POV: you found Spotify for the Quran", then the al-Baqara player card with the app's own narration, then "Hear the rest in Thaqalayn, link in bio". 14.4 s. Files: `~/ugc/thaqalayn/journey-audio/reaction/` |
+| H12 | green screen: the three-prayers myth (@twelver.12 still as the card), 17:78 demo | **assembled 2026-10-07**: green-screen Mehdi (`~/ugc/thaqalayn/character/greenscreen_v1.jpg`, $0.03), hook 15 s 720p $4.00 + voiceover 11 s 480p $1.30, demo screens recorded on a spare simulator; the take repeated "al-Baqir" and spoke the pronunciation hint at the end ("pronounce Tahaleen"), both cut out by hand (original kept as `hook/take_orig.mp4`). Lesson: seven pronunciation hints in one prompt was too many. 36.6 s. Files: `~/ugc/thaqalayn/episodes/H12/` |
 
 Update this table after every approved take: date, cost, and where the files are.
 
@@ -37,6 +39,7 @@ Update this table after every approved take: date, cost, and where the files are
 | H8 | Every Quran app I downloaded explained the verses about the Prophet's family as if they were about someone else. I'm not exaggerating. So I went looking for one built on the Quran and the Ahlul Bayt together, with the sources on screen. Took me a year to find it. It's called Thaqalayn, and this is what a passage looks like. | 62 | 15 s |
 | H9 | Bet you can't tell me what Surah Al-Fatiha actually means. You've recited it ten times a day your whole life. I couldn't either. This app walks through it line by line with narrations from the Imams, then gives you five questions. I got three out of five on the surah I know best. It's called Thaqalayn. | 58 | 15 s |
 | H10 | My dad memorised half the Quran and still asks me what the verses mean. So I showed him this. Recitation, translation, then tafsir from our scholars on every passage, and it reads it all aloud to you. He's done twelve surahs in two weeks and now he sends me screenshots. It's called Thaqalayn, here's what he sees. | 60 | 15 s |
+| H11 | Muslims, please don't hate me for this, but I haven't opened a podcast in three weeks, because I found Spotify for the Quran, twenty surahs and seven deep dives, each one a narrated episode with the real recitation woven in, I put one on, set the sleep timer, and I'm out, it's called Thaqalayn, here's what it looks like. | 59 | 15 s |
 
 H3 is the comma-joined version that was actually run. Before running any other hook, comma-join its sentences the same way (keep one question mark if there is one) and show the user the final text.
 
@@ -45,6 +48,7 @@ H3 is the comma-joined version that was actually run. Before running any other h
 | Hook | Header (two lines, split on `\|`) |
 |---|---|
 | H3 | `every Quran app\|got this wrong 😬📖` (same header on hook and demo, the user's choice) |
+| H11 | `I found Spotify\|for the Quran 🎧` (same on hook and demo) |
 
 Header style: two short lines, a claim or a tease, one or two emoji on the second line, no app name. The hook header carries over the demo unchanged (user decision on H3; a payoff-style demo header was tried and reverted). Captions: 1-4 words per line, broken on sense, written against the transcript the analysis printed, every transcript word covered.
 
@@ -53,6 +57,7 @@ Header style: two short lines, a claim or a tease, one or two emoji on the secon
 | Hook | Passage to record | Shot list (about 18 s) | Voiceover (approved wording) |
 |---|---|---|---|
 | H3 | Surah al-Ma'idah, passage 10 "Proclaim what was revealed" (5:67-77); backup passage 8 (5:51-56) | verse 67 open 0-3 s; scroll to the 5:67 narration, hold 3 s; tap the source, sheet with book and page, hold 2 s; swipe to Perspectives (Shia and Sunni); quiz: record the Test yourself screen separately (overview, tap, Question 1 of 5) so the last voiceover line lands on it | This is the passage "Proclaim what was revealed" from Surah al-Ma'idah. Here are the narrations on it, in English. Here's the source, book and page. Shia and Sunni readings side by side, then five questions before you move on. (39 words, about 10 s) |
+| H11 | al-Fatiha journey in the Listen player, one continuous recording WITH SOUND (`vo_engine: app`) | surah journeys list, tap the headphones on al-Fatiha; the player opens on "al-Fatiha. The Opening..."; drag to about 1:20 for "The Qur'an says:", the recited Bismillah, "which means: In the name of Allah..."; tap Sleep, pick 30 minutes | none: the app's narration and recitation are the demo sound |
 
 Recording brief and voiceover placement are now produced by `scripts/episode.py plan` from the episode's pack.json (one voiceover sentence per shot; the assembler holds a screen longer if its sentence needs it). The H3 pack at `~/ugc/thaqalayn/episodes/H3/pack.json` is the worked example: five shots, the first four cut from one continuous recording by start/end seconds, the quiz from a second recording.
 
@@ -82,5 +87,6 @@ Hashtags: the winners use few. Lumo used 4, Quranify 2 plus its own brand tag. F
 | Hook | Caption | Hashtags |
 |---|---|---|
 | H3 | two weighty things, never apart. the app is Thaqalayn (link in bio) | #shia #ahlulbayt #quran #tafsir #muslimtiktok #islam #quranapp #thaqalayn |
+| H11 | spotify but every episode is a surah. the app is Thaqalayn, link in bio | #shia #ahlulbayt #quran #islam #islamicpodcast #quranapp #thaqalayn |
 
 Rules: 6 to 8 tags. Always #shia and #ahlulbayt (the audience), #quran and #islam (reach), one niche tag that matches the hook (#tafsir, #dua, #muharram, #ramadan), #quranapp or #islamicapp (discovery), and the brand tag #thaqalayn. Skip #fyp and #foryoupage; they add nothing the algorithm does not already do. Lowercase caption in the persona's voice, one line, app named once, "link in bio".

@@ -1,0 +1,485 @@
+{
+  "1": {
+    "id": "59:1",
+    "surah": 59,
+    "index": 1,
+    "range": [
+      1,
+      10
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 1,
+        "prompt": {
+          "en": "According to the essay, why does the surah open by declaring that all things glorify Allah?"
+        },
+        "options": [
+          {
+            "en": "Because of what it carries: a tribe's treachery and hypocrites' false promise"
+          },
+          {
+            "en": "Because the fay' belonged to the Apostle alone to distribute"
+          },
+          {
+            "en": "Because Banu al-Nadir had their palm trees cut down"
+          },
+          {
+            "en": "Because the Emigrants had been expelled from their homes"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the surah opens with praise because of what it carries: the treachery of a Jewish tribe and the hypocrites' false promise to stand by them."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "it begins with this praise because of what the surah carries: the treachery of a Jewish tribe and the hypocrites' false promise to stand by them"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "trueFalse",
+        "verse": 2,
+        "prompt": {
+          "en": "According to the passage, the exile of Banu al-Nadir was the first time the People of the Book were driven out of Arabia."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note calls this the outset of the banishment, the first time the People of the Book were expelled from Arabia, after Banu al-Nadir broke their pact with the Prophet."
+        },
+        "anchor": {
+          "where": "verses.2.note",
+          "quote": "The outset of the banishment marks the first time the People of the Book were expelled from Arabia"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 5,
+        "prompt": {
+          "en": "\"The ajwa is the mother of dates; it is what Allah sent down from Paradise for Adam.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked about the cut and standing palm trees, Imam al-Sadiq called the ajwa the mother of dates, what Allah sent down from Paradise for Adam."
+        },
+        "anchor": {
+          "where": "verses.5.narrations.n2",
+          "quote": "The ajwa is the mother of dates; it is what Allah sent down from Paradise for Adam"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 8,
+        "prompt": {
+          "en": "He gave it to the poor Emigrants and withheld it from the ____ but for a needy few."
+        },
+        "options": [
+          {
+            "en": "orphans"
+          },
+          {
+            "en": "Helpers"
+          },
+          {
+            "en": "hypocrites"
+          },
+          {
+            "en": "Quraysh"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the fay' went to the poor Emigrants, while the Helpers were withheld from it except for a needy few."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "He gave it to the poor Emigrants and withheld it from the Helpers but for a needy few"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 9,
+        "prompt": {
+          "en": "According to the perspectives, what story do both traditions relate about the preference verse, verse 9?"
+        },
+        "options": [
+          {
+            "en": "The Helpers gave the Emigrants half of their homes"
+          },
+          {
+            "en": "A man freed his captives to seek Allah's pleasure"
+          },
+          {
+            "en": "The Emigrants returned the fay' to the townships' people"
+          },
+          {
+            "en": "A host fed his guest his family's only food in the dark"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The perspectives say both traditions relate a host who gave his guest the family's only food and hid it in the dark, differing only on who he was."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "both traditions tell of a host who gave a guest his family's only food and hid it in the dark"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:47:49Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:48:51Z",
+      "assembled_at": "2026-10-06T12:52:59Z"
+    }
+  },
+  "2": {
+    "id": "59:2",
+    "surah": 59,
+    "index": 2,
+    "range": [
+      11,
+      17
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 11,
+        "prompt": {
+          "en": "According to the essay, what did Medina's hypocrites secretly promise the Jewish tribe Banu al-Nadir?"
+        },
+        "options": [
+          {
+            "en": "To go into exile with them and fight at their side"
+          },
+          {
+            "en": "To hand over the Prophet if the city was besieged"
+          },
+          {
+            "en": "To pay their debts and shelter their families in Medina"
+          },
+          {
+            "en": "To embrace their religion and renounce Islam"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the hypocrites secretly promised Banu al-Nadir to go into exile with them if expelled, to obey no one against them, and to fight at their side."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "had secretly promised the Jewish tribe of Banu al-Nadir to go into exile with them if they were expelled, to obey no one against them, and to fight at their side"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 13,
+        "prompt": {
+          "en": "Had they truly understood His ____, Tabatabai writes, they would have known that the whole affair rests with Allah alone."
+        },
+        "options": [
+          {
+            "en": "mercy"
+          },
+          {
+            "en": "justice"
+          },
+          {
+            "en": "greatness"
+          },
+          {
+            "en": "power"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay gives Tabatabai's point: the hypocrites fear the believers more than Allah because, had they grasped His greatness, they would have known the whole affair rests with Allah alone."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Had they truly understood His greatness, Tabatabai writes, they would have known that the whole affair rests with Allah alone"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 16,
+        "prompt": {
+          "en": "According to the narration on verse 16, the parable of Satan was struck concerning whom?"
+        },
+        "options": [
+          {
+            "en": "Abdullah ibn Ubayy and Banu al-Nadir"
+          },
+          {
+            "en": "Barsisa and the worshippers of the Israelites"
+          },
+          {
+            "en": "The Meccans slain at Badr"
+          },
+          {
+            "en": "Banu Qaynuqa and their allies"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration on verse 16 says Satan's parable was struck concerning Abdullah ibn Ubayy and Banu al-Nadir, matching the essay's point that the hypocrites lured Banu al-Nadir and then abandoned them."
+        },
+        "anchor": {
+          "where": "verses.16.narrations.n3",
+          "quote": "He struck a parable concerning Abdullah ibn Ubayy and Banu al-Nadir"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 16,
+        "prompt": {
+          "en": "\"There was a worshipper among the Israelites named Barsisa, who served Allah a long age.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Ibn Abbas"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Ibn Abbas narrates the story of Barsisa, the Israelite worshipper whom Satan lured, on the cross, into gesturing in prostration so that he disbelieved."
+        },
+        "anchor": {
+          "where": "verses.16.narrations.n4",
+          "quote": "There was a worshipper among the Israelites named Barsisa, who served Allah a long age"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 17,
+        "prompt": {
+          "en": "According to the essay's closing image, Satan rescues the man he tempted and keeps him from the Fire."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The essay's closing image is Satan, who tells man to disbelieve and then disowns him, saying 'I am absolved of you,' so both the tempter and the tempted end in the Fire."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The closing image is Satan, who tells man to disbelieve, then disowns him"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:48:12Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:49:08Z",
+      "assembled_at": "2026-10-06T12:52:59Z"
+    }
+  },
+  "3": {
+    "id": "59:3",
+    "surah": 59,
+    "index": 3,
+    "range": [
+      18,
+      24
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 18,
+        "prompt": {
+          "en": "The passage says the two commands to be wary of God are not identical: one is about doing right at the start, the other about examining what one has already done."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Tabatabai reads the verse's two commands to be wary differently: the first is about doing right in the first place, the second about examining and purifying what one has already sent ahead."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai distinguishes the two orders to be wary: the first concerns doing right in the first place, the second examining and purifying what one has already done"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 19,
+        "prompt": {
+          "en": "\"God, blessed and exalted, neither forgets nor errs; only the created, originated being forgets and errs.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Rida"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Glossing verse 19, Imam al-Rida taught that God never forgets or errs; only created beings do, and God's 'making them forget' is His requital for those who forgot Him."
+        },
+        "anchor": {
+          "where": "verses.19.narrations.n1",
+          "quote": "God, blessed and exalted, neither forgets nor errs; only the created, originated being forgets and errs"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 20,
+        "prompt": {
+          "en": "According to the passage, how do the Sunni commentators read 'the successful ones' in verse 20?"
+        },
+        "options": [
+          {
+            "en": "Those whom God made forget their own souls"
+          },
+          {
+            "en": "Those who humble themselves like the mountain before the Quran"
+          },
+          {
+            "en": "Those who attain what they sought and escape what they feared"
+          },
+          {
+            "en": "Those who glorify God in the heavens and the earth"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The passage says the Sunni commentators read verse 20 generally; al-Tabari takes 'the successful' to mean those who attain what they sought and escape what they feared, naming no specific group."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Al-Tabari takes 'the successful' as those who attain what they sought and escape what they feared"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 22,
+        "prompt": {
+          "en": "The Unseen is what has not yet come to be, and the ____ is what has already come to be."
+        },
+        "options": [
+          {
+            "en": "witnessed"
+          },
+          {
+            "en": "sensible"
+          },
+          {
+            "en": "promised"
+          },
+          {
+            "en": "hidden"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Sadiq glosses verse 22's 'Knower of the Unseen': the Unseen is what has not yet come to be, while the witnessed is what has already come to be."
+        },
+        "anchor": {
+          "where": "verses.22.narrations.n4",
+          "quote": "The Unseen is what has not yet come to be, and the witnessed is what has already come to be"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 24,
+        "prompt": {
+          "en": "According to the essay, what does al-Tabrisi report about the last six verses of al-Hashr?"
+        },
+        "options": [
+          {
+            "en": "That they list all of God's names without exception"
+          },
+          {
+            "en": "That they hold God's greatest name"
+          },
+          {
+            "en": "That they were sent down upon a mountain"
+          },
+          {
+            "en": "That they draw a likeness for mankind to reflect"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay closes by noting the surah heaps up God's names; al-Tabrisi reports that God's greatest name lies in the last six verses of al-Hashr."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "al-Tabrisi reports that God's greatest name lies in the last six verses of al-Hashr"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:50:28Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:52:44Z",
+      "assembled_at": "2026-10-06T12:52:59Z"
+    }
+  }
+}

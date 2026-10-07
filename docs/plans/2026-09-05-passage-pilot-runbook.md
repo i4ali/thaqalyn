@@ -5068,3 +5068,464 @@ title gate for 43 and 44 and all agents were stopped. State left in
 - 47:1 to 47:4 and 48:1 to 48:4 gathered, no draft. 48:1's al-Mizan came
   from greattafsirs.com; al-Burhan empty on 48:3 and 48:11 to 17.
 - Urdu not yet run for surahs 43 and 44 (1 to 42 done earlier today).
+
+## Results - al-Jathiya 45:1 to 45:4 and al-Ahqaf 46:1 to 46:4 (2026-10-02)
+
+Resumed from the 2026-09-29 stop. Only the agents run today are measured;
+the writers for 45 and 46 and the 45:1 to 45:3 audits ran on 09-29.
+
+| passage | verses | today | attempts |
+|---|---|---|---|
+| 45:4 | 27-37 | re-audit 131K, 6 min, PASS | 2 |
+| 46:1 | 1-10 | audit 172K, 7 min, PASS | 1 |
+| 46:2 | 11-20 | writer fix 39K, 3 min; audit 216K, 7 min, PASS | 1 |
+| 46:3 | 21-26 | audit 115K, 4 min, PASS | 1 |
+| 46:4 | 27-35 | audit 200K, 9 min, PASS | 1 |
+
+`metrics 45`: 4 passed, first-try 3/4, mean attempts 1.2. `metrics 46`:
+4 passed, first-try 4/4, mean attempts 1.0. About 0.87M agent tokens
+today. Titles approved as generated for both surahs. No polish needed.
+
+The 46:2 writer fix was the validator problem noted above: block s13
+carries an editorial `[الأحقاف: 15]` between two words of n3's Arabic, so
+the writer split it into two spans joined with " … ".
+
+### Reader notes, surahs 45 and 46
+
+- 46:2 n3 (al-Baqir to Jabir on 46:15) turns on "aslih dhurriyyati" (all
+  would be imams) against "aslih li fi dhurriyyati" (righteousness among
+  them, so only some). The English renders these as "make my descendants
+  righteous" and "invest my descendants with righteousness", which hides
+  the contrast the narration is about. The auditor passed it; asked, the
+  user chose to ship as is. Note for the auditor prompt: a narration whose
+  point is a wording contrast must show that contrast in the English.
+- Narrator voice under an Imam speaker again: 46:1 n1 "I asked Abu
+  Ja'far ..." and 46:4 n3 "I asked him about ..." (open writer note).
+- 45:4 perspectives cite one marker [8] for two reports; the second
+  ("Muhammad and his household") is s11. The auditor ruled it supported;
+  a dual citation [8][11] would be stricter.
+- "God" and "Allah" still mixed in essays and headings (45:1 headings,
+  46:3 essay); the user approved the 45 headings as they are.
+- 46:2 perspectives carry the Shia naming of the scornful son of 46:17 as
+  Abd al-Rahman ibn Abi Bakr against Ibn Kathir and Aisha's denial, as the
+  sources carry it.
+
+## Results - Muhammad 47:1 to 47:4 (2026-10-03)
+
+Gathered 2026-09-29; 47:4 re-gathered today for one retry of the missing
+al-Burhan block on verse 34 (still empty). Four slots, one per passage.
+
+| passage | verses | writer | audit | follow-ups | attempts |
+|---|---|---|---|---|---|
+| 47:1 | 1-11 | 266K, 17 min | 218K, 9 min, FAIL (auditor error) | auditor re-rule 16K, PASS | 2 |
+| 47:2 | 12-19 | 242K, 13 min | 231K, 6 min, FAIL (1 stretched) | rewrite 14K, re-audit 15K, PASS | 2 |
+| 47:3 | 20-28 | 194K, 14 min | 168K, 7 min, PASS | - | 1 |
+| 47:4 | 29-38 | 198K, 18 min | 167K, 8 min, FAIL (1 stretched) | rewrite 16K, re-audit 9K, PASS | 2 |
+
+`metrics 47`: 4 passed, first-try 1/4, mean attempts 1.8. About 1.75M
+agent tokens. Titles approved as generated. No polish needed (zero prose
+flags on all four).
+
+- 47:1 FAIL was the auditor's mistake: it ruled n4 (the five-swords
+  hadith) and the s61 gloss unsupported, saying s61 is the ninety-nine
+  names hadith. s61 (al-Khisal) carries the matn and chain verbatim; the
+  auditor had read the lines of s62 (al-Tawhid) as s61. Checked against
+  `sources.json` and `brief.md` line 756, sent back to the resident
+  auditor, which re-ruled both supported as audit.2.
+- 47:2 and 47:4 FAILs were the same pattern in the Sunni side of the
+  perspectives: 47:2 gave al-Tabari a reported view ("wa qila") as his own
+  reading; 47:4 said the hypocrites were exposed "by name" in al-Tawba,
+  which al-Qurtubi (s30) does not say. Both fixed by the resident writer.
+
+### Reader notes, surah 47
+
+- Note for the auditor prompt: before ruling that a block does not carry a
+  span, search the packet for the span and confirm the `### sN` heading
+  above the line it is on. A mis-indexed block costs a re-audit.
+- Note for the writer prompt: in perspectives, a view a commentator
+  records as reported ("qila", "it is said") stays framed as reported, and
+  no detail from another block of the same tradition is carried into it.
+- Narrator voice under an Imam speaker again: 47:1 n8 "Al-Sadiq was asked
+  ...", 47:4 n2 "I asked Abu Abdillah ...", 47:4 n6 "Ja'far ibn Muhammad
+  said of ..." (open writer note).
+- 47:1 n5 is credited to "the Imams of guidance" (Majma reports the
+  captives ruling from them collectively); the auditor passed it.
+- 47:1 essay starts two sentences with lowercase "al-Mizan".
+- "God" and "Allah" still mixed: 47:1 and 47:4 use God, 47:2 and 47:3
+  Allah; the user approved the headings as generated.
+- Polemical and tahrif narrations carried as the sources carry them: 47:1
+  n7 ("except that the name was scratched out"), 47:3 n1 (Umar and Ali on
+  the verse about Banu Umayya), 47:3 n4 and n5 ("a certain man", the pact
+  over khums).
+
+## Results - al-Fath 48:1 to 48:4 (2026-10-03)
+
+Gathered 2026-09-29. 48:1 and 48:2 re-gathered today for one retry of
+missing al-Burhan blocks (48:2 had none for any of verses 11 to 17, 48:1
+none for verse 3); both still empty after altafsir and the greattafsirs
+fallback. 48:2 therefore carries a single narration card (al-Kafi).
+
+| passage | verses | writer | audit | attempts |
+|---|---|---|---|---|
+| 48:1 | 1-10 | 235K, 12 min | 251K, 7 min, PASS | 1 |
+| 48:2 | 11-17 | 153K, 9 min | 139K, 5 min, PASS | 1 |
+| 48:3 | 18-26 | 243K, 15 min | 210K, 6 min, PASS | 1 |
+| 48:4 | 27-29 | 242K, 19 min | 181K, 6 min, PASS | 1 |
+
+`metrics 48`: 4 passed, first-try 4/4, mean attempts 1.0. About 1.65M
+agent tokens. Titles approved as generated (including the near-duplicate
+headings "The Pledge of Ridwan" on 48:1 v10 and "The pledge of Ridwan" on
+48:3 v18). No polish needed.
+
+### Reader notes, surah 48
+
+- 48:3 essay is a single paragraph of about 315 words; every other essay
+  breaks into paragraphs. Note for the writer prompt: break the essay at
+  the passage's turns.
+- Narrator voice under an Imam speaker again: 48:1 n5 "I asked al-Baqir
+  ...", 48:4 n4 "al-Sadiq was asked ..." (open writer note). 48:4 n4 and
+  the 48:4 essay ("al-Qummi ties ...") start sentences in lowercase.
+- Auditor judgement calls ruled supported but worth a stricter look:
+  48:1 essay[3] gives al-Tabrisi the wording argument for Hudaybiyya,
+  which is really al-Mizan's; 48:2 perspectives[3] says "the Shia
+  commentators" for a view s3 states alone (s5 backs it).
+- Polemical readings carried as the sources carry them: 48:1 notes on v4
+  and v6 (al-Qummi: the treaty dissenters as the hypocrites), 48:3 v25
+  "deposits in the loins" (Ali's restraint, the Qa'im), 48:3 and 48:4
+  perspectives on whether the pledge and verse 29 cover every Companion.
+
+## Results - al-Hujurat 49:1 to 49:2 and Qaf 50:1 to 50:3 (2026-10-04)
+
+One /loop run, four slots. Gathered today; no al-Mizan or al-Burhan
+retries needed (al-Burhan empty only for 49:8 and 50:35 to 37).
+
+| passage | verses | writer | audit | attempts |
+|---|---|---|---|---|
+| 49:1 | 1-10 | 243K, 11 min; +35K polemical follow-up; +18K rewrite | 223K, 7 min, FAIL; +16K re-audit PASS | 2 |
+| 49:2 | 11-18 | 298K, 18 min; +17K rewrite | 240K, 15 min, FAIL; +21K re-audit PASS | 2 |
+| 50:1 | 1-15 | 215K, 11 min | 190K, 4 min, PASS | 1 |
+| 50:2 | 16-29 | 192K, 15 min; +30K polemical follow-up | 210K, 7 min, PASS | 1 |
+| 50:3 | 30-45 | 169K, 14 min | 274K, 5 min, PASS | 1 |
+
+`metrics 49`: 2 passed, first-try 0/2, mean attempts 2.0. `metrics 50`:
+3 passed, first-try 3/3, mean attempts 1.0. About 2.4M agent tokens.
+Titles approved as generated for both surahs. No polish needed.
+
+Rewrites (both through a follow-up to the resident writer, re-audits
+through the resident auditor):
+
+- 49:1 perspectives[37] stretched: the draft had Ibn Kathir "will not
+  fault any Companion"; s37 carries only the "still called believers, so
+  grave sin does not expel from faith" point. The reticence is Qurtubi's
+  (s45); the rewrite moved it to its own Qurtubi sentence and marker.
+- 49:2 essay[2][4] stretched: "islam ... protects life and property";
+  s2 says it spares blood only, s4 neither. 49:2 v13 n5 stretched: the
+  Prophet's closing words are addressed to Salman, raising him over
+  Quraysh; the ellipsis dropped يا سلمان and the addressee read Quraysh.
+
+### Writer prompt change
+
+Two writers left polemical narrations out on their own judgement: 49:1
+(al-Husayn to Aisha on v2 from al-Kafi, the Mariya occasion of v6, the
+"first, second, third" reading of v7) and 50:2 (the s15 "he is the first
+... he is Zufar" narration, and Qummi's Zurayq and Habtar glosses on vv19,
+23, 27). Both were sent back to include them, per the standing policy.
+The "Narrations" bullet of `.claude/agents/passage-writer.md` now says
+never to leave a narration out for being polemical, sectarian or
+sensitive, including codename and tahrif readings. 50:3 was the only
+writer launched after the edit.
+
+### Reader notes, surahs 49 and 50
+
+- Speaker names still not normalised: "the Prophet" (49:2) against
+  "Prophet Muhammad" (50:1, 50:2).
+- 50:1 leaves verse 1 bare: the writer skipped the "Qaf is a mountain
+  encircling the earth" narrations because al-Mizan calls them baseless.
+  Not polemical, so outside the new rule; a taste call to revisit.
+- 49:1 essay is one paragraph again (see the surah 48 note). Lowercase
+  sentence starts again ("al-Tusi explains", "al-Qurtubi, for his part").
+- 49:1 n1 (al-Kafi, s62) carries a weak grading in the block that the
+  card does not surface (known finding).
+- 50:2 v23 is headed "The companion angel" (al-Sadiq's narration) while
+  its note gives Qummi's reading of the companion as a devil, Habtar;
+  the user approved the heading as is.
+- Auditor judgement calls ruled supported but worth a stricter look:
+  49:1 n6 drops "and kill them" (و قتلهم) from the Basra narration; 49:1
+  essay[5] adds "untrusted" to al-Tusi's single report; 50:2
+  perspectives[33] renders Qurtubi's "driver and keeper" as "driver and
+  witness".
+
+### Same day: 48:1 correction
+
+The 48:1 quiz run found verse 2 n3 (al-Rida to al-Mamun) rendering عند
+مشركي أهل مكة as "among Mecca's idolaters", which made the Prophet a
+greater sinner than every idolater. audit.1 had passed it. A targeted
+writer fix now reads "In the eyes of Mecca's idolaters, no one was a
+greater sinner than the Messenger of God ..."; audit.2 PASS; `assemble 48`
+re-run. Note for the auditor prompt: check عند + person as "in the view of".
+
+## Results - ar-Rahman 55 to at-Taghabun 64 (2026-10-05 to 06)
+
+One /loop run over ten surahs, 26 passages, up to ten agents at a time
+(the user's cap for this run). 55:1 was drafted in an earlier session and
+only audited here. Gathers ran as three parallel chains instead of one
+sequential chain: all 25 finished in about 45 minutes with no failures.
+al-Mizan was never missing; al-Burhan gaps were only on verses without
+narrations, so no retries. Titles were approved as generated (the user
+said not to wait for them).
+
+| passage | verses | writer | audit | attempts |
+|---|---|---|---|---|
+| 55:1 | 1-25 | earlier session | 224K, 7 min, PASS | 1 |
+| 55:2 | 26-45 | 233K, 27 min | 223K, 8 min, PASS | 1 |
+| 55:3 | 46-78 | 192K, 13 min; +7K essay fix | 181K, 7 min, PASS | 1 |
+| 56:1 | 1-38 | 238K, 15 min | 298K, 7 min, PASS | 1 |
+| 56:2 | 39-74 | 306K, 18 min | 184K, 6 min, PASS | 1 |
+| 56:3 | 75-96 | 344K, 24 min; +29K rewrite | 289K, 13 min, FAIL; +24K re-audit PASS | 2 |
+| 57:1 | 1-10 | 191K, 10 min | 178K, 7 min, PASS | 1 |
+| 57:2 | 11-19 | 280K, 17 min; +9K n8 fix | 264K, 10 min, PASS | 1 |
+| 57:3 | 20-25 | 228K, 16 min; +15K rewrite | 199K, 9 min, FAIL; +10K re-audit PASS | 2 |
+| 57:4 | 26-29 | 172K, 12 min | 160K, 7 min, PASS | 1 |
+| 58:1 | 1-6 | 245K, 14 min; +5K essay fix | 211K, 6 min, PASS | 1 |
+| 58:2 | 7-13 | 256K, 18 min | 217K, 7 min, PASS | 1 |
+| 58:3 | 14-22 | 166K, 15 min | 183K, 8 min, PASS | 1 |
+| 59:1 | 1-10 | 262K, 14 min | 247K, 8 min, PASS | 1 |
+| 59:2 | 11-17 | 146K, 10 min | 146K, 5 min, PASS | 1 |
+| 59:3 | 18-24 | 166K, 13 min; +7K essay fix | 147K, 7 min, PASS; +8K re-audit PASS | 2 |
+| 60:1 | 1-6 | 182K, 10 min | 174K, 6 min, PASS | 1 |
+| 60:2 | 7-13 | 305K, 20 min | 260K, 8 min, PASS | 1 |
+| 61:1 | 1-9 | 202K, 14 min | 236K, 6 min, PASS | 1 |
+| 61:2 | 10-14 | 120K, 11 min | 98K, 5 min, PASS | 1 |
+| 62:1 | 1-8 | 165K, 13 min; +16K rewrite | 150K, 8 min, FAIL; +15K re-audit PASS | 2 |
+| 62:2 | 9-11 | 195K, 14 min | 171K, 7 min, PASS | 1 |
+| 63:1 | 1-8 | 236K, 14 min | 222K, 8 min, PASS | 1 |
+| 63:2 | 9-11 | 88K, 8 min; +8K rewrite | 84K, 6 min, FAIL; +9K re-audit PASS | 2 |
+| 64:1 | 1-10 | 154K, 13 min | 121K, 5 min, PASS | 1 |
+| 64:2 | 11-18 | 192K, 18 min | 143K, 6 min, PASS | 1 |
+
+`metrics`: 55 first-try 3/3; 56 2/3; 57 3/4; 58 3/3; 59 3/3 (59:3 audited
+twice after a fix, first audit PASS); 60 2/2; 61 2/2; 62 1/2; 63 1/2; 64
+2/2. 22 of 26 passed their first audit. About 10.4M agent tokens (writers
+5.4M, auditors 5.1M). No polish needed: every audit returned zero prose
+flags.
+
+Rewrites, all four in perspectives and all four the same failure (a
+cited author credited with something his block only reports or does not
+say), fixed through the resident writer and re-audited through the
+resident auditor:
+
+- 56:3 perspectives[22]: the mushaf-purity ruling credited to al-Tabari
+  as well as Ibn Kathir; only s27 (Ibn Kathir) carries it.
+- 57:3 perspectives[22]: Ikrimah's "joy into gratitude, grief into
+  patience" credited to Ibn Kathir, who only relays it.
+- 62:1 perspectives[42]: a conclusion ("the clearer proof that the
+  revelation was taught by none but God") credited to Suyuti, whose block
+  only lists the hadith.
+- 63:2 perspectives[10]: Ibn Kathir's "God knows the truthful pleader from
+  the one who would relapse" flattened to "every returnee would relapse".
+
+Fixes made after a PASS (through the resident writer, never by hand),
+for things the auditor saw or missed but did not fail:
+
+- 55:3 essay said the passage asks "Is the requital of goodness anything
+  but goodness?" twice; it occurs once (v60). Unmarked, so not a target.
+- 59:3 essay tied Tabrisi's "greatest name" report to "three verses";
+  s3 says the last six. Ruled supported; fixed and re-audited (audit.2).
+- 58:1 essay opened on "a plea the whole household could hear", an
+  unsourced flourish the auditor did not flag.
+- 57:2 n8 rendered الحد (a prescribed penalty) as "justice"; the auditor
+  ruled it a fair generalisation. Now "carrying out a prescribed penalty".
+
+### Notes for the prompts and scripts
+
+- Writer prompt: in perspectives, each cited author may be given only
+  what his own block says in his own voice; a view he relays from someone
+  else is named as theirs. All four FAILs in this run were this.
+- Auditor prompt: unmarked factual slips pass (55:3 "twice", 58:1
+  "household"); a sentence that miscounts or adds colour to the verse
+  should be flagged even without a marker. The auditor also passed
+  الحد as "justice" (57:2) - add a note on legal terms.
+- `status` keeps a passage `passed` after a marked sentence changes
+  (59:3 fix): it only tracks markers, so a content edit inside a marked
+  sentence needs a manual re-audit.
+- `validate.py`: the Arabic verbatim match is sensitive to inter-word
+  spacing after waw ("و لا" against "ولا"), zero-width non-joiners inside
+  words, and curly quotes. It cost about a third of writers a second write,
+  and 58:3's writer dropped a Jamil narration (spirit = faith) rather than
+  fight the curly quotes. Normalising whitespace and ZWNJ is worth doing.
+
+### Reader notes, surahs 55 to 64
+
+- Speaker rule, narrator stories: many cards put a narrator's story ("I
+  asked Abu Abdillah ... He said", "The bishop of Najran asked Umar ...
+  Ali answered") under the Imam as speaker (55:3, 56:1, 56:2, 57:1 to 57:4,
+  58:1, 58:2, 59:1, 60:2, 61:1, 63:1, 64:2). 59:1 n7 under al-Sadiq is
+  the Prophet's words to Ali. 62:2 n6 names "Abu Basir" because the block
+  leaves the answering Imam unnamed - the rule needs a case for that.
+- Speaker names still not normalised: "the Prophet", "Prophet Muhammad",
+  "the Prophet Muhammad"; "al-Abd al-Salih" (64:1) against "Imam
+  al-Kazim"; "shia" (57:2, 61:2) against "Shi'a" (56:1, 59:3).
+- Duplicate cards: 56:2 n7, n8 and 56:3 n11, n12 are the same narrations
+  (56:74 and 56:96 share their words); 64:2 n2 repeats 57:3 n4 (Ali ibn
+  al-Husayn before Yazid, which quotes 57:22, not 64:11).
+- Lowercase sentence starts again ("al-Mizan reads", "al-Tabrisi
+  reports") in 55:2, 56:3, 63:2.
+- Own-voice closers: 61:1 ("The reader is left summoned ..."), 63:2 ("a
+  reason to give now ..."). 64:2 says "Day of mutual disillusion" where
+  64:1 is titled "The Day of Mutual Loss".
+- Borderline attributions ruled supported: 56:1 essay[3] and 56:2 essay[4]
+  credit Majma with readings it reports from al-Jubba'i, Mujahid and
+  Qatada; 55:1 perspectives[22] puts three Shia inner readings on one
+  marker whose block carries only one of them.
+- 58:2 n5 (Fatimah's dream) reads as a summary of a long story rather
+  than a rendering; 59:2 n4 (Barsisa) keeps only the cross scene.
+- 60:2 n1 "Umm Habib bint Abi Sufyan" is the block's own spelling (أم
+  حبيب); kept.
+
+### Run deviations
+
+- Ten agent slots instead of four, at the user's request for this run.
+  One slip launched an eleventh writer (63:1); it was stopped at once
+  before writing anything and relaunched when a slot freed.
+- Gathers in three parallel chains (see above).
+
+## Results - at-Talaq 65 to al-Inshiqaq 84 (2026-10-06)
+
+One /loop run over twenty surahs, 35 passages. The agent cap was ten at
+the start, raised to fifteen mid-run and set back to ten later at the
+user's request (the step down was graceful: nothing new launched until
+fewer than ten were running). Gathers started as three parallel chains
+and switched to five workers on a shared queue when the cap went to
+fifteen: all 35 packets in, no failures, no retries. Titles were approved
+as generated (the user said not to wait for them). Rewrites and re-audits
+went to the still-resident writer and auditor.
+
+| passage | verses | writer | audit | attempts |
+|---|---|---|---|---|
+| 65:1 | 1-7 | 207K, 12 min | 151K, 5 min, PASS | 1 |
+| 65:2 | 8-12 | 135K, 9 min | 125K, 5 min, PASS | 1 |
+| 66:1 | 1-7 | 242K, 11 min; +26K rewrite | 215K, 6 min, FAIL; +12K re-audit PASS | 2 |
+| 66:2 | 8-12 | 196K, 16 min; +19K rewrite | 162K, 7 min, FAIL; +15K re-audit PASS | 2 |
+| 67:1 | 1-14 | 201K, 14 min | 169K, 5 min, PASS | 1 |
+| 67:2 | 15-30 | 192K, 15 min | 162K, 7 min, PASS | 1 |
+| 68:1 | 1-33 | 316K, 20 min; +6K comma fix | 253K, 5 min, PASS | 1 |
+| 68:2 | 34-52 | 310K, 15 min; +17K rewrite | 294K, 9 min, FAIL; +10K re-audit PASS | 2 |
+| 69:1 | 1-37 | 275K, 12 min; +16K rewrite | 277K, 10 min, FAIL; +13K re-audit PASS | 2 |
+| 69:2 | 38-52 | 153K, 15 min | 128K, 7 min, PASS | 1 |
+| 70:1 | 1-35 | 282K, 34 min; +16K rewrite | 262K, 13 min, FAIL; +13K re-audit PASS | 2 |
+| 70:2 | 36-44 | 123K, 12 min | 107K, 6 min, PASS | 1 |
+| 71:1 | 1-20 | 150K, 8 min | 173K, 4 min, PASS | 1 |
+| 71:2 | 21-28 | 164K, 27 min | 135K, 5 min, PASS | 1 |
+| 72:1 | 1-19 | 274K, 14 min; +22K rewrite | 188K, 9 min, FAIL; +19K re-audit PASS | 2 |
+| 72:2 | 20-28 | 203K, 28 min | 202K, 7 min, PASS | 1 |
+| 73:1 | 1-19 | 243K, 15 min; +6K perspectives fix | 216K, 6 min, PASS; +9K re-audit PASS | 2 |
+| 73:2 | 20 | 109K, 9 min; +6K perspectives fix | 89K, 3 min, PASS; +8K re-audit PASS | 2 |
+| 74:1 | 1-31 | 382K, 21 min; +13K rewrite | 274K, 8 min, FAIL; +9K re-audit PASS | 2 |
+| 74:2 | 32-56 | 182K, 15 min; +14K rewrite | 246K, 9 min, FAIL; +10K re-audit PASS | 2 |
+| 75:1 | 1-30 | 250K, 32 min; +16K rewrite | 235K, 10 min, FAIL; +15K re-audit PASS | 2 |
+| 75:2 | 31-40 | 129K, 11 min | 112K, 6 min, PASS | 1 |
+| 76:1 | 1-22 | 296K, 13 min; +12K rewrite | 295K, 8 min, FAIL; +9K re-audit PASS | 2 |
+| 76:2 | 23-31 | 135K, 10 min | 129K, 6 min, PASS | 1 |
+| 77:1 | 1-40 | 239K, 17 min | 217K, 8 min, PASS | 1 |
+| 77:2 | 41-50 | 137K, 15 min; +16K rewrite | 104K, 6 min, FAIL; +7K re-audit PASS | 2 |
+| 78:1 | 1-30 | 253K, 13 min | 223K, 6 min, PASS | 1 |
+| 78:2 | 31-40 | 187K, 15 min; +15K rewrite | 145K, 9 min, FAIL; +9K re-audit PASS | 2 |
+| 79:1 | 1-26 | 231K, 16 min | 187K, 6 min, PASS | 1 |
+| 79:2 | 27-46 | 162K, 11 min | 151K, 6 min, PASS | 1 |
+| 80:1 | 1-42 | 288K, 19 min | 231K, 8 min, PASS | 1 |
+| 81:1 | 1-29 | 264K, 15 min | 238K, 7 min, PASS | 1 |
+| 82:1 | 1-19 | 158K, 13 min | 145K, 7 min, PASS | 1 |
+| 83:1 | 1-36 | 324K, 27 min | 252K, 8 min, PASS | 1 |
+| 84:1 | 1-25 | 210K, 14 min; +12K rewrite | 183K, 6 min, FAIL; +9K re-audit PASS | 2 |
+
+22 of 35 passed their first audit. Every FAIL was a single target (72:1 had two),
+and every one was attribution, not invention. None needed a third audit.
+
+- Claim on the wrong block, or a reported view made the author's own (9):
+  66:2 essay (Majma's "never fought a hypocrite" also credited to
+  al-Tibyan), 69:1 perspectives (Mu'awiya named on a block that says only
+  "the Syrian"), 70:1 essay (al-Tabrisi made to hold a reading he reports
+  as disputed), 72:1 perspectives x2 (a tawil-not-tanzil clause on a block
+  that says "thus it was revealed"; al-Tabari's verse-18 reading on his
+  16-17 block), 75:1 essay (al-Tusi's "some said" given to al-Tusi),
+  76:1 essay (al-Mizan's "the Ahl al-Bayt reports agree it is Medinan" on
+  the al-Tibyan marker), 77:2 essay (al-Tusi's widening on the Majma
+  marker), 78:2 perspectives (the Imams' intercession on Furat, which
+  speaks of their followers), 84:1 perspectives (the earlier-nations
+  reading on a block that says only "in the matter of so-and-so").
+- Uncited (2): 66:1 perspectives ("on Umar's own testimony"), 68:2
+  perspectives ("al-Mizan and the leading Sunni exegetes agree").
+- Added detail (1): 74:1 perspectives ("for prayer").
+- Chain (1): 74:2 n4 carried the preceding hadith's isnad.
+
+Fixes made after a PASS or beside a FAIL (through the resident writer,
+never by hand), for things the auditor passed:
+
+- 66:2 perspectives said "Shia commentary agrees the betrayal was in
+  religion" while n6 in the same passage (al-Baqir) reads it as the obscene
+  act. Now credited to al-Tibyan alone.
+- 73:2 perspectives set abrogation as a Sunni view against al-Tusi, but
+  n1 (al-Baqir, al-Qummi) says the verse abrogated the vigil. Now "the
+  difference is within the traditions, not between them"; 73:1 brought
+  into line. Both re-audited.
+- 75:1 n3 rendered وهو يريد البراءة منه as "meaning to disavow him",
+  which read as the Prophet disowning Ali at Ghadir. The block's referent
+  is the man who refused allegiance (Mu'awiya); now "intending to disavow
+  the man who had refused". Re-audited; the first audit had passed it.
+- 84:1 perspectives glossed "in the matter of so-and-so" as "precisely in
+  setting his successors aside"; folded into the FAIL fix.
+- 68:1 essay "you are not, crazy" (stray comma from reordering the
+  translation); unmarked sentence, no re-audit.
+
+### Notes for the prompts and scripts
+
+- Writer prompt: perspectives keep speaking for a whole tradition on one
+  block ("Shia commentary agrees", "Sunni exegesis holds", "the major
+  Sunni commentators", "the leading Sunni exegetes": 66:2, 67:2, 68:1,
+  68:2, 73:1, 73:2). Add: name the author whose block says it; never
+  set a tradition against a narration carried in the same passage.
+- Writer prompt: when one sentence carries two authors' claims, split
+  the markers. Six of the nine mis-cites were a second clause riding on
+  the first clause's marker.
+- Auditor prompt: check pronoun referents when an English rendering puts
+  the Prophet or an Imam against Ali or the Ahl al-Bayt (75:1 n3 passed
+  audit.1). Treat an interpretive gloss on "so-and-so" as an added gloss
+  (84:1).
+- `validate.py`: bracketed apparatus inside a block ("[35-36]", "[23-25]",
+  "[ش: عن]", "[الأحزاب: 33]", "[عليه السلام. أ، ر]") breaks the verbatim
+  span. Eight writers needed a second or third write for it; 74:2 n1 now
+  shows "[35-36]" inside the narration's Arabic, and 68:1 swapped a Furat
+  narration for another rather than fight it. Strip bracketed apparatus,
+  dagger alef and attached-waw spacing in normalisation.
+- Writer PostToolUse hook: when draft.json is not valid JSON the decoder
+  error goes to stderr and the hook prints only stdout, so the rejection
+  is empty (77:2).
+
+### Reader notes, surahs 65 to 84
+
+- Speaker names: "Abu al-Hasan al-Madi" as the speaker in 77:1, 77:2 and
+  80:1 against "Imam al-Kazim" in 66, 67, 69, 72, 74 and 76; "Ali ibn
+  Ibrahim" against "Ali ibn Ibrahim al-Qummi"; "The Prophet", "Prophet
+  Muhammad", "The Prophet Muhammad". The "hearts of the Imams are vessels
+  for His will" saying is al-Hadi in 76:2 and al-Kazim in 81:1, each as
+  its own block has it.
+- Narrator stories under the Imam as speaker again ("I asked Abu Abdillah
+  ... He said", "al-Rida was asked by ...", "Abu Ja'far was asked"): 68:2,
+  70:1, 71:1, 71:2, 72:1, 74:1, 76:2, 78:1, 80:1.
+- Lowercase sentence starts ("al-Mizan reads", "al-Tusi", "al-Rida was
+  asked"): 65:2, 66:2, 69:1, 69:2, 70:2, 72:1, 72:2, 73:2, 76:2, 77:2,
+  78:1.
+- Near-duplicate cards: 77:1 n7 and n9 (the same al-Sadiq report on
+  "proceed to what you denied", v29 and v30).
+- Essays run long: 67:2 (366 words), 69:2 (386), 70:2 (350) and 70:1
+  (360) all inside the limit but heavy.
+- Gradings still not surfaced (72:2 n4 from a block graded majhul).
+- Polemical and esoteric narrations carried as the sources have them
+  throughout (Aisha and Hafsa, Mu'awiya, "the second", Zufar, tahrif in
+  67:2 n6); no writer left one out.
+
+### Run deviations
+
+- Agent cap 10, then 15, then back to 10, at the user's request.
+- Gathers: three chains, then five shared-queue workers.
+- Five orchestrator-requested fixes outside the audit's targets (above).

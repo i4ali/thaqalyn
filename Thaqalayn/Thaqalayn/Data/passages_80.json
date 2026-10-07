@@ -1,0 +1,443 @@
+{
+  "1": {
+    "id": "80:1",
+    "surah": 80,
+    "index": 1,
+    "range": [
+      1,
+      42
+    ],
+    "title": {
+      "en": "He frowned and turned away"
+    },
+    "essay": {
+      "en": "Surah Abasa opens abruptly: someone frowned and turned away when a blind man came to him seeking guidance, while he gave his attention to a wealthy man who felt no need of it (verses 1 to 10). al-Mizan reads the whole surah as a rebuke of anyone who sets the rich and powerful ahead of the weak and poor among the believers [1]. The blind man, Majma relates, was Ibn Umm Maktum, who came hurrying and in awe of God; the one addressed is told plainly that he is not answerable if the self-satisfied man fails to purify himself [3].\n\nA sharp 'No indeed' halts the scene: these verses are a reminder, and whoever wishes may heed them, set down in honored, exalted and purified scrolls in the hands of noble and pious envoys. The surah then turns on ungrateful man: 'Perish man, how ungrateful is he!' al-Mizan takes this as an imprecation against him and an astonishment at how far he goes in denying his Lord [2]. From what was he made? From a mere drop; God proportioned him, made his way easy, then made him die and be buried, and will raise him when He wishes. Yet man has still not carried out what he was commanded.\n\nThe surah then calls man to look at his own food (verse 24): rain poured down, the earth split open, grain, vines, olives, palms, gardens, fruits and pasture, provision for people and their livestock. al-Mizan notes this one everyday sign is held up so man may ponder the vast care with which God arranges his sustenance [2]. Finally the Deafening Cry arrives (verse 33), which al-Mizan identifies as the blast of the trumpet [2], on the day a man flees his brother, mother, father, spouse and children, each too absorbed in his own reckoning to care for anyone else. The surah closes on two kinds of faces: some bright, laughing and joyous, others covered with dust and gloom, and these last are named the faithless and the vicious."
+    },
+    "verses": [
+      {
+        "verse": 1,
+        "heading": {
+          "en": "The one who frowned"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "نزلت في عثمان و ابن أم مكتوم، و كان ابن أم مكتوم مؤذنا لرسول الله (صلى الله عليه و آله)، و كان أعمى … فعبس عثمان وجهه و تولى عنه",
+            "chain": null,
+            "text": {
+              "en": "It was revealed about Uthman and Ibn Umm Maktum. Ibn Umm Maktum was the Prophet's blind muezzin. He came while the Prophet's companions were present, and the Prophet gave him precedence over Uthman, so Uthman frowned and turned away from him."
+            },
+            "source": "s27"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "روي عن الصادق ع أنها نزلت في رجل من بني أمية كان عند النبي صلى الله عليه وسلم فجاء ابن أم مكتوم فلما رآه تقذر منه وجمع نفسه وعبس وأعرض بوجهه عنه فحكى الله سبحانه ذلك وأنكره عليه",
+            "chain": null,
+            "text": {
+              "en": "It was revealed about a man of Banu Umayya who was with the Prophet. When Ibn Umm Maktum came in, the man was disgusted by him, drew himself in, frowned and turned his face away; so God recounted this and condemned him for it."
+            },
+            "source": "s3"
+          }
+        ]
+      },
+      {
+        "verse": 11,
+        "heading": {
+          "en": "A reminder"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Abu al-Hasan al-Madi",
+            "addressee": null,
+            "arabic": "قُلْتُ كَلا إِنَّها تَذْكِرَةٌ قَالَ الْوَلايَةُ",
+            "chain": "Ali ibn Muhammad, from one of our companions, from Ibn Mahbub, from Muhammad ibn al-Fudayl, from Abu al-Hasan al-Madi",
+            "text": {
+              "en": "I recited to him, 'No indeed, it is a reminder.' He said: it is the wilaya."
+            },
+            "source": "s70"
+          }
+        ]
+      },
+      {
+        "verse": 15,
+        "heading": {
+          "en": "In the hands of envoys"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "بِأَيْدِي سَفَرَةٍ * كِرَامٍ بَرَرَةٍ … هم الأئمة (عليهم السلام)",
+            "chain": "Muhammad ibn al-Abbas, from al-Husayn ibn Ahmad al-Maliki, from Muhammad ibn Isa, from Yunus, from Khalaf ibn Hammad, from Abu Ayyub al-Khazzaz, from Abu Abdillah",
+            "text": {
+              "en": "Concerning 'in the hands of envoys, noble and pious,' he said: They are the Imams."
+            },
+            "source": "s28"
+          }
+        ]
+      },
+      {
+        "verse": 16,
+        "heading": {
+          "en": "Noble and pious"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "قال الحافظ: للقرآن العامل به مع السفرة الكرام البررة",
+            "chain": "Fudayl ibn Yasar, from al-Sadiq",
+            "text": {
+              "en": "The one who preserves the Quran and acts by it is with the noble, pious envoys."
+            },
+            "source": "s3"
+          }
+        ]
+      },
+      {
+        "verse": 17,
+        "heading": {
+          "en": "Perish man"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "نعم نزلت في أمير المؤمنين عليه السلام، ما اكفره، يعني بقتلكم إياه ثم نسب أمير المؤمنين عليه السلام فنسب خلقه وما أكرمه الله به",
+            "chain": "Ahmad ibn Idris, from Ahmad ibn Muhammad, from Ibn Abi Nasr, from Jamil ibn Darraj, from Abu Usama, from Abu Ja'far",
+            "text": {
+              "en": "Yes, it was revealed about the Commander of the Faithful. 'How ungrateful is he' means by your killing him. Then he traced the Commander's lineage and the honor God gave him."
+            },
+            "source": "s17"
+          }
+        ]
+      },
+      {
+        "verse": 23,
+        "heading": {
+          "en": "What he was commanded"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "يمكث بعد قتله في الرجعة، فيقضي ما أمره",
+            "chain": "Ahmad ibn Idris, from Ahmad ibn Muhammad, from Ibn Abi Nasr, from Jamil ibn Darraj, from Abu Usama, from Abu Ja'far",
+            "text": {
+              "en": "Concerning 'when He wishes, He will raise him': he remains, after being killed, until the Return, then carries out what he was commanded."
+            },
+            "source": "s29"
+          }
+        ]
+      },
+      {
+        "verse": 24,
+        "heading": {
+          "en": "Consider your food"
+        },
+        "narrations": [
+          {
+            "id": "n8",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "ما طعامه … علمه الذي يأخذه عمن يأخذه",
+            "chain": "Muhammad ibn Yaqub, from a number of our companions, from Ahmad ibn Muhammad ibn Khalid, from his father, from one he mentioned, from Zayd al-Shahham, from Abu Abdillah",
+            "text": {
+              "en": "I asked, what is his food? He said: his knowledge - from whom he takes it."
+            },
+            "source": "s30"
+          }
+        ]
+      },
+      {
+        "verse": 31,
+        "heading": {
+          "en": "Fruits and pastures"
+        },
+        "narrations": [
+          {
+            "id": "n9",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "روي أن أبا بكر سئل عن قول الله تعالى: { وَفَاكِهَةً وَأَبّاً } فلم يعرف معنى الأب في القرآن … يا سبحان الله! أما علم أن الأب هو الكلأ والمرعى",
+            "chain": null,
+            "text": {
+              "en": "Abu Bakr was asked about 'fruits and pastures' and did not know the meaning of abb. When it reached the Commander of the Faithful, he said: Glory be to God! Did he not know that the abb is the herbage and the pasture?"
+            },
+            "source": "s30"
+          }
+        ]
+      },
+      {
+        "verse": 34,
+        "heading": {
+          "en": "Fleeing one's kin"
+        },
+        "narrations": [
+          {
+            "id": "n10",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "قابيل يفر من هابيل، والذي يفر من امه موسى، والذي يفر من أبيه إبراهيم، والذي يفر من صاحبته لوط، والذي يفر من ابنه نوح، يفر من ابنه كنعان",
+            "chain": "al-Rida, from Musa ibn Ja'far, from Ja'far ibn Muhammad, from Muhammad ibn Ali, from Ali ibn al-Husayn, from al-Husayn ibn Ali",
+            "text": {
+              "en": "Qabil flees from Habil; the one who flees from his mother is Musa; from his father, Ibrahim; from his wife, Lut; and from his son, Nuh - fleeing from his son Kan'an."
+            },
+            "source": "s73"
+          }
+        ]
+      },
+      {
+        "verse": 38,
+        "heading": {
+          "en": "Bright faces"
+        },
+        "narrations": [
+          {
+            "id": "n11",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "ذكر عز وجل الذين تولوا أمير المؤمنين عليه السلام وتبرأوا من أعدائه فقال { وجوه يومئذ مسفرة ضاحكة مستبشرة } … ثم ذكر أعداء آل محمد",
+            "chain": null,
+            "text": {
+              "en": "God mentioned those who gave their loyalty to the Commander of the Faithful and dissociated from his enemies, saying: 'Some faces that day will be bright, laughing and joyous.' Then He mentioned the enemies of Muhammad's family."
+            },
+            "source": "s24"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Commentators divide over who is rebuked in the opening verses. Sunni exegetes hold that the one who frowned was the Prophet himself, corrected for turning from the blind Ibn Umm Maktum toward the Quraysh nobles; Ibn Kathir reports this as the account of more than one commentator [43], and al-Razi states that the commentators are agreed the one who frowned was the Messenger [52]. Shia exegetes reject this: al-Tibyan argues that God exalted the Prophet above such scowling, which does not fit his character [5], and Majma relates from Imam al-Sadiq that the one who frowned was a man of Banu Umayya [3]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Abasa 1 to 16",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=80&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فغرض السورة عتاب من يقدم الأغنياء والمترفين على الضعفاء والمساكين من المؤمنين"
+        },
+        "gloss": "The purpose of the surah is to rebuke anyone who puts the rich and affluent ahead of the weak and poor among the believers."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Abasa 17 to 42",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=80&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قوله تعالى { قتل الإِنسان ما أكفره } دعاء على الإِنسان لما أنّ في طبعه التوغل في اتباع الهوى ونسيان ربوبية ربه والاستكبار عن اتباع أوامره"
+        },
+        "gloss": "His words 'Perish man, how ungrateful is he' are an imprecation against man, whose nature inclines him to plunge after desire, forget his Lord's lordship, and disdain obeying His commands."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Abasa 1 to 23",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=80&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقد روي عن الصادق ع أنها نزلت في رجل من بني أمية كان عند النبي صلى الله عليه وسلم فجاء ابن أم مكتوم"
+        },
+        "gloss": "It is related from al-Sadiq that it was revealed about a man of Banu Umayya who was with the Prophet when Ibn Umm Maktum came in."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Abasa 1 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=80&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لان النبي صلى الله عليه وآله قد أجل الله قدره عن هذه الصفات، وكيف يصفه بالعبوس والتقطيب"
+        },
+        "gloss": "For God has exalted the Prophet's rank above such traits; how could He describe him with scowling and frowning?"
+      },
+      {
+        "id": "s17",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Abasa 16 to 17",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=80&tAyahNo=16&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هو أمير المؤمنين قال: ما اكفره أي: ماذا فعل فأذنب حتى قتلوه"
+        },
+        "gloss": "He is the Commander of the Faithful; 'how faithless is he' means: what did he do or sin, that they killed him?"
+      },
+      {
+        "id": "s24",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Abasa 38 to 39",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=80&tAyahNo=38&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ذكر عز وجل الذين تولوا أمير المؤمنين عليه السلام وتبرأوا من أعدائه فقال { وجوه يومئذ مسفرة ضاحكة مستبشرة }"
+        },
+        "gloss": "God mentioned those who gave their loyalty to the Commander of the Faithful and dissociated from his enemies, saying: 'Some faces that day will be bright, laughing and joyous.'"
+      },
+      {
+        "id": "s27",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Abasa 1 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=80&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فعبس عثمان وجهه و تولى عنه، فأنزل الله"
+        },
+        "gloss": "So Uthman frowned and turned away from him, and God sent down the revelation."
+      },
+      {
+        "id": "s28",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Abasa 11 to 16",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=80&tAyahNo=11&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هم الأئمة (عليهم السلام)"
+        },
+        "gloss": "[The envoys] - they are the Imams."
+      },
+      {
+        "id": "s29",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Abasa 17 to 23",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=80&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال: في الرجعة"
+        },
+        "gloss": "He said: in the Return (raj'a)."
+      },
+      {
+        "id": "s30",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Abasa 24 to 33",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=80&tAyahNo=24&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "علمه الذي يأخذه عمن يأخذه"
+        },
+        "gloss": "His food is his knowledge - from whom he takes it."
+      },
+      {
+        "id": "s43",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Abasa 1 to 16",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=80&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وعبس في وجه ابن أم مكتوم، وأعرض عنه، وأقبل على الآخر"
+        },
+        "gloss": "And he frowned at Ibn Umm Maktum, turned away from him, and attended to the other man."
+      },
+      {
+        "id": "s52",
+        "kind": "tafsir",
+        "work": "Mafatih al-Ghayb",
+        "author": "Fakhr al-Din al-Razi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Abasa 1 to 2",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=4&tSoraNo=80&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أجمع المفسرون على أن الذي عبس وتولى، هو الرسول عليه الصلاة والسلام، وأجمعوا على أن الأعمى هو ابن أم مكتوم"
+        },
+        "gloss": "The commentators are agreed that the one who frowned and turned away is the Messenger, and that the blind man is Ibn Umm Maktum."
+      },
+      {
+        "id": "s70",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 88, cited at Abasa 11",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "قُلْتُ كَلا إِنَّها تَذْكِرَةٌ قَالَ الْوَلايَةُ"
+        },
+        "gloss": "I recited, 'No indeed, it is a reminder.' He said: the wilaya."
+      },
+      {
+        "id": "s73",
+        "kind": "hadith",
+        "work": "Al-Khisal",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 1, cited at Abasa 34",
+        "url": "https://thaqalayn.com/book/3",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "قابيل يفر من هابيل، والذي يفر من امه موسى، والذي يفر من أبيه إبراهيم، والذي يفر من صاحبته لوط، والذي يفر من ابنه نوح، يفر من ابنه كنعان"
+        },
+        "gloss": "Qabil flees from Habil; the one who flees from his mother is Musa; from his father, Ibrahim; from his wife, Lut; from his son, Nuh - fleeing from his son Kan'an."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:44:34Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T18:26:46Z",
+      "assembled_at": "2026-10-06T18:27:09Z"
+    }
+  }
+}

@@ -3,9 +3,10 @@
 //  Thaqalayn
 //
 //  The immersive "descent": a full-screen, vertical scroll-snap experience that
-//  renders one DeepDive's sections one screen at a time. Keeps its own fixed
-//  cinematic dark palette (DeepDivePalette) regardless of the app theme — it is
-//  an immersive mode, like a film. Reuses the app's real audio
+//  renders one DeepDive's sections one screen at a time. Keeps its own cinematic
+//  palette (DeepDivePalette) - an immersive mode, like a film - in two versions:
+//  the night descent under Midnight Emerald and a dawn descent (pale mint to deep
+//  sage, ink and deep gold, the cover's watercolor) under Sage Dawn. Reuses the app's real audio
 //  (VerseRecitationButton / DuaListenButton) and reading-size control.
 //
 //  A quiet guidance layer runs through it: a place-label + depth meter on every
@@ -62,6 +63,7 @@ struct DeepDiveView: View {
 
     @StateObject private var reading = ReadingSettingsManager.shared
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Environment(\.colorScheme) private var colorScheme
 
     @State private var currentID: Int? = 0
     @State private var progress: CGFloat = 0
@@ -247,7 +249,9 @@ struct DeepDiveView: View {
                 closeButton
             }
         }
-        .preferredColorScheme(.dark)
+        // Follows the app theme: the night descent under Midnight Emerald, the dawn
+        // descent (DeepDivePalette's light values, the cover's day art) under Sage Dawn.
+        .preferredColorScheme(ThemeManager.shared.colorScheme)
         .statusBarHidden(true)
         .fullScreenCover(isPresented: $showingPaywall) {
             PaywallView(context: lockedPaywallContext)
@@ -283,24 +287,30 @@ struct DeepDiveView: View {
     /// a photograph. Ghosting the art instead of scrimming it was tried and is worse on
     /// both counts - the bright areas punch straight through the text, and the art washes out.
     private func thresholdCover(_ asset: String, size: CGSize) -> some View {
-        let scrim = Color(.sRGB, red: 4.0 / 255.0, green: 10.0 / 255.0, blue: 7.0 / 255.0, opacity: 1)
-        return Image(asset)
+        // By day the scrim is the dawn ground itself and a little lighter: the watercolor is
+        // already pale, so it needs less veiling to carry the ink and gold type.
+        let day = colorScheme == .light
+        let scrim = day
+            ? Color(.sRGB, red: 243.0 / 255.0, green: 248.0 / 255.0, blue: 242.0 / 255.0, opacity: 1)
+            : Color(.sRGB, red: 4.0 / 255.0, green: 10.0 / 255.0, blue: 7.0 / 255.0, opacity: 1)
+        let k: Double = day ? 0.8 : 1
+        return Image(CoverArt.asset(asset, for: colorScheme))
             .resizable()
             .scaledToFill()
             .frame(width: size.width, height: size.height)
             .clipped()
             .overlay(
                 LinearGradient(stops: [
-                    .init(color: scrim.opacity(0.50), location: 0.00),
-                    .init(color: scrim.opacity(0.66), location: 0.34),
-                    .init(color: scrim.opacity(0.74), location: 0.62),
-                    .init(color: scrim.opacity(0.60), location: 1.00),
+                    .init(color: scrim.opacity(0.50 * k), location: 0.00),
+                    .init(color: scrim.opacity(0.66 * k), location: 0.34),
+                    .init(color: scrim.opacity(0.74 * k), location: 0.62),
+                    .init(color: scrim.opacity(0.60 * k), location: 1.00),
                 ], startPoint: .top, endPoint: .bottom)
             )
             .overlay(
                 RadialGradient(stops: [
                     .init(color: .clear, location: 0.32),
-                    .init(color: scrim.opacity(0.55), location: 1.00),
+                    .init(color: scrim.opacity(0.55 * k), location: 1.00),
                 ], center: .center, startRadius: 0,
                    endRadius: max(size.width, size.height) * 0.62)
             )
@@ -344,7 +354,7 @@ struct DeepDiveView: View {
     @ViewBuilder
     private func veiledArt(size: CGSize) -> some View {
         if let cover = coverAssetName {
-            Image(cover)
+            Image(CoverArt.asset(cover, for: colorScheme))
                 .resizable()
                 .scaledToFill()
                 .frame(width: size.width, height: size.height)
@@ -354,7 +364,7 @@ struct DeepDiveView: View {
                 .blur(radius: 44, opaque: true)
                 .frame(width: size.width, height: size.height)
                 .clipped()
-                .overlay(Color.black.opacity(0.46))
+                .overlay(colorScheme == .light ? Color.white.opacity(0.42) : Color.black.opacity(0.46))
                 .allowsHitTesting(false)
                 .accessibilityHidden(true)
         }
@@ -414,10 +424,10 @@ struct DeepDiveView: View {
                 .padding(.vertical, 14)
                 .background(
                     Capsule().fill(
-                        LinearGradient(colors: [DeepDivePalette.goldBright, DeepDivePalette.gold],
+                        LinearGradient(colors: [DeepDivePalette.ctaGoldBright, DeepDivePalette.ctaGold],
                                        startPoint: .top, endPoint: .bottom))
                 )
-                .shadow(color: DeepDivePalette.gold.opacity(0.35), radius: 16, x: 0, y: 6)
+                .shadow(color: DeepDivePalette.glow.opacity(0.35), radius: 16, x: 0, y: 6)
         }
         .buttonStyle(EmPressStyle())
     }
@@ -427,7 +437,7 @@ struct DeepDiveView: View {
     private var progressHairline: some View {
         GeometryReader { g in
             ZStack(alignment: .leading) {
-                Rectangle().fill(Color.white.opacity(0.04))
+                Rectangle().fill(DeepDivePalette.wash.opacity(0.04))
                 Rectangle()
                     .fill(LinearGradient(colors: [DeepDivePalette.gold, DeepDivePalette.goldBright],
                                          startPoint: .leading, endPoint: .trailing))
@@ -492,7 +502,7 @@ struct DeepDiveView: View {
                             .fill(i < info.filled ? DeepDivePalette.gold : Color.clear)
                             .frame(width: 5, height: 5)
                             .overlay(Circle().stroke(DeepDivePalette.gold.opacity(0.5), lineWidth: i < info.filled ? 0 : 1))
-                            .shadow(color: i < info.filled ? DeepDivePalette.gold.opacity(0.5) : .clear, radius: 3)
+                            .shadow(color: i < info.filled ? DeepDivePalette.glow.opacity(0.5) : .clear, radius: 3)
                     }
                 }
             }
@@ -619,7 +629,7 @@ struct DeepDiveView: View {
                 .multilineTextAlignment(.leading)
                 .reveal(show, 0.5, reduce: reduceMotion)
             hairline.padding(.vertical, 30).reveal(show, 0.78, reduce: reduceMotion)
-            Text(line).font(EmType.serifItalic(18 * s)).foregroundColor(Color(white: 0.72))
+            Text(line).font(EmType.serifItalic(18 * s)).foregroundColor(DeepDivePalette.body)
                 .multilineTextAlignment(.center).lineSpacing(5 * s).frame(maxWidth: 320)
                 .reveal(show, 0.78, reduce: reduceMotion)
             bob(dive.descendCta, show).padding(.top, 44)
@@ -665,7 +675,7 @@ struct DeepDiveView: View {
                 .environment(\.layoutDirection, .rightToLeft)
                 .reveal(show, 0.24, reduce: reduceMotion)
             if !translation.isEmpty {
-                Text(translation).font(EmType.serifItalic(20 * s)).foregroundColor(Color(white: 0.8))
+                Text(translation).font(EmType.serifItalic(20 * s)).foregroundColor(DeepDivePalette.bodyStrong)
                     .multilineTextAlignment(.center).lineSpacing(4 * s).padding(.top, 26).frame(maxWidth: 400)
                     .reveal(show, 0.55, reduce: reduceMotion)
             }
@@ -730,7 +740,7 @@ struct DeepDiveView: View {
                 }
                 if open {
                     Rectangle().fill(DeepDivePalette.gold.opacity(0.22)).frame(height: 1).padding(.vertical, 12)
-                    Text(d.desc()).font(EmType.serifItalic(16 * s)).foregroundColor(Color(white: 0.8))
+                    Text(d.desc()).font(EmType.serifItalic(16 * s)).foregroundColor(DeepDivePalette.bodyStrong)
                         .lineSpacing(3 * s).fixedSize(horizontal: false, vertical: true)
                         .multilineTextAlignment(.leading)
                     Text("→ \(d.embodies())".uppercased()).font(.system(size: 10.5, weight: .semibold)).tracking(1.2)
@@ -740,7 +750,7 @@ struct DeepDiveView: View {
             }
             .padding(18)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(RoundedRectangle(cornerRadius: 16).fill(open ? DeepDivePalette.goldBright.opacity(0.06) : Color.white.opacity(0.022)))
+            .background(RoundedRectangle(cornerRadius: 16).fill(open ? DeepDivePalette.goldBright.opacity(0.06) : DeepDivePalette.wash.opacity(0.022)))
             .overlay(RoundedRectangle(cornerRadius: 16).stroke(open ? DeepDivePalette.goldBright.opacity(0.34) : DeepDivePalette.gold.opacity(0.16), lineWidth: 1))
         }
         .buttonStyle(.plain)
@@ -772,7 +782,7 @@ struct DeepDiveView: View {
                     Text(b.arabic).font(EmType.arabic(22 * s)).foregroundColor(DeepDivePalette.cream)
                         .multilineTextAlignment(.center).lineSpacing(9 * s).environment(\.layoutDirection, .rightToLeft)
                     if !b.translation().isEmpty {
-                        Text(b.translation()).font(EmType.serifItalic(16 * s)).foregroundColor(Color(white: 0.8))
+                        Text(b.translation()).font(EmType.serifItalic(16 * s)).foregroundColor(DeepDivePalette.bodyStrong)
                             .multilineTextAlignment(.center)
                     }
                     Text(b.reference).font(.system(size: 11, weight: .semibold)).tracking(2).foregroundColor(DeepDivePalette.gold.opacity(0.8))
@@ -784,12 +794,12 @@ struct DeepDiveView: View {
                     .padding(.top, 8)
                 }
                 .padding(18).frame(maxWidth: 380)
-                .background(RoundedRectangle(cornerRadius: 14).fill(Color.white.opacity(0.02)))
+                .background(RoundedRectangle(cornerRadius: 14).fill(DeepDivePalette.wash.opacity(0.02)))
                 .overlay(RoundedRectangle(cornerRadius: 14).stroke(DeepDivePalette.gold.opacity(0.16), lineWidth: 1))
                 .padding(.top, 26).reveal(show, 0.6, reduce: reduceMotion)
             }
             hairline.padding(.top, 24).padding(.bottom, 20).reveal(show, bridge == nil ? 0.6 : 0.85, reduce: reduceMotion)
-            Text(line).font(EmType.serifItalic(18 * s)).foregroundColor(Color(white: 0.72))
+            Text(line).font(EmType.serifItalic(18 * s)).foregroundColor(DeepDivePalette.body)
                 .multilineTextAlignment(.center).lineSpacing(5 * s).frame(maxWidth: 340)
                 .reveal(show, bridge == nil ? 0.6 : 0.85, reduce: reduceMotion)
             bob("Continue", show, 1.1).padding(.top, 30)
@@ -836,12 +846,12 @@ struct DeepDiveView: View {
                 Text(arabic).font(EmType.arabic(23 * s, bold: true))
                     .foregroundColor(DeepDivePalette.goldBright)
                     .environment(\.layoutDirection, .rightToLeft)
-                    .shadow(color: DeepDivePalette.goldBright.opacity(0.3), radius: 16)
+                    .shadow(color: DeepDivePalette.glow.opacity(0.3), radius: 16)
                     .padding(.top, 24).reveal(show, 0.32, reduce: reduceMotion)
             }
             Text(words).font(EmType.serifItalic(25 * s)).foregroundColor(DeepDivePalette.cream)
                 .multilineTextAlignment(.center).lineSpacing(6 * s).frame(maxWidth: 320)
-                .shadow(color: DeepDivePalette.goldBright.opacity(0.22), radius: 22)
+                .shadow(color: DeepDivePalette.glow.opacity(0.22), radius: 22)
                 .padding(.top, 20).reveal(show, 0.52, reduce: reduceMotion)
             Text(source).font(.system(size: 11, weight: .semibold)).tracking(2)
                 .foregroundColor(DeepDivePalette.gold.opacity(0.8))
@@ -867,16 +877,16 @@ struct DeepDiveView: View {
             Text(arabic).font(EmType.arabic(26 * s, bold: true)).foregroundColor(DeepDivePalette.cream)
                 .multilineTextAlignment(.center).lineSpacing(12 * s)
                 .environment(\.layoutDirection, .rightToLeft)
-                .shadow(color: DeepDivePalette.goldBright.opacity(0.2), radius: 18)
+                .shadow(color: DeepDivePalette.glow.opacity(0.2), radius: 18)
                 .reveal(show, 0.2, reduce: reduceMotion)
-            Text(translation).font(EmType.serifItalic(19 * s)).foregroundColor(Color(white: 0.8))
+            Text(translation).font(EmType.serifItalic(19 * s)).foregroundColor(DeepDivePalette.bodyStrong)
                 .multilineTextAlignment(.center).lineSpacing(4 * s).padding(.top, 20).frame(maxWidth: 380)
                 .reveal(show, 0.45, reduce: reduceMotion)
             Text(reference).font(.system(size: 11, weight: .semibold)).tracking(2)
                 .foregroundColor(DeepDivePalette.gold.opacity(0.85)).padding(.top, 14)
                 .reveal(show, 0.45, reduce: reduceMotion)
             hairline.padding(.top, 24).padding(.bottom, 18).reveal(show, 0.7, reduce: reduceMotion)
-            Text(intro).font(EmType.serifItalic(16 * s)).foregroundColor(Color(white: 0.72))
+            Text(intro).font(EmType.serifItalic(16 * s)).foregroundColor(DeepDivePalette.body)
                 .multilineTextAlignment(.center).lineSpacing(3 * s).frame(maxWidth: 340)
                 .reveal(show, 0.7, reduce: reduceMotion)
             if answered {
@@ -895,7 +905,7 @@ struct DeepDiveView: View {
                     .foregroundColor(DeepDivePalette.goldBright)
                     .multilineTextAlignment(.center).lineSpacing(10 * s)
                     .environment(\.layoutDirection, .rightToLeft)
-                    .shadow(color: DeepDivePalette.goldBright.opacity(0.35), radius: 20)
+                    .shadow(color: DeepDivePalette.glow.opacity(0.35), radius: 20)
                     .padding(.top, 18)
                 Text(replyTransliteration)
                     .font(.system(size: 12, weight: .medium)).tracking(0.6)
@@ -903,7 +913,7 @@ struct DeepDiveView: View {
                     .multilineTextAlignment(.center).padding(.top, 10)
                 Text(replyTranslation).font(EmType.serifItalic(21 * s)).foregroundColor(DeepDivePalette.cream)
                     .multilineTextAlignment(.center).lineSpacing(5 * s).frame(maxWidth: 330)
-                    .shadow(color: DeepDivePalette.goldBright.opacity(0.2), radius: 22)
+                    .shadow(color: DeepDivePalette.glow.opacity(0.2), radius: 22)
                     .padding(.top, 14)
                 DuaListenButton(arabic: replyArabic).padding(.top, 16)
                 if let teachSource {
@@ -929,7 +939,7 @@ struct DeepDiveView: View {
                             .foregroundColor(DeepDivePalette.goldBright)
                             .padding(.horizontal, 26).padding(.vertical, 13)
                             .overlay(Capsule().stroke(DeepDivePalette.goldBright.opacity(0.35), lineWidth: 1))
-                            .shadow(color: DeepDivePalette.goldBright.opacity(0.25), radius: 14)
+                            .shadow(color: DeepDivePalette.glow.opacity(0.25), radius: 14)
                     }
                 }
                 .buttonStyle(EmPressStyle())
@@ -943,12 +953,12 @@ struct DeepDiveView: View {
     private func climaxPage(_ tag: String, _ source: String, _ arabic: String, _ translation: String, _ body: String, _ reflection: String, _ show: Bool) -> some View {
         VStack(spacing: 0) {
             tagLabel(tag, show).padding(.bottom, 26)
-            Text(body).font(.system(size: 15 * s)).foregroundColor(Color(white: 0.72))
+            Text(body).font(.system(size: 15 * s)).foregroundColor(DeepDivePalette.body)
                 .multilineTextAlignment(.center).lineSpacing(6 * s).frame(maxWidth: 360).padding(.bottom, 30)
                 .reveal(show, 0.2, reduce: reduceMotion)
             Text(arabic).font(EmType.arabic(30 * s, bold: true)).foregroundColor(DeepDivePalette.goldBright)
                 .environment(\.layoutDirection, .rightToLeft)
-                .shadow(color: DeepDivePalette.goldBright.opacity(0.25), radius: 18)
+                .shadow(color: DeepDivePalette.glow.opacity(0.25), radius: 18)
                 .reveal(show, 0.65, reduce: reduceMotion)
             if !translation.isEmpty {
                 Text(translation).font(EmType.serifItalic(22 * s)).foregroundColor(DeepDivePalette.cream)
@@ -974,7 +984,7 @@ struct DeepDiveView: View {
                 .multilineTextAlignment(.center)
                 .reveal(show, 0.15, reduce: reduceMotion)
             Text(subline)
-                .font(EmType.serifItalic(16 * s)).foregroundColor(Color(white: 0.72))
+                .font(EmType.serifItalic(16 * s)).foregroundColor(DeepDivePalette.body)
                 .multilineTextAlignment(.center).lineSpacing(3 * s).padding(.top, 16).frame(maxWidth: 340)
                 .reveal(show, 0.35, reduce: reduceMotion)
             bob(nextLabel, show).padding(.top, 34)
@@ -994,7 +1004,7 @@ struct DeepDiveView: View {
                 Text(arabic).font(EmType.arabic(30 * s, bold: true)).foregroundColor(DeepDivePalette.goldBright)
                     .multilineTextAlignment(.center).lineSpacing(10 * s)
                     .environment(\.layoutDirection, .rightToLeft)
-                    .shadow(color: DeepDivePalette.goldBright.opacity(0.35), radius: 22)
+                    .shadow(color: DeepDivePalette.glow.opacity(0.35), radius: 22)
                 Text(translation).font(EmType.serifItalic(21 * s)).foregroundColor(DeepDivePalette.cream)
                     .multilineTextAlignment(.center).lineSpacing(4 * s).padding(.top, 16).frame(maxWidth: 340)
                 Text(reference).font(.system(size: 11, weight: .semibold)).tracking(2)
@@ -1012,7 +1022,7 @@ struct DeepDiveView: View {
                     .opacity(releaseHolding ? 0.45 : 1)
                     .reveal(show, 0.15, reduce: reduceMotion)
                 Text(releaseHolding ? "Hold it. All of it." : subline)
-                    .font(EmType.serifItalic(16 * s)).foregroundColor(Color(white: 0.72))
+                    .font(EmType.serifItalic(16 * s)).foregroundColor(DeepDivePalette.body)
                     .multilineTextAlignment(.center).lineSpacing(3 * s).padding(.top, 14).frame(maxWidth: 320)
                     .opacity(releaseHolding ? 0.5 : 1)
                     .reveal(show, 0.3, reduce: reduceMotion)
@@ -1021,14 +1031,14 @@ struct DeepDiveView: View {
                     .font(.system(size: releasePrimed ? 12 : 10.5, weight: .semibold))
                     .tracking(releasePrimed ? 4 : 3)
                     .foregroundColor(releasePrimed ? DeepDivePalette.goldBright : DeepDivePalette.gold)
-                    .shadow(color: releasePrimed ? DeepDivePalette.goldBright.opacity(0.4) : .clear, radius: 12)
+                    .shadow(color: releasePrimed ? DeepDivePalette.glow.opacity(0.4) : .clear, radius: 12)
                     .padding(.top, 18)
                     .reveal(show, 0.6, reduce: reduceMotion)
             }
         }
         .background {
             if releaseDone {
-                RadialGradient(colors: [DeepDivePalette.goldBright.opacity(0.10), .clear],
+                RadialGradient(colors: [DeepDivePalette.glow.opacity(0.10), .clear],
                                center: .center, startRadius: 10, endRadius: 280)
                     .allowsHitTesting(false)
             }
@@ -1051,7 +1061,7 @@ struct DeepDiveView: View {
                            value: releaseHolding)
             Circle().fill(DeepDivePalette.goldBright)
                 .frame(width: releasePrimed ? 36 : 14, height: releasePrimed ? 36 : 14)
-                .shadow(color: DeepDivePalette.goldBright.opacity(0.8), radius: releasePrimed ? 26 : 12)
+                .shadow(color: DeepDivePalette.glow.opacity(0.8), radius: releasePrimed ? 26 : 12)
         }
         .frame(width: 120, height: 120)
         .contentShape(Circle())
@@ -1098,7 +1108,7 @@ struct DeepDiveView: View {
                 Text(arabic).font(EmType.arabic(30 * s, bold: true)).foregroundColor(DeepDivePalette.goldBright)
                     .multilineTextAlignment(.center).lineSpacing(10 * s)
                     .environment(\.layoutDirection, .rightToLeft)
-                    .shadow(color: DeepDivePalette.goldBright.opacity(0.35), radius: 22)
+                    .shadow(color: DeepDivePalette.glow.opacity(0.35), radius: 22)
                 Text(translation).font(EmType.serifItalic(21 * s)).foregroundColor(DeepDivePalette.cream)
                     .multilineTextAlignment(.center).lineSpacing(4 * s).padding(.top, 16).frame(maxWidth: 340)
                 Text(reference).font(.system(size: 11, weight: .semibold)).tracking(2)
@@ -1116,7 +1126,7 @@ struct DeepDiveView: View {
                     .opacity(countOverflow ? 0.4 : 1)
                     .reveal(show, 0.15, reduce: reduceMotion)
                 if countTaps == 0 {
-                    Text(subline).font(EmType.serifItalic(16 * s)).foregroundColor(Color(white: 0.72))
+                    Text(subline).font(EmType.serifItalic(16 * s)).foregroundColor(DeepDivePalette.body)
                         .multilineTextAlignment(.center).lineSpacing(3 * s).padding(.top, 14).frame(maxWidth: 320)
                         .reveal(show, 0.3, reduce: reduceMotion)
                 }
@@ -1124,7 +1134,7 @@ struct DeepDiveView: View {
                     VStack(spacing: 10) {
                         Text("\(countTally)")
                             .font(EmType.serif(54)).foregroundColor(DeepDivePalette.goldBright)
-                            .shadow(color: DeepDivePalette.goldBright.opacity(0.4), radius: 22)
+                            .shadow(color: DeepDivePalette.glow.opacity(0.4), radius: 22)
                             .contentTransition(.numericText())
                         if countOverflow {
                             Text("And counting itself".uppercased())
@@ -1142,7 +1152,7 @@ struct DeepDiveView: View {
                     .font(.system(size: countOverflow ? 12 : 10.5, weight: .semibold))
                     .tracking(countOverflow ? 4 : 3)
                     .foregroundColor(countOverflow ? DeepDivePalette.goldBright : DeepDivePalette.gold)
-                    .shadow(color: countOverflow ? DeepDivePalette.goldBright.opacity(0.4) : .clear, radius: 12)
+                    .shadow(color: countOverflow ? DeepDivePalette.glow.opacity(0.4) : .clear, radius: 12)
                     .padding(.top, 18)
                     .reveal(show, 0.6, reduce: reduceMotion)
             }
@@ -1151,7 +1161,7 @@ struct DeepDiveView: View {
         .onTapGesture { if !countDone { countTap() } }
         .background {
             if countDone {
-                RadialGradient(colors: [DeepDivePalette.goldBright.opacity(0.10), .clear],
+                RadialGradient(colors: [DeepDivePalette.glow.opacity(0.10), .clear],
                                center: .center, startRadius: 10, endRadius: 280)
                     .allowsHitTesting(false)
             }
@@ -1168,14 +1178,14 @@ struct DeepDiveView: View {
                 if countLights.isEmpty {
                     Circle().fill(DeepDivePalette.goldBright)
                         .frame(width: 14, height: 14)
-                        .shadow(color: DeepDivePalette.goldBright.opacity(0.8), radius: 12)
+                        .shadow(color: DeepDivePalette.glow.opacity(0.8), radius: 12)
                         .position(x: geo.size.width / 2, y: geo.size.height / 2)
                 }
                 ForEach(countLights) { light in
                     Circle().fill(DeepDivePalette.goldBright)
                         .frame(width: light.size, height: light.size)
                         .opacity(light.opacity)
-                        .shadow(color: DeepDivePalette.goldBright.opacity(0.7), radius: light.size)
+                        .shadow(color: DeepDivePalette.glow.opacity(0.7), radius: light.size)
                         .position(x: light.x * geo.size.width, y: light.y * geo.size.height)
                         .transition(reduceMotion ? .opacity :
                             .scale(scale: 0.2).combined(with: .opacity))
@@ -1250,7 +1260,7 @@ struct DeepDiveView: View {
                 Text(arabic).font(EmType.arabic(30 * s, bold: true)).foregroundColor(DeepDivePalette.goldBright)
                     .multilineTextAlignment(.center).lineSpacing(10 * s)
                     .environment(\.layoutDirection, .rightToLeft)
-                    .shadow(color: DeepDivePalette.goldBright.opacity(0.35), radius: 22)
+                    .shadow(color: DeepDivePalette.glow.opacity(0.35), radius: 22)
                 Text(translation).font(EmType.serifItalic(21 * s)).foregroundColor(DeepDivePalette.cream)
                     .multilineTextAlignment(.center).lineSpacing(4 * s).padding(.top, 16).frame(maxWidth: 340)
                 Text(reference).font(.system(size: 11, weight: .semibold)).tracking(2)
@@ -1269,7 +1279,7 @@ struct DeepDiveView: View {
                     .animation(reduceMotion ? nil : .easeInOut(duration: 0.4), value: extinguishedLights)
                     .reveal(show, 0.15, reduce: reduceMotion)
                 if extinguishedLights.isEmpty {
-                    Text(subline).font(EmType.serifItalic(16 * s)).foregroundColor(Color(white: 0.72))
+                    Text(subline).font(EmType.serifItalic(16 * s)).foregroundColor(DeepDivePalette.body)
                         .multilineTextAlignment(.center).lineSpacing(3 * s).padding(.top, 14).frame(maxWidth: 320)
                         .reveal(show, 0.3, reduce: reduceMotion)
                 }
@@ -1280,14 +1290,14 @@ struct DeepDiveView: View {
                     .font(.system(size: extinguishFlared ? 12 : 10.5, weight: .semibold))
                     .tracking(extinguishFlared ? 4 : 3)
                     .foregroundColor(extinguishFlared ? DeepDivePalette.goldBright : DeepDivePalette.gold)
-                    .shadow(color: extinguishFlared ? DeepDivePalette.goldBright.opacity(0.4) : .clear, radius: 12)
+                    .shadow(color: extinguishFlared ? DeepDivePalette.glow.opacity(0.4) : .clear, radius: 12)
                     .padding(.top, 18)
                     .reveal(show, 0.6, reduce: reduceMotion)
             }
         }
         .background {
             if extinguishDone {
-                RadialGradient(colors: [DeepDivePalette.goldBright.opacity(0.10), .clear],
+                RadialGradient(colors: [DeepDivePalette.glow.opacity(0.10), .clear],
                                center: .center, startRadius: 10, endRadius: 280)
                     .allowsHitTesting(false)
             }
@@ -1327,7 +1337,7 @@ struct DeepDiveView: View {
                 Circle().fill(DeepDivePalette.goldBright)
                     .frame(width: flared ? light.size * 2.6 : (isLast ? light.size * 1.5 : light.size),
                            height: flared ? light.size * 2.6 : (isLast ? light.size * 1.5 : light.size))
-                    .shadow(color: DeepDivePalette.goldBright.opacity(flared ? 0.9 : (isLast ? 0.85 : 0.6)),
+                    .shadow(color: DeepDivePalette.glow.opacity(flared ? 0.9 : (isLast ? 0.85 : 0.6)),
                             radius: flared ? 26 : (isLast ? 16 : 10))
             }
         }
@@ -1379,7 +1389,7 @@ struct DeepDiveView: View {
                 Text(arabic).font(EmType.arabic(27 * s, bold: true)).foregroundColor(DeepDivePalette.goldBright)
                     .multilineTextAlignment(.center).lineSpacing(10 * s)
                     .environment(\.layoutDirection, .rightToLeft)
-                    .shadow(color: DeepDivePalette.goldBright.opacity(0.4), radius: 22)
+                    .shadow(color: DeepDivePalette.glow.opacity(0.4), radius: 22)
                 Text(translation).font(EmType.serifItalic(21 * s)).foregroundColor(DeepDivePalette.cream)
                     .multilineTextAlignment(.center).lineSpacing(4 * s).padding(.top, 16).frame(maxWidth: 330)
                 Text(reference).font(.system(size: 11, weight: .semibold)).tracking(2)
@@ -1398,7 +1408,7 @@ struct DeepDiveView: View {
                     .animation(reduceMotion ? nil : .easeInOut(duration: 0.5), value: doorStarted)
                     .reveal(show, 0.15, reduce: reduceMotion)
                 if !doorStarted && !doorReached {
-                    Text(subline).font(EmType.serifItalic(16 * s)).foregroundColor(Color(white: 0.72))
+                    Text(subline).font(EmType.serifItalic(16 * s)).foregroundColor(DeepDivePalette.body)
                         .multilineTextAlignment(.center).lineSpacing(3 * s).padding(.top, 14).frame(maxWidth: 320)
                         .reveal(show, 0.3, reduce: reduceMotion)
                 }
@@ -1409,14 +1419,14 @@ struct DeepDiveView: View {
                     .font(.system(size: doorStarted && !doorReached ? 12 : 10.5, weight: .semibold))
                     .tracking(doorStarted && !doorReached ? 4 : 3)
                     .foregroundColor(doorStarted && !doorReached ? DeepDivePalette.goldBright : DeepDivePalette.gold)
-                    .shadow(color: doorStarted && !doorReached ? DeepDivePalette.goldBright.opacity(0.4) : .clear, radius: 12)
+                    .shadow(color: doorStarted && !doorReached ? DeepDivePalette.glow.opacity(0.4) : .clear, radius: 12)
                     .padding(.top, 18)
                     .reveal(show, 0.6, reduce: reduceMotion)
             }
         }
         .background {
             if doorDone {
-                RadialGradient(colors: [DeepDivePalette.goldBright.opacity(0.10), .clear],
+                RadialGradient(colors: [DeepDivePalette.glow.opacity(0.10), .clear],
                                center: .center, startRadius: 10, endRadius: 280)
                     .allowsHitTesting(false)
             }
@@ -1516,7 +1526,7 @@ struct DeepDiveView: View {
                 Text(arabic).font(EmType.arabic(30 * s, bold: true)).foregroundColor(DeepDivePalette.goldBright)
                     .multilineTextAlignment(.center).lineSpacing(10 * s)
                     .environment(\.layoutDirection, .rightToLeft)
-                    .shadow(color: DeepDivePalette.goldBright.opacity(0.35), radius: 22)
+                    .shadow(color: DeepDivePalette.glow.opacity(0.35), radius: 22)
                 Text(translation).font(EmType.serifItalic(21 * s)).foregroundColor(DeepDivePalette.cream)
                     .multilineTextAlignment(.center).lineSpacing(4 * s).padding(.top, 16).frame(maxWidth: 340)
                 Text(reference).font(.system(size: 11, weight: .semibold)).tracking(2)
@@ -1534,7 +1544,7 @@ struct DeepDiveView: View {
                     .opacity(sujudHolding ? 0.45 : 1)
                     .reveal(show, 0.15, reduce: reduceMotion)
                 Text(subline)
-                    .font(EmType.serifItalic(16 * s)).foregroundColor(Color(white: 0.72))
+                    .font(EmType.serifItalic(16 * s)).foregroundColor(DeepDivePalette.body)
                     .multilineTextAlignment(.center).lineSpacing(3 * s).padding(.top, 14).frame(maxWidth: 320)
                     .opacity(sujudHolding ? 0.5 : 1)
                     .reveal(show, 0.3, reduce: reduceMotion)
@@ -1543,14 +1553,14 @@ struct DeepDiveView: View {
                     .font(.system(size: sujudAtBottom ? 12 : 10.5, weight: .semibold))
                     .tracking(sujudAtBottom ? 4 : 3)
                     .foregroundColor(sujudAtBottom ? DeepDivePalette.goldBright : DeepDivePalette.gold)
-                    .shadow(color: sujudAtBottom ? DeepDivePalette.goldBright.opacity(0.4) : .clear, radius: 12)
+                    .shadow(color: sujudAtBottom ? DeepDivePalette.glow.opacity(0.4) : .clear, radius: 12)
                     .padding(.top, 22)
                     .reveal(show, 0.6, reduce: reduceMotion)
             }
         }
         .background {
             if sujudDone {
-                RadialGradient(colors: [DeepDivePalette.goldBright.opacity(0.10), .clear],
+                RadialGradient(colors: [DeepDivePalette.glow.opacity(0.10), .clear],
                                center: .center, startRadius: 10, endRadius: 280)
                     .allowsHitTesting(false)
             }
@@ -1581,7 +1591,7 @@ struct DeepDiveView: View {
                 .offset(y: 64)
             Circle().fill(DeepDivePalette.goldBright)
                 .frame(width: sujudAtBottom ? 20 : 12, height: sujudAtBottom ? 20 : 12)
-                .shadow(color: DeepDivePalette.goldBright.opacity(0.8), radius: sujudAtBottom ? 22 : 12)
+                .shadow(color: DeepDivePalette.glow.opacity(0.8), radius: sujudAtBottom ? 22 : 12)
                 .offset(y: sujudHolding || sujudAtBottom ? 54 : -54)
                 .animation(reduceMotion ? nil :
                             (sujudHolding ? .linear(duration: sujudSinkDuration) : .easeOut(duration: 0.3)),
@@ -1644,7 +1654,7 @@ struct DeepDiveView: View {
                 Text(arabic).font(EmType.arabic(26 * s, bold: true)).foregroundColor(DeepDivePalette.goldBright)
                     .multilineTextAlignment(.center).lineSpacing(10 * s)
                     .environment(\.layoutDirection, .rightToLeft)
-                    .shadow(color: DeepDivePalette.goldBright.opacity(0.35), radius: 22)
+                    .shadow(color: DeepDivePalette.glow.opacity(0.35), radius: 22)
                 Text(translation).font(EmType.serifItalic(21 * s)).foregroundColor(DeepDivePalette.cream)
                     .multilineTextAlignment(.center).lineSpacing(4 * s).padding(.top, 16).frame(maxWidth: 340)
                 Text(reference.uppercased()).font(.system(size: 11, weight: .semibold)).tracking(2)
@@ -1663,7 +1673,7 @@ struct DeepDiveView: View {
                     .animation(reduceMotion ? nil : .easeInOut(duration: 0.4), value: salawatLit)
                     .reveal(show, 0.15, reduce: reduceMotion)
                 if salawatLit == 0 {
-                    Text(subline).font(EmType.serifItalic(16 * s)).foregroundColor(Color(white: 0.72))
+                    Text(subline).font(EmType.serifItalic(16 * s)).foregroundColor(DeepDivePalette.body)
                         .multilineTextAlignment(.center).lineSpacing(3 * s).padding(.top, 14).frame(maxWidth: 320)
                         .reveal(show, 0.3, reduce: reduceMotion)
                 }
@@ -1674,14 +1684,14 @@ struct DeepDiveView: View {
                     .font(.system(size: salawatLit == salawatLights.count - 1 ? 12 : 10.5, weight: .semibold))
                     .tracking(salawatLit == salawatLights.count - 1 ? 4 : 3)
                     .foregroundColor(salawatLit == salawatLights.count - 1 ? DeepDivePalette.goldBright : DeepDivePalette.gold)
-                    .shadow(color: salawatLit == salawatLights.count - 1 ? DeepDivePalette.goldBright.opacity(0.4) : .clear, radius: 12)
+                    .shadow(color: salawatLit == salawatLights.count - 1 ? DeepDivePalette.glow.opacity(0.4) : .clear, radius: 12)
                     .padding(.top, 16)
                     .reveal(show, 0.6, reduce: reduceMotion)
             }
         }
         .background {
             if salawatDone {
-                RadialGradient(colors: [DeepDivePalette.goldBright.opacity(0.10), .clear],
+                RadialGradient(colors: [DeepDivePalette.glow.opacity(0.10), .clear],
                                center: .center, startRadius: 10, endRadius: 280)
                     .allowsHitTesting(false)
             }
@@ -1698,7 +1708,7 @@ struct DeepDiveView: View {
                 if salawatDone {
                     SalawatArc()
                         .stroke(DeepDivePalette.goldBright.opacity(0.55), lineWidth: 1.5)
-                        .shadow(color: DeepDivePalette.goldBright.opacity(0.5), radius: 14)
+                        .shadow(color: DeepDivePalette.glow.opacity(0.5), radius: 14)
                 }
                 ForEach(salawatLights) { light in
                     salawatDot(light)
@@ -1732,7 +1742,7 @@ struct DeepDiveView: View {
                 if isLit {
                     Circle().fill(DeepDivePalette.goldBright)
                         .frame(width: 12, height: 12)
-                        .shadow(color: DeepDivePalette.goldBright.opacity(0.8), radius: 12)
+                        .shadow(color: DeepDivePalette.glow.opacity(0.8), radius: 12)
                 } else {
                     Circle().stroke(DeepDivePalette.goldBright.opacity(0.25), lineWidth: 1)
                         .background(Circle().fill(DeepDivePalette.goldBright.opacity(0.08)).clipShape(Circle()))
@@ -1770,16 +1780,16 @@ struct DeepDiveView: View {
                 .foregroundColor(DeepDivePalette.gold).padding(.bottom, 22)
                 .multilineTextAlignment(.leading)
                 .reveal(show, reduce: reduceMotion)
-            Text(intro).font(EmType.serifItalic(16 * s)).foregroundColor(Color(white: 0.72))
+            Text(intro).font(EmType.serifItalic(16 * s)).foregroundColor(DeepDivePalette.body)
                 .multilineTextAlignment(.center).lineSpacing(3 * s).frame(maxWidth: 340)
                 .reveal(show, 0.15, reduce: reduceMotion)
             Text(arabic).font(EmType.arabic(24 * s)).foregroundColor(DeepDivePalette.cream)
                 .multilineTextAlignment(.center).lineSpacing(14 * s).environment(\.layoutDirection, .rightToLeft)
-                .padding(.top, 26).shadow(color: DeepDivePalette.goldBright.opacity(0.14), radius: 20)
+                .padding(.top, 26).shadow(color: DeepDivePalette.glow.opacity(0.14), radius: 20)
                 .reveal(show, 0.38, reduce: reduceMotion)
             DuaListenButton(arabic: arabic).padding(.top, 18).reveal(show, 0.5, reduce: reduceMotion)
             if !translation.isEmpty {
-                Text(translation).font(EmType.serifItalic(19 * s)).foregroundColor(Color(white: 0.8))
+                Text(translation).font(EmType.serifItalic(19 * s)).foregroundColor(DeepDivePalette.bodyStrong)
                     .multilineTextAlignment(.center).lineSpacing(4 * s).padding(.top, 22).frame(maxWidth: 400)
                     .reveal(show, 0.72, reduce: reduceMotion)
             }
@@ -1803,7 +1813,7 @@ struct DeepDiveView: View {
             } label: {
                 VStack(spacing: 8) {
                     Text("آمِين").font(EmType.arabic(34)).foregroundColor(DeepDivePalette.goldBright)
-                        .shadow(color: DeepDivePalette.goldBright.opacity(0.2), radius: 20)
+                        .shadow(color: DeepDivePalette.glow.opacity(0.2), radius: 20)
                     Text("Tap to say Amin").font(.system(size: 10.5, weight: .medium)).tracking(3)
                         .foregroundColor(DeepDivePalette.gold).opacity(0.7)
                 }
@@ -1849,7 +1859,7 @@ struct DeepDiveView: View {
         VStack(spacing: 0) {
             tagLabel(tag, show).padding(.bottom, 26)
             Text(titleAr).font(EmType.arabic(56)).foregroundColor(DeepDivePalette.goldBright)
-                .shadow(color: DeepDivePalette.goldBright.opacity(0.2), radius: 20)
+                .shadow(color: DeepDivePalette.glow.opacity(0.2), radius: 20)
                 .reveal(show, 0.2, reduce: reduceMotion)
             Text(essence).font(EmType.serifItalic(20 * s)).foregroundColor(DeepDivePalette.cream)
                 .multilineTextAlignment(.center).lineSpacing(5 * s).padding(.top, 20).frame(maxWidth: 340)
@@ -1866,7 +1876,7 @@ struct DeepDiveView: View {
                             .foregroundColor(Color(red: 0.12, green: 0.09, blue: 0.03))
                             .padding(.horizontal, 26).padding(.vertical, 13)
                             .background(Capsule().fill(
-                                LinearGradient(colors: [DeepDivePalette.gold, DeepDivePalette.goldBright],
+                                LinearGradient(colors: [DeepDivePalette.ctaGold, DeepDivePalette.ctaGoldBright],
                                                startPoint: .leading, endPoint: .trailing)))
                     }
                     .buttonStyle(.plain)

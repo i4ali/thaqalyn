@@ -11,8 +11,9 @@
 //
 //  All colors come from ThemeManager, so the shelves adapt to both Sage Dawn and
 //  Midnight Emerald exactly like the full-width cards they replace on the surface.
-//  A poster's art stays dark in both themes, so what is drawn on it keeps the
-//  Midnight Emerald values.
+//  A poster's night art stays dark in both themes, so what is drawn on it keeps the
+//  Midnight Emerald values; a cover with a day version (`CoverArt`) shows that under
+//  Sage Dawn instead, and what is drawn on it takes the Sage Dawn values.
 //
 
 import SwiftUI
@@ -103,6 +104,17 @@ struct ShelfCard: View {
     /// 4:5 - the aspect every cover is composed at.
     private static let posterHeight: CGFloat = 238
 
+    /// The day version of this card's cover, when Sage Dawn is showing and the cover
+    /// has one. nil = the night art (always, under Midnight Emerald).
+    private var dayCover: String? {
+        guard colorScheme == .light, let cover = item.coverAssetName else { return nil }
+        return CoverArt.lightVariant(of: cover)
+    }
+
+    /// The scheme everything drawn on the poster uses: Midnight on the night art's
+    /// dark sky, Sage Dawn on the day art's pale one.
+    private var posterScheme: ColorScheme { dayCover == nil ? .dark : .light }
+
     var body: some View {
         // The card body and the "Listen" affordance are two independent tap targets in
         // one ZStack: SwiftUI routes a tap to the topmost button under the finger, so the
@@ -113,9 +125,9 @@ struct ShelfCard: View {
             cardButton
             if item.onListen != nil {
                 listenButton
-                    // On a poster the glyph sits on the art's dark top scrim in both
-                    // themes; on the icon face it sits on the card surface.
-                    .environment(\.colorScheme, item.coverAssetName != nil ? .dark : colorScheme)
+                    // On a poster the glyph sits on the art's own sky (dark at night,
+                    // pale by day); on the icon face it sits on the card surface.
+                    .environment(\.colorScheme, item.coverAssetName != nil ? posterScheme : colorScheme)
             }
         }
     }
@@ -162,42 +174,50 @@ struct ShelfCard: View {
     }
 
     /// The art is the whole card, and the title sits in its sky. Every cover is composed
-    /// 4:5 with an uncluttered dark top third precisely so the title can live there -
-    /// a bottom scrim would land on the subject instead (the well, the tree, the road).
+    /// 4:5 with an uncluttered top third (dark at night, pale by day) precisely so the
+    /// title can live there - a bottom scrim would land on the subject instead (the
+    /// well, the tree, the road).
     private func posterFace(_ cover: String) -> some View {
         ZStack(alignment: .topLeading) {
-            Image(cover)
+            Image(dayCover ?? cover)
                 .resizable()
                 .scaledToFill()
                 .frame(width: Self.cardWidth, height: Self.posterHeight)
                 .clipped()
 
-            // The art's own top is already dark; this only guarantees the floor across
-            // every cover, and never reaches the subject.
-            LinearGradient(colors: [Color.black.opacity(0.60),
-                                    Color.black.opacity(0.26),
-                                    .clear],
-                           startPoint: .top, endPoint: .center)
+            // The art's own top is already dark (or pale, by day); this only guarantees
+            // the floor across every cover, and never reaches the subject.
+            if dayCover == nil {
+                LinearGradient(colors: [Color.black.opacity(0.60),
+                                        Color.black.opacity(0.26),
+                                        .clear],
+                               startPoint: .top, endPoint: .center)
+            } else {
+                LinearGradient(colors: [tm.tertiaryBackground.opacity(0.65),
+                                        tm.tertiaryBackground.opacity(0.25),
+                                        .clear],
+                               startPoint: .top, endPoint: .center)
+            }
 
             VStack(alignment: .leading, spacing: 6) {
                 eyebrow
                 Text(item.title)
                     .font(EmType.serif(19, .semiBold))
-                    .foregroundColor(.white)
-                    .shadow(color: .black.opacity(0.55), radius: 8, x: 0, y: 2)
+                    .foregroundColor(dayCover == nil ? .white : tm.primaryText)
+                    .shadow(color: .black.opacity(dayCover == nil ? 0.55 : 0), radius: 8, x: 0, y: 2)
                     .fixedSize(horizontal: false, vertical: true)
             }
             .padding(14)
-            // Drawn on the art's dark sky in both themes.
-            .environment(\.colorScheme, .dark)
+            // Drawn on the art's own sky: Midnight values at night, Sage Dawn by day.
+            .environment(\.colorScheme, posterScheme)
         }
         .frame(width: Self.cardWidth, height: Self.posterHeight)
         .clipShape(RoundedRectangle(cornerRadius: Self.cornerRadius, style: .continuous))
         .overlay(
             RoundedRectangle(cornerRadius: Self.cornerRadius, style: .continuous)
                 .stroke(item.isAvailable ? tm.accentColor.opacity(0.4) : tm.strokeColor, lineWidth: 1)
-                // The hairline frames the dark art, so it keeps its Midnight values.
-                .environment(\.colorScheme, .dark)
+                // The hairline frames the art, so it takes the art's scheme.
+                .environment(\.colorScheme, posterScheme)
         )
         // Deliberately lighter than the 0.72 the text-row cards use: a poster at 0.72
         // reads washed out, and a coming-soon cover still has to be worth wanting.

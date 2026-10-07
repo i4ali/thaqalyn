@@ -1,0 +1,646 @@
+{
+  "1": {
+    "id": "46:1",
+    "surah": 46,
+    "index": 1,
+    "range": [
+      1,
+      10
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 3,
+        "prompt": {
+          "en": "According to the essay, what does the surah open by establishing when it speaks of a 'specified term'?"
+        },
+        "options": [
+          {
+            "en": "The resurrection, the world's fixed end that its deniers ignore"
+          },
+          {
+            "en": "That the heavens and the earth will endure forever"
+          },
+          {
+            "en": "That the world was made with no purpose at all"
+          },
+          {
+            "en": "That the idols hold a real share in the heavens"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Tabatabai reads the specified term as the Day of Resurrection, the world's fixed end, so the surah opens by establishing the resurrection its deniers ignore."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads that specified term as the Day of Resurrection, the world's fixed end"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 4,
+        "prompt": {
+          "en": "\"By the Book is meant the Torah and the Gospel, and by a vestige of knowledge is meant the knowledge of the successors of the prophets.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked about the scripture before this and the vestige of knowledge, Imam al-Baqir glossed the Book as the Torah and Gospel and the vestige as the successors' knowledge."
+        },
+        "anchor": {
+          "where": "verses.4.narrations.n1",
+          "quote": "By the Book is meant the Torah and the Gospel, and by a vestige of knowledge is meant the knowledge of the successors of the prophets"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 4,
+        "prompt": {
+          "en": "Al-Tusi notes that the idolaters cannot even claim such a share in ____."
+        },
+        "options": [
+          {
+            "en": "the heavens"
+          },
+          {
+            "en": "creation"
+          },
+          {
+            "en": "the reward"
+          },
+          {
+            "en": "the Book"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "In the essay al-Tusi points out that the idolaters cannot even claim a share in creation, since they created no part of the earth or heavens."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tusi notes that the idolaters cannot even claim such a share in creation"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 9,
+        "prompt": {
+          "en": "The note on verse 9 says the verse rules out the Prophet's inborn knowledge of the unseen while leaving the knowledge God grants him by revelation."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note reads the verse as removing only the Prophet's innate knowledge of the unseen, not the knowledge God grants him through revelation, which the Quran affirms elsewhere."
+        },
+        "anchor": {
+          "where": "verses.9.note",
+          "quote": "this denies the Prophet an innate knowledge of the unseen, not the knowledge that God grants him through revelation"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 10,
+        "prompt": {
+          "en": "In the perspectives, how do the Shia commentators al-Qummi and al-Bahrani identify the 'witness from the Children of Israel'?"
+        },
+        "options": [
+          {
+            "en": "As Amir al-Mu'minin Ali"
+          },
+          {
+            "en": "As the Prophet Muhammad himself"
+          },
+          {
+            "en": "As a warner raised before the other apostles"
+          },
+          {
+            "en": "As one who recites the Lord's manifest signs"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives says the Shia commentators al-Qummi and al-Bahrani identify the witness from the Children of Israel as Amir al-Mu'minin Ali, citing Surah Hud."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Shia commentators al-Qummi and al-Bahrani identify this witness as Amir al-Mu'minin Ali"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-03T03:31:07Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-03T03:33:59Z",
+      "assembled_at": "2026-10-03T03:35:15Z"
+    }
+  },
+  "2": {
+    "id": "46:2",
+    "surah": 46,
+    "index": 2,
+    "range": [
+      11,
+      20
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 11,
+        "prompt": {
+          "en": "In the essay, what makes the faithless dismiss the message as an ancient lie?"
+        },
+        "options": [
+          {
+            "en": "The lowly believers accepted it before they did"
+          },
+          {
+            "en": "No earlier prophet had ever taught it"
+          },
+          {
+            "en": "It threatened them with resurrection after death"
+          },
+          {
+            "en": "It was revealed in a language they did not know"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The proud think a true message would have reached them, the strong and eminent, before the lowly believers; since the believers accepted it first, they conclude it cannot be good and call it an ancient lie."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "had it been anything good, they - the strong and eminent - would have reached it before the lowly believers did, so they brand it an ancient lie"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 13,
+        "prompt": {
+          "en": "\"Beware, what was ordained has come to pass, and what was decreed has arrived. I speak to you by God's promise and plea.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "This is Imam Ali's counsel to the people, where he recalls God's promise to those who say 'Our Lord is Allah' and then stand firm, that the angels descend telling them not to fear or grieve."
+        },
+        "anchor": {
+          "where": "verses.13.narrations.n1",
+          "quote": "Beware, what was ordained has come to pass, and what was decreed has arrived. I speak to you by God's promise and plea."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 15,
+        "prompt": {
+          "en": "No mother dislikes bearing a son, but she knew he would be ____; about him this verse came down."
+        },
+        "options": [
+          {
+            "en": "honoured"
+          },
+          {
+            "en": "a prophet"
+          },
+          {
+            "en": "killed"
+          },
+          {
+            "en": "taken from her"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Sadiq relates that Fatimah was averse to the pregnancy because Gabriel had foretold her community would kill the son she bore; the note reads her aversion as grief over Husayn's martyrdom."
+        },
+        "anchor": {
+          "where": "verses.15.narrations.n2",
+          "quote": "No mother dislikes bearing a son, but she knew he would be killed; about him this verse came down."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 20,
+        "prompt": {
+          "en": "How does the commentary gloss 'you exhausted your good things' said to the faithless at the Fire?"
+        },
+        "options": [
+          {
+            "en": "The years God gave them to live"
+          },
+          {
+            "en": "The wealth they withheld from the poor"
+          },
+          {
+            "en": "The idols and false gods they served"
+          },
+          {
+            "en": "Their eating, drinking, clothing and riding"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The note reads 'you exhausted your good things' as the worldly comforts the faithless used up and enjoyed - their eating, drinking, clothing and riding - for which they now face a humiliating punishment."
+        },
+        "anchor": {
+          "where": "verses.20.note",
+          "quote": "glosses 'you exhausted your good things' as eating, drinking, clothing and riding"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 17,
+        "prompt": {
+          "en": "Sunni commentators read the scornful son of verse 17 as one specific man rather than any impious, resurrection-denying son."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. Sunni commentators reject pinning verse 17 on one specific man; the passage says they read it instead as a general portrait of any impious, resurrection-denying son."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "They read the verse instead as a general portrait of any impious, resurrection-denying son."
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-03T03:32:47Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-03T03:34:06Z",
+      "assembled_at": "2026-10-03T03:35:15Z"
+    }
+  },
+  "3": {
+    "id": "46:3",
+    "surah": 46,
+    "index": 3,
+    "range": [
+      21,
+      26
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 21,
+        "prompt": {
+          "en": "According to the note, how do commentators read the tremendous day Hud warns his people about?"
+        },
+        "options": [
+          {
+            "en": "They differ: Ad's worldly ruin, or the Day of Resurrection"
+          },
+          {
+            "en": "All agree it means the Day of Resurrection"
+          },
+          {
+            "en": "All agree it means Ad's ruin in this world"
+          },
+          {
+            "en": "All agree it means a coming famine"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The verse-21 note says commentators split on the tremendous day: one reading takes it as Ad's destruction in this world, the other as the Day of Resurrection."
+        },
+        "anchor": {
+          "where": "verses.21.note",
+          "quote": "Commentators differ on the tremendous day Hud names: al-Mizan reads it as the day of Ad's destruction in this world, while al-Tibyan reads it as the Day of Resurrection"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 21,
+        "prompt": {
+          "en": "\"That is the land of al-Ahqaf, the people of Ad, whom Allah destroyed with the screaming wind.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Hadi"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "When the split rock at al-Mutawakkil's well loosed a deadly cold wind, Imam al-Hadi identified the place as the land of al-Ahqaf, where God destroyed the people of Ad."
+        },
+        "anchor": {
+          "where": "verses.21.narrations.n1",
+          "quote": "That is the land of al-Ahqaf, the people of Ad, whom Allah destroyed with the screaming wind"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 22,
+        "prompt": {
+          "en": "The essay says Hud's people met his warning with scorn, daring him to bring on the punishment he threatened if he was truthful."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reports the people answered with scorn, telling Hud to bring the punishment he threatened if he was truthful, rather than heeding his warning."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "His people answered with scorn: had he come to turn them from their gods? Then let him bring the punishment he threatened, if he was truthful."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 24,
+        "prompt": {
+          "en": "Their land had been fertile until God held back the rain for ____, and still they would not believe."
+        },
+        "options": [
+          {
+            "en": "three years"
+          },
+          {
+            "en": "forty days"
+          },
+          {
+            "en": "seven years"
+          },
+          {
+            "en": "twelve years"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay notes Ad's land was fertile until God withheld rain for seven years, and even that drought did not bring them to belief before the wind struck."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Their land had been fertile until God held back the rain for seven years, and still they would not believe"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 26,
+        "prompt": {
+          "en": "According to the essay's close, what does the final verse remind the Quraysh about the people of Ad?"
+        },
+        "options": [
+          {
+            "en": "They kept faith until the wind came"
+          },
+          {
+            "en": "Their hearing and sight had saved them"
+          },
+          {
+            "en": "They were weaker than the Quraysh in every way"
+          },
+          {
+            "en": "They had strength, long life and wealth the Quraysh lack"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay closes by noting the final verse tells the Quraysh that Ad had bodily strength, long life and wealth they lack, yet those gifts and their senses saved them nothing once they denied God's signs."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Ad had been given bodily strength, long life and wealth the Quraysh were never given, yet their hearing, sight and hearts availed them nothing once they denied the signs of God"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-03T03:33:43Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-03T03:34:59Z",
+      "assembled_at": "2026-10-03T03:35:15Z"
+    }
+  },
+  "4": {
+    "id": "46:4",
+    "surah": 46,
+    "index": 4,
+    "range": [
+      27,
+      35
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 27,
+        "prompt": {
+          "en": "The note on verse 27 identifies the ruined towns around Mecca as the lands of which peoples?"
+        },
+        "options": [
+          {
+            "en": "Ad, Salih's people, and Lot's people"
+          },
+          {
+            "en": "Pharaoh's people, Midian, and the people of Noah"
+          },
+          {
+            "en": "The people of Saba, Tubba, and Korah"
+          },
+          {
+            "en": "Midian, the people of the Ditch, and the Elephant"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note reads the destroyed towns around Mecca as the lands of Ad, of Salih's people, and of Lot's people, the ruined nations the verse recalls."
+        },
+        "anchor": {
+          "where": "verses.27.note",
+          "quote": "the lands of Ad, of Salih's people, and of Lot's people"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 29,
+        "prompt": {
+          "en": "\"The demons were made subject to Solomon while they persisted in their disbelief, but they were made subject to Muhammad's prophethood through faith.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "The Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam Ali, answering a Jewish questioner, explained that the demons served Solomon in disbelief but served Muhammad through faith, and that nine jinn nobles came to him."
+        },
+        "anchor": {
+          "where": "verses.29.narrations.n1",
+          "quote": "The demons were made subject to Solomon while they persisted in their disbelief, but they were made subject to Muhammad's prophethood through faith."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 29,
+        "prompt": {
+          "en": "According to the essay, where was the Prophet keeping vigil with the Quran when a company of jinn stopped to listen?"
+        },
+        "options": [
+          {
+            "en": "At the market of Ukaz"
+          },
+          {
+            "en": "In the cave of Hira"
+          },
+          {
+            "en": "In the valley of Majanna"
+          },
+          {
+            "en": "On the road to Taif"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says the Prophet was keeping night vigil with the Quran in the valley of Majanna, returning from Ukaz, when the jinn passed and stopped to listen."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the Prophet kept vigil with the Quran at night in the valley of Majanna, and a company of jinn passed and stopped to listen"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 33,
+        "prompt": {
+          "en": "Al-Qummi reads this as God's argument against the ____, who denied that He could raise the dead."
+        },
+        "options": [
+          {
+            "en": "idolaters"
+          },
+          {
+            "en": "philosophers"
+          },
+          {
+            "en": "hypocrites"
+          },
+          {
+            "en": "materialists"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The note on verse 33 glosses the verse about reviving the dead as God's argument against the materialists, who denied that He had the power to raise the dead."
+        },
+        "anchor": {
+          "where": "verses.33.note",
+          "quote": "Al-Qummi reads this as God's argument against the materialists, who denied that He could raise the dead"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 35,
+        "prompt": {
+          "en": "According to the passage, the Shia commentary restricts the resolute messengers to five prophets who all followed one and the same law."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The perspectives say the Shia reading restricts the resolute to five who each brought a new law, not one shared law: Noah, Abraham, Moses, Jesus and Muhammad."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "restricts the resolute to five who each brought a new law: Noah, Abraham, Moses, Jesus and Muhammad"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-03T03:32:08Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-03T03:33:20Z",
+      "assembled_at": "2026-10-03T03:35:15Z"
+    }
+  }
+}

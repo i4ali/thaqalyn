@@ -124,8 +124,7 @@ private struct SeasonSpotlightHero: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            // The season's TodayHero art crowns the card - the same band the
-            // Today tab will greet the user with when the season arrives.
+            // The season's TodayHero art crowns the card.
             Image(heroAsset)
                 .resizable()
                 .scaledToFill()
@@ -192,8 +191,8 @@ private struct SeasonSpotlightHero: View {
         .animation(.easeOut(duration: 0.5).delay(0.1), value: isVisible)
     }
 
-    /// The TodayHero band for this season (same windows as `ReminderSeason`);
-    /// the everyday band backstops any future season without art.
+    /// The TodayHero band for this season; the everyday band backstops any
+    /// future season without art.
     private var heroAsset: String {
         switch descriptor.id {
         case "ramadan":   return "TodayHeroRamadan"

@@ -1,0 +1,646 @@
+{
+  "1": {
+    "id": "57:1",
+    "surah": 57,
+    "index": 1,
+    "range": [
+      1,
+      10
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 1,
+        "prompt": {
+          "en": "According to the passage, creation's glorifying of God is genuine speech, not merely the silent testimony that created things bear to their Maker."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reports Tabatabai's view that the creatures' glorification is actual speech, not merely the wordless witness that made things give to their Maker, so the statement matches the passage."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "this glorifying is real speech, not only the silent witness that created things bear to their Maker"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 3,
+        "prompt": {
+          "en": "According to the narration on verse 3, why is God called the Manifest?"
+        },
+        "options": [
+          {
+            "en": "Because He overpowers and prevails over all things"
+          },
+          {
+            "en": "Because He rose over things by mounting above them"
+          },
+          {
+            "en": "Because He sank into things and filled them"
+          },
+          {
+            "en": "Because He knows only what is outward"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration says God is the Manifest not by rising or sitting above things, but by overpowering and prevailing over them, so dominance, not position, is meant."
+        },
+        "anchor": {
+          "where": "verses.3.narrations.n2",
+          "quote": "it is not that He rose over things by mounting or sitting above them, but by His overpowering and prevailing over them"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 4,
+        "prompt": {
+          "en": "\"On Sunday and Monday He created the earths, on Tuesday their provisions, on Wednesday and Thursday the heavens, and on Friday their provisions.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "This is Imam al-Sadiq's narration, which lays out creation day by day: the earths on Sunday and Monday, the heavens on Wednesday and Thursday, and provisions on Tuesday and Friday."
+        },
+        "anchor": {
+          "where": "verses.4.narrations.n4",
+          "quote": "On Sunday and Monday He created the earths, on Tuesday their provisions, on Wednesday and Thursday the heavens, and on Friday their provisions"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 7,
+        "prompt": {
+          "en": "The address, Tabatabai says, is to the believers, that they make their faith ____."
+        },
+        "options": [
+          {
+            "en": "stay concealed"
+          },
+          {
+            "en": "cost them nothing"
+          },
+          {
+            "en": "bear its fruit"
+          },
+          {
+            "en": "remain mere words"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Tabatabai reads the command as addressed to the believers so that their faith produces works; faith must bear its fruit through the spending the surah urges."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The address, Tabatabai says, is to the believers, that they make their faith bear its fruit"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 10,
+        "prompt": {
+          "en": "According to the perspectives, what do the Sunni and Shia readings of verse 10 agree on, even while differing over its reference?"
+        },
+        "options": [
+          {
+            "en": "It makes earlier and later givers equal in rank"
+          },
+          {
+            "en": "It promises its reward only to the earliest givers"
+          },
+          {
+            "en": "It ranks those who spent and fought before the victory higher"
+          },
+          {
+            "en": "It assigns the heritage to those who spent first"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The perspectives note that both schools agree the verse ranks those who spent and fought before the victory above later givers, and differ only over whom that reference points to, not over the ranking itself."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Verse 10 ranks those who spent and fought before the victory above those who came later, and the schools read its reference differently"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:45:42Z",
+      "review_attempts": 2,
+      "reviewed_at": "2026-10-06T12:46:54Z",
+      "assembled_at": "2026-10-06T12:58:13Z"
+    }
+  },
+  "2": {
+    "id": "57:2",
+    "surah": 57,
+    "index": 2,
+    "range": [
+      11,
+      19
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 11,
+        "prompt": {
+          "en": "According to the essay, what does Tabatabai take the whole good-loan section to be an emphatic call to do?"
+        },
+        "options": [
+          {
+            "en": "Spend in Allah's way, above all in war"
+          },
+          {
+            "en": "Revive the dead earth with rain"
+          },
+          {
+            "en": "Warn the believers against the people of the Book"
+          },
+          {
+            "en": "Mourn the hypocrites overtaken by darkness"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Tabatabai reads the whole good-loan section as an emphatic call to spend in Allah's way, above all in war."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads the whole section as an emphatic call to spend in Allah's way, above all in war"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 12,
+        "prompt": {
+          "en": "\"The imams of the believers, on the Day of Resurrection, race before the believers and on their right until they settle them in the dwellings of the people of Paradise.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Kazim"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked about the light racing before the faithful, al-Sadiq said the imams of the believers race ahead of them on the Day of Resurrection and settle them in the dwellings of the people of Paradise."
+        },
+        "anchor": {
+          "where": "verses.12.narrations.n2",
+          "quote": "the imams of the believers, on the Day of Resurrection, race before the believers and on their right until they settle them in the dwellings of the people of Paradise"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 13,
+        "prompt": {
+          "en": "In the essay, whom does Tabatabai take the wall between the two camps to enclose?"
+        },
+        "options": [
+          {
+            "en": "The hypocrites"
+          },
+          {
+            "en": "The people of the Book"
+          },
+          {
+            "en": "The believers"
+          },
+          {
+            "en": "The prophets"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says Tabatabai takes the wall to enclose the believers, with mercy on their side and punishment on the hypocrites' side."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "A wall is raised between the two camps, which he takes to enclose the believers, mercy on their side and punishment on the hypocrites'"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 18,
+        "prompt": {
+          "en": "On the gate of Paradise is written: the loan is ____ and charity is tenfold."
+        },
+        "options": [
+          {
+            "en": "tenfold"
+          },
+          {
+            "en": "sevenfold"
+          },
+          {
+            "en": "twofold"
+          },
+          {
+            "en": "eighteenfold"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The narration reads the gate of Paradise as inscribed that the loan is eighteenfold while charity is tenfold, because a loan is given only to one in need."
+        },
+        "anchor": {
+          "where": "verses.18.narrations.n10",
+          "quote": "On the gate of Paradise is written: the loan is eighteenfold and charity is tenfold"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 19,
+        "prompt": {
+          "en": "According to the passage, al-Husayn held that only their shia who die as martyrs in battle are witnesses with their Lord."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The passage says al-Husayn held every one of their shia, even those who die on their beds, is a truthful one and a witness; were it only the slain, the witnesses would be few."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "al-Husayn held that every one of their shia who dies on his bed is a truthful one and a witness"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:55:21Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:57:56Z",
+      "assembled_at": "2026-10-06T12:58:13Z"
+    }
+  },
+  "3": {
+    "id": "57:3",
+    "surah": 57,
+    "index": 3,
+    "range": [
+      20,
+      25
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 20,
+        "prompt": {
+          "en": "According to the essay, the five traits of worldly life are said to track what?"
+        },
+        "options": [
+          {
+            "en": "The stages of a person's life"
+          },
+          {
+            "en": "The five daily prayers"
+          },
+          {
+            "en": "The five pillars of faith"
+          },
+          {
+            "en": "The five stages of the Hereafter"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay relays from Shaykh al-Bahai, via Tabatabai, that the five traits run from a child's play to an old man's hoarding, tracking the stages of a lifetime."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "these five traits track the stages of a person's life, from a child's play to an old man's hoarding of wealth and offspring"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 21,
+        "prompt": {
+          "en": "Tabatabai notes that this call to race asks more than the earlier call to merely ____."
+        },
+        "options": [
+          {
+            "en": "walk"
+          },
+          {
+            "en": "wait"
+          },
+          {
+            "en": "hasten"
+          },
+          {
+            "en": "follow"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says 'take the lead' is a call to race, which Tabatabai reads as demanding more than the earlier Quranic call merely to hasten toward forgiveness."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai notes that this call to race asks more than the earlier call to merely hasten"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 23,
+        "prompt": {
+          "en": "A narration teaches that the whole of asceticism lies between the Quran's words about not grieving for what escapes you and not boasting over what comes your way."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration teaches that asceticism is confined between two Quranic phrases: whoever neither grieves over what is past nor rejoices over what is to come has grasped it by both ends."
+        },
+        "anchor": {
+          "where": "verses.23.narrations.n5",
+          "quote": "The whole of asceticism is confined between two phrases of the Quran."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 25,
+        "prompt": {
+          "en": "\"And We sent down iron, in which there is great might\" - its being sent down means His creating it. Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Glossing the final verse, Imam Ali explained that the iron's being 'sent down' means God created it, not that it descended from the sky."
+        },
+        "anchor": {
+          "where": "verses.25.narrations.n8",
+          "quote": "'And We sent down iron, in which there is great might' - its being sent down means His creating it."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 25,
+        "prompt": {
+          "en": "According to the perspectives, what inner reading do the Shia narrations add to the verse about the messengers and the Balance?"
+        },
+        "options": [
+          {
+            "en": "That the angels weigh human deeds with the Balance"
+          },
+          {
+            "en": "That the Balance stands for the Torah's commandments"
+          },
+          {
+            "en": "That the Balance is a sign reserved for the Hereafter"
+          },
+          {
+            "en": "That the Imams themselves are the Balance keeping mankind upright"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The perspectives note that, beyond the plain sense, the Shia narrations add an inner reading: Imam al-Baqir teaches the Imams themselves are the Balance by which mankind is kept upright."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The Shia narrations add an inner reading: al-Baqir teaches that the Imams themselves are the Balance by which mankind is kept upright"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:40:24Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:41:27Z",
+      "assembled_at": "2026-10-06T12:58:13Z"
+    }
+  },
+  "4": {
+    "id": "57:4",
+    "surah": 57,
+    "index": 4,
+    "range": [
+      26,
+      29
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 26,
+        "prompt": {
+          "en": "\"So the inheritance of prophethood and the Book became the guided ones', not the transgressors'.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Replying to the scholars, Imam al-Rida argued that inheritance and purity fell only to the chosen, guided ones, so prophethood and the Book passed to the guided and not to the transgressors."
+        },
+        "anchor": {
+          "where": "verses.26.narrations.n1",
+          "quote": "So the inheritance of prophethood and the Book became the guided ones', not the transgressors'."
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 27,
+        "prompt": {
+          "en": "In the narration, what did Abu al-Hasan identify the innovated monasticism with?"
+        },
+        "options": [
+          {
+            "en": "The night prayer"
+          },
+          {
+            "en": "Seeking God's pleasure"
+          },
+          {
+            "en": "The Evangel given to Jesus"
+          },
+          {
+            "en": "Kindness and mercy in the heart"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked about the monasticism they innovated, which God had not prescribed for them, Abu al-Hasan said it was the night prayer."
+        },
+        "anchor": {
+          "where": "verses.27.narrations.n2",
+          "quote": "Concerning Allah's words, 'and monasticism they innovated, which We had not prescribed for them, only seeking Allah's pleasure,' he said: the night prayer"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 27,
+        "prompt": {
+          "en": "The faithful among them were still ____, though many turned transgressors."
+        },
+        "options": [
+          {
+            "en": "punished"
+          },
+          {
+            "en": "rewarded"
+          },
+          {
+            "en": "condemned"
+          },
+          {
+            "en": "praised"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Despite innovating a monasticism they failed to observe, the faithful among Jesus' followers were still rewarded, while many of the others turned transgressors."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The faithful among them were still rewarded, though many turned transgressors."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 28,
+        "prompt": {
+          "en": "According to the perspectives, what further sense do the Shia reports give the double share and the light?"
+        },
+        "options": [
+          {
+            "en": "Noah and Abraham, and the Book in their line"
+          },
+          {
+            "en": "The Evangel, and the kindness placed in hearts"
+          },
+          {
+            "en": "The monasticism, and seeking God's pleasure"
+          },
+          {
+            "en": "al-Hasan and al-Husayn, and the Imam one follows"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The perspectives say the Shia reports add a further sense beyond the earlier one: the double share is al-Hasan and al-Husayn, and the light is the Imam one follows."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the double share is al-Hasan and al-Husayn, and the light is the Imam one follows, named in one report as Ali"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 29,
+        "prompt": {
+          "en": "According to the passage, the People of the Book hold a rightful claim on God's grace."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The passage's close says the People of the Book hold no claim on God's grace, which rests in His hand alone, to be granted to whomever He wishes."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the People of the Book may know they hold no claim on God's grace, which rests in His hand alone"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:46:30Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:47:40Z",
+      "assembled_at": "2026-10-06T12:58:13Z"
+    }
+  }
+}

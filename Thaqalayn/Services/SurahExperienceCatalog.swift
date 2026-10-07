@@ -226,6 +226,18 @@ struct SurahExperienceDescriptor: Identifiable {
             coverAssetName: "NahlCover"
         ),
         SurahExperienceDescriptor(
+            id: "surah-isra",
+            surahNumber: 17,
+            title: LocalizedText(en: "Surah al-Isra", ur: "سورۂ اسراء", ar: "سورة الإسراء"),
+            titleAr: "الْإِسْرَاء",
+            sfSymbol: "sparkles",
+            subtitle: LocalizedText(en: "The Night Journey - how does a servant rise?",
+                                    ur: "سفرِ شب - بندہ کیسے بلند ہوتا ہے؟",
+                                    ar: "الإسراء - كيف يرتقي العبد؟"),
+            available: true, dive: .surahIsra,
+            coverAssetName: "IsraCover"
+        ),
+        SurahExperienceDescriptor(
             id: "surah-yasin",
             surahNumber: 36,
             title: LocalizedText(en: "Surah Yasin", ur: "سورۂ یٰسین", ar: "سورة يس"),

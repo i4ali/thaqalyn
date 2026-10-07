@@ -1,0 +1,543 @@
+{
+  "1": {
+    "id": "78:1",
+    "surah": 78,
+    "index": 1,
+    "range": [
+      1,
+      30
+    ],
+    "title": {
+      "en": "The Great Tiding"
+    },
+    "essay": {
+      "en": "The surah opens on a question overheard among the Meccans: what is it they keep asking one another about? The answer comes at once - the Great Tiding, the one they cannot agree on. Commentators take this tiding to be the resurrection, the single theme the surah will argue [1], though some read it as the Qur'an itself [3]. al-Tibyan relates an occasion some give for the verse: the Prophet would tell Quraysh of the vanished nations and warn them, they mocked him, then gathered and begged to hear more, and the verse came down [5]. Twice the surah answers them, 'No indeed! Soon they will know,' a rebuke and a threat, repeated to drive it home [3].\n\nThe surah then builds its case from the world in front of them: the earth spread as a resting place, the mountains driven in as stakes, mankind made in pairs, sleep given for rest, night for a covering, day for livelihood, seven firm heavens above, a blazing lamp, and rain wrung from the clouds to raise grain, plants and dense gardens. al-Mizan reads these not as mere proof that God can raise the dead, but that He surely will: an ordered, purposeful creation cannot end in nothing, so a lasting abode of reckoning must follow [1].\n\nFrom here the surah names the Day of Judgement as the appointed tryst: the Trumpet blown, people arriving in crowds, the sky torn open into gates, the mountains set moving until they are a mirage [2]. Hell lies in wait as the rebels' resort, where they stay for ages with no coolness and no drink but boiling water and pus, a requital that fits exactly what they did, for they expected no reckoning and called the signs lies, while everything stands counted in a Book [2]. It closes by cutting off every hope: 'Taste! We shall increase you in nothing but punishment' [2]."
+    },
+    "verses": [
+      {
+        "verse": 2,
+        "heading": {
+          "en": "What the Tiding is"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "فِي قَوْلِهِ تَعَالَى عَمَّ يَتَساءَلُونَ عَنِ النَّبَإِ الْعَظِيمِ قَالَ النَّبَأُ الْعَظِيمُ الْوَلايَةُ",
+            "chain": "al-Husayn ibn Muhammad, from Mu'alla ibn Muhammad, from Muhammad ibn Urama and Muhammad ibn Abdallah, from Ali ibn Hassan, from Abdallah ibn Kathir, from Abu Abdillah",
+            "text": {
+              "en": "Concerning God's words, 'What are they questioning each other about? About the Great Tiding' - he said: the Great Tiding is the Wilaya, the divinely appointed guardianship."
+            },
+            "source": "s55"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": "Abu Hamza",
+            "arabic": "هِيَ فِي أَمِيرِ الْمُؤْمِنِينَ صَلَوَاتُ الله عَلَيْهِ كَانَ أَمِيرُ الْمُؤْمِنِينَ صَلَوَاتُ الله عَلَيْهِ يَقُولُ مَا لله عَزَّ وَجَلَّ آيَةٌ هِيَ أَكْبَرُ مِنِّي وَلا لله مِنْ نَبَإٍ أَعْظَمُ مِنِّي",
+            "chain": "Muhammad ibn Yahya, from Ahmad ibn Muhammad, from Muhammad ibn Abi Umayr or another, from Muhammad ibn al-Fudayl, from Abu Hamza, from Abu Ja'far",
+            "text": {
+              "en": "It is about Amir al-Muminin. Amir al-Muminin used to say: God has no sign greater than me, and God has no tiding greater than me."
+            },
+            "source": "s57"
+          }
+        ]
+      },
+      {
+        "verse": 13,
+        "heading": {
+          "en": "A radiant lamp"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "الشمس جزء من سبعين جزءا من نور الكرسي، و الكرسي جزء من سبعين جزءا من نور العرش، و العرش جزء من سبعين جزءا من نور الحجاب، و الحجاب جزء من سبعين جزءا من نور الستر، فإن كانوا صادقين فليملؤوا أعينهم من الشمس ليس دونها سحاب",
+            "chain": "Muhammad ibn Ya'qub, from Ahmad ibn Idris, from Muhammad ibn Abd al-Jabbar, from Safwan ibn Yahya, from Asim ibn Humayd, from Abu Abdillah",
+            "text": {
+              "en": "The sun is one part in seventy of the light of the Kursi, the Kursi one in seventy of the Throne's light, the Throne one in seventy of the Veil's, the Veil one in seventy of the Covering's. If they are truthful, let them fill their eyes with the sun when no cloud is before it."
+            },
+            "source": "s19"
+          }
+        ]
+      },
+      {
+        "verse": 23,
+        "heading": {
+          "en": "Ages in the Fire"
+        },
+        "note": {
+          "en": "The 'ages' (ahqab) are read as unbounded stretches, each following the last, not a fixed term [2]."
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": "Hamran ibn A'yan",
+            "arabic": "سألت أبا عبد الله عليه السلام عن قول الله { لابثين فيها أحقاباً لا يذوقون فيها برداً ولا شراباً إلا حميماً وغساقاً } … قال: هذه في الذين لا يخرجون من النار",
+            "chain": "Ahmad ibn Idris, from Ahmad ibn Muhammad, from al-Husayn ibn Sa'id, from al-Nadr ibn Suwayd, from Durust ibn Abi Mansur, from al-Ahwal, from Hamran ibn A'yan",
+            "text": {
+              "en": "I asked Abu Abdillah about God's words, 'to reside therein for ages, tasting neither coolness nor drink but boiling water and pus.' He said: These are about those who do not leave the Fire."
+            },
+            "source": "s16"
+          },
+          {
+            "id": "n5",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "عن الباقر عليه السلام انّه سئل عن هذه الآية فقال هذه في الذين يخرجون من النّار",
+            "chain": null,
+            "text": {
+              "en": "al-Baqir, when he was asked about this verse, said: This is about those who come out of the Fire."
+            },
+            "source": "s24"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Both traditions read the surah's core the same way: the resurrection is real, and the ordered world is its proof. They part over the Great Tiding of verse 2. Sunni commentators take it as the resurrection the Meccans denied, and hold that reading the more apparent, though Mujahid read it as the Qur'an [33]. Shia narrations allow that plain sense too, but add that in its inner meaning the Great Tiding is the wilaya of Ali, the divinely appointed guardianship [55]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on An-Naba 1 to 16",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=78&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "تتضمن السورة الإِخبار بمجيء يوم الفصل وصفته والاحتجاج على أنه حق لا ريب فيه"
+        },
+        "gloss": "The surah announces the coming of the Day of Decision, describes it, and argues that it is a truth beyond doubt."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on An-Naba 17 to 30",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=78&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "حقباً بعد حقب بلا تحديد ولا نهاية فلا تنافي الآية ما نص عليه القرآن من خلود الكفار في النار"
+        },
+        "gloss": "Age after age without limit or end, so the verse does not contradict what the Qur'an states about the disbelievers' eternity in the Fire."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naba 1 to 16",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=78&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ عن النبأ العظيم } وهو القرآن"
+        },
+        "gloss": "'About the Great Tiding' - and it is the Qur'an."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naba 1 to 16",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=78&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "كان إذا حدّث قريشاً وعرّفهم أخبار الامم السالفة ووعظهم كانوا يهزؤن بذلك … فأنزل الله تعالى { عم يتساءلون عن النبأ العظيم }"
+        },
+        "gloss": "When he would tell Quraysh the reports of the past nations and admonish them, they mocked it ... so God sent down 'What are they questioning each other about? About the Great Tiding.'"
+      },
+      {
+        "id": "s16",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naba 23 to 25",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=78&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "سألت أبا عبد الله عليه السلام عن قول الله { لابثين فيها أحقاباً … قال: هذه في الذين لا يخرجون من النار"
+        },
+        "gloss": "I asked Abu Abdillah about God's words, 'to reside therein for ages...' He said: These are about those who do not leave the Fire."
+      },
+      {
+        "id": "s19",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naba 13 to 16",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=78&tAyahNo=13&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الشمس جزء من سبعين جزءا من نور الكرسي … فإن كانوا صادقين فليملؤوا أعينهم من الشمس ليس دونها سحاب"
+        },
+        "gloss": "The sun is one part in seventy of the light of the Kursi ... and if they are truthful, let them fill their eyes with the sun when no cloud is before it."
+      },
+      {
+        "id": "s24",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naba 4 to 23",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=78&tAyahNo=4&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "عن الباقر عليه السلام انّه سئل عن هذه الآية فقال هذه في الذين يخرجون من النّار"
+        },
+        "gloss": "From al-Baqir: asked about this verse, he said it is about those who come out of the Fire."
+      },
+      {
+        "id": "s33",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on An-Naba 1 to 16",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=78&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "النبأ العظيم البعث بعد الموت. وقال مجاهد هو القرآن. والأظهر الأول"
+        },
+        "gloss": "The Great Tiding is the resurrection after death; Mujahid said it is the Qur'an; the first view is the more apparent."
+      },
+      {
+        "id": "s55",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 33, cited at An-Naba 2",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "لم يخرجه",
+          "ضعيف"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "فِي قَوْلِهِ تَعَالَى عَمَّ يَتَساءَلُونَ عَنِ النَّبَإِ الْعَظِيمِ قَالَ النَّبَأُ الْعَظِيمُ الْوَلايَةُ"
+        },
+        "gloss": "Concerning His words, 'What are they questioning each other about? About the Great Tiding' - the Great Tiding is the Wilaya, the divinely appointed guardianship."
+      },
+      {
+        "id": "s57",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 3, cited at An-Naba 2",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "مجهول",
+          "لم يخرجه"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "كَانَ أَمِيرُ الْمُؤْمِنِينَ صَلَوَاتُ الله عَلَيْهِ يَقُولُ مَا لله عَزَّ وَجَلَّ آيَةٌ هِيَ أَكْبَرُ مِنِّي وَلا لله مِنْ نَبَإٍ أَعْظَمُ مِنِّي"
+        },
+        "gloss": "Amir al-Muminin used to say: God has no sign greater than me, and God has no tiding greater than me."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:38:23Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T17:58:45Z",
+      "assembled_at": "2026-10-06T18:04:35Z"
+    }
+  },
+  "2": {
+    "id": "78:2",
+    "surah": 78,
+    "index": 2,
+    "range": [
+      31,
+      40
+    ],
+    "title": {
+      "en": "The reward of the Godwary"
+    },
+    "essay": {
+      "en": "This is the close of the surah, and it turns from the fate of the transgressors to the reward of the Godwary [1]. For them there is a triumph: a deliverance from the Fire into safety and joy, a word that holds both the winning of good and the escape from harm [1][2][3]. The verses then spell that triumph out, 'gardens and vineyards,' maidens of a like age, and 'brimming cups' filled to the brim [2]. In that place the saved hear 'neither vain talk nor lies': no idle word, and no one gives the lie to another, so every word is true and bears its fruit [2].\n\nAll of this is 'a reward and a sufficing bounty from your Lord,' a gift that is ample and enough [3]. He is 'the All-beneficent, the Lord of the heavens and the earth and whatever is between them,' whose mercy is so wide that nothing is denied it except what bars itself through its own failing [1]. Before such a Lord no creature can open an exchange: none may question His decree or object to it except by His leave [2][3].\n\nThe scene moves to the Day the Spirit and the angels 'stand in an array.' On that Day none speaks except the one the All-beneficent permits, and he says only what is true [2]. That Day, the surah affirms, is certain to come [3]; and since it is certain, whoever wishes may now take a return to his Lord by obedience, for the choice lies with him [2][3].\n\nThe surah ends in warning. The punishment it announces is near, for all that is coming is near [2]: it is the Day a person will look upon 'what his hands have sent ahead' and await its recompense [3], and the Day the faithless one, seeing what lies before him, will cry, 'I wish I were dust,' beyond reach of the reckoning [3]."
+    },
+    "verses": [
+      {
+        "verse": 31,
+        "heading": {
+          "en": "Triumph and gardens"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "أما قوله تعالى: { إِنَّ لِلْمُتَّقِينَ مَفَازاً } فهي الكرامات، و قوله تعالى: { وَكَوَاعِبَ } الفتيات النواهد.",
+            "chain": "Abi al-Jarud, from Imam al-Baqir",
+            "text": {
+              "en": "In Abi al-Jarud's report: as for 'a triumph awaits the Godwary,' it is the honors; and 'buxom maidens' are the full-breasted young women."
+            },
+            "source": "s8"
+          }
+        ]
+      },
+      {
+        "verse": 38,
+        "heading": {
+          "en": "The Spirit and the angels"
+        },
+        "note": {
+          "en": "The Spirit's identity is disputed; al-Tusi reports it is one of the greatest angels, as carried in the Shia traditions [3]."
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "الروح ملك اعظم من جبرئيل وميكائيل عليهما السلام كان مع رسول الله صلّى الله عليه وآله وهو مع الأئمّة عليهم السلام.",
+            "chain": null,
+            "text": {
+              "en": "The Spirit is an angel greater than Gabriel and Michael; he was with the Messenger of God, and he is with the Imams."
+            },
+            "source": "s11"
+          },
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "نحن و الله المأذون لنا في ذلك اليوم، و القائلون صوابا … نحمد ربنا، و نصلي على نبينا، و نشفع لشيعتنا فلا يردنا ربنا.",
+            "chain": "Ahmad ibn Muhammad ibn Khalid al-Barqi, from his father, from Sadan ibn Muslim, from Muawiya ibn Wahb, from Imam al-Sadiq",
+            "text": {
+              "en": "By God, we are the ones permitted on that Day, and the ones who speak what is right. Asked what they say, he replied: We praise our Lord, invoke blessings on our Prophet, and intercede for our Shia, and our Lord does not turn us away."
+            },
+            "source": "s9"
+          },
+          {
+            "id": "n4",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "إذا كان يوم القيامة خطف قول (لا إله إلا الله) من … قلوب العباد في الموقف إلا من أقرّ بولاية علي بن أبي طالب عليه السلام وهو قوله: { إلا من أذن له الرحمان } من أهل ولاية علي فهم الذين يؤذن لهم بقول { لا إله إلاّ الله }.",
+            "chain": "Abi al-Jarud, from Imam al-Baqir",
+            "text": {
+              "en": "On the Day of Resurrection the words 'there is no god but God' are snatched from the servants' hearts, except from one who affirmed the guardianship of Ali ibn Abi Talib. They are the ones given leave to say it, 'permitted by the All-beneficent.'"
+            },
+            "source": "s13"
+          }
+        ]
+      },
+      {
+        "verse": 40,
+        "heading": {
+          "en": "I wish I were dust"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "{ وَيَقُولُ ٱلْكَافِرُ يٰلَيْتَنِي كُنتُ تُرَاباً } يعني علويا يوالي أبا تراب.",
+            "chain": "Harun ibn Kharija, from Abu Basir, and from Said al-Samman, from Imam al-Sadiq",
+            "text": {
+              "en": "'The faithless one will say, I wish I were dust' means an Alawi, one who gives his allegiance to Abu Turab."
+            },
+            "source": "s10"
+          },
+          {
+            "id": "n6",
+            "speaker": "Ibn Abbas",
+            "addressee": null,
+            "arabic": "لأنه صاحب الأرض، و حجة الله على أهلها بعده … إذا كان يوم القيامة، و رأى الكافر ما أعد الله تبارك و تعالى لشيعة علي من الثواب و الزلفى و الكرامة، قال: يا ليتني كنت ترابا، أي من شيعة علي.",
+            "chain": "Sulayman ibn Mihran, from Abaya ibn Rib'i, from Ibn Abbas",
+            "text": {
+              "en": "Asked why the Prophet called Ali 'Abu Turab,' Ibn Abbas said: because he is the master of the earth and God's proof upon its people. And I heard the Messenger say that when the disbeliever sees what God prepared for the Shia of Ali, he says, 'I wish I were dust,' meaning of the Shia of Ali."
+            },
+            "source": "s10"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "The traditions diverge most sharply at the final verse. Shia narrations read 'I wish I were dust' not as a wish to be lifeless earth but as the disbeliever's longing to have been a turabi, a follower of Abu Turab (Ali), envying the Shia of Ali the honor God had readied for them [10]. The Sunni commentators keep the literal sense: after God judges even the beasts and bids them become dust, the faithless one wishes he too were dust, spared the reckoning [16]. The two also part on who may speak that Day: Shia reports name the Imams as those given leave to intercede for their Shia [9], where the Sunni intend the believers who professed God's oneness in the world [15]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on An-Naba 31 to 40",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=78&tAyahNo=31&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ففيه معنى النجاة والتخلص من الشر والحصول على الخير"
+        },
+        "gloss": "So it carries the sense of deliverance, escape from harm, and the winning of good."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naba 31 to 40",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=78&tAyahNo=31&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "حدائق بدل من قوله { مفازاً } بدل البعض من الكل"
+        },
+        "gloss": "'Gardens' stands in apposition to 'a triumph,' a substitution of part for the whole."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naba 31 to 40",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=78&tAyahNo=31&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فمن شاء اتخذ إلى ربه مآباً فيه دلالة على أن العباد قادرون على اتخاذ المآب وتركه"
+        },
+        "gloss": "'Let anyone who wishes take resort with his Lord' indicates that the servants have the power to take the return or to leave it."
+      },
+      {
+        "id": "s8",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naba 31 to 33",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=78&tAyahNo=31&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أما قوله تعالى: { إِنَّ لِلْمُتَّقِينَ مَفَازاً } فهي الكرامات، و قوله تعالى: { وَكَوَاعِبَ } الفتيات النواهد"
+        },
+        "gloss": "As for 'a triumph awaits the Godwary,' it is the honors; and 'buxom maidens,' the full-breasted young women."
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naba 34 to 38",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=78&tAyahNo=34&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "نحن و الله المأذون لنا في ذلك اليوم، و القائلون صوابا"
+        },
+        "gloss": "By God, we are the ones permitted on that Day, and the ones who speak what is right."
+      },
+      {
+        "id": "s10",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naba 40",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=78&tAyahNo=40&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ وَيَقُولُ ٱلْكَافِرُ يٰلَيْتَنِي كُنتُ تُرَاباً } يعني علويا يوالي أبا تراب"
+        },
+        "gloss": "'The faithless one will say, I wish I were dust' means an Alawi who gives allegiance to Abu Turab."
+      },
+      {
+        "id": "s11",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naba 31 to 38",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=78&tAyahNo=31&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الروح ملك اعظم من جبرئيل وميكائيل عليهما السلام كان مع رسول الله صلّى الله عليه وآله وهو مع الأئمّة عليهم السلام"
+        },
+        "gloss": "The Spirit is an angel greater than Gabriel and Michael; he was with the Messenger of God and is with the Imams."
+      },
+      {
+        "id": "s13",
+        "kind": "hadith",
+        "work": "Tafsir Furat al-Kufi",
+        "author": "Furat ibn Ibrahim al-Kufi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naba 38",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=45&tSoraNo=78&tAyahNo=38&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إلا من أقرّ بولاية علي بن أبي طالب عليه السلام وهو قوله: { إلا من أذن له الرحمان }"
+        },
+        "gloss": "Except one who affirmed the guardianship of Ali ibn Abi Talib; that is His words, 'except someone permitted by the All-beneficent.'"
+      },
+      {
+        "id": "s15",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on An-Naba 36 to 38",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=78&tAyahNo=36&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ إلاَّ مَنْ أذِنَ لَهُ الرَّحْمَنُ وَقالَ صَوَاباً } يقول: إلا من أذن له الربّ بشهادة أن لا إله إلا الله، وهي منتهى الصواب"
+        },
+        "gloss": "'Except someone permitted by the All-beneficent and says what is rightful': except one the Lord permits by the testimony that there is no god but God, which is the utmost of what is right."
+      },
+      {
+        "id": "s16",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on An-Naba 39 to 40",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=78&tAyahNo=39&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ويقول الكافر يومئذٍ تمنياً لما يلقى من عذاب الله الذي أعدّه لأصحابه الكافرين به: يا ليتني كنت تراباً، كالبهائم التي جُعِلت تُراباً"
+        },
+        "gloss": "And the faithless one will say that Day, longing because of the punishment he meets: 'I wish I were dust,' like the beasts that were made dust."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:30:28Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-10-06T18:04:18Z",
+      "assembled_at": "2026-10-06T18:04:35Z"
+    }
+  }
+}

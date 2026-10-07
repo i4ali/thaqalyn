@@ -51,6 +51,15 @@ enum WhatsNewCatalog {
     /// Author in any order; the manager sorts newest-first by releaseDate.
     static let all: [WhatsNewItem] = [
         WhatsNewItem(
+            id: "surahExperience-isra",
+            sfSymbol: "sparkles",
+            releaseDate: DateComponents(calendar: .current, year: 2026, month: 10, day: 3).date ?? .distantPast, // placeholder - set at ship time (later than journey-listen-urdu so this card surfaces first)
+            destination: .surahExperience("surah-isra"),
+            title: "Inside the Surah",
+            blurb: "Surah al-Isra - the Night Journey, when the Prophet ﷺ was carried higher than any human has been. Descend through a people who raised themselves high and were broken, the wing lowered to your parents, the honor Iblis resented and the station reached by night - down to what happened at the very top of the Night Journey, and why its words return every time you pray.",
+            cta: "Begin the journey"
+        ),
+        WhatsNewItem(
             id: "journey-listen-urdu",
             sfSymbol: "headphones",
             releaseDate: DateComponents(calendar: .current, year: 2026, month: 10, day: 2).date ?? .distantPast, // 9.6 (later than sage-dawn-theme so this card surfaces first)

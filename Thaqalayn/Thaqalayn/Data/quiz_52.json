@@ -1,0 +1,324 @@
+{
+  "1": {
+    "id": "52:1",
+    "surah": 52,
+    "index": 1,
+    "range": [
+      1,
+      28
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 2,
+        "prompt": {
+          "en": "In the passage, God wrote a book on a myrtle leaf and set it on His Throne two millennia before creating anything."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration from Imam al-Sadiq tells of a book God inscribed on a myrtle leaf and set upon His Throne two thousand years before creating anything, so the statement matches the passage."
+        },
+        "anchor": {
+          "where": "verses.2.narrations.n1",
+          "quote": "A book God wrote on a myrtle leaf and placed upon His Throne two thousand years before He created creation"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 4,
+        "prompt": {
+          "en": "\"God set four pillars beneath the Throne and named them al-Durah, which is the House greatly frequented, and told the angels: 'Circle it.'\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Baqir narrates that God set four pillars beneath the Throne, named them al-Durah as the House greatly frequented, and had the angels circle it."
+        },
+        "anchor": {
+          "where": "verses.4.narrations.n2",
+          "quote": "God set four pillars beneath the Throne and named them al-Durah, which is the House greatly frequented"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 7,
+        "prompt": {
+          "en": "According to the essay, what do the surah's opening oaths lead up to?"
+        },
+        "options": [
+          {
+            "en": "The certainty that the deniers' punishment will come"
+          },
+          {
+            "en": "A promise that the deniers will be forgiven"
+          },
+          {
+            "en": "That patience will lift the punishment from them"
+          },
+          {
+            "en": "A warning against swearing false oaths"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the oaths find their answer in verse seven: the Lord's punishment will surely befall and none can avert it, the certain fate of the deniers."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The oaths find their answer in verse seven: your Lord's punishment will surely befall, and none can avert it"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 21,
+        "prompt": {
+          "en": "Each person stays hostage to what he earned, though the commentators note the ____ is freed from that pledge."
+        },
+        "options": [
+          {
+            "en": "sinner"
+          },
+          {
+            "en": "disbeliever"
+          },
+          {
+            "en": "believer"
+          },
+          {
+            "en": "wrongdoer"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay notes that although every person is hostage to what he earned, the commentators say the believer alone is freed from that pledge."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Each person stays hostage to what he earned, though the commentators note the believer is freed from that pledge"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 21,
+        "prompt": {
+          "en": "According to the passage, how do both traditions read the joining of the believers' descendants in verse twenty-one?"
+        },
+        "options": [
+          {
+            "en": "The children's reward is taken from the parents' share"
+          },
+          {
+            "en": "Descendants join only if their deeds equal their parents'"
+          },
+          {
+            "en": "Only the parents enter Paradise, not their children"
+          },
+          {
+            "en": "God raises the children to their parents' rank despite lesser deeds"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The perspectives say both traditions read the verse the same way: God lifts the believers' children to their parents' rank in Paradise even when their own deeds fall short, without cutting the parents' reward."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "God raises the believers' children to their rank in Paradise, even when their deeds fall short, without reducing the parents' reward"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T00:18:01Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T00:19:05Z",
+      "assembled_at": "2026-10-06T00:25:29Z"
+    }
+  },
+  "2": {
+    "id": "52:2",
+    "surah": 52,
+    "index": 2,
+    "range": [
+      29,
+      49
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 29,
+        "prompt": {
+          "en": "How does Tabatabai read the long run of questions that follows the opening command 'So admonish'?"
+        },
+        "options": [
+          {
+            "en": "As a stripping away of every excuse the deniers could invent"
+          },
+          {
+            "en": "As sixteen blessings promised to the faithful"
+          },
+          {
+            "en": "As the Garden's rewards described one by one"
+          },
+          {
+            "en": "As praise of Quraysh's intellect"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Tabatabai reads the long run of questions and statements as stripping away every excuse the deniers could invent, sixteen in all, some aimed at the Prophet and some at the deniers themselves."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads the long run that follows as a stripping away of every excuse the deniers could invent, sixteen in all"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "trueFalse",
+        "verse": 31,
+        "prompt": {
+          "en": "The passage reads the Prophet's reply 'Wait! I too am waiting' as him patiently resigning himself to share the deniers' long wait."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay reads 'Wait! I too am waiting' not as shared patience but as a threat, that the waiting will fall against the deniers in their own ruin."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "he is told to answer, 'Wait! I too am waiting,' which Tabatabai takes as a threat that the waiting will fall against them, in their own ruin"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 33,
+        "prompt": {
+          "en": "In one of the passage's readings of verse 33, the charge 'He has improvised it' is referred to which person?"
+        },
+        "options": [
+          {
+            "en": "The family of Muhammad"
+          },
+          {
+            "en": "The leaders of Quraysh"
+          },
+          {
+            "en": "The Commander of the Faithful"
+          },
+          {
+            "en": "A soothsayer among the deniers"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "In one of the passage's two readings the verse addresses the Prophet's companions, and the charge of improvising is referred to the Commander of the Faithful, who did not speak by his own opinion."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Tafsir al-Qummi turns 'He has improvised it' toward the Prophet's companions and refers the charge to the Commander of the Faithful"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 48,
+        "prompt": {
+          "en": "'And celebrate the praise of your Lord when you rise' - the ____."
+        },
+        "options": [
+          {
+            "en": "dawn prayer"
+          },
+          {
+            "en": "night prayer"
+          },
+          {
+            "en": "noon prayer"
+          },
+          {
+            "en": "afternoon prayer"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The narration on verse 48 reads 'when you rise' as the night prayer, so the command to celebrate the Lord's praise at rising points to praying in the night."
+        },
+        "anchor": {
+          "where": "verses.48.narrations.n5",
+          "quote": "'And celebrate the praise of your Lord when you rise' - the night prayer."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "whoSaid",
+        "verse": 49,
+        "prompt": {
+          "en": "\"The receding of prostration is four rak'as after the sunset prayer, and the receding of the stars is two rak'as before the dawn prayer.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked about the receding of prostration and of the stars in verse 49, Imam al-Rida identified them as four rak'as after the sunset prayer and two before the dawn prayer."
+        },
+        "anchor": {
+          "where": "verses.49.narrations.n6",
+          "quote": "The receding of prostration is four rak'as after the sunset prayer, and the receding of the stars is two rak'as before the dawn prayer."
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T00:22:48Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T00:25:00Z",
+      "assembled_at": "2026-10-06T00:25:29Z"
+    }
+  }
+}

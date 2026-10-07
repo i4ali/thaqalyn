@@ -1,0 +1,613 @@
+{
+  "1": {
+    "id": "60:1",
+    "surah": 60,
+    "index": 1,
+    "range": [
+      1,
+      6
+    ],
+    "title": {
+      "en": "Do not befriend God's enemies",
+      "ur": "اللہ کے دشمنوں سے دوستی نہ کرو"
+    },
+    "essay": {
+      "en": "The surah opens by forbidding the believers to take the enemies of God as friends: 'Do not take My enemy and your enemy for friends, [secretly] offering them affection.' Tabatabai notes that this warning against befriending God's enemies runs through the whole surah, which opens and closes with it [1]. The commentators report that the verses came down about Hatib ibn Abi Baltaa, an emigrant who secretly wrote to Quraysh warning them of the Prophet's planned march on Mecca, to shield his relatives there [4].\n\nVerse 2 strips away the illusion that such affection would be repaid: were the idolaters to gain the upper hand, they would reach out against the believers with hand and tongue and wish them back into unbelief. Verse 3 answers Hatib's excuse directly, for neither kinship nor children will avail a person on the Day of Resurrection, when God will part them from one another [1].\n\nThe passage then holds up Abraham as 'a good exemplar': he and those with him disowned their idolatrous people and declared lasting enmity until they should believe in God alone. The one thing not to be copied is Abraham's pledge to plead forgiveness for his idolater father, which rested on a promise he abandoned once his father's enmity to God was clear [6]. Their prayer of trust and repentance follows, and the passage closes by repeating that in them is an example for whoever hopes in God and the Last Day [3].",
+      "ur": "یہ سورۃ مومنوں کو اللہ کے دشمنوں کو دوست بنانے سے منع کرنے کے ساتھ شروع ہوتی ہے: \"میرے دشمن اور اپنے دشمن کو دوست نہ بناؤ، پوشیدہ طور پر انہیں محبت پیش کرتے ہوئے۔\" علامہ طباطبائی واضح کرتے ہیں کہ اللہ کے دشمنوں سے دوستی نہ کرنے کی یہ تنبیہ پوری سورۃ میں جاری رہتی ہے، جو اسی سے شروع اور اسی پر ختم ہوتی ہے [1]۔ مفسرین نقل کرتے ہیں کہ یہ آیات حاطب ابن ابی بلتعہ کے بارے میں نازل ہوئیں، جو ایک مہاجر تھے جنہوں نے پوشیدہ طور پر قریش کو خط لکھ کر مکہ پر نبی صلی اللہ علیہ وآلہ وسلم کے منصوبہ بند حملے کی اطلاع دی تاکہ وہاں اپنے رشتہ داروں کو بچا سکیں [4]۔\n\nآیت ۲ اس وہم کو دور کرتی ہے کہ ایسی محبت کا بدلہ ملے گا: اگر مشرک غالب آ جائیں تو وہ ہاتھ اور زبان سے مومنوں پر وار کریں گے اور چاہیں گے کہ وہ دوبارہ کفر میں لوٹ جائیں۔ آیت ۳ حاطب کے عذر کا براہِ راست جواب دیتی ہے، کیونکہ روزِ قیامت نہ رشتہ داری کام آئے گی نہ اولاد، جب اللہ انہیں ایک دوسرے سے جدا کر دے گا [1]۔\n\nپھر یہ اقتباس حضرت ابراہیم علیہ السلام کو \"بہترین نمونہ\" کے طور پر پیش کرتا ہے: انہوں نے اور ان کے ساتھیوں نے اپنی مشرک قوم سے براءت کا اعلان کیا اور اس وقت تک دشمنی کا اظہار کیا جب تک وہ صرف اللہ پر ایمان نہ لائیں۔ البتہ جس چیز کی پیروی نہیں کرنی وہ حضرت ابراہیم علیہ السلام کا اپنے مشرک والد کے لیے بخشش مانگنے کا وعدہ ہے، جو ایک عہد پر مبنی تھا جسے انہوں نے اس وقت ترک کر دیا جب ان کے والد کی اللہ سے دشمنی واضح ہو گئی [6]۔ اس کے بعد ان کی توکل اور توبہ کی دعا آتی ہے، اور یہ آیات اس بات کو دہرا کر ختم ہوتی ہیں کہ ان میں نمونہ ہے ہر اس شخص کے لیے جو اللہ اور آخرت کی امید رکھتا ہے [3]۔"
+    },
+    "verses": [
+      {
+        "verse": 1,
+        "heading": {
+          "en": "Revealed about Hatib",
+          "ur": "حاطب کے بارے میں نازل ہوئی"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "نزلت في خاطب بن أبي بلتعة، ولفظ الآية عام ومعناه خاص",
+            "chain": null,
+            "text": {
+              "en": "This was revealed about Hatib ibn Abi Baltaa. The wording of the verse is general, but its meaning is specific.",
+              "ur": "یہ آیت حاطب ابن ابی بلتعہ کے بارے میں نازل ہوئی۔ آیت کا لفظ عام ہے لیکن اس کا معنی خاص ہے۔"
+            },
+            "source": "s8"
+          }
+        ]
+      },
+      {
+        "verse": 4,
+        "heading": {
+          "en": "Abraham's example of disavowal",
+          "ur": "براءت میں حضرت ابراہیم کا نمونہ"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "عن امير المؤمنين عليه السلام قال والكفر في هذه الآية البراءة",
+            "chain": null,
+            "text": {
+              "en": "The disbelief spoken of in this verse means disavowal.",
+              "ur": "اس آیت میں کفر سے مراد براءت ہے۔"
+            },
+            "source": "s12"
+          }
+        ]
+      },
+      {
+        "verse": 5,
+        "heading": {
+          "en": "Wealth, poverty, and faith",
+          "ur": "دولت، فقر اور ایمان"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "مَا كَانَ مِنْ وُلْدِ آدَمَ مُؤْمِنٌ إِلا فَقِيراً وَلا كَافِرٌ إِلا غَنِيّاً حَتَّى جَاءَ إِبْرَاهِيمُ (عَلَيهِ السَّلام) فَقَالَ رَبَّنا لا تَجْعَلْنا فِتْنَةً لِلَّذِينَ كَفَرُوا فَصَيَّرَ الله فِي هَؤُلاءِ أَمْوَالاً وَحَاجَةً وَفِي هَؤُلاءِ أَمْوَالاً وَحَاجَةً.",
+            "chain": "A number of our companions, from Sahl ibn Ziyad, from Ibrahim ibn Uqbah, from Ismail ibn Sahl and Ismail ibn Abbad, both raising it to Abu Abdillah",
+            "text": {
+              "en": "No believing child of Adam was anything but poor, and no unbeliever anything but rich, until Abraham came and said, 'Our Lord, do not make us a test for the faithless.' Then God placed among both groups wealth and need.",
+              "ur": "آدم کی اولاد میں ہر مومن فقیر تھا اور ہر کافر غنی، یہاں تک کہ حضرت ابراہیم علیہ السلام آئے اور انہوں نے کہا: 'ہمارے رب، ہمیں کافروں کے لیے آزمائش نہ بنا۔' تب اللہ نے دونوں گروہوں میں دولت اور حاجت رکھ دی۔"
+            },
+            "source": "s31"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "All the commentators trace these verses to Hatib's letter and to the Prophet's pardon of him, but they divide over how that pardon is explained. The Sunni exegetes carry, as a sound tradition, the Prophet's words to the veterans of Badr, 'Do as you wish, for I have forgiven you,' and read Hatib's reprieve through his standing as a man of Badr [18]. Tabatabai accepts the occasion yet rejects reading that report as a blanket exemption from accountability, noting that the verse warns every believer and that the Prophet later imposed the penalty on a veteran of Badr in the slander affair [1].",
+      "ur": "تمام مفسرین ان آیات کا سبب نزول حاطب کے خط اور نبی صلی اللہ علیہ وآلہ وسلم کی ان سے معافی کو قرار دیتے ہیں، لیکن اس معافی کی تفسیر میں اختلاف رکھتے ہیں۔ سنی مفسرین ایک صحیح روایت کے طور پر نبی صلی اللہ علیہ وآلہ وسلم کے یہ الفاظ نقل کرتے ہیں جو انہوں نے بدر کے غازیوں سے فرمائے: 'جو چاہو کرو، میں نے تمہیں معاف کر دیا،' اور حاطب کی معافی کو بدر میں ان کی شرکت کی بنیاد پر پڑھتے ہیں [18]۔ علامہ طباطبائی اس سبب نزول کو قبول کرتے ہیں تاہم اس روایت کو جوابدہی سے عمومی چھوٹ قرار دینے کو رد کرتے ہیں، یہ واضح کرتے ہوئے کہ یہ آیت ہر مومن کو متنبہ کرتی ہے اور یہ کہ نبی صلی اللہ علیہ وآلہ وسلم نے بعد میں افک کے معاملے میں بدر کے ایک غازی پر حد نافذ کی [1]۔"
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Mumtahana 1 to 6",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=60&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ويعارضه ما في قصة الإفك أن النبي صلى الله عليه وآله وسلم بعدما نزلت براءة عائشة حد مسطح بن أثاثة وكان من الآفكين، وكان مسطح بن أثاثة هذا من السابقين الأولين من المهاجرين وممن شهد بدراً"
+        },
+        "gloss": "It is contradicted by the slander affair: after Aisha's innocence was revealed, the Prophet imposed the penalty on Mistah ibn Uthatha, who was among the slanderers and was one of the first emigrants and a veteran of Badr."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mumtahana 6",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=60&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وإنما أعاد ذكر الأسوة لأن الثاني منعقد بغير ما انعقد به الأول فإن الثاني فيه بيان أن الأسوة فيهم كان لرجاء ثواب الله وحسن المنقلب"
+        },
+        "gloss": "He repeated the mention of the exemplar because the second instance is tied to something other than the first: the second shows that the exemplar in them is for the sake of hoping in God's reward and a good outcome."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mumtahana 1",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=60&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "حين عزم النبي صلى الله عليه وآله على ان يدخل مكة بغتة، فسأل الله أن يعمي اخبارهم على قريش ومنع احداً أن يخرج من المدينة إلى مكة فكتب حاطب بن أبي بلتعة إلى أهل مكة يعلمهم بذلك"
+        },
+        "gloss": "When the Prophet resolved to enter Mecca unexpectedly, he asked God to keep the news from Quraysh and forbade anyone to leave Medina for Mecca; then Hatib ibn Abi Baltaa wrote to the people of Mecca informing them of it."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mumtahana 4 to 5",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=60&tAyahNo=4&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "استثناء لقول إبراهيم لأبيه: لاستغفرن أي فلا تقتدوا به فيه. فان إبراهيم عليه السلام إنما استغفر لأبيه على موعدة وعدها إياه"
+        },
+        "gloss": "This is an exception for Abraham's saying to his father 'I will seek forgiveness for you' - so do not imitate him in it; for Abraham sought forgiveness for his father only on the basis of a promise he had made him."
+      },
+      {
+        "id": "s8",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mumtahana 1 to 2",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=60&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "نزلت في خاطب بن أبي بلتعة، ولفظ الآية عام ومعناه خاص"
+        },
+        "gloss": "It was revealed about Hatib ibn Abi Baltaa; the wording of the verse is general, but its meaning is specific."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mumtahana 1 to 6",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=60&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "عن امير المؤمنين عليه السلام قال والكفر في هذه الآية البراءة"
+        },
+        "gloss": "Narrated from the Commander of the Faithful, who said: the disbelief in this verse means disavowal."
+      },
+      {
+        "id": "s18",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Mumtahana 1 to 3",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=60&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لعل الله اطلع إلى أهل بدر، فقال اعملوا ما شئتم، فقد غفرت لكم"
+        },
+        "gloss": "Perhaps God has looked upon the people of Badr and said, 'Do as you wish, for I have forgiven you.'"
+      },
+      {
+        "id": "s31",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 2, hadith 10, cited at Al-Mumtahana 5",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "ضعيف على المشهور"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "مَا كَانَ مِنْ وُلْدِ آدَمَ مُؤْمِنٌ إِلا فَقِيراً وَلا كَافِرٌ إِلا غَنِيّاً حَتَّى جَاءَ إِبْرَاهِيمُ (عَلَيهِ السَّلام) فَقَالَ رَبَّنا لا تَجْعَلْنا فِتْنَةً لِلَّذِينَ كَفَرُوا"
+        },
+        "gloss": "No believing child of Adam was anything but poor, and no unbeliever anything but rich, until Abraham came and said, 'Our Lord, do not make us a test for those who disbelieve.'"
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T04:19:37Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T04:41:25Z",
+      "assembled_at": "2026-10-06T04:54:53Z"
+    }
+  },
+  "2": {
+    "id": "60:2",
+    "surah": 60,
+    "index": 2,
+    "range": [
+      7,
+      13
+    ],
+    "title": {
+      "en": "Justice, emigrant women, and allegiance",
+      "ur": "انصاف، مہاجر خواتین، اور بیعت"
+    },
+    "essay": {
+      "en": "The surah's close turns from warning to hope. After ordering the believers to disown God's enemies, it holds out that He may yet set affection between them and the Meccans they oppose. Tabatabai and al-Tabrisi read this as fulfilled when Mecca accepted Islam [1][3], and Tabatabai adds that it does not cancel the standing duty to disavow unbelief [1]. Verses 8 and 9 then draw a line: God does not forbid kindness and justice toward those who neither fought the believers over religion nor drove them out; He forbids only allying with those who waged that war and backed the expulsion. Tabatabai reads verse 8 as covering people of treaty, and rejects the claim that it was abrogated by the command to fight the polytheists, since the two address different people [1]. The passage then legislates for the women who emigrated after Hudaybiyya: test them, do not return the believing ones to the disbelievers, since faith has severed the marriage bond; repay the husbands their dowries, and let the believers marry the women with fresh dowries [4]. If a wife defects to the enemy, the bereft husband is compensated. Verse 12 records the pledge the Prophet took from the believing women - against idolatry, theft, adultery, killing their children, slander, and disobedience in what is right. The surah ends as it opened, al-Tabrisi observes, forbidding alliance with a people under God's wrath who have despaired of the Hereafter [5].",
+      "ur": "سورہ کا اختتام تنبیہ سے امید کی طرف مڑتا ہے۔ اللہ کے دشمنوں سے بیزاری کا حکم دینے کے بعد، یہ امکان ظاہر کیا گیا ہے کہ اللہ ان کے اور مکہ والوں کے درمیان، جن سے وہ برسرِپیکار ہیں، محبت پیدا کر دے۔ علامہ طباطبائی اور شیخ طبرسی اسے مکہ والوں کے اسلام قبول کرنے سے تعبیر کرتے ہیں [1][3]، اور علامہ طباطبائی مزید فرماتے ہیں کہ اس سے کفر سے بیزاری کا مستقل فریضہ ختم نہیں ہوتا [1]۔ پھر آیات 8 اور 9 ایک حد کھینچتی ہیں: اللہ ان لوگوں کے ساتھ نیکی اور انصاف سے منع نہیں کرتا جنہوں نے دین کی وجہ سے مسلمانوں سے جنگ نہیں کی اور نہ انہیں ان کے گھروں سے نکالا؛ وہ صرف ان لوگوں سے دوستی سے روکتا ہے جنہوں نے یہ جنگ لڑی اور اخراج میں ہاتھ بٹایا۔ علامہ طباطبائی آیت 8 کو اہلِ معاہدہ پر محمول کرتے ہیں، اور اس دعوے کو رد کرتے ہیں کہ یہ مشرکین سے قتال کے حکم سے منسوخ ہو گئی، کیونکہ دونوں مختلف لوگوں سے متعلق ہیں [1]۔ اس کے بعد یہ حصہ ان خواتین کے بارے میں احکام بیان کرتا ہے جنہوں نے حدیبیہ کے بعد ہجرت کی: انہیں پرکھو، مومنہ خواتین کو کافروں کے پاس واپس نہ کرو کیونکہ ایمان نے نکاح کا بندھن توڑ دیا ہے؛ خاوندوں کو ان کے مہر ادا کرو، اور مسلمانوں کو نئے مہر کے ساتھ ان خواتین سے نکاح کرنے دو [4]۔ اگر کوئی بیوی دشمن کے پاس چلی جائے تو اس کے محروم شوہر کی تلافی کی جائے۔ آیت 12 میں وہ بیعت درج ہے جو نبی صلی اللہ علیہ وآلہ وسلم نے مومن خواتین سے لی - شرک، چوری، زنا، اپنی اولاد کو قتل کرنے، بہتان، اور نیک بات میں نافرمانی کے خلاف۔ شیخ طبرسی نے فرمایا کہ سورہ اسی طرح ختم ہوتا ہے جیسے شروع ہوا تھا: اس قوم سے دوستی سے روکتے ہوئے جن پر اللہ کا غضب ہے اور جنہوں نے آخرت سے مایوسی اختیار کر لی ہے [5]۔"
+    },
+    "verses": [
+      {
+        "verse": 7,
+        "heading": {
+          "en": "Enmity may turn to affection",
+          "ur": "دشمنی محبت میں بدل سکتی ہے"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "قطع الله عز وجل ولاية المؤمنين منهم وأظهروا لهم العداوة فقال … فلما أسلم أهل مكة خالطهم أصحاب رسول الله صلى الله عليه وآله وناكحوهم وتزوج رسول الله صلى الله عليه وآله أم حبيب بنت أبي سفيان بن حرب.",
+            "chain": "In the report of Abu al-Jarud, from Abu Jafar",
+            "text": {
+              "en": "God cut off the believers' alliance with them, and they showed them enmity. Then, when the people of Mecca accepted Islam, the companions mixed with them and married among them, and the Prophet married Umm Habib bint Abi Sufyan.",
+              "ur": "اللہ نے ان سے مومنوں کی دوستی کاٹ دی، اور انہوں نے مومنوں سے دشمنی ظاہر کی۔ پھر جب اہلِ مکہ نے اسلام قبول کیا تو رسول اللہ صلی اللہ علیہ وآلہ وسلم کے اصحاب نے ان کے ساتھ میل جول رکھا اور ان میں نکاح بھی کیے، اور نبی صلی اللہ علیہ وآلہ وسلم نے ام حبیبہ بنت ابی سفیان سے نکاح کیا۔"
+            },
+            "source": "s10"
+          }
+        ]
+      },
+      {
+        "verse": 10,
+        "heading": {
+          "en": "Testing the emigrant women",
+          "ur": "مہاجر خواتین کی آزمائش"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "من كانت عنده امرأة كافرة يعني على غير ملة الإسلام وهو على ملة الإسلام فليعرض عليها الإسلام فإن قبلت فهي امرأته، وإلا فهي بريئة منه فنهى الله أن يمسك بعصمتها.",
+            "chain": "In the report of Abu al-Jarud, from Abu Jafar",
+            "text": {
+              "en": "Whoever has a disbelieving wife - that is, one not of the religion of Islam - while he himself follows Islam, let him present Islam to her. If she accepts, she is his wife; if not, she is severed from him. God forbade him to keep hold of her marriage bond.",
+              "ur": "جس کی بیوی کافرہ ہو - یعنی دینِ اسلام کی پیروکار نہ ہو - جبکہ وہ خود اسلام پر قائم ہو، تو وہ اسلام اس کے سامنے پیش کرے۔ اگر وہ قبول کر لے تو وہ اس کی بیوی ہے؛ اگر نہیں تو وہ اس سے جدا ہو گئی۔ اللہ نے اسے منع کیا کہ وہ اس کا نکاح کا رشتہ تھامے رکھے۔"
+            },
+            "source": "s12"
+          },
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": "al-Fudayl ibn Yasar",
+            "arabic": "إن لامرأتي أختا عارفة على رأينا، و ليس على رأينا بالبصرة إلا قليل فأزوجها ممن لا يرى رأيها؟ … لا، و لا نعمة، إن الله عز و جل يقول",
+            "chain": "Muhammad ibn Yaqub, from Muhammad ibn Yahya, from Ahmad ibn Muhammad, from Ibn Fadal, from Ali ibn Yaqub, from Marwan ibn Muslim, from al-Husayn ibn Musa al-Hannat, from al-Fudayl ibn Yasar",
+            "text": {
+              "en": "I asked: my wife has a sister who holds our view, and few in Basra do - may I marry her to one who does not hold her view? He said: No, and no blessing. God says, 'Do not send them back to the faithless; they are not lawful for them, nor they for them.'",
+              "ur": "میں نے پوچھا: میری بیوی کی ایک بہن ہے جو ہمارے عقیدے پر ہے، اور بصرہ میں اس عقیدے کے لوگ بہت کم ہیں - کیا میں اسے کسی ایسے شخص سے بیاہ سکتا ہوں جو اس کا عقیدہ نہیں رکھتا؟ آپ علیہ السلام نے فرمایا: نہیں، اور کوئی بھلائی نہیں۔ اللہ فرماتا ہے: 'انہیں کافروں کی طرف واپس نہ کرو؛ نہ وہ ان کے لیے حلال ہیں اور نہ وہ ان کے لیے۔'"
+            },
+            "source": "s16"
+          }
+        ]
+      },
+      {
+        "verse": 11,
+        "heading": {
+          "en": "Compensating the bereft husband",
+          "ur": "محروم شوہر کا معاوضہ"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "وكان سبب نزول ذلك أن عمر بن الخطاب كانت عنده فاطمة بنت أبي أمية بن المغيرة فكرهت الهجرة معه، وأقامت مع المشركين فنكحها معاوية بن أبي سفيان فأمر الله رسوله أن يعطي عمر مثل صداقها.",
+            "chain": "In the report of Abu al-Jarud, from Abu Jafar",
+            "text": {
+              "en": "The occasion of its revelation was that Umar ibn al-Khattab was married to Fatima bint Abi Umayya ibn al-Mughira. She disliked emigrating with him and stayed among the polytheists, and Muawiya ibn Abi Sufyan married her. So God ordered His Messenger to give Umar the like of her dowry.",
+              "ur": "اس آیت کے نزول کا سبب یہ تھا کہ عمر بن خطاب کی بیوی فاطمہ بنت ابی امیہ بن مغیرہ تھی۔ اس نے ان کے ساتھ ہجرت کو ناپسند کیا اور مشرکین کے پاس رہ گئی، اور معاویہ بن ابی سفیان نے اس سے نکاح کر لیا۔ تب اللہ نے اپنے رسول صلی اللہ علیہ وآلہ وسلم کو حکم دیا کہ عمر کو اس کے مہر کے برابر رقم دیں۔"
+            },
+            "source": "s13"
+          },
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "أن يعقب الذي ذهبت امرأته على امرأة غيرها يعني تزوجها بعقب، فإذا هو تزوج بامرأة أخرى فإن على الإمام أن يعطيه مهرها مهر امرأته الذاهبة … يرد الإمام عليه أصابوا من الكفار أو لم يصيبوا، لأن على الإمام أن يجبر جماعة من تحت يده.",
+            "chain": "al-Shaykh in al-Tahdhib, by his chain from Muhammad ibn al-Hasan al-Saffar, from Muhammad ibn Isa, from Yunus, from Ibn Udhayna and Ibn Sinan, from Abu Abdillah",
+            "text": {
+              "en": "What does 'your turn' mean here? He said: that the one whose wife left takes another wife in her place; and when he has married another, the Imam must give him the dowry of his departed wife - whether or not spoils were gained from the disbelievers - for the Imam must provide for those under his care.",
+              "ur": "'تمہاری باری' سے یہاں کیا مراد ہے؟ آپ علیہ السلام نے فرمایا: یعنی جس کی بیوی چلی جائے وہ اس کی جگہ دوسری بیوی کرے؛ اور جب وہ دوسری سے نکاح کر لے تو امام پر لازم ہے کہ اسے اس کی گئی ہوئی بیوی کا مہر دیں - چاہے کافروں سے مالِ غنیمت ملا ہو یا نہ ملا ہو - کیونکہ امام کا فرض ہے کہ جو ان کے ماتحت ہیں ان کی کفالت کریں۔"
+            },
+            "source": "s16"
+          }
+        ]
+      },
+      {
+        "verse": 12,
+        "heading": {
+          "en": "The believing women's pledge",
+          "ur": "مومن خواتین کی بیعت"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "هو ما فرض الله عليهن من الصلاة والزكاة وما أمرهن به من خير.",
+            "chain": "Ahmad ibn Idris, from Ahmad ibn Muhammad, from Ali, from Abdullah ibn Sinan",
+            "text": {
+              "en": "It is what God has made obligatory upon them of prayer and almsgiving, and the good He has commanded them to do.",
+              "ur": "یہ وہ چیز ہے جو اللہ نے ان پر نماز اور زکوٰۃ کے ذریعے فرض کی ہے، اور جو نیکی اس نے انہیں کرنے کا حکم دیا ہے۔"
+            },
+            "source": "s14"
+          },
+          {
+            "id": "n7",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "إن رسول الله صلى الله عليه و آله قال لفاطمة عليها السلام: إذا أنا مت فلا تخمشي علي وجها، و لا ترخي علي شعرا، و لا تنادي بالويل، و لا تقيمي على نائحة … هذا المعروف الذي أمر الله",
+            "chain": "Muhammad ibn Yahya, from Salama ibn al-Khattab, from Sulayman ibn Samaa al-Khuzai, from Ali ibn Ismail, from Amr ibn Abi al-Miqdam",
+            "text": {
+              "en": "Do you know what 'nor disobey you in what is right' means? The Messenger of God said to Fatima: When I die, do not scratch your face over me, do not let down your hair, do not cry out in woe, and do not set up a wailing woman. This is the 'right' that God commanded.",
+              "ur": "کیا آپ جانتے ہیں کہ 'نیک بات میں آپ کی نافرمانی نہ کریں' سے کیا مراد ہے؟ رسول اللہ صلی اللہ علیہ وآلہ وسلم نے فاطمہ سلام اللہ علیہا سے فرمایا: جب میں وفات پا جاؤں تو میرے لیے اپنا چہرہ نہ نوچنا، اپنے بال نہ کھولنا، واویلا نہ کرنا، اور ماتم کرنے والی نہ بٹھانا۔ یہی وہ 'نیک بات' ہے جس کا اللہ نے حکم دیا۔"
+            },
+            "source": "s17"
+          },
+          {
+            "id": "n8",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "لما فتح رسول الله صلى الله عليه و آله مكة بايع الرجال، ثم جاء النساء يبايعنه … فقالت: يا رسول الله، كيف نبايعك؟ فقال: إن لا أصافح النساء، فدعا بقدح من ماء فأدخل يده ثم أخرجها، فقال: ادخلن أيديكن في هذا الماء فهي البيعة.",
+            "chain": "Muhammad ibn Yaqub, from Ali ibn Ibrahim, from his father, from Ahmad ibn Muhammad ibn Abi Nasr, from Aban",
+            "text": {
+              "en": "When the Messenger of God conquered Mecca he took the men's allegiance; then the women came to pledge. They asked, 'How shall we pledge you?' He said, 'I do not shake hands with women,' called for a bowl of water, dipped in his hand, and said, 'Put your hands in this water; that is the pledge.'",
+              "ur": "جب رسول اللہ صلی اللہ علیہ وآلہ وسلم نے مکہ فتح کیا تو مردوں سے بیعت لی؛ پھر خواتین بیعت کرنے آئیں۔ انہوں نے پوچھا: 'ہم آپ سے کیسے بیعت کریں؟' آپ صلی اللہ علیہ وآلہ وسلم نے فرمایا: 'میں خواتین سے مصافحہ نہیں کرتا'، پانی کا ایک پیالہ منگوایا، اس میں اپنا ہاتھ ڈبویا، اور فرمایا: 'اپنے ہاتھ اس پانی میں ڈالو؛ یہی بیعت ہے۔'"
+            },
+            "source": "s17"
+          }
+        ]
+      },
+      {
+        "verse": 13,
+        "heading": {
+          "en": "Against befriending the wrathful",
+          "ur": "غضب زدہ لوگوں سے دوستی کے خلاف"
+        },
+        "narrations": [
+          {
+            "id": "n9",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "العجب كل العجب بين جمادى و رجب … و أي العجب أعجب من أموات يضربون كل عدو لله و لرسوله و لأهل بيته، و ذلك تأويل هذه الآية",
+            "chain": "Muhammad ibn al-Abbas, from Ali ibn Abdullah, from Ibrahim ibn Muhammad al-Thaqafi, from Muhammad ibn Salih ibn Masud, from Abu al-Jarud Ziyad ibn al-Mundhir, from one who heard Ali",
+            "text": {
+              "en": "The wonder, all the wonder, between Jumada and Rajab! A man asked what wonder he meant. He said: What wonder is greater than dead men who strike down every enemy of God, His Messenger, and his household? That is the interpretation of this verse, 'Do not befriend a people at whom Allah is wrathful.'",
+              "ur": "کیا عجب، کتنا عجب، جمادیٰ اور رجب کے درمیان! ایک شخص نے پوچھا کہ آپ علیہ السلام کس عجب کی بات کر رہے ہیں؟ آپ علیہ السلام نے فرمایا: اس سے بڑھ کر کیا عجب ہو گا کہ مردے اللہ، اس کے رسول اور اس کے اہلِ بیت کے ہر دشمن کو مار گرائیں؟ یہی اس آیت کی تاویل ہے: 'ایسے لوگوں سے دوستی نہ کرو جن پر اللہ غضبناک ہے۔'"
+            },
+            "source": "s18"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On 'Do not hold on to [conjugal] ties with faithless women' in verse 10, al-Tusi holds the wording is general: it bars a Muslim from marrying Jewish or Christian women, not only idol-worshippers, and is narrowed only by clear proof [8]. Qurtubi reports the reading that 'faithless women' here means idolatresses specifically, so that women of the People of the Book remain exempt and lawful to marry [36]. Tabatabai reconciles the Shia narration that calls this verse a cancelling of 5:5: it restricts that permission to temporary marriage rather than abrogating it outright [2].",
+      "ur": "آیت 10 میں 'کافرہ خواتین کے ساتھ نکاح کا رشتہ نہ تھامو' کے بارے میں شیخ طوسی کا موقف ہے کہ الفاظ عام ہیں: یہ مسلمان کو یہودی یا عیسائی خواتین سے نکاح سے بھی روکتے ہیں، نہ صرف بت پرستوں سے، اور صرف واضح دلیل سے اس میں تخصیص کی جا سکتی ہے [8]۔ قرطبی ایک قراءت نقل کرتے ہیں کہ یہاں 'کافرہ خواتین' سے مراد خاص طور پر بت پرست خواتین ہیں، اس طرح اہلِ کتاب کی خواتین مستثنیٰ اور نکاح کے لیے جائز رہتی ہیں [36]۔ علامہ طباطبائی اس شیعہ روایت میں تطبیق دیتے ہیں جو اس آیت کو 5:5 کو منسوخ کرنے والی قرار دیتی ہے: یہ اس اجازت کو متعہ تک محدود کرتی ہے نہ کہ اسے سرے سے منسوخ کرتی ہے [2]۔"
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Mumtahana 7 to 9",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=60&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والمراد بجعل المودة بين المؤمنين وبينهم جعلها بتوفيقهم للإسلام كما وقع ذلك لما فتح الله لهم مكة، وليس المراد به نسخ حكم المعاداة والتبري."
+        },
+        "gloss": "What is meant by making affection between the believers and them is their being guided to Islam, as happened when God opened Mecca to them; it does not mean the ruling of enmity and disavowal is abrogated."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Mumtahana 10 to 13",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=60&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولعل المراد بنسخ آية الإمساك بالعصم لآية حلية محصنات أهل الكتاب إختصاص آية الممتحنة بالنكاح الدائم"
+        },
+        "gloss": "Perhaps the 'abrogation' of the permission to marry chaste women of the People of the Book means that the Mumtahana verse is specific to permanent marriage."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mumtahana 7 to 9",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=60&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقد فعل ذلك حين أسلموا عام الفتح فحصلت المودة بينهم وبين المسلمين."
+        },
+        "gloss": "He did this when they accepted Islam in the year of the conquest, and affection came about between them and the Muslims."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mumtahana 10 to 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=60&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وهذا يدل على وقوع الفرقة بينهما بخروجها مسلمة وإن لم يطلق المشرك."
+        },
+        "gloss": "This shows that the separation between the two occurs by her leaving as a Muslim, even if the polytheist has not divorced her."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mumtahana 12 to 13",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=60&tAyahNo=12&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ختم الله سبحانه السورة بالأمر بقطع الموالاة من الكفار كما افتتحها به."
+        },
+        "gloss": "God sealed the surah with the command to cut off alliance with the disbelievers, just as He opened it with that."
+      },
+      {
+        "id": "s8",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mumtahana 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=60&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفيها دلالة على المنع من تزوج المسلم اليهودية والنصرانية، لانهما كافرتان والآية على عمومها فى المنع من التمسك بعصم الكوافر."
+        },
+        "gloss": "In it is an indication of the ban on a Muslim marrying a Jewish or Christian woman, for both are disbelievers, and the verse is general in forbidding holding to the ties of disbelieving women."
+      },
+      {
+        "id": "s10",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mumtahana 7",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=60&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فلما أسلم أهل مكة خالطهم أصحاب رسول الله صلى الله عليه وآله وناكحوهم وتزوج رسول الله صلى الله عليه وآله أم حبيب بنت أبي سفيان بن حرب."
+        },
+        "gloss": "When the people of Mecca accepted Islam, the companions mixed with them and married among them, and the Prophet married Umm Habib bint Abi Sufyan ibn Harb."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mumtahana 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=60&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "من كانت عنده امرأة كافرة يعني على غير ملة الإسلام وهو على ملة الإسلام فليعرض عليها الإسلام فإن قبلت فهي امرأته، وإلا فهي بريئة منه."
+        },
+        "gloss": "Whoever has a disbelieving wife - one not of the religion of Islam - while he follows Islam, let him present Islam to her; if she accepts she is his wife, otherwise she is severed from him."
+      },
+      {
+        "id": "s13",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mumtahana 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=60&tAyahNo=11&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وكان سبب نزول ذلك أن عمر بن الخطاب كانت عنده فاطمة بنت أبي أمية بن المغيرة فكرهت الهجرة معه، وأقامت مع المشركين فنكحها معاوية بن أبي سفيان."
+        },
+        "gloss": "The occasion of its revelation was that Umar ibn al-Khattab was married to Fatima bint Abi Umayya ibn al-Mughira; she disliked emigrating with him and stayed among the polytheists, and Muawiya ibn Abi Sufyan married her."
+      },
+      {
+        "id": "s14",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mumtahana 12",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=60&tAyahNo=12&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هو ما فرض الله عليهن من الصلاة والزكاة وما أمرهن به من خير."
+        },
+        "gloss": "It is what God made obligatory upon them of prayer and almsgiving, and the good He commanded them to do."
+      },
+      {
+        "id": "s16",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mumtahana 10 to 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=60&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أن يعقب الذي ذهبت امرأته على امرأة غيرها يعني تزوجها بعقب فإذا هو تزوج بامرأة أخرى فإن على الإمام أن يعطيه مهرها مهر امرأته الذاهبة"
+        },
+        "gloss": "That the man whose wife left marries another wife in her place; and when he has married another, the Imam must give him her dowry, the dowry of his departed wife."
+      },
+      {
+        "id": "s17",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mumtahana 12",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=60&tAyahNo=12&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فدعا بقدح من ماء فأدخل يده ثم أخرجها، فقال: ادخلن أيديكن في هذا الماء فهي البيعة."
+        },
+        "gloss": "He called for a bowl of water, put his hand in and drew it out, and said: Dip your hands in this water; that is the pledge."
+      },
+      {
+        "id": "s18",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mumtahana 13",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=60&tAyahNo=13&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أموات يضربون كل عدو لله و لرسوله و لأهل بيته، و ذلك تأويل هذه الآية"
+        },
+        "gloss": "Dead men who strike down every enemy of God, His Messenger, and his household - and that is the interpretation of this verse."
+      },
+      {
+        "id": "s36",
+        "kind": "tafsir",
+        "work": "al-Jami li-Ahkam al-Quran",
+        "author": "al-Qurtubi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Mumtahana 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=5&tSoraNo=60&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "المراد بالكوافر هنا عبدة الأوثان مَن لا يجوز ابتداءً نكاحها، فهي خاصة بالكوافر من غير أهل الكتاب."
+        },
+        "gloss": "What is meant by 'disbelieving women' here is idol-worshippers, whom it is not permitted to marry in the first place; so it is specific to disbelieving women other than the People of the Book."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T04:12:57Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T04:54:23Z",
+      "assembled_at": "2026-10-06T04:54:54Z"
+    }
+  }
+}

@@ -1,0 +1,324 @@
+{
+  "1": {
+    "id": "60:1",
+    "surah": 60,
+    "index": 1,
+    "range": [
+      1,
+      6
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 1,
+        "prompt": {
+          "en": "The wording of the verse is general, but its meaning is ____."
+        },
+        "options": [
+          {
+            "en": "universal"
+          },
+          {
+            "en": "specific"
+          },
+          {
+            "en": "hidden"
+          },
+          {
+            "en": "eternal"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The narration glosses the verse: though worded for all believers, it was aimed at Hatib's particular case, so its wording is general while its meaning is specific."
+        },
+        "anchor": {
+          "where": "verses.1.narrations.n1",
+          "quote": "The wording of the verse is general, but its meaning is specific."
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 3,
+        "prompt": {
+          "en": "According to the essay, how does verse 3 answer Hatib's excuse about his relatives?"
+        },
+        "options": [
+          {
+            "en": "Neither kinship nor children will avail on the Day of Resurrection"
+          },
+          {
+            "en": "Kinship ties outweigh faith on the Day of Resurrection"
+          },
+          {
+            "en": "The believers will be reunited with their relatives in Paradise"
+          },
+          {
+            "en": "His relatives in Mecca would soon accept Islam"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says verse 3 meets Hatib's plea head on: on the Day of Resurrection neither kin nor children will help anyone, for God will separate them."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "neither kinship nor children will avail a person on the Day of Resurrection, when God will part them from one another"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 4,
+        "prompt": {
+          "en": "According to the passage, the one part of Abraham's example not to be imitated is his pledge to seek forgiveness for his idolater father."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay singles out Abraham's promise to ask forgiveness for his idolatrous father as the one thing in his example believers should not copy, since he dropped it when the father's enmity to God became clear."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The one thing not to be copied is Abraham's pledge to plead forgiveness for his idolater father, which rested on a promise he abandoned once his father's enmity to God was clear."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 5,
+        "prompt": {
+          "en": "\"No believing child of Adam was anything but poor, and no unbeliever anything but rich, until Abraham came.\" Who narrated this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Sadiq tells how every believer was poor and every unbeliever rich until Abraham prayed that God not make the faithful a test for the faithless, after which God mixed wealth and need among both."
+        },
+        "anchor": {
+          "where": "verses.5.narrations.n3",
+          "quote": "No believing child of Adam was anything but poor, and no unbeliever anything but rich, until Abraham came"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 1,
+        "prompt": {
+          "en": "According to the perspectives, what do all the commentators agree these verses trace back to?"
+        },
+        "options": [
+          {
+            "en": "Abraham's disavowal of his idolatrous people"
+          },
+          {
+            "en": "The Prophet's march on Mecca and its conquest"
+          },
+          {
+            "en": "The believers' emigration from Mecca"
+          },
+          {
+            "en": "Hatib's letter and the Prophet's pardon of him"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The perspectives note that although the commentators divide over how the pardon is explained, they all trace these verses to Hatib's letter to Quraysh and the Prophet's pardon of him."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "All the commentators trace these verses to Hatib's letter and to the Prophet's pardon of him"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:48:09Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:49:11Z",
+      "assembled_at": "2026-10-06T12:54:22Z"
+    }
+  },
+  "2": {
+    "id": "60:2",
+    "surah": 60,
+    "index": 2,
+    "range": [
+      7,
+      13
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 7,
+        "prompt": {
+          "en": "According to the essay, what became of the affection that God held out between the believers and the people of Mecca?"
+        },
+        "options": [
+          {
+            "en": "It was fulfilled when Mecca accepted Islam."
+          },
+          {
+            "en": "It cancelled the duty to disavow unbelief."
+          },
+          {
+            "en": "It was promised only to the emigrant women."
+          },
+          {
+            "en": "It never came to pass."
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Tabatabai and al-Tabrisi read the hope of affection as fulfilled when Mecca accepted Islam; Tabatabai adds it does not cancel the standing duty to disavow unbelief."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai and al-Tabrisi read this as fulfilled when Mecca accepted Islam"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 10,
+        "prompt": {
+          "en": "If she accepts, she is his wife; if not, she is ____ from him."
+        },
+        "options": [
+          {
+            "en": "freed"
+          },
+          {
+            "en": "severed"
+          },
+          {
+            "en": "hidden"
+          },
+          {
+            "en": "ransomed"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Baqir's ruling is that a man must present Islam to his disbelieving wife; if she refuses, the marriage bond is severed and he may no longer keep hold of it."
+        },
+        "anchor": {
+          "where": "verses.10.narrations.n2",
+          "quote": "If she accepts, she is his wife; if not, she is severed from him."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 10,
+        "prompt": {
+          "en": "Asked whether a woman who holds our view might be married to one who does not, he answered, \"No, and no blessing.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Sadiq told al-Fudayl ibn Yasar it was not permitted, citing the verse that believing women must not be sent back to the faithless, since they are not lawful for one another."
+        },
+        "anchor": {
+          "where": "verses.10.narrations.n3",
+          "quote": "No, and no blessing. God says, 'Do not send them back to the faithless; they are not lawful for them, nor they for them.'"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 12,
+        "prompt": {
+          "en": "In the narration, how did the Prophet take the believing women's pledge after he conquered Mecca?"
+        },
+        "options": [
+          {
+            "en": "By shaking each woman's hand in turn"
+          },
+          {
+            "en": "By having them dip their hands in a bowl of water"
+          },
+          {
+            "en": "By having each woman recite the pledge aloud alone"
+          },
+          {
+            "en": "By sending Fatima to take it on his behalf"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The narration says the Prophet refused to shake hands with the women; he called for a bowl of water, dipped his hand, and told them to put their hands in it as the pledge."
+        },
+        "anchor": {
+          "where": "verses.12.narrations.n8",
+          "quote": "He said, 'I do not shake hands with women,' called for a bowl of water, dipped in his hand, and said, 'Put your hands in this water; that is the pledge.'"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 13,
+        "prompt": {
+          "en": "According to the essay, the surah closes by promising mercy to the people under God's wrath once they turn back from their despair."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The essay says the surah ends as it opened, forbidding alliance with a people under God's wrath who have despaired of the Hereafter; it offers them no promise of mercy."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The surah ends as it opened, al-Tabrisi observes, forbidding alliance with a people under God's wrath who have despaired of the Hereafter."
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:53:15Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:54:08Z",
+      "assembled_at": "2026-10-06T12:54:22Z"
+    }
+  }
+}

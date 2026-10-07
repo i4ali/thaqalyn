@@ -1,0 +1,646 @@
+{
+  "1": {
+    "id": "45:1",
+    "surah": 45,
+    "index": 1,
+    "range": [
+      1,
+      11
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 2,
+        "prompt": {
+          "en": "The passage explains the title the All-mighty to mean that God is never overcome."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The opening calls the Book a sending down from the All-mighty, which the commentary glosses as the One who is never overcome, and the All-wise whose every act is wisdom."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the All-mighty who is never overcome and the All-wise whose every act is wisdom"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 4,
+        "prompt": {
+          "en": "Al-Tabrisi glosses 'those who have certainty' as people who seek sure knowledge through ____."
+        },
+        "options": [
+          {
+            "en": "fasting and prayer"
+          },
+          {
+            "en": "reflection and thought"
+          },
+          {
+            "en": "patience and trust"
+          },
+          {
+            "en": "signs and wonders"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Al-Tabrisi reads 'those who have certainty' as those who reach sure knowledge by reflecting and thinking, the faculty the verse ties to certainty."
+        },
+        "anchor": {
+          "where": "verses.4.note",
+          "quote": "Al-Tabrisi glosses 'those who have certainty' as people who seek sure knowledge through reflection and thought"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 5,
+        "prompt": {
+          "en": "According to the narration addressed to Hisham, through what did God complete His proofs to people?"
+        },
+        "options": [
+          {
+            "en": "Their intellects"
+          },
+          {
+            "en": "Clear speech given to the prophets"
+          },
+          {
+            "en": "The evidences of His lordship"
+          },
+          {
+            "en": "The signs in the heavens and earth"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Kazim told Hisham that God completed His proofs to people through their intellects, then aided the prophets with clear speech, fitting the verse on those who reason."
+        },
+        "anchor": {
+          "where": "verses.5.narrations.n2",
+          "quote": "God completed His proofs to people through their intellects, aided the prophets with clear speech, and guided them to His lordship by evidences"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 5,
+        "prompt": {
+          "en": "\"God has armies of winds by which He punishes whichever of the disobedient He wills; every such wind has an angel charged with it.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Baqir told Abu Basir that God has armies of winds for punishment, each with its angel, and winds of mercy that bear the rain."
+        },
+        "anchor": {
+          "where": "verses.5.narrations.n3",
+          "quote": "God has armies of winds by which He punishes whichever of the disobedient He wills; every such wind has an angel charged with it"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 11,
+        "prompt": {
+          "en": "According to the essay's close, what awaits those who reject their Lord's signs?"
+        },
+        "options": [
+          {
+            "en": "A second chance to believe"
+          },
+          {
+            "en": "The guidance of the Quran"
+          },
+          {
+            "en": "A painful punishment of defilement"
+          },
+          {
+            "en": "The reward of the faithful"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The passage ends on two roads: the Quran as guidance for those who accept it, and a painful punishment of defilement for those who reject their Lord's signs."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "this Quran is guidance, and for those who reject their Lord's signs there waits a painful punishment of defilement"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-03T03:22:43Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-03T03:23:41Z",
+      "assembled_at": "2026-10-03T03:26:13Z"
+    }
+  },
+  "2": {
+    "id": "45:2",
+    "surah": 45,
+    "index": 2,
+    "range": [
+      12,
+      21
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 12,
+        "prompt": {
+          "en": "According to the essay, what does this passage point to first, before it turns to human conduct?"
+        },
+        "options": [
+          {
+            "en": "God's hand in creation, signs for those who reflect"
+          },
+          {
+            "en": "The Children of Israel's advantage over all the nations"
+          },
+          {
+            "en": "The Day when every deed will be weighed"
+          },
+          {
+            "en": "The forgiveness owed to those who mock God's days"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the passage first points to God's hand in creation, how He disposed the sea and all in the heavens and earth, signs for a people who reflect, before its tone turns to conduct."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "It first points to God's hand in creation - He disposed the sea so ships may sail by His command and men may seek His bounty"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 14,
+        "prompt": {
+          "en": "\"The days of Allah that are hoped for are three: the day when the Qaim rises, the day of the Return, and the Day of Resurrection.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali ibn al-Husayn"
+          },
+          {
+            "en": "Ibn Abbas"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked about the days of Allah, Imam al-Sadiq named three: the day the Qaim rises, the day of the Return, and the Day of Resurrection."
+        },
+        "anchor": {
+          "where": "verses.14.narrations.n1",
+          "quote": "The days of Allah that are hoped for are three: the day when the Qaim rises, the day of the Return, and the Day of Resurrection"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 17,
+        "prompt": {
+          "en": "They fell into difference only after knowledge reached them, out of envy and a craving for ____."
+        },
+        "options": [
+          {
+            "en": "leadership"
+          },
+          {
+            "en": "wealth"
+          },
+          {
+            "en": "revenge"
+          },
+          {
+            "en": "safety"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay explains their split was not from ignorance but from envy and a craving for leadership, coming only after knowledge had already reached them."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "They fell into difference only after knowledge reached them, out of envy and a craving for leadership"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 18,
+        "prompt": {
+          "en": "According to the note on verse 18, the command to follow the sacred law is addressed in form to the Prophet, but is really meant for whom?"
+        },
+        "options": [
+          {
+            "en": "The earlier prophets before him"
+          },
+          {
+            "en": "The idolaters who oppose him"
+          },
+          {
+            "en": "His community"
+          },
+          {
+            "en": "Those given the Book before"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The note says the command, though addressed in its wording to the Prophet, is in substance meant for his community, who must follow the law and shun the desires of the ignorant."
+        },
+        "anchor": {
+          "where": "verses.18.note",
+          "quote": "addressed in form to the Prophet, but meant in substance for his community"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 21,
+        "prompt": {
+          "en": "According to the essay's close, at the Resurrection the wrongdoers and the faithful are finally treated alike, their lives and deaths made equal."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The essay closes by rejecting this very idea: the wrongdoers cannot be treated like the faithful, for the two are not alike in life or in death, which is a return to God."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the wrongdoers cannot be treated like the faithful, their life and death made equal"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-03T03:25:02Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-03T03:26:00Z",
+      "assembled_at": "2026-10-03T03:26:13Z"
+    }
+  },
+  "3": {
+    "id": "45:3",
+    "surah": 45,
+    "index": 3,
+    "range": [
+      22,
+      26
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 22,
+        "prompt": {
+          "en": "According to the passage, Tabatabai argues that a world created in truth must have a lasting end beyond this world."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay gives this as one of Tabatabai's two proofs of the Return: a creation made in truth must have a lasting end beyond this world, which this life does not reach."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "a creation made in truth must have a lasting end beyond this world"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 23,
+        "prompt": {
+          "en": "According to the perspectives, what do both traditions agree about the origin of verse 23?"
+        },
+        "options": [
+          {
+            "en": "It was revealed about the Dahriyya who denied all resurrection"
+          },
+          {
+            "en": "It described a man who sincerely searched for the truth"
+          },
+          {
+            "en": "It was revealed about Quraysh, who worshipped whatever they fancied"
+          },
+          {
+            "en": "It condemned those who blamed death on the passing ages"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The perspectives say both traditions trace verse 23 to Quraysh, who worshipped whatever they fancied and would discard an idol on finding a finer stone."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Both traditions trace verse 23 to Quraysh, who worshipped whatever they fancied"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 24,
+        "prompt": {
+          "en": "\"The unbelief of denial is denying lordship: the words of one who says there is no Lord, no Garden, no Fire. This is the creed of the Dahriyya.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Ibn Abbas"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked about the unbelief of denial, Imam al-Sadiq described the creed of the Dahriyya, who say nothing but time destroys them and deny Lord, Garden, and Fire."
+        },
+        "anchor": {
+          "where": "verses.24.narrations.n1",
+          "quote": "The unbelief of denial is denying lordship: the words of one who says there is no Lord, no Garden, no Fire. This is the creed of the Dahriyya"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 24,
+        "prompt": {
+          "en": "Tabatabai notes that dahr means ____, to which they credit death, not God."
+        },
+        "options": [
+          {
+            "en": "blind fate"
+          },
+          {
+            "en": "the turning stars"
+          },
+          {
+            "en": "the span of a life"
+          },
+          {
+            "en": "the long ages"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Tabatabai glosses dahr as the long ages, the passage of time to which the deniers credit death rather than to God."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai notes that dahr means the long ages, to which they credit death, not God"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 26,
+        "prompt": {
+          "en": "According to the essay's close, why is the case for the Resurrection settled?"
+        },
+        "options": [
+          {
+            "en": "The One who first gave life is able to restore it"
+          },
+          {
+            "en": "Time, not God, is what destroys every living thing"
+          },
+          {
+            "en": "The fathers of the deniers will return in this life"
+          },
+          {
+            "en": "God sealed the hearing and hearts of those led astray"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay closes that the God who first gave life can restore it, so the Resurrection is beyond doubt and the deniers' case fails."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Since the One who first gave life can restore it, the case is settled"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-03T03:21:18Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-03T03:22:11Z",
+      "assembled_at": "2026-10-03T03:26:13Z"
+    }
+  },
+  "4": {
+    "id": "45:4",
+    "surah": 45,
+    "index": 4,
+    "range": [
+      27,
+      37
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 27,
+        "prompt": {
+          "en": "According to the essay, who are the falsifiers that will be losers when the Hour sets in?"
+        },
+        "options": [
+          {
+            "en": "Those who nullified the truth and turned away from it"
+          },
+          {
+            "en": "Those who sinned yet kept their faith"
+          },
+          {
+            "en": "The angels who record what people do"
+          },
+          {
+            "en": "Those who repented and turned back to truth"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay glosses the falsifiers as those who nullified the truth and turned away from it, the ones the verse says will be the losers when the Hour arrives."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the falsifiers will be losers, those who nullified the truth and turned away from it"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 29,
+        "prompt": {
+          "en": "The ____ was commanded: Write what was and what will be until the Day of Resurrection."
+        },
+        "options": [
+          {
+            "en": "angel"
+          },
+          {
+            "en": "scribe"
+          },
+          {
+            "en": "tablet"
+          },
+          {
+            "en": "pen"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The narration says the pen was commanded to write all that was and will be until the Day of Resurrection, the hidden book from which every copy is made."
+        },
+        "anchor": {
+          "where": "verses.29.narrations.n3",
+          "quote": "The pen was commanded: Write what was and what will be until the Day of Resurrection"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 29,
+        "prompt": {
+          "en": "According to the passage, what do the Shia narrations reject about the verse that says the book speaks against you?"
+        },
+        "options": [
+          {
+            "en": "That deeds are recorded in the book at all"
+          },
+          {
+            "en": "That the faithless are left without any helper"
+          },
+          {
+            "en": "That the book literally speaks on its own"
+          },
+          {
+            "en": "That Allah's signs were recited to the faithless"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The Shia narrations hold that a book does not literally speak; rather the Messenger of Allah is the one who speaks by the book, so they reject literal speech."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Since a book does not literally speak, they read the verse to mean that the Messenger of Allah"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 37,
+        "prompt": {
+          "en": "\"Whoever recites Surah al-Jaathiya, its reward is that he will never see the Fire, nor hear the roaring of Hell.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "The Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Ibn Abbas"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked about reciting Surah al-Jaathiya, Imam al-Sadiq promised the reciter would never see the Fire nor hear Hell's roaring, and would be with Muhammad."
+        },
+        "anchor": {
+          "where": "verses.37.narrations.n5",
+          "quote": "Whoever recites Surah al-Jaathiya, its reward is that he will never see the Fire, nor hear the roaring of Hell nor its groaning"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 37,
+        "prompt": {
+          "en": "According to the essay, the surah ends with a final warning to the faithless rather than in praise of Allah."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the surah ends in praise, all praise belonging to Allah, Lord of the worlds, so it closes in praise rather than with a warning."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The surah ends in praise: all praise belongs to Allah, Lord of the heavens, the earth and all the worlds, and to Him alone belongs all supremacy"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-03T03:24:34Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-03T03:25:48Z",
+      "assembled_at": "2026-10-03T03:26:13Z"
+    }
+  }
+}

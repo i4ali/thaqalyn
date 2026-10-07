@@ -1,0 +1,543 @@
+{
+  "1": {
+    "id": "63:1",
+    "surah": 63,
+    "index": 1,
+    "range": [
+      1,
+      8
+    ],
+    "title": {
+      "en": "The hypocrites exposed",
+      "ur": "منافقین کا پردہ فاش"
+    },
+    "essay": {
+      "en": "Surat al-Munafiqun opens by turning the Prophet's attention on the hypocrites of Medina. When they come to him they say, 'We bear witness that you are indeed the apostle of Allah' - words true in themselves, yet Allah testifies that they are liars. al-Mizan explains that their lie lies not in the statement but in the belief behind it: their tongues profess what their hearts do not hold [1]. Majma al-Bayan and al-Tibyan draw from this that faith rests in the heart, and whoever says what he does not believe has lied [2][4]. Their oaths become a shield they hide behind, by which they bar themselves and others from the way of Allah [1].\n\nThey believed and then disbelieved, so their hearts were sealed; Majma reads this as affirming Islam with the tongue while the heart refuses it [2]. Their bodies and fluent speech impress the listener, yet they are like dry logs propped against a wall, empty of understanding, and they take every cry as aimed at them out of fear. They are the enemy, and the Prophet is told to beware of them.\n\nWhen they are invited to come so that the Apostle may plead for forgiveness for them, they twist their heads away in pride, and forgiveness will not avail them. They tell their followers not to spend on those who are with the Apostle until the poor scatter off, though the treasuries of the heavens and the earth belong to Allah. Finally they boast that on returning to the city the mighty will expel the weak. The commentators name the speaker as Abdullah ibn Ubayy ibn Salul, who on the Banu Mustaliq campaign meant himself by the mighty and the Prophet by the weak [3]. The passage leaves the boast overturned: all might belongs to Allah, His Apostle, and the faithful.",
+      "ur": "سورۂ منافقون کا آغاز نبی صلی اللہ علیہ وآلہ وسلم کی توجہ مدینے کے منافقین کی طرف مبذول کرانے سے ہوتا ہے۔ جب وہ آپ کے پاس آتے ہیں تو کہتے ہیں: 'ہم گواہی دیتے ہیں کہ آپ یقیناً اللہ کے رسول ہیں' - یہ الفاظ بجائے خود درست ہیں، مگر اللہ گواہی دیتا ہے کہ یہ جھوٹے ہیں۔ المیزان وضاحت کرتی ہے کہ ان کا جھوٹ بیان میں نہیں بلکہ اس کے پیچھے موجود یقین میں ہے: ان کی زبانیں وہ اقرار کرتی ہیں جو ان کے دل نہیں مانتے [1]۔ مجمع البیان اور التبیان اس سے یہ نتیجہ اخذ کرتے ہیں کہ ایمان کا مرکز دل ہے، اور جو شخص وہ بات کہے جس پر اسے یقین نہ ہو اس نے جھوٹ بولا [2][4]۔ ان کی قسمیں ایک ڈھال بن جاتی ہیں جس کے پیچھے وہ چھپتے ہیں، اور جس کے ذریعے وہ خود کو اور دوسروں کو اللہ کی راہ سے روکتے ہیں [1]۔\n\nانہوں نے ایمان لایا پھر کفر کیا، چنانچہ ان کے دلوں پر مہر لگا دی گئی؛ مجمع البیان اسے زبان سے اسلام کا اقرار اور دل کے انکار کے طور پر پڑھتا ہے [2]۔ ان کے جسم اور روانِ گفتار سننے والے پر اثر ڈالتے ہیں، مگر یہ دیوار سے ٹیکی ہوئی خشک لکڑیوں کی مانند ہیں جو سمجھ بوجھ سے خالی ہیں، اور خوف کے مارے ہر آواز کو اپنے خلاف سمجھتے ہیں۔ یہ دشمن ہیں، اور نبی صلی اللہ علیہ وآلہ وسلم کو ان سے ہوشیار رہنے کا حکم دیا جاتا ہے۔\n\nجب انہیں بلایا جاتا ہے تاکہ رسول ان کے لیے مغفرت کی دعا کریں تو وہ غرور میں آ کر اپنے سر پھیر لیتے ہیں، اور مغفرت انہیں کوئی فائدہ نہ دے گی۔ وہ اپنے پیروکاروں کو کہتے ہیں کہ رسول کے ساتھیوں پر خرچ نہ کرو تاکہ غریب منتشر ہو جائیں، حالانکہ آسمانوں اور زمین کے خزانے اللہ کے ہیں۔ آخر میں وہ یہ شیخی بگھارتے ہیں کہ شہر واپس جانے پر طاقتور کمزور کو نکال باہر کرے گا۔ مفسرین اس قائل کا نام عبداللہ ابن اُبَی ابن سلول بتاتے ہیں جس نے بنو مصطلق کی مہم میں 'طاقتور' سے خود کو اور 'کمزور' سے نبی صلی اللہ علیہ وآلہ وسلم کو مراد لیا تھا [3]۔ یہ حصہ اس شیخی کو رد کر کے ختم ہوتا ہے: تمام عزت اللہ، اس کے رسول اور اہلِ ایمان کی ہے۔"
+    },
+    "verses": [
+      {
+        "verse": 1,
+        "heading": {
+          "en": "Their witness called a lie",
+          "ur": "ان کی گواہی کو جھوٹا قرار دیا گیا"
+        },
+        "note": {
+          "en": "Their testimony is true in its words, yet Allah calls them liars, since they do not believe in their hearts what their tongues declare.",
+          "ur": "ان کی گواہی کے الفاظ درست ہیں، مگر اللہ انہیں جھوٹا کہتا ہے، کیونکہ ان کی زبانیں جو اقرار کرتی ہیں ان کے دل اسے نہیں مانتے۔"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": "Tawus al-Yamani",
+            "arabic": "قال له طاوس اليماني: أخبرني عن قوم شهدوا شهادة الحق و كانوا كاذبين؟ قال: المنافقون حين قالوا لرسول الله (صلى الله عليه و آله) { نَشْهَدُ إِنَّكَ لَرَسُولُ ٱللَّهِ وَٱللَّهُ يَعْلَمُ إِنَّكَ لَرَسُولُهُ وَٱللَّهُ يَشْهَدُ إِنَّ ٱلْمُنَافِقِينَ لَكَاذِبُونَ }",
+            "chain": "al-Tabrisi in al-Ihtijaj, from Abu Basir, from Abu Jafar Muhammad ibn Ali",
+            "text": {
+              "en": "Tawus al-Yamani asked about a people who bore witness to the truth yet were liars. He answered: the hypocrites, when they said to God's Messenger, 'We bear witness that you are the apostle of Allah,' while Allah bears witness that the hypocrites are liars.",
+              "ur": "طاوس یمانی نے ایسے لوگوں کے بارے میں سوال کیا جنہوں نے سچی گواہی دی مگر وہ جھوٹے تھے۔ آپ علیہ السلام نے فرمایا: منافقین، جب انہوں نے اللہ کے رسول صلی اللہ علیہ وآلہ وسلم سے کہا، 'ہم گواہی دیتے ہیں کہ آپ اللہ کے رسول ہیں'، جبکہ اللہ گواہی دیتا ہے کہ منافقین جھوٹے ہیں۔"
+            },
+            "source": "s9"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Kazim",
+            "addressee": null,
+            "arabic": "إِنَّ الله تَبَارَكَ وَتَعَالَى سَمَّى مَنْ لَمْ يَتَّبِعْ رَسُولَهُ فِي وَلايَةِ وَصِيِّهِ مُنَافِقِينَ وَجَعَلَ مَنْ جَحَدَ وَصِيَّهُ إِمَامَتَهُ كَمَنْ جَحَدَ مُحَمَّداً وَأَنْزَلَ بِذَلِكَ قُرْآناً فَقَالَ يَا مُحَمَّدُ إِذا جاءَكَ الْمُنافِقُونَ بِوَلايَةِ وَصِيِّكَ قالُوا نَشْهَدُ إِنَّكَ لَرَسُولُ الله",
+            "chain": "Ali ibn Muhammad, from certain of our companions, from Ibn Mahbub, from Muhammad ibn al-Fudayl, from Abu al-Hasan al-Madi",
+            "text": {
+              "en": "God named those who did not follow His Messenger in the wilaya of his successor 'hypocrites,' and treated whoever denied his successor's imamate as one who denied Muhammad. He revealed: 'O Muhammad, when the hypocrites, in the wilaya of your successor, come to you, they say, We bear witness that you are the apostle of Allah.'",
+              "ur": "اللہ نے ان لوگوں کو جنہوں نے اپنے رسول کی اطاعت ان کے وصی کی ولایت میں نہیں کی 'منافقین' کا نام دیا، اور جس نے آپ کے وصی کی امامت کا انکار کیا اسے محمد صلی اللہ علیہ وآلہ وسلم کا انکار کرنے والا ٹھہرایا۔ اور نازل فرمایا: 'اے محمد، جب منافقین آپ کے وصی کی ولایت کے بارے میں آپ کے پاس آتے ہیں تو کہتے ہیں: ہم گواہی دیتے ہیں کہ آپ اللہ کے رسول ہیں'۔"
+            },
+            "source": "s40"
+          },
+          {
+            "id": "n3",
+            "speaker": "Zayd ibn Arqam",
+            "addressee": null,
+            "arabic": "كنا مع رسول الله صلى الله عليه وآله وسلم في سفر … فسمعت عن عبد الله بن أبي السلول يقول: والله { لئن رجعنا إلى المدينة ليخرجن الأعز منها الأذل } … فجئت إلى رسول الله صلى الله عليه وآله و سلم فأخبرته … فأنزل الله تعالى سورة المنافقين … من أولها إلى آخرها وأنزل عذري وتصديقي",
+            "chain": "Abu al-Qasim al-Alawi, from Furat, by a connected chain, from Zayd ibn Arqam",
+            "text": {
+              "en": "We were with God's Messenger on a journey, and I heard Abdullah ibn Ubayy ibn Salul say, 'By God, when we return to Medina the mightier will drive out the lowlier.' I came to the Messenger and told him, and God sent down Surat al-Munafiqun from first to last, with my vindication.",
+              "ur": "ہم ایک سفر میں اللہ کے رسول صلی اللہ علیہ وآلہ وسلم کے ساتھ تھے، اور میں نے عبداللہ ابن اُبَی ابن سلول کو یہ کہتے سنا: 'اللہ کی قسم، جب ہم مدینہ واپس جائیں گے تو طاقتور کمزور کو نکال باہر کرے گا'۔ میں رسول صلی اللہ علیہ وآلہ وسلم کے پاس آیا اور انہیں بتایا، تب اللہ نے سورۂ منافقون شروع سے آخر تک نازل فرمائی، اور میری تصدیق بھی فرمائی۔"
+            },
+            "source": "s15"
+          }
+        ]
+      },
+      {
+        "verse": 4,
+        "heading": {
+          "en": "Dry logs propped up",
+          "ur": "ٹیکی ہوئی خشک لکڑیاں"
+        },
+        "note": {
+          "en": "Their imposing looks and fluent speech hide hearts empty of understanding; every alarm they take as aimed at them.",
+          "ur": "ان کا رعب دار ظاہر اور روانِ گفتار ایسے دلوں کو چھپاتے ہیں جو سمجھ بوجھ سے خالی ہیں؛ ہر خطرے کی آواز کو وہ اپنے خلاف سمجھتے ہیں۔"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "{ كأنهم خشب مسندة } يقول لا يسمعون ولا يعقلون قوله: { يحسبون كل صيحة عليهم } يعني: كل صوت",
+            "chain": "in the report of Abu al-Jarud, from Abu Jafar",
+            "text": {
+              "en": "Concerning 'as if they were dry logs propped up,' he said: they neither hear nor understand. And 'they suppose every cry is against them' means every sound.",
+              "ur": "'گویا وہ ٹیکی ہوئی خشک لکڑیاں ہیں' کے بارے میں فرمایا: یہ نہ سنتے ہیں نہ سمجھتے ہیں۔ اور 'وہ ہر آواز کو اپنے خلاف سمجھتے ہیں' کا مطلب ہے ہر آواز۔"
+            },
+            "source": "s7"
+          },
+          {
+            "id": "n5",
+            "speaker": "Imam Ali",
+            "addressee": "Sulaym ibn Qays",
+            "arabic": "وَإِنَّمَا أَتَاكُمُ الْحَدِيثُ مِنْ أَرْبَعَةٍ لَيْسَ لَهُمْ خَامِسٌ رَجُلٍ مُنَافِقٍ يُظْهِرُ الايمَانَ مُتَصَنِّعٍ بِالاسْلامِ لا يَتَأَثَّمُ وَلا يَتَحَرَّجُ أَنْ يَكْذِبَ عَلَى رَسُولِ الله (صَلَّى اللهُ عَلَيْهِ وَآلِه) مُتَعَمِّداً … وَقَدْ أَخْبَرَهُ الله عَنِ الْمُنَافِقِينَ بِمَا أَخْبَرَهُ وَوَصَفَهُمْ بِمَا وَصَفَهُمْ فَقَالَ عَزَّ وَجَلَّ وَإِذا رَأَيْتَهُمْ تُعْجِبُكَ أَجْسامُهُمْ وَإِنْ يَقُولُوا تَسْمَعْ لِقَوْلِهِمْ",
+            "chain": "Ali ibn Ibrahim ibn Hashim, from his father, from Hammad ibn Isa, from Ibrahim ibn Umar al-Yamani, from Aban ibn Abi Ayyash, from Sulaym ibn Qays al-Hilali",
+            "text": {
+              "en": "Hadith reaches you from only four kinds, with no fifth. The first is a hypocrite who shows faith and feigns Islam, not scrupling to lie against God's Messenger deliberately. God described such men: 'When you see them, their bodies impress you, and if they speak, you listen to their speech.'",
+              "ur": "حدیث تم تک صرف چار طرح کے لوگوں سے پہنچتی ہے، پانچویں کوئی نہیں۔ پہلا وہ منافق ہے جو ایمان کا اظہار کرتا اور اسلام کا بناوٹی لباس اوڑھتا ہے، اور اللہ کے رسول صلی اللہ علیہ وآلہ وسلم پر جان بوجھ کر جھوٹ باندھنے میں کوئی گناہ نہیں سمجھتا۔ اللہ نے ایسے لوگوں کو یوں بیان کیا: 'جب آپ انہیں دیکھتے ہیں تو ان کے جسم آپ کو متاثر کرتے ہیں، اور اگر وہ بولتے ہیں تو آپ ان کی بات کان لگا کر سنتے ہیں'۔"
+            },
+            "source": "s42"
+          }
+        ]
+      },
+      {
+        "verse": 6,
+        "heading": {
+          "en": "Forgiveness will not avail",
+          "ur": "مغفرت کام نہ آئے گی"
+        },
+        "note": {
+          "en": "This echoes 9:80: even repeated pleas for forgiveness will not avail them, because they persist in hypocrisy.",
+          "ur": "یہ 9:80 کی بازگشت ہے: بار بار مغفرت کی دعا بھی انہیں کوئی فائدہ نہ دے گی، کیونکہ وہ نفاق پر قائم ہیں۔"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "إن الله تعالى قال لمحمد (صلى الله عليه و آله): { إِن تَسْتَغْفِرْ لَهُمْ سَبْعِينَ مَرَّةً فَلَن يَغْفِرَ ٱللَّهُ لَهُمْ } … فاستغفر لهم مائة مرة ليغفر لهم فأنزل الله: { سَوَآءٌ عَلَيْهِمْ أَسْتَغْفَرْتَ لَهُمْ أَمْ لَمْ تَسْتَغْفِرْ لَهُمْ لَن يَغْفِرَ ٱللَّهُ لَهُمْ }",
+            "chain": "al-Ayyashi, from al-Abbas ibn Hilal, from Abu al-Hasan al-Rida",
+            "text": {
+              "en": "God had told Muhammad, 'Even if you seek forgiveness for them seventy times, Allah will not forgive them.' So he sought forgiveness for them a hundred times, hoping they would be forgiven. Then God sent down: 'It is the same whether you plead forgiveness for them or not; Allah will never forgive them.'",
+              "ur": "اللہ نے محمد صلی اللہ علیہ وآلہ وسلم سے فرمایا تھا: 'اگر آپ ستر بار بھی ان کے لیے مغفرت مانگیں تو اللہ انہیں ہرگز نہیں بخشے گا'۔ چنانچہ آپ نے اس امید پر کہ انہیں معاف کر دیا جائے سو بار ان کے لیے مغفرت مانگی۔ تب اللہ نے نازل فرمایا: 'یہ برابر ہے چاہے آپ ان کے لیے مغفرت مانگیں یا نہ مانگیں؛ اللہ انہیں ہرگز معاف نہیں کرے گا'۔"
+            },
+            "source": "s11"
+          }
+        ]
+      },
+      {
+        "verse": 8,
+        "heading": {
+          "en": "All might belongs to God",
+          "ur": "تمام عزت اللہ ہی کی ہے"
+        },
+        "note": {
+          "en": "Their boast is answered at once: all might belongs to Allah, His Apostle, and the faithful, not to those who imagine it theirs.",
+          "ur": "ان کی شیخی کا فوری جواب دیا گیا: تمام عزت اللہ، اس کے رسول اور اہلِ ایمان کی ہے، نہ ان کی جو اسے اپنا خیال کرتے ہیں۔"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إن الله عز و جل فوض إلى المؤمن أموره كلها، و لم يفوض إليه أن يذل نفسه، ألم تسمع لقول الله عز و جل: { وَلِلَّهِ ٱلْعِزَّةُ وَلِرَسُولِهِ وَلِلْمُؤْمِنِينَ } ، فالمؤمن ينبغي أن يكون عزيزا و لا يكون ذليلا، يعزه الله بالإيمان و الإسلام",
+            "chain": "a number of our companions, from Ahmad ibn Muhammad, from Uthman ibn Isa, from Samaa",
+            "text": {
+              "en": "God has entrusted the believer with all his affairs, but has not entrusted him with debasing himself. Have you not heard God's words, 'All might belongs to Allah and His Apostle and the faithful'? The believer ought to be mighty and not lowly; Allah gives him might through faith and Islam.",
+              "ur": "اللہ نے مومن کو اس کے تمام معاملات میں اختیار دیا ہے، مگر اسے اپنے آپ کو ذلیل کرنے کا اختیار نہیں دیا۔ کیا آپ نے اللہ کا یہ ارشاد نہیں سنا: 'تمام عزت اللہ، اس کے رسول اور اہلِ ایمان کی ہے'؟ مومن کے لیے لازم ہے کہ وہ عزت دار ہو، ذلیل نہ ہو؛ اللہ اسے ایمان اور اسلام کے ذریعے عزت عطا کرتا ہے۔"
+            },
+            "source": "s12"
+          },
+          {
+            "id": "n8",
+            "speaker": "Imam al-Hasan",
+            "addressee": null,
+            "arabic": "قال رجل للحسن (عليه السلام): إن فيك كبرا، فقال: كلا، الكبر لله وحده، و لكن في عزة، قال الله عز و جل: { وَلِلَّهِ ٱلْعِزَّةُ وَلِرَسُولِهِ وَلِلْمُؤْمِنِينَ }",
+            "chain": "Muhammad ibn al-Abbas, from Abu al-Azhar, from al-Zubayr ibn Bakkar, from one of his companions",
+            "text": {
+              "en": "A man said to al-Hasan, 'There is pride in you.' He replied: Not at all; pride belongs to Allah alone, but in me there is might. Allah has said, 'All might belongs to Allah and His Apostle and the faithful.'",
+              "ur": "ایک شخص نے حسن علیہ السلام سے کہا: 'آپ میں تکبر ہے'۔ آپ نے فرمایا: ہرگز نہیں؛ تکبر اکیلے اللہ ہی کے لیے ہے، مگر مجھ میں عزت ہے۔ اللہ نے فرمایا ہے: 'تمام عزت اللہ، اس کے رسول اور اہلِ ایمان کی ہے'۔"
+            },
+            "source": "s12"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On the plain sense the two traditions agree. Sunni commentators such as Ibn Kathir hold that the whole passage was revealed about Abdullah ibn Ubayy and the Medinan hypocrites, who profess Islam outwardly while being its opposite within [25]. The Shia narrators preserve that same occasion, but add a further layer: a report from Imam al-Kazim in al-Kafi reads the 'hypocrites' here as those who withheld allegiance to the wilaya of Ali, and 'the way of Allah' as the Prophet's appointed successor, so that denying the successor is set beside denying Muhammad himself [40].",
+      "ur": "ظاہری معنی میں دونوں روایات متفق ہیں۔ ابن کثیر جیسے سنی مفسرین کا موقف ہے کہ یہ پورا حصہ عبداللہ ابن اُبَی اور مدینے کے منافقین کے بارے میں نازل ہوا، جو ظاہری طور پر اسلام کا اقرار کرتے تھے مگر اندر سے اس کی ضد تھے [25]۔ شیعہ راویان اسی واقعے کو محفوظ رکھتے ہیں، مگر ایک اور پرت بھی اضافہ کرتے ہیں: الکافی میں امام موسیٰ کاظم علیہ السلام کی ایک روایت یہاں 'منافقین' کو ان لوگوں کے طور پر پڑھتی ہے جنہوں نے علی علیہ السلام کی ولایت کی بیعت نہیں کی، اور 'اللہ کی راہ' سے مراد نبی صلی اللہ علیہ وآلہ وسلم کے منتخب جانشین ہیں، یوں وصی کے انکار کو محمد صلی اللہ علیہ وآلہ وسلم کے انکار کے برابر قرار دیا گیا [40]۔"
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Munaafiqoon 1 to 8",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=63&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فهم كاذبون في قولهم كذباً مخبرياً لا خبرياً فقوله { والله يشهد إن المنافقين لكاذبون } أُريد به الكذب المخبري لا الخبري"
+        },
+        "gloss": "So they are liars in their speech in a reporter's sense, not a statement's sense; 'Allah bears witness that the hypocrites are liars' means the reporter's lie, not the statement's."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Munaafiqoon 1 to 5",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=63&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي هذا دلالة على أن حقيقة الإِيمان إنما هو بالقلب ومن قال شيئاً واعتقد خلافه فهو كاذب"
+        },
+        "gloss": "This shows that the reality of faith is in the heart, and whoever says a thing while believing its opposite is a liar."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Munaafiqoon 6 to 8",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=63&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ ليخرجن الأعز } يعنون نفوسهم { منها الأذل } يعنون رسول الله صلى الله عليه وسلم والمؤمنين"
+        },
+        "gloss": "'the mighty will expel' - they mean themselves - 'the weak from it' - they mean God's Messenger and the believers."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Munaafiqoon 1 to 5",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=63&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وكان إكذابهم فى اعتقادهم وأنهم يشهدون ذلك بقلوبهم ولم يكونوا فيما يرجع الى ألسنتهم"
+        },
+        "gloss": "Their being charged with lying is about their belief, that they attest it in their hearts, not about what pertains to their tongues."
+      },
+      {
+        "id": "s7",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Munaafiqoon 4",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=63&tAyahNo=4&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ كأنهم خشب مسندة } يقول لا يسمعون ولا يعقلون"
+        },
+        "gloss": "'as if they were dry logs propped up' - he says: they neither hear nor understand."
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Munaafiqoon 1 to 3",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=63&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "المنافقون حين قالوا لرسول الله (صلى الله عليه و آله) { نَشْهَدُ إِنَّكَ لَرَسُولُ ٱللَّهِ وَٱللَّهُ يَعْلَمُ إِنَّكَ لَرَسُولُهُ وَٱللَّهُ يَشْهَدُ إِنَّ ٱلْمُنَافِقِينَ لَكَاذِبُونَ }"
+        },
+        "gloss": "[They are] the hypocrites, when they said to God's Messenger, 'We bear witness that you are the apostle of Allah... and Allah bears witness that the hypocrites are liars.'"
+      },
+      {
+        "id": "s11",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Munaafiqoon 6",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=63&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فاستغفر لهم مائة مرة ليغفر لهم فأنزل الله: { سَوَآءٌ عَلَيْهِمْ أَسْتَغْفَرْتَ لَهُمْ أَمْ لَمْ تَسْتَغْفِرْ لَهُمْ لَن يَغْفِرَ ٱللَّهُ لَهُمْ }"
+        },
+        "gloss": "He sought forgiveness for them a hundred times that they might be forgiven, so God sent down: 'It is the same for them whether you plead forgiveness for them or not; Allah will never forgive them.'"
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Munaafiqoon 8",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=63&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إن الله عز و جل فوض إلى المؤمن أموره كلها، و لم يفوض إليه أن يذل نفسه"
+        },
+        "gloss": "God has entrusted the believer with all his affairs, but has not entrusted him with debasing himself."
+      },
+      {
+        "id": "s15",
+        "kind": "hadith",
+        "work": "Tafsir Furat al-Kufi",
+        "author": "Furat ibn Ibrahim al-Kufi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Munaafiqoon 8",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=45&tSoraNo=63&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فسمعت عن عبد الله بن أبي السلول يقول: والله { لئن رجعنا إلى المدينة ليخرجن الأعز منها الأذل }"
+        },
+        "gloss": "I heard Abdullah ibn Ubayy ibn Salul say, 'By God, when we return to Medina the mighty will drive out the lowly.'"
+      },
+      {
+        "id": "s25",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Munaafiqoon 5 to 8",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=63&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقد ذكر غير واحد من السلف أن هذا السياق كله نزل في عبد الله بن أبي ابن سلول"
+        },
+        "gloss": "More than one of the early authorities mentioned that this entire passage was revealed about Abdullah ibn Ubayy ibn Salul."
+      },
+      {
+        "id": "s40",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 88, cited at Al-Munaafiqoon 2",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "إِنَّ الله تَبَارَكَ وَتَعَالَى سَمَّى مَنْ لَمْ يَتَّبِعْ رَسُولَهُ فِي وَلايَةِ وَصِيِّهِ مُنَافِقِينَ وَجَعَلَ مَنْ جَحَدَ وَصِيَّهُ إِمَامَتَهُ كَمَنْ جَحَدَ مُحَمَّداً"
+        },
+        "gloss": "God named those who did not follow His Messenger in the wilaya of his successor 'hypocrites,' and made whoever denied his successor's imamate like one who denied Muhammad."
+      },
+      {
+        "id": "s42",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 1, cited at Al-Munaafiqoon 4",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "ضعيف على المشهور ومعتبر عند ي",
+          "لم يخرجه"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "رَجُلٍ مُنَافِقٍ يُظْهِرُ الايمَانَ مُتَصَنِّعٍ بِالاسْلامِ لا يَتَأَثَّمُ وَلا يَتَحَرَّجُ أَنْ يَكْذِبَ عَلَى رَسُولِ الله (صَلَّى اللهُ عَلَيْهِ وَآلِه) مُتَعَمِّداً"
+        },
+        "gloss": "A hypocrite who shows faith and feigns Islam, not scrupling to lie against God's Messenger deliberately."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T04:23:55Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T05:00:49Z",
+      "assembled_at": "2026-10-06T05:01:16Z"
+    }
+  },
+  "2": {
+    "id": "63:2",
+    "surah": 63,
+    "index": 2,
+    "range": [
+      9,
+      11
+    ],
+    "title": {
+      "en": "Remembrance and charity before death",
+      "ur": "موت سے پہلے ذکر اور صدقہ"
+    },
+    "essay": {
+      "en": "Surah al-Munafiqun closes by turning from the hypocrites to the believers. Verse 9 warns them not to let their wealth and children distract them from the remembrance of God, and names whoever does so a loser. al-Mizan reads the three verses as a caution against the very traits that breed hypocrisy: being absorbed in wealth and children, and withholding one's money [1]. By 'remembrance of God' Majma al-Bayan understands the five obligatory prayers [2], while al-Tibyan glosses 'distract' as 'to keep you busy' and reports the remembrance as praise, thanks and glorifying God [3]. Verse 10 commands the believers to spend from what God has provided before death arrives. al-Tibyan takes this spending as the obligatory dues - zakat, jihad, hajj and expiations [3]. The verse then voices the dying man's plea: 'My Lord, why did You not respite me for a short time so that I could give charity and become one of the righteous.' Majma al-Bayan says no verse warns more sharply against neglecting the dues of God than this one [2]. Verse 11 shuts that door: Allah will never respite anyone once his time has come. al-Mizan explains that the appointed term belongs to the decree that cannot be put off, so the plea to delay it goes unanswered [1]. The surah ends on the reminder that God is fully aware of what His servants do - a reason to give now rather than to wish, too late, for more time.",
+      "ur": "سورۂ منافقون کے آخری حصے میں توجہ منافقوں سے مومنین کی طرف مبذول ہوتی ہے۔ آیت نمبر ۹ مومنین کو خبردار کرتی ہے کہ مال اور اولاد انہیں ذکرِ خدا سے غافل نہ کر دیں، اور جو ایسا کرے اسے خسارے میں قرار دیتی ہے۔ المیزان ان تین آیات کو ان خصلتوں کے خلاف تنبیہ کے طور پر پڑھتا ہے جو نفاق کی جڑ ہیں: مال اور اولاد میں مگن رہنا اور اپنا مال روکے رکھنا [1]۔ مجمع البیان کے نزدیک \"ذکرِ خدا\" سے مراد پانچ فرض نمازیں ہیں [2]، جبکہ التبیان \"مشغول کرنے\" کو \"تمہیں مصروف رکھنا\" کے معنی میں لیتا ہے اور ذکر کو حمد، شکر اور تسبیح قرار دیتا ہے [3]۔ آیت نمبر ۱۰ مومنین کو حکم دیتی ہے کہ موت آنے سے پہلے اللہ نے جو رزق دیا ہے اس میں سے خرچ کریں۔ التبیان اس خرچ کو واجب ادائیگیوں - زکوٰۃ، جہاد، حج اور کفاروں - پر محمول کرتا ہے [3]۔ پھر آیت ایک مرتے ہوئے انسان کی فریاد کی ترجمانی کرتی ہے: \"اے میرے رب، تو نے مجھے تھوڑی مہلت کیوں نہ دی تاکہ میں صدقہ دیتا اور نیکوکاروں میں شامل ہو جاتا۔\" مجمع البیان کہتا ہے کہ اللہ کے حقوق کی ادائیگی میں کوتاہی کے بارے میں اس سے زیادہ سخت تنبیہ کرنے والی کوئی آیت نہیں [2]۔ آیت نمبر ۱۱ یہ دروازہ بند کر دیتی ہے: جب کسی کی مقررہ مدت آ جائے تو اللہ اسے ہرگز مہلت نہیں دیتا۔ المیزان وضاحت کرتا ہے کہ مقررہ اجل اس فیصلے کا حصہ ہے جسے ٹالا نہیں جا سکتا، اس لیے مہلت کی درخواست بے نتیجہ رہتی ہے [1]۔ سورہ اس یاددہانی پر ختم ہوتی ہے کہ اللہ اپنے بندوں کے اعمال سے پوری طرح باخبر ہے - یہ اس بات کی وجہ ہے کہ ابھی دیں، نہ کہ بعد میں وقت زیادہ ملنے کی تمنا کریں۔"
+    },
+    "verses": [
+      {
+        "verse": 10,
+        "heading": {
+          "en": "Spend before death",
+          "ur": "موت سے پہلے خرچ کرو"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "سئل عن قول الله عز و جل: { فَأَصَّدَّقَ وَأَكُن مِّنَ ٱلصَّالِحِينَ } … { فَأَصَّدَّقَ } من الصدقة { وَأَكُن مِّنَ ٱلصَّالِحِينَ } أي أحج",
+            "chain": null,
+            "text": {
+              "en": "He was asked about the words 'so that I could give charity and become one of the righteous.' He said: 'give charity' is from almsgiving, and 'become one of the righteous' means that I would perform the hajj.",
+              "ur": "آپ علیہ السلام سے ان الفاظ کے بارے میں پوچھا گیا: \"تاکہ میں صدقہ دیتا اور نیکوکاروں میں شامل ہو جاتا۔\" آپ علیہ السلام نے فرمایا: \"صدقہ دیتا\" صدقے سے ہے، اور \"نیکوکاروں میں شامل ہو جاتا\" سے مراد یہ ہے کہ میں حج کرتا۔"
+            },
+            "source": "s6"
+          },
+          {
+            "id": "n2",
+            "speaker": "Ibn Abbas",
+            "addressee": null,
+            "arabic": "ما من أحد يموت و كان له مال فلم يؤد زكاته، و أطاق فلم يحج، إلا سأل الله الرجعة عن الموت … و روي ذلك عن أبي عبد الله (عليه السلام)",
+            "chain": null,
+            "text": {
+              "en": "No one dies possessing wealth whose zakat he did not pay, and able to perform the hajj yet did not, except that he asks God to be returned at the hour of death. This is also related from Imam al-Sadiq.",
+              "ur": "جو شخص بھی ایسی حالت میں مرے کہ اس کے پاس مال ہو لیکن اس نے اس کی زکوٰۃ ادا نہ کی ہو، اور حج کی استطاعت ہونے کے باوجود حج نہ کیا ہو، تو وہ موت کے وقت اللہ سے واپسی کا سوال کرتا ہے۔ یہ روایت امام صادق علیہ السلام سے بھی منقول ہے۔"
+            },
+            "source": "s6"
+          }
+        ]
+      },
+      {
+        "verse": 11,
+        "heading": {
+          "en": "The term cannot be delayed",
+          "ur": "مقررہ مدت ٹل نہیں سکتی"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "إن عند الله كتباً مرقومة يقدم منها ما يشاء ويؤخر ما يشاء فإذا كان ليلة القدر أنزل الله فيها كل شيء يكون إلى ليلة مثلها فذلك قوله: { ولن يؤخر الله نفساً إذا جاء أجلها } إذا أنزله وكتبه كتاب السماوات وهو الذي لا يؤخره",
+            "chain": "Ahmad ibn Idris, from Ahmad ibn Muhammad, from al-Husayn ibn Said, from al-Nadr ibn Suwayd, from Yahya al-Halabi, from Harun ibn Kharija, from Abu Basir, from Abu Jafar",
+            "text": {
+              "en": "With God are inscribed books, from which He advances what He wills and defers what He wills. On the Night of Ordainment He sends down everything that will be until the like of that night. That is His word that He will never respite anyone once its term has come.",
+              "ur": "اللہ کے پاس لکھی ہوئی کتابیں ہیں، جن میں سے وہ جسے چاہتا ہے آگے کرتا ہے اور جسے چاہتا ہے پیچھے کرتا ہے۔ شبِ قدر کو اللہ وہ سب کچھ نازل فرماتا ہے جو اگلی ایسی ہی رات تک ہونا ہے۔ یہی اس کا وہ فرمان ہے کہ جب کسی کی مقررہ مدت آ جائے تو وہ اسے ہرگز مہلت نہیں دے گا۔"
+            },
+            "source": "s5"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "The two traditions agree on the plain sense of the passage, but draw different lessons from the dying plea in verses 10 and 11. al-Tusi finds in that plea proof that a person's power to act precedes the act, and that God does not create disbelief or hypocrisy in anyone, for otherwise the wish to be returned would carry no meaning [3]. Ibn Kathir reads God's refusal of respite differently: God grants no delay, for He knows which pleader is truthful and which, if sent back, would only return to something worse than before [10].",
+      "ur": "دونوں روایتی مکاتبِ فکر اس گزرگاہ کے ظاہری مفہوم پر متفق ہیں، لیکن آیات ۱۰ اور ۱۱ میں مرتے ہوئے انسان کی فریاد سے مختلف سبق اخذ کرتے ہیں۔ شیخ طوسی اس فریاد میں اس بات کی دلیل دیکھتے ہیں کہ انسان کی عمل کرنے کی قدرت عمل سے پہلے ہوتی ہے، اور اللہ کسی میں کفر یا نفاق پیدا نہیں کرتا، ورنہ واپسی کی تمنا کا کوئی مطلب نہ ہوتا [3]۔ ابن کثیر اللہ کے مہلت نہ دینے کو مختلف انداز سے پڑھتے ہیں: اللہ کوئی تاخیر نہیں کرتا، کیونکہ وہ جانتا ہے کہ کون سا درخواست گزار سچا ہے اور کون اگر واپس بھیجا جائے تو پہلے سے بھی بری حالت میں لوٹے گا [10]۔"
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Munaafiqoon 9 to 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=63&tAyahNo=9&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "بيان تنبيه للمؤمنين أن يتجنبوا عن بعض الصفات التي تورث النفاق وهو التلهّي بالمال والأولاد والبخل."
+        },
+        "gloss": "An exposition: a warning to the believers to avoid some of the traits that breed hypocrisy - absorption in wealth and children, and miserliness."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Munaafiqoon 9 to 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=63&tAyahNo=9&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ أموالكم ولا أولادكم عن ذكر الله } أي عن الصلوات الخمس المفروضة"
+        },
+        "gloss": "'your possessions and your children, from the remembrance of God' means from the five obligatory prayers."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Munaafiqoon 9 to 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=63&tAyahNo=9&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ثم أمرهم بأن ينفقوا مما رزقهم الله فيما تجب عليهم النفقة فيه من الزكاة والجهاد والحج والكفارات وغير ذلك من الواجبات."
+        },
+        "gloss": "Then He commanded them to spend from what God provided them on what they are obliged to spend upon - zakat, jihad, hajj, expiations and other obligations."
+      },
+      {
+        "id": "s5",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Munaafiqoon 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=63&tAyahNo=11&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إن عند الله كتباً مرقومة يقدم منها ما يشاء ويؤخر ما يشاء فإذا كان ليلة القدر أنزل الله فيها كل شيء يكون إلى ليلة مثلها"
+        },
+        "gloss": "With God are inscribed books, from which He advances what He wills and defers what He wills; and on the Night of Ordainment He sends down everything that will be until the like of that night."
+      },
+      {
+        "id": "s6",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Munaafiqoon 10 to 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=63&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ فَأَصَّدَّقَ } من الصدقة { وَأَكُن مِّنَ ٱلصَّالِحِينَ } أي أحج"
+        },
+        "gloss": "'so that I could give charity' is from almsgiving, and 'become one of the righteous' means: I would perform the hajj."
+      },
+      {
+        "id": "s10",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Munaafiqoon 9 to 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=63&tAyahNo=9&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لا ينظر أحداً بعد حلول أجله، وهو أعلم وأخبر بمن يكون صادقاً في قوله وسؤاله، ممن لو رد لعاد إلى شر مما كان عليه"
+        },
+        "gloss": "He grants no one respite after his term arrives, and He knows best who is truthful in his plea and who, if returned, would only revert to worse than he was."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T04:16:11Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-10-06T04:56:26Z",
+      "assembled_at": "2026-10-06T05:01:16Z"
+    }
+  }
+}

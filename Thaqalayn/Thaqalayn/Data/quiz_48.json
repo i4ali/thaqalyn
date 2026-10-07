@@ -1,0 +1,646 @@
+{
+  "1": {
+    "id": "48:1",
+    "surah": 48,
+    "index": 1,
+    "range": [
+      1,
+      10
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 1,
+        "prompt": {
+          "en": "According to the essay, what historical event is the clear victory announced in the surah's opening verse?"
+        },
+        "options": [
+          {
+            "en": "The truce of Hudaybiyya"
+          },
+          {
+            "en": "The conquest of Mecca"
+          },
+          {
+            "en": "The conquest of Khaybar"
+          },
+          {
+            "en": "The entry into the Sacred Mosque"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the Shia commentators read this clear victory as the truce of Hudaybiyya, agreed in the sixth year after the migration, when Quraysh turned the Prophet back from the Sacred Mosque."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The Shia commentators read this victory as the truce of Hudaybiyya, concluded in the sixth year after the migration"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 1,
+        "prompt": {
+          "en": "Tafsir al-Qummi ties the surah's revelation to that expedition, which began with a ____ commanding the Prophet to enter the sanctuary."
+        },
+        "options": [
+          {
+            "en": "vow"
+          },
+          {
+            "en": "dream"
+          },
+          {
+            "en": "letter"
+          },
+          {
+            "en": "sign"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the expedition began with a dream in which the Prophet was commanded to enter the sanctuary, a detail Tafsir al-Qummi ties to the surah's revelation."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tafsir al-Qummi ties the surah's revelation to that expedition, which began with a dream commanding the Prophet to enter the sanctuary"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 2,
+        "prompt": {
+          "en": "\"He had no sin, nor did he even intend a sin; but God loaded upon him the sins of his Shia and then forgave them for him.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Glossing the forgiven sin, Imam al-Sadiq said the Prophet had no sin and never even intended one; rather God loaded his Shia's sins upon him and then forgave them for his sake."
+        },
+        "anchor": {
+          "where": "verses.2.narrations.n2",
+          "quote": "He had no sin, nor did he even intend a sin; but God loaded upon him the sins of his Shia and then forgave them for him"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 6,
+        "prompt": {
+          "en": "According to the passage, those who rejected the treaty and accused the Messenger are read as the hypocrites and polytheists who think ill of Allah."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note reads the hypocrites and polytheists who think ill of Allah as those who rejected the treaty and accused the Messenger, so the claim holds."
+        },
+        "anchor": {
+          "where": "verses.6.note",
+          "quote": "the hypocrites and polytheists who think ill of Allah are read as those who rejected the treaty and accused the Messenger"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 10,
+        "prompt": {
+          "en": "According to the essay, how do the commentators identify the allegiance sworn to the Prophet in the surah's final verse?"
+        },
+        "options": [
+          {
+            "en": "The conquest of Mecca"
+          },
+          {
+            "en": "The oath of the Ansar at Aqaba"
+          },
+          {
+            "en": "The believers' promised entry into the gardens"
+          },
+          {
+            "en": "The Pledge of Ridwan"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay says the commentators identify the final verse's allegiance, sworn to the Prophet, as the Pledge of Ridwan, declaring that the hand of Allah is above the pledgers' hands."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The commentators identify this as the Pledge of Ridwan sworn at Hudaybiyya"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-04T19:45:23Z",
+      "review_attempts": 2,
+      "reviewed_at": "2026-10-04T19:46:30Z",
+      "assembled_at": "2026-10-04T19:46:51Z"
+    }
+  },
+  "2": {
+    "id": "48:2",
+    "surah": 48,
+    "index": 2,
+    "range": [
+      11,
+      17
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 11,
+        "prompt": {
+          "en": "The Bedouins pleaded that their possessions and families had kept them busy. How does the essay explain their real motive?"
+        },
+        "options": [
+          {
+            "en": "Confidence that the Prophet would return safely"
+          },
+          {
+            "en": "Reluctance to take part in armed struggle"
+          },
+          {
+            "en": "A command from Allah to remain in Medina"
+          },
+          {
+            "en": "Anger at being left out of the booty"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay cites Tusi that the real cause was reluctance for armed struggle, whatever the Bedouins pleaded about their possessions and families."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tusi notes the real cause was reluctance for armed struggle, whatever they pleaded"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 12,
+        "prompt": {
+          "en": "Tabatabai finds it likely this suspicion was that Allah would not ____, as in verse 6."
+        },
+        "options": [
+          {
+            "en": "help His Messenger"
+          },
+          {
+            "en": "forgive the Bedouins"
+          },
+          {
+            "en": "accept their excuse"
+          },
+          {
+            "en": "punish the faithless"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reports Tabatabai's view that the Bedouins' suspicion was likely that Allah would not help His Messenger, the same evil thought named in verse 6."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai finds it likely this suspicion was that Allah would not help His Messenger, as in verse 6"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 13,
+        "prompt": {
+          "en": "In the narration from Imam al-Baqir, what becomes obligatory upon whoever has faith in Allah and His messenger and follows him?"
+        },
+        "options": [
+          {
+            "en": "Making the pilgrimage to Makkah"
+          },
+          {
+            "en": "Fighting the Bedouins who stayed behind"
+          },
+          {
+            "en": "Knowing the Imam from the Prophet's household"
+          },
+          {
+            "en": "Freeing a believing slave"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Baqir told Zurara that whoever has faith in Allah and His messenger and follows him must then know the Imam from his household."
+        },
+        "anchor": {
+          "where": "verses.13.narrations.n1",
+          "quote": "Whoever has faith in Allah and in Muhammad as Allah's messenger, and follows and affirms him, upon that person knowing the Imam from us is obligatory"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 14,
+        "prompt": {
+          "en": "According to the passage, the warning that a blaze awaits the faithless leaves them no opening to repent."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the owner of the heavens and the earth seals the warning with the names all-forgiving and all-merciful, which it reads as an opening to repent."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the owner of the heavens and the earth seals the warning with the names all-forgiving, all-merciful, an opening to repent"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 16,
+        "prompt": {
+          "en": "According to the perspectives, what do both Qurtubi and the Shia commentators agree verse 16 foretells for the Bedouins?"
+        },
+        "options": [
+          {
+            "en": "They would later be called to fight a people of great might"
+          },
+          {
+            "en": "They would be forgiven as soon as they repented"
+          },
+          {
+            "en": "They would be barred from every future campaign"
+          },
+          {
+            "en": "They would be given the spoils of Hudaybiyyah"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives says both read verse 16 as foretelling the Bedouins being summoned against a people of great might; they differ only on who issues that summons."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Verse 16 foretells the Bedouins being summoned against a people of great might"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-04T18:24:24Z",
+      "review_attempts": 2,
+      "reviewed_at": "2026-10-04T18:25:25Z",
+      "assembled_at": "2026-10-04T18:33:16Z"
+    }
+  },
+  "3": {
+    "id": "48:3",
+    "surah": 48,
+    "index": 3,
+    "range": [
+      18,
+      26
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 18,
+        "prompt": {
+          "en": "The passage identifies the near victory that followed the pledge under the tree as the conquest of Khaybar."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Al-Tusi notes that the transmitters do not dispute that the victory near at hand, which came right after the pledge, was the conquest of Khaybar."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tusi notes that the transmitters do not dispute that this victory, coming right after the pledge, was the conquest of Khaybar"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 20,
+        "prompt": {
+          "en": "In the essay, whom does al-Tabrisi identify as those whose hands Allah held back from raiding the Muslims' families in Medina?"
+        },
+        "options": [
+          {
+            "en": "The tribes of Asad and Ghatafan"
+          },
+          {
+            "en": "The Quraysh at the valley of Mecca"
+          },
+          {
+            "en": "The faithless who would have fought the believers"
+          },
+          {
+            "en": "The believers hidden among the Meccans"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Allah held back the hands of others, whom al-Tabrisi identifies as the tribes of Asad and Ghatafan, who had meant to raid the Muslims' families in Medina."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "held back the hands of others, whom al-Tabrisi identifies as the tribes of Asad and Ghatafan, who had meant to raid the Muslims' families in Medina"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 25,
+        "prompt": {
+          "en": "So too our Qa'im will not rise until God's ____ come forth."
+        },
+        "options": [
+          {
+            "en": "soldiers"
+          },
+          {
+            "en": "deposits"
+          },
+          {
+            "en": "signs"
+          },
+          {
+            "en": "spoils"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The narration calls the believers hidden in the loins of disbelievers God's deposits, and says the Qa'im will not rise until those deposits come forth, as Ali once waited."
+        },
+        "anchor": {
+          "where": "verses.25.narrations.n3",
+          "quote": "So too our Qa'im will not rise until God's deposits come forth"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 26,
+        "prompt": {
+          "en": "\"Asked about the word of Godwariness ... he said: It is the wilaya of the Commander of the Faithful.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Rida, asked about the word of Godwariness, glossed it as the wilaya of the Commander of the Faithful."
+        },
+        "anchor": {
+          "where": "verses.26.narrations.n5",
+          "quote": "It is the wilaya of the Commander of the Faithful"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 26,
+        "prompt": {
+          "en": "According to the essay, what does al-Qummi connect the bigotry of pagan ignorance to?"
+        },
+        "options": [
+          {
+            "en": "Quraysh barring the believers from the Sacred Mosque"
+          },
+          {
+            "en": "Quraysh keeping the offering from reaching its destination"
+          },
+          {
+            "en": "The faithless turning their backs in battle"
+          },
+          {
+            "en": "Quraysh and Suhayl refusing to write two phrases in the treaty"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay closes with al-Qummi tying the bigotry of pagan ignorance to Quraysh and Suhayl refusing to write 'the All-beneficent' and 'Messenger of Allah' in the treaty."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "al-Qummi ties this to Quraysh and Suhayl refusing to write 'the All-beneficent' and 'Messenger of Allah' in the treaty"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-04T18:27:33Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-04T18:28:56Z",
+      "assembled_at": "2026-10-04T18:33:16Z"
+    }
+  },
+  "4": {
+    "id": "48:4",
+    "surah": 48,
+    "index": 4,
+    "range": [
+      27,
+      29
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 27,
+        "prompt": {
+          "en": "\"When they ask you, 'Are you believers?' say: Yes, God willing. We did not make the exception out of doubt.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Kazim"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked how to answer when called believers, Imam al-Sadiq told them to say Yes, God willing, and said the exception was not out of doubt, since God knew they would enter."
+        },
+        "anchor": {
+          "where": "verses.27.narrations.n1",
+          "quote": "When they ask you, 'Are you believers?' say: Yes, God willing. We did not make the exception out of doubt"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 27,
+        "prompt": {
+          "en": "According to the essay, how did the verse of the true vision answer the hypocrites who objected after Hudaybiyya?"
+        },
+        "options": [
+          {
+            "en": "It confirmed the dream and promised the entry the following year"
+          },
+          {
+            "en": "It admitted the dream had not been a true vision"
+          },
+          {
+            "en": "It said the entry would come only when the Mahdi rises"
+          },
+          {
+            "en": "It promised a victory but cancelled the entry"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the Prophet saw the entry in a dream before Hudaybiyya; when the treaty sent the Muslims home, the hypocrites objected, and the verse confirmed the dream and promised entry the next year."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "when the treaty sent the Muslims home without entering, the hypocrites objected, and the verse confirmed the dream and promised the entry for the following year"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 28,
+        "prompt": {
+          "en": "He commanded His Messenger to the guardianship of the ____, and the guardianship is the true religion."
+        },
+        "options": [
+          {
+            "en": "believers"
+          },
+          {
+            "en": "two holy sanctuaries"
+          },
+          {
+            "en": "testamentary heir"
+          },
+          {
+            "en": "orphans"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked about the religion made to prevail, Imam al-Kazim said God commanded His Messenger to the guardianship of the testamentary heir, and that guardianship is itself the true religion."
+        },
+        "anchor": {
+          "where": "verses.28.narrations.n3",
+          "quote": "He commanded His Messenger to the guardianship of the testamentary heir, and the guardianship is the true religion."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 29,
+        "prompt": {
+          "en": "According to the narration, what is the mark on their faces 'from the effect of prostration'?"
+        },
+        "options": [
+          {
+            "en": "A visible callus on the forehead"
+          },
+          {
+            "en": "The glow of fasting in Ramadan"
+          },
+          {
+            "en": "A sign placed by the angels"
+          },
+          {
+            "en": "Staying awake at night in prayer"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Asked about the mark on their faces from the effect of prostration, the Imam said it is not a bodily mark but staying awake at night in prayer."
+        },
+        "anchor": {
+          "where": "verses.29.narrations.n4",
+          "quote": "'Their mark is on their faces, from the effect of prostration.' He said: it is staying awake at night in prayer"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 29,
+        "prompt": {
+          "en": "In the essay, the image of the tillage that grows stout is meant to comfort the faithless."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the flourishing tillage enrages the faithless rather than comforting them, so the statement is false; its stout growth that impresses the sowers is what angers those who reject."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the image of a tillage that sends out its shoots and grows stout, enraging the faithless, and a promise of forgiveness and a great reward"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-04T18:31:50Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-04T18:32:58Z",
+      "assembled_at": "2026-10-04T18:33:16Z"
+    }
+  }
+}

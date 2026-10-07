@@ -7,7 +7,8 @@
 //  VIG_STOPS vignette-opacity ramp, the piecewise-linear interp()/lerpColor()
 //  helpers, and the rising gold light-"motes" (16 small drifting dots).
 //
-//  Self-contained: SwiftUI + Foundation only, no app-specific types.
+//  Self-contained apart from ThemePalette's `Color(light:dark:)`, which pairs each
+//  colour with its Sage Dawn counterpart.
 //
 
 import SwiftUI
@@ -16,21 +17,48 @@ import SwiftUI
 
 /// Colours and the two progress ramps (background + vignette) that drive the
 /// descent, plus the piecewise-linear interpolation used to sample them.
+///
+/// Every colour is a Midnight / Sage Dawn pair. The dark values are the original
+/// night descent; under Sage Dawn the same descent runs from pale dawn mint down to
+/// a deeper sage, with ink text and deep-gold accents. Surfaces that stay dark in
+/// both themes (onboarding, the locked-day veil) force the dark scheme, so they keep
+/// the night values.
 enum DeepDivePalette {
 
-    // Fixed accent colours (from MajlisYaqeen.jsx). Built explicitly in sRGB so
-    // this file needs no Color(hex:) helper.
-    static let gold       = Color(.sRGB, red: 201.0/255.0, green: 165.0/255.0, blue:  92.0/255.0, opacity: 1) // #C9A55C
-    static let goldBright = Color(.sRGB, red: 227.0/255.0, green: 195.0/255.0, blue: 126.0/255.0, opacity: 1) // #E3C37E
-    static let cream      = Color(.sRGB, red: 236.0/255.0, green: 231.0/255.0, blue: 219.0/255.0, opacity: 1) // #ECE7DB
+    /// Sage Dawn text ink and hairline green, matching ThemePalette's light theme.
+    private static let ink = srgb(20, 38, 30)          // #14261E
+    private static let greenInk = srgb(20, 60, 45)     // #143C2D
+
+    // Accent colours (from MajlisYaqeen.jsx), each with its Sage Dawn counterpart.
+    static let gold       = Color(light: srgb(143, 110, 42), dark: srgb(201, 165, 92))    // #8F6E2A / #C9A55C
+    static let goldBright = Color(light: srgb(122, 91, 30), dark: srgb(227, 195, 126))    // #7A5B1E / #E3C37E
+    static let cream      = Color(light: ink, dark: srgb(236, 231, 219))                  // ink / #ECE7DB
     // Deliberately diverges from the JSX's #8F9A8C (6.2:1): as a thin serif-italic on the
     // near-black descent that rendered at ~4.2:1 and read as dim. Held level with the
-    // Color(white: 0.72) secondary tier DeepDiveView uses for its other body text.
-    static let mute       = Color(.sRGB, red: 179.0/255.0, green: 188.0/255.0, blue: 176.0/255.0, opacity: 1) // #B3BCB0
+    // `body` tier below.
+    static let mute       = Color(light: srgb(85, 99, 91), dark: srgb(179, 188, 176))     // #55635B / #B3BCB0
+    /// Secondary body text (italic lines, intros, descriptions).
+    static let body       = Color(light: srgb(70, 84, 77), dark: Color(white: 0.72))
+    /// Translations - a step stronger than `body`.
+    static let bodyStrong = Color(light: srgb(52, 66, 59), dark: Color(white: 0.8))
+    /// Base for faint panel fills and hairlines; always used at a low opacity.
+    static let wash       = Color(light: greenInk, dark: .white)
+    /// The halo behind glowing gold text and lights. By day a warm gold rather than
+    /// the deep text gold, which would read as a brown smudge on the pale ground.
+    static let glow       = Color(light: srgb(217, 174, 85), dark: srgb(227, 195, 126))   // #D9AE55 / #E3C37E
+    /// The gold CTA fill, the same bright gold in both themes so its dark label reads.
+    static let ctaGold       = srgb(201, 165, 92)
+    static let ctaGoldBright = srgb(227, 195, 126)
+
+    private static func srgb(_ r: Double, _ g: Double, _ b: Double) -> Color {
+        Color(.sRGB, red: r / 255, green: g / 255, blue: b / 255, opacity: 1)
+    }
+
+    typealias Stop = (p: CGFloat, r: Double, g: Double, b: Double)
 
     /// Background colour stops (BG_STOPS). `p` is the descent progress 0...1;
     /// r/g/b are already normalised to 0...1 (hex value divided by 255).
-    static let bgStops: [(p: CGFloat, r: Double, g: Double, b: Double)] = [
+    static let bgStops: [Stop] = [
         (0.00, 15.0/255.0, 23.0/255.0, 18.0/255.0), // #0F1712
         (0.32, 11.0/255.0, 17.0/255.0, 13.0/255.0), // #0B110D
         (0.55,  7.0/255.0, 10.0/255.0,  8.0/255.0), // #070A08
@@ -38,6 +66,18 @@ enum DeepDivePalette {
         (0.82,  2.0/255.0,  4.0/255.0,  3.0/255.0), // #020403
         (0.90,  6.0/255.0, 16.0/255.0, 11.0/255.0), // #06100B
         (1.00, 11.0/255.0, 20.0/255.0, 15.0/255.0), // #0B140F
+    ]
+
+    /// The Sage Dawn descent: pale dawn mint at the surface, deepening to sage at the
+    /// same depth the night descent is darkest, then lifting again at the end.
+    static let bgStopsLight: [Stop] = [
+        (0.00, 243.0/255.0, 248.0/255.0, 242.0/255.0), // #F3F8F2
+        (0.32, 233.0/255.0, 241.0/255.0, 233.0/255.0), // #E9F1E9
+        (0.55, 221.0/255.0, 233.0/255.0, 222.0/255.0), // #DDE9DE
+        (0.72, 208.0/255.0, 224.0/255.0, 211.0/255.0), // #D0E0D3
+        (0.82, 198.0/255.0, 217.0/255.0, 202.0/255.0), // #C6D9CA
+        (0.90, 211.0/255.0, 228.0/255.0, 214.0/255.0), // #D3E4D6
+        (1.00, 226.0/255.0, 238.0/255.0, 227.0/255.0), // #E2EEE3
     ]
 
     /// Vignette-opacity stops (VIG_STOPS): how dark the outer vignette gets at
@@ -49,10 +89,21 @@ enum DeepDivePalette {
         (1.00, 0.50),
     ]
 
-    /// Piecewise-linear background colour at descent progress `p` (clamped 0...1).
+    /// Piecewise-linear background colour at descent progress `p` (clamped 0...1),
+    /// resolved per scheme.
     static func bg(_ p: CGFloat) -> Color {
+        Color(light: sample(bgStopsLight, p), dark: sample(bgStops, p))
+    }
+
+    /// The vignette colour at descent progress `p`: black at night; by day a light
+    /// green-ink shade, so the edges deepen without greying the pale ground.
+    static func vignetteColor(_ p: CGFloat) -> Color {
+        let o = vignette(p)
+        return Color(light: greenInk.opacity(o * 0.22), dark: Color.black.opacity(o))
+    }
+
+    private static func sample(_ stops: [Stop], _ p: CGFloat) -> Color {
         let cp = min(max(p, 0), 1)
-        let stops = bgStops
         for i in 0 ..< (stops.count - 1) {
             let a = stops[i], b = stops[i + 1]
             if cp >= a.p && cp <= b.p {
@@ -195,12 +246,11 @@ struct DeepDiveBackground: View {
             // Vignette on top: transparent core, darkening toward the edges,
             // centred slightly above the middle.
             GeometryReader { geo in
-                let vig = DeepDivePalette.vignette(progress)
                 let maxDim = max(geo.size.width, geo.size.height)
                 RadialGradient(
                     gradient: Gradient(stops: [
                         .init(color: .clear, location: 0.30),
-                        .init(color: Color.black.opacity(vig), location: 1.0),
+                        .init(color: DeepDivePalette.vignetteColor(progress), location: 1.0),
                     ]),
                     center: UnitPoint(x: 0.5, y: 0.42),
                     startRadius: 0,

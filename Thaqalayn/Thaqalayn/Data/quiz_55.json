@@ -1,0 +1,485 @@
+{
+  "1": {
+    "id": "55:1",
+    "surah": 55,
+    "index": 1,
+    "range": [
+      1,
+      25
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 1,
+        "prompt": {
+          "en": "Tabrisi reports that it came as an answer to those who claimed they knew only 'the Rahman of ____'."
+        },
+        "options": [
+          {
+            "en": "Mecca"
+          },
+          {
+            "en": "Yamama"
+          },
+          {
+            "en": "Medina"
+          },
+          {
+            "en": "Taif"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay reports Tabrisi's point that the surah answered those who said they knew only the Rahman of Yamama."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabrisi reports that it came as an answer to those who claimed they knew only 'the Rahman of Yamama'"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 4,
+        "prompt": {
+          "en": "\"The articulate speech is the Greatest Name, by which everything is known.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked about the articulate speech, Imam al-Sadiq glossed it as the Greatest Name, by which everything is known."
+        },
+        "anchor": {
+          "where": "verses.4.narrations.n3",
+          "quote": "The articulate speech is the Greatest Name, by which everything is known."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 7,
+        "prompt": {
+          "en": "According to the essay, how does Tusi describe the balance that the surah sets up?"
+        },
+        "options": [
+          {
+            "en": "As the very instrument of justice, securing many rights"
+          },
+          {
+            "en": "As a sign of the sun and moon's reckoning"
+          },
+          {
+            "en": "As the greatest of the bounties the surah names"
+          },
+          {
+            "en": "As a command meant only for the jinn"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reports Tusi's reading that the balance is the very instrument of justice, without which many rights could not be secured."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "for Tusi the balance is the very instrument of justice, without which many rights could not be secured"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 13,
+        "prompt": {
+          "en": "According to the passage, both the Sunni and Shia traditions read the surah, on its surface, as a catalogue of God's bounties to jinn and men."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives open by noting that on the surface both traditions read the surah as a catalogue of God's bounties to jinn and men."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "On the surface both traditions read the surah as a catalogue of God's bounties to jinn and men"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 25,
+        "prompt": {
+          "en": "According to the essay's close, how does Tabrisi explain the repetition of the refrain, 'So which of your Lord's bounties will you both deny?'"
+        },
+        "options": [
+          {
+            "en": "As a threat of punishment to the unbelievers"
+          },
+          {
+            "en": "As addressed to the believers alone"
+          },
+          {
+            "en": "As marking the surah into equal sections"
+          },
+          {
+            "en": "As reaffirming each favour as it is named"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay closes with Tabrisi's point that the refrain repeats to reaffirm each favour as it is named, so that none can be denied."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabrisi explains its repetition as a reaffirming of each favour as it is named, so that none of them can be denied"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:32:06Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:33:57Z",
+      "assembled_at": "2026-10-06T12:35:04Z"
+    }
+  },
+  "2": {
+    "id": "55:2",
+    "surah": 55,
+    "index": 2,
+    "range": [
+      26,
+      45
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 26,
+        "prompt": {
+          "en": "According to the passage, these verses mark where the surah turns from the lasting abode back toward the fleeting world."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay reads the surah as splitting creation into a fleeting world and a lasting hereafter; here the Quran turns from the fleeting toward the lasting, not the reverse, so the statement is false."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "al-Mizan reads the whole surah as dividing creation into two abodes, a fleeting worldly one and a lasting one to come, and here the Quran turns from the first toward the second"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 31,
+        "prompt": {
+          "en": "According to the essay, what does the promise 'Soon We shall attend to you, O you notable two' signify?"
+        },
+        "options": [
+          {
+            "en": "A figure for the change of abode, since God is never occupied"
+          },
+          {
+            "en": "That God will pause all His work on that Day"
+          },
+          {
+            "en": "That the jinn alone are addressed here"
+          },
+          {
+            "en": "That God is sometimes occupied and sometimes free"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says God is never occupied, so 'Soon We shall attend to you' is not a literal pause but a figure for the change of abode, addressed to jinn and mankind."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "al-Mizan explains that God is never occupied, so this is a figure for the change of abode, and the two are jinn and mankind"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 39,
+        "prompt": {
+          "en": "\"None of you will be seen in the Fire - not two, by God, nor even one.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Rida told Maysara that none of his followers would be seen in the Fire, swearing by God, not two nor even one, and pointed to this verse of al-Rahman."
+        },
+        "anchor": {
+          "where": "verses.39.narrations.n9",
+          "quote": "None of you will be seen in the Fire - not two, by God, nor even one."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 41,
+        "prompt": {
+          "en": "A narration says the verse about the guilty being known by their mark was revealed about al-Qaim. What do he and his companions do?"
+        },
+        "options": [
+          {
+            "en": "They forgive them after they repent"
+          },
+          {
+            "en": "They strike them with the sword"
+          },
+          {
+            "en": "They question them about their sins"
+          },
+          {
+            "en": "They lead them out of the Fire"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Sadiq said the verse was revealed about al-Qaim, who knows the guilty by their marks and, with his companions, strikes them with the sword."
+        },
+        "anchor": {
+          "where": "verses.41.narrations.n10",
+          "quote": "he recognizes them by their marks, and he and his companions strike them with the sword"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "fillGap",
+        "verse": 27,
+        "prompt": {
+          "en": "The divergence is not over God's permanence but over ____."
+        },
+        "options": [
+          {
+            "en": "whether God has a bodily face"
+          },
+          {
+            "en": "the number of God's attributes"
+          },
+          {
+            "en": "what the word Face points to"
+          },
+          {
+            "en": "the fate of the guilty on that Day"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Both traditions agree God endures and deny a bodily face; they part only over what 'Face' points to, God's essence for Sunni exegetes and His prophets and proofs in the Shia report."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "The divergence is not over God's permanence but over what the word Face points to"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:30:38Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:31:34Z",
+      "assembled_at": "2026-10-06T12:35:04Z"
+    }
+  },
+  "3": {
+    "id": "55:3",
+    "surah": 55,
+    "index": 3,
+    "range": [
+      46,
+      78
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 46,
+        "prompt": {
+          "en": "\"Whoever knows that God sees him, hears what he says ... that is the one who feared the station of his Lord.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Asked who truly fears his Lord's station, Imam al-Sadiq described the one who, knowing God sees and hears him, is held back from vile deeds and his soul's whim."
+        },
+        "anchor": {
+          "where": "verses.46.narrations.n1",
+          "quote": "Whoever knows that God sees him, hears what he says, and knows the good and evil he does, so that this holds him back from vile deeds"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 46,
+        "prompt": {
+          "en": "According to the perspectives, which report about the two gardens does Tabatabai reject?"
+        },
+        "options": [
+          {
+            "en": "That a man gets them even if he steals and fornicates"
+          },
+          {
+            "en": "That they belong only to the foremost believers"
+          },
+          {
+            "en": "That they lie near each other for greater joy"
+          },
+          {
+            "en": "That they are two green gardens of this world"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Tabatabai rejects the report that the two gardens are granted a man even if he commits adultery and theft, holding that true fear of one's Lord cannot coexist with such sin."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "he rejects the report that the two gardens are granted a man 'even if he commits adultery and theft"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 56,
+        "prompt": {
+          "en": "The passage reads the maidens being untouched by jinn as a sign that believing jinn also have reward and are given spouses."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note takes the maidens being untouched by human or jinn as a sign that believing jinn too have reward, given jinn women as spouses."
+        },
+        "anchor": {
+          "where": "verses.56.note",
+          "quote": "That neither human nor jinn has touched them is taken as a sign that believing jinn too have reward and are given spouses"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 70,
+        "prompt": {
+          "en": "He said: they are the righteous believing women who possess ____."
+        },
+        "options": [
+          {
+            "en": "beauty"
+          },
+          {
+            "en": "patience"
+          },
+          {
+            "en": "wealth"
+          },
+          {
+            "en": "gnosis"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Asked about the maidens good and lovely, Imam al-Sadiq identified them as the righteous believing women who possess gnosis."
+        },
+        "anchor": {
+          "where": "verses.70.narrations.n6",
+          "quote": "they are the righteous believing women who possess gnosis"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 78,
+        "prompt": {
+          "en": "How does the essay describe the name that closes the surah?"
+        },
+        "options": [
+          {
+            "en": "A name first revealed in this closing verse"
+          },
+          {
+            "en": "The name al-Rahman with which the surah opened"
+          },
+          {
+            "en": "The name by which the deniers were warned"
+          },
+          {
+            "en": "A new title replacing the surah's opening name"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the closing name is al-Rahman, the very name the surah opened with, now full of the bounties the surah has counted."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the name al-Rahman with which it opened, now full of the bounties it has counted"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:33:17Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:34:50Z",
+      "assembled_at": "2026-10-06T12:35:04Z"
+    }
+  }
+}

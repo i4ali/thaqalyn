@@ -1,0 +1,296 @@
+{
+  "1": {
+    "id": "84:1",
+    "surah": 84,
+    "index": 1,
+    "range": [
+      1,
+      25
+    ],
+    "title": {
+      "en": "The Splitting and the Reckoning"
+    },
+    "essay": {
+      "en": "This short Meccan surah opens on the unmaking of the world. The sky is split open and gives ear to its Lord, obeying as it must; the earth is spread out, throws out what is in it, empties itself, and likewise obeys (verses 1 to 5). Tabatabai reads these as signs of the Hour, and notes that across the surah the dominant note is warning rather than glad tidings [1].\n\nFrom this ruin the surah turns to its one addressee: O man, you are labouring toward your Lord, and you will meet Him (verse 6). Tabrisi takes 'man' as every accountable person, each child of Adam [2]; Tusi explains that the labour is hard and toilsome, lasting until one meets the recompense of one's deed before God [3]. For Tabatabai this single verse already carries a proof of the Return, since lordship implies servanthood, and servanthood implies accounting and requital [1].\n\nThen come the two destinies. Whoever is given his record in his right hand faces an easy reckoning and returns to his folk rejoicing (verses 7 to 9); whoever is given it behind his back prays for annihilation and enters the Blaze, for he had lived heedless among his folk and thought he would never return - yet his Lord had been watching him all along (verses 10 to 15).\n\nGod then swears by the evening glow, by the night and what it gathers, and by the moon at the full: man will surely fare from stage to stage (verses 16 to 19). The surah closes by rebuking those who will not believe or prostrate when the Quran is recited, who instead deny while God knows what they keep hidden; they are promised a painful punishment, and only the faithful who do righteous deeds are excepted, with an everlasting reward (verses 20 to 25)."
+    },
+    "verses": [
+      {
+        "verse": 7,
+        "heading": {
+          "en": "Record in the right hand"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إذا أراد أن يحاسب المؤمن أعطاه كتابه بيمينه وحسابه فيما بينه وبينه فيقول: عبدي فعلت كذا وكذا وعملت كذا وكذا؟ فيقول: نعم يا رب قد فعلت ذلك فيقول: قد غفرتها لك وأبدلتها حسنات فيقول الناس: سبحان الله أما كان لهذا العبد سيئة واحدة",
+            "chain": "al-Qasim ibn Muhammad, from Ali, who heard Abu Abdillah",
+            "text": {
+              "en": "When Allah wishes to reckon the believer, He gives him his book in his right hand and reckons him privately: 'My servant, you did such and such?' 'Yes, my Lord, I did.' He says, 'I have forgiven them and turned them into good deeds,' so the people marvel that this servant had not one sin."
+            },
+            "source": "s49"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "هو علي و شيعته يؤتون كتبهم بأيمانهم",
+            "chain": "Muhammad ibn al-Abbas, from al-Husayn ibn Ahmad, from Muhammad ibn Isa, from Yunus, from Samaa, from Abu Basir, from Abu Abdillah",
+            "text": {
+              "en": "'As for him who is given his record in his right hand' - he is Ali and his Shia; they are given their books in their right hands."
+            },
+            "source": "s18"
+          }
+        ]
+      },
+      {
+        "verse": 8,
+        "heading": {
+          "en": "An easy reckoning"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "The Prophet",
+            "addressee": null,
+            "arabic": "قال رسول الله صلى الله عليه وآله: كل محاسب معذب. فقال له قائل: يا رسول الله فأين قول الله عز وجل: فسوف يحاسب حسابا يسيرا؟ قال: ذلك العرض يعني التصفح.",
+            "chain": "al-Saduq, from his father, from Sad ibn Abdullah, from Ahmad ibn Muhammad ibn Khalid, from his father, from Ibn Sinan, from Abu al-Jarud, from Abu Jafar",
+            "text": {
+              "en": "Everyone called to account is punished. Someone asked: Messenger of Allah, then what of 'he will receive an easy reckoning'? He said: that is the presentation, meaning only a perusal of the deeds."
+            },
+            "source": "s50"
+          }
+        ]
+      },
+      {
+        "verse": 11,
+        "heading": {
+          "en": "Praying for annihilation"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "فأخذ بيده فأخرجه إلى البقيع، فانتهى إلى قبر، فصوت بصاحبه، فقال: قم بإذن الله، قال: فخرج منه رجل مبيض الوجه يمسح التراب عن وجهه، و هو يقول: الحمد لله و الله أكبر … ثم انتهى به إلى قبر آخر، فصوت بصاحبه، و قال له: قم بإذن الله، فخرج منه رجل مسود الوجه، و هو يقول: وا حسرتاه، وا ثبوراه",
+            "chain": "al-Husayn ibn Said, from Ibrahim ibn Abi al-Bilad, from one of his companions, from Abu Abdillah, from his father",
+            "text": {
+              "en": "He took him by the hand and brought him out to al-Baqi. They came to a grave, and he called to its occupant: 'Rise, by Allah's leave.' A bright-faced man came out, wiping off the dust, saying, 'Praise be to Allah, Allah is greatest.' At another grave a black-faced man came out crying, 'Alas, my grief! Alas, my ruin!'"
+            },
+            "source": "s18"
+          }
+        ]
+      },
+      {
+        "verse": 19,
+        "heading": {
+          "en": "From stage to stage"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Baqir",
+            "addressee": "Zurara",
+            "arabic": "يَا زُرَارَةُ أَ وَلَمْ تَرْكَبْ هَذِهِ الامَّةُ بَعْدَ نَبِيِّهَا طَبَقاً عَنْ طَبَقٍ فِي أَمْرِ فُلانٍ وَفُلانٍ وَفُلانٍ",
+            "chain": "Muhammad ibn Yahya, from Ahmad ibn Muhammad, from Ibn Mahbub, from Jamil ibn Salih, from Zurara, from Abu Jafar",
+            "text": {
+              "en": "O Zurara, has this community not mounted stage after stage after its Prophet, in the matter of so-and-so and so-and-so and so-and-so?"
+            },
+            "source": "s52"
+          },
+          {
+            "id": "n6",
+            "speaker": "The Prophet",
+            "addressee": null,
+            "arabic": "لتركبن سنة من كان قبلكم حذو النعل بالنعل والقذة بالقذة ولا تخطؤن طريقتهم شبر بشبر وذراع بذراع وباع بباع حتى أن لو كان من قبلكم دخل جحر ضب لدخلتموه قالوا اليهود والنصارى تعني يا رسول الله؟ قال: فمن أعني لينقض عرى الإِسلام عروة عروة فيكون أول ما تنقضون من دينكم الإِمامة … وآخره الصلاة",
+            "chain": null,
+            "text": {
+              "en": "You will follow the way of those before you, step for step, so that had they entered a lizard's hole you would enter it. They asked: the Jews and Christians? He said: who else! The bonds of Islam loosen one by one - the first you undo is leadership, the last the prayer."
+            },
+            "source": "s15"
+          },
+          {
+            "id": "n7",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إِنَّ لِلْقَائِمِ مِنَّا غَيْبَةً يَطُولُ أَمَدُهَا … قَالَ اللَّهُ تَعَالَى لَتَرْكَبُنَّ طَبَقاً عَنْ طَبَقٍ أَيْ سَنَنَ مَنْ كَانَ قَبْلَكُمْ",
+            "chain": "al-Hasan ibn Muhammad al-Sayrafi, from Hanan ibn Sadir, from his father, from Abu Abdillah",
+            "text": {
+              "en": "Our Qaim will have an occultation whose term is long; Allah said, 'you will mount stage upon stage,' meaning the ways of those who came before you."
+            },
+            "source": "s53"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On verse 19 - man will fare 'from stage to stage' - the traditions share much, then part. Ibn Kathir gathers the familiar readings: state after state, hardship upon hardship through the terrors of the Resurrection, or heaven after heaven on the night of the ascension [28]. The Imams read it otherwise: al-Kafi preserves Imam al-Baqir's words that this community, after its Prophet, mounted stage after stage 'in the matter of so-and-so and so-and-so and so-and-so' [52], while other reports gloss the verse as treading the way of those before you [15] - a thread the Imams extend to the long occultation of the awaited Qaim [53]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Inshiqaaq 1 to 25",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=84&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "تشير السورة إلى قيام الساعة، وتذكر أن للإِنسان سيراً إلى ربه حتى يلاقيه فيحاسب على ما يقتضيه كتابه وتؤكد القول في ذلك والغلبة فيها للانذار على التبشير."
+        },
+        "gloss": "The surah points to the rising of the Hour, recalling that man journeys to his Lord until he meets Him and is reckoned by what his record requires; it presses this home, and in it the dominant note is warning over glad tidings."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Inshiqaaq 1 to 25",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=84&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "خطاب لجميع المكلفين من ولد آدم"
+        },
+        "gloss": "An address to all the accountable, the children of Adam."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Inshiqaaq 1 to 9",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=84&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إنك فى امرك بشدة ومشقة إلى أن تلقى جزاء عملك من ربك"
+        },
+        "gloss": "You are in your affair amid hardship and toil until you meet the recompense of your deed from your Lord."
+      },
+      {
+        "id": "s15",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Inshiqaaq 19",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=84&tAyahNo=19&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لتركبن سنة من كان قبلكم حذو النعل بالنعل والقذة بالقذة"
+        },
+        "gloss": "You will follow the way of those before you, step matching step and feather matching feather."
+      },
+      {
+        "id": "s18",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Inshiqaaq 1 to 25",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=84&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هو علي و شيعته يؤتون كتبهم بأيمانهم"
+        },
+        "gloss": "He is Ali and his Shia; they are given their books in their right hands."
+      },
+      {
+        "id": "s28",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Inshiqaaq 16 to 25",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=84&tAyahNo=16&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ لَتَرْكَبُنَّ طَبَقاً عَن طَبقٍ } حالاً بعد حال"
+        },
+        "gloss": "'You will surely mount stage upon stage' means state after state."
+      },
+      {
+        "id": "s49",
+        "kind": "hadith",
+        "work": "Kitab al-Zuhd",
+        "author": "husayn b. said al-ahwazi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 5, cited at Al-Inshiqaaq 8",
+        "url": "https://thaqalayn.com/book/17",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "إذا أراد أن يحاسب المؤمن أعطاه كتابه بيمينه وحسابه فيما بينه وبينه"
+        },
+        "gloss": "When He wishes to reckon the believer, He gives him his book in his right hand and reckons him privately between Himself and him."
+      },
+      {
+        "id": "s50",
+        "kind": "hadith",
+        "work": "Ma'ani al-Akhbar",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 1, cited at Al-Inshiqaaq 8",
+        "url": "https://thaqalayn.com/book/14",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "ذلك العرض يعني التصفح"
+        },
+        "gloss": "That [easy reckoning] is the presentation, meaning a perusal of the deeds."
+      },
+      {
+        "id": "s52",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 17, cited at Al-Inshiqaaq 19",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "صحيح",
+          "صحيح"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "يَا زُرَارَةُ أَ وَلَمْ تَرْكَبْ هَذِهِ الامَّةُ بَعْدَ نَبِيِّهَا طَبَقاً عَنْ طَبَقٍ فِي أَمْرِ فُلانٍ وَفُلانٍ وَفُلانٍ"
+        },
+        "gloss": "O Zurara, has this community not mounted stage after stage after its Prophet, in the matter of so-and-so and so-and-so and so-and-so?"
+      },
+      {
+        "id": "s53",
+        "kind": "hadith",
+        "work": "Kamal al-Din wa Tamam al-Ni'ma",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 6, cited at Al-Inshiqaaq 19",
+        "url": "https://thaqalayn.com/book/21",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "إِنَّ لِلْقَائِمِ مِنَّا غَيْبَةً يَطُولُ أَمَدُهَا"
+        },
+        "gloss": "Our Qaim will have an occultation whose term is long."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:49:29Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-10-06T18:24:23Z",
+      "assembled_at": "2026-10-06T18:24:40Z"
+    }
+  }
+}

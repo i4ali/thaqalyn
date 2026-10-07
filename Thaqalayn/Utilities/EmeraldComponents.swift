@@ -312,6 +312,27 @@ struct EmIconChip: View {
     }
 }
 
+// MARK: - Cover art variants
+
+/// Cover art ships as night scenes composed for the Midnight Emerald ground. A cover
+/// can also ship a day version for Sage Dawn as a sibling asset named `<name>Light`
+/// (a watercolor with a pale sky). Surfaces that sit on the light ground ask for it
+/// through here; the dark-only surfaces (the Deep Dive reader, the Listen screen, the
+/// veils, the paywall) keep drawing the night art directly.
+enum CoverArt {
+    /// The day version of `assetName`, or nil when that cover has none yet.
+    static func lightVariant(of assetName: String) -> String? {
+        let name = assetName + "Light"
+        return UIImage(named: name) != nil ? name : nil
+    }
+
+    /// The art to draw under `scheme`: the day version under Sage Dawn when the cover
+    /// has one, otherwise the night art.
+    static func asset(_ assetName: String, for scheme: ColorScheme) -> String {
+        scheme == .light ? (lightVariant(of: assetName) ?? assetName) : assetName
+    }
+}
+
 // MARK: - Cover tile
 
 /// A small portrait tile of a piece of cover art, used on list rows where an
@@ -319,6 +340,7 @@ struct EmIconChip: View {
 /// so the tile shows the whole image rather than a crop of it - a mini poster.
 struct EmCoverTile: View {
     @ObservedObject private var tm = ThemeManager.shared
+    @Environment(\.colorScheme) private var colorScheme
     let assetName: String
     var width: CGFloat = 54
     /// Coming-soon rows dim their art the same way the row itself dims.
@@ -327,7 +349,7 @@ struct EmCoverTile: View {
     private var height: CGFloat { (width * 5 / 4).rounded() }
 
     var body: some View {
-        Image(assetName)
+        Image(CoverArt.asset(assetName, for: colorScheme))
             .resizable()
             .scaledToFill()
             .frame(width: width, height: height)
@@ -449,10 +471,14 @@ struct EmJourneyHeader: View {
     /// initiative): bleeds behind the status bar and edge-fades out before the
     /// day list begins. Composed dark-sky-on-top, so the eyebrow/title stay
     /// legible with the emerald palette. Nil = the plain header, unchanged.
-    /// The art is dark-only: Sage Dawn shows the plain header on the light ground.
+    /// Under Sage Dawn the header shows the cover's day version (`CoverArt`), whose
+    /// pale sky carries the ink title; a cover without one shows the plain header.
     var coverAssetName: String? = nil
 
-    private var cover: String? { colorScheme == .dark ? coverAssetName : nil }
+    private var cover: String? {
+        guard let coverAssetName else { return nil }
+        return colorScheme == .dark ? coverAssetName : CoverArt.lightVariant(of: coverAssetName)
+    }
 
     var body: some View {
         // Extra heading-to-card spacing when cover art is present, so the art's
@@ -501,13 +527,16 @@ struct EmJourneyHeader: View {
                 }
                 .padding(18)
             }
-            // Over cover art the glass card needs body: a deep-emerald backing
-            // keeps the status/count text legible against the bright subject.
+            // Over cover art the glass card needs body: a backing in the ground's own
+            // tone (deep emerald at night, pale sage by day) keeps the status/count
+            // text legible against the subject.
             .background(
                 Group {
                     if cover != nil {
                         RoundedRectangle(cornerRadius: 20, style: .continuous)
-                            .fill(Color(hex: "06120E").opacity(0.45))
+                            .fill(colorScheme == .dark
+                                  ? Color(hex: "06120E").opacity(0.45)
+                                  : tm.tertiaryBackground.opacity(0.7))
                     }
                 }
             )
@@ -555,28 +584,34 @@ struct EmJourneyHeader: View {
 /// Explore surfaces, which use a short fixed header rather than the tall journey
 /// header + progress card.
 ///
-/// Dark-only: under Sage Dawn the band draws nothing and the header sits on the
-/// light ground (the covers are night scenes composed for the emerald ground).
+/// Under Sage Dawn the band shows the cover's day version (`CoverArt`), whose pale
+/// sky carries the ink header; a cover without one draws nothing there and the
+/// header sits on the light ground.
 struct EmCoverBand: View {
     @Environment(\.colorScheme) private var colorScheme
     let assetName: String
-    /// Extra darkening laid over the art (0 = none, the default) to keep header
-    /// text legible on covers whose lit areas would otherwise wash it out. Sits
-    /// under the same bottom mask as the art, so it fades out with no hard edge.
+    /// Extra darkening laid over the night art (0 = none, the default) to keep
+    /// header text legible on covers whose lit areas would otherwise wash it out.
+    /// Sits under the same bottom mask as the art, so it fades out with no hard
+    /// edge. The day art needs none: its sky is already pale under ink text.
     var dim: Double = 0
 
-    var body: some View {
-        if colorScheme == .dark { band }
+    private var art: String? {
+        colorScheme == .dark ? assetName : CoverArt.lightVariant(of: assetName)
     }
 
-    private var band: some View {
+    var body: some View {
+        if let art { band(art) }
+    }
+
+    private func band(_ art: String) -> some View {
         GeometryReader { geo in
-            Image(assetName)
+            Image(art)
                 .resizable()
                 .scaledToFill()
                 .frame(width: geo.size.width, height: geo.size.height)
                 .clipped()
-                .overlay(Color.black.opacity(dim))
+                .overlay(Color.black.opacity(colorScheme == .dark ? dim : 0))
                 .mask(
                     LinearGradient(
                         stops: [
@@ -599,8 +634,9 @@ extension View {
     /// Pins an `EmCoverBand` behind a fixed screen header: the header content is
     /// top-aligned within a band of `height`, the art bleeds up behind the status/
     /// nav bar and fades into the emerald body beneath the title. Used by the
-    /// Explore overview and its section screens. Dark-only, like `EmCoverBand`:
-    /// under Sage Dawn the header keeps its natural height on the light ground.
+    /// Explore overview and its section screens. Under Sage Dawn it shows the
+    /// cover's day version, like `EmCoverBand`; a cover without one keeps the
+    /// header at its natural height on the light ground.
     func emCoverHeaderBand(_ assetName: String, height: CGFloat) -> some View {
         modifier(EmCoverHeaderBandModifier(assetName: assetName, height: height))
     }
@@ -612,7 +648,7 @@ private struct EmCoverHeaderBandModifier: ViewModifier {
     let height: CGFloat
 
     func body(content: Content) -> some View {
-        if colorScheme == .dark {
+        if colorScheme == .dark || CoverArt.lightVariant(of: assetName) != nil {
             content
                 .frame(maxWidth: .infinity, minHeight: height, alignment: .topLeading)
                 .background(alignment: .top) { EmCoverBand(assetName: assetName) }

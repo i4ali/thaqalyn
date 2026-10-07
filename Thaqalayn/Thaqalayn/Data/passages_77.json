@@ -1,0 +1,713 @@
+{
+  "1": {
+    "id": "77:1",
+    "surah": 77,
+    "index": 1,
+    "range": [
+      1,
+      40
+    ],
+    "title": {
+      "en": "Emissaries and the Day of Judgement"
+    },
+    "essay": {
+      "en": "Surah al-Mursalaat opens with a fivefold oath - 'By the [angelic] emissaries sent successively,' then by those who sweep along, publish, separate, and 'inspire remembrance, as exemption or warning.' al-Mizan reads these oath-subjects as the angels of revelation, like the opening of al-Saffat, and treats the final description as decisive [1]. Majma al-Bayan reports that most take the emissaries to be winds sent in succession, while another report from Ibn Mas'ud and from the companions of Ali makes them angels sent with God's command [3]; al-Tibyan lists winds, angels, or the prophets [6]. The oaths answer one claim: 'what you are promised will surely befall.' al-Mizan notes that what is promised is the Day of Resurrection, and that the oath-subjects are themselves the proof, since God's governance through revelation is pointless without a day of requital [1]. The surah then paints that day: stars blotted out, sky cleft, mountains scattered, the apostles' time set - signs, al-Mizan explains, of the collapse of the worldly order and the turn to another [1]. 'For what day?' 'For the Day of Judgement.' Here the refrain first falls: 'Woe to the deniers on that day!' From there the surah presses proof after proof, sealing each with that refrain: the destruction of former nations [2], man's making from a base fluid lodged in a secure womb to a known term [4], and the earth set as a receptacle for the living and the dead, with firm mountains and sweet water [2]. Then comes the sentence: 'Proceed toward what you used to deny,' toward a triple-forked shadow that gives no shade and no shield from the flames. al-Mizan identifies the speaker as God and what the deniers rejected as Hell [2]. It is a day when they neither speak nor are allowed to offer excuses - which al-Mizan reconciles with other verses through the Day's many stations [2]. The surah closes: 'This is the Day of Judgement,' and dares them, 'If you have any stratagems [left], try them out against Me!' - a rebuke of their helplessness [5]."
+    },
+    "verses": [
+      {
+        "verse": 1,
+        "heading": {
+          "en": "By the emissaries"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Ali ibn Ibrahim",
+            "addressee": null,
+            "arabic": "الآيات يتبع بعضها بعضا، { فَٱلْعَاصِفَاتِ عَصْفاً } قال: القبر { وٱلنَّاشِرَاتِ نَشْراً } قال: نشر الأموات { فَٱلْفَارِقَاتِ فَرْقاً } قال: الدابة { فَٱلْمُلْقِيَٰتِ ذِكْراً } قال: الملائكة.",
+            "chain": null,
+            "text": {
+              "en": "The signs follow one after another. 'Those who sweep along like gale' is the grave; 'those who publish far and wide,' the raising of the dead; 'those who separate distinctly,' the Beast; 'those who inspire remembrance,' the angels."
+            },
+            "source": "s19"
+          }
+        ]
+      },
+      {
+        "verse": 11,
+        "heading": {
+          "en": "The apostles' appointed time"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "أقتت، أي بعثت في أوقات مختلفة",
+            "chain": null,
+            "text": {
+              "en": "'And time is set for the apostles' means they were sent forth at differing times."
+            },
+            "source": "s19"
+          }
+        ]
+      },
+      {
+        "verse": 15,
+        "heading": {
+          "en": "Woe to the deniers"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Abu al-Hasan al-Madi",
+            "addressee": null,
+            "arabic": "يقول: ويل للمكذبين - يا محمد - بما أوحيت إليك من ولاية علي { أَلَمْ نُهْلِكِ ٱلأَوَّلِينَ * ثُمَّ نُتْبِعُهُمُ ٱلآخِرِينَ } ، قال: الأولين: الذين كذبوا الرسل في طاعة الأوصياء { كَذَلِكَ نَفْعَلُ بِٱلْمُجْرِمِينَ } ، قال: من أجرم إلى آل محمد و ركب من وصيه ما ركب",
+            "chain": "Muhammad ibn Yaqub, from Ali ibn Muhammad, from one of our companions, from Ibn Mahbub, from Muhammad ibn al-Fudayl, from Abu al-Hasan al-Madi",
+            "text": {
+              "en": "God says: Woe to the deniers, O Muhammad, of what I revealed to you of the wilaya of Ali. 'Did We not destroy the former generations' - those who denied the messengers over obedience to the executors; 'thus We deal with the guilty' - whoever wronged the family of Muhammad and did to his executor what he did."
+            },
+            "source": "s19"
+          }
+        ]
+      },
+      {
+        "verse": 16,
+        "heading": {
+          "en": "The former generations destroyed"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "{ أَلَمْ نُهْلِكِ ٱلأَوَّلِينَ } … يعني الأول و الثاني { ثُمَّ نُتْبِعُهُمُ ٱلآخِرِينَ } قال: الثالث و الرابع و الخامس { كَذَلِكَ نَفْعَلُ بِٱلْمُجْرِمِينَ } من بني أمية، و قوله: { وَيْلٌ يَوْمَئِذٍ لِّلْمُكَذِّبِينَ } بأمير المؤمنين و الأئمة (عليهم السلام)",
+            "chain": "narrated with the chain omitted, up to al-Abbas ibn Ismail, from Abu al-Hasan al-Rida",
+            "text": {
+              "en": "'Did We not destroy the former generations' - it means the first and the second; 'then made the latter ones follow them' - the third, the fourth and the fifth; 'thus We deal with the guilty' - from the Umayyads; and 'woe to the deniers' - of the Commander of the Faithful and the Imams."
+            },
+            "source": "s19"
+          }
+        ]
+      },
+      {
+        "verse": 21,
+        "heading": {
+          "en": "Formed in the womb"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "أَيُّهَا الْـمَخْلُوقُ السَّوِيُّ، وَالْمُنْشَأُ الْمَرْعِىُّ، فِي ظُلُمَاتِ الاْرْحَامِ، وَمُضَاعَفَاتِ الاْسْتَارِ … وَوُضِعْتَ ﴿فِي قَرَارٍ مَّكِينٍ. إِلَىٰ قَدَرٍ مَّعْلُومٍ﴾ وَأَجَل مَقْسُوم، تَمُورُ فِي بَطْنِ أُمِّكَ جَنِيناً لاَ تُحِيرُ دُعَاءً، وَلاَ تَسْمَعُ نِدَاءً،",
+            "chain": null,
+            "text": {
+              "en": "O well-formed creature, nurtured and watched over in the darkness of wombs behind layered veils, you were placed in a secure abode for a known span and an appointed term, stirring in your mother's belly as an embryo, answering no call and hearing no voice."
+            },
+            "source": "s62"
+          }
+        ]
+      },
+      {
+        "verse": 25,
+        "heading": {
+          "en": "The earth, a receptacle"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Sadiq",
+            "addressee": "Hammad",
+            "arabic": "نظر إلى المقابر فقال: يا حماد هذه كفات الأموات ونظر إلى البيوت فقال: هذه كفات الاحياء ثم تلا [هذه الآية] … وروي أنه دفن الشعر والظفر.",
+            "chain": "Sad ibn Abdullah, from al-Qasim ibn Muhammad al-Isbahani, from Sulayman ibn Dawud al-Manqari, from Hammad ibn Isa, from Abu Abdillah",
+            "text": {
+              "en": "He looked at the graves and said, 'O Hammad, these are the receptacles of the dead,' then looked at the houses and said, 'these are the receptacles of the living,' and recited this verse. It is also related that it means the burial of hair and nails."
+            },
+            "source": "s63"
+          }
+        ]
+      },
+      {
+        "verse": 29,
+        "heading": {
+          "en": "Proceed to what you denied"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إذا لاذ الناس من العطش، قيل لهم: { ٱنطَلِقُوۤاْ إِلَىٰ مَا كُنتُمْ بِهِ تُكَذِّبُونَ } يعني أمير المؤمنين (عليه السلام)، قال: فإذا أتوه قال لهم: { ٱنطَلِقُوۤاْ إِلَىٰ ظِلٍّ ذِي ثَلاَثِ شُعَبٍ * لاَّ ظَلِيلٍ وَلاَ يُغْنِي مِنَ ٱللَّهَبِ } يعني من لهب العطش",
+            "chain": "Abu Jafar al-Tusi, from Ahmad ibn Yunus, from Ahmad ibn Sayyar, from Abu Abdillah",
+            "text": {
+              "en": "When people take refuge from thirst, it will be said to them, 'Proceed toward what you used to deny' - meaning the Commander of the Faithful. When they come to him he says, 'Proceed toward the triple-forked shadow, neither shady nor of any avail against the flames' - meaning against the flame of thirst."
+            },
+            "source": "s20"
+          }
+        ]
+      },
+      {
+        "verse": 30,
+        "heading": {
+          "en": "The triple-forked shadow"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n8",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "بلغنا والله اعلم انّه اذا استوى اهل النّار الى النّار لينطلق بهم قبل ان يدخلوا النّار فيقال لهم ادخلوا الى ظلّ ذي ثلاث شعب من دخان النّار فيحسبون انّها الجنّة ثمّ يدخلون النّار افواجاً وذلك نصف النهار",
+            "chain": null,
+            "text": {
+              "en": "It has reached us - and God knows best - that when the people of the Fire are brought up to it, before they enter they are told, 'Enter the triple-forked shadow of the Fire's smoke.' They suppose it is Paradise, then they enter the Fire in throngs; and that is at midday."
+            },
+            "source": "s24"
+          },
+          {
+            "id": "n9",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إذا لاذ الإنسان من العطش قيل لهم: { ٱنطَلِقُوۤاْ إِلَىٰ مَا كُنتُمْ بِهِ تُكَذِّبُونَ } يعني أمير المؤمنين (عليه السلام)، فيقول لهم: { ٱنطَلِقُوۤاْ إِلَىٰ ظِلٍّ ذِي ثَلاَثِ شُعَبٍ } قال: يعني الثلاثة: فلان و فلان و فلان",
+            "chain": "Muhammad ibn al-Abbas, from Ahmad ibn al-Qasim, from Ahmad ibn Muhammad ibn Sayyar, from some of our companions, raised to Abu Abdillah",
+            "text": {
+              "en": "When a person takes refuge from thirst, it will be said to them, 'Proceed toward what you used to deny' - meaning the Commander of the Faithful. Then he says to them, 'Proceed toward the triple-forked shadow' - meaning the three: so-and-so and so-and-so and so-and-so."
+            },
+            "source": "s20"
+          }
+        ]
+      },
+      {
+        "verse": 36,
+        "heading": {
+          "en": "No leave to excuse"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n10",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "{ وَلاَ يُؤْذَنُ لَهُمْ فَيَعْتَذِرُونَ } … الله أجل و أعدل و أعظم من أن يكون لعبده عذر لا يدعه يعتذر به، و لكن فلج فلم يكن له عذر",
+            "chain": "Muhammad ibn Yaqub, from Ali ibn Muhammad, from Ali, from Ismail ibn Mihran, from Hammad ibn Uthman, who heard Abu Abdillah",
+            "text": {
+              "en": "Concerning 'nor will they be permitted to offer excuses,' he said: God is too majestic, too just, and too great to leave a servant with an excuse and not let him offer it; rather, he is overcome, for he has no excuse at all."
+            },
+            "source": "s21"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Commentators divide over the five oath-subjects that open the surah. The Shia commentator al-Mizan sets aside the other views and reads all five as the angels of revelation, parallel to the opening of al-Saffat [1]. The Sunni exegetes weigh the matter differently. Ibn Kathir holds that the more apparent sense is that the first three - the emissaries, those who sweep along, and those who publish - are the winds, while 'those who separate' and 'those who inspire remembrance' are the angels [32]. Tabari declines to specify, taking the oath as general over the angels and the winds alike, since nothing fixes it to one [25]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Mursalaat 1 to 15",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=77&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والمعنى أُقسم بالجماعات المرسلات من ملائكة الوحي."
+        },
+        "gloss": "The meaning is: I swear by the companies of the angels of revelation who are sent forth."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Mursalaat 16 to 40",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=77&tAyahNo=16&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولا ينافي نفي النطق ها هنا إثباته في آيات أُخر لأن اليوم ذو مواقف كثيرة مختلفة يسألون في بعضها فينطقون ويختم على أفواههم في آخر فلا ينطقون."
+        },
+        "gloss": "The denial of speech here does not conflict with its affirmation in other verses, for the Day has many different stations - in some they are questioned and speak, and at the last their mouths are sealed so they do not speak."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mursalaat 1 to 15",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=77&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ والمرسلات عرفاً } يعني الرياح أرسلت متتابعة كعرف الفرس … وقيل: إنها الملائكة أرسلت بالمعروف من أمر الله ونهيه وفي رواية أخرى عن ابن مسعود وعن أبي حمزة الثمالي عن أصحاب علي"
+        },
+        "gloss": "'By the emissaries sent successively' means the winds sent one after another like a horse's mane; and it is said they are the angels sent with God's command and prohibition, in another report from Ibn Mas'ud and from Abu Hamza al-Thumali, from the companions of Ali."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mursalaat 16 to 28",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=77&tAyahNo=16&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ ألم نخلقكم من ماء مهين } أي حقير قليل الغناء … { فجعلناه } أي فجعلنا ذلك الماء المهين { في قرار مكين } يعني الرحم { إلى قدر معلوم } أي إلى مقدار من الوقت معلوم يعني مدة الحمل."
+        },
+        "gloss": "'Did We not create you from a base fluid' - that is, something lowly of little worth; 'then lodged it' - that base fluid - 'in a secure abode,' meaning the womb, 'until a known span,' that is, a known measure of time, meaning the term of pregnancy."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mursalaat 29 to 40",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=77&tAyahNo=29&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ فإن كان لكم كيد فكيدون } أي إن كانت لكم حيلة فاحتالوا لأنفسكم. وقيل: إن هذا توبيخ من الله تعالى للكفار وتقريع لهم وإظهار لعجزهم"
+        },
+        "gloss": "'If you have any stratagem, try it out against Me' - that is, if you have any scheme, scheme for yourselves; and it is said this is a rebuke from God to the deniers and an exposing of their helplessness."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mursalaat 1 to 15",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=77&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال ابن مسعود وابن عباس ومجاهد وقتادة وابو صالح: المرسلات - ها هنا - الرياح، وفى رواية اخرى عن ابن مسعود وأبي صالح إنها الملائكة. وقال قوم { والمرسلات عرفاً } الانبياء جاءت بالمعروف."
+        },
+        "gloss": "Ibn Mas'ud, Ibn Abbas, Mujahid, Qatada and Abu Salih said the emissaries here are the winds; in another report from Ibn Mas'ud and Abu Salih they are the angels; and some said 'by the emissaries' are the prophets who came with what is right."
+      },
+      {
+        "id": "s19",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mursalaat 1 to 27",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=77&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يقول: ويل للمكذبين - يا محمد - بما أوحيت إليك من ولاية علي … قال: الأولين: الذين كذبوا الرسل في طاعة الأوصياء"
+        },
+        "gloss": "God says: Woe to the deniers, O Muhammad, of what I revealed to you of the wilaya of Ali; the former generations are those who denied the messengers regarding obedience to the executors."
+      },
+      {
+        "id": "s20",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mursalaat 29 to 31",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=77&tAyahNo=29&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إذا لاذ الناس من العطش، قيل لهم: { ٱنطَلِقُوۤاْ إِلَىٰ مَا كُنتُمْ بِهِ تُكَذِّبُونَ } يعني أمير المؤمنين (عليه السلام)"
+        },
+        "gloss": "When people take refuge from thirst, it will be said to them, 'Proceed toward what you used to deny' - meaning the Commander of the Faithful."
+      },
+      {
+        "id": "s21",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mursalaat 35 to 36",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=77&tAyahNo=35&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الله أجل و أعدل و أعظم من أن يكون لعبده عذر لا يدعه يعتذر به، و لكن فلج فلم يكن له عذر"
+        },
+        "gloss": "God is too majestic, too just, and too great to leave a servant with an excuse and not let him offer it; rather he is overcome, for he has no excuse."
+      },
+      {
+        "id": "s24",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mursalaat 30 to 40",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=77&tAyahNo=30&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فيقال لهم ادخلوا الى ظلّ ذي ثلاث شعب من دخان النّار فيحسبون انّها الجنّة ثمّ يدخلون النّار افواجاً"
+        },
+        "gloss": "They are told, 'Enter the triple-forked shadow of the Fire's smoke'; they suppose it is Paradise, then they enter the Fire in throngs."
+      },
+      {
+        "id": "s25",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Mursalaat 1 to 6",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=77&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أقسم بالمرسلات عرفاً، وقد ترسل عُرْفاً الملائكة، وترسل كذلك الرياح، ولا دلالة تدلّ على أن المعنيّ بذلك أحد الحِزْبين دون الآخر"
+        },
+        "gloss": "He swore by the emissaries sent successively; both the angels and the winds are sent thus, and there is no proof that one of the two parties is meant rather than the other."
+      },
+      {
+        "id": "s32",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Mursalaat 1 to 15",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=77&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والأظهر أن المرسلات هي الرياح … وقوله تعالى { فَٱلْفَـٰرِقَـٰتِ فَرْقاً فَٱلْمُلْقِيَـٰتِ ذِكْراً عُذْراً أَوْ نُذْراً } يعني الملائكة"
+        },
+        "gloss": "The more apparent view is that the emissaries are the winds; while 'those who separate distinctly, those who inspire remembrance, as exemption or warning' means the angels."
+      },
+      {
+        "id": "s62",
+        "kind": "hadith",
+        "work": "Nahj al-Balagha",
+        "author": "al-sharif al-radi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 7, cited at Al-Mursalaat 22",
+        "url": "https://thaqalayn.com/book/18",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "وَوُضِعْتَ ﴿فِي قَرَارٍ مَّكِينٍ. إِلَىٰ قَدَرٍ مَّعْلُومٍ﴾ وَأَجَل مَقْسُوم، تَمُورُ فِي بَطْنِ أُمِّكَ جَنِيناً"
+        },
+        "gloss": "You were placed in a secure abode for a known span and an appointed term, stirring in your mother's belly as an embryo."
+      },
+      {
+        "id": "s63",
+        "kind": "hadith",
+        "work": "Ma'ani al-Akhbar",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 1, cited at Al-Mursalaat 25",
+        "url": "https://thaqalayn.com/book/14",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "نظر إلى المقابر فقال: يا حماد هذه كفات الأموات ونظر إلى البيوت فقال: هذه كفات الاحياء"
+        },
+        "gloss": "He looked at the graves and said, 'O Hammad, these are the receptacles of the dead,' then looked at the houses and said, 'these are the receptacles of the living.'"
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:35:53Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T18:00:32Z",
+      "assembled_at": "2026-10-06T18:00:59Z"
+    }
+  },
+  "2": {
+    "id": "77:2",
+    "surah": 77,
+    "index": 2,
+    "range": [
+      41,
+      50
+    ],
+    "title": {
+      "en": "The Godwary and the deniers"
+    },
+    "essay": {
+      "en": "These verses close Surah al-Mursalaat. After its long warning against the deniers, the surah turns to the Godwary, setting their reward beside the doom just described. They are amid shades and springs, with such fruits as they desire. al-Tabrisi reads the shade as the shade of Paradise's trees and the springs as waters flowing before them, open and not cut in a trench [2]. They are told, 'Enjoy your food and drink,' a reward for what they used to do; al-Tusi notes the wording is a command whose force is permission, though some hold that God truly wants them to eat and drink so their joy may grow [3]. 'Thus do We reward the virtuous' promises the same reward to every doer of good who obeys God [3]. Then the refrain returns: 'Woe to the deniers on that day.'\n\nThe surah swings back on the deniers: 'Eat and enjoy a little! You are indeed guilty.' al-Tabrisi reads this as a threat - enjoy the world briefly, for death is certain, and they are left deserving punishment [2]. Next: when the deniers are told, 'Bow down,' they do not bow down. The commentators take bowing to mean the prayer [3]. al-Tabrisi reports from Muqatil that the verse came down over Thaqif, who refused, calling it a disgrace, and that the Prophet answered there is no good in a religion without bowing and prostration [2]. al-Tabatabai finds it hard to fit that episode, which happened after the Hijra, to the verse [1]. The close, 'So what discourse will they believe after this?', leaves them without excuse: whoever rejects the Quran, with its plain proof, will believe in no other word [3]."
+    },
+    "verses": [
+      {
+        "verse": 41,
+        "heading": {
+          "en": "The Godwary rewarded"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Ali ibn Ibrahim",
+            "addressee": null,
+            "arabic": "قال: ظلال من نور أنور من الشمس",
+            "chain": null,
+            "text": {
+              "en": "Shades of light, brighter than the sun."
+            },
+            "source": "s4"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Kazim",
+            "addressee": null,
+            "arabic": "نحن والله وشيعتنا ليس على ملّة ابراهيم عليه السلام غيرنا وسائر النّاس منها براء",
+            "chain": null,
+            "text": {
+              "en": "By God, we and our Shia - none is upon the religion of Ibrahim but us, and the rest of the people are free of it."
+            },
+            "source": "s8"
+          }
+        ]
+      },
+      {
+        "verse": 45,
+        "heading": {
+          "en": "Woe to the deniers"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Abu al-Hasan al-Madi",
+            "addressee": null,
+            "arabic": "قُلْتُ وَيْلٌ يَوْمَئِذٍ لِلْمُكَذِّبِينَ قَالَ يَقُولُ وَيْلٌ لِلْمُكَذِّبِينَ يَا مُحَمَّدُ بِمَا أَوْحَيْتُ إِلَيْكَ مِنْ وَلايَةِ عَلِيِّ بْنِ أَبِي طَالِبٍ (عَلَيْهِ السَّلام)",
+            "chain": "Ali ibn Muhammad, from certain of our companions, from Ibn Mahbub, from Muhammad ibn al-Fudayl, from Abu al-Hasan al-Madi",
+            "text": {
+              "en": "I said, 'Woe to the deniers on that day.' He said: It means, Woe to the deniers, O Muhammad, of what I revealed to you concerning the authority of Ali ibn Abi Talib."
+            },
+            "source": "s22"
+          }
+        ]
+      },
+      {
+        "verse": 48,
+        "heading": {
+          "en": "Refusing to bow"
+        },
+        "note": {
+          "en": "al-Tusi notes a second reading, from Ibn Abbas: the words are said at the Resurrection, when the deniers are called to prostrate and cannot (68:42) [3]."
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Ali ibn Ibrahim",
+            "addressee": null,
+            "arabic": "قال: إذا قيل لهم تولوا الامام لم يتولوه",
+            "chain": null,
+            "text": {
+              "en": "When they are told, 'Give your allegiance to the Imam,' they do not give it."
+            },
+            "source": "s5"
+          },
+          {
+            "id": "n5",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "تفسيرها في باطن القرآن: وإذا قيل للنصاب والمكذبين تولوا علياً لم يفعلوا لأنهم الذين سبق عليهم في علم الله من الشقاء",
+            "chain": "Abu al-Qasim al-Alawi, from Furat, from Abu Hamza al-Thumali, from Abu Ja'far",
+            "text": {
+              "en": "Its interpretation in the inner meaning of the Quran: when the hostile ones and the deniers are told, 'Give allegiance to Ali,' they do not, for they are the ones for whom wretchedness was foreordained in God's knowledge."
+            },
+            "source": "s9"
+          }
+        ]
+      },
+      {
+        "verse": 50,
+        "heading": {
+          "en": "What word after this"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Ali ibn Ibrahim",
+            "addressee": null,
+            "arabic": "قال لنبيه صلى الله عليه وآله { فبأي حديث بعده } هذا الذي أحدثك به { يؤمنون }",
+            "chain": null,
+            "text": {
+              "en": "He said to His Prophet: 'So what discourse after this' - this which I have related to you - 'will they believe?'"
+            },
+            "source": "s6"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On the plain sense the two traditions read alike. al-Qurtubi takes 'Bow down, they do not bow down' to mean the deniers refusing the prayer, the reading Mujahid gave [16]; al-Tabrisi reads it the same and likewise traces the verse to Thaqif [2]. The Shia hadith, though, adds an inner meaning the Sunni works do not carry: Furat al-Kufi relates from al-Baqir that in the Quran's hidden sense the verse is the hostile ones and the deniers refusing allegiance to Ali [9], and Tafsir al-Qummi glosses the bowing the same way [5]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Mursalaat 41 to 50",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=77&tAyahNo=41&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي انطباق القصة - وقد وقعت بعد الهجرة - على الآية خفاء"
+        },
+        "gloss": "There is obscurity in applying this account - which happened after the Hijra - to the verse."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mursalaat 41 to 50",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=77&tAyahNo=41&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال مقاتل: نزلت في ثقيف حين أمرهم رسول الله بالصلاة فقالوا: لا ننحني"
+        },
+        "gloss": "Muqatil said: it came down about Thaqif, when the Messenger of God ordered them to pray and they said, 'We will not bow.'"
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mursalaat 41 to 50",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=77&tAyahNo=41&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "صورته صورة الأمر والمراد به الاباحة"
+        },
+        "gloss": "Its form is the form of a command, but what is meant by it is permission."
+      },
+      {
+        "id": "s4",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mursalaat 41",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=77&tAyahNo=41&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ظلال من نور أنور من الشمس"
+        },
+        "gloss": "Shades of light brighter than the sun."
+      },
+      {
+        "id": "s5",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mursalaat 48",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=77&tAyahNo=48&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إذا قيل لهم تولوا الامام لم يتولوه"
+        },
+        "gloss": "When they are told, 'Accept the authority of the Imam,' they do not."
+      },
+      {
+        "id": "s6",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mursalaat 50",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=77&tAyahNo=50&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ فبأي حديث بعده } هذا الذي أحدثك به { يؤمنون }"
+        },
+        "gloss": "'So what discourse after this' - this which I have related to you - 'will they believe?'"
+      },
+      {
+        "id": "s8",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mursalaat 41 to 50",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=77&tAyahNo=41&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "نحن والله وشيعتنا ليس على ملّة ابراهيم عليه السلام غيرنا وسائر النّاس منها براء"
+        },
+        "gloss": "By God, we and our Shia - none is upon the religion of Ibrahim but us, and the rest of the people are free of it."
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "Tafsir Furat al-Kufi",
+        "author": "Furat ibn Ibrahim al-Kufi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mursalaat 48",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=45&tSoraNo=77&tAyahNo=48&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "تفسيرها في باطن القرآن: وإذا قيل للنصاب والمكذبين تولوا علياً لم يفعلوا"
+        },
+        "gloss": "Its interpretation in the inner meaning of the Quran: when the hostile ones and the deniers are told, 'Give allegiance to Ali,' they do not."
+      },
+      {
+        "id": "s16",
+        "kind": "tafsir",
+        "work": "al-Jami li-Ahkam al-Quran",
+        "author": "al-Qurtubi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Mursalaat 48 to 50",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=5&tSoraNo=77&tAyahNo=48&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أي إذا قيل لهؤلاء المشركين: { ٱرْكَعُواْ } أي صلّوا { لاَ يَرْكَعُونَ } أي لا يصلون قاله مجاهد"
+        },
+        "gloss": "That is, when these polytheists are told, 'Bow down,' meaning pray, 'they do not bow down,' meaning they do not pray - so said Mujahid."
+      },
+      {
+        "id": "s22",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 88, cited at Al-Mursalaat 45",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "يَقُولُ وَيْلٌ لِلْمُكَذِّبِينَ يَا مُحَمَّدُ بِمَا أَوْحَيْتُ إِلَيْكَ مِنْ وَلايَةِ عَلِيِّ بْنِ أَبِي طَالِبٍ"
+        },
+        "gloss": "He means: Woe to the deniers, O Muhammad, of what I revealed to you concerning the wilaya of Ali ibn Abi Talib."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:26:49Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-10-06T17:59:31Z",
+      "assembled_at": "2026-10-06T18:00:59Z"
+    }
+  }
+}

@@ -1,0 +1,374 @@
+{
+  "1": {
+    "id": "81:1",
+    "surah": 81,
+    "index": 1,
+    "range": [
+      1,
+      29
+    ],
+    "title": {
+      "en": "When the sun is wound up"
+    },
+    "essay": {
+      "en": "The surah opens on the unmaking of the world. Twelve clauses, each beginning with 'when,' pile one cosmic rupture on another, and Majma al-Bayan notes that all twelve are governed by a single clause at the end: then a soul shall know what it has readied [3]. The sun is wound up and its light gone, the stars scatter, the mountains are set moving, and the pregnant camels, the Arabs' most prized wealth, are left untended because every person is now absorbed in himself alone [1]. Wild beasts are herded together, the seas are set afire, and souls are sorted and paired, the blessed with their like and the wretched with their devil-companions [1].\n\nThen comes a sharp turn: the girl buried alive is asked for what sin she was killed. Al-Tibyan explains that she is the daughter the Arabs buried out of fear of poverty [6], and al-Mizan reads the questioning of the victim as a rebuke aimed at her killer, as Isa is questioned in 5:116 to expose those who wronged him [1]. Records are unfolded, the sky stripped off, the Fire stoked, the Garden brought near, and each soul sees its own work.\n\nThe second movement swears an oath by the stars that recede and run and set, by the retreating night and the breathing dawn. Al-Tibyan relates from Ali that these are the stars that hide by day and appear by night [7]. What the oath affirms is the revelation: it is the speech of a noble messenger, whom al-Mizan reads as Jibril, so that ascribing the words to him as messenger shows they are God's own [2]. Your companion is not crazy: the surah, among the earliest revealed, clears the Prophet of the madness his people charged him with [1]. He saw Jibril on the clear horizon and neither withholds nor alters the Unseen entrusted to him [2]; it is no Satan's speech. It closes with a rebuke, So where are you going, and a reminder for whoever wishes to walk straight, a wish that itself depends on God's will [2]."
+    },
+    "verses": [
+      {
+        "verse": 7,
+        "heading": {
+          "en": "Souls paired with their like"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "اما أهل الجنة فزوجوا الخيرات الحسان وأما أهل النار فمع كل إنسان منهم شيطان",
+            "chain": "Abu al-Jarud, from Abu Jafar",
+            "text": {
+              "en": "As for the people of the Garden, they are wedded to the good and lovely maidens; and as for the people of the Fire, with each of them is a devil."
+            },
+            "source": "s12"
+          }
+        ]
+      },
+      {
+        "verse": 8,
+        "heading": {
+          "en": "The buried girl questioned"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "من قتل في مودتنا والدليل على ذلك قوله لرسوله: قل لا أسألكم عليه أجراً إلا المودة في القربى",
+            "chain": "Ahmad ibn Idris, from Ahmad ibn Muhammad, from Ali ibn al-Hakam, from Ayman ibn Muhriz, from Jabir, from Abu Jafar",
+            "text": {
+              "en": "Whoever was slain for love of us. The proof of that is His word to His Messenger, 'Say, I ask of you no reward for it except love of the kin.'"
+            },
+            "source": "s13"
+          },
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "نزلت في الحسين بن علي عليهما السلام",
+            "chain": "Ibn Qulawayh, from his father, from Sad ibn Abdullah, from Yaqub ibn Yazid and Ibrahim ibn Hashim, from Muhammad ibn Abi Umayr, from one of his men, from Abu Abdillah",
+            "text": {
+              "en": "It was revealed about al-Husayn ibn Ali."
+            },
+            "source": "s22"
+          }
+        ]
+      },
+      {
+        "verse": 15,
+        "heading": {
+          "en": "The stars that withdraw"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Baqir",
+            "addressee": "Umm Hani",
+            "arabic": "الْخُنَّسُ إِمَامٌ يَخْنِسُ فِي زَمَانِهِ عِنْدَ انْقِطَاعٍ مِنْ عِلْمِهِ عِنْدَ النَّاسِ سَنَةَ سِتِّينَ وَمِائَتَيْنِ ثُمَّ يَبْدُو كَالشِّهَابِ الْوَاقِدِ فِي ظُلْمَةِ اللَّيْلِ فَإِنْ أَدْرَكْتِ ذَلِكِ قَرَّتْ عَيْنُكِ",
+            "chain": "A number of our companions, from Sad ibn Abdullah, from Ahmad ibn al-Hasan, from Umar ibn Yazid, from al-Hasan ibn al-Rabi al-Hamdani, from Muhammad ibn Ishaq, from Usayd ibn Thalaba, from Umm Hani",
+            "text": {
+              "en": "Al-khunnas is an Imam who withdraws in his time, when knowledge of him is cut off from the people, in the year two hundred and sixty. Then he appears like a blazing meteor in the darkness of the night. If you live to see it, your eye will be gladdened."
+            },
+            "source": "s54"
+          }
+        ]
+      },
+      {
+        "verse": 20,
+        "heading": {
+          "en": "Jibril and the Prophet"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "{ ذي قوة عند ذي العرش مكين } قال: يعني جبرئيل … { مطاع ثم أمين } قال: يعني رسول الله صلى الله عليه وآله هو المطاع عند ربه الأمين يوم القيامة",
+            "chain": "Jafar ibn Ahmad, from Ubaydullah ibn Musa, from al-Hasan ibn Ali ibn Abi Hamza, from his father, from Abu Basir, from Abu Abdillah",
+            "text": {
+              "en": "'Powerful and eminent with the Lord of the Throne' means Jibril. 'One who is obeyed and trustworthy' means the Messenger of Allah; he is the one obeyed before his Lord, the trustworthy on the Day of Resurrection."
+            },
+            "source": "s20"
+          }
+        ]
+      },
+      {
+        "verse": 22,
+        "heading": {
+          "en": "Your companion is not crazy"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "يعني النبي صلى الله عليه وآله ما هو بمجنون في نصبه أمير المؤمنين علماً للناس",
+            "chain": "Jafar ibn Ahmad, from Ubaydullah ibn Musa, from al-Hasan ibn Ali ibn Abi Hamza, from his father, from Abu Basir, from Abu Abdillah",
+            "text": {
+              "en": "It means the Prophet; he is not crazy in his appointing Amir al-Muminin as a marker of guidance for the people."
+            },
+            "source": "s20"
+          }
+        ]
+      },
+      {
+        "verse": 26,
+        "heading": {
+          "en": "Where are you going?"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "﴿فَأَيْنَ تَذْهَبُونَ﴾؟ و ﴿أَنَّىٰ تُؤْفَكُونَ﴾؟ وَالاْعْلاَمُ قَائِمَةٌ، وَالاْيَاتُ وَاضِحَةٌ، وَالْمَنَارُ مَنْصُوبَةٌ، فَأَيْنَ يُتَاهُ بِكُمْ؟ بَلْ كَيْفَ تَعْمَهُونَ وَبَيْنَكُمْ عِتْرَةُ نَبِيِّكُمْ؟ وَهُمْ أَزِمَّةُ الْحَقِّ، و أعلام الدِّين وَأَلْسِنَةُ الصِّدْقِ",
+            "chain": null,
+            "text": {
+              "en": "So where are you going? How are you turned away, while the ensigns stand, the signs are clear, and the beacon is raised? How do you wander in blindness while the progeny of your Prophet is among you - the reins of truth, the ensigns of faith, the tongues of truth?"
+            },
+            "source": "s63"
+          }
+        ]
+      },
+      {
+        "verse": 29,
+        "heading": {
+          "en": "You will not wish"
+        },
+        "narrations": [
+          {
+            "id": "n8",
+            "speaker": "Imam al-Kazim",
+            "addressee": null,
+            "arabic": "انّ الله جعل قلوب الأئمّة عليهم السلام مورداً لارادته فاذا شاء الله شيئاً شاؤوه وهو قوله وما تشاؤون الاّ ان يشاء الله ربّ العالمين",
+            "chain": null,
+            "text": {
+              "en": "Allah has made the hearts of the Imams a repository for His will; so when Allah wills a thing, they will it. That is His word, 'You will not wish unless Allah, the Lord of all the worlds, wishes.'"
+            },
+            "source": "s26"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On the girl buried alive, both traditions begin with the plain sense. Ibn Kathir says she is the daughter the people of ignorance buried out of dislike of daughters, questioned on the Day of Resurrection to threaten her killer [35]. The Shia reports keep this reading but add another: al-Burhan relates from al-Baqir and al-Sadiq a variant, al-mawadda (love), so that the verse asks about the love owed to the Prophet's kin and the one who severed it, and some reports identify the one slain as al-Husayn [22]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on At-Takwir 1 to 14",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=81&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ويشبه أن تكون السورة من السور العتائق النازلة في أوائل البعثة كما يشهد به ما فيها من تنزيهه صلى الله عليه وآله وسلم مما رموه به من الجنون"
+        },
+        "gloss": "It seems this surah is among the early ones revealed at the start of the mission, as shown by its clearing of the Prophet from the madness they accused him of."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on At-Takwir 15 to 29",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=81&tAyahNo=15&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والمراد بالرسول جبريل كما قال تعالى { من كان عدواً لجبريل فإنه نزَّله على قلبك بإذن الله }"
+        },
+        "gloss": "The messenger meant here is Jibril, as Allah said, 'whoever is an enemy of Jibril - it is he who brought it down upon your heart by Allah's leave.'"
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Takwir 1 to 14",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=81&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فهنا اثنا عشر ظرفاً كلها إضافة إلى الجمل … والعامل فيها كلها قوله { علمت نفس ما أحضرت }"
+        },
+        "gloss": "Here there are twelve time-clauses, all of them governed by the single clause, 'then a soul shall know what it has readied.'"
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Takwir 1 to 14",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=81&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فالموؤدة المقتولة بدفنها حية، فكانت العرب تئد البنات خوف الاملاق"
+        },
+        "gloss": "The buried girl is the one killed by being buried alive; the Arabs used to bury their daughters for fear of poverty."
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Takwir 15 to 29",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=81&tAyahNo=15&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وروي عن أمير المؤمنين عليه السلام: أن الخنس النجوم لانها تخنس بالنهار وتبدو بالليل"
+        },
+        "gloss": "It is related from Amir al-Muminin that al-khunnas are the stars, for they hide by day and appear by night."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Takwir 7",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=81&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "اما أهل الجنة فزوجوا الخيرات الحسان وأما أهل النار فمع كل إنسان منهم شيطان"
+        },
+        "gloss": "As for the people of the Garden, they are wedded to the good maidens; and as for the people of the Fire, with each of them is a devil."
+      },
+      {
+        "id": "s13",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Takwir 8 to 9",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=81&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "من قتل في مودتنا والدليل على ذلك قوله لرسوله: قل لا أسألكم عليه أجراً إلا المودة في القربى"
+        },
+        "gloss": "Whoever was slain for love of us; the proof is His word to His Messenger, 'Say, I ask of you no reward for it except love of the kin.'"
+      },
+      {
+        "id": "s20",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Takwir 19 to 29",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=81&tAyahNo=19&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يعني رسول الله صلى الله عليه وآله هو المطاع عند ربه الأمين يوم القيامة"
+        },
+        "gloss": "It means the Messenger of Allah; he is the obeyed one before his Lord, the trustworthy on the Day of Resurrection."
+      },
+      {
+        "id": "s22",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Takwir 8 to 9",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=81&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "روي عن أبي جعفر و أبي عبد الله عليهما السلام: و إذا المودة سئلت بأي ذنب قتلت بفتح الميم و الواو و الدال"
+        },
+        "gloss": "It is related from al-Baqir and al-Sadiq that it reads 'and when the love (al-mawadda) is asked for what sin it was killed,' with fatha on the mim, waw and dal."
+      },
+      {
+        "id": "s26",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on At-Takwir 16 to 29",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=81&tAyahNo=16&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وعن الكاظم عليه السلام انّ الله جعل قلوب الأئمّة عليهم السلام مورداً لارادته فاذا شاء الله شيئاً شاؤوه"
+        },
+        "gloss": "From al-Kazim: Allah has made the hearts of the Imams a repository for His will, so when Allah wills a thing, they will it."
+      },
+      {
+        "id": "s35",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on At-Takwir 1 to 14",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=81&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والموءودة هي التي كان أهل الجاهلية يدسونها في التراب كراهية البنات، فيوم القيامة تسأل الموءودة على أي ذنب قتلت ليكون ذلك تهديداً لقاتلها"
+        },
+        "gloss": "The buried girl is the one whom the people of ignorance used to press into the earth out of dislike of daughters; on the Day of Resurrection she is asked for what sin she was killed, as a threat to her killer."
+      },
+      {
+        "id": "s54",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 23, cited at At-Takwir 15",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "لم يخرجه",
+          "مجهول"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "الْخُنَّسُ إِمَامٌ يَخْنِسُ فِي زَمَانِهِ عِنْدَ انْقِطَاعٍ مِنْ عِلْمِهِ عِنْدَ النَّاسِ سَنَةَ سِتِّينَ وَمِائَتَيْنِ ثُمَّ يَبْدُو كَالشِّهَابِ الْوَاقِدِ فِي ظُلْمَةِ اللَّيْلِ"
+        },
+        "gloss": "Al-khunnas is an Imam who withdraws in his time, when knowledge of him is cut off from the people, in the year two hundred and sixty, then appears like a blazing meteor in the darkness of night."
+      },
+      {
+        "id": "s63",
+        "kind": "hadith",
+        "work": "Nahj al-Balagha",
+        "author": "al-sharif al-radi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 6, cited at At-Takwir 26",
+        "url": "https://thaqalayn.com/book/18",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "بَلْ كَيْفَ تَعْمَهُونَ وَبَيْنَكُمْ عِتْرَةُ نَبِيِّكُمْ؟ وَهُمْ أَزِمَّةُ الْحَقِّ"
+        },
+        "gloss": "How do you wander in blindness while the progeny of your Prophet is among you? They are the reins of truth."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:49:30Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T18:23:13Z",
+      "assembled_at": "2026-10-06T18:23:35Z"
+    }
+  }
+}

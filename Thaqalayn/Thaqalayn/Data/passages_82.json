@@ -1,0 +1,347 @@
+{
+  "1": {
+    "id": "82:1",
+    "surah": 82,
+    "index": 1,
+    "range": [
+      1,
+      19
+    ],
+    "title": {
+      "en": "The cleaving and the reckoning"
+    },
+    "essay": {
+      "en": "This short Meccan surah opens by naming four signs of the Last Day: the sky is rent apart, the stars scatter from their places, the seas are opened into one another, and the graves are turned over to give up their dead. Al-Mizan reads these as the attendant signs by which the surah delimits the Day of Resurrection [1]. When they come, the verse says, a soul will know what it sent ahead and what it left behind - the deeds it did, and, commentators add, a practice good or evil that others kept up after its death [2].\n\nThe passage then turns to a direct rebuke: 'O man! What has deceived you about your generous Lord?' Al-Tibyan reads this as an address of threat and warning to those bound by God's command [4]. He is named the Generous who created you, proportioned you, and composed you in whatever form He willed; the reading of 'fa'adalaka', lightened or doubled, turns on whether the sense is that He balanced your whole frame or set your parts in proportion to one another [2]. Al-Mizan presses that naming Him generous here leaves the denier no excuse, since the context is one of warning, not a prompt to plead His kindness [1].\n\n'No! Indeed, you deny the Retribution.' The word of rebuke cuts off the excuse [4]. Over each person stand watchers, noble writers who know whatever he does, so his deeds are kept for the reckoning. The two fates are set side by side: the pious amid bliss, the vicious in hell, entering it on the Day of Retribution and never absent from it. Shia commentators restrict 'the vicious' here to the disbelievers, so that believing grave-sinners are not held there forever [5]. Twice the passage magnifies that Day, asking what could make its terror known, then answers: a day when no soul can avail another, for the bonds of cause and effect are severed and command belongs to Allah alone - even intercession is only by His leave [1]."
+    },
+    "verses": [
+      {
+        "verse": 3,
+        "heading": {
+          "en": "Seas turned to fire"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Ali ibn Ibrahim",
+            "addressee": null,
+            "arabic": "{ إذا السماء انفطرت وإذا الكواكب انتثرت وإذا البحار فجرت } … قال: تتحول نيراناً",
+            "chain": null,
+            "text": {
+              "en": "Of 'when the sky is rent apart, when the stars are scattered, when the seas are merged,' he said: they turn into fire."
+            },
+            "source": "s6"
+          }
+        ]
+      },
+      {
+        "verse": 5,
+        "heading": {
+          "en": "What a soul sent ahead"
+        },
+        "note": {
+          "en": "'What it sent ahead' is the deeds a soul performed; 'what it left behind' is a practice, good or evil, that others acted on after its death [1]."
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Ali ibn Ibrahim",
+            "addressee": null,
+            "arabic": "أنها نزلت في الثاني، يعني ما قدمه من ولاية أبي فلان و من ولاية نفسه، و ما أخره من ولاة الأمر من بعده",
+            "chain": null,
+            "text": {
+              "en": "It was revealed concerning the second: meaning what he sent ahead of allegiance to so-and-so and to his own rule, and what he left behind of the holders of authority after him."
+            },
+            "source": "s17"
+          }
+        ]
+      },
+      {
+        "verse": 8,
+        "heading": {
+          "en": "Formed as He willed"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "لو شاء ركبك على غير هذه الصورة",
+            "chain": null,
+            "text": {
+              "en": "Had He willed, He would have composed you in a form other than this."
+            },
+            "source": "s16"
+          }
+        ]
+      },
+      {
+        "verse": 9,
+        "heading": {
+          "en": "Denying the Retribution"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Ali ibn Ibrahim",
+            "addressee": null,
+            "arabic": "{ كَلاَّ بَلْ تُكَذِّبُونَ بِٱلدِّينِ } قال: برسول الله (صلى الله عليه و آله) و أمير المؤمنين (عليه السلام)",
+            "chain": null,
+            "text": {
+              "en": "Regarding 'No! Indeed, you deny the Retribution,' he said: by denying the Messenger of Allah and the Commander of the Faithful."
+            },
+            "source": "s17"
+          }
+        ]
+      },
+      {
+        "verse": 10,
+        "heading": {
+          "en": "The two recording angels"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Ali ibn Ibrahim",
+            "addressee": null,
+            "arabic": "{ وإن عليكم لحافظين } قال: الملكان الموكلان بالإِنسان",
+            "chain": null,
+            "text": {
+              "en": "'Indeed, there are over you watchers' - he said: the two angels appointed over the human being."
+            },
+            "source": "s12"
+          },
+          {
+            "id": "n6",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "اعلموا أنكم في أجل محدود وأمل ممدود ونفس معدود … ثم دمعت عيناه وقرأ: (وإن عليكم لحافظين * كراما كاتبين * يعلمون ما تفعلون)",
+            "chain": "Muhammad ibn Ali, from his uncle Muhammad ibn Abi al-Qasim, from Harun ibn Muslim, from Mas'ada ibn Sadaqa, from al-Sadiq Ja'far ibn Muhammad, from his father, from his forefathers, that Amir al-Muminin delivered a sermon in Basra",
+            "text": {
+              "en": "Know that you are within a fixed term, an amplified hope, and numbered breaths. Then his eyes filled with tears and he recited: Indeed there are over you watchers, noble writers, who know whatever you do."
+            },
+            "source": "s37"
+          }
+        ]
+      },
+      {
+        "verse": 11,
+        "heading": {
+          "en": "The noble writers"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Imam al-Kazim",
+            "addressee": null,
+            "arabic": "انّ العبد اذا همّ بالحسنة خرج نفسه طيّب الريح فقال صاحب اليمين لصاحب الشمال قف فانّه قد همّ بالحسنة فاذا هو عملها كان لسانه قلمه وريقه مداده فاثبتها له",
+            "chain": null,
+            "text": {
+              "en": "When the servant resolves on a good deed, his breath comes out sweet-smelling, and the angel of the right says to the angel of the left: stop, he has resolved on a good deed. When he does it, his tongue is its pen and his saliva its ink, and it is recorded for him."
+            },
+            "source": "s19"
+          }
+        ]
+      },
+      {
+        "verse": 13,
+        "heading": {
+          "en": "The pious and the vicious"
+        },
+        "narrations": [
+          {
+            "id": "n8",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "{ إِنَّ ٱلأَبْرَارَ لَفِي نَعِيمٍ * وَإِنَّ ٱلْفُجَّارَ لَفِي جَحِيمٍ } قال: الأبرار نحن هم، و الفجار هم عدونا",
+            "chain": "Muhammad ibn al-Abbas, from Ja'far ibn Muhammad ibn Malik, from Muhammad ibn al-Husayn, from Muhammad ibn Ali, from Muhammad ibn al-Fudayl, from Abu Hamza, from Abu Ja'far",
+            "text": {
+              "en": "Concerning 'the pious shall be amid bliss, and the vicious shall be in hell,' he said: the pious are us, and the vicious are our enemies."
+            },
+            "source": "s17"
+          }
+        ]
+      },
+      {
+        "verse": 19,
+        "heading": {
+          "en": "Command belongs to Allah"
+        },
+        "narrations": [
+          {
+            "id": "n9",
+            "speaker": "Imam al-Baqir",
+            "addressee": "Jabir",
+            "arabic": "إن الأمر يومئذ و اليوم كله لله. يا جابر، إذا كان يوم القيامة بادت الحكام فلم يبق حاكم إلا الله",
+            "chain": "Amr ibn Shamir, from Jabir, from Abu Ja'far",
+            "text": {
+              "en": "The command that Day, and every day, belongs to Allah. O Jabir, when the Day of Resurrection comes the rulers will perish, and no ruler will remain except Allah."
+            },
+            "source": "s17"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": null
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Infitaar 1 to 19",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=82&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ومن هنا يظهر أن لا محل لقول بعضهم إن توصيف الرب بالكريم من قبيل تلقين الحجة"
+        },
+        "gloss": "From this it is clear that there is no basis for the view of some that describing the Lord as 'the Generous' is a way of prompting the excuse."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Infitaar 1 to 19",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=82&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أما عدلك بالتشديد فمعناه عدل خلقك فأخرجك في أحسن تقويم وأما عدلك بالتخفيف فمعناه عدل بعضك ببعض"
+        },
+        "gloss": "'Adalaka' with the doubled letter means He balanced your creation and brought you forth in the finest form; with the lightened letter it means He set some of your parts in proportion to others."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Infitaar 1 to 12",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=82&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هذا خطاب من الله تعالى للمكلفين من عباده، وفيه تهديد ووعيد"
+        },
+        "gloss": "This is an address from God to the responsible among His servants, and in it is threat and warning."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Infitaar 13 to 19",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=82&tAyahNo=13&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والمراد به - ها هنا - الكفار … وليس يدل ذلك على أن فساق أهل الملة لا يخرجون من النار"
+        },
+        "gloss": "What is meant by it here is the disbelievers … and this does not indicate that the sinners among the people of the faith do not come out of the Fire."
+      },
+      {
+        "id": "s6",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Infitaar 1 to 3",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=82&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ إذا السماء انفطرت وإذا الكواكب انتثرت وإذا البحار فجرت } … قال: تتحول نيراناً"
+        },
+        "gloss": "'When the sky is rent apart, when the stars are scattered, when the seas are merged' - he said: they turn into fire."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Infitaar 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=82&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ وإن عليكم لحافظين } قال: الملكان الموكلان بالإِنسان"
+        },
+        "gloss": "'Indeed, there are over you watchers' - he said: the two angels appointed over the human being."
+      },
+      {
+        "id": "s16",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Infitaar 1 to 8",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=82&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الطبرسي: عن الصادق (عليه السلام): لو شاء ركبك على غير هذه الصورة"
+        },
+        "gloss": "al-Tabrisi, from al-Sadiq: Had He willed, He would have composed you in a form other than this."
+      },
+      {
+        "id": "s17",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Infitaar 9 to 19",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=82&tAyahNo=9&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ إِنَّ ٱلأَبْرَارَ لَفِي نَعِيمٍ * وَإِنَّ ٱلْفُجَّارَ لَفِي جَحِيمٍ } قال: الأبرار نحن هم، و الفجار هم عدونا"
+        },
+        "gloss": "Concerning 'the pious shall be amid bliss, and the vicious shall be in hell' he said: the pious are us, and the vicious are our enemies."
+      },
+      {
+        "id": "s19",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Infitaar 8 to 19",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=82&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "في الكافي عن الكاظم عليه السلام قال انّ العبد اذا همّ بالحسنة خرج نفسه طيّب الريح فقال صاحب اليمين لصاحب الشمال قف فانّه قد همّ بالحسنة"
+        },
+        "gloss": "In al-Kafi, from al-Kazim: when the servant resolves on a good deed, his breath comes out sweet-smelling, and the angel of the right says to the angel of the left: stop, he has resolved on a good deed."
+      },
+      {
+        "id": "s37",
+        "kind": "hadith",
+        "work": "Al-Amali",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 5, cited at Al-Infitaar 10",
+        "url": "https://thaqalayn.com/book/15",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "ثم دمعت عيناه وقرأ: (وإن عليكم لحافظين * كراما كاتبين * يعلمون ما تفعلون)"
+        },
+        "gloss": "Then his eyes filled with tears and he recited: 'Indeed there are over you watchers, noble writers, who know whatever you do.'"
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:42:16Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T18:06:13Z",
+      "assembled_at": "2026-10-06T18:06:39Z"
+    }
+  }
+}

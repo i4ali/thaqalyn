@@ -1,0 +1,908 @@
+{
+  "1": {
+    "id": "58:1",
+    "surah": 58,
+    "index": 1,
+    "range": [
+      1,
+      6
+    ],
+    "title": {
+      "en": "The pleading woman and zihar",
+      "ur": "فریاد کرنے والی عورت اور ظہار"
+    },
+    "essay": {
+      "en": "The surah opens on a woman's plea: she stands before the Prophet about her husband, and Allah declares He has heard her. The commentators give the occasion - Khawla, repudiated by her husband Aws ibn al-Samit through zihar, the old formula 'you are to me as my mother's back,' came seeking relief, and zihar had been a form of divorce in the age of ignorance [2]. Tabatabai reads Allah's 'hearing' here as His answering her need, not bare perception [1]. The second verse exposes the formula as an outrage and a lie: a wife is not made a mother by a husband's words; his mother is only the one who bore him. Yet Allah is all-excusing. The third and fourth verses set the expiation that reopens the marriage - free a slave, or fast two successive months, or feed sixty needy persons, each before the couple may touch. The Shia commentators, following the Imams of the House of Muhammad, read 'then retract what they said' as the intention to resume relations and undo the zihar, so intercourse waits on the expiation [2][4]. The passage then turns from the household to those who oppose Allah and His Messenger: they will be subdued as earlier peoples were, and on the Day they are raised Allah will tell them of deeds He has counted and they have forgotten, a witness over all things [3].",
+      "ur": "سورہ ایک عورت کی فریاد سے کھلتا ہے: وہ اپنے شوہر کے بارے میں نبی صلی اللہ علیہ وآلہ وسلم کے سامنے کھڑی ہے، اور اللہ اعلان فرماتا ہے کہ اس نے اسے سن لیا۔ مفسرین اس کا سبب نزول بیان کرتے ہیں - خولہ، جسے اس کے شوہر اوس ابن صامت نے ظہار کے ذریعے چھوڑا تھا، وہ پرانا جملہ 'تو میرے لیے میری ماں کی پشت کی طرح ہے'، نجات کی تلاش میں آئی، اور ظہار جاہلیت میں طلاق کی ایک صورت تھی [2]۔ علامہ طباطبائی اللہ کے 'سننے' کو یہاں اس کی ضرورت کا جواب دینے کے طور پر پڑھتے ہیں، نہ کہ محض ادراک کے طور پر [1]۔ دوسری آیت اس جملے کو بے ہودگی اور جھوٹ قرار دیتی ہے: شوہر کے الفاظ سے بیوی ماں نہیں بنتی؛ اس کی ماں صرف وہ ہے جس نے اسے جنا۔ تاہم اللہ بہت معاف کرنے والا ہے۔ تیسری اور چوتھی آیات وہ کفارہ مقرر کرتی ہیں جو نکاح کو دوبارہ کھولتا ہے - ایک غلام آزاد کرو، یا دو ماہ پے درپے روزے رکھو، یا ساٹھ مسکینوں کو کھانا کھلاؤ، ہر ایک میاں بیوی کے ملاپ سے پہلے۔ شیعہ مفسرین، آل محمد صلی اللہ علیہ وآلہ وسلم کے ائمہ کی پیروی کرتے ہوئے، 'پھر وہ جو کہا اس سے رجوع کریں' کو ازدواجی تعلق دوبارہ قائم کرنے اور ظہار کو ختم کرنے کی نیت کے طور پر پڑھتے ہیں، پس کفارے کی ادائیگی تک ملاپ جائز نہیں [2][4]۔ پھر آیات گھریلو معاملے سے ان لوگوں کی طرف مڑتی ہیں جو اللہ اور اس کے رسول کی مخالفت کرتے ہیں: وہ پہلی قوموں کی طرح مغلوب ہوں گے، اور جس دن وہ اٹھائے جائیں گے اللہ انہیں ان اعمال کا حال بتائے گا جو اس نے شمار کیے اور انہوں نے بھلا دیے، وہ ہر چیز پر گواہ ہے [3]۔"
+    },
+    "verses": [
+      {
+        "verse": 1,
+        "heading": {
+          "en": "A plea Allah hears",
+          "ur": "اللہ کی سنی ہوئی فریاد"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "إِنَّ امْرَأَةً مِنَ الْمُسْلِمِينَ أَتَتْ رَسُولَ اللَّهِ … مَا أَنْزَلَ اللَّهُ عَلَيَّ كِتَاباً أَقْضِي بِهِ بَيْنَكَ وَ بَيْنَ زَوْجِكِ وَ أَنَا أَكْرَهُ أَنْ أَكُونَ مِنَ الْمُتَكَلِّفِينَ … فَسَمِعَ اللَّهُ عَزَّ وَ جَلَّ مُحَاوَرَتَهَا لِرَسُولِهِ … فِي زَوْجِهَا وَ مَا شَكَتْ إِلَيْهِ فَأَنْزَلَ اللَّهُ عَزَّ وَ جَلَّ بِذَلِكَ قُرْآناً",
+            "chain": "Ali ibn Ibrahim, from his father, from Ibn Mahbub, from Abu Wallad al-Hannat, from Humran, from Abu Jafar, from Amir al-Muminin",
+            "text": {
+              "en": "A Muslim woman came to the Messenger of Allah complaining of her husband. He said: Allah has sent down no book by which I may judge between you and your husband, and I dislike to be among those who presume. She wept and complained to Allah, and Allah heard, and sent down Quran about it.",
+              "ur": "ایک مسلمان عورت رسول اللہ صلی اللہ علیہ وآلہ وسلم کے پاس اپنے شوہر کی شکایت لے کر آئی۔ آپ صلی اللہ علیہ وآلہ وسلم نے فرمایا: اللہ نے مجھ پر کوئی ایسی کتاب نہیں اتاری جس سے میں تمہارے اور تمہارے شوہر کے درمیان فیصلہ کر سکوں، اور میں ان لوگوں میں سے ہونا پسند نہیں کرتا جو بلا دلیل بات کریں۔ وہ رو پڑی اور اللہ سے فریاد کی، اللہ نے سنا، اور اس بارے میں قرآن نازل فرمایا۔"
+            },
+            "source": "s32"
+          },
+          {
+            "id": "n2",
+            "speaker": "the Prophet",
+            "addressee": "Fatimah",
+            "arabic": "إن النبي (صلى الله عليه و آله) قال لفاطمة (عليها السلام): إن زوجك بعدي يلاقي كذا و كذا … فهبط جبرئيل (عليه السلام) فقال: { قَدْ سَمِعَ ٱللَّهُ قَوْلَ ٱلَّتِي تُجَادِلُكَ فِي زَوْجِهَا وَتَشْتَكِيۤ إِلَى ٱللَّهِ وَٱللَّهُ يَسْمَعُ تَحَاوُرَكُمآ إِنَّ ٱللَّهَ سَمِيعٌ بَصِيرٌ }",
+            "chain": "Muhammad ibn al-Abbas, from Ahmad ibn Abd al-Rahman, from Muhammad ibn Sulayman ibn Bazi, from Jamil ibn al-Mubarak, from Ishaq ibn Muhammad, from his father, from Jafar ibn Muhammad, from his father, from his forefathers",
+            "text": {
+              "en": "The Prophet said to Fatimah: Your husband after me will meet such and such - telling her what he would face. She asked: will you not ask Allah to turn it from him? Then Gabriel descended and said: Allah has certainly heard the speech of her who pleads with you about her husband and complains to Allah.",
+              "ur": "نبی صلی اللہ علیہ وآلہ وسلم نے فاطمہ سلام اللہ علیہا سے فرمایا: تمہارے شوہر میرے بعد ایسی ایسی مشکلات سے دوچار ہوں گے - آپ نے انہیں بتایا کہ وہ کیا سامنا کریں گے۔ انہوں نے عرض کیا: کیا آپ اللہ سے یہ دعا نہیں کریں گے کہ اسے ان سے دور فرمائے؟ پھر جبرائیل علیہ السلام اترے اور کہا: اللہ نے یقیناً اس کی بات سن لی جو آپ سے اپنے شوہر کے بارے میں التجا کرتی ہے اور اللہ سے شکوہ کرتی ہے۔"
+            },
+            "source": "s8"
+          }
+        ]
+      },
+      {
+        "verse": 2,
+        "heading": {
+          "en": "Zihar named a lie",
+          "ur": "ظہار کو جھوٹ قرار دینا"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "ولا يكون ظهار في يمين ولا في اضرار ولا في غضب ولا يكون ظهار إلا على طهر من غير جماع بشهادة شاهدين مسلمين",
+            "chain": "Humran, from Abu Jafar",
+            "text": {
+              "en": "No zihar takes effect in an oath, nor in causing harm, nor in anger; and no zihar takes effect except in a period of purity without intercourse, with two Muslim witnesses.",
+              "ur": "نہ قسم میں ظہار واقع ہوتا ہے، نہ نقصان پہنچانے کی نیت میں، نہ غصے میں؛ اور ظہار صرف اس وقت واقع ہوتا ہے جب عورت پاک ہو اور ہمبستری نہ ہوئی ہو، دو مسلمان گواہوں کی موجودگی میں۔"
+            },
+            "source": "s7"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On the occasion both traditions agree: the verses answered Khawla bint Thalaba, whose husband Aws ibn al-Samit had repudiated her by zihar [2][17]. They divide over 'then retract what they said.' The Shia commentators follow the Imams of the House of Muhammad: the 'return' is the intention to resume relations and so undo the zihar, and intercourse stays unlawful until the expiation is paid [4]. Sunni exegetes instead record a spread of readings - al-Shafi'i's keeping her as a wife without divorcing, the Iraqis' resolve to resume relations, and others [22].",
+      "ur": "سبب نزول پر دونوں روایات متفق ہیں: آیات خولہ بنت ثعلبہ کے جواب میں اتریں، جن کے شوہر اوس ابن صامت نے ظہار کے ذریعے انہیں چھوڑا تھا [2][17]۔ 'پھر جو کہا اس سے رجوع کریں' پر دونوں الگ ہو جاتی ہیں۔ شیعہ مفسرین آل محمد صلی اللہ علیہ وآلہ وسلم کے ائمہ کی پیروی کرتے ہیں: 'رجوع' سے مراد ازدواجی تعلق دوبارہ قائم کرنے کی نیت اور اس طرح ظہار کو ختم کرنا ہے، اور کفارے کی ادائیگی تک ملاپ ناجائز رہتا ہے [4]۔ سنی مفسرین مختلف آراء نقل کرتے ہیں - امام شافعی کی رائے کہ طلاق دیے بغیر بیوی بنائے رکھنا، عراقی علماء کی رائے کہ ازدواجی تعلق دوبارہ قائم کرنے کا ارادہ، اور دیگر آراء [22]۔"
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Mujaadila 1 to 6",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=58&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والمراد بالسمع في قوله { قد سمع الله } استجابة الدعوة وقضاء الحاجة من باب الكناية وهو شائع"
+        },
+        "gloss": "What is meant by 'hearing' in 'Allah has certainly heard' is His answering the plea and granting the need, by way of figurative usage, which is common."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 1 to 5",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=58&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "نزلت الآيات في امرأة من الأنصار … وقيل: خولة بنت ثعلبة عن قتادة ومقاتل وزوجها أوس بن الصامت … وكان الظهار من طلاق أهل الجاهلية … وأما ما ذهب إليه أئمة الهدى من آل محمد صلى الله عليه وسلم فهو أن المراد بالعود إرادة الوطء ونقض القول الذي قاله"
+        },
+        "gloss": "The verses were revealed about a woman of the Ansar - said to be Khawla bint Thalaba, on the authority of Qatada and Muqatil, whose husband was Aws ibn al-Samit - and zihar was a form of divorce among the people of the Jahiliyya ... As for what the Imams of guidance of the House of Muhammad held, the 'return' means the intention of intercourse and the undoing of the statement he made."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 6",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=58&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ يوم يبعثهم الله جميعاً } أي يحشرهم إلى أرض المحشر ويعيدهم أحياء … { أحصاه الله } عليهم وأثبته في كتاب أعمالهم"
+        },
+        "gloss": "'The day Allah will raise them all together' means He gathers them to the plain of resurrection and brings them back alive ... 'Allah has kept account of it' against them and recorded it in the book of their deeds."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 1 to 5",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=58&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والذي هو مذهبنا أن العود المراد به إرادة الوطىء او نقض القول الذي قاله … فانه لا يجوز له الوطىء إلا بعد الكفارة"
+        },
+        "gloss": "What our school holds is that the 'return' means the intention of intercourse or the undoing of the statement he made ... for intercourse is not lawful for him except after the expiation."
+      },
+      {
+        "id": "s7",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 3 to 4",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=58&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولا يكون ظهار في يمين ولا في اضرار ولا في غضب ولا يكون ظهار إلا على طهر من غير جماع بشهادة شاهدين مسلمين"
+        },
+        "gloss": "No zihar occurs in an oath, nor in causing harm, nor in anger; and no zihar occurs except in a period of purity without intercourse, with two Muslim witnesses."
+      },
+      {
+        "id": "s8",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 1 to 4",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=58&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إن النبي (صلى الله عليه و آله) قال لفاطمة (عليها السلام): إن زوجك بعدي يلاقي كذا و كذا … فهبط جبرئيل (عليه السلام) فقال: { قَدْ سَمِعَ ٱللَّهُ قَوْلَ ٱلَّتِي تُجَادِلُكَ فِي زَوْجِهَا وَتَشْتَكِيۤ إِلَى ٱللَّهِ }"
+        },
+        "gloss": "The Prophet said to Fatimah: Your husband after me will meet such and such ... then Gabriel descended and said: 'Allah has certainly heard the speech of her who pleads with you about her husband and complains to Allah.'"
+      },
+      {
+        "id": "s17",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 1",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=58&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إني لأسمع كلام خولة بنت ثعلبة … وهي تشتكي زوجها إلى رسول الله صلى الله عليه وسلم … قال وزوجها أوس ابن الصامت"
+        },
+        "gloss": "I could hear the speech of Khawla bint Thalaba ... as she complained of her husband to the Messenger of Allah ... and her husband was Aws ibn al-Samit."
+      },
+      {
+        "id": "s22",
+        "kind": "tafsir",
+        "work": "al-Jami li-Ahkam al-Quran",
+        "author": "al-Qurtubi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 3 to 4",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=5&tSoraNo=58&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الأوّل: أنه العزم على الوطء، وهو مشهور قول العراقيين أبي حنيفة وأصحابه … الخامس: وقال الإمام الشافعي رضي الله عنه: هو أن يمسكها زوجة بعد الظهار مع القدرة على الطلاق"
+        },
+        "gloss": "The first view: it is the resolve to have intercourse, the well-known view of the Iraqis, Abu Hanifa and his companions ... The fifth: al-Shafi'i said it is that he keeps her as a wife after the zihar while able to divorce her."
+      },
+      {
+        "id": "s32",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 6, hadith 1, cited at Al-Mujaadila 2",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "حسن"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "إِنَّ امْرَأَةً مِنَ الْمُسْلِمِينَ أَتَتْ رَسُولَ اللَّهِ … فَسَمِعَ اللَّهُ عَزَّ وَ جَلَّ مُحَاوَرَتَهَا لِرَسُولِهِ … فِي زَوْجِهَا وَ مَا شَكَتْ إِلَيْهِ فَأَنْزَلَ اللَّهُ عَزَّ وَ جَلَّ بِذَلِكَ قُرْآناً"
+        },
+        "gloss": "A Muslim woman came to the Messenger of Allah ... and Allah heard her exchange with His Messenger about her husband and what she complained of, and sent down Quran about it."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T04:12:13Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T04:34:39Z",
+      "assembled_at": "2026-10-06T04:36:10Z"
+    }
+  },
+  "2": {
+    "id": "58:2",
+    "surah": 58,
+    "index": 2,
+    "range": [
+      7,
+      13
+    ],
+    "title": {
+      "en": "Secret talk and private counsel",
+      "ur": "سری گفتگو اور خفیہ مشاورت"
+    },
+    "essay": {
+      "en": "The passage turns the reader's gaze upward: Allah 'knows whatever there is in the heavens and whatever there is in the earth,' so that no secret talk of three takes place 'but He is their fourth, nor among five but He is their sixth.' The commentators read His being their fourth as presence by knowledge, not by completing the number or standing bodily among them, for God is not a body [1][4]. It then exposes those forbidden from whispering who return to it, conferring 'with sin and transgression and disobedience to the Apostle' and greeting the Prophet 'with words with which Allah never greeted' him; hell suffices them. Majma al-Bayan ties this to Jews and hypocrites who whispered to grieve the believers [2]. The faithful are told the reverse: confer 'in [a spirit of] piety and Godfearing,' for such whispering is from Satan, meant to upset them, yet it cannot harm them except by Allah's leave. Two manners of the assembly follow: make room when asked, and rise when told, and Allah 'will raise in rank those of you who have faith and those who have been given knowledge' - which, the commentators note, singles out the learned [3]. Finally the believers are asked to send a charity ahead of any private talk with the Messenger, to spare the poor [1]; and when they shrank from it, the duty is lifted and they return to prayer, zakat and obedience [1].",
+      "ur": "یہ گزرگاہ قاری کی نگاہ کو اوپر اٹھاتی ہے: اللہ “آسمانوں اور زمین میں جو کچھ ہے سب کو جانتا ہے”، چنانچہ تین کی کوئی سری گفتگو نہیں ہوتی “مگر وہ ان کا چوتھا ہے، اور نہ پانچ کی، مگر وہ ان کا چھٹا ہے۔” مفسرین نے اس کے “چوتھے” ہونے کو علم کی موجودگی قرار دیا ہے، نہ کہ عدد مکمل کرنے یا جسمانی طور پر ان کے درمیان کھڑے ہونے سے، کیونکہ اللہ جسم نہیں ہے [1][4]۔ پھر یہ آیات ان لوگوں کو بے نقاب کرتی ہیں جنہیں سرگوشی سے روکا گیا تھا مگر وہ پھر بھی اس میں لگے رہے، “گناہ، سرکشی اور رسول کی نافرمانی” میں مشاورت کرتے رہے، اور نبی صلی اللہ علیہ وآلہ وسلم کو ایسے الفاظ سے سلام کرتے جو “اللہ نے کبھی استعمال نہیں کیے”؛ جہنم ان کے لیے کافی ہے۔ مجمع البیان اسے یہود اور منافقین سے جوڑتا ہے جو مومنین کو غمگین کرنے کے لیے سرگوشیاں کرتے تھے [2]۔ اہل ایمان کو اس کے برعکس حکم دیا گیا: “تقویٰ اور پرہیزگاری” کے ساتھ مشورت کریں، کیونکہ ایسی سرگوشی شیطان کی طرف سے ہے جو انہیں پریشان کرنا چاہتا ہے، لیکن وہ اللہ کی اجازت کے بغیر انہیں نقصان نہیں پہنچا سکتا۔ مجلس کے دو آداب بیان ہوتے ہیں: جب کہا جائے تو جگہ دو، اور جب کہا جائے تو اٹھو؛ اور اللہ “تم میں سے اہل ایمان اور علم والوں کے درجے بلند کرے گا” - مفسرین نے نشاندہی کی ہے کہ اس میں اہل علم کو خاص طور پر ممتاز کیا گیا ہے [3]۔ آخر میں مومنین سے کہا گیا کہ رسول صلی اللہ علیہ وآلہ وسلم سے کسی خفیہ بات چیت سے پہلے صدقہ دیں تاکہ فقراء کا خیال رہے [1]؛ اور جب وہ اس سے جھجکے تو یہ فریضہ اٹھا لیا گیا اور وہ نماز، زکوٰۃ اور اطاعت کی طرف لوٹ آئے [1]۔"
+    },
+    "verses": [
+      {
+        "verse": 7,
+        "heading": {
+          "en": "God is with every gathering",
+          "ur": "اللہ ہر محفل میں حاضر ہے"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam Ali",
+            "addressee": "the Catholicos",
+            "arabic": "هو ها هنا و ها هنا و فوق و تحت و محيط بنا و معنا، و هو قوله تعالى: { مَا يَكُونُ مِن نَّجْوَىٰ ثَلاَثَةٍ إِلاَّ هُوَ رَابِعُهُمْ وَلاَ خَمْسَةٍ إِلاَّ هُوَ سَادِسُهُمْ }",
+            "chain": "from a number of our companions, from Ahmad ibn Muhammad al-Barqi, in a raised report",
+            "text": {
+              "en": "The Catholicos asked the Commander of the Faithful: where is God? He answered: He is here, and here, and above, and below, encompassing us and with us; and that is His word, 'There is no secret talk of three but He is their fourth, nor of five but He is their sixth.'",
+              "ur": "کاتھولیکوس نے امیر المومنین علیہ السلام سے پوچھا: اللہ کہاں ہے؟ آپ علیہ السلام نے فرمایا: وہ یہاں ہے، اور یہاں، اور اوپر، اور نیچے، ہمیں گھیرے ہوئے اور ہمارے ساتھ؛ اور یہی اس کا فرمان ہے: “تین کی کوئی سری گفتگو نہیں ہوتی مگر وہ ان کا چوتھا ہے، اور نہ پانچ کی مگر وہ ان کا چھٹا۔”"
+            },
+            "source": "s12"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "نزلت هذه الآية في فلان، و فلان، و أبي عبيدة بن الجراح، و عبد الرحمن بن عوف، و سالم مولى أبي حذيفة، و المغيرة بن شعبة، حيث كتبوا الكتاب بينهم، و تعاهدوا و توافقوا: لئن مضى محمد لا تكون الخلافة في بني هاشم و لا النبوة أبدا",
+            "chain": "from Ali, from Ali ibn al-Husayn, from Ali ibn Abi Hamza, from Abu Basir, from Abu Abdillah",
+            "text": {
+              "en": "This verse came down about so-and-so, so-and-so, Abu Ubayda ibn al-Jarrah, Abd al-Rahman ibn Awf, Salim mawla Abi Hudhayfa, and al-Mughira ibn Shu'ba, when they wrote a pact among themselves and agreed that if Muhammad passed away, the caliphate would never be in Banu Hashim, nor prophethood. So God revealed this verse about them.",
+              "ur": "یہ آیت فلاں، فلاں، ابو عبیدہ ابن الجراح، عبد الرحمٰن ابن عوف، سالم آزادکردہ غلام ابی حذیفہ، اور مغیرہ ابن شعبہ کے بارے میں نازل ہوئی، جب انہوں نے آپس میں ایک عہدنامہ لکھا اور یہ طے کیا کہ اگر محمد صلی اللہ علیہ وآلہ وسلم وفات پاگئے تو خلافت کبھی بنی ہاشم میں نہیں آئے گی، نہ ہی نبوت۔ چنانچہ اللہ نے ان کے بارے میں یہ آیت نازل فرمائی۔"
+            },
+            "source": "s12"
+          }
+        ]
+      },
+      {
+        "verse": 8,
+        "heading": {
+          "en": "A greeting God never used",
+          "ur": "وہ سلام جو اللہ نے کبھی نہیں کیا"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "كان أصحاب رسول الله صلى الله عليه وآله يأتون رسول الله صلى الله عليه وآله فيسألونه أن يسأل الله لهم، وكانوا يسألون ما لا يحل لهم … وقولهم له إذا أتوه أنعم صباحاً وانعم مساءً وهي تحية أهل الجاهلية … فقال لهم رسول الله صلى الله عليه وآله وقد أبدلنا الله بخير من ذلك تحية أهل الجنة السلام عليكم",
+            "chain": null,
+            "text": {
+              "en": "The companions used to come to the Messenger and ask him to petition God for them, asking for what was not lawful. When they came they greeted him with 'Good morning, good evening,' the greeting of the people of ignorance. The Messenger said: God has given us something better, the greeting of Paradise, 'Peace be upon you.'",
+              "ur": "صحابہ رسول صلی اللہ علیہ وآلہ وسلم کے پاس آتے اور ان سے درخواست کرتے کہ ان کے لیے اللہ سے دعا کریں، اور ایسی چیزیں مانگتے جو ان کے لیے جائز نہ تھیں۔ جب وہ آتے تو انہیں ‘صبح بخیر، شام بخیر’ کہہ کر سلام کرتے، جو اہل جاہلیت کا سلام تھا۔ آپ صلی اللہ علیہ وآلہ وسلم نے فرمایا: اللہ نے ہمیں اس سے بہتر عطا فرمایا ہے، جنت والوں کا سلام: ‘السلام علیکم’۔"
+            },
+            "source": "s7"
+          }
+        ]
+      },
+      {
+        "verse": 9,
+        "heading": {
+          "en": "Whisper in piety, not sin",
+          "ur": "گناہ میں نہیں، تقویٰ میں سرگوشی"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Abu Sa'id al-Khudri",
+            "addressee": null,
+            "arabic": "كانت أمارة المنافقين بغض علي بن أبي طالب (عليه السلام) … ثم قال: و الذي نفسي بيده، لا يدخل عبد الجنة حتى يحبني، و كذب من زعم أنه يحبني و يبغض هذا. و أخذ بكف علي (عليه السلام)، فأنزل الله عز و جل هذه الآية في شأنهما",
+            "chain": "al-Shaykh al-Tusi in his Majalis, from a group, from Abu al-Mufaddal, from Muhammad ibn al-Husayn ibn Hafs al-Khath'ami, from Abbad ibn Yaqub, from al-Sayyid ibn Isa al-Hamdani, from al-Hakam ibn Abd al-Rahman ibn Abi Nu'aym, from Abu Sa'id al-Khudri",
+            "text": {
+              "en": "The mark of the hypocrites was hatred of Ali. Two men whispered together; the Messenger, knowing their intent, grew angry and said, 'By Him in whose hand is my soul, no servant enters Paradise until he loves me, and he lies who claims to love me yet hates this one,' and he took Ali's hand. Then this verse was revealed.",
+              "ur": "منافقین کی علامت علی علیہ السلام سے بغض تھا۔ دو آدمیوں نے آپس میں سرگوشی کی؛ رسول صلی اللہ علیہ وآلہ وسلم کو ان کی نیت کا علم ہوا تو آپ غضبناک ہوئے اور فرمایا: “اس ذات کی قسم جس کے ہاتھ میں میری جان ہے، کوئی بندہ جنت میں داخل نہ ہوگا جب تک مجھ سے محبت نہ کرے، اور جو یہ دعویٰ کرے کہ مجھ سے محبت ہے مگر اس سے بغض رکھے، وہ جھوٹا ہے”، اور آپ نے علی علیہ السلام کا ہاتھ پکڑ لیا۔ پھر یہ آیت نازل ہوئی۔"
+            },
+            "source": "s14"
+          }
+        ]
+      },
+      {
+        "verse": 10,
+        "heading": {
+          "en": "Whispering comes from Satan",
+          "ur": "سرگوشی شیطان کی طرف سے ہے"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "كان سبب نزول هذه الآية أن فاطمة عليها السلام رأت في منامها أن رسول الله صلى الله عليه وآله هم أن يخرج هو وفاطمة وعلي والحسن والحسين صلوات الله عليهم من المدينة … فنزل عليه جبرئيل عليه السلام فقال: يا محمد هذا شيطان يقال له الزها … وهو الذي أرى فاطمة هذه الرؤيا ويؤذي المؤمنين في نومهم ما يغتمون به … فأنزل الله على رسوله: { إنما النجوى من الشيطان } الآية",
+            "chain": "his father, from Muhammad ibn Abi Umayr, from Abu Basir, from Abu Abdillah",
+            "text": {
+              "en": "Fatimah saw in her sleep the Messenger setting out from Medina with her, Ali, al-Hasan and al-Husayn, buying a sheep that killed them once eaten. When it came true in waking, the Prophet prayed and conferred with his Lord; Gabriel said a Satan named al-Zaha had shown her the dream to grieve the faithful. So this verse came down.",
+              "ur": "فاطمہ سلام اللہ علیہا نے خواب میں دیکھا کہ رسول صلی اللہ علیہ وآلہ وسلم ان کے ساتھ، علی، حسن اور حسین علیہم السلام کے ساتھ مدینہ سے نکلے، ایک بکری خریدی جو کھانے کے بعد انہیں ہلاک کر گئی۔ جب یہ بیداری میں سچ نکلا تو نبی صلی اللہ علیہ وآلہ وسلم نے اپنے رب سے دعا کی اور مشاورت کی؛ جبریل علیہ السلام نے بتایا کہ الزہا نامی ایک شیطان نے انہیں یہ خواب دکھایا تھا تاکہ مومنین کو غمگین کرے۔ چنانچہ یہ آیت نازل ہوئی۔"
+            },
+            "source": "s8"
+          }
+        ]
+      },
+      {
+        "verse": 11,
+        "heading": {
+          "en": "Make room, raise the learned",
+          "ur": "جگہ دو، اہل علم کے درجے بلند کرو"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "كان رسول الله صلى الله عليه وآله إذا دخل المسجد يقوم له الناس فنهاهم الله أن يقوموا له فقال تفسحوا أي وسعوا له في المجلس { وإذا قيل انشزوا فانشزوا } يعني: إذا قال قوموا فقوموا",
+            "chain": null,
+            "text": {
+              "en": "When the Messenger entered the mosque, the people would rise for him, so God forbade them to rise for him and said, 'Make room,' that is, widen the sitting for him. 'And when you are told, Rise up, then rise up' means: when he says 'Rise,' then rise.",
+              "ur": "جب رسول صلی اللہ علیہ وآلہ وسلم مسجد میں داخل ہوتے تو لوگ آپ کے لیے کھڑے ہو جاتے، تو اللہ نے انہیں آپ کے لیے کھڑے ہونے سے منع کیا اور فرمایا: “جگہ دو”، یعنی ان کے لیے بیٹھنے کی جگہ کشادہ کرو۔ “اور جب کہا جائے اٹھو تو اٹھ جاؤ” کا مطلب ہے: جب آپ فرمائیں ‘اٹھو’ تو اٹھ جاؤ۔"
+            },
+            "source": "s9"
+          },
+          {
+            "id": "n7",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "اذا كان يوم القيامة جمع الله الناس في صعيد واحد ووضعت الموازين فيوزن دماء الشهداء مع مداد العلماء فيرجّح مداد العلماء على دماء الشهداء",
+            "chain": null,
+            "text": {
+              "en": "When the Day of Resurrection comes, God will gather the people on a single plain and the scales will be set up; the blood of the martyrs will be weighed against the ink of the scholars, and the ink of the scholars will outweigh the blood of the martyrs.",
+              "ur": "جب قیامت کا دن آئے گا تو اللہ لوگوں کو ایک ہموار میدان میں جمع کرے گا اور ترازو رکھے جائیں گے؛ شہیدوں کا خون علماء کی سیاہی کے ساتھ تولا جائے گا، اور علماء کی سیاہی شہیدوں کے خون پر بھاری ہوگی۔"
+            },
+            "source": "s20"
+          }
+        ]
+      },
+      {
+        "verse": 12,
+        "heading": {
+          "en": "Charity before private counsel",
+          "ur": "خفیہ مشاورت سے پہلے صدقہ"
+        },
+        "narrations": [
+          {
+            "id": "n8",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "إذا سألتم رسول الله ص حاجة فتصدقوا بين يدي حاجتكم ليكون أقضى لحوائجكم، فلم يفعل ذلك أحد إلا أمير المؤمنين عليه السلام فإنه تصدق بدينار وناجى رسول الله صلى الله عليه وآله عشر نجوات",
+            "chain": null,
+            "text": {
+              "en": "When you ask the Messenger for a need, give charity before your request, so that your needs are the better met. No one did this except the Commander of the Faithful: he gave a dinar in charity and conferred privately with the Messenger ten times.",
+              "ur": "جب تم رسول صلی اللہ علیہ وآلہ وسلم سے کوئی حاجت مانگو تو اپنی درخواست سے پہلے صدقہ دو تاکہ تمہاری حاجتیں بہتر طور پر پوری ہوں۔ یہ کام امیر المومنین علیہ السلام کے سوا کسی نے نہیں کیا: آپ علیہ السلام نے ایک دینار صدقے میں دیا اور رسول صلی اللہ علیہ وآلہ وسلم سے دس بار خفیہ مشاورت کی۔"
+            },
+            "source": "s10"
+          }
+        ]
+      },
+      {
+        "verse": 13,
+        "heading": {
+          "en": "The charity lifted",
+          "ur": "صدقے کا حکم اٹھا لیا گیا"
+        },
+        "narrations": [
+          {
+            "id": "n9",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "و و الله ما فعل هذا أحد غيري من أصحابه قبلي و لا بعدي فأنزل الله عز و جل { ءَأَشْفَقْتُمْ أَن تُقَدِّمُواْ بَيْنَ يَدَيْ نَجْوَاكُمْ صَدَقَاتٍ فَإِذْ لَمْ تَفْعَلُواْ وَتَابَ ٱللَّهُ عَلَيْكُمْ } الآية، فهل تكون التوبة إلا من ذنب كان؟",
+            "chain": "Ahmad ibn Yahya ibn Zakariyya al-Qattan, from Bakr ibn Abd Allah ibn Habib, from Tamim ibn Buhlul, from Sulayman ibn Hakim, from Thawr ibn Yazid, from Makhul, from Amir al-Mu'minin Ali ibn Abi Talib",
+            "text": {
+              "en": "By God, none of the companions did this before me or after me. I had a dinar, sold it for ten dirhams, and before each private talk with the Messenger I gave a dirham. Then God sent down the verse lifting it, 'and Allah has turned to you.' And is there repentance except from a sin that was committed?",
+              "ur": "اللہ کی قسم، میرے صحابہ میں سے کسی نے یہ کام میرے پہلے نہ کیا اور نہ میرے بعد۔ میرے پاس ایک دینار تھا، میں نے اسے دس درہموں میں بیچا، اور رسول صلی اللہ علیہ وآلہ وسلم سے ہر خفیہ بات چیت سے پہلے ایک درہم صدقے میں دیتا رہا۔ پھر اللہ نے اسے اٹھانے والی آیت نازل فرمائی: “اور اللہ نے تم پر توجہ فرمائی۔” اور کیا توبہ کسی ایسے گناہ کے بغیر ہوتی ہے جو کیا گیا ہو؟"
+            },
+            "source": "s17"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Verse 13 says that, the charity lifted, 'Allah has turned to you.' The traditions divide over that turning (tawba). Shia reports read it as proof that those who withheld the charity had sinned: Imam Ali asks whether repentance is ever called for except over a sin that was committed [17]. Razi rejects the inference, holding that the verse does not say God forgave them any fault; it means only that, the duty now dropped, they are to keep up the prayer and the zakat and obey God and His Messenger [46].",
+      "ur": "آیت ۱۳ میں فرمایا گیا ہے کہ صدقے کا حکم اٹھا لینے کے بعد “اللہ نے تم پر توجہ فرمائی۔” اس ‘توبہ’ کے معنی پر روایات میں اختلاف ہے۔ شیعہ روایات اسے اس بات کی دلیل سمجھتی ہیں کہ جنہوں نے صدقہ نہیں دیا انہوں نے گناہ کیا: امام علی علیہ السلام نے پوچھا کہ کیا توبہ کبھی کسی ایسے گناہ کے بغیر ہوتی ہے جو کیا گیا ہو [17]۔ فخر رازی اس استدلال کو رد کرتے ہیں اور کہتے ہیں کہ آیت میں یہ نہیں کہا گیا کہ اللہ نے انہیں کوئی خطا معاف کی؛ اس کا صرف یہ مطلب ہے کہ اب یہ فریضہ ختم ہو گیا، لہذا وہ نماز، زکوٰۃ اور اللہ اور اس کے رسول کی اطاعت پر قائم رہیں [46]۔"
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Mujaadila 7 to 13",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=58&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "المراد بكونه تعالى رابع الثلاثة المتناجين وسادس الخمسة المتناجين معيته لهم في العلم ومشاركته لهم في الاطلاع على ما يسارون لا مماثلته لهم في تتميم العدد"
+        },
+        "gloss": "What is meant by His being the fourth of three who confer privately and the sixth of five is His being with them in knowledge and His sharing in awareness of what they whisper, not His being like them in completing the number."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 7 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=58&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "نزل قوله { ألم تر إلى الذين نهوا عن النجوى } الآية في اليهود والمنافقين أنهم كانوا يتناجون فيما بينهم دون المؤمنين"
+        },
+        "gloss": "The words 'Have you not regarded those forbidden from secret talk' came down about the Jews and the hypocrites, who used to whisper among themselves apart from the believers."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 11 to 13",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=58&tAyahNo=11&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فأمر الله سبحانه أن يقرّب العلماء من نفسه فوق المؤمنين الذين لا يعلمون العلم ليبين فضل العلماء على غيرهم وفي هذه الآية دلالة على فضل العلماء وجلالة قدرهم"
+        },
+        "gloss": "God commanded that the learned be brought near, above the believers who do not have knowledge, to make clear the excellence of the learned over others; this verse indicates the merit of the learned and the loftiness of their rank."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 7 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=58&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فأما ان يكون معهم على طريق المجاورة فمحال، لأن ذلك من صفات الاجسام، والله تعالى ليس بجسم"
+        },
+        "gloss": "That He should be with them by way of physical adjacency is impossible, for that is among the attributes of bodies, and God, exalted, is not a body."
+      },
+      {
+        "id": "s7",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 8 to 9",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=58&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقولهم له إذا أتوه أنعم صباحاً وانعم مساءً وهي تحية أهل الجاهلية فأنزل الله: { فإذا جاؤُك حيوك بما لم يحيك به الله }"
+        },
+        "gloss": "And their saying to him when they came, 'Good morning, good evening,' which is the greeting of the people of ignorance; so God sent down, 'And when they come to you they greet you with words with which Allah never greeted you.'"
+      },
+      {
+        "id": "s8",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=58&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "كان سبب نزول هذه الآية أن فاطمة عليها السلام رأت في منامها أن رسول الله صلى الله عليه وآله هم أن يخرج هو وفاطمة وعلي والحسن والحسين صلوات الله عليهم من المدينة"
+        },
+        "gloss": "The cause of the revelation of this verse was that Fatimah saw in her sleep that the Messenger meant to leave Medina together with her, Ali, al-Hasan and al-Husayn."
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=58&tAyahNo=11&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "كان رسول الله صلى الله عليه وآله إذا دخل المسجد يقوم له الناس فنهاهم الله أن يقوموا له فقال تفسحوا أي وسعوا له في المجلس"
+        },
+        "gloss": "When the Messenger entered the mosque, the people would rise for him, so God forbade them to rise for him and said, 'Make room,' that is, widen the sitting for him."
+      },
+      {
+        "id": "s10",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 12",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=58&tAyahNo=12&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فلم يفعل ذلك أحد إلا أمير المؤمنين عليه السلام فإنه تصدق بدينار وناجى رسول الله صلى الله عليه وآله عشر نجوات"
+        },
+        "gloss": "No one did this except the Commander of the Faithful: he gave a dinar in charity and conferred privately with the Messenger ten times."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 7",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=58&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "نزلت هذه الآية في فلان، و فلان، و أبي عبيدة بن الجراح، و عبد الرحمن بن عوف، و سالم مولى أبي حذيفة، و المغيرة بن شعبة، حيث كتبوا الكتاب بينهم … لئن مضى محمد لا تكون الخلافة في بني هاشم و لا النبوة أبدا"
+        },
+        "gloss": "This verse was revealed about so-and-so, and so-and-so, and Abu Ubayda ibn al-Jarrah, and Abd al-Rahman ibn Awf, and Salim mawla Abi Hudhayfa, and al-Mughira ibn Shu'ba, when they wrote the document among themselves: that if Muhammad passed away, the caliphate would never be in Banu Hashim, nor prophethood."
+      },
+      {
+        "id": "s14",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 9",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=58&tAyahNo=9&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "كانت أمارة المنافقين بغض علي بن أبي طالب (عليه السلام) … و كذب من زعم أنه يحبني و يبغض هذا. و أخذ بكف علي (عليه السلام)، فأنزل الله عز و جل هذه الآية في شأنهما"
+        },
+        "gloss": "The mark of the hypocrites was hatred of Ali ibn Abi Talib ... 'and he lies who claims that he loves me yet hates this one,' and he took Ali's hand; so God revealed this verse concerning the two of them."
+      },
+      {
+        "id": "s17",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 12 to 13",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=58&tAyahNo=12&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "و و الله ما فعل هذا أحد غيري من أصحابه قبلي و لا بعدي … فأنزل الله عز و جل { ءَأَشْفَقْتُمْ أَن تُقَدِّمُواْ بَيْنَ يَدَيْ نَجْوَاكُمْ صَدَقَاتٍ فَإِذْ لَمْ تَفْعَلُواْ وَتَابَ ٱللَّهُ عَلَيْكُمْ } الآية، فهل تكون التوبة إلا من ذنب كان؟"
+        },
+        "gloss": "By God, none of his companions did this before me or after me ... so God revealed, 'Were you dismayed to offer charities before your private talks? Since you did not, and Allah has turned to you' - and is there repentance except from a sin that was committed?"
+      },
+      {
+        "id": "s20",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 11 to 13",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=58&tAyahNo=11&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي الفقيه عن الصادق عليه السلام اذا كان يوم القيامة جمع الله الناس في صعيد واحد ووضعت الموازين فيوزن دماء الشهداء مع مداد العلماء فيرجّح مداد العلماء على دماء الشهداء"
+        },
+        "gloss": "In al-Faqih, from al-Sadiq: when the Day of Resurrection comes, God gathers the people on a single plain and the scales are set up; the blood of the martyrs is weighed against the ink of the scholars, and the ink of the scholars outweighs the blood of the martyrs."
+      },
+      {
+        "id": "s46",
+        "kind": "tafsir",
+        "work": "Mafatih al-Ghayb",
+        "author": "Fakhr al-Din al-Razi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 13",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=4&tSoraNo=58&tAyahNo=13&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فليس في الآية أنه تاب عليكم من هذا التقصير، بل يحتمل أنكم إذا كنتم تائبين راجعين إلى الله، وأقمتم الصلاة وآتيتم الزكاة، فقد كفاكم هذا التكليف"
+        },
+        "gloss": "The verse does not say that He forgave you this shortcoming; rather it may mean that if you are penitent, turning to God, and keep up the prayer and pay the zakat, this obligation has been made to suffice you."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T04:08:25Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T04:35:24Z",
+      "assembled_at": "2026-10-06T04:36:10Z"
+    }
+  },
+  "3": {
+    "id": "58:3",
+    "surah": 58,
+    "index": 3,
+    "range": [
+      14,
+      22
+    ],
+    "title": {
+      "en": "God's party and Satan's party",
+      "ur": "اللہ کا گروہ اور شیطان کا گروہ"
+    },
+    "essay": {
+      "en": "Surah al-Mujadila closes by drawing a hard line between two parties. It opens on a group of hypocrites who had allied with the Jews, a people under God's wrath, slipping the believers' secrets to them while belonging to neither camp [2]. They swear false oaths, knowing they lie, and God readies for them a severe punishment. Their oaths, the commentators explain, were a shield: a cover held up to ward off suspicion whenever doubt showed through, with which they turned themselves and others from God's way [5]. Neither wealth nor children will ransom them from the Fire.\n\nThe passage then looks ahead to the Day of Resurrection, when these men will swear to God exactly as they now swear to the believers, imagining the lie can still serve them. Satan has overpowered them and made them forget God's remembrance, so they are his party, the losers [5]. Those who set themselves against God and His Apostle stand among the most abased [5].\n\nAgainst this, God states His decree: 'I shall surely prevail, I and My apostles.' This is written and fixed in the Preserved Tablet, the commentators say, a prevailing by proof and argument [6]. Majma al-Bayan records that the verse came down when the hypocrites mocked the Muslims' hope of conquering Rome and Persia [3].\n\nThe surah ends on its other party. No one who truly believes will love those who oppose God and His Apostle, even if they are his own parents, children, brothers or kin. Into such hearts God has written faith and strengthened them with a spirit from Him; beyond the life shared by believer and unbeliever, al-Mizan reads this as a further life carrying new power and awareness [1]. They are Allah's party, the felicitous, set against Satan's party, the losers [1].",
+      "ur": "سورۂ مجادلہ دو گروہوں کے درمیان ایک واضح خط کھینچ کر اختتام پذیر ہوتی ہے۔ یہ ان منافقین کے گروہ سے آغاز ہوتی ہے جنہوں نے یہود سے اتحاد کر لیا تھا، وہ قوم جو اللہ کے غضب کا شکار ہے، اور مومنین کے راز انہیں پہنچاتے تھے جبکہ خود کسی خیمے سے تعلق نہیں رکھتے تھے [2]۔ وہ جھوٹی قسمیں کھاتے ہیں، جانتے ہوئے کہ جھوٹ بول رہے ہیں، اور اللہ نے ان کے لیے سخت عذاب تیار کر رکھا ہے۔ مفسرین کی تشریح کے مطابق ان کی قسمیں ایک ڈھال تھیں: جب بھی شک سامنے آتا تو اسے دور کرنے کے لیے یہ قسمیں استعمال کرتے، اور اس طرح خود کو اور دوسروں کو اللہ کی راہ سے روکتے تھے [5]۔ نہ مال اور نہ اولاد انہیں آگ سے بچا سکے گی۔\n\nپھر یہ گزرگاہ قیامت کے دن کی طرف نظر اٹھاتی ہے، جب یہ لوگ اللہ کے سامنے بھی ویسے ہی قسمیں کھائیں گے جیسے اب مومنین کے سامنے کھاتے ہیں، یہ سمجھ کر کہ جھوٹ تب بھی کام آئے گا۔ شیطان نے انہیں مغلوب کر لیا ہے اور اللہ کی یاد سے غافل کر دیا ہے، چنانچہ وہ اس کا گروہ ہیں، خسارے میں رہنے والے [5]۔ جو لوگ اللہ اور اس کے رسول کی مخالفت کرتے ہیں وہ سب سے زیادہ ذلیل لوگوں میں سے ہیں [5]۔\n\nاس کے مقابلے میں اللہ اپنا فیصلہ سناتا ہے: “میں اور میرے رسول یقیناً غالب آئیں گے۔” یہ لوح محفوظ میں لکھا اور مقرر ہے، مفسرین کہتے ہیں، یہ دلیل اور حجت کے ذریعے غلبہ ہے [6]۔ مجمع البیان میں درج ہے کہ یہ آیت اس وقت نازل ہوئی جب منافقوں نے روم اور فارس کو فتح کرنے کی مسلمانوں کی امید کا مذاق اڑایا [3]۔\n\nسورت اپنے دوسرے گروہ پر اختتام پذیر ہوتی ہے۔ جو واقعی ایمان رکھتا ہو وہ ان لوگوں سے محبت نہیں رکھ سکتا جو اللہ اور اس کے رسول کی مخالفت کرتے ہیں، چاہے وہ اس کے اپنے والدین، اولاد، بھائی یا رشتہ دار ہی کیوں نہ ہوں۔ ایسے دلوں میں اللہ نے ایمان لکھ دیا ہے اور انہیں اپنی طرف سے ایک روح سے تقویت دی ہے؛ مومن اور کافر کی مشترک زندگی سے آگے، المیزان اسے ایک اضافی زندگی قرار دیتی ہے جو نئی قوت اور شعور لیے ہوئے ہے [1]۔ یہی اللہ کا گروہ ہے، فلاح پانے والے، شیطان کے گروہ کے مقابل جو خسارے میں ہیں [1]۔"
+    },
+    "verses": [
+      {
+        "verse": 14,
+        "heading": {
+          "en": "Allies of God's enemies",
+          "ur": "اللہ کے دشمنوں کے ساتھی"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "نزلت في الثاني لأنه مر به رسول الله صلى الله عليه وآله وهو جالس عند رجل من اليهود ويكتب خبر رسول الله صلى الله عليه وآله … وهو قوله: { اتخذوا أيمانهم جنة } [16] أي: حجاباً بينهم وبين الكفار وأيمانهم إقرار باللسان وخوفاً من السيف ورفع الجزية",
+            "chain": null,
+            "text": {
+              "en": "It was revealed about the second: the Messenger passed him sitting with a Jew, writing down the Messenger's reports. 'They make a shield of their oaths' means a barrier between them and the unbelievers; their oaths were affirmation by the tongue, out of fear of the sword and to lift the jizya.",
+              "ur": "یہ دوسرے کے بارے میں نازل ہوئی: رسول صلی اللہ علیہ وآلہ وسلم کا گزر اس کے پاس سے ہوا جب وہ ایک یہودی کے ساتھ بیٹھا رسول صلی اللہ علیہ وآلہ وسلم کی خبریں لکھ رہا تھا۔ “انہوں نے اپنی قسموں کو ڈھال بنا لیا” کا مطلب ہے ان کے اور کافروں کے درمیان ایک آڑ؛ ان کی قسمیں زبانی اقرار تھا، تلوار کے ڈر سے اور جزیہ اٹھانے کے لیے۔"
+            },
+            "source": "s7"
+          }
+        ]
+      },
+      {
+        "verse": 18,
+        "heading": {
+          "en": "Swearing falsely on that Day",
+          "ur": "اس دن بھی جھوٹی قسمیں"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "إذا كان يوم القيامة جمع الله الذين غصبوا آل محمد حقهم فيعرض عليهم أعمالهم فيحلفون له أنهم لم يعملوا منها شيئاً كما حلفوا لرسول الله صلى الله عليه وآله في الدنيا حين حلفوا أن لا يردوا الولاية في بني هاشم، وحين هموا بقتل رسول الله صلى الله عليه وآله في العقبة",
+            "chain": null,
+            "text": {
+              "en": "When the Day of Resurrection comes, Allah will gather those who usurped the right of the family of Muhammad and set their deeds before them. They will swear they did none of it, as they swore to the Messenger in this world when they swore not to return authority to Banu Hashim and plotted to kill him at al-Aqaba.",
+              "ur": "جب قیامت کا دن آئے گا تو اللہ ان لوگوں کو جمع کرے گا جنہوں نے آل محمد صلی اللہ علیہ وآلہ وسلم کا حق غصب کیا، اور ان کے اعمال ان کے سامنے رکھے جائیں گے۔ وہ قسم کھائیں گے کہ انہوں نے کچھ نہیں کیا، جیسا کہ انہوں نے اس دنیا میں رسول صلی اللہ علیہ وآلہ وسلم سے قسم کھائی تھی کہ ولایت کو بنی ہاشم میں واپس نہیں آنے دیں گے، اور جب انہوں نے عقبہ کے مقام پر آپ کو قتل کرنے کا ارادہ کیا۔"
+            },
+            "source": "s8"
+          }
+        ]
+      },
+      {
+        "verse": 22,
+        "heading": {
+          "en": "Faith written in the heart",
+          "ur": "دل میں لکھا ہوا ایمان"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "{ أولئك كتب في قلوبهم الإِيمان } وهم الأئمة عليهم السلام { وأيدهم بروح منه } قال: الروح ملك أعظم من جبرائيل وميكائيل وكان مع رسول الله صلى الله عليه وآله وهو مع الأئمة عليهم السلام … { أولئك حزب الله } يعني: الأئمة عليهم السلام أعوان الله",
+            "chain": null,
+            "text": {
+              "en": "'Such He has written faith into their hearts' - they are the Imams. 'And strengthened them with a spirit from Him' - the spirit is an angel greater than Gabriel and Michael, who was with the Messenger and is with the Imams. 'They are Allah's party' means the Imams, the helpers of Allah.",
+              "ur": "“وہ ہیں جن کے دلوں میں اللہ نے ایمان لکھ دیا” - وہ آئمہ علیہم السلام ہیں۔ “اور انہیں اپنی طرف سے ایک روح سے تقویت دی” - یہ روح ایک فرشتہ ہے جو جبریل اور میکائیل سے بڑا ہے، جو رسول صلی اللہ علیہ وآلہ وسلم کے ساتھ تھا اور آئمہ علیہم السلام کے ساتھ ہے۔ “یہی اللہ کا گروہ ہے” کا مطلب ہے آئمہ علیہم السلام، اللہ کے مددگار۔"
+            },
+            "source": "s9"
+          },
+          {
+            "id": "n4",
+            "speaker": "Muhammad ibn al-Hanafiyya",
+            "addressee": null,
+            "arabic": "إنما حبنا أهل البيت شيء يكتبه الله في أيمن قلب العبد، و من كتبه الله في قلبه لا يستطيع أحد محوه … فحبنا أهل البيت الإيمان",
+            "chain": "Muhammad ibn al-Abbas, from al-Mundhir ibn Muhammad, from his father, from al-Husayn ibn Said, from Aban ibn Taghlib, from Ali ibn Muhammad ibn Bishr",
+            "text": {
+              "en": "Our love, the people of the House, is something Allah writes on the right side of the servant's heart; and whomever Allah writes it into his heart, none can erase it. So our love, the people of the House, is faith.",
+              "ur": "ہم اہل بیت سے محبت ایک ایسی چیز ہے جو اللہ بندے کے دل کے دائیں جانب لکھتا ہے؛ اور جس کے دل میں اللہ اسے لکھ دے، کوئی اسے مٹا نہیں سکتا۔ پس ہم اہل بیت سے محبت ایمان ہے۔"
+            },
+            "source": "s11"
+          },
+          {
+            "id": "n5",
+            "speaker": "Imam al-Kazim",
+            "addressee": null,
+            "arabic": "إن الله تبارك و تعالى أيد المؤمن بروح منه تحضره في كل وقت يحسن فيه و يتقي، و تغيب عنه في كل وقت يذنب فيه و يعتدي، فهي معه تهتز سرورا عند إحسانه، و تسيخ في الثرى عند إساءته … نحن نزيد الروح بالطاعة لله و العمل له",
+            "chain": "al-Husayn ibn Muhammad and Muhammad ibn Yahya, from Ali ibn Muhammad ibn Sad, from Muhammad ibn Muslim ibn Abi Salama, from Muhammad ibn Said ibn Ghazwan, from Ibn Abi Najran, from Muhammad ibn Sinan, from Abu Khadija, from Abu'l-Hasan",
+            "text": {
+              "en": "Allah has strengthened the believer with a spirit from Him that attends him whenever he does good and is mindful, and withdraws from him whenever he sins and transgresses. It is with him, quivering with joy at his good deed and sinking into the earth at his evil deed. We increase the spirit through obedience to Allah.",
+              "ur": "اللہ نے مومن کو اپنی طرف سے ایک روح سے تقویت دی ہے جو اس کے پاس رہتی ہے جب بھی وہ نیکی کرے اور تقویٰ اختیار کرے، اور اس سے دور ہو جاتی ہے جب بھی وہ گناہ کرے اور حد سے تجاوز کرے۔ وہ اس کے ساتھ ہے، اس کی نیکی پر خوشی سے جھومتی ہے اور اس کی برائی پر زمین میں دھنس جاتی ہے۔ ہم اللہ کی اطاعت اور اس کے لیے عمل کے ذریعے اس روح کو بڑھاتے ہیں۔"
+            },
+            "source": "s11"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On the hypocrites and their false oaths, the two traditions broadly agree. They divide over verse 22, which forbids the believer to love God's enemies even among kin. Sunni exegetes read it as revealed about companions who put faith above family: Ibn Kathir and al-Qurtubi name Abu Ubayda ibn al-Jarrah, who slew his father at Badr, and others who fought relatives [21][25]. The Shia narrations instead gloss 'He has written faith into their hearts' and 'they are Allah's party' as the Imams and the love of the Ahl al-Bayt [9][11].",
+      "ur": "منافقین اور ان کی جھوٹی قسموں کے بارے میں دونوں روایتی دھاریں عمومی طور پر متفق ہیں۔ اختلاف آیت ۲۲ پر ہوتا ہے، جو مومن کو اللہ کے دشمنوں سے محبت کرنے سے روکتی ہے چاہے وہ قریبی رشتہ دار ہی کیوں نہ ہوں۔ سنی مفسرین اسے ان صحابہ کے بارے میں نازل شدہ قرار دیتے ہیں جنہوں نے ایمان کو خاندان پر مقدم رکھا: ابن کثیر اور قرطبی ابو عبیدہ ابن الجراح کا ذکر کرتے ہیں جنہوں نے بدر میں اپنے باپ کو قتل کیا، اور دیگر لوگوں کا جنہوں نے اپنے رشتہ داروں سے لڑائی کی [21][25]۔ شیعہ روایات “اس نے ان کے دلوں میں ایمان لکھ دیا” اور “یہی اللہ کا گروہ ہے” کی تشریح آئمہ علیہم السلام اور اہل بیت سے محبت کے طور پر کرتی ہیں [9][11]۔"
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Mujaadila 14 to 22",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=58&tAyahNo=14&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فإبقاء قوله { وأيَّدهم بروح منه } على ظاهره يفيد أن للمؤمنين وراء الروح البشرية التي يشترك فيها المؤمن والكافر روحاً أخرى تفيض عليهم حياة أخرى وتصاحبها قدرة وشعور جديدان"
+        },
+        "gloss": "Keeping 'and He strengthened them with a spirit from Him' at its apparent sense means that believers, beyond the human spirit shared by believer and unbeliever, have another spirit that pours over them a further life, accompanied by new power and awareness."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 14 to 15",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=58&tAyahNo=14&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والمراد به قوم من المنافقين كانوا يوالون اليهود ويفشون إليهم أسرار المؤمنين ويجتمعون معهم على ذكر مساءة النبي صلى الله عليه وسلم والمؤمنين"
+        },
+        "gloss": "What is meant is a group of hypocrites who used to ally with the Jews, disclose the believers' secrets to them, and gather with them to speak of harming the Prophet and the believers."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 16 to 22",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=58&tAyahNo=16&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ويروى أن المسلمين قالوا لما رأوا ما يفتح الله عليهم من القرى ليفتحنّ الله علينا الروم وفارس فقال المنافقون: أتظنون أن فارساً والروم كبعض القرى التي غلبتم عليها فأنزل الله هذه الآية"
+        },
+        "gloss": "It is related that when the Muslims saw the towns God opened to them, they said, 'God will surely give us Rome and Persia,' so the hypocrites said, 'Do you suppose Persia and Rome are like some of the towns you overcame?' - and God sent down this verse."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 16 to 20",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=58&tAyahNo=16&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ اتخذوا أيمانهم } التي يحلفون بها { جنة } أي سترة وترساً يدفعون بها عن نفوسهم التهمة والظنة إذا ظهرت منهم الريبة"
+        },
+        "gloss": "'They took their oaths' by which they swear 'as a shield' - that is, a cover and buckler by which they ward off suspicion and distrust from themselves whenever doubt appeared from them."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 21 to 22",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=58&tAyahNo=21&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قوله { كتب الله لأغلبن أنا ورسلي } معناه إنه كتب في اللوح المحفوظ وما كتبه فلا بد من ان يكون"
+        },
+        "gloss": "His words 'Allah has ordained, I shall surely prevail, I and My apostles' mean that He wrote it in the Preserved Tablet, and what He has written must come to pass."
+      },
+      {
+        "id": "s7",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 14 to 16",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=58&tAyahNo=14&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "نزلت في الثاني لأنه مر به رسول الله صلى الله عليه وآله وهو جالس عند رجل من اليهود ويكتب خبر رسول الله صلى الله عليه وآله"
+        },
+        "gloss": "It was revealed about the second, for the Messenger passed him as he sat with a man of the Jews, writing down the Messenger's reports."
+      },
+      {
+        "id": "s8",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 18",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=58&tAyahNo=18&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إذا كان يوم القيامة جمع الله الذين غصبوا آل محمد حقهم فيعرض عليهم أعمالهم فيحلفون له أنهم لم يعملوا منها شيئاً"
+        },
+        "gloss": "When the Day of Resurrection comes, Allah will gather those who usurped the right of the family of Muhammad and set their deeds before them, and they will swear they did none of it."
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 22",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=58&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ أولئك كتب في قلوبهم الإِيمان } وهم الأئمة عليهم السلام { وأيدهم بروح منه } قال: الروح ملك أعظم من جبرائيل وميكائيل"
+        },
+        "gloss": "'Such He has written faith into their hearts' - they are the Imams. 'And strengthened them with a spirit from Him' - he said: the spirit is an angel greater than Gabriel and Michael."
+      },
+      {
+        "id": "s11",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 22",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=58&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إنما حبنا أهل البيت شيء يكتبه الله في أيمن قلب العبد، و من كتبه الله في قلبه لا يستطيع أحد محوه … فحبنا أهل البيت الإيمان"
+        },
+        "gloss": "Our love, the people of the House, is something Allah writes on the right side of the servant's heart; whomever Allah writes it in his heart, none can erase it; so our love, the people of the House, is faith."
+      },
+      {
+        "id": "s21",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 20 to 22",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=58&tAyahNo=20&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقد قال سعيد بن عبد العزيز وغيره أنزلت هذه الآية { لاَّ تَجِدُ قَوْماً يُؤْمِنُونَ بِٱللَّهِ وَٱلْيَوْمِ ٱلاَْخِرِ } إلى آخرها، في أبي عبيدة عامر بن عبد الله بن الجراح حين قتل أباه يوم بدر"
+        },
+        "gloss": "Said ibn Abd al-Aziz and others said this verse, 'You will not find a people believing in Allah and the Last Day,' to its end, was revealed about Abu Ubayda Amir ibn Abdillah ibn al-Jarrah when he killed his father at Badr."
+      },
+      {
+        "id": "s25",
+        "kind": "tafsir",
+        "work": "al-Jami li-Ahkam al-Quran",
+        "author": "al-Qurtubi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Mujaadila 22",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=5&tSoraNo=58&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقال ٱبن مسعود: نزلت في أبي عبيدة بن الجراح قتل أباه عبد الله ابن الجراح يوم أُحد وقيل: يوم بدر"
+        },
+        "gloss": "Ibn Masud said: it was revealed about Abu Ubayda ibn al-Jarrah, who killed his father Abdullah ibn al-Jarrah at Uhud - and it is said, at Badr."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T04:02:03Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T04:25:05Z",
+      "assembled_at": "2026-10-06T04:36:10Z"
+    }
+  }
+}

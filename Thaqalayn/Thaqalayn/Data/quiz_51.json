@@ -1,0 +1,485 @@
+{
+  "1": {
+    "id": "51:1",
+    "surah": 51,
+    "index": 1,
+    "range": [
+      1,
+      23
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 1,
+        "prompt": {
+          "en": "According to the essay, what do the four opening oaths together picture?"
+        },
+        "options": [
+          {
+            "en": "The stages of the world's creation"
+          },
+          {
+            "en": "The ranks of the heavenly angels"
+          },
+          {
+            "en": "The whole governance of the world"
+          },
+          {
+            "en": "The signs within the human soul"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says Tabatabai sees in the four oaths a picture of the whole governance of the world: its ordering on land, at sea, in the air, and through the angels who carry it out."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai sees in the four a picture of the whole governance of the world: its ordering on land, at sea, in the air, and through the angels who carry it out"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 1,
+        "prompt": {
+          "en": "\"The angels apportion the provisions of the children of Adam from the break of dawn until sunrise; so whoever sleeps between the two has slept through his provision.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Sadiq taught that the angels apportion the provisions of the children of Adam between dawn and sunrise, so one who sleeps through that time sleeps through his provision."
+        },
+        "anchor": {
+          "where": "verses.1.narrations.n2",
+          "quote": "The angels apportion the provisions of the children of Adam from the break of dawn until sunrise; so whoever sleeps between the two has slept through his provision"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 8,
+        "prompt": {
+          "en": "In the passage's perspectives, the Shia narrations from Imam al-Baqir take the 'different opinions' to be the community's division over the wilaya of Ali."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives report that Shia narrations from Imam al-Baqir read 'different opinions' as the community's split over Ali's wilaya, and whoever is turned away as whoever is turned from that wilaya."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Shia narrations from Imam al-Baqir read the different opinions as the community's split over Ali's wilaya, and he who is turned away as whoever is turned from that wilaya"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 18,
+        "prompt": {
+          "en": "On 'and at dawns they would plead for forgiveness': in the ____ prayer, at the end of the night, seventy times."
+        },
+        "options": [
+          {
+            "en": "Friday"
+          },
+          {
+            "en": "witr"
+          },
+          {
+            "en": "funeral"
+          },
+          {
+            "en": "eclipse"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "On 'at dawns they would plead for forgiveness,' Imam al-Sadiq glosses the pleading as the witr prayer at the end of the night, said seventy times."
+        },
+        "anchor": {
+          "where": "verses.18.narrations.n8",
+          "quote": "in the witr prayer, at the end of the night, seventy times"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 23,
+        "prompt": {
+          "en": "According to the essay's close, how does the passage seal its final argument?"
+        },
+        "options": [
+          {
+            "en": "With a curse on the mocking liars"
+          },
+          {
+            "en": "With an oath by the Lord of sky and earth"
+          },
+          {
+            "en": "With a promise of gardens to the Godwary"
+          },
+          {
+            "en": "With a fresh oath by the adorned sky"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the passage closes by sealing its argument with an oath by the Lord of sky and earth that all of it is true, as certain as the fact that you speak."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "then seals it with an oath by the Lord of sky and earth that all of this is the truth, as fixed and certain as the fact that you speak"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T00:24:27Z",
+      "review_attempts": 2,
+      "reviewed_at": "2026-10-06T00:25:40Z",
+      "assembled_at": "2026-10-06T00:25:59Z"
+    }
+  },
+  "2": {
+    "id": "51:2",
+    "surah": 51,
+    "index": 2,
+    "range": [
+      24,
+      46
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 28,
+        "prompt": {
+          "en": "According to the essay, what made Abraham afraid of his guests?"
+        },
+        "options": [
+          {
+            "en": "They would not eat the calf he set before them"
+          },
+          {
+            "en": "They greeted him only with the word 'Peace'"
+          },
+          {
+            "en": "His wife rushed in and struck her face"
+          },
+          {
+            "en": "They foretold the destruction of Lot's people"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Abraham brought a fattened calf, but when the strangers would not eat it he conceived a fear of them."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "when the strangers will not eat he conceives a fear of them"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 32,
+        "prompt": {
+          "en": "\"Lot's people were townsfolk stingy with food, and their miserliness left them an incurable disease in their loins.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Teaching the end of stinginess, Imam al-Baqir said Lot's townsfolk were stingy with food and their miserliness left them an incurable disease in their loins."
+        },
+        "anchor": {
+          "where": "verses.32.narrations.n2",
+          "quote": "Lot's people were townsfolk stingy with food, and their miserliness left them an incurable disease in their loins"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 36,
+        "prompt": {
+          "en": "According to the passage, both traditions agree the 'one house of Muslims' was which group?"
+        },
+        "options": [
+          {
+            "en": "Abraham and Sarah in their own home"
+          },
+          {
+            "en": "The messengers sent to destroy the town"
+          },
+          {
+            "en": "Lot and his family, the only believers spared"
+          },
+          {
+            "en": "The faithful of every ruined nation"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The perspectives say both traditions read the one house of Muslims as Lot and his family, the only believers spared before the town was overturned."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Lot and his family, the only believers spared"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 43,
+        "prompt": {
+          "en": "The 'while' Thamud were granted was ____, counted from when they hamstrung the she-camel, before the thunderbolt fell."
+        },
+        "options": [
+          {
+            "en": "forty days"
+          },
+          {
+            "en": "a single day"
+          },
+          {
+            "en": "seven nights"
+          },
+          {
+            "en": "three days"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The note explains the 'while' granted to Thamud was three days, counted from when they hamstrung the she-camel, before the thunderbolt fell."
+        },
+        "anchor": {
+          "where": "verses.43.note",
+          "quote": "The 'while' Thamud were granted was three days, counted from when they hamstrung the she-camel"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 46,
+        "prompt": {
+          "en": "According to the essay's closing verdict, created powers are able to turn back the ruin that God sends."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay's closing verdict is that rescue is God's to give and ruin lies beyond the reach of anything created to turn back, so no created power can halt it."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "rescue is God's to give, and ruin is beyond the reach of anything created to turn back"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T00:19:24Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T00:20:31Z",
+      "assembled_at": "2026-10-06T00:25:59Z"
+    }
+  },
+  "3": {
+    "id": "51:3",
+    "surah": 51,
+    "index": 3,
+    "range": [
+      47,
+      60
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 47,
+        "prompt": {
+          "en": "In the speech of the Arabs, 'hand' means power and ____."
+        },
+        "options": [
+          {
+            "en": "favor"
+          },
+          {
+            "en": "mercy"
+          },
+          {
+            "en": "wealth"
+          },
+          {
+            "en": "honor"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Baqir tells Muhammad ibn Muslim that in Arab speech 'hand' carries power and favor, which is why building the heaven 'with might' means with power."
+        },
+        "anchor": {
+          "where": "verses.47.narrations.n1",
+          "quote": "In the speech of the Arabs, 'hand' means power and favor"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 48,
+        "prompt": {
+          "en": "According to the essay, the ordering of sky, earth and provision is read as proof of what about God?"
+        },
+        "options": [
+          {
+            "en": "His bare existence alone"
+          },
+          {
+            "en": "His oneness in Lordship"
+          },
+          {
+            "en": "His power to create something greater than the heaven"
+          },
+          {
+            "en": "His widening of provision by rain"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Tabatabai reads the whole sequence as proof not of God's bare existence but of His oneness in Lordship, since sky, earth and provision all return to one wise Maker."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads the whole sequence as proof not of God's bare existence but of His oneness in Lordship"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 56,
+        "prompt": {
+          "en": "\"O people, God created His servants only that they might know Him; when they know Him they worship Him.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Husayn"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Addressing the people on why they were created, Imam al-Husayn teaches that they were made to know God, and knowing Him they worship Him."
+        },
+        "anchor": {
+          "where": "verses.56.narrations.n6",
+          "quote": "O people, God created His servants only that they might know Him; when they know Him they worship Him"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 59,
+        "prompt": {
+          "en": "According to the passage, 'those who do wrong' in the closing verses is read as those who denied the family of Muhammad their right."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note on this verse glosses 'those who do wrong' as those who wronged the family of Muhammad of their right, so the statement is correct."
+        },
+        "anchor": {
+          "where": "verses.59.note",
+          "quote": "'those who do wrong' as those who wronged the family of Muhammad of their right"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 60,
+        "prompt": {
+          "en": "According to the essay's final lines, with what warning does the surah close?"
+        },
+        "options": [
+          {
+            "en": "That the believers will receive greater provision"
+          },
+          {
+            "en": "That the faithless will in the end be forgiven"
+          },
+          {
+            "en": "That wrongdoers will share a fate like their predecessors"
+          },
+          {
+            "en": "That no messenger was ever truly denied"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says the surah closes as it opened, warning that the wrongdoers will have a share of punishment like their predecessors' and that woe awaits the faithless."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The surah closes as it opened, warning that the wrongdoers will have a share of punishment like their predecessors'"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T00:23:18Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T00:24:30Z",
+      "assembled_at": "2026-10-06T00:25:59Z"
+    }
+  }
+}

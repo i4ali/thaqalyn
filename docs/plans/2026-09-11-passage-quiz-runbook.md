@@ -2625,3 +2625,308 @@ For the user's decision:
 
 - 42:3 q5, on the verse of mawadda (42:23), asks why Ibn Kathir doubts the report naming Fatimah and her children, and no question in the quiz asks the Ahl al-Bayt reading itself. It passed the rules (attributed, no side taken), but it puts the Sunni doubt in front of the reader on this verse. A one-question rewrite would move it to the Shia narrations' reading. Decided 2026-09-30: the user chose to leave it as is.
 - The passages spell the seventh Imam "al-Kadhim" in surahs 9, 11, 20 and 43 and "al-Kazim" elsewhere; quizzes follow each passage's spelling. A passage fix, outside the quiz pipeline.
+
+## Results - Al-Jaathiya 45:1 to 45:4 and Al-Ahqaf 46:1 to 46:4 (2026-10-02)
+
+One run, four slots, surah 45 first and surah 46 writers filling free slots. No prompt change. All 8 passed first review. `quiz_45.json` and `quiz_46.json` assembled with 4 quizzes each: per surah 8 multiple choice, 4 true or false, 4 fill the gap, 4 who said it.
+
+| passage | type order | reviews | reader note |
+|---|---|---|---|
+| 45:1 | TF, fillGap, MC, whoSaid, MC | 1 PASS | True on "the All-mighty" as never overcome, a restatement; q2 gap "reflection and thought" on those who have certainty, good; q3 proofs completed through their intellects, other verbs of the narration as distractors, the quiz's best; q5 "a second chance to believe" and "the reward of the faithful" distractors nobody would pick; no perspectives in the passage; in order |
+| 45:2 | MC, whoSaid, fillGap, MC, TF | 1 PASS | q1 what the passage points to first; q3 gap "leadership" on the split of the Children of Israel, good; q4 the command addressed to the Prophet but meant for his community, "those given the Book before" live, the quiz's best; q5 False on the wrongdoers treated like the faithful, good; the forgiveness/abrogation perspectives left alone; in order |
+| 45:3 | TF, MC, whoSaid, fillGap, MC | 1 PASS | q2 the shared point on verse 23 (Quraysh), distractors from the passage, none a tradition's reading; q4 gap "the long ages" for dahr with "blind fate" live, the quiz's best; q5 the essay close, clean; in order |
+| 45:4 | MC, fillGap, MC, whoSaid, TF | 1 PASS | q1 "the angels who record" a distractor nobody would pick; q2 gap "pen" guessable without the passage; q3 what the Shia narrations reject (that the book literally speaks), good; q4 who said the recitation-reward hadith is memory, not understanding; q5 False on the surah ending in warning, good; in order |
+| 46:1 | MC, whoSaid, fillGap, TF, MC | 1 PASS | q3 gap "creation" with "the heavens" near-right: the verse itself asks for a share in the heavens and al-Tusi's gloss is "a share in creation", borderline two right answers; q4 True on innate vs revealed knowledge of the unseen, the quiz's best; q5 the Shia witness as Ali, distractors nobody would pick, the other tradition's readings correctly kept out; in order |
+| 46:2 | MC, whoSaid, fillGap, MC, TF | 1 PASS | q1 the lowly believers accepted it first, good; q2 who said a sermon opening, memory; q3 gap "killed" with "taken from her" a near-synonym, borderline two right answers; q4 the gloss of exhausting good things, good; q5 False on the Sunni reading of the scornful son, attributed, no side taken; q4 (v20) before q5 (v17, perspectives) |
+| 46:3 | MC, whoSaid, TF, fillGap, MC | 1 PASS | q1 "they differ" against three "all agree" options, the longest-option and odd-one-out tell; q4 gap "seven years" is number recall; q5 right option the longest; no perspectives in the passage; in order |
+| 46:4 | MC, whoSaid, MC, fillGap, TF | 1 PASS | q1 recall of a list of three peoples; q3 the valley of Majanna with Ukaz as the live trap, the quiz's best; q4 gap "materialists" with "philosophers" live; q5 False on the five resolute sharing one law, good; in order |
+
+### Costs (real agents, with hooks)
+
+| run | n | tokens mean | tokens min to max | time mean | total |
+|---|---|---|---|---|---|
+| writer, surah 45 | 4 | 63K | 52K to 70K | 8 min 50 s | 251K tokens, 35 min |
+| reviewer, surah 45 | 4 | 22K | 21K to 23K | 59 s | 88K tokens, 4 min |
+| writer, surah 46 | 4 | 58K | 49K to 64K | 7 min 59 s | 233K tokens, 32 min |
+| reviewer, surah 46 | 4 | 26K | 23K to 32K | 1 min 36 s | 103K tokens, 6 min |
+
+About 0.34M agent tokens per surah, 0.68M for both.
+
+### Review outcomes
+
+8 of 8 PASS first time. No validator rejections reported by the writers.
+
+### Type order across the two surahs
+
+| opener | 45 | 46 | | closer | 45 | 46 |
+|---|---|---|---|---|---|---|
+| MC | 2 | 4 | | MC | 2 | 2 |
+| TF | 2 | 0 | | TF | 2 | 2 |
+| whoSaid | 0 | 0 | | whoSaid | 0 | 0 |
+| fillGap | 0 | 0 | | fillGap | 0 | 0 |
+
+True or false: 4 True, 4 False; both parity rules held for 8 of 8. Translation anchors: 0. Perspectives anchors: 5 of 6 passages that have perspectives (45:2 left them alone). Seven of eight in verse order; 46:2 closes on a verse-17 perspectives question after a verse-20 note.
+
+### Reader notes (taste, not rule)
+
+- Best questions: 45:1 proofs completed through the intellect, 45:2 the command meant for the community, 45:3 dahr as "the long ages", 46:1 innate vs revealed knowledge, 46:4 the valley of Majanna.
+- Every surah 46 quiz opens on multiple choice, and every one puts who said it second.
+- Near-synonym distractors that a careful reader could defend: 46:1 q3 "the heavens" for "creation", 46:2 q3 "taken from her" for "killed". The reviewer passed both. Note for the writer prompt: a wrong option must not be a fair paraphrase of the answer or a word the anchor's own sentence uses for the same thing.
+- Longest-option tell still present: 46:3 q1 and q5, 46:1 q1, 45:4 q1.
+- Recall rather than understanding: 46:3 q4 "seven years", 46:4 q1 the three peoples, who said it on a recitation-reward hadith (45:4) and on a sermon opening (46:2).
+
+## Results - Muhammad 47, al-Fath 48, al-Hujurat 49 and Qaf 50 (2026-10-04)
+
+One run, four slots, 13 quizzes. Rewrites and re-reviews went to the
+still-resident writer and reviewer as follow-up messages.
+
+| passage | type order | reviews | reader notes |
+|---|---|---|---|
+| 47:1 | TF, MC, whoSaid, fillGap, MC | 2 (q4 FAIL) | q4 first gapped a lowercase fragment with a dangling "this"; now Imam Ali on jihad, gap "friends"; q5 "according to al-Mizan" on the 8:67 reconciliation |
+| 47:2 | MC, whoSaid, fillGap, MC, TF | 1 PASS | q5 False on "to make up for his sins", good; option "Ali" where other quizzes say "Imam Ali" |
+| 47:3 | fillGap, MC, whoSaid, TF, MC | 1 PASS | q1 prompt opens "Al-Qummi, by contrast," with no contrast in view, passed though 47:1 q4 failed for the same kind of dangling referent |
+| 47:4 | MC, TF, MC, whoSaid, fillGap | 1 PASS | q2 TF is a negated statement (False); q3 asks what the Shia reports tie verse 32 to (Ali's succession), passed |
+| 48:1 | MC, fillGap, whoSaid, TF, MC | 2 (passage fix) | q3 first quoted al-Rida from a passage line that mistranslated عند (see below); now al-Sadiq "He had no sin ..." |
+| 48:2 | MC, fillGap, MC, TF, MC | 2 (q5 FAIL) | no whoSaid available; q5 first gave the Shia reading of verse 16's summoner as the answer; now what both traditions share |
+| 48:3 | TF, MC, fillGap, whoSaid, MC | 1 PASS | q2 name recall (Asad and Ghatafan); q3 gap "deposits" on the Qa'im narration, good |
+| 48:4 | whoSaid, MC, fillGap, MC, TF | 1 PASS | q5 False on the tillage comforting the faithless, good |
+| 49:1 | TF, whoSaid, MC, fillGap, MC | 1 PASS | q2 who said it on al-Husayn to Aisha; q4 "mirror" distractor leans on outside knowledge of the mirror hadith |
+| 49:2 | TF, MC, whoSaid, MC, fillGap | 1 PASS | q4 the Shia narrations' reading of islam and iman, passed; q5 gap "a seal", good |
+| 50:1 | fillGap, MC, TF, whoSaid, MC | 1 PASS | q1 "the response to this oath is left ____" has no antecedent for "this" and no full stop, passed |
+| 50:2 | TF, MC, fillGap, MC, whoSaid | 1 PASS | stays clear of the codename notes and the alqiya divide |
+| 50:3 | whoSaid, MC, fillGap, TF, MC | 3 (q5 FAIL x2) | q5 first asked what the Shia reading of verse 35 rejects (the sight of God), then credited al-Tabari's "had their fill" to both readings; now the essay close (only to admonish); distractor "withhold the Quran" nobody would pick |
+
+### Costs (real agents, with hooks)
+
+| run | n | tokens mean | tokens min to max | time mean | total |
+|---|---|---|---|---|---|
+| writer, surah 47 | 4 | 65K | 46K to 82K | 16 min | 260K tokens, 64 min |
+| reviewer, surah 47 | 4 | 26K | 23K to 30K | 1 min 26 s | 102K tokens, 6 min |
+| writer, surah 48 | 4 | 57K | 47K to 69K | 7 min 32 s | 228K tokens, 30 min |
+| reviewer, surah 48 | 4 | 25K | 23K to 27K | 1 min 29 s | 101K tokens, 6 min |
+| writer, surah 49 | 2 | 58K | 51K to 64K | 7 min 41 s | 116K tokens, 15 min |
+| reviewer, surah 49 | 2 | 24K | 24K to 25K | 1 min 15 s | 49K tokens, 2 min |
+| writer, surah 50 | 3 | 57K | 48K to 71K | 7 min 39 s | 172K tokens, 23 min |
+| reviewer, surah 50 | 3 | 23K | 21K to 24K | 56 s | 68K tokens, 3 min |
+
+Surah 47 writers ran four at once on a cold start and took twice as long.
+Follow-ups: five writer rewrites at 7K to 16K each (54K) and five
+re-reviews at 4K to 10K each (30K). About 1.18M agent tokens for the 13
+quizzes, plus 73K for the 48:1 passage fix (writer 27K, auditor 46K).
+
+### Review outcomes
+
+10 of 13 PASS first time. Failures: 47:1 q4 (fragment prompt), 48:2 q5
+and 50:3 q5 twice (side-taking, then saying "both readings" for a detail
+only al-Tabari has). 48:1 needed a second review only because its passage
+changed. Nothing parked.
+
+### Passage fix, 48:1 (with the user's approval)
+
+Reading the 48:1 quiz turned up a mistranslation in the shipped passage:
+verse 2 n3 (al-Rida to al-Mamun) rendered لم يكن أحد عند مشركي أهل مكة أعظم
+ذنبا من رسول الله as "No one among Mecca's idolaters was a greater sinner
+than the Messenger of God", which says the opposite of "in the eyes of".
+The passage auditor (audit.1) and the quiz reviewer both passed it, and
+the quiz's explanation garbled it further. Fixed through a targeted
+passage-writer run, a targeted re-audit (audit.2, carrying audit.1's other
+verdicts after an orchestrator field diff showed only that field changed),
+`assemble 48`, then a q3 rewrite and re-review and `quiz-assemble 48`.
+Note for the passage auditor prompt: عند followed by a person or group is
+"in the view of", and a narration that calls the Prophet a sinner needs a
+second look at who is speaking for whom.
+
+### Type order across the four surahs
+
+| opener | 47 | 48 | 49 | 50 | | closer | 47 | 48 | 49 | 50 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| MC | 2 | 2 | 0 | 0 | | MC | 2 | 3 | 1 | 2 |
+| TF | 1 | 1 | 2 | 1 | | TF | 1 | 1 | 0 | 0 |
+| whoSaid | 0 | 1 | 0 | 1 | | whoSaid | 0 | 0 | 0 | 1 |
+| fillGap | 1 | 0 | 0 | 1 | | fillGap | 1 | 0 | 1 | 0 |
+
+True or false: 7 True, 6 False; the odd-True and even-False rule held for
+13 of 13. Even index closes off MC for 5 of 6; 48:2 closes on MC because
+with no whoSaid the three multiple choices must sit in slots 1, 3 and 5.
+Translation anchors: 0. Perspectives anchors: 5 of 13.
+
+### Reader notes (taste, not rule)
+
+- Rule 5 is applied unevenly. Passed: 47:4 q3 (what the Shia reports tie
+  verse 32 to) and 49:2 q4 (how the Shia narrations press islam and iman).
+  Failed: 48:2 q5 (how the Shia commentators read verse 16's summoner) and
+  50:3 q5 (what the Shia reading of verse 35 rejects). All four make one
+  tradition's reading of the divided point the answer. The writer prompt
+  allows "what one tradition holds"; the reviewer reads it as taking a side
+  when the point is the one the perspectives divide over. One rule for
+  both prompts is needed.
+- Fill-gap prompts with a dangling referent: 47:1 q4 failed for it, 47:3
+  q1 and 50:1 q1 passed with the same flaw.
+- The writer prompt's even-index close cannot hold in a three-MC quiz;
+  say so in the prompt rather than leave it to the writer.
+- Openers are varied this time (TF 5, MC 4, fillGap 2, whoSaid 2).
+
+## Results - adh-Dhariyat 51, at-Tur 52, an-Najm 53 and al-Qamar 54 (2026-10-05)
+
+One run, 11 quizzes. The user raised the cap to ten agents at a time for
+this run (stated in the request; the skill and CLAUDE.md were not changed),
+so all writers ran at once and reviews started as each writer finished.
+The one rewrite went to a fresh writer with the failed question and reason
+in the prompt, and a fresh reviewer re-reviewed it.
+
+| passage | type order | reviews | reader notes |
+|---|---|---|---|
+| 51:1 | MC, whoSaid, TF, fillGap, MC | 2 (q2 FAIL) | q2 first asked who said narration n4, which the passage gives as "I asked ... He said" under the label Imam al-Rida, so the passage alone cannot show al-Rida said it; now al-Sadiq on provisions at dawn. q3 TF reports the Shia reading of verse 8 (wilaya), passed |
+| 51:2 | MC, whoSaid, MC, fillGap, TF | 1 PASS | q3 the shared "one house" reading, kept clear of the "household of Muhammad" divide; q5 False is easy |
+| 51:3 | fillGap, MC, whoSaid, TF, MC | 1 PASS | q1 gap "favor" with "mercy" a near-synonym distractor, leans on memory; stays clear of the bada and naskh divide |
+| 52:1 | TF, whoSaid, MC, fillGap, MC | 1 PASS | q1 TF on the myrtle-leaf book is detail recall; q4 "believer" is guessable from the sentence |
+| 52:2 | MC, TF, MC, fillGap, whoSaid | 1 PASS | q3 asks al-Qummi's reading of verse 33 (the Commander of the Faithful), scoped "in one of the passage's readings", passed; its distractor "the family of Muhammad" overlaps the answer for a Shia reader; whoSaid only at q5 because n1 to n5 are al-Qummi |
+| 53:1 | whoSaid, MC, TF, fillGap, MC | 1 PASS | q5 the Imams' reading of the ascension vision, attributed and passed; distractor "with his own physical eye" is a view some Sunni authorities hold |
+| 53:2 | MC, fillGap, MC, whoSaid, TF | 1 PASS | q5 False on al-lamam as a settled habit, good |
+| 53:3 | MC, whoSaid, fillGap, TF, MC | 1 PASS | q3 gap "livelihood" against "wealth", "portion", "fortune", near-synonyms; q4 Basra detail recall; q5 distractor "the Lord of Sirius" as a name for the Prophet nobody would pick |
+| 54:1 | TF, whoSaid, MC, fillGap, MC | 1 PASS | q5 answer opens "Both relate ...", echoing the prompt's "the two traditions agree", a giveaway |
+| 54:2 | whoSaid, MC, fillGap, MC, TF | 1 PASS | q3 name recall (Qudar); q5 False on the refrain, good |
+| 54:3 | whoSaid, fillGap, MC, TF, MC | 1 PASS | q3 what both readings share on verse 49 (the Qadariyya), not the divided point |
+
+### Costs (real agents, with hooks)
+
+| run | n | tokens mean | tokens min to max | time mean | total |
+|---|---|---|---|---|---|
+| writer, surah 51 | 3 | 57K | 51K to 70K | 7 min 33 s | 172K tokens, 23 min |
+| reviewer, surah 51 | 3 | 28K | 24K to 33K | 1 min 41 s | 83K tokens, 5 min |
+| writer, surah 52 | 2 | 58K | 46K to 69K | 7 min 20 s | 115K tokens, 15 min |
+| reviewer, surah 52 | 2 | 27K | 24K to 30K | 1 min 33 s | 54K tokens, 3 min |
+| writer, surah 53 | 3 | 63K | 46K to 79K | 8 min 44 s | 190K tokens, 26 min |
+| reviewer, surah 53 | 3 | 25K | 24K to 28K | 1 min 10 s | 76K tokens, 4 min |
+| writer, surah 54 | 3 | 61K | 46K to 75K | 8 min 14 s | 182K tokens, 25 min |
+| reviewer, surah 54 | 3 | 25K | 23K to 25K | 1 min 6 s | 74K tokens, 3 min |
+
+Plus one fresh-agent rewrite (35K, 2 min) and one re-review (26K, 1 min).
+About 1.01M agent tokens for the 11 quizzes. Ten writers at once ran no
+slower than four (7 to 9 min mean, 12 min worst).
+
+### Review outcomes
+
+10 of 11 PASS first time. The one failure, 51:1 q2, is the "I asked ... he
+said" narration shape: the narration is labelled with the Imam but its text
+opens in the questioner's voice. That is a passage-level issue (the open
+speaker-rule note from surahs 27 and 28) that the quiz reviewer caught and
+the passage auditor did not. Nothing parked.
+
+### Type order across the four surahs
+
+| opener | 51 | 52 | 53 | 54 | | closer | 51 | 52 | 53 | 54 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| MC | 2 | 1 | 2 | 0 | | MC | 2 | 1 | 2 | 2 |
+| TF | 0 | 1 | 0 | 1 | | TF | 1 | 0 | 1 | 1 |
+| whoSaid | 0 | 0 | 1 | 2 | | whoSaid | 0 | 1 | 0 | 0 |
+| fillGap | 1 | 0 | 0 | 0 | | fillGap | 0 | 0 | 0 | 0 |
+
+True or false: 7 True, 4 False; the odd-True and even-False rule held for
+11 of 11. Even index closes off MC for 4 of 4. Translation anchors: 0.
+Perspectives anchors: 8 of 11.
+
+### Reader notes (taste, not rule)
+
+- Rule 5 again: 51:1 q3, 52:2 q3 and 53:1 q5 each make one tradition's
+  reading of the divided point the answer, framed as attribution, and all
+  passed. Consistent with 47:4 and 49:2 last run; still at odds with the
+  48:2 and 50:3 failures. One rule for both prompts is still needed.
+- Fill-gap distractors that are near-synonyms of the answer (51:3 favor or
+  mercy, 53:3 livelihood or wealth) test memory of the exact word, not
+  understanding.
+- Six of eleven quizzes close on "the essay's close" or "the essay's final
+  lines"; the closer is becoming a template.
+- Perspectives questions whose right answer restates the prompt's "both
+  traditions agree" (54:1 q5) give themselves away.
+- Passage note: narrations shaped "I asked about X. He said ..." under an
+  Imam's label read as if the Imam asked. 51:1 v7 n4 is one; the writer
+  prompt's speaker rule should name the questioner ("al-Husayn ibn Khalid
+  asked ...") or the auditor should flag it.
+
+## Results - ar-Rahman 55 to at-Taghabun 64 (2026-10-06)
+
+One run, 26 quizzes, alongside the Urdu translation of the same 26 passages.
+The user allowed ten agents at a time for this run (stated in the request;
+the skill and CLAUDE.md were not changed), shared between quiz agents and
+Urdu translators. Rewrites went to a fresh writer with the failed question
+and reason in the prompt, and a fresh reviewer re-reviewed.
+
+| passage | type order | reviews | reader notes |
+|---|---|---|---|
+| 55:1 | fillGap, whoSaid, MC, TF, MC | 1 PASS | q1 gap "Yamama" is a place name, detail recall (reviewer called it borderline) |
+| 55:2 | TF, MC, whoSaid, MC, fillGap | 1 PASS | q4 the al-Qaim narration as a plain answer, narration-anchored; q5 fill-gap on the Perspectives' "what Face points to", good |
+| 55:3 | whoSaid, MC, TF, fillGap, MC | 1 PASS | q2 what Tabatabai rejects (the two gardens even for thief and fornicator), good comprehension |
+| 56:1 | whoSaid, TF, MC, fillGap, MC | 1 PASS | q3 shared point (both record Ali first to the Prophet), clear of the Foremost divide |
+| 56:2 | MC, fillGap, whoSaid, MC, TF | 1 PASS | q2 gap "proof" against mercy, warning, comfort, guessable |
+| 56:3 | MC, TF, whoSaid, fillGap, MC | 1 PASS | q4 "deniers of the Imam" from n9 as a plain answer, narration-anchored |
+| 57:1 | TF, MC, whoSaid, fillGap, MC | 2 (q5 FAIL) | q5 first made al-Tusi's "verse 10 names no one" the settled answer; now the shared ranking of those who spent before the victory |
+| 57:2 | MC, whoSaid, MC, fillGap, TF | 1 PASS | q4 distractor "tenfold" already sits in the prompt as charity's value, nobody picks it |
+| 57:3 | MC, fillGap, TF, whoSaid, MC | 1 PASS | q5 the Shia "Imams are the Balance" reading, attributed, Ibn Kathir's reading kept out of the options |
+| 57:4 | whoSaid, MC, fillGap, MC, TF | 1 PASS | q4 the Shia double-share reading, attributed; q5 False is easy |
+| 58:1 | MC, fillGap, whoSaid, TF, MC | 2 (q2 FAIL) | q2 distractor "granting" sat on the same side as "answering"; now "witnessing" |
+| 58:2 | MC, fillGap, whoSaid, MC, TF | 1 PASS | q5 False on the Shia reading of "Allah has turned to you", attributed |
+| 58:3 | TF, MC, fillGap, whoSaid, MC | 1 PASS | q5 answer "the hypocrites and their false oaths" with the divided points as distractors, good |
+| 59:1 | MC, TF, whoSaid, fillGap, MC | 1 PASS | q5 the shared host-and-guest story, clear of who the host was |
+| 59:2 | MC, fillGap, MC, whoSaid, TF | 1 PASS | q5 False (Satan rescues the man) is easy; no Perspectives in this passage |
+| 59:3 | TF, whoSaid, MC, fillGap, MC | 1 PASS | q3 the Sunni reading of "the successful", attributed; q4 distractor "sensible" baits the verse wording |
+| 60:1 | fillGap, MC, TF, whoSaid, MC | 1 PASS | q1 gap "specific" against "universal" is guessable from "general, but" |
+| 60:2 | MC, fillGap, whoSaid, MC, TF | 1 PASS | skipped the Perspectives (verse 10 marriage-law divide) entirely |
+| 61:1 | TF, whoSaid, MC, fillGap, MC | 1 PASS | q4 gap "wilaya" with "light" as distractor, fine since the sentence says "of the Commander of the Faithful" |
+| 61:2 | MC, fillGap, MC, whoSaid, TF | 1 PASS | q2 gap "ruby" is detail recall |
+| 62:1 | TF, fillGap, MC, whoSaid, MC | 1 PASS | q2 gap "guardianship (wilayah)" from the Ibn Abbas narration, plain answer, narration-anchored |
+| 62:2 | MC, whoSaid, fillGap, MC, TF | 1 PASS | q3 gap "Saturday" is detail recall |
+| 63:1 | TF, whoSaid, MC, fillGap, MC | 1 PASS | stays clear of the n2 wilaya reading flagged in Perspectives |
+| 63:2 | MC, whoSaid, MC, fillGap, TF | 1 PASS | q3 "one tradition" (al-Tusi) unnamed in the prompt; q5 False is easy |
+| 64:1 | TF, MC, fillGap, whoSaid, MC | 1 PASS | q3 gap "improbable" against "impossible", near-synonym |
+| 64:2 | whoSaid, MC, TF, MC, fillGap | 1 PASS | q2 the Shia wilaya reading of "obey the Apostle", attributed |
+
+### Costs (real agents, with hooks)
+
+| run | n | tokens mean | tokens min to max | time mean | total |
+|---|---|---|---|---|---|
+| writer | 26 | 57K | 42K to 79K | 7 min 48 s | 1.47M tokens |
+| reviewer (incl. 2 re-reviews) | 28 | 25K | 23K to 32K | 1 min 18 s | 713K tokens |
+| rewrite | 2 | 36K | 32K to 40K | 2 min 46 s | 72K tokens |
+
+About 2.26M agent tokens for the 26 quizzes. One writer (57:2) took 22 min
+for an ordinary 62K-token quiz; every other writer finished in 4 to 12 min.
+The Urdu for the same passages ran as 15 translator agents (1 to 2 passages
+each, 30K to 51K tokens, 3 to 9 min, 592K tokens in all); all 26 pass the
+Urdu check.
+
+### Review outcomes
+
+24 of 26 PASS first time; both failures passed on the first rewrite. 57:1
+q5 is the rule-5 case again (one tradition's reading of the divided point as
+the settled answer, not attributed). 58:1 q2 is a fill-gap distractor on the
+same side as the answer. Nothing parked.
+
+### Type order across the ten surahs
+
+| opener | count | | closer | count |
+|---|---|---|---|---|
+| MC | 12 | | MC | 15 |
+| TF | 8 | | TF | 9 |
+| whoSaid | 4 | | whoSaid | 0 |
+| fillGap | 2 | | fillGap | 2 |
+
+True or false: 15 True, 11 False; the odd-True and even-False rule held for
+26 of 26. Even index closes off MC for 11 of 11. Translation anchors: 0.
+Perspectives anchors: 20 of 26.
+
+### Reader notes (taste, not rule)
+
+- Who said it: Imam al-Sadiq is the answer in 15 of 26, and the distractors
+  are nearly always al-Baqir, the Prophet and Ali. A reader who always picks
+  al-Sadiq scores well. The writer prompt could prefer a narration whose
+  speaker is not al-Sadiq when the passage has one, or vary the distractors.
+- Rule 5 split again: attributed readings of the divided point (57:3 q5,
+  57:4 q4, 58:2 q5, 59:3 q3, 64:2 q2) passed, while 57:1 q5, unattributed,
+  failed. Consistent with the earlier runs: attribution is what the reviewer
+  accepts.
+- Detail-recall gaps (55:1 Yamama, 61:2 ruby, 62:2 Saturday) and
+  near-synonym gaps (64:1 improbable or impossible) test memory of a word,
+  not understanding.
+- Easy False closers (59:2, 63:2, 57:4) state the opposite of the essay's
+  last line; a reader who skimmed still gets them.

@@ -1,0 +1,324 @@
+{
+  "1": {
+    "id": "49:1",
+    "surah": 49,
+    "index": 1,
+    "range": [
+      1,
+      10
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 1,
+        "prompt": {
+          "en": "According to the passage, the surah opens with a code of conduct: first the manners owed to Allah and His Messenger, then the manners believers owe one another."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay opens by saying the surah lays down a code of conduct, the manners a believer owes to Allah and His Messenger first, then the manners believers owe one another."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "first the manners a believer owes to Allah and His Messenger, then the manners believers owe one another"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 2,
+        "prompt": {
+          "en": "\"By my life, you struck pickaxes by the ear of the Messenger of God for your father and his faruq.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Husayn"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Husayn addressed these words to Aisha, citing the verse against raising voices above the Prophet's and recalling what was done by the ear of the Messenger of God."
+        },
+        "anchor": {
+          "where": "verses.2.narrations.n1",
+          "quote": "By my life, you struck pickaxes by the ear of the Messenger of God for your father and his faruq"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 6,
+        "prompt": {
+          "en": "In the narration to Zurara on verse 6, what does Imam al-Baqir say about every verse of the Quran?"
+        },
+        "options": [
+          {
+            "en": "It has an outer sense and an inner sense."
+          },
+          {
+            "en": "It has only its plain, literal meaning."
+          },
+          {
+            "en": "It must be verified before it is believed."
+          },
+          {
+            "en": "It was revealed about one particular person."
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Teaching Zurara, Imam al-Baqir says no verse of the Quran lacks an outer and an inner sense; what people hold is its outer, and what he disclosed is its inner."
+        },
+        "anchor": {
+          "where": "verses.6.narrations.n3",
+          "quote": "no verse of the Quran lacks an outer and an inner sense"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 10,
+        "prompt": {
+          "en": "The believer is the brother of the believer, his eye and his ____."
+        },
+        "options": [
+          {
+            "en": "guide"
+          },
+          {
+            "en": "mirror"
+          },
+          {
+            "en": "shield"
+          },
+          {
+            "en": "witness"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "In this saying the believer is the believer's brother, his eye and his guide, one who does not betray, wrong, disparage, or break a promise to him."
+        },
+        "anchor": {
+          "where": "verses.10.narrations.n7",
+          "quote": "The believer is the brother of the believer, his eye and his guide"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 9,
+        "prompt": {
+          "en": "In the passage's perspectives, one reading notes the Quran still calls the fighters \"believers.\" What does it take this to prove?"
+        },
+        "options": [
+          {
+            "en": "That fighting between believers is always forbidden."
+          },
+          {
+            "en": "That the two sides had already made peace."
+          },
+          {
+            "en": "That grave disobedience does not expel a person from faith."
+          },
+          {
+            "en": "That both groups lost their faith by fighting."
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The perspectives note that the Quran still calls the fighters 'believers,' which one reading takes as proof that grave disobedience does not expel a person from faith."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "the Quran still calls the fighters 'believers,' which he and al-Bukhari take as proof that grave disobedience does not expel a person from faith"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-04T18:34:31Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-04T19:40:58Z",
+      "assembled_at": "2026-10-04T19:41:17Z"
+    }
+  },
+  "2": {
+    "id": "49:2",
+    "surah": 49,
+    "index": 2,
+    "range": [
+      11,
+      18
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 11,
+        "prompt": {
+          "en": "According to the essay, defaming a fellow believer harms only the one defamed and not the person who does it."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says Tabrisi reads the believers as a single self, so that to wrong a brother is to wrong oneself; the harm falls on the one defaming too."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabrisi takes the believers as a single self, so that to wrong a brother is to wrong oneself"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 12,
+        "prompt": {
+          "en": "In the passage, what does Imam al-Sadiq say happens when a believer accuses his brother?"
+        },
+        "options": [
+          {
+            "en": "His faith dissolves like salt in water."
+          },
+          {
+            "en": "His prayers are rejected for forty days."
+          },
+          {
+            "en": "He must free a slave to atone."
+          },
+          {
+            "en": "The brother's wrongdoing passes onto him."
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Sadiq says that when a believer accuses his brother, faith melts from the heart the way salt dissolves in water, so grave is the act."
+        },
+        "anchor": {
+          "where": "verses.12.narrations.n3",
+          "quote": "When a believer accuses his brother, faith dissolves in his heart as salt dissolves in water."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 13,
+        "prompt": {
+          "en": "\"Do not swear, O man. Better than me is whoever is more Godwary toward Allah and more obedient to Him. By Allah, this verse has not been abrogated.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Rida told a man not to swear, affirming that whoever is more Godwary and obedient to Allah is the better one, and that the verse was never abrogated."
+        },
+        "anchor": {
+          "where": "verses.13.narrations.n6",
+          "quote": "Do not swear, O man. Better than me is whoever is more Godwary toward Allah and more obedient to Him. By Allah, this verse has not been abrogated."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 14,
+        "prompt": {
+          "en": "According to the perspectives, how do the Shia narrations press the islam and iman distinction further?"
+        },
+        "options": [
+          {
+            "en": "Islam and iman mean exactly the same thing."
+          },
+          {
+            "en": "Faith enters the heart before any outward submission."
+          },
+          {
+            "en": "True iman also requires recognising the Imams' authority."
+          },
+          {
+            "en": "The Bedouins were hypocrites with no share in Islam."
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The perspectives say the Shia narrations push the distinction further: a man may be a Muslim without being a believer, and true faith also means recognising the Imams' authority."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "a man may be a Muslim without being a believer, and true iman also requires recognising 'this matter,' the Imams' authority"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "fillGap",
+        "verse": 18,
+        "prompt": {
+          "en": "The surah ends with God, who knows the Unseen and watches every deed - ____, Tabatabai says, for all that it has commanded."
+        },
+        "options": [
+          {
+            "en": "a warning"
+          },
+          {
+            "en": "a seal"
+          },
+          {
+            "en": "a promise"
+          },
+          {
+            "en": "a mercy"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Tabatabai reads the closing verse, that God knows the Unseen and watches every deed, as a seal set over everything the surah has commanded."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The surah ends with God, who knows the Unseen and watches every deed - a seal, Tabatabai says, for all that it has commanded."
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-04T18:32:28Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-04T18:33:58Z",
+      "assembled_at": "2026-10-04T19:41:17Z"
+    }
+  }
+}

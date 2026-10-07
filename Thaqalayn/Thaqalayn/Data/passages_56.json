@@ -1,0 +1,1245 @@
+{
+  "1": {
+    "id": "56:1",
+    "surah": 56,
+    "index": 1,
+    "range": [
+      1,
+      38
+    ],
+    "title": {
+      "en": "The Hour and the three classes",
+      "ur": "واقعہ اور تین گروہ"
+    },
+    "essay": {
+      "en": "Surah al-Waaqia opens by naming the Resurrection the Imminent Hour: 'When the Imminent [Hour] befalls,' and 'there is no denying that it will befall.' Its coming is certain, and it will be 'lowering and exalting' - al-Mizan reads this as the Day that abases the mighty among the disbelievers and the corrupt, and raises up the God-fearing [1]. Then comes the upheaval: the earth 'shaken violently,' the mountains 'shattered into bits' until they become 'scattered dust.'\n\nAgainst that scene mankind is sorted into three: 'you will be three groups,' a division addressed to all people [1] - the People of the Right Hand, the People of the Left Hand, and the Foremost, 'the ones brought near,' who dwell 'in the gardens of bliss.' Majma glosses these Foremost as those who outstripped others to following the prophets, and so are foremost to God's abundant reward [3].\n\nOf them the surah says 'A multitude from the former [generations] and a few from the latter ones.' Al-Mizan takes the former to be the past nations and the latter this community [2]. Their reward is then drawn: brocaded couches, immortal youths bearing cups of a wine that brings 'neither headache nor stupefaction,' chosen fruit and fowl, and houris 'like guarded pearls,' and no idle or sinful talk is heard there, but only the watchword, 'Peace! Peace!'\n\nThe passage then turns to the People of the Right Hand: thornless lote trees, clustered spathes, 'extended shade,' ever-flowing water, abundant fruits that are 'neither inaccessible, nor forbidden,' and noble spouses created anew as virgins. It closes with two of the three ranks fully drawn, the Garden's bliss set against the certainty of the Hour, while the fate of the Left Hand is held back for later in the surah.",
+      "ur": "سورۂ واقعہ قیامت کو “واقعہ” - یعنی وہ گھڑی جس کا وقوع یقینی ہے - کے نام سے کھولتا ہے: “جب واقعہ واقع ہو گا” اور “اس کے وقوع کو کوئی جھٹلانے والا نہیں۔” اس کا آنا قطعی ہے، اور یہ “پست کرنے والی اور بلند کرنے والی” ہو گی - المیزان اسے وہ دن قرار دیتا ہے جو کافروں اور فاسدوں میں سے طاقت وروں کو پست کر دے گا اور متقیوں کو سرفراز کرے گا [1]۔ پھر ہنگامہ برپا ہو گا: زمین “سخت لرزے گی” اور پہاڑ “ریزہ ریزہ” ہو کر “بکھری ہوئی خاک” بن جائیں گے۔\n\nاس منظر کے پس منظر میں پوری انسانیت کو تین گروہوں میں تقسیم کیا گیا ہے: “اور تم تین گروہ ہو جاؤ گے” - یہ خطاب تمام لوگوں سے ہے [1] - دائیں ہاتھ والے، بائیں ہاتھ والے، اور سابقون، “مقربین”، جو “باغات نعیم میں” رہیں گے۔ مجمع البیان ان سابقین کی تفسیر میں کہتا ہے کہ یہ وہ لوگ ہیں جو انبیاء کی پیروی میں دوسروں سے آگے نکل گئے، اس لیے اللہ کے وافر اجر میں بھی وہی سب سے پہلے ہیں [3]۔\n\nان کے بارے میں سورہ کہتی ہے: “اگلوں میں سے ایک بڑا گروہ اور پچھلوں میں سے تھوڑے۔” المیزان “اگلوں” سے مراد گزشتہ امتیں اور “پچھلوں” سے مراد یہ امت لیتا ہے [2]۔ پھر ان کا اجر بیان ہوتا ہے: مرصع بچھونے، ابدی جوان جو پیالے لیے پھرتے ہیں ایسی شراب کے جو “نہ سر میں درد پیدا کرتی ہے اور نہ عقل زائل کرتی ہے”، پسندیدہ میوے اور پرندے، اور حوریں “جیسے محفوظ موتی”، اور وہاں نہ بیہودہ کلام سنا جائے گا نہ گناہ کی بات - بس ایک نعرہ: “سلام! سلام!”\n\nپھر گفتگو دائیں ہاتھ والوں کی طرف مڑتی ہے: بے کانٹے کی بیریاں، تہ بہ تہ کھجور کے خوشے، “پھیلا ہوا سایہ”، بہتا پانی، فراواں پھل جو “نہ ختم ہوتے ہیں نہ ممنوع”، اور نئے سرے سے کنواری بنائی گئی شریفانہ ازواج۔ یہ حصہ تین طبقوں میں سے دو کو مکمل طور پر بیان کر کے اختتام پذیر ہوتا ہے - جنت کی نعمتیں قیامت کی یقینیت کے پس منظر میں رکھی گئی ہیں، جبکہ بائیں ہاتھ والوں کا انجام سورہ میں بعد کے لیے اٹھا رکھا گیا ہے۔"
+    },
+    "verses": [
+      {
+        "verse": 1,
+        "heading": {
+          "en": "Casting down and raising up",
+          "ur": "پست کرنا اور بلند کرنا"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sajjad",
+            "addressee": null,
+            "arabic": "{ إِذَا وَقَعَتِ ٱلْوَاقِعَةُ } يعني القيامة { لَيْسَ لِوَقْعَتِهَا كَاذِبَةٌ * خَافِضَةٌ } خفضت و الله أعداء الله إلى النار رافِعَةٌ رفعت و الله أولياء الله إلى الجنة",
+            "chain": "Ibn Babawayh, from his father, from Sa'd ibn Abdillah, from al-Qasim ibn Muhammad al-Isfahani, from Sulayman ibn Dawud al-Minqari, from Sufyan ibn Uyayna, from al-Zuhri, from Ali ibn al-Husayn",
+            "text": {
+              "en": "'When the Imminent Hour befalls' - meaning the Resurrection - 'there is no denying that it will befall.' Lowering: by God, it casts the enemies of God down into the Fire. Exalting: by God, it raises the friends of God up to the Garden.",
+              "ur": "“جب واقعہ واقع ہو گا” - یعنی قیامت - “اس کے وقوع کو کوئی جھٹلانے والا نہیں۔” پست کرنا: بخدا! یہ اللہ کے دشمنوں کو آگ میں پھینک دے گی۔ بلند کرنا: بخدا! یہ اللہ کے دوستوں کو جنت تک اٹھا لے گی۔"
+            },
+            "source": "s29"
+          }
+        ]
+      },
+      {
+        "verse": 7,
+        "heading": {
+          "en": "Three classes of mankind",
+          "ur": "انسانیت کے تین طبقے"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": "Jabir",
+            "arabic": "يا جابر، إن الله تبارك و تعالى خلق الخلق ثلاثة أصناف، و هو قوله عز و جل: { وَكُنتُمْ أَزْوَاجاً ثَلاَثَةً } … فالسابقون هم رسل الله (عليهم السلام)، و خاصة الله من خلقه، جعل فيهم خمسة أرواح، أيدهم بروح القدس، فبه عرفوا الأشياء، و أيدهم بروح الايمان، فبه خافوا الله عز و جل، و أيدهم بروح القوة، فبه قدروا على طاعة الله، و أيدهم بروح الشهوة، فبه اشتهوا طاعة الله عز و جل، و كرهوا معصيته، و جعل فيهم روح المدرج، الذي به يذهب الناس و يجيئون",
+            "chain": "Muhammad ibn Yaqub, from Muhammad ibn Yahya, from Ahmad ibn Muhammad, from al-Husayn ibn Sa'id, from Hammad ibn Isa, from Ibrahim ibn Umar al-Yamani, from Jabir al-Jufi, from Abu Abdillah",
+            "text": {
+              "en": "O Jabir, God created mankind in three classes - His words, 'you will be three groups.' The Foremost are the messengers of God and His elect. He gave them five spirits: the holy spirit, by which they knew things; the spirit of faith, of power, of desire, and the spirit of movement by which people come and go.",
+              "ur": "اے جابر، اللہ نے مخلوق کو تین قسموں میں بنایا - یہی اس کا ارشاد ہے: “اور تم تین گروہ ہو جاؤ گے۔” سابقون اللہ کے رسول اور اس کے برگزیدہ بندے ہیں۔ اللہ نے انہیں پانچ روحیں عطا کیں: روح القدس، جس سے انہوں نے چیزوں کو پہچانا؛ روح ایمان، روح قوت، روح شہوت، اور روح حرکت جس کے ذریعے لوگ آتے جاتے ہیں۔"
+            },
+            "source": "s29"
+          }
+        ]
+      },
+      {
+        "verse": 10,
+        "heading": {
+          "en": "Who are the Foremost",
+          "ur": "سابقون کون ہیں"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "the Prophet Muhammad",
+            "addressee": "Ibn Abbas",
+            "arabic": "{ وَٱلسَّابِقُونَ ٱلسَّابِقُونَ * أُوْلَـٰئِكَ ٱلْمُقَرَّبُونَ * فِي جَنَّاتِ ٱلنَّعِيمِ } … قال لي جبرئيل: ذلك علي و شيعته، هم السابقون إلى الجنة، المقربون من الله بكرامته لهم",
+            "chain": "al-Tusi in his Amali, by his isnad from Muqatil ibn Sulayman, from al-Dahhak ibn Muzahim, from Ibn Abbas",
+            "text": {
+              "en": "I asked the Messenger of God about 'the Foremost Ones are the foremost ones; they are the ones brought near, in the gardens of bliss.' He said: Gabriel told me, 'That is Ali and his Shi'a; they are the foremost to the Garden, brought near to God by His honoring them.'",
+              "ur": "میں نے رسول اللہ صلی اللہ علیہ وآلہ وسلم سے “وَالسَّابِقُونَ السَّابِقُونَ، أُولَٰئِكَ الْمُقَرَّبُونَ، فِي جَنَّاتِ النَّعِيمِ” کے بارے میں پوچھا تو آپ نے فرمایا: جبرئیل نے مجھ سے کہا: “یہ علی علیہ السلام اور ان کے شیعہ ہیں؛ یہی جنت کی طرف سب سے پہلے ہیں، اللہ کی طرف سے اپنی تکریم کے سبب اس کے مقربین۔”"
+            },
+            "source": "s29"
+          },
+          {
+            "id": "n4",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "السابقون أربعة: ابن آدم المقتول، و سابق أمة موسى (عليه السلام) و هو مؤمن آل فرعون، و سابق أمة عيسى (عليه السلام) و هو حبيب النجار، و السابق في امة محمد (صلى الله عليه و آله) و هو علي بن أبي طالب (عليه السلام)",
+            "chain": "al-Tabrisi, from Abu Ja'far",
+            "text": {
+              "en": "The foremost are four: the slain son of Adam, the foremost of Moses' nation - the believer of Pharaoh's family, the foremost of Jesus' nation - Habib the carpenter, and the foremost of Muhammad's nation - Ali ibn Abi Talib.",
+              "ur": "سابقون چار ہیں: آدم کا وہ بیٹا جسے قتل کیا گیا، حضرت موسیٰ علیہ السلام کی امت کے سابق - مؤمن آل فرعون، حضرت عیسیٰ علیہ السلام کی امت کے سابق - حبیب نجار، اور امت محمد صلی اللہ علیہ وآلہ وسلم کے سابق - علی ابن ابی طالب علیہ السلام۔"
+            },
+            "source": "s29"
+          }
+        ]
+      },
+      {
+        "verse": 13,
+        "heading": {
+          "en": "The former and the latter",
+          "ur": "اولین اور آخرین"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "{ ثُلَّةٌ مِّنَ ٱلأَوَّلِينَ } ابن آدم الذي قتله أخوه، و مؤمن آل فرعون، و حبيب النجار صاحب يس: { وَقَلِيلٌ مِّنَ ٱلآخِرِينَ } علي بن أبي طالب",
+            "chain": "Muhammad ibn al-Abbas, from Muhammad ibn al-Harir, from Ahmad ibn Yahya, from al-Hasan ibn al-Husayn, from Muhammad ibn al-Furat, from Ja'far ibn Muhammad",
+            "text": {
+              "en": "'A multitude from the former': the son of Adam whom his brother killed, the believer of Pharaoh's family, and Habib the carpenter of Ya-Sin. 'And a few from the latter': Ali ibn Abi Talib.",
+              "ur": "“اگلوں میں سے ایک بڑا گروہ”: آدم کا وہ بیٹا جسے اس کے بھائی نے قتل کیا، مؤمن آل فرعون، اور سورۂ یٰس کے حبیب نجار۔ “اور پچھلوں میں سے تھوڑے”: علی ابن ابی طالب علیہ السلام۔"
+            },
+            "source": "s30"
+          }
+        ]
+      },
+      {
+        "verse": 18,
+        "heading": {
+          "en": "A cup of Ma'in",
+          "ur": "معین کا پیالہ"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "حوضنا [مترع] فيه مثعبان ينصبان من الجنة: أحدهما من تسنيم، و الآخر من معين",
+            "chain": "Ibn Babawayh, from Abu Abdillah, from his father, from his forefathers, from Amir al-Mu'minin",
+            "text": {
+              "en": "Our pool is brimful; two channels pour into it from the Garden - one from Tasnim, the other from Ma'in.",
+              "ur": "ہمارا حوض لبالب بھرا ہوا ہے؛ جنت سے دو نہریں اس میں آ کر گرتی ہیں - ایک تسنیم سے اور دوسری معین سے۔"
+            },
+            "source": "s31"
+          }
+        ]
+      },
+      {
+        "verse": 27,
+        "heading": {
+          "en": "People of the Right Hand",
+          "ur": "اصحاب الیمین"
+        },
+        "note": {
+          "en": "Tafsir al-Qummi applies the People of the Right Hand to Ali, the Commander of the Faithful, and reads their companions as his Shi'a [21].",
+          "ur": "تفسیر قمی “اصحاب الیمین” کا اطلاق علی، امیر المومنین علیہ السلام پر کرتی ہے اور ان کے ساتھیوں سے مراد ان کے شیعہ لیتی ہے [21]۔"
+        },
+        "narrations": []
+      },
+      {
+        "verse": 33,
+        "heading": {
+          "en": "Neither cut off nor forbidden",
+          "ur": "نہ ختم ہونے والے نہ ممنوع"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Imam al-Sadiq",
+            "addressee": "Nasr",
+            "arabic": "يا نصر، إنه و الله ليس حيث يذهب الناس، إنما هو العلم و ما يخرج منه",
+            "chain": "Sa'd ibn Abdillah, from Ali ibn Ismail ibn Isa, from Muhammad ibn Amr ibn Sa'id al-Zayyat, from one of his companions, from Nasr ibn Qabus",
+            "text": {
+              "en": "O Nasr, by God it is not as people suppose. It is only knowledge and what issues from it.",
+              "ur": "اے نصر، بخدا! یہ وہ نہیں جیسا لوگ سمجھتے ہیں۔ یہ تو بس علم ہے اور جو کچھ اس سے نکلتا ہے۔"
+            },
+            "source": "s36"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "The identity of the Foremost is where the readings part. Shia commentators read them as those who outstripped others to following the prophets, and on the authority of Imam al-Baqir they name the foremost of Muhammad's community Ali ibn Abi Talib, set beside the foremost believers of earlier nations [3]. Sunni exegetes read the Foremost more broadly, as those who outstripped others to faith in God and His Messenger, the first Emigrants [47]. Yet the two are not wholly apart: Ibn Kathir likewise records the report that Ali preceded all others to the Prophet, as Joshua did to Moses and the believer of Ya-Sin to Jesus [52].",
+      "ur": "سابقون کی شناخت وہ نکتہ ہے جہاں سے دونوں قراءتیں جدا ہوتی ہیں۔ شیعہ مفسرین انہیں ان لوگوں سے تعبیر کرتے ہیں جو انبیاء کی پیروی میں دوسروں سے آگے نکل گئے، اور امام محمد باقر علیہ السلام کی روایت کی بنیاد پر امت محمد صلی اللہ علیہ وآلہ وسلم کے سابق کے طور پر علی ابن ابی طالب علیہ السلام کا نام لیتے ہیں، پچھلی امتوں کے سابق مؤمنوں کے ساتھ [3]۔ اہل سنت مفسرین سابقون کو زیادہ وسیع معنوں میں لیتے ہیں - وہ لوگ جو اللہ اور اس کے رسول پر ایمان لانے میں سب سے پہلے تھے، یعنی پہلے مہاجرین [47]۔ لیکن یہ دونوں نقطہ ہائے نظر کلیتاً جدا بھی نہیں: ابن کثیر بھی اس روایت کو درج کرتے ہیں کہ علی علیہ السلام نبی صلی اللہ علیہ وآلہ وسلم کی طرف سب سے پہلے پہنچے، جیسے یوشع حضرت موسیٰ علیہ السلام کی طرف اور یٰس کے مؤمن حضرت عیسیٰ علیہ السلام کی طرف [52]۔"
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Waaqia 1 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=56&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الزوج بمعنى الصنف والخطاب لعامة البشر."
+        },
+        "gloss": "'Group' means category, and the address is to all mankind."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Waaqia 11 to 38",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=56&tAyahNo=11&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فمعنى الآيتين هم أي المقربون جماعة كثيرة من الأمم الماضين وقليل من هذه الأُمة."
+        },
+        "gloss": "The meaning of the two verses: the brought-near are a large group from the past nations and few from this community."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 1 to 16",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=56&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ والسابقون السابقون } أي والسابقون إلى اتباع الأنبياء الذين صاروا أئمة الهدى فهم السابقون إلى جزيل الثواب عند الله"
+        },
+        "gloss": "'And the Foremost Ones are the foremost ones' means those foremost to following the prophets who became the leaders of guidance; so they are foremost to abundant reward with God."
+      },
+      {
+        "id": "s21",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 27",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=56&tAyahNo=27&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "اليمين علي أمير المؤمنين عليه السلام وأصحابه شيعته"
+        },
+        "gloss": "The Right Hand is Ali, the Commander of the Faithful, and his companions are his Shi'a."
+      },
+      {
+        "id": "s29",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 1 to 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=56&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال لي جبرئيل: ذلك علي و شيعته، هم السابقون إلى الجنة، المقربون من الله بكرامته لهم"
+        },
+        "gloss": "Gabriel said to me: that is Ali and his Shi'a; they are the foremost to the Garden, brought near to God by His honoring them."
+      },
+      {
+        "id": "s30",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 13 to 17",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=56&tAyahNo=13&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ ثُلَّةٌ مِّنَ ٱلأَوَّلِينَ } ابن آدم الذي قتله أخوه، و مؤمن آل فرعون، و حبيب النجار صاحب يس: { وَقَلِيلٌ مِّنَ ٱلآخِرِينَ } علي بن أبي طالب"
+        },
+        "gloss": "'A multitude from the former': the son of Adam whom his brother killed, the believer of Pharaoh's family, and Habib the carpenter of Ya-Sin. 'And a few from the latter': Ali ibn Abi Talib."
+      },
+      {
+        "id": "s31",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 18",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=56&tAyahNo=18&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "حوضنا [مترع] فيه مثعبان ينصبان من الجنة: أحدهما من تسنيم، و الآخر من معين"
+        },
+        "gloss": "Our pool is brimful; two channels pour into it from the Garden - one from Tasnim, the other from Ma'in."
+      },
+      {
+        "id": "s36",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 30 to 33",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=56&tAyahNo=30&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يا نصر، إنه و الله ليس حيث يذهب الناس، إنما هو العلم و ما يخرج منه"
+        },
+        "gloss": "O Nasr, by God it is not as people suppose; it is only knowledge and what issues from it."
+      },
+      {
+        "id": "s47",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Waaqia 7 to 12",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=56&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقوله: { والسَّابِقُونَ السَّابِقُونَ } وهم الزوج الثالث وهم الذين سبقوا إلى الإيمان بالله ورسوله، وهم المهاجرون الأوّلون."
+        },
+        "gloss": "'And the Foremost Ones are the foremost ones' - they are the third group, those who outstripped others to faith in God and His Messenger, the first Emigrants."
+      },
+      {
+        "id": "s52",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Waaqia 1 to 12",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=56&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ وَٱلسَّـٰبِقُونَ ٱلسَّـٰبِقُونَ } قال يوشع بن نون، سبق إلى موسى، ومؤمن آل يس، سبق إلى عيسى، وعلي بن أبي طالب سبق إلى محمد رسول الله صلى الله عليه وسلم"
+        },
+        "gloss": "'And the Foremost Ones are the foremost ones': Joshua son of Nun outstripped others to Moses, the believer of Ya-Sin to Jesus, and Ali ibn Abi Talib to Muhammad the Messenger of God."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T04:03:27Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T04:24:56Z",
+      "assembled_at": "2026-10-06T04:48:05Z"
+    }
+  },
+  "2": {
+    "id": "56:2",
+    "surah": 56,
+    "index": 2,
+    "range": [
+      39,
+      74
+    ],
+    "title": {
+      "en": "Hellfire, denial, and God's signs",
+      "ur": "جہنم، انکار اور اللہ کی نشانیاں"
+    },
+    "essay": {
+      "en": "The passage picks up from the division of humankind into three groups and the long portrait of the People of the Right, which it closes by numbering them: a great multitude from the earlier generations and a multitude from the later ones - which al-Mizan reads as the past communities of the prophets and the community of Muhammad [1]. Then it turns, abruptly, to the People of the Left. The refrain 'what are the People of the Left Hand?!' voices horror at what awaits them: a scorching wind, boiling water, and the shadow of a dense black smoke, neither cool nor beneficial.\n\nTheir ruin is explained. They had lived affluent, absorbed in comfort, and they clung to 'the great sin' - which al-Mizan takes as the refusal of the servitude they owed their Lord, and Majma reads as the grave sin, or idolatry [1][4]. They had scoffed that once dead and turned to dust and bones they could never be raised, nor their forefathers. The reply is commanded: say that the former and the latter will all be gathered to the tryst of a known day. The deniers themselves are then addressed: astray and lying, they will eat of the Zaqqum tree, fill their bellies, and drink scalding water like thirsty camels. This, their 'hospitality,' the surah names with bitter irony [1].\n\nFrom here the surah presses the proof the deniers rejected. Their own Creator tells them of the raising; the One who shaped the first genesis can surely repeat it [2]. He sets before them the seed they emit, the death He has ordained, the crop they sow and could find turned to chaff, the sweet water that could be made bitter, and the fire they kindle - made a reminder of the greater Fire and a boon for the desert-dwellers [10]. At the close God turns from the deniers to His Prophet: 'celebrate the Name of your Lord, the All-supreme' [2].",
+      "ur": "یہ قطعہ انسانیت کی تین گروہوں میں تقسیم اور اصحابِ یمین کے طویل نقشے سے آگے بڑھتا ہے اور ان کی تعداد بتا کر اسے مکمل کرتا ہے: اگلوں میں سے ایک بڑی جماعت اور پچھلوں میں سے ایک جماعت - جسے المیزان نے انبیاء کی گزشتہ امتیں اور حضرت محمد صلی اللہ علیہ وآلہ وسلم کی امت قرار دیا ہے [1]۔ پھر یکایک اصحابِ شمال کی طرف رخ ہوتا ہے۔ “اصحابِ شمال کیا ہیں؟!” کی ندا ان کے انتظار میں موجود ہول کا اظہار کرتی ہے: جھلسانے والی گرم ہوا، کھولتا پانی، اور گھنے کالے دھوئیں کا سایہ - نہ ٹھنڈا، نہ فائدہ مند۔\n\nان کی تباہی کی وضاحت کی گئی ہے۔ وہ خوشحال تھے، راحت و آسائش میں مگن، اور انہوں نے “بڑے گناہ” کو تھامے رکھا - جسے المیزان نے اپنے رب کی بندگی و اطاعت سے انکار قرار دیا ہے، اور مجمع البیان نے کبیرہ گناہ یا شرک [1][4]۔ انہوں نے مذاق اڑایا کہ مر کر مٹی اور ہڈیاں ہو جانے کے بعد وہ یا ان کے آباء و اجداد کبھی اٹھائے نہیں جا سکتے۔ جواب کا حکم دیا گیا: کہو کہ اگلے اور پچھلے سب ایک معلوم دن کی مقررہ ملاقات پر جمع کیے جائیں گے۔ پھر منکرین کو براہِ راست مخاطب کیا گیا: گمراہ اور جھٹلانے والے، یہ زقوم کے درخت سے کھائیں گے، پیٹ بھریں گے، اور پیاسے اونٹوں کی طرح کھولتا پانی پیئں گے۔ سورت اسے ان کی “مہمان نوازی” کہہ کر کڑوی طنز کرتی ہے [1]۔\n\nیہاں سے سورت ان دلائل کو مضبوطی سے پیش کرتی ہے جنہیں منکرین نے رد کیا تھا۔ خود ان کا خالق انہیں دوبارہ اٹھائے جانے کی خبر دیتا ہے؛ جس نے پہلی بار پیدائش کو شکل دی وہ یقیناً اسے دہرا سکتا ہے [2]۔ وہ ان کے سامنے رکھتا ہے: وہ نطفہ جو وہ ڈالتے ہیں، وہ موت جو اس نے مقرر کی ہے، وہ فصل جو وہ بوتے ہیں اور جسے وہ بھوسے میں بدلا ہوا پا سکتے ہیں، وہ میٹھا پانی جو کڑوا کیا جا سکتا ہے، اور وہ آگ جو وہ جلاتے ہیں - بڑی آگ کی یاددہانی اور صحرا نشینوں کے لیے نعمت بنائی گئی [10]۔ آخر میں اللہ منکرین سے اپنے نبی کی طرف رخ کرتا ہے: “اپنے بلند مرتبہ رب کے نام کی تسبیح کرو” [2]۔"
+    },
+    "verses": [
+      {
+        "verse": 39,
+        "heading": {
+          "en": "The two multitudes",
+          "ur": "دو گروہ"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "ثلة من الأولين حزقيل مؤمن آل فرعون وثلة من الآخرين علي بن أبي طالب",
+            "chain": "Ali ibn Ibrahim, from Ahmad ibn Idris, from Ahmad ibn Muhammad, from al-Hasan ibn Ali, from Asbat, from Salim bayya' al-zutt, from Abu Sa'id al-Mada'ini, from Abu Abdillah",
+            "text": {
+              "en": "Abu Sa'id al-Mada'ini asked Abu Abdillah about God's words, 'A multitude from the former and a multitude from the latter.' He said: the former multitude is Hizqil, the believer of Pharaoh's house; the latter multitude is Ali ibn Abi Talib.",
+              "ur": "ابو سعید المدائنی نے ابو عبداللہ علیہ السلام سے اللہ کے ان کلمات کے بارے میں پوچھا: “اگلوں میں سے ایک گروہ اور پچھلوں میں سے ایک گروہ۔” آپ علیہ السلام نے فرمایا: اگلا گروہ حزقیل ہے، آلِ فرعون کا مومن؛ اور پچھلا گروہ علی ابن ابی طالب علیہ السلام ہیں۔"
+            },
+            "source": "s21"
+          }
+        ]
+      },
+      {
+        "verse": 41,
+        "heading": {
+          "en": "The People of the Left",
+          "ur": "اصحابِ شمال"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Ali ibn Ibrahim",
+            "addressee": null,
+            "arabic": "أصحاب الشمال أعداء آل محمد صلى الله عليه و آله و أصحابهم الذين والوهم",
+            "chain": null,
+            "text": {
+              "en": "The People of the Left are the enemies of the family of Muhammad and their associates who allied themselves with them.",
+              "ur": "اصحابِ شمال آلِ محمد صلی اللہ علیہ وآلہ وسلم کے دشمن اور ان کے وہ ساتھی ہیں جنہوں نے ان کے ساتھ دوستی کی۔"
+            },
+            "source": "s21"
+          }
+        ]
+      },
+      {
+        "verse": 55,
+        "heading": {
+          "en": "Drinking like thirsty camels",
+          "ur": "پیاسے اونٹوں کی طرح پینا"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "الرجل يشرب بالنفس الواحد قال يكره ذلك و ذلك شرب الهيم قلت و ما الهيم قال الإبل",
+            "chain": "al-Tusi, by his chain, from al-Husayn ibn Sa'id, from al-Nadr ibn Suwayd, from Hisham ibn Salim, from Sulayman ibn Khalid, from Abu Abdillah",
+            "text": {
+              "en": "I asked Abu Abdillah about a man who drinks in a single breath. He said: that is disliked; it is the drinking of the hiim. I said: what is the hiim? He said: the camels.",
+              "ur": "میں نے ابو عبداللہ علیہ السلام سے اس شخص کے بارے میں پوچھا جو ایک سانس میں پی لیتا ہے۔ آپ علیہ السلام نے فرمایا: یہ مکروہ ہے؛ یہ ہیم کا پینا ہے۔ میں نے کہا: ہیم کیا ہے؟ آپ علیہ السلام نے فرمایا: اونٹ۔"
+            },
+            "source": "s21"
+          }
+        ]
+      },
+      {
+        "verse": 62,
+        "heading": {
+          "en": "The first genesis",
+          "ur": "پہلی پیدائش"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sajjad",
+            "addressee": null,
+            "arabic": "العجب كل العجب لمن أنكر النشأة الأخرى وهو يرى النشأة الأولى",
+            "chain": null,
+            "text": {
+              "en": "It is utterly astonishing that someone denies the other genesis while he sees the first genesis.",
+              "ur": "یہ سراسر تعجب کی بات ہے کہ کوئی دوسری پیدائش کا انکار کرے جبکہ وہ پہلی پیدائش کو دیکھ رہا ہو۔"
+            },
+            "source": "s26"
+          }
+        ]
+      },
+      {
+        "verse": 63,
+        "heading": {
+          "en": "What you sow",
+          "ur": "جو تم بوتے ہو"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إذا أردت أن تزرع زرعا فخذ قبضة من البذر و استقبل القبلة و قل … ثم قل بل الله الزارع ثلاث مرات ثم قل اللهم اجعله حبا مباركا و ارزقنا فيه السلامة ثم انثر القبضة التي في يدك في القراح",
+            "chain": "Muhammad ibn Ya'qub, from Ali ibn Ibrahim, from his father, from Ibn Abi Umayr, from Ibn Udhayna, from Ibn Bukayr, from Abu Abdillah",
+            "text": {
+              "en": "When you want to sow, take a handful of seed, face the qibla, and recite three times, 'Is it you who make it grow, or are We the grower?' Then say three times, 'Rather Allah is the grower,' then, 'O Allah, make it blessed grain,' and scatter the seed.",
+              "ur": "جب تم فصل بونا چاہو تو بیج کی ایک مٹھی لو، قبلے کی طرف منہ کرو، اور تین بار پڑھو: “کیا تم اسے اگاتے ہو یا ہم اگانے والے ہیں؟” پھر تین بار کہو: “بلکہ اللہ اگانے والا ہے،” پھر کہو: “اے اللہ! اسے مبارک غلہ بنا دے،” اور بیج بکھیر دو۔"
+            },
+            "source": "s22"
+          }
+        ]
+      },
+      {
+        "verse": 73,
+        "heading": {
+          "en": "The fire a reminder",
+          "ur": "آگ ایک یاددہانی"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إن ناركم هذه جزء من سبعين جزء من نار جهنم وقد اطفأت سبعين مرة بالماء ثم التهب ولولا ذلك ما استطاع آدمي أن يطفأها",
+            "chain": null,
+            "text": {
+              "en": "This fire of yours is one part of seventy parts of the fire of Hell. It has been quenched with water seventy times and then flared up again; were it not for that, no human could put it out.",
+              "ur": "تمہاری یہ آگ جہنم کی آگ کے ستر حصوں میں سے ایک حصہ ہے۔ اسے ستر بار پانی سے بجھایا گیا اور پھر بھڑک اٹھی؛ اگر ایسا نہ ہوتا تو کوئی انسان اسے بجھا نہ سکتا۔"
+            },
+            "source": "s27"
+          }
+        ]
+      },
+      {
+        "verse": 74,
+        "heading": {
+          "en": "Celebrate your Lord's Name",
+          "ur": "اپنے رب کے نام کی تسبیح کرو"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Prophet Muhammad",
+            "addressee": null,
+            "arabic": "لما أنزل الله تبارك وتعالى فسبح باسم ربك العظيم قال النبي صلى الله عليه و آله اجعلوها في ركوعكم فلما أنزل الله عز و جل سبح اسم ربك الأعلى قال النبي صلى الله عليه و آله اجعلوها في سجودكم",
+            "chain": null,
+            "text": {
+              "en": "When God revealed 'So celebrate the Name of your Lord, the All-supreme,' the Prophet said: 'Put it in your bowing.' When God revealed 'Glorify the Name of your Lord, the Most High,' he said: 'Put it in your prostration.'",
+              "ur": "جب اللہ نے “پس اپنے بلند مرتبہ رب کے نام کی تسبیح کرو” نازل فرمایا تو نبی صلی اللہ علیہ وآلہ وسلم نے فرمایا: “اسے اپنے رکوع میں رکھو۔” جب اللہ نے “اپنے اعلیٰ رب کے نام کی تسبیح کرو” نازل فرمایا تو آپ صلی اللہ علیہ وآلہ وسلم نے فرمایا: “اسے اپنے سجدے میں رکھو۔”"
+            },
+            "source": "s65"
+          },
+          {
+            "id": "n8",
+            "speaker": "Imam Ali",
+            "addressee": "Juwayriya ibn Mushir",
+            "arabic": "يا جويرية بن مسهر إن الله عز و جل يقول فسبح باسم ربك العظيم و إني سألت الله عز و جل باسمه العظيم فرد علي الشمس",
+            "chain": "narrated from Juwayriya ibn Mushir",
+            "text": {
+              "en": "O Juwayriya ibn Mushir, God says, 'So celebrate the Name of your Lord, the All-supreme.' I asked God by His greatest Name, and He returned the sun to me.",
+              "ur": "اے جویریہ بن مشہر! اللہ فرماتا ہے: “پس اپنے بلند مرتبہ رب کے نام کی تسبیح کرو۔” میں نے اللہ سے اس کے اسمِ اعظم کے ذریعے دعا کی اور اس نے میری طرف سورج واپس کر دیا۔"
+            },
+            "source": "s66"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On these two multitudes and the two hands, the traditions part. Shia narrations read them through loyalty to the Prophet's house: al-Burhan carries a report from al-Sadiq naming the former multitude as Hizqil, the believer of Pharaoh's house, and the latter as Ali ibn Abi Talib, while al-Qummi glosses the People of the Left as the enemies of Muhammad's family and their allies [21]. Sunni commentators take the two multitudes plainly as the earlier communities and the community of Muhammad; al-Tabari records the Prophet's hope that his umma would form a full half of the people of Paradise [28].",
+      "ur": "ان دو گروہوں اور دو ہاتھوں کے بارے میں روایات مختلف راستے اختیار کرتی ہیں۔ شیعہ روایات انہیں آلِ نبی صلی اللہ علیہ وآلہ وسلم سے وفاداری کی روشنی میں پڑھتی ہیں: البرہان میں امام صادق علیہ السلام کی روایت ہے جس میں پہلے گروہ کو حزقیل - آلِ فرعون کا مومن - اور پچھلے گروہ کو علی ابن ابی طالب علیہ السلام قرار دیا گیا ہے، جبکہ تفسیرِ قمی نے اصحابِ شمال کی تفسیر آلِ محمد کے دشمنوں اور ان کے حامیوں سے کی ہے [21]۔ سنی مفسرین دو گروہوں کو سیدھے طور پر پچھلی امتوں اور امتِ محمدی سے تعبیر کرتے ہیں؛ طبری نے نبی صلی اللہ علیہ وآلہ وسلم کی یہ خواہش نقل کی ہے کہ ان کی امت اہلِ جنت کا پورا نصف حصہ بنے [28]۔"
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Waaqia 39 to 56",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=56&tAyahNo=39&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولعل المستفاد من السياق أن إصرارهم على الحنث العظيم هو استكبارهم عن عبودية ربهم التي عاهدوا الله عليها بحسب فطرتهم"
+        },
+        "gloss": "Perhaps the context shows that their persistence in the great sin was their arrogant refusal of the servitude to their Lord which they had pledged by their very nature."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Waaqia 57 to 74",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=56&tAyahNo=57&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وإذ قدر عليها أولاً فهو على إيجاد مثلها ثانياً قادر"
+        },
+        "gloss": "Since He had power over the first creation, He is able to bring about its like a second time."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 41 to 56",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=56&tAyahNo=41&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وكانوا يصرون على الحنث العظيم أي الذنب العظيم عن مجاهد وقتادة"
+        },
+        "gloss": "'They persisted in the great sin' means the grave sin, as Mujahid and Qatada said."
+      },
+      {
+        "id": "s10",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 71 to 74",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=56&tAyahNo=71&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "جعلنا النار تذكرة للنار الكبرى وهي نار جهنم … ينتفع بها المسافرون الذين نزلوا الأرض القي وهي القفر"
+        },
+        "gloss": "We made the fire a reminder of the greater Fire, which is the fire of Hell; travellers who camp in empty, barren land benefit from it."
+      },
+      {
+        "id": "s21",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 39 to 55",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=56&tAyahNo=39&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ثلة من الأولين حزقيل مؤمن آل فرعون، وثلة من الآخرين علي بن أبي طالب"
+        },
+        "gloss": "The former multitude is Hizqil, the believer of Pharaoh's house; the latter multitude is Ali ibn Abi Talib."
+      },
+      {
+        "id": "s22",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 56 to 70",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=56&tAyahNo=56&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إذا أردت أن تزرع زرعا فخذ قبضة من البذر و استقبل القبلة … ثم قل بل الله الزارع ثلاث مرات"
+        },
+        "gloss": "When you want to sow a crop, take a handful of seed and face the qibla; then say three times, 'Rather Allah is the grower.'"
+      },
+      {
+        "id": "s26",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 46 to 70",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=56&tAyahNo=46&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "العجب كل العجب لمن أنكر النشأة الأخرى وهو يرى النشأة الأولى"
+        },
+        "gloss": "It is utterly astonishing that someone denies the other genesis while he sees the first genesis."
+      },
+      {
+        "id": "s27",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 71 to 74",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=56&tAyahNo=71&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إن ناركم هذه جزء من سبعين جزء من نار جهنم وقد اطفأت سبعين مرة بالماء ثم التهب"
+        },
+        "gloss": "This fire of yours is one part of seventy parts of the fire of Hell; it has been quenched with water seventy times, then flared up again."
+      },
+      {
+        "id": "s28",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Waaqia 39 to 46",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=56&tAyahNo=39&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يعني جماعة من الذين مضوا قبل أمة محمد صلى الله عليه وسلم … وجماعة من أمة محمد صلى الله عليه وسلم"
+        },
+        "gloss": "It means a group from those who passed before the community of Muhammad, and a group from the community of Muhammad."
+      },
+      {
+        "id": "s65",
+        "kind": "hadith",
+        "work": "Man La Yahduruh al-Faqih",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 932, cited at Al-Waaqia 74",
+        "url": "https://thaqalayn.com/book/20",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "لما أنزل الله تبارك وتعالى فسبح باسم ربك العظيم قال النبي صلى الله عليه و آله اجعلوها في ركوعكم"
+        },
+        "gloss": "When God revealed 'So celebrate the Name of your Lord, the All-supreme,' the Prophet said: 'Put it in your bowing.'"
+      },
+      {
+        "id": "s66",
+        "kind": "hadith",
+        "work": "Man La Yahduruh al-Faqih",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 611, cited at Al-Waaqia 74",
+        "url": "https://thaqalayn.com/book/20",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "إن الله عز و جل يقول فسبح باسم ربك العظيم و إني سألت الله عز و جل باسمه العظيم فرد علي الشمس"
+        },
+        "gloss": "God says, 'So celebrate the Name of your Lord, the All-supreme'; I asked God by His greatest Name, and He returned the sun to me."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T04:06:33Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T04:30:50Z",
+      "assembled_at": "2026-10-06T04:48:05Z"
+    }
+  },
+  "3": {
+    "id": "56:3",
+    "surah": 56,
+    "index": 3,
+    "range": [
+      75,
+      96
+    ],
+    "title": {
+      "en": "The Quran and the dying soul",
+      "ur": "قرآن اور جان کنی"
+    },
+    "essay": {
+      "en": "These closing verses open with a solemn oath by the places where the stars set, an oath the verse itself calls mighty, if only its hearers knew. al-Tabrisi reports two readings of what is sworn by: the risings and settings of the stars, or the Quran's descent in separate portions [2]. What the oath affirms comes at once - this is a noble Quran, kept in a guarded Book, touched by none but the pure, sent down from the Lord of all the worlds. al-Tabatabai takes the guarded Book to be the Preserved Tablet, secure from alteration, and holds that the pure include the angels and those God has purified among people, refusing to limit them to angels alone [1]. al-Tusi reads the same Book as kept safe from tampering [4].\n\nThe tone then sharpens: do you take this discourse lightly, and make your very response to it a denial? A reading attributed to Ali gives the word as 'your thanksgiving,' so that they turn thanks for God's gift into a denial of it [2].\n\nThe passage then carries the hearer to a deathbed. When the dying soul reaches the throat and those present look on helplessly, God is nearer to the man than they are, through His unseen angels who draw out the soul [1][5]. Were you truly subject to no reckoning, al-Tabatabai notes, you would restore that soul; and since you cannot, death stands proven as a decree from God [1].\n\nThe surah closes by returning to the three ranks it opened with. One brought near meets ease, abundance and a garden of bliss; one of the People of the Right Hand is met with 'Peace be on you'; one of the impugners gone astray meets boiling water and the blaze of hell. al-Tabrisi reads these as the state of each soul at the very moment of death [3], while al-Tusi sets out the recompense awaiting the brought-near, the Right Hand, and the deniers [5][6]. This, the passage declares, is certain truth, and the Prophet is told to celebrate the supreme Name of his Lord.",
+      "ur": "یہ اختتامی آیات ستاروں کے غروب ہونے کے مقامات کی عظیم قسم سے آغاز ہوتی ہیں، وہ قسم جسے خود آیت نے عظیم کہا ہے، کاش سننے والے جانتے۔ شیخ طبرسی نے قسم کے موضوع کے بارے میں دو قراءتیں نقل کی ہیں: ستاروں کے طلوع و غروب کی قسم، یا قرآن کے الگ الگ حصوں میں نازل ہونے کی قسم [2]۔ جو بات قسم ثابت کرتی ہے وہ فوری بیان ہوتی ہے: یہ قرآن کریم ہے، کتاب مکنون میں محفوظ، جسے مطہّرین کے سوا کوئی نہیں چھو سکتا، رب العالمین کی طرف سے نازل کیا گیا۔ علامہ طباطبائی نے کتاب مکنون کو لوح محفوظ قرار دیا ہے جو تحریف سے محفوظ ہے، اور 'مطہّرون' میں فرشتوں کے ساتھ ان لوگوں کو بھی شامل کیا ہے جنہیں اللہ نے پاک کیا، انہیں صرف فرشتوں تک محدود کرنے سے انکار کیا [1]۔ شیخ طوسی نے بھی اسی کتاب کو تحریف سے محفوظ قرار دیا ہے [4]۔\n\nپھر لہجہ تیز ہو جاتا ہے: کیا تم اس بیان کو ہلکا لیتے ہو اور اپنا جواب تکذیب کی شکل میں دیتے ہو؟ امیر المومنین علی علیہ السلام سے منسوب قراءت میں یہ لفظ 'شکر' ہے، یعنی وہ اللہ کی نعمت کے شکر کو انکار میں بدل دیتے ہیں [2]۔\n\nپھر یہ اقتباس سننے والے کو بستر مرگ تک لے جاتا ہے۔ جب مرنے والے کی روح حلق تک پہنچ جاتی ہے اور پاس کھڑے لوگ بے بس نظروں سے دیکھتے رہتے ہیں تو اللہ اپنے پوشیدہ فرشتوں کے ذریعے، جو روح نکالتے ہیں، اس شخص کے ان سب سے بھی زیادہ قریب ہوتا ہے [1][5]۔ علامہ طباطبائی کا کہنا ہے: اگر واقعی تم کسی محاسبے سے ماورا ہوتے تو اس روح کو لوٹا دیتے؛ چونکہ نہیں لوٹا سکتے، اس لیے موت اللہ کے حکم کا ثبوت ہے [1]۔\n\nسورت اپنے اختتام پر انہی تین درجوں کی طرف لوٹتی ہے جن سے اس نے آغاز کیا تھا۔ مقربین کو روح، ریحان اور جنت نعیم ملتی ہے؛ اصحاب الیمین کو 'سلام علیکم' کہا جاتا ہے؛ اور گمراہ مکذّبین کو کھولتا پانی اور جہنم کی آگ ملتی ہے۔ شیخ طبرسی ان کو موت کے عین لمحے میں ہر روح کی حالت قرار دیتے ہیں [3]، جبکہ شیخ طوسی نے مقربین، اصحاب الیمین اور منکرین کے منتظر بدلے کو بیان کیا ہے [5][6]۔ یہ اقتباس اعلان کرتا ہے کہ یہ یقینی حق ہے، اور نبی اکرم صلی اللہ علیہ وآلہ وسلم کو اپنے رب کے عظیم نام کی تسبیح کرنے کا حکم دیا گیا۔"
+    },
+    "verses": [
+      {
+        "verse": 75,
+        "heading": {
+          "en": "An oath by the stars",
+          "ur": "ستاروں کی قسم"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "كَانَ أَهْلُ الْجَاهِلِيَّةِ يَحْلِفُونَ بِهَا فَقَالَ اللهُ عَزَّ وَجَلَّ فَلا أُقْسِمُ بِمَواقِعِ النُّجُومِ قَالَ عَظُمَ أَمْرُ مَنْ يَحْلِفُ بِهَا",
+            "chain": "Ali ibn Ibrahim, from Harun ibn Muslim, from Masadah ibn Sadaqah, from Abu Abdillah",
+            "text": {
+              "en": "The people of the age of ignorance used to swear by the stars. So God said, 'I swear not by the places where the stars set.' He said: He made grave the matter of anyone who swears by them.",
+              "ur": "زمانہ جاہلیت کے لوگ ستاروں کی قسم کھاتے تھے۔ تو اللہ نے فرمایا: 'میں ستاروں کے غروب ہونے کے مقامات کی قسم نہیں کھاتا۔' آپ علیہ السلام نے فرمایا: اللہ نے ان کی قسم کھانے والے کے معاملے کو عظیم بنا دیا۔"
+            },
+            "source": "s45"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "يعني به اليمين بالبررة من الأئمة (عليهم السلام)، يحلف بها الرجل، يقول: إن ذلك عندي عظيم",
+            "chain": "Ibn Babawayh in al-Faqih, by his isnad, from al-Mufaddal ibn Umar al-Ju'fi, from Abu Abdillah",
+            "text": {
+              "en": "By this is meant swearing by the righteous ones among the Imams. A man swears by them, saying: that, to me, is a mighty thing.",
+              "ur": "اس سے مراد ائمہ علیہم السلام میں سے نیک افراد کی قسم کھانا ہے۔ کوئی آدمی ان کی قسم کھاتا ہے اور کہتا ہے: میرے نزدیک یہ بہت بڑی بات ہے۔"
+            },
+            "source": "s16"
+          }
+        ]
+      },
+      {
+        "verse": 79,
+        "heading": {
+          "en": "Touched only by the pure",
+          "ur": "صرف پاکوں کا لمس"
+        },
+        "note": {
+          "en": "Commentators read the pure as the angels and those God purified among people; many also take the verse to forbid touching the written Quran without ritual purity [1].",
+          "ur": "مفسرین 'مطہّرون' سے مراد فرشتے اور وہ لوگ لیتے ہیں جنہیں اللہ نے پاک کیا ہے؛ بہت سے مفسرین اس آیت سے یہ حکم بھی اخذ کرتے ہیں کہ قرآن کریم کے تحریری نسخے کو طہارت کے بغیر نہ چھوا جائے [1]۔"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Kazim",
+            "addressee": null,
+            "arabic": "المصحف لا تمسّه على غير طهر ولا جنباً ولا تمسّ خيطه ولا تعلّقه انّ الله تعالى يقول لا يمسّه الاّ المطّهّرون",
+            "chain": null,
+            "text": {
+              "en": "The mushaf - do not touch it without ritual purity, nor while in major impurity; do not touch its strap or hang it, for God says, 'no one touches it except the pure ones.'",
+              "ur": "مصحف کو بغیر طہارت کے مت چھونا، اور نہ جنابت کی حالت میں؛ اس کی ڈوری کو بھی مت چھونا اور نہ اسے لٹکاؤ، کیونکہ اللہ فرماتا ہے: 'اسے صرف پاکیزہ لوگ ہی چھوتے ہیں۔'"
+            },
+            "source": "s20"
+          },
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": "al-Mufaddal ibn Umar",
+            "arabic": "هو هذا صاحب كتاب علي؛ الكتاب المكنون الذي قال الله لَا يَمَسُّهُ إِلَّا الْمُطَهَّرُونَ",
+            "chain": "Abd al-Wahid ibn Abd Allah ibn Yunus, from Ahmad ibn Muhammad ibn Rabah, from Ahmad ibn Ali al-Himyari, from al-Hasan ibn Ayyub, from Abd al-Karim ibn Amr al-Khath'ami, from Jamaa al-Sa'igh, from al-Mufaddal ibn Umar, from Abu Abdillah",
+            "text": {
+              "en": "This is the keeper of Ali's book - the guarded Book of which God said, 'no one touches it except the pure ones.'",
+              "ur": "یہ علی علیہ السلام کی کتاب کے نگہبان ہیں - وہی کتاب مکنون جس کے بارے میں اللہ نے فرمایا: 'اسے صرف پاکیزہ لوگ ہی چھوتے ہیں۔'"
+            },
+            "source": "s47"
+          }
+        ]
+      },
+      {
+        "verse": 82,
+        "heading": {
+          "en": "Denial in place of thanks",
+          "ur": "شکر کی جگہ تکذیب"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "قرأ بهم الواقعة وتجعلون شكركم أنكم تكذبون فلما انصرف قال: إني قد عرفت أنه سيقول قائل لِمَ قرأ هكذا قرأتها لأني قد سمعت رسول الله صلى الله عليه وآله يقرأها كذلك، وكانوا إذا أمطروا قالوا أمطرنا بنوء كذا وكذا",
+            "chain": "Muhammad ibn Ahmad ibn Thabit, from al-Hasan ibn Muhammad ibn Samaa and Ahmad ibn al-Hasan al-Qazzaz, from Salih ibn Khalid, from Thabit ibn Shurayh, from Aban ibn Taghlib, from Abd al-A'la, from Abu Abd al-Rahman al-Sulami",
+            "text": {
+              "en": "Ali led them reciting al-Waqia as 'you make your thanksgiving a denial.' Afterward he said: I knew someone would ask why I recited it so. I recited it thus because I heard the Messenger recite it thus; when rain fell they would say, 'we were given rain by such a star.'",
+              "ur": "علی علیہ السلام نے انہیں سورۂ واقعہ کی قراءت کے ساتھ نماز پڑھائی، جس میں آپ علیہ السلام نے پڑھا: 'تم اپنا شکر تکذیب بنا لیتے ہو۔' نماز کے بعد آپ علیہ السلام نے فرمایا: مجھے معلوم تھا کہ کوئی یہ ضرور پوچھے گا کہ میں نے ایسے کیوں تلاوت کی۔ میں نے اس لیے ایسے تلاوت کی کیونکہ میں نے رسول اللہ صلی اللہ علیہ وآلہ وسلم کو اسی طرح تلاوت کرتے سنا تھا؛ جب بارش ہوتی تو وہ کہتے: 'ہمیں فلاں ستارے کی وجہ سے بارش ملی۔'"
+            },
+            "source": "s7"
+          }
+        ]
+      },
+      {
+        "verse": 83,
+        "heading": {
+          "en": "The soul at the throat",
+          "ur": "حلق تک پہنچی روح"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Sadiq",
+            "addressee": "Abu Basir",
+            "arabic": "إن نفس المحتضر إذا بلغت الحلقوم و كان مؤمنا، رأى منزله في الجنة، فيقول: ردوني إلى الدنيا حتى أخبر أهلها بما أرى، فيقال له: ليس إلى ذلك سبيل",
+            "chain": "al-Husayn ibn Sa'id in Kitab al-Zuhd, from al-Nadr ibn Suwayd, from Yahya al-Halabi, from Sulayman ibn Dawud, from Abu Basir",
+            "text": {
+              "en": "When the dying person's soul reaches the throat and he is a believer, he sees his place in Paradise and says, 'Return me to the world so I may tell its people what I see.' He is told: 'There is no way to that.'",
+              "ur": "جب محتضر کی روح حلق تک پہنچ جاتی ہے اور وہ مومن ہوتا ہے تو وہ جنت میں اپنا مقام دیکھتا ہے اور کہتا ہے: 'مجھے دنیا میں واپس کر دو تاکہ میں یہاں کے لوگوں کو وہ بتاؤں جو میں دیکھ رہا ہوں۔' اسے کہا جاتا ہے: 'اس کا کوئی راستہ نہیں۔'"
+            },
+            "source": "s18"
+          }
+        ]
+      },
+      {
+        "verse": 88,
+        "heading": {
+          "en": "The three at death",
+          "ur": "موت پر تین فریق"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "فأما إن كان من المقربين فروح وريحان … قال: في قبره وجنة نعيم قال: في الآخرة",
+            "chain": "Ahmad ibn Idris, from Ahmad ibn Muhammad, from Muhammad ibn Abi Umayr, from Ishaq ibn Abd al-Aziz, from Abu Basir, from Abu Abdillah",
+            "text": {
+              "en": "'Then, if he be of those brought near, then ease, abundance' - he said: this is in his grave; 'and a garden of bliss' - he said: this is in the hereafter.",
+              "ur": "'پھر اگر وہ مقربین میں سے ہو تو روح اور ریحان' - آپ علیہ السلام نے فرمایا: یہ اس کی قبر میں ہے؛ 'اور جنت نعیم' - آپ علیہ السلام نے فرمایا: یہ آخرت میں ہے۔"
+            },
+            "source": "s12"
+          },
+          {
+            "id": "n8",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "نزلت هاتان الآيتان في أهل ولايتنا وأهل عداوتنا",
+            "chain": "al-Hasan ibn Ali ibn Shu'ayb al-Jawhari, from Isa ibn Muhammad al-Alawi, from al-Husayn ibn al-Hasan al-Hayri, from al-Hasan ibn al-Husayn al-Urani, from Amr ibn Jami, from Amr ibn Abi al-Miqdam",
+            "text": {
+              "en": "These two verses were revealed concerning the people of our wilaya and the people of enmity to us.",
+              "ur": "یہ دونوں آیات ہماری ولایت قبول کرنے والوں اور ہم سے دشمنی رکھنے والوں کے بارے میں نازل ہوئیں۔"
+            },
+            "source": "s51"
+          },
+          {
+            "id": "n9",
+            "speaker": "Imam al-Baqir",
+            "addressee": "Muhammad ibn Hamran",
+            "arabic": "فأما إن كان من المقربين قال ذلك من كانت له منزلة عند الإمام … وأما إن كان من أصحاب اليمين قال ذلك من وصف بهذا الأمر … وأما إن كان من المكذبين الضالين قال الجاحدين للإمام",
+            "chain": "al-Husayn ibn Ahmad, from Muhammad ibn Isa, from Yunus, from Muhammad ibn Fudayl, from Muhammad ibn Hamran, from Abu Ja'far",
+            "text": {
+              "en": "Asked about 'those brought near,' he said: that is one who has a station before the Imam. Asked about 'the People of the Right Hand,' he said: that is one marked by this cause. Asked about 'the impugners, the astray ones,' he said: the deniers of the Imam.",
+              "ur": "جب 'مقربین' کے بارے میں پوچھا گیا تو آپ علیہ السلام نے فرمایا: یہ وہ ہے جس کا امام کے پاس مقام ہو۔ 'اصحاب الیمین' کے بارے میں پوچھا گیا تو فرمایا: یہ وہ ہے جو اس امر سے پہچانا جائے۔ 'مکذّبین ضالّین' کے بارے میں پوچھا گیا تو فرمایا: امام کے منکرین۔"
+            },
+            "source": "s19"
+          }
+        ]
+      },
+      {
+        "verse": 91,
+        "heading": {
+          "en": "Peace from the Right Hand",
+          "ur": "اصحاب الیمین کو سلام"
+        },
+        "narrations": [
+          {
+            "id": "n10",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "قَالَ رَسُولُ اللَّهِ (صلى الله عليه وآله) لِعَلِيٍّ (عليه السلام) هُمْ شِيعَتُكَ فَسَلِمَ وُلْدُكَ مِنْهُمْ أَنْ يَقْتُلُوهُمْ",
+            "chain": "al-Husayn ibn Muhammad, from Muhammad ibn Ahmad al-Nahdi, from Muawiya ibn Hukaym, from one of his men, from Anbasa ibn Bijad, from Abu Abdillah",
+            "text": {
+              "en": "The Messenger of God said to Ali: 'They are your shia; your children are kept safe from being killed by them.'",
+              "ur": "رسول اللہ صلی اللہ علیہ وآلہ وسلم نے علی علیہ السلام سے فرمایا: 'یہ تمہارے شیعہ ہیں؛ تمہاری اولاد ان کے ہاتھوں قتل ہونے سے محفوظ رہے گی۔'"
+            },
+            "source": "s54"
+          }
+        ]
+      },
+      {
+        "verse": 96,
+        "heading": {
+          "en": "Celebrate your Lord's Name",
+          "ur": "اپنے رب کے نام کی تسبیح کرو"
+        },
+        "narrations": [
+          {
+            "id": "n11",
+            "speaker": "Prophet Muhammad",
+            "addressee": "his companions",
+            "arabic": "لَمَّا نَزَلَتْ« فَسَبِّحْ بِاسْمِ رَبِّكَ اَلْعَظِيمِ» قَالَ لَنَا رَسُولُ اَللَّهِ صَلَّى اَللَّهُ عَلَيْهِ وَ آلِهِ« اِجْعَلُوهَا فِي رُكُوعِكُمْ»",
+            "chain": "from Yusuf ibn al-Harith, from Abd Allah ibn Yazid al-Minqari, from Musa ibn Ayyub al-Ghafiqi, from his uncle Iyas ibn Amir al-Ghafiqi, from Uqba ibn Amir al-Juhani",
+            "text": {
+              "en": "When 'So celebrate the Name of your Lord, the All-supreme' came down, the Messenger of God said to us: 'Place it in your bowing.'",
+              "ur": "جب 'پس اپنے رب اعلیٰ کے نام کی تسبیح کر' نازل ہوئی تو رسول اللہ صلی اللہ علیہ وآلہ وسلم نے ہم سے فرمایا: 'اسے اپنے رکوع میں رکھو۔'"
+            },
+            "source": "s59"
+          },
+          {
+            "id": "n12",
+            "speaker": "Imam Ali",
+            "addressee": "Juwayriya ibn Mushir",
+            "arabic": "يَا جُوَيْرِيَةَ بْنَ مُسْهِرٍ إِنَّ اَللَّهَ عَزَّ وَ جَلَّ يَقُولُ: «فَسَبِّحْ بِاسْمِ رَبِّكَ اَلْعَظِيمِ» وَ إِنِّي سَأَلْتُ اَللَّهَ عَزَّ وَ جَلَّ بِاسْمِهِ اَلْعَظِيمِ فَرَدَّ عَلَيَّ اَلشَّمْسَ",
+            "chain": "Reported from Juwayriya ibn Mushir",
+            "text": {
+              "en": "O Juwayriya ibn Mushir, God says, 'So celebrate the Name of your Lord, the All-supreme.' I asked God by His Supreme Name, and He returned the sun to me.",
+              "ur": "اے جویریہ بن مسہر، اللہ فرماتا ہے: 'پس اپنے رب اعلیٰ کے نام کی تسبیح کر۔' میں نے اللہ سے اس کے عظیم نام کے وسیلے سے دعا کی تو اس نے میرے لیے سورج کو لوٹا دیا۔"
+            },
+            "source": "s58"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On 'no one touches it except the pure ones,' the commentaries differ over who the pure are. al-Tabatabai, reading the Book as the Preserved Tablet, holds the pure to be the angels together with those God has cleansed among people, and points to the verse of purification for the Household of the Prophet [1]. al-Tabari and Ibn Kathir take them chiefly as the angels, some adding the prophets and messengers purified from sin [22][27]; Ibn Kathir further draws from the verse the ruling that the written Quran is not touched without purity [27].",
+      "ur": "'اسے صرف پاکیزہ لوگ ہی چھوتے ہیں' کی تفسیر میں مفسرین کے درمیان اختلاف ہے کہ پاکیزہ لوگوں سے کون مراد ہیں۔ علامہ طباطبائی، جو اس کتاب کو لوح محفوظ قرار دیتے ہیں، مطہّرون سے مراد فرشتے اور وہ لوگ لیتے ہیں جنہیں اللہ نے پاک کیا، اور وہ نبی اکرم صلی اللہ علیہ وآلہ وسلم کے اہل بیت کے بارے میں نازل ہونے والی آیت تطہیر کی طرف اشارہ کرتے ہیں [1]۔ طبری اور ابن کثیر انہیں بنیادی طور پر فرشتے قرار دیتے ہیں، بعض نے گناہ سے پاک کردہ انبیاء اور رسولوں کو بھی شامل کیا ہے [22][27]؛ ابن کثیر نے مزید اس آیت سے یہ حکم بھی اخذ کیا ہے کہ قرآن کریم کے تحریری نسخے کو طہارت کے بغیر نہیں چھونا چاہیے [27]۔"
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Waaqia 75 to 96",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=56&tAyahNo=75&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فالمطهرون هم الذين أكرمهم الله تعالى بتطهير نفوسهم كالملائكة الكرام والذين طهّرهم الله من البشر"
+        },
+        "gloss": "The purified are those whose souls God has honored with purification, such as the noble angels and those human beings whom God has purified."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 75 to 87",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=56&tAyahNo=75&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فقيل هي مطالع النجوم ومساقطها عن مجاهد وقتادة"
+        },
+        "gloss": "It was said these are the risings and settings of the stars, from Mujahid and Qatada."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 88 to 96",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=56&tAyahNo=88&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ثم ذكر سبحانه صفات الخلق عند الموت فقال: { فأما إن كان من المقربين }"
+        },
+        "gloss": "Then God mentioned the states of people at death, saying, 'Then, if he be of those brought near.'"
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 75 to 80",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=56&tAyahNo=75&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقوله { في كتاب مكنون } قيل: هو اللوح المحفوظ أثبت الله تعالى فيه القرآن والمكنون المصون"
+        },
+        "gloss": "His words 'in a guarded Book': it is said this is the Preserved Tablet, in which God has fixed the Quran; and 'guarded' means protected."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 81 to 91",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=56&tAyahNo=81&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقيل معناه: ولكن لا تبصرون الملائكة التي تتولى قبض روحه"
+        },
+        "gloss": "And it is said the meaning is: but you do not see the angels who undertake the taking of his soul."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 92 to 96",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=56&tAyahNo=92&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقوله { إن هذا لهو حق اليقين } أي هذا الذي اخبرتك به هو الحق الذي لا شك فيه"
+        },
+        "gloss": "His words 'Indeed this is certain truth': that is, what I have told you is the truth in which there is no doubt."
+      },
+      {
+        "id": "s7",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 75",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=56&tAyahNo=75&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أن علياً عليه السلام قرأ بهم الواقعة"
+        },
+        "gloss": "that Ali led them in reciting al-Waqia."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 88 to 89",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=56&tAyahNo=88&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ فأما إن كان من المقربين فروح وريحان } [88-89] قال: في قبره وجنة نعيم قال: في الآخرة"
+        },
+        "gloss": "'Then, if he be of those brought near, then ease, abundance' - he said: in his grave; 'and a garden of bliss' - he said: in the hereafter."
+      },
+      {
+        "id": "s16",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 75 to 76",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=56&tAyahNo=75&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يعني به اليمين بالبررة من الأئمة (عليهم السلام)، يحلف بها الرجل، يقول: إن ذلك عندي عظيم"
+        },
+        "gloss": "By it is meant the oath by the righteous ones among the Imams, by which a man swears, saying: that, in my eyes, is a mighty thing."
+      },
+      {
+        "id": "s18",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 82 to 87",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=56&tAyahNo=82&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إن نفس المحتضر إذا بلغت الحلقوم و كان مؤمنا، رأى منزله في الجنة، فيقول: ردوني إلى الدنيا حتى أخبر أهلها بما أرى، فيقال له: ليس إلى ذلك سبيل"
+        },
+        "gloss": "When the dying person's soul reaches the throat and he is a believer, he sees his place in Paradise and says, 'Return me to the world so I may tell its people what I see.' He is told: 'There is no way to that.'"
+      },
+      {
+        "id": "s19",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 88 to 96",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=56&tAyahNo=88&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وأما إن كان من المكذبين الضالين قال الجاحدين للإمام"
+        },
+        "gloss": "'But if he be of the impugners, the astray ones' - he said: the deniers of the Imam."
+      },
+      {
+        "id": "s20",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Waaqia 75 to 82",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=56&tAyahNo=75&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "المصحف لا تمسّه على غير طهر ولا جنباً ولا تمسّ خيطه ولا تعلّقه"
+        },
+        "gloss": "The mushaf: do not touch it without ritual purity, nor while in major impurity, and do not touch its strap or hang it."
+      },
+      {
+        "id": "s22",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Waaqia 75 to 80",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=56&tAyahNo=75&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فالملائكة من المطهرين، والرسل والأنبياء من المطهرين وكل من كان مطهراً من الذنوب"
+        },
+        "gloss": "The angels are among the purified, and the messengers and prophets are among the purified, and everyone purified from sins."
+      },
+      {
+        "id": "s27",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Waaqia 75 to 82",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=56&tAyahNo=75&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يعني الملائكة، وكذا قال أنس ومجاهد وعكرمة وسعيد بن جبير والضحاك"
+        },
+        "gloss": "It means the angels; so said Anas, Mujahid, Ikrima, Sa'id ibn Jubayr, and al-Dahhak."
+      },
+      {
+        "id": "s45",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 7, hadith 4, cited at Al-Waaqia 75",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "ضعيف على المشهور"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "كَانَ أَهْلُ الْجَاهِلِيَّةِ يَحْلِفُونَ بِهَا فَقَالَ اللهُ عَزَّ وَجَلَّ فَلا أُقْسِمُ بِمَواقِعِ النُّجُومِ قَالَ عَظُمَ أَمْرُ مَنْ يَحْلِفُ بِهَا"
+        },
+        "gloss": "The people of the age of ignorance used to swear by them, so God said, 'I swear not by the places where the stars set.' He said: the matter of whoever swears by them was made grave."
+      },
+      {
+        "id": "s47",
+        "kind": "hadith",
+        "work": "Kitab al-Ghayba",
+        "author": "abu abd allah muhammad b. ibrahim al-numani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 4, cited at Al-Waaqia 79",
+        "url": "https://thaqalayn.com/book/8",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "هو هذا صاحب كتاب علي؛ الكتاب المكنون الذي قال الله لَا يَمَسُّهُ إِلَّا الْمُطَهَّرُونَ"
+        },
+        "gloss": "This is the keeper of Ali's book - the guarded Book of which God said, 'no one touches it except the pure ones.'"
+      },
+      {
+        "id": "s51",
+        "kind": "hadith",
+        "work": "Al-Amali",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 11, cited at Al-Waaqia 88",
+        "url": "https://thaqalayn.com/book/15",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "نزلت هاتان الآيتان في أهل ولايتنا وأهل عداوتنا"
+        },
+        "gloss": "These two verses were revealed concerning the people of our wilaya and the people of enmity to us."
+      },
+      {
+        "id": "s54",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 8, hadith 1, cited at Al-Waaqia 91",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "مرسل بل ضعيف",
+          "لم يخرجه"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "قَالَ رَسُولُ اللَّهِ (صلى الله عليه وآله) لِعَلِيٍّ (عليه السلام) هُمْ شِيعَتُكَ فَسَلِمَ وُلْدُكَ مِنْهُمْ أَنْ يَقْتُلُوهُمْ"
+        },
+        "gloss": "The Messenger of God said to Ali: they are your shia; your children are kept safe from being killed by them."
+      },
+      {
+        "id": "s58",
+        "kind": "hadith",
+        "work": "Man La Yahduruh al-Faqih",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 611, cited at Al-Waaqia 96",
+        "url": "https://thaqalayn.com/book/20",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "يَا جُوَيْرِيَةَ بْنَ مُسْهِرٍ إِنَّ اَللَّهَ عَزَّ وَ جَلَّ يَقُولُ: «فَسَبِّحْ بِاسْمِ رَبِّكَ اَلْعَظِيمِ» وَ إِنِّي سَأَلْتُ اَللَّهَ عَزَّ وَ جَلَّ بِاسْمِهِ اَلْعَظِيمِ فَرَدَّ عَلَيَّ اَلشَّمْسَ"
+        },
+        "gloss": "O Juwayriya ibn Mushir, God says, 'So celebrate the Name of your Lord, the All-supreme'; and I asked God by His Supreme Name, and He returned the sun to me."
+      },
+      {
+        "id": "s59",
+        "kind": "hadith",
+        "work": "Tahdhib al-Ahkam",
+        "author": "shaykh muhammad b. al-hasan al-tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 2, hadith 129, cited at Al-Waaqia 96",
+        "url": "https://thaqalayn.com/book/23",
+        "grades": [
+          "ضعيف"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "لَمَّا نَزَلَتْ« فَسَبِّحْ بِاسْمِ رَبِّكَ اَلْعَظِيمِ» قَالَ لَنَا رَسُولُ اَللَّهِ صَلَّى اَللَّهُ عَلَيْهِ وَ آلِهِ« اِجْعَلُوهَا فِي رُكُوعِكُمْ»"
+        },
+        "gloss": "When 'So celebrate the Name of your Lord, the All-supreme' came down, the Messenger of God said to us: 'Place it in your bowing.'"
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T04:04:07Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-10-06T04:47:43Z",
+      "assembled_at": "2026-10-06T04:48:05Z"
+    }
+  }
+}

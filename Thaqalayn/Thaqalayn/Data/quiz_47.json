@@ -1,0 +1,646 @@
+{
+  "1": {
+    "id": "47:1",
+    "surah": 47,
+    "index": 1,
+    "range": [
+      1,
+      11
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 1,
+        "prompt": {
+          "en": "According to the essay, the whole surah is built as a single comparison of the two groups, measured by their character, their conduct here, and their final destiny."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay opens by saying al-Mizan treats the entire surah as one comparison, weighing the two parties by their traits, their deeds in this world, and their ends in the next."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "al-Mizan reads the whole surah as this comparison, weighing the two parties by their traits, their deeds in this world, and their ends in the next"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 2,
+        "prompt": {
+          "en": "In the note on verse 2, how do the traditions gloss the belief of those named as the believers?"
+        },
+        "options": [
+          {
+            "en": "As accepting what was revealed about the rules of battle"
+          },
+          {
+            "en": "As taking ransom from captives after victory"
+          },
+          {
+            "en": "As holding firm to Ali's guardianship"
+          },
+          {
+            "en": "As fearing the fate of earlier deniers"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The note names Abu Dharr, Salman, Ammar and Miqdad, who did not break the covenant, as the believers meant, and glosses their belief as holding firm to Ali's guardianship."
+        },
+        "anchor": {
+          "where": "verses.2.note",
+          "quote": "The traditions name Abu Dharr, Salman, Ammar and Miqdad, who did not break the covenant, as the believers meant, and gloss their belief as holding firm to Ali's guardianship"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 4,
+        "prompt": {
+          "en": "\"God sent Muhammad with five swords: three are drawn, never sheathed until the war lays down its burdens.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Sadiq taught that God sent Muhammad with five swords, three of them drawn and never sheathed until the war lays down its burdens."
+        },
+        "anchor": {
+          "where": "verses.4.narrations.n4",
+          "quote": "God sent Muhammad with five swords: three are drawn, never sheathed until the war lays down its burdens"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 7,
+        "prompt": {
+          "en": "Jihad is a door God opened for the special among His ____, a dignity and mercy He stored for them."
+        },
+        "options": [
+          {
+            "en": "servants"
+          },
+          {
+            "en": "angels"
+          },
+          {
+            "en": "creatures"
+          },
+          {
+            "en": "friends"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam Ali calls jihad a door God opened for the special among His friends, a dignity and mercy stored for them, so the missing word is friends."
+        },
+        "anchor": {
+          "where": "verses.7.narrations.n6",
+          "quote": "Jihad is a door God opened for the special among His friends, a dignity and mercy He stored for them"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 4,
+        "prompt": {
+          "en": "According to al-Mizan, why is verse 4's command to take captives not in conflict with 8:67?"
+        },
+        "options": [
+          {
+            "en": "Because 8:67 addressed only the Prophet, not later believers"
+          },
+          {
+            "en": "8:67 forbids captives before victory, verse 4 commands them after"
+          },
+          {
+            "en": "Because verse 4 applies only to Mecca's pagans"
+          },
+          {
+            "en": "Because 8:67 concerns spoils, verse 4 concerns prisoners"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "al-Mizan sees no abrogation because 8:67 forbids taking captives before the enemy is subdued while verse 4 commands taking them afterwards, so the two verses address different moments."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "al-Mizan holds there is no conflict with 8:67, since that verse forbids captives before the enemy is subdued and this one commands them after"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-04T18:13:31Z",
+      "review_attempts": 2,
+      "reviewed_at": "2026-10-04T18:14:06Z",
+      "assembled_at": "2026-10-04T18:24:39Z"
+    }
+  },
+  "2": {
+    "id": "47:2",
+    "surah": 47,
+    "index": 2,
+    "range": [
+      12,
+      19
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 12,
+        "prompt": {
+          "en": "According to the essay, what runs through all eight verses of this passage?"
+        },
+        "options": [
+          {
+            "en": "A sustained comparison between the faithful and the faithless"
+          },
+          {
+            "en": "A history of the towns God destroyed"
+          },
+          {
+            "en": "A list of the four rivers of paradise"
+          },
+          {
+            "en": "A warning aimed only at the hypocrites"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Tabatabai reads the whole run as one sustained comparison: God's guardianship brings the believers into the Garden while the disbelievers are left to the Fire."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads the whole run as one sustained comparison, in which Allah's guardianship brings the believers into the Garden while the disbelievers, left to themselves, remain in the Fire"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 15,
+        "prompt": {
+          "en": "\"Water is the master of drink in this world and the next. Four rivers in this world are from paradise.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Ali"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Ali names water as the master of drink and identifies four earthly rivers, the Euphrates, Nile, Sayhan and Jayhan, as coming from paradise."
+        },
+        "anchor": {
+          "where": "verses.15.narrations.n1",
+          "quote": "Water is the master of drink in this world and the next. Four rivers in this world are from paradise: the Euphrates, the Nile, Sayhan, and Jayhan"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 17,
+        "prompt": {
+          "en": "Ali ibn Ibrahim reads this increase of guidance as a ____ of those who claim that faith neither increases nor decreases."
+        },
+        "options": [
+          {
+            "en": "confirmation"
+          },
+          {
+            "en": "summary"
+          },
+          {
+            "en": "refutation"
+          },
+          {
+            "en": "reminder"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The note has Ali ibn Ibrahim read the increase of guidance as a refutation of those who claim that faith neither increases nor decreases."
+        },
+        "anchor": {
+          "where": "verses.17.note",
+          "quote": "Ali ibn Ibrahim reads this increase of guidance as a refutation of those who claim that faith neither increases nor decreases"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 18,
+        "prompt": {
+          "en": "According to the essay, why does Tusi say no admonition will avail once the Hour arrives?"
+        },
+        "options": [
+          {
+            "en": "Because the portents have not yet come"
+          },
+          {
+            "en": "Because the believers are already in the Garden"
+          },
+          {
+            "en": "Because the faithless never heard any admonition"
+          },
+          {
+            "en": "Because responsibility has lapsed"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay has Tusi note that once the Hour arrives no admonition avails, because responsibility has lapsed; among its portents he lists the Prophet's advent and the splitting of the moon."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tusi notes that once it arrives no admonition will avail, since responsibility has lapsed"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 19,
+        "prompt": {
+          "en": "In the passage's narration, the Messenger of Allah sought God's forgiveness seventy times a day to make up for his sins."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The narration says the Messenger turned to God in repentance seventy times a day though he had no sin, so it was not to atone for sins."
+        },
+        "anchor": {
+          "where": "verses.19.narrations.n7",
+          "quote": "The Messenger of Allah would turn to Allah in repentance seventy times every day, though he had no sin"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-04T18:19:03Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-04T18:19:59Z",
+      "assembled_at": "2026-10-04T18:24:39Z"
+    }
+  },
+  "3": {
+    "id": "47:3",
+    "surah": 47,
+    "index": 3,
+    "range": [
+      20,
+      28
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 20,
+        "prompt": {
+          "en": "Al-Qummi, by contrast, glosses those with the sickness here as the ____."
+        },
+        "options": [
+          {
+            "en": "hypocrites"
+          },
+          {
+            "en": "idol-worshippers"
+          },
+          {
+            "en": "Jews of Medina"
+          },
+          {
+            "en": "new converts"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The note sets Al-Qummi against the essay's reading, saying he glosses those with the sickness in their hearts here as the hypocrites rather than as weak believers."
+        },
+        "anchor": {
+          "where": "verses.20.note",
+          "quote": "Al-Qummi, by contrast, glosses those with the sickness here as the hypocrites"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 22,
+        "prompt": {
+          "en": "According to the essay, besides being handed rule and corrupting the land, what is Al-Tusi's other reading of the turning?"
+        },
+        "options": [
+          {
+            "en": "that they demand that a new surah be sent"
+          },
+          {
+            "en": "that they abandon the Book and revert to the ways of ignorance"
+          },
+          {
+            "en": "that they flee from the battlefield in fear"
+          },
+          {
+            "en": "that they withhold the spoils of war"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay gives Al-Tusi two readings of the turning: being handed rule and corrupting the land, or abandoning the Book and reverting to the ways of ignorance."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Al-Tusi gives two readings of the turning: that they are handed rule and corrupt the land, or that they abandon the Book and revert to the ways of ignorance"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 22,
+        "prompt": {
+          "en": "'Beware the company of one who severs his kinship, for I have found him cursed in the Book of Allah in three places.' Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali ibn al-Husayn"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam Ali ibn al-Husayn gave this counsel to his son, warning against keeping company with one who severs kinship, whom he found cursed in the Book of Allah in three places."
+        },
+        "anchor": {
+          "where": "verses.22.narrations.n2",
+          "quote": "Beware the company of one who severs his kinship, for I have found him cursed in the Book of Allah in three places"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 24,
+        "prompt": {
+          "en": "Imam al-Sadiq teaches that Allah opens a servant's heart to hearing when He wishes to guide him."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration from Imam al-Sadiq says that when Allah wishes to guide a servant He opens the hearing of his heart, and when He wishes otherwise He seals it."
+        },
+        "anchor": {
+          "where": "verses.24.narrations.n3",
+          "quote": "When Allah wishes to guide a servant, He opens the hearing of his heart"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 28,
+        "prompt": {
+          "en": "According to the essay's close, why does the passage say Allah made their works fail?"
+        },
+        "options": [
+          {
+            "en": "because they longed for a new surah"
+          },
+          {
+            "en": "because they refused to fight the idolaters"
+          },
+          {
+            "en": "because they pursued what angered Allah and spurned His pleasure"
+          },
+          {
+            "en": "because they severed the ties of kinship"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay closes the descent by saying their works were undone because they pursued what angered Allah and spurned His pleasure, not for the other reasons listed."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "with their works undone, because they pursued what angered Allah and spurned His pleasure"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-04T18:12:49Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-04T18:14:12Z",
+      "assembled_at": "2026-10-04T18:24:39Z"
+    }
+  },
+  "4": {
+    "id": "47:4",
+    "surah": 47,
+    "index": 4,
+    "range": [
+      29,
+      38
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 29,
+        "prompt": {
+          "en": "According to the essay, what does the passage's opening question ask about the hypocrites?"
+        },
+        "options": [
+          {
+            "en": "Whether they imagine God will never bring out their hidden rancor"
+          },
+          {
+            "en": "Whether they will repent before death overtakes them"
+          },
+          {
+            "en": "Whether they fought hardest in the test of jihad"
+          },
+          {
+            "en": "Whether they spent their wealth in God's way"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reads the opening question as asking whether these hypocrites imagine God will never bring out their hidden rancor against the religion and its people."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "asking whether these hypocrites imagine that God will never bring out their hidden rancor against the religion and its people"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "trueFalse",
+        "verse": 31,
+        "prompt": {
+          "en": "According to the narration, the verses about God testing the believers do not come with the meaning of examination."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The narration from Imam al-Hadi says all such verses about testing come in the Quran with the meaning of examination, so this reverses the point."
+        },
+        "anchor": {
+          "where": "verses.31.narrations.n4",
+          "quote": "all of them come in the Quran with the meaning of examination"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 32,
+        "prompt": {
+          "en": "According to the perspectives, what do the Shia reports tie 'barring from the way of Allah' and 'defying the Apostle' in verse 32 to?"
+        },
+        "options": [
+          {
+            "en": "The hypocrites' hoarding of their wealth"
+          },
+          {
+            "en": "Their flight from the test of jihad"
+          },
+          {
+            "en": "The matter of Ali's succession"
+          },
+          {
+            "en": "Their sickness that hides spite"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The perspectives say the Shia reports read verse 32's barring from God's way and defying the Apostle as about the matter of Ali's succession."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Shia reports tie 'barring from the way of Allah' and 'defying the Apostle' to the matter of Ali's succession"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 33,
+        "prompt": {
+          "en": "\"Whoever says 'Glory to God,' God plants him a tree in the Garden ... but beware of sending fire over them and burning them.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "Prophet Muhammad"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "This is the Prophet's saying that glorifying God plants a tree in the Garden, then cautioning against sending fire over those deeds and burning them, tied to the verse on not voiding works."
+        },
+        "anchor": {
+          "where": "verses.33.narrations.n7",
+          "quote": "Whoever says 'Glory to God,' God plants him a tree in the Garden ... but beware of sending fire over them and burning them"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "fillGap",
+        "verse": 38,
+        "prompt": {
+          "en": "The surah ends with a ____: turn away, and God will replace them with a people who will not be like them."
+        },
+        "options": [
+          {
+            "en": "promise"
+          },
+          {
+            "en": "warning"
+          },
+          {
+            "en": "blessing"
+          },
+          {
+            "en": "reward"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay closes the surah on a warning: if they turn away, God will replace them with a people who will not be like them."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The surah ends with a warning: turn away, and God will replace them with a people who will not be like them"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-04T18:22:52Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-04T18:24:18Z",
+      "assembled_at": "2026-10-04T18:24:39Z"
+    }
+  }
+}

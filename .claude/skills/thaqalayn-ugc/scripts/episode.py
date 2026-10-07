@@ -10,11 +10,15 @@
                                            regenerate only those voiceover sentences (one short take) or the hook take, then re-assemble
   episode.py assemble --hook H4            rebuild the demo and the final from the parts on disk (free)
 
+Demo sound (pack `vo_engine`): seedance (default; a 480p voiceover take in his voice over silent screens), elevenlabs
+(his cloned voice, unused), or app (no voiceover at all: each shot plays its own recorded sound, the app's narration and
+recitation, captioned from a Scribe transcript of the English words; only the hook take is generated).
+
 Episode folder: ~/ugc/thaqalayn/episodes/<HOOK>/ with pack.json, shots/, hook/, vo/, demo/, <HOOK>_final.mp4, report.md.
 Fixed inputs: assets/character.jpg (@image1), assets/voice_ref.mp3 (@audio1), assets/prompt_template.txt.
 Money is spent only inside `run` and `fix`, and `run` refuses unless `check` passes.
 """
-import argparse, base64, datetime, difflib, json, os, re, shutil, subprocess, sys, tempfile
+import argparse, base64, datetime, difflib, hashlib, json, os, re, shutil, subprocess, sys, tempfile
 sys.path.insert(0, os.path.expanduser("~/.claude/skills/ugc-talking-head-video/scripts"))
 
 HERE = os.path.dirname(os.path.abspath(__file__)); SKILL = os.path.dirname(HERE)
@@ -26,6 +30,8 @@ CHAR, VOICE, TEMPLATE = (os.path.join(ASSETS, n) for n in ("character.jpg", "voi
 ENV = os.path.join(REPO, ".env"); HOOKS_MD = os.path.join(ASSETS, "hooks.md")
 RATE = {"480p": 0.1186, "720p": 0.26683, "1080p": 0.462}   # USD/s, reapi.video-gen.seedance-2-5.unrestricted
 PLACE_IN, TAIL = 0.4, 0.6                                  # sentence starts 0.4 s into its screen; 0.6 s of screen after it ends
+LOUD = "loudnorm=I=-14:TP=-1.5:LRA=11"                     # app-sound episodes: hook and demo levelled to the same loudness
+LATIN = re.compile(r"[A-Za-z0-9'’.,;:!?-]+")                # captionable words; the Arabic recitation stays uncaptioned
 W, H, CROP_Y = 720, 1280, 118                              # 9:16 output; 118 px off the top of a scaled iPhone recording = status bar
 
 
@@ -51,8 +57,18 @@ def today(): return datetime.date.today().isoformat()
 
 
 # ---------- prompt ----------
-def build_prompt(script, pron):
+GARDEN = ("same back garden, same large tree behind him, same white crew-neck T-shirt, same small black lavalier microphone clipped at his collar, same warm low evening sunlight",
+          "quiet garden ambience")
+
+def character(pack):
+    """The @image1 for this episode: the locked garden image unless the pack names another approved scene image."""
+    img = (pack.get("scene") or {}).get("image")
+    return os.path.expanduser(img) if img else CHAR
+
+def build_prompt(script, pron, scene=None):
     t = open(TEMPLATE).read().replace("{script}", script)
+    if scene and scene.get("prompt_setting"):
+        t = t.replace(GARDEN[0], scene["prompt_setting"]).replace(GARDEN[1], scene.get("ambience", "quiet room ambience"))
     lines = [f'The word {w} is pronounced "{how}".' for w, how in pron.items() if re.search(r"\b" + re.escape(w) + r"\b", script, re.I)]
     return re.sub(r'The name Thaqalayn is pronounced "tha-ka-LAYN"\.\n?', ("\n".join(lines) + "\n") if lines else "", t)
 
@@ -62,15 +78,17 @@ def duration_for(words, lo=4, hi=20): return max(lo, min(hi, round(words / 4)))
 
 def plan(a):
     pack = load(a.hook); d = epdir(a.hook); os.makedirs(os.path.join(d, "shots"), exist_ok=True)
-    for k in ("hook_script", "vo_script", "shots", "header_hook", "header_demo", "caption", "hashtags", "pronunciation"):
+    app = vo_engine(pack) == "app"
+    if app: pack["vo_script"] = []
+    for k in ("hook_script", "shots", "header_hook", "header_demo", "caption", "hashtags", "pronunciation") + (() if app else ("vo_script",)):
         if not pack.get(k): die(f"pack.json is missing `{k}`")
     if '"' in pack["hook_script"] or any('"' in s for s in pack["vo_script"]): die("scripts must not contain double quotes (the prompt wraps them in quotes)")
-    if len(pack["vo_script"]) != len(pack["shots"]): die(f"{len(pack['vo_script'])} voiceover sentences but {len(pack['shots'])} shots; one sentence per shot")
+    if not app and len(pack["vo_script"]) != len(pack["shots"]): die(f"{len(pack['vo_script'])} voiceover sentences but {len(pack['shots'])} shots; one sentence per shot")
     hw = len(wordlist(pack["hook_script"])); vw = sum(len(wordlist(s)) for s in pack["vo_script"])
     if hw > 80: die(f"hook script is {hw} words; over 80 one take drifts. Split it.")
-    hd, vd = duration_for(hw, 10, 20), duration_for(vw, 4, 20)
+    hd, vd = duration_for(hw, 10, 20), (0 if app else duration_for(vw, 4, 20))
     eleven = vo_engine(pack) == "elevenlabs"
-    ph, pv = hd * RATE[pack.get("resolution_hook", "720p")], (0.0 if eleven else vd * RATE[pack.get("resolution_vo", "480p")])
+    ph, pv = hd * RATE[pack.get("resolution_hook", "720p")], (0.0 if (eleven or app) else vd * RATE[pack.get("resolution_vo", "480p")])
     pack["computed"] = {"hook_words": hw, "hook_duration_s": hd, "vo_words": vw, "vo_duration_s": vd,
                         "price_hook": round(ph, 2), "price_vo": round(pv, 2), "price_total": round(ph + pv, 2)}
     for k in ("phrases_hook", "phrases_vo"):
@@ -78,14 +96,20 @@ def plan(a):
     save(a.hook, pack)
     print(f"\n=== {a.hook.upper()} - GATE 1: approve this pack ===\n")
     print(f"HOOK ({hw} words, {hd} s at {pack.get('resolution_hook','720p')}, ${ph:.2f}):\n  {pack['hook_script']}\n")
-    print(f"DEMO VOICEOVER ({vw} words, " + (f"ElevenLabs voice {pack.get('voice_id')}, free" if eleven else f"{vd} s at {pack.get('resolution_vo','480p')}, ${pv:.2f}") + "), one sentence per screen:")
-    for i, (s, sh_) in enumerate(zip(pack["vo_script"], pack["shots"]), 1): print(f"  {i}. {s}\n     screen: {sh_['screen']}")
+    if app:
+        print("DEMO SOUND: the app's own audio, recorded with each screen (no voiceover take, $0.00); English words captioned from a Scribe transcript:")
+        for i, sh_ in enumerate(pack["shots"], 1): print(f"  {i}. screen: {sh_['screen']}\n     sound: {sh_.get('sound', '(as recorded)')}")
+    else:
+        print(f"DEMO VOICEOVER ({vw} words, " + (f"ElevenLabs voice {pack.get('voice_id')}, free" if eleven else f"{vd} s at {pack.get('resolution_vo','480p')}, ${pv:.2f}") + "), one sentence per screen:")
+        for i, (s, sh_) in enumerate(zip(pack["vo_script"], pack["shots"]), 1): print(f"  {i}. {s}\n     screen: {sh_['screen']}")
     used = [w for w in pack["pronunciation"] if re.search(r"\b" + re.escape(w) + r"\b", pack["hook_script"] + " " + " ".join(pack["vo_script"]), re.I)]
     print(f"\nPRONUNCIATION HINTS IN USE: {', '.join(used) or 'none'}")
+    if pack.get("scene"): print(f"SCENE: {pack['scene'].get('name', '')} ({character(pack)})")
     print(f"HEADER hook: {pack['header_hook']}   demo: {pack['header_demo']}")
     print(f"CAPTION: {pack['caption']}\nHASHTAGS: {pack['hashtags']}")
     print(f"\nPRICE: ${ph + pv:.2f} total (refunded on failure). Nothing runs until `approve`, then `check` passes.\n")
     print("=== RECORDING BRIEF (what the user records on the phone, before anything is generated) ===")
+    if app: print("SOUND ON: ringer switch off silent, volume up, and the microphone OFF in the screen-recording control, so only the app is heard.")
     print("Screen recording, portrait, Do Not Disturb on, dark theme, reading text size one step up. Hold each screen still for the seconds shown;")
     print("scroll slowly if at all. Either one clip per shot, or one continuous clip with start/end seconds filled in per shot.")
     for i, sh_ in enumerate(pack["shots"], 1): print(f"  shot {i}: {sh_['screen']}  (hold {sh_.get('hold_s', 4)} s) -> {sh_.get('file', 'shots/%02d.mov' % i)}")
@@ -117,7 +141,10 @@ def check(a, quiet=False):
     row("pack computed (plan ran)", bool(pack.get("computed", {}).get("price_total")))
     row("gate 1 approved by the user", bool(pack.get("status", {}).get("approved")), pack.get("status", {}).get("approved_on") or "run `approve` after the user says yes")
     clips, err = shot_clips(a.hook, pack); row("B-roll on disk, one clip or segment per voiceover sentence", clips is not None, err or f"{len(clips)} shots")
-    for p, what in ((CHAR, "character.jpg"), (VOICE, "voice_ref.mp3"), (TEMPLATE, "prompt_template.txt"), (ENV, "project .env"),
+    if vo_engine(pack) == "app" and clips:
+        silent = [os.path.basename(f) for f, _, _ in clips if not sh(["ffprobe", "-v", "error", "-select_streams", "a", "-show_entries", "stream=index", "-of", "csv=p=0", f], check=False).strip()]
+        row("every shot has its recorded sound (app mode)", not silent, ", ".join(sorted(set(silent))) + " has no audio track" if silent else "")
+    for p, what in ((character(pack), "character image"), (VOICE, "voice_ref.mp3"), (TEMPLATE, "prompt_template.txt"), (ENV, "project .env"),
                     (f"{GLOBAL}/seedance_treg.py", "global runner"), (f"{GLOBAL}/caption_burn.py", "global caption script"), (f"{GLOBAL}/gh_host.py", "global hoster")):
         row(what, os.path.isfile(p), p if not os.path.isfile(p) else "")
     for t in ("treg", "gh", "ffmpeg", "ffprobe"): row(f"{t} on PATH", shutil.which(t) is not None)
@@ -264,8 +291,10 @@ def phrases_for(pack_phrases, script, words, amap):
         out[cur].append(w["word"])
     return [" ".join(p) for p in out if p]
 
-def caption(video, header, phrases, words_json, out):
+def caption(video, header, phrases, words_json, out, max_hold=None, caption_y=None):
     cmd = [sys.executable, f"{GLOBAL}/caption_burn.py", "--video", video, "--header", header, "--words", words_json, "--out", out, "--env-file", ENV]
+    if max_hold is not None: cmd += ["--max-hold", str(max_hold)]
+    if caption_y is not None: cmd += ["--caption-y", str(caption_y)]
     if phrases:
         pf = out + ".phrases.txt"; open(pf, "w").write("\n".join(phrases) + "\n"); cmd += ["--phrases", pf]
     r = subprocess.run(cmd, capture_output=True, text=True)
@@ -293,12 +322,89 @@ def vf_for(file):
     w, h = ffdim(file); sh_ = int(round(W * h / w / 2) * 2)
     return f"scale={W}:{sh_},crop={W}:{H}:0:{min(CROP_Y, sh_ - H)}" if sh_ >= H else f"scale={W}:{sh_},pad={W}:{H}:0:(oh-ih)/2:color=black"
 
+GS_CARD_W, GS_CARD_Y, GS_MEHDI_W, GS_MEHDI_Y, GS_CAPTION_Y = 600, 322, 600, 664, 0.638
+
+def greenscreen_hook(hook, pack, take):
+    """Green-screen layout for the hook: the referenced post as a card on a blurred copy of itself, quote and credit on
+    the card, the presenter keyed out of the green take at the bottom; captions go between card and head.
+    With `clip` + `intro` in the pack, the real clip first plays full-screen with its own sound for the intro span (like
+    a Stitch), then keeps playing muted in the card while he talks. Returns (video, intro seconds)."""
+    from PIL import Image, ImageDraw, ImageFilter, ImageFont
+    g = pack["greenscreen"]; d = epdir(hook); out = f"{d}/hook/greenscreen.mp4"
+    clip = os.path.expanduser(g["clip"]) if g.get("clip") else None
+    i0, i1 = (g.get("intro") or [0.0, 0.0]) if clip else (0.0, 0.0); intro = round(i1 - i0, 3)
+    if clip:
+        still_p = f"{d}/hook/clip_still.png"; sh(["ffmpeg", "-v", "error", "-y", "-ss", str(i1), "-i", clip, "-frames:v", "1", still_p])
+        src = Image.open(still_p).convert("RGB")
+        cw, ch = src.width, int(src.width / 1.3); crop = tuple(g.get("card_crop") or (0, (src.height - ch) // 2, cw, (src.height - ch) // 2 + ch))
+    else:
+        src = Image.open(os.path.expanduser(g["background"])).convert("RGB"); crop = tuple(g.get("crop") or (0, 0, src.width, src.height))
+    bg = src.resize((W, int(src.height * W / src.width))).filter(ImageFilter.GaussianBlur(24))
+    canvas = Image.new("RGBA", (W, H), (13, 17, 16, 255))
+    canvas.paste(Image.blend(bg, Image.new("RGB", bg.size, (8, 10, 10)), 0.6).crop((0, 0, W, min(H, bg.height))), (0, 0))
+    card_h = int(round((crop[3] - crop[1]) * GS_CARD_W / (crop[2] - crop[0]) / 2) * 2); cx = (W - GS_CARD_W) // 2
+    sh_ = Image.new("RGBA", (GS_CARD_W + 80, card_h + 80), (0, 0, 0, 0))
+    ImageDraw.Draw(sh_).rounded_rectangle((40, 54, GS_CARD_W + 40, card_h + 54), 24, fill=(0, 0, 0, 170))
+    canvas.alpha_composite(sh_.filter(ImageFilter.GaussianBlur(16)), (cx - 40, GS_CARD_Y - 40))
+    mask = Image.new("L", (GS_CARD_W, card_h), 0); ImageDraw.Draw(mask).rounded_rectangle((0, 0, GS_CARD_W - 1, card_h - 1), 24, fill=255)
+    if not clip:
+        card = src.crop(crop).resize((GS_CARD_W, card_h), Image.LANCZOS).convert("RGBA"); card.putalpha(mask); canvas.alpha_composite(card, (cx, GS_CARD_Y))
+    top = Image.new("RGBA", (W, H), (0, 0, 0, 0)); dr = ImageDraw.Draw(top, "RGBA")
+    fb = ImageFont.truetype("/System/Library/Fonts/HelveticaNeue.ttc", 26, index=1); fs = ImageFont.truetype("/System/Library/Fonts/HelveticaNeue.ttc", 21, index=1)
+    lines = g.get("quote") or []
+    if lines:
+        qh = 22 + 34 * len(lines); qy = GS_CARD_Y + card_h - qh - 14
+        dr.rounded_rectangle((cx + 14, qy, cx + GS_CARD_W - 14, qy + qh), 16, fill=(0, 0, 0, 180))
+        for i, ln in enumerate(lines): dr.text((cx + 32, qy + 11 + 34 * i), ln, font=fb, fill=(255, 255, 255))
+    if g.get("credit"):
+        tw = dr.textlength(g["credit"], font=fs); dr.rounded_rectangle((cx + 14, GS_CARD_Y + 14, cx + 38 + tw, GS_CARD_Y + 48), 14, fill=(0, 0, 0, 160))
+        dr.text((cx + 26, GS_CARD_Y + 19), g["credit"], font=fs, fill=(255, 255, 255))
+    bgp, topp, maskp = f"{d}/hook/greenscreen_bg.png", f"{d}/hook/greenscreen_top.png", f"{d}/hook/greenscreen_mask.png"
+    canvas.convert("RGB").save(bgp); top.save(topp); mask.save(maskp)
+    # key colour sampled from the take's own backdrop (top-left corner of the first frame) unless the pack pins one
+    key = g.get("key_color")
+    if not key:
+        raw = subprocess.run(["ffmpeg", "-v", "error", "-i", take, "-frames:v", "1", "-vf", "crop=40:40:10:10,scale=1:1", "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], capture_output=True).stdout
+        key = "0x%02X%02X%02X" % tuple(raw[:3])
+    sim, blend = g.get("similarity", 0.10), g.get("blend", 0.04)
+    inputs = ["-loop", "1", "-framerate", "30", "-i", bgp, "-i", take, "-loop", "1", "-framerate", "30", "-i", topp]
+    fc = f"[1:v]fps=30,chromakey={key}:{sim}:{blend},despill=type=green:mix=0.5,scale={GS_MEHDI_W}:-2:flags=lanczos[p];"
+    if clip:   # the clip keeps playing, muted, in the card from where the intro stopped
+        inputs += ["-stream_loop", "-1", "-ss", str(i1), "-i", clip, "-loop", "1", "-framerate", "30", "-i", maskp]
+        fc += (f"[3:v]fps=30,crop={crop[2] - crop[0]}:{crop[3] - crop[1]}:{crop[0]}:{crop[1]},scale={GS_CARD_W}:{card_h},format=yuva420p[cv];"
+               f"[4:v]format=gray[cm];[cv][cm]alphamerge[card];[0:v][card]overlay={cx}:{GS_CARD_Y}[b0];")
+    else: fc += "[0:v]null[b0];"
+    fc += f"[b0][2:v]overlay=0:0[b1];[b1][p]overlay=(W-w)/2:{GS_MEHDI_Y}:shortest=1,format=yuv420p[v]"
+    part = f"{d}/hook/greenscreen_part.mp4" if clip else out
+    sh(["ffmpeg", "-v", "error", "-y", *inputs, "-filter_complex", fc, "-map", "[v]", "-map", "1:a", "-c:v", "libx264", "-crf", "18", "-preset", "medium",
+        "-c:a", "aac", "-b:a", "160k", "-ar", "44100", "-ac", "2", part])
+    if clip:
+        sh(["ffmpeg", "-v", "error", "-y", "-ss", str(i0), "-t", str(intro), "-i", clip, "-i", part, "-filter_complex",
+            f"[0:v]fps=30,scale={W}:{H},setsar=1,format=yuv420p[v0];[0:a]aresample=44100,aformat=channel_layouts=stereo,afade=t=out:st={max(0, intro - 0.08):.3f}:d=0.08[a0];"
+            "[1:v]fps=30,setsar=1,format=yuv420p[v1];[1:a]aresample=44100,aformat=channel_layouts=stereo[a1];[v0][a0][v1][a1]concat=n=2:v=1:a=1[v][a]",
+            "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-crf", "18", "-preset", "medium", "-c:a", "aac", "-b:a", "160k", out])
+    log(f"green-screen hook -> {out} (key {key}" + (f", {intro:.2f} s of the clip first)" if clip else ")"))
+    return out, intro
+
+def hook_for_caption(hook, pack, hook_take):
+    """(video, words json) to caption for the hook: the take itself, or its green-screen layout with the words shifted
+    past any intro clip."""
+    if not pack.get("greenscreen"): return hook_take, hook_take + ".words.json"
+    video, intro = greenscreen_hook(hook, pack, hook_take)
+    if not intro: return video, hook_take + ".words.json"
+    data = json.load(open(hook_take + ".words.json"))
+    data["words"] = [{**w, "start": round(w["start"] + intro, 3), "end": round(w["end"] + intro, 3)} for w in data["words"]]
+    wj = f"{epdir(hook)}/hook/greenscreen.words.json"; json.dump(data, open(wj, "w"), indent=1)
+    return video, wj
+
 def assemble(a):
     pack = load(a.hook); d = epdir(a.hook); H_ = a.hook.upper(); os.makedirs(f"{d}/demo", exist_ok=True)
     hook_take = f"{d}/hook/take.mp4"
     if not os.path.isfile(hook_take): die("no hook take on disk; run `run` first")
     clips, err = shot_clips(a.hook, pack)
     if err: die(err)
+    app = vo_engine(pack) == "app"
+    if app: return assemble_app(a, pack, clips, hook_take)
     n = len(clips); sent = []
     for k in range(1, n + 1):
         if not os.path.isfile(f"{d}/vo/s{k}.wav"): die(f"missing vo/s{k}.wav; run `run` or `fix --vo {k}`")
@@ -320,12 +426,44 @@ def assemble(a):
     json.dump({"text": " ".join(w["word"] for w in dwords), "words": dwords}, open(f"{d}/demo/demo.mp4.words.json", "w"), indent=1)
     # captions on both parts
     hw = json.load(open(hook_take + ".words.json"))["words"]; hmap, _ = align(wordlist(pack["hook_script"]), hw)
-    caption(hook_take, pack["header_hook"], phrases_for(pack.get("phrases_hook"), pack["hook_script"], hw, hmap), hook_take + ".words.json", f"{d}/hook/hook_captioned.mp4")
+    hook_src, hook_words = hook_for_caption(a.hook, pack, hook_take)
+    caption(hook_src, pack["header_hook"], phrases_for(pack.get("phrases_hook"), pack["hook_script"], hw, hmap), hook_words, f"{d}/hook/hook_captioned.mp4",
+            caption_y=GS_CAPTION_Y if pack.get("greenscreen") else None)
     vscript = " ".join(pack["vo_script"]); vmap, _ = align(wordlist(vscript), dwords)
     caption(f"{d}/demo/demo.mp4", pack["header_demo"], phrases_for(pack.get("phrases_vo"), vscript, dwords, vmap), f"{d}/demo/demo.mp4.words.json", f"{d}/demo/demo_captioned.mp4")
-    final = f"{d}/{H_}_final.mp4"
-    sh(["ffmpeg", "-v", "error", "-y", "-i", f"{d}/hook/hook_captioned.mp4", "-i", f"{d}/demo/demo_captioned.mp4", "-filter_complex",
-        "[0:v]fps=30,settb=AVTB[v0];[1:v]fps=30,settb=AVTB[v1];[0:a]aresample=44100[a0];[1:a]aresample=44100[a1];[v0][a0][v1][a1]concat=n=2:v=1:a=1[v][a]",
+    return join_final(a.hook, f"{d}/hook/hook_captioned.mp4", f"{d}/demo/demo_captioned.mp4")
+
+def assemble_app(a, pack, clips, hook_take):
+    """Demo from each shot's own recorded sound (the app's narration and recitation), levelled to the hook."""
+    d = epdir(a.hook); n = len(clips); inputs, parts = [], []
+    for k, (f, st, en) in enumerate(clips):
+        inputs += ["-i", f]; ln = en - st
+        parts.append(f"[{k}:v]trim={st:.3f}:{en:.3f},setpts=PTS-STARTPTS,{vf_for(f)},fps=30,setsar=1[v{k}]")
+        parts.append(f"[{k}:a]atrim={st:.3f}:{en:.3f},asetpts=PTS-STARTPTS,aresample=44100,aformat=channel_layouts=stereo,"
+                     f"afade=t=in:d=0.06,afade=t=out:st={max(0, ln - 0.12):.3f}:d=0.12[a{k}]")
+    fc = ";".join(parts) + ";" + "".join(f"[v{k}][a{k}]" for k in range(n)) + f"concat=n={n}:v=1:a=1[v][a0];[a0]{LOUD},aresample=44100[a]"
+    demo = f"{d}/demo/demo.mp4"
+    sh(["ffmpeg", "-v", "error", "-y", *inputs, "-filter_complex", fc, "-map", "[v]", "-map", "[a]", "-c:v", "libx264", "-crf", "18", "-preset", "medium",
+        "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "160k", "-ar", "44100", "-ac", "2", demo])
+    # transcribe once per cut (Scribe, on the ElevenLabs plan); re-trims re-transcribe, header or phrase edits do not
+    sig = hashlib.sha1(json.dumps([(os.path.basename(f), round(st, 3), round(en, 3), os.path.getsize(f)) for f, st, en in clips]).encode()).hexdigest()
+    wj, sigf = demo + ".words.json", f"{d}/demo/words.sig"
+    if not (os.path.isfile(wj) and os.path.isfile(sigf) and open(sigf).read() == sig):
+        analyze(demo); open(sigf, "w").write(sig)
+    words = [w for w in json.load(open(wj))["words"] if LATIN.fullmatch(w["word"])]
+    cj = f"{d}/demo/demo_captions.words.json"; json.dump({"text": " ".join(w["word"] for w in words), "words": words}, open(cj, "w"), indent=1)
+    hw = json.load(open(hook_take + ".words.json"))["words"]; hmap, _ = align(wordlist(pack["hook_script"]), hw)
+    hook_src, hook_words = hook_for_caption(a.hook, pack, hook_take)
+    caption(hook_src, pack["header_hook"], phrases_for(pack.get("phrases_hook"), pack["hook_script"], hw, hmap), hook_words, f"{d}/hook/hook_captioned.mp4",
+            caption_y=GS_CAPTION_Y if pack.get("greenscreen") else None)
+    caption(demo, pack["header_demo"], None, cj, f"{d}/demo/demo_captioned.mp4", max_hold=0.8)
+    return join_final(a.hook, f"{d}/hook/hook_captioned.mp4", f"{d}/demo/demo_captioned.mp4", level_hook=True)
+
+def join_final(hook, hook_part, demo_part, level_hook=False):
+    d = epdir(hook); H_ = hook.upper(); final = f"{d}/{H_}_final.mp4"
+    a0 = f"[0:a]{LOUD},aresample=44100[a0]" if level_hook else "[0:a]aresample=44100[a0]"
+    sh(["ffmpeg", "-v", "error", "-y", "-i", hook_part, "-i", demo_part, "-filter_complex",
+        f"[0:v]fps=30,settb=AVTB[v0];[1:v]fps=30,settb=AVTB[v1];{a0};[1:a]aresample=44100[a1];[v0][a0][v1][a1]concat=n=2:v=1:a=1[v][a]",
         "-map", "[v]", "-map", "[a]", "-r", "30", "-c:v", "libx264", "-profile:v", "high", "-level", "4.1", "-crf", "18", "-preset", "medium", "-pix_fmt", "yuv420p", "-tag:v", "avc1",
         "-c:a", "aac", "-b:a", "160k", "-ar", "44100", "-ac", "2", "-movflags", "+faststart", "-brand", "mp42", final])
     lvl = sh(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=level", "-of", "csv=p=0", final]).strip()
@@ -356,19 +494,20 @@ def run(a):
     pack = load(a.hook); d = epdir(a.hook); H_ = a.hook.upper(); c = pack.get("computed") or {}
     if not check(a, quiet=a.dry_run): die("pre-flight failed; nothing spent")
     os.makedirs(f"{d}/hook", exist_ok=True); os.makedirs(f"{d}/vo", exist_ok=True)
-    open(f"{d}/hook/prompt.txt", "w").write(build_prompt(pack["hook_script"], pack["pronunciation"]))
-    open(f"{d}/vo/prompt.txt", "w").write(build_prompt(" ".join(pack["vo_script"]), pack["pronunciation"]))
+    open(f"{d}/hook/prompt.txt", "w").write(build_prompt(pack["hook_script"], pack["pronunciation"], pack.get("scene")))
+    app = vo_engine(pack) == "app"
+    if not app: open(f"{d}/vo/prompt.txt", "w").write(build_prompt(" ".join(pack["vo_script"]), pack["pronunciation"], pack.get("scene")))
     eleven = vo_engine(pack) == "elevenlabs"
-    log(f"hook: {c['hook_words']} words, {c['hook_duration_s']} s, ${c['price_hook']:.2f} | voiceover: {c['vo_words']} words, " + ("ElevenLabs, free" if eleven else f"{c['vo_duration_s']} s, ${c['price_vo']:.2f}") + f" | total ${c['price_total']:.2f}")
+    log(f"hook: {c['hook_words']} words, {c['hook_duration_s']} s, ${c['price_hook']:.2f} | " + ("demo: the app's own sound, no voiceover take" if app else f"voiceover: {c['vo_words']} words, " + ("ElevenLabs, free" if eleven else f"{c['vo_duration_s']} s, ${c['price_vo']:.2f}")) + f" | total ${c['price_total']:.2f}")
     if a.dry_run: log("dry run: prompts written, nothing submitted"); return
     costs = {}
-    if a.reuse_hook and (a.reuse_vo or eleven):
+    if a.reuse_hook and (a.reuse_vo or eleven or app):
         shutil.copy(a.reuse_hook, f"{d}/hook/take.mp4")
         if a.reuse_vo: shutil.copy(a.reuse_vo, f"{d}/vo/take.mp4")
     else:
-        img, aud = host(CHAR), host(VOICE)
+        img, aud = host(character(pack)), host(VOICE)
         ph = None if a.reuse_hook else seedance(f"{d}/hook/prompt.txt", c["hook_duration_s"], pack.get("resolution_hook", "720p"), f"{d}/hook/take.mp4", img, aud)
-        pv = None if (a.reuse_vo or eleven) else seedance(f"{d}/vo/prompt.txt", c["vo_duration_s"], pack.get("resolution_vo", "480p"), f"{d}/vo/take.mp4", img, aud)
+        pv = None if (a.reuse_vo or eleven or app) else seedance(f"{d}/vo/prompt.txt", c["vo_duration_s"], pack.get("resolution_vo", "480p"), f"{d}/vo/take.mp4", img, aud)
         log("submitted, waiting (usually 2 to 5 minutes)" + ("; voiceover from ElevenLabs meanwhile" if eleven else ""))
         if eleven and not a.reuse_vo: eleven_vo(a.hook, pack, pack["vo_script"])
         if ph: costs["hook take"] = finish(ph, "hook")
@@ -382,7 +521,8 @@ def run(a):
     hd = ffdur(f"{d}/hook/take.mp4"); hw = json.load(open(f"{d}/hook/take.mp4.words.json"))["words"]
     if hw and hd - hw[-1]["end"] > 1.0: sections[-1].append(f"- speech ends {hd - hw[-1]['end']:.1f} s before the clip ends: it rushed")
     sh(["ffmpeg", "-v", "error", "-y", "-i", f"{d}/hook/take.mp4", "-vf", "select='not(mod(n\\,50))',scale=220:-1,tile=9x1", "-frames:v", "1", f"{d}/hook/take_strip.jpg"])
-    if eleven and not a.reuse_vo:
+    if app: pass
+    elif eleven and not a.reuse_vo:
         _, _ = analyze(f"{d}/vo/take.wav"); lines, _, _ = verify(f"{d}/vo/take.wav.words.json", " ".join(pack["vo_script"]), pack["pronunciation"], "Voiceover (ElevenLabs)"); sections.append(lines)
     else:
         _, _ = analyze(f"{d}/vo/take.mp4"); lines, data, vmap = verify(f"{d}/vo/take.mp4.words.json", " ".join(pack["vo_script"]), pack["pronunciation"], "Voiceover take"); sections.append(lines)
@@ -398,8 +538,9 @@ def fix(a):
         if a.reuse: shutil.copy(a.reuse, f"{d}/hook/take.mp4")
         else:
             log(f"rerunning the hook take: {c['hook_duration_s']} s at {pack.get('resolution_hook','720p')}, ${c['price_hook']:.2f}")
-            img, aud = host(CHAR), host(VOICE); costs["hook take"] = finish(seedance(f"{d}/hook/prompt.txt", c["hook_duration_s"], pack.get("resolution_hook", "720p"), f"{d}/hook/take.mp4", img, aud), "hook"); unhost_voice()
+            img, aud = host(character(pack)), host(VOICE); costs["hook take"] = finish(seedance(f"{d}/hook/prompt.txt", c["hook_duration_s"], pack.get("resolution_hook", "720p"), f"{d}/hook/take.mp4", img, aud), "hook"); unhost_voice()
         analyze(f"{d}/hook/take.mp4"); lines, _, _ = verify(f"{d}/hook/take.mp4.words.json", pack["hook_script"], pack["pronunciation"], "Hook take (fix)"); print("\n".join(lines))
+    if a.vo and vo_engine(pack) == "app": die("this episode's demo plays the app's own sound; re-record or re-trim the shots in the pack, then `assemble`")
     if a.vo:
         lo, hi = (int(x) for x in (a.vo.split("-") + [a.vo])[:2]) if "-" in a.vo else (int(a.vo), int(a.vo))
         sub = pack["vo_script"][lo - 1:hi]; script = " ".join(sub); dur = duration_for(len(wordlist(script)), 4, 20)
@@ -408,12 +549,12 @@ def fix(a):
             log(f"re-reading voiceover sentences {lo}-{hi} on ElevenLabs (free); adjust tts_spellings or tts_speed in the pack first if a word or the pace was wrong")
             eleven_vo(a.hook, pack, sub, offset=lo - 1)
             final, fd = assemble(a); print(f"\n=== re-assembled: {final} ({fd:.1f} s), $0.00 ==="); return
-        pf = f"{d}/vo/fix_{lo}-{hi}_prompt.txt"; open(pf, "w").write(build_prompt(script, pack["pronunciation"]))
+        pf = f"{d}/vo/fix_{lo}-{hi}_prompt.txt"; open(pf, "w").write(build_prompt(script, pack["pronunciation"], pack.get("scene")))
         take = f"{d}/vo/fix_{lo}-{hi}.mp4"
         if a.reuse: shutil.copy(a.reuse, take)
         else:
             log(f"regenerating voiceover sentences {lo}-{hi}: {dur} s at {pack.get('resolution_vo','480p')}, ${dur * RATE[pack.get('resolution_vo','480p')]:.2f}")
-            img, aud = host(CHAR), host(VOICE); costs[f"voiceover fix {lo}-{hi}"] = finish(seedance(pf, dur, pack.get("resolution_vo", "480p"), take, img, aud), "voiceover fix"); unhost_voice()
+            img, aud = host(character(pack)), host(VOICE); costs[f"voiceover fix {lo}-{hi}"] = finish(seedance(pf, dur, pack.get("resolution_vo", "480p"), take, img, aud), "voiceover fix"); unhost_voice()
         analyze(take); lines, data, vmap = verify(take + ".words.json", script, pack["pronunciation"], f"Voiceover fix {lo}-{hi}"); print("\n".join(lines))
         subpack = dict(pack); subpack["vo_script"] = sub; tmp_hook = a.hook
         # split into vo/s{k}.wav for the sub-range: write to a temp dir then rename

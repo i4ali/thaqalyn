@@ -1,0 +1,324 @@
+{
+  "1": {
+    "id": "62:1",
+    "surah": 62,
+    "index": 1,
+    "range": [
+      1,
+      8
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 1,
+        "prompt": {
+          "en": "According to the passage, the surah's opening praise of God grounds His right to legislate for His servants before it tells of the messenger He sent."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the surah begins by praising God, a preface that grounds His right to legislate for His servants before it tells of the messenger He sent, so the statement is true."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "a preface that grounds His right to legislate for His servants before the surah tells of the messenger He sent"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 2,
+        "prompt": {
+          "en": "The Book is the Qur'an, and the wisdom is the ____ of Ali ibn Abi Talib."
+        },
+        "options": [
+          {
+            "en": "knowledge"
+          },
+          {
+            "en": "household"
+          },
+          {
+            "en": "guardianship (wilayah)"
+          },
+          {
+            "en": "lineage"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The narration from Ibn Abbas reads the two terms of the verse: the Book is the Qur'an, and the wisdom is the guardianship (wilayah) of Ali ibn Abi Talib."
+        },
+        "anchor": {
+          "where": "verses.2.narrations.n3",
+          "quote": "The Book is the Qur'an, and the wisdom is the guardianship (wilayah) of Ali ibn Abi Talib."
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 4,
+        "prompt": {
+          "en": "In the narration about the angels of the lowest heaven, how are those who mention the virtue of Muhammad's family described?"
+        },
+        "options": [
+          {
+            "en": "so few amid so many enemies"
+          },
+          {
+            "en": "many and strong in number"
+          },
+          {
+            "en": "hidden among the angels"
+          },
+          {
+            "en": "fearful and silent"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "In the narration the angels of the lowest heaven look on the one, two, or three who praise Muhammad's family and note how few they are amid so many enemies."
+        },
+        "anchor": {
+          "where": "verses.4.narrations.n6",
+          "quote": "Do you not see them, so few amid so many enemies, praising it?"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 6,
+        "prompt": {
+          "en": "\"Yes, I did say it. Do you not know that every 'claim' (za'm) in the Qur'an is a falsehood?\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Sadiq, confirming that he had said it, explains that every 'claim' (za'm) in the Qur'an signals a falsehood, which is why the challenge to the Jews uses that word."
+        },
+        "anchor": {
+          "where": "verses.6.narrations.n7",
+          "quote": "Yes, I did say it. Do you not know that every 'claim' (za'm) in the Qur'an is a falsehood?"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 7,
+        "prompt": {
+          "en": "According to the essay, what does Tabrisi read the Jews' refusal to ever long for death as showing?"
+        },
+        "options": [
+          {
+            "en": "That the Jews are truly God's favourites"
+          },
+          {
+            "en": "That they feared the pain of death"
+          },
+          {
+            "en": "That they did not carry the Torah"
+          },
+          {
+            "en": "That it is a sign of the Prophet's truthfulness"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay reports that the Jews will never long for death, and Tabrisi reads this foretelling that they would not as itself a sign of the Prophet's truthfulness."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "this foretelling that they would not is itself a sign of the Prophet's truthfulness"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:55:56Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:57:12Z",
+      "assembled_at": "2026-10-06T12:57:31Z"
+    }
+  },
+  "2": {
+    "id": "62:2",
+    "surah": 62,
+    "index": 2,
+    "range": [
+      9,
+      11
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 9,
+        "prompt": {
+          "en": "According to the essay, what does the command to leave all business forbid?"
+        },
+        "options": [
+          {
+            "en": "A ban on any occupation that keeps one from the prayer"
+          },
+          {
+            "en": "A ban on trade alone, since only trade is forbidden"
+          },
+          {
+            "en": "Permission to finish a sale before coming"
+          },
+          {
+            "en": "Advice rather than a binding command"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says Tabatabai reads leave all business as a ban on any occupation that keeps one from the prayer, with trade named only because it is the clearest such case."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai takes 'leave all business' as a ban on any occupation that keeps a person from the prayer, trade being named only because it is the clearest such case"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 9,
+        "prompt": {
+          "en": "'Friday is a day made strait upon the Muslims; the reward of their deeds in it matches that straitness.' Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "This is Imam al-Baqir's teaching that Friday is a day made strait upon the Muslims, where the reward of deeds matches that straitness and both good and bad deeds are multiplied."
+        },
+        "anchor": {
+          "where": "verses.9.narrations.n1",
+          "quote": "Friday is a day made strait upon the Muslims; the reward of their deeds in it matches that straitness"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 10,
+        "prompt": {
+          "en": "The prayer is on Friday, and the dispersal is on ____."
+        },
+        "options": [
+          {
+            "en": "Sunday"
+          },
+          {
+            "en": "Thursday"
+          },
+          {
+            "en": "Saturday"
+          },
+          {
+            "en": "the next Friday"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Sadiq glosses the verse by saying the prayer falls on Friday while the dispersal to seek grace is on Saturday, so the blank is Saturday."
+        },
+        "anchor": {
+          "where": "verses.10.narrations.n4",
+          "quote": "The prayer is on Friday, and the dispersal is on Saturday."
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 11,
+        "prompt": {
+          "en": "In the passage's reply, what is said to be better than diversion and dealing?"
+        },
+        "options": [
+          {
+            "en": "The profit of the arriving caravan"
+          },
+          {
+            "en": "The grace sought after the prayer"
+          },
+          {
+            "en": "A share of what the traders brought"
+          },
+          {
+            "en": "The reward of staying for the sermon"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay says the reply is that what is with Allah, the reward of staying for the sermon, is better than diversion and dealing."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The reply is that what is with Allah, the reward of staying for the sermon, is better than diversion and dealing"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 11,
+        "prompt": {
+          "en": "According to the passage, the Shia reports say the entire congregation scattered to the caravan, leaving no one with the Prophet."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The Shia reports do not say everyone left. The passage says all scattered except a small group around Ali, including Hasan, Husayn, Fatimah, Salman, Abu Dharr, Miqdad and Suhayb."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Shia reports say all scattered except a small group around Ali"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:53:50Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:54:58Z",
+      "assembled_at": "2026-10-06T12:57:31Z"
+    }
+  }
+}

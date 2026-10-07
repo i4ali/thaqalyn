@@ -1,0 +1,485 @@
+{
+  "1": {
+    "id": "54:1",
+    "surah": 54,
+    "index": 1,
+    "range": [
+      1,
+      22
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 1,
+        "prompt": {
+          "en": "In the note, the nearness of the Hour means that once prophethood has closed with the Prophet, nothing is left to await but the Resurrection."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Qummi glosses the opening words to mean that, because prophethood and messengership have ended with the Prophet, nothing is left to come but the Resurrection."
+        },
+        "anchor": {
+          "where": "verses.1.note",
+          "quote": "after the Prophet nothing remains but the Resurrection, since prophethood and messengership have ended"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "whoSaid",
+        "verse": 11,
+        "prompt": {
+          "en": "'No drop of rain descends from the sky except by a counted number and a known weight ...' Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam Ali taught that rain always falls by a fixed number and weight, except the Flood water in Noah's time, which poured down without weight or number."
+        },
+        "anchor": {
+          "where": "verses.11.narrations.n5",
+          "quote": "No drop of rain descends from the sky except by a counted number and a known weight"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 17,
+        "prompt": {
+          "en": "According to the essay, what does Tabrisi say sets this book apart from every other revealed book?"
+        },
+        "options": [
+          {
+            "en": "It alone is recited in full from memory"
+          },
+          {
+            "en": "It records the fates of all the vanished nations"
+          },
+          {
+            "en": "It was sent down complete on a single night"
+          },
+          {
+            "en": "It can be grasped without any admonishment"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay cites Tabrisi's point that, unlike any other revealed scripture, the Quran alone is recited in full from memory."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "no revealed book but this one is recited in full from memory"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 18,
+        "prompt": {
+          "en": "The surah then recalls the vanished nations, in what Tabatabai hears as a tone of ____."
+        },
+        "options": [
+          {
+            "en": "praise"
+          },
+          {
+            "en": "reproach"
+          },
+          {
+            "en": "longing"
+          },
+          {
+            "en": "wonder"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says Tabatabai hears the retelling of the destroyed nations in a tone of reproach, not neutral narration."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The surah then recalls the vanished nations, in what Tabatabai hears as a tone of reproach"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 1,
+        "prompt": {
+          "en": "According to the perspectives, what do the two traditions agree on in reading this passage?"
+        },
+        "options": [
+          {
+            "en": "The moon will split only at the coming Hour"
+          },
+          {
+            "en": "The splitting is a parable rather than a real event"
+          },
+          {
+            "en": "The Quraysh never demanded any sign from the Prophet"
+          },
+          {
+            "en": "Both relate the moon's splitting as a past miracle at Mecca"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The perspectives say both traditions read the plain sense alike and relate the splitting of the moon as a past miracle worked at Mecca."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "both relate the splitting of the moon as a past miracle worked at Mecca"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T00:24:27Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T00:25:33Z",
+      "assembled_at": "2026-10-06T00:28:51Z"
+    }
+  },
+  "2": {
+    "id": "54:2",
+    "surah": 54,
+    "index": 2,
+    "range": [
+      23,
+      40
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 23,
+        "prompt": {
+          "en": "\"God never destroys a people until He has first sent them messengers to establish the proof against them.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Baqir"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked about Thamud's destruction, Imam al-Sadiq states the principle that God never ruins a people until He has sent them messengers to establish the proof, then sent them Salih."
+        },
+        "anchor": {
+          "where": "verses.23.narrations.n1",
+          "quote": "God never destroys a people until He has first sent them messengers to establish the proof against them"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 24,
+        "prompt": {
+          "en": "According to the passage, what objection did Thamud raise against Salih?"
+        },
+        "options": [
+          {
+            "en": "He brought them no sign or miracle"
+          },
+          {
+            "en": "They would not follow a lone man from among themselves"
+          },
+          {
+            "en": "He forbade them from sharing their water"
+          },
+          {
+            "en": "He came from a people far away"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay reports that Thamud objected to following a lone man from among themselves, and branded Salih a self-conceited liar rather than heed his warning."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "they would not follow a lone man from among themselves and branding him a self-conceited liar"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 29,
+        "prompt": {
+          "en": "The companion they call is ____, the man who hamstrung the she-camel."
+        },
+        "options": [
+          {
+            "en": "Salih"
+          },
+          {
+            "en": "Gabriel"
+          },
+          {
+            "en": "Lot"
+          },
+          {
+            "en": "Qudar"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The note identifies the companion whom Thamud called, in verse 29, as Qudar, the man who took the blade and hamstrung the she-camel."
+        },
+        "anchor": {
+          "where": "verses.29.note",
+          "quote": "The companion they call is Qudar, the man who hamstrung the she-camel"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 37,
+        "prompt": {
+          "en": "In the narration about Lot's guests, how were his people's eyes blotted out?"
+        },
+        "options": [
+          {
+            "en": "The rain of stones struck them blind"
+          },
+          {
+            "en": "The single Cry took their sight"
+          },
+          {
+            "en": "Gabriel gestured toward them with his finger"
+          },
+          {
+            "en": "The dawn punishment blinded them"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "In the narration, when Lot's people forced their way in, Gabriel told Lot to admit them, then gestured with his finger and their eyes were gone."
+        },
+        "anchor": {
+          "where": "verses.37.narrations.n4",
+          "quote": "Gabriel gestured toward them with his finger and their eyes were gone"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 40,
+        "prompt": {
+          "en": "In this passage the refrain about the Quran being made simple follows only the story of Thamud, not that of Lot."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The refrain closes both stories, verse 32 after Thamud and verse 40 after Lot; the essay notes it recurs in every story to warn that denying any messenger draws punishment."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "this refrain recurs in every story to press home that denying any messenger draws down the punishment"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T00:20:51Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T00:21:47Z",
+      "assembled_at": "2026-10-06T00:28:51Z"
+    }
+  },
+  "3": {
+    "id": "54:3",
+    "surah": 54,
+    "index": 3,
+    "range": [
+      41,
+      55
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 42,
+        "prompt": {
+          "en": "\"In the inner meaning of the Quran, they denied the successors, all of them.\" Who said this about those who denied God's signs?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Asked about 'They denied all Our signs,' Imam al-Baqir gave its inner meaning: that these deniers rejected the successors, every one of them."
+        },
+        "anchor": {
+          "where": "verses.42.narrations.n1",
+          "quote": "in the inner meaning of the Quran, they denied the successors, all of them"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 48,
+        "prompt": {
+          "en": "In Hell there is a valley for the ____ called Saqar."
+        },
+        "options": [
+          {
+            "en": "miserly"
+          },
+          {
+            "en": "faithless"
+          },
+          {
+            "en": "arrogant"
+          },
+          {
+            "en": "idolaters"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Sadiq described Saqar as a valley in Hell set apart for the arrogant, so fierce that its own breath, once loosed, set Hell ablaze."
+        },
+        "anchor": {
+          "where": "verses.48.narrations.n2",
+          "quote": "In Hell there is a valley for the arrogant called Saqar"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 49,
+        "prompt": {
+          "en": "According to the perspectives, what do both readings of verse 49 agree it was turned against?"
+        },
+        "options": [
+          {
+            "en": "The Qadariyya, who deny God's decree"
+          },
+          {
+            "en": "Pharaoh's clan, who denied all the signs"
+          },
+          {
+            "en": "The confederate league of Quraysh"
+          },
+          {
+            "en": "The guilty, steeped in error and madness"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Both readings agree verse 49 was turned against the Qadariyya, who deny that God decrees and writes things before He creates them."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Tabatabai agrees the verse was turned against the Qadariyya who deny that decree"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 52,
+        "prompt": {
+          "en": "According to the passage, every deed, large or small, already stands written in the books kept by the angels."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay stresses that nothing escapes record: every deed, small and great, already stands written in the angels' books, so this is true."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Every deed, small and great, already stands recorded in the angels' books"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 55,
+        "prompt": {
+          "en": "According to the essay, how does the surah end after recounting the ruined nations?"
+        },
+        "options": [
+          {
+            "en": "The guilty dragged on their faces into the Fire"
+          },
+          {
+            "en": "The confederate league routed and turned to flee"
+          },
+          {
+            "en": "Pharaoh's clan seized by the Almighty and Omnipotent"
+          },
+          {
+            "en": "The Godwary amid gardens and streams before an omnipotent King"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "After the ruined nations and the Fire, the essay says the surah closes by turning to the Godwary, placing them in gardens and streams before an omnipotent King."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the surah ends by turning to the Godwary: gardens and running water, a seat of truth before an omnipotent King"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T00:27:11Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T00:28:35Z",
+      "assembled_at": "2026-10-06T00:28:51Z"
+    }
+  }
+}

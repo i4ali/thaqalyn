@@ -19,6 +19,7 @@ struct JourneyMiniPlayer: View {
     @ObservedObject private var player = JourneyAudioPlayer.shared
     @ObservedObject private var presenter = JourneyListenPresenter.shared
     @ObservedObject private var tm = ThemeManager.shared
+    @Environment(\.colorScheme) private var colorScheme
 
     /// Docked height, and the bottom inset that floats the bar just above the
     /// EmeraldTabBar (its ~68pt card + 30pt bottom padding + a small gap). Read by
@@ -99,7 +100,7 @@ struct JourneyMiniPlayer: View {
     private func cover(_ dive: DeepDive) -> some View {
         Group {
             if let asset = coverAssetName(for: dive) {
-                Image(asset).resizable().scaledToFill()
+                Image(CoverArt.asset(asset, for: colorScheme)).resizable().scaledToFill()
             } else {
                 tm.accentChip.overlay(
                     Image(systemName: dive.sfSymbol)

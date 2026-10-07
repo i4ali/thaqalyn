@@ -3519,20 +3519,20 @@
     }
    ],
    "doorway": {
-    "kind": "deepDive",
-    "id": "shukr",
-    "name": "Shukr · Gratitude",
+    "kind": "experience",
+    "id": "surah-isra",
+    "name": "Surah al-Isra",
     "lines": [
      {
-      "text": "I praise God with the best of praise, and I thank Him in ease and in hardship.",
-      "source": "Imam al-Husayn - al-Irshad of al-Mufid"
+      "text": "Glory be to Him who carried His servant by night.",
+      "source": "Qur'an 17:1"
      },
      {
-      "text": "Now you have thanked Me - now that you know that even the thanks is from Me.",
-      "source": "His words to Musa - al-Kafi"
+      "text": "Say: Allah is greater than can be described.",
+      "source": "Imam al-Sadiq (a) - al-Kafi"
      },
      {
-      "text": "Thanks is the one debt that grows by being paid.",
+      "text": "In this surah, no one climbs to an honorable height. They are carried there.",
       "source": null
      }
     ]
@@ -5966,7 +5966,25 @@
      "line": "Sincerity shows across a whole life - righteous character is what carries the repentance."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-isra",
+    "name": "Surah al-Isra",
+    "lines": [
+     {
+      "text": "Glory be to Him who carried His servant by night.",
+      "source": "Qur'an 17:1"
+     },
+     {
+      "text": "Say: Allah is greater than can be described.",
+      "source": "Imam al-Sadiq (a) - al-Kafi"
+     },
+     {
+      "text": "In this surah, no one climbs to an honorable height. They are carried there.",
+      "source": null
+     }
+    ]
+   },
    "morning": "Your Lord reads what is within you - the intention beneath today's duties is fully seen.",
    "night": "Whatever fell short today, the verse answered ahead - to those who keep returning, He is Forgiving."
   },
@@ -6789,20 +6807,20 @@
     }
    ],
    "doorway": {
-    "kind": "deepDive",
-    "id": "salah",
-    "name": "Salah · Prayer",
+    "kind": "experience",
+    "id": "surah-isra",
+    "name": "Surah al-Isra",
     "lines": [
      {
-      "text": "Our intercession will not reach one who takes the prayer lightly.",
-      "source": "Imam Ja'far al-Sadiq - al-Amali of al-Saduq"
+      "text": "Glory be to Him who carried His servant by night.",
+      "source": "Qur'an 17:1"
      },
      {
-      "text": "Prostrate - and draw near.",
-      "source": "Qur'an 96:19"
+      "text": "Say: Allah is greater than can be described.",
+      "source": "Imam al-Sadiq (a) - al-Kafi"
      },
      {
-      "text": "You have never once prayed unanswered - He answers the Fatiha line for line.",
+      "text": "In this surah, no one climbs to an honorable height. They are carried there.",
       "source": null
      }
     ]
@@ -6840,20 +6858,20 @@
     }
    ],
    "doorway": {
-    "kind": "deepDive",
-    "id": "salah",
-    "name": "Salah · Prayer",
+    "kind": "experience",
+    "id": "surah-isra",
+    "name": "Surah al-Isra",
     "lines": [
      {
-      "text": "Our intercession will not reach one who takes the prayer lightly.",
-      "source": "Imam Ja'far al-Sadiq - al-Amali of al-Saduq"
+      "text": "Glory be to Him who carried His servant by night.",
+      "source": "Qur'an 17:1"
      },
      {
-      "text": "Prostrate - and draw near.",
-      "source": "Qur'an 96:19"
+      "text": "Say: Allah is greater than can be described.",
+      "source": "Imam al-Sadiq (a) - al-Kafi"
      },
      {
-      "text": "You have never once prayed unanswered - He answers the Fatiha line for line.",
+      "text": "In this surah, no one climbs to an honorable height. They are carried there.",
       "source": null
      }
     ]
@@ -7667,7 +7685,25 @@
      "line": "A universe glorifies Him, yet human failure meets patience - He remains Forbearing, Forgiving."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-isra",
+    "name": "Surah al-Isra",
+    "lines": [
+     {
+      "text": "Glory be to Him who carried His servant by night.",
+      "source": "Qur'an 17:1"
+     },
+     {
+      "text": "Say: Allah is greater than can be described.",
+      "source": "Imam al-Sadiq (a) - al-Kafi"
+     },
+     {
+      "text": "In this surah, no one climbs to an honorable height. They are carried there.",
+      "source": null
+     }
+    ]
+   },
    "morning": "Everything around you today is glorifying Him - a praise running constantly, just beyond your hearing.",
    "night": "The praise you could not hear today continues into the night - creation's tasbih does not sleep."
   },
@@ -8552,7 +8588,25 @@
      "line": "Testimony requires direct knowledge - careless words about others carry weight He will question."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-isra",
+    "name": "Surah al-Isra",
+    "lines": [
+     {
+      "text": "Glory be to Him who carried His servant by night.",
+      "source": "Qur'an 17:1"
+     },
+     {
+      "text": "Say: Allah is greater than can be described.",
+      "source": "Imam al-Sadiq (a) - al-Kafi"
+     },
+     {
+      "text": "In this surah, no one climbs to an honorable height. They are carried there.",
+      "source": null
+     }
+    ]
+   },
    "morning": "Today's rule of speech is knowledge - what you cannot verify is not yours to pass along.",
    "night": "What you declined to repeat today was this verse at work - hearing, sight, and heart kept answerable."
   },
@@ -8585,7 +8639,25 @@
      "line": "Scholars asked to test him; he said only what was given - honesty about limits is prophetic."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-isra",
+    "name": "Surah al-Isra",
+    "lines": [
+     {
+      "text": "Glory be to Him who carried His servant by night.",
+      "source": "Qur'an 17:1"
+     },
+     {
+      "text": "Say: Allah is greater than can be described.",
+      "source": "Imam al-Sadiq (a) - al-Kafi"
+     },
+     {
+      "text": "In this surah, no one climbs to an honorable height. They are carried there.",
+      "source": null
+     }
+    ]
+   },
    "morning": "The soul that carries you through today is of your Lord's affair - some depths are His alone.",
    "night": "The day ends with questions still open - knowledge was given 'only a little,' and that is by His design."
   },
@@ -9622,7 +9694,25 @@
      "line": "Markets stay just one honest deal at a time - your fair transaction holds up a corner of the whole."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-isra",
+    "name": "Surah al-Isra",
+    "lines": [
+     {
+      "text": "Glory be to Him who carried His servant by night.",
+      "source": "Qur'an 17:1"
+     },
+     {
+      "text": "Say: Allah is greater than can be described.",
+      "source": "Imam al-Sadiq (a) - al-Kafi"
+     },
+     {
+      "text": "In this surah, no one climbs to an honorable height. They are carried there.",
+      "source": null
+     }
+    ]
+   },
    "morning": "Fair measure is worship in work clothes - every honest transaction today keeps a command of Allah.",
    "night": "Every fair measure you gave today lands where the verse said - the best way, and the best result."
   },
@@ -10716,7 +10806,25 @@
      "line": "Charity is wider than money - respect, empathy, and prayer are giving your hand can always afford."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-isra",
+    "name": "Surah al-Isra",
+    "lines": [
+     {
+      "text": "Glory be to Him who carried His servant by night.",
+      "source": "Qur'an 17:1"
+     },
+     {
+      "text": "Say: Allah is greater than can be described.",
+      "source": "Imam al-Sadiq (a) - al-Kafi"
+     },
+     {
+      "text": "In this surah, no one climbs to an honorable height. They are carried there.",
+      "source": null
+     }
+    ]
+   },
    "morning": "Even a day with nothing to give still leaves something to offer - a gentle word is within reach.",
    "night": "The gentle words you managed today counted as giving - charity never depended on your wallet."
   },
@@ -10756,7 +10864,25 @@
      "line": "Giving that lasts beats giving that empties - sustained capacity to help is the wiser generosity."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-isra",
+    "name": "Surah al-Isra",
+    "lines": [
+     {
+      "text": "Glory be to Him who carried His servant by night.",
+      "source": "Qur'an 17:1"
+     },
+     {
+      "text": "Say: Allah is greater than can be described.",
+      "source": "Imam al-Sadiq (a) - al-Kafi"
+     },
+     {
+      "text": "In this surah, no one climbs to an honorable height. They are carried there.",
+      "source": null
+     }
+    ]
+   },
    "morning": "Two extremes are named and closed - a hand chained shut and a hand emptied out. Today walks between them.",
    "night": "If your hand moved with measure today, it ends the day neither chained nor bare - the balance held."
   },
@@ -10789,7 +10915,25 @@
      "line": "Arrogance fails arithmetic - beside your actual power, pride has nothing to stand on."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-isra",
+    "name": "Surah al-Isra",
+    "lines": [
+     {
+      "text": "Glory be to Him who carried His servant by night.",
+      "source": "Qur'an 17:1"
+     },
+     {
+      "text": "Say: Allah is greater than can be described.",
+      "source": "Imam al-Sadiq (a) - al-Kafi"
+     },
+     {
+      "text": "In this surah, no one climbs to an honorable height. They are carried there.",
+      "source": null
+     }
+    ]
+   },
    "morning": "Humility has a gait - the verse reads arrogance in a walk before it ever reaches words.",
    "night": "The earth you walked today outlasts every proud stride - the gentle walk was the truthful one."
   },
@@ -12042,7 +12186,25 @@
      "line": "A noble word is the standard - speech to parents is meant to honor, not merely avoid harm."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-isra",
+    "name": "Surah al-Isra",
+    "lines": [
+     {
+      "text": "Glory be to Him who carried His servant by night.",
+      "source": "Qur'an 17:1"
+     },
+     {
+      "text": "Say: Allah is greater than can be described.",
+      "source": "Imam al-Sadiq (a) - al-Kafi"
+     },
+     {
+      "text": "In this surah, no one climbs to an honorable height. They are carried there.",
+      "source": null
+     }
+    ]
+   },
    "morning": "One decree pairs two duties - worship Him alone, and goodness to your parents standing right beside it.",
    "night": "A generous word to a parent today kept the decree - down to the smallest sigh withheld."
   },
@@ -12082,7 +12244,25 @@
      "line": "The duty outlasts their lifetime - prayer and charity on their behalf keep the bond in force."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-isra",
+    "name": "Surah al-Isra",
+    "lines": [
+     {
+      "text": "Glory be to Him who carried His servant by night.",
+      "source": "Qur'an 17:1"
+     },
+     {
+      "text": "Say: Allah is greater than can be described.",
+      "source": "Imam al-Sadiq (a) - al-Kafi"
+     },
+     {
+      "text": "In this surah, no one climbs to an honorable height. They are carried there.",
+      "source": null
+     }
+    ]
+   },
    "morning": "The lowered wing of humility is today's posture - tenderness toward your parents as mercy in motion.",
    "night": "The dua He taught fits tonight - My Lord, have mercy on them both as they raised me when I was small."
   },
@@ -13808,7 +13988,25 @@
      "line": "Years, months, prayer times - the cycle you tell time by is His gift of measure."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-isra",
+    "name": "Surah al-Isra",
+    "lines": [
+     {
+      "text": "Glory be to Him who carried His servant by night.",
+      "source": "Qur'an 17:1"
+     },
+     {
+      "text": "Say: Allah is greater than can be described.",
+      "source": "Imam al-Sadiq (a) - al-Kafi"
+     },
+     {
+      "text": "In this surah, no one climbs to an honorable height. They are carried there.",
+      "source": null
+     }
+    ]
+   },
    "morning": "Daylight was made visible on purpose - today's light is an invitation to seek bounty from your Lord.",
    "night": "The sign of night has arrived on schedule - its darkness was made for rest as deliberately as the day."
   },
@@ -15637,7 +15835,25 @@
      "line": "Belief, law, ethics, society - its guidance covers the whole of a human life, including yours."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-isra",
+    "name": "Surah al-Isra",
+    "lines": [
+     {
+      "text": "Glory be to Him who carried His servant by night.",
+      "source": "Qur'an 17:1"
+     },
+     {
+      "text": "Say: Allah is greater than can be described.",
+      "source": "Imam al-Sadiq (a) - al-Kafi"
+     },
+     {
+      "text": "In this surah, no one climbs to an honorable height. They are carried there.",
+      "source": null
+     }
+    ]
+   },
    "morning": "The Qur'an guides to what stands most upright - the straightest path through today is already in your hands.",
    "night": "The most upright path did not move tonight - the Qur'an's guidance holds steady for tomorrow."
   },
@@ -16637,7 +16853,25 @@
      "line": "Guidance arrives by different roads and paces - hardship for some, ease for others, each by nature."
     }
    ],
-   "doorway": null,
+   "doorway": {
+    "kind": "experience",
+    "id": "surah-isra",
+    "name": "Surah al-Isra",
+    "lines": [
+     {
+      "text": "Glory be to Him who carried His servant by night.",
+      "source": "Qur'an 17:1"
+     },
+     {
+      "text": "Say: Allah is greater than can be described.",
+      "source": "Imam al-Sadiq (a) - al-Kafi"
+     },
+     {
+      "text": "In this surah, no one climbs to an honorable height. They are carried there.",
+      "source": null
+     }
+    ]
+   },
    "morning": "Today you will work in your own manner, as everyone does - and your Lord knows best whose way is guided.",
    "night": "The day showed everyone working in their own way - judging whose way was best guided rests with your Lord."
   },
@@ -18208,6 +18442,25 @@
     },
     {
      "text": "Certainty has three depths: to know the fire by its smoke, to see it, to stand within it.",
+     "source": null
+    }
+   ]
+  },
+  {
+   "kind": "experience",
+   "id": "surah-isra",
+   "name": "Surah al-Isra",
+   "lines": [
+    {
+     "text": "Glory be to Him who carried His servant by night.",
+     "source": "Qur'an 17:1"
+    },
+    {
+     "text": "Say: Allah is greater than can be described.",
+     "source": "Imam al-Sadiq (a) - al-Kafi"
+    },
+    {
+     "text": "In this surah, no one climbs to an honorable height. They are carried there.",
      "source": null
     }
    ]

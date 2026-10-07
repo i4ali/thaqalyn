@@ -1,0 +1,606 @@
+{
+  "1": {
+    "id": "70:1",
+    "surah": 70,
+    "index": 1,
+    "range": [
+      1,
+      35
+    ],
+    "title": {
+      "en": "The reckoning and the prayerful"
+    },
+    "essay": {
+      "en": "The surah opens with an asker demanding a punishment that is bound to fall. Tabatabai reads the whole passage as a portrait of the Day of Resurrection and the torment readied for the faithless, from which the believers are set apart [1]. The demand, he holds, was made out of defiance, so the words 'sure to befall' and 'which none can avert' answer the mocker by confirming that the punishment will reach him whether he asks for it or not [1]. It comes from Allah, 'Lord of the lofty stations' - the ascending ranks of the unseen realm by which the angels and the Spirit rise to Him [1]. They mount to Him in 'a day whose span is fifty thousand years,' which Tabatabai takes to be the Day of Resurrection [1]; al-Tabrisi reports this reading as one of several disputed views [3]. Where al-Tabrisi and al-Tusi read the Spirit as Gabriel, singled out for honour [3][5], Tabatabai holds it to be the Spirit of God's command, distinct from the angels [1].\n\nThe Prophet is told to be patient with a patience that is graceful, for the deniers see the reckoning as far off while God sees it near [1]. Then the Day is drawn: the sky like molten copper, the mountains like dyed wool, and no friend asking after his friend, each absorbed in himself [1]. The guilty man would ransom himself from that punishment with his children, his wife, his brother, his kin and everyone on earth - but never: it is a blazing fire that strips away the scalp and summons whoever turned away and hoarded his wealth [1].\n\nThe passage then traces the root of this ruin: man was created covetous, anxious in hardship and grudging in plenty. Tabatabai insists this trait is a God-given capacity, good in itself, which man turns to ruin by misusing it [2]; al-Tusi explains it was set in man so that the trial of moral striving could take place [6]. The exception is the prayerful - constant in prayer, giving a known share to the beggar and the deprived, affirming the Day, fearful of their Lord, chaste, true to trusts and testimonies - who will dwell honoured in gardens [2]. Tabatabai notes that some read the verse on the 'known share' as revealed at Medina [1]."
+    },
+    "verses": [
+      {
+        "verse": 1,
+        "heading": {
+          "en": "An asker and his punishment"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "لما نصب رسول الله صلى الله عليه و آله عليا عليه السلام يوم غدير خم، و قال: من كنت مولاه فعلي مولاه، شاع ذلك في البلاد, فقدم على النبي صلى الله عليه و آله النعمان بن الحارث الفهري … فولى النعمان بن الحارث و هو يقول: اللهم إن كان هذا هو الحق من عندك فأمطر علينا حجارة من السماء، فرماه الله بحجر على رأسه فقتله، و أنزل الله تعالى: سأل سائل بعذاب واقع.",
+            "chain": "al-Tabrisi, from al-Haskani by his chain, to Sufyan ibn Uyayna, from Ja'far al-Sadiq, from his forefathers",
+            "text": {
+              "en": "When the Messenger of God raised up Ali at Ghadir Khumm, saying, 'Whoever's master I am, Ali is his master,' word of it spread. Al-Nu'man ibn al-Harith al-Fihri came and asked whether this was from God. Told it was, he turned away calling for stones from heaven; a stone struck him dead, and this verse came down."
+            },
+            "source": "s22"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "في قوله تعالى: سأل سائل بعذاب واقع للكافرين بولاية علي ليس له دافع، ثم قال: هكذا و الله نزل بها جبرئيل عليه السلام على محمد صلى الله عليه و آله.",
+            "chain": "Ali ibn Ibrahim, from Ahmad ibn Muhammad, from Muhammad ibn Khalid, from Muhammad ibn Sulayman, from his father, from Abu Basir, from Abu Abdillah",
+            "text": {
+              "en": "On 'An asker asked for a punishment sure to befall the faithless' - by the guardianship of Ali - 'which none can avert,' he said: 'By God, thus Gabriel brought it down upon Muhammad.'"
+            },
+            "source": "s22"
+          },
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "سئل أبو جعفر عليه السلام عن معنى هذا؟ فقال: نار تخرج من المغرب و ملك يسوقها من خلفها حتى تأتي دار بني سعد بن همام عند مسجدهم، فلا تدع دارا لبني امية إلا أحرقتها و أهلها، و لا تدع دارا فيها وتر لآل محمد إلا أحرقتها، و ذلك المهدي عليه السلام.",
+            "chain": null,
+            "text": {
+              "en": "Abu Ja'far was asked the meaning of this. He said: a fire comes out of the west, an angel driving it from behind, until it reaches the quarter of Banu Sa'd ibn Hammam by their mosque. It leaves no house of Banu Umayya unburned, nor any house holding a blood debt against Muhammad's family; that is the Mahdi."
+            },
+            "source": "s22"
+          }
+        ]
+      },
+      {
+        "verse": 4,
+        "heading": {
+          "en": "Day of fifty thousand years"
+        },
+        "note": {
+          "en": "Commentators tie this to the thousand-year day of 32:5 and dispute whether it measures the Day of Resurrection or the span of the angels' ascent [3]."
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "فحاسبوا أنفسكم قبل أن تحاسبوا عليها، فإن للقيامة خمسين موقفا، كل موقف مقداره ألف سنة، ثم تلا: في يوم كان مقداره خمسين ألف سنة.",
+            "chain": "Ali ibn Ibrahim, from his father and Ali ibn Muhammad al-Qasani, from al-Qasim ibn Muhammad, from Sulayman ibn Dawud al-Minqari, from Hafs ibn Ghiyath, from Abu Abdillah",
+            "text": {
+              "en": "Hold yourselves to account before you are brought to account, for the Resurrection has fifty stations, each station a thousand years long. Then he recited: 'in a day whose span is fifty thousand years.'"
+            },
+            "source": "s22"
+          },
+          {
+            "id": "n5",
+            "speaker": "Imam Zayn al-Abidin",
+            "addressee": "Zayd ibn Ali",
+            "arabic": "تعالى الله عن ذلك … وإن لله تبارك وتعالى بقاعا في سماواته، فمن عرج به إليها فقد عرج به إليه … ألا تسمع الله عز وجل يقول: تعرج الملائكة والروح إليه.",
+            "chain": "al-Kulayni, from Ali ibn Muhammad, from Muhammad ibn Sulayman, from Isma'il ibn Ibrahim, from Ja'far ibn Muhammad al-Tamimi, from al-Husayn ibn Ulwan, from Amr ibn Khalid, from Zayd ibn Ali, from his father",
+            "text": {
+              "en": "God is far exalted above that. God has places in His heavens, and whoever is raised to them is raised to Him. Have you not heard God say, 'The angels and the Spirit ascend to Him'?"
+            },
+            "source": "s73"
+          }
+        ]
+      },
+      {
+        "verse": 11,
+        "heading": {
+          "en": "Shown to one another"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "في قوله تعالى: يبصرونهم يقول: يعرفونهم ثم لا يتساءلون … وفصيلته التي تؤويه و هي أمه التي ولدته.",
+            "chain": "In the report of Abu'l-Jarud, from Abu Ja'far",
+            "text": {
+              "en": "'They will be placed within each other's sight' means: they recognize one another but then do not question one another. And 'his kin, which had sheltered him' is the mother who bore him."
+            },
+            "source": "s23"
+          }
+        ]
+      },
+      {
+        "verse": 23,
+        "heading": {
+          "en": "Constant in their prayers"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "سألت أبا جعفر عليه السلام عن قول الله عز و جل: والذين هم على صلواتهم يحافظون … قال: هي الفريضة، قلت: الذين هم على صلاتهم دائمون؟ قال: هي النافلة.",
+            "chain": "Hariz, from al-Fudayl, from Abu Ja'far",
+            "text": {
+              "en": "I asked Abu Ja'far about 'those who are watchful of their prayers'; he said: that is the obligatory prayer. I asked about 'those who persevere in their prayers'; he said: that is the supererogatory prayer."
+            },
+            "source": "s24"
+          }
+        ]
+      },
+      {
+        "verse": 24,
+        "heading": {
+          "en": "A known share in wealth"
+        },
+        "narrations": [
+          {
+            "id": "n8",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إن الله عز و جل فرض للفقراء في مال الأغنياء، فريضة لا يحمدون بأدائها، و هي الزكاة … و لكن الله عز و جل فرض في أموال الأغنياء حقوقا غير الزكاة، فقال عز و جل … فالحق المعلوم من غير الزكاة و هو شيء يفرضه الرجل على نفسه في ماله.",
+            "chain": "Uthman ibn Isa, from Sama'a ibn Mihran, from Abu Abdillah",
+            "text": {
+              "en": "God imposed on the rich, for the poor, an obligation - zakat. But God also imposed in the wealth of the rich dues other than zakat, as He said. The known right is other than zakat: something a man imposes on himself in his wealth."
+            },
+            "source": "s25"
+          }
+        ]
+      },
+      {
+        "verse": 25,
+        "heading": {
+          "en": "The beggar and the deprived"
+        },
+        "narrations": [
+          {
+            "id": "n9",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "المحروم: المحارف الذي قد حرم كد يده في الشراء و البيع.",
+            "chain": "Ibn Faddal, from Safwan al-Jammal, from Abu Abdillah",
+            "text": {
+              "en": "The deprived is the maharif - the one barred from profiting by the toil of his own hands in buying and selling."
+            },
+            "source": "s25"
+          },
+          {
+            "id": "n10",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "إن السائل و المحروم شأنهما عظيم، أما السائل فهو رسول الله صلى الله عليه و آله في مسألة الله لهم في حقه، و المحروم هو من حرم الخمس: أمير المؤمنين علي بن أبي طالب و ذريته الأئمة.",
+            "chain": "Isa ibn Dawud, from Musa ibn Ja'far, from his father",
+            "text": {
+              "en": "The beggar and the deprived are a weighty matter. The beggar is the Messenger of God, in the matter of God's asking on their behalf as His due; and the deprived is the one denied his khums: the Commander of the Faithful Ali ibn Abi Talib and his descendants, the Imams."
+            },
+            "source": "s25"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On who the 'asker' was, the traditions divide. Shia commentators report that he was al-Nu'man ibn al-Harith al-Fihri, who after Ghadir Khumm rejected Ali's guardianship, called for stones from heaven, and was struck dead, the verse coming down about him [3]. Sunni tafsirs predominantly name al-Nadr ibn al-Harith, who at Mecca demanded the stones of 8:32 and was slain at Badr [43]. Al-Qurtubi, however, records the Ghadir account as well, among the several reports he gathers [43]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Ma'aarij 1 to 18",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=70&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "المراد بهذا اليوم يوم القيامة على ما يفيده سياق الآيات التالية."
+        },
+        "gloss": "This day means the Day of Resurrection, as the flow of the verses that follow indicates."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Ma'aarij 19 to 35",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=70&tAyahNo=19&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "واستثناء المؤمنين ليس لأجل أن الصفة غير مخلوقة فيهم بل لأجل أنهم أبقوها على كمالها ولم يبدلوها رذيلة ونقمة."
+        },
+        "gloss": "The believers are excepted not because the trait was uncreated in them, but because they kept it at its perfection and did not turn it into a vice and a curse."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Ma'aarij 1 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=70&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "تعرج الملائكة والروح أي تصعد الملائكة ويصعد الروح أيضاً معهم وهو جبرائيل خصَّه بالذكر من بين الملائكة تشريفاً له."
+        },
+        "gloss": "'The angels and the Spirit ascend' - the angels ascend and the Spirit ascends with them too; it is Gabriel, named apart from the angels to honour him."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Ma'aarij 1 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=70&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والمعنى تعرج الملائكة والروح الذي هو جبرائيل إلى الموضع الذي يعطيهم الله فيه الثواب في الآخرة."
+        },
+        "gloss": "The meaning is: the angels and the Spirit - which is Gabriel - ascend to the place where God grants them reward in the Hereafter."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Ma'aarij 11 to 25",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=70&tAyahNo=11&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وإنما جاز ان يخلق الانسان على هذه الصفة المذمومة، لانها تجري مجرى خلق سهوه القبيح ليجتنب المشتهى، لان المحنة في التكليف لا تتم إلا بمنازعة النفس إلى القبيح ليجتنب على وجه الطاعة لله تعالى."
+        },
+        "gloss": "Man could be created with this blameworthy trait, for the test of moral duty is completed only through the soul's pull toward the base, so that one abstains from it in obedience to God."
+      },
+      {
+        "id": "s22",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Ma'aarij 1 to 5",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=70&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "سأل سائل بعذاب واقع للكافرين بولاية علي ليس له دافع ثم قال: هكذا و الله نزل بها جبرئيل عليه السلام على محمد صلى الله عليه و آله."
+        },
+        "gloss": "'An asker asked for a punishment sure to befall the faithless' - by the guardianship of Ali - 'which none can avert.' Then he said: 'By God, thus Gabriel brought it down upon Muhammad.'"
+      },
+      {
+        "id": "s23",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Ma'aarij 8 to 21",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=70&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يبصرونهم يقول: يعرفونهم ثم لا يتساءلون … وفصيلته التي تؤويه و هي أمه التي ولدته."
+        },
+        "gloss": "'They will be placed within each other's sight' means: they recognize one another but do not question each other; and 'his kin, which had sheltered him' is the mother who bore him."
+      },
+      {
+        "id": "s24",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Ma'aarij 22 to 23",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=70&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال: هي الفريضة، قلت: الذين هم على صلاتهم دائمون؟ قال: هي النافلة."
+        },
+        "gloss": "He said: that is the obligatory prayer. I asked about 'those who persevere in their prayers'; he said: that is the supererogatory prayer."
+      },
+      {
+        "id": "s25",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Ma'aarij 24 to 25",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=70&tAyahNo=24&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فالحق المعلوم من غير الزكاة و هو شيء يفرضه الرجل على نفسه في ماله يجب عليه أن يفرضه على قدر طاقته و سعة ماله."
+        },
+        "gloss": "The known right is other than zakat; it is something a man imposes upon himself in his wealth, obliged to set it by his capacity and the breadth of his means."
+      },
+      {
+        "id": "s43",
+        "kind": "tafsir",
+        "work": "al-Jami li-Ahkam al-Quran",
+        "author": "al-Qurtubi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Ma'aarij 1 to 4",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=5&tSoraNo=70&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وهو النضر بن الحارث حيث قال: اللهم إن كان هذا هو الحق من عندك فأمطر علينا حجارة من السماء أو ائتنا بعذاب أليم … فنزل سؤاله، وقُتل يوم بدرٍ صبراً."
+        },
+        "gloss": "It was al-Nadr ibn al-Harith, who said: 'O God, if this is the truth from You, rain down on us stones from the sky or bring us a painful punishment.' His demand came to pass, and he was slain at Badr."
+      },
+      {
+        "id": "s73",
+        "kind": "hadith",
+        "work": "Al-Tawhid",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 8, cited at Al-Ma'aarij 4",
+        "url": "https://thaqalayn.com/book/6",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "وإن لله تبارك وتعالى بقاعا في سماواته، فمن عرج به إليها فقد عرج به إليه … ألا تسمع الله عز وجل يقول: تعرج الملائكة والروح إليه."
+        },
+        "gloss": "God, blessed and exalted, has places in His heavens; whoever is raised to them is raised to Him. Have you not heard God say, 'The angels and the Spirit ascend to Him'?"
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:12:54Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-10-06T18:06:27Z",
+      "assembled_at": "2026-10-06T18:06:45Z"
+    }
+  },
+  "2": {
+    "id": "70:2",
+    "surah": 70,
+    "index": 2,
+    "range": [
+      36,
+      44
+    ],
+    "title": {
+      "en": "The faithless crowding the Prophet"
+    },
+    "essay": {
+      "en": "The surah's final movement turns from the believers it has just praised to a crowd pressing around the Prophet, and asks, in a tone of astonishment, what is the matter with the faithless that they scramble toward him from his right and his left in scattered groups [1]. al-Zajjaj, whom al-Tibyan cites, calls their fixed stare the look of an enemy who will not turn his eyes away [3]. Majma al-Bayan names the crowd: here 'those who disbelieved' are the hypocrites [2], and al-Mizan takes them for men who had believed outwardly, then disbelieved by rejecting part of what was sent down [1].\n\nThe next question exposes their pretension: does each of them hope to enter the garden of bliss? The answer is a flat refusal - never - with a reminder of what they are: We created them from what they know, that is, from a sperm-drop [1]. Their origin gives them no claim on the garden, which God grants only to the believers He has singled out [1]; al-Tibyan reads their lowly beginning as the lesson itself, a being shaped from base water being made for worship, not handed paradise by birth [3].\n\nThen God swears by the Lord of the easts and the wests - the sun's many points of rising and setting through the year [1] - that He is able to replace this crowd with people better than them, and that He is not to be outmaneuvered [2]. His rule over the turning days is itself the ground of His power over the generations of men [1].\n\nThe Prophet is told to spend no more effort on them: leave them to gossip and play - a pastime, al-Mizan observes, from which they draw no real benefit [1] - until they meet their promised day. Then that day is drawn: they will pour from their graves in haste, as if racing toward a target set up for them [2], their eyes humbled and abasement spread over them. On that note the surah ends, with the very day they had refused to believe now standing before them [2]."
+    },
+    "verses": [
+      {
+        "verse": 36,
+        "heading": {
+          "en": "A crowd around the Prophet"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "وما زال رسول الله صلّى الله عليه وآله يتألّفهم ويقرّبهم ويجلسهم عن يمينه وشماله حتّى اذن الله عزّ وجلّ له في ابعادهم بقوله واهجرهم هجراً جميلاً وبقوله فما للذين كفروا قبلك مهطعين الآيات",
+            "chain": null,
+            "text": {
+              "en": "The Messenger of God kept reconciling them, bringing them near, and seating them at his right and his left, until God permitted him to keep them away, with His words 'and shun them with a comely shunning' and His words 'What is the matter with the faithless that they scramble toward you.'"
+            },
+            "source": "s11"
+          }
+        ]
+      },
+      {
+        "verse": 40,
+        "heading": {
+          "en": "Oath by easts and wests"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "لها ثلاثمائة و ستون مشرقا، و ثلاثمائة و ستون مغربا، فيومها الذي تشرق فيه لا تعود فيه إلا من قابل، و يومها الذي تغرب فيه لا تعود فيه إلا من قابل",
+            "chain": "Ibn Babawayh, from Muhammad ibn al-Hasan ibn Ahmad ibn al-Walid, from Muhammad ibn al-Hasan al-Saffar, from al-Abbas ibn Maruf, from al-Hajjal, from Abd Allah ibn Abi Hammad, raising it to Amir al-Muminin",
+            "text": {
+              "en": "It has three hundred and sixty points of sunrise and three hundred and sixty points of sunset. The day on which it rises at one, it does not return to it until the next year; and the day on which it sets at one, it does not return to it until the next year."
+            },
+            "source": "s9"
+          },
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "المشارق: الأنبياء، و المغارب: الأوصياء",
+            "chain": "Sharaf al-Din al-Najafi, from Muhammad ibn Khalid al-Barqi, from Muhammad ibn Sulayman, from his father, from Abi Basir, from Abu Abdillah",
+            "text": {
+              "en": "The easts are the prophets, and the wests are the executors."
+            },
+            "source": "s9"
+          }
+        ]
+      },
+      {
+        "verse": 44,
+        "heading": {
+          "en": "The day they were promised"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "خَٰشِعَةً أَبْصَٰرُهُمْ تَرْهَقُهُمْ ذِلَّةٌ ذَلِكَ ٱلْيَوْمُ ٱلَّذِي كَانُواْ يُوعَدُونَ … يعني يوم خروج القائم (عليه السلام)",
+            "chain": "Sharaf al-Din al-Najafi, by his isnad, from Sulayman ibn Khalid, from Ibn Samaa, from Abd Allah ibn al-Qasim, from Yahya ibn Maysar, from Abu Jafar",
+            "text": {
+              "en": "'With a humbled look in their eyes, overcast by abasement; that is the day they had been promised' - this means the day of the rising of al-Qa'im."
+            },
+            "source": "s10"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Both traditions read the passage as a rebuke of a crowd that pressed around the Prophet, but they differ on who the crowd was. The Shia commentators identify them as the hypocrites who stayed close to him and then rejected part of what was revealed (Majma al-Bayan [2], al-Mizan [1]). The main Sunni reading ties the verses to the Meccan polytheists who gathered in mocking circles as he recited, boasting that they would enter paradise before the believers (al-Tabari [12], al-Qurtubi [16]); al-Razi [21] records that Abu Muslim too read them as hypocrites. Al-Qurtubi alone holds the command of verse 42 to have been abrogated by the verse of the sword [18]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Ma'aarij 36 to 44",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=70&tAyahNo=36&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فبما تقدم يتأيد أن يكون المراد بالذين كفروا في قوله { فما للذين كفروا } قوماً من المنافقين آمنوا به صلى الله عليه وآله وسلم ظاهراً ولازموه ثم كفروا برد بعض ما نزل عليه"
+        },
+        "gloss": "By the foregoing it is confirmed that those meant by 'those who disbelieved' are a group of hypocrites who believed in him outwardly and kept close to him, then disbelieved by rejecting part of what was revealed to him."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Ma'aarij 36 to 44",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=70&tAyahNo=36&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والمراد بالذين كفروا هنا المنافقون { عن اليمين وعن الشمال } أي عن يمينك وعن شمالك { عزين } أي جماعات متفرقين عصبة عصبة وجماعة جماعة"
+        },
+        "gloss": "Those meant by 'those who disbelieved' here are the hypocrites; 'from the right and the left' means on your right and your left; 'in groups' means scattered bands, company by company and group by group."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Ma'aarij 36 to 44",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=70&tAyahNo=36&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقال الزجاج: المهطع المقبل ببصره على الشيء لا يزايله، وذلك من نظر العدو"
+        },
+        "gloss": "al-Zajjaj said: the muhti' is one who fixes his gaze on a thing without leaving it, and that is the look of an enemy."
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Ma'aarij 36 to 41",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=70&tAyahNo=36&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لها ثلاثمائة و ستون مشرقا، و ثلاثمائة و ستون مغربا، فيومها الذي تشرق فيه لا تعود فيه إلا من قابل"
+        },
+        "gloss": "It has three hundred and sixty points of sunrise and three hundred and sixty points of sunset; the day on which it rises at one, it does not return to it until the next year."
+      },
+      {
+        "id": "s10",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Ma'aarij 43 to 44",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=70&tAyahNo=43&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يعني يوم خروج القائم (عليه السلام)"
+        },
+        "gloss": "meaning the day of the rising of al-Qa'im."
+      },
+      {
+        "id": "s11",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Ma'aarij 36 to 44",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=70&tAyahNo=36&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وما زال رسول الله صلّى الله عليه وآله يتألّفهم ويقرّبهم ويجلسهم عن يمينه وشماله حتّى اذن الله عزّ وجلّ له في ابعادهم"
+        },
+        "gloss": "The Messenger of God kept reconciling them, bringing them near, and seating them at his right and his left, until God permitted him to keep them at a distance."
+      },
+      {
+        "id": "s12",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Ma'aarij 36 to 39",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=70&tAyahNo=36&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ فمَا لِلَّذِين كَفَرُوا قِبَلَك مُهْطِعِين } قال: قبلك ينظرون { عَنِ اليَمِينِ وعَنِ الشّمالِ عِزِينَ } قال: العزين: العصب من الناس عن يمين وشمال، معرضين عنه، يستهزئون به"
+        },
+        "gloss": "Ibn Abbas: 'toward you' means looking at you; 'from the right and the left in groups' means bands of people on the right and left, turning away from him and mocking him."
+      },
+      {
+        "id": "s16",
+        "kind": "tafsir",
+        "work": "al-Jami li-Ahkam al-Quran",
+        "author": "al-Qurtubi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Ma'aarij 36 to 39",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=5&tSoraNo=70&tAyahNo=36&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال المفسرون: كان المشركون يجتمعون حول النبيّ صلى الله عليه وسلم ويستمعون كلامه فيكذّبونه ويكذبون عليه، ويستهزئون بأصحابه ويقولون: لئن دخل هؤلاء الجنة لندخلنّها قبلهم"
+        },
+        "gloss": "The commentators said: the polytheists used to gather around the Prophet and listen to his words, then belie him and mock his companions, saying: if these enter paradise, we shall enter it before them."
+      },
+      {
+        "id": "s18",
+        "kind": "tafsir",
+        "work": "al-Jami li-Ahkam al-Quran",
+        "author": "al-Qurtubi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Ma'aarij 42",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=5&tSoraNo=70&tAyahNo=42&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وهذه الآية منسوخة بآية السيف"
+        },
+        "gloss": "This verse is abrogated by the verse of the sword."
+      },
+      {
+        "id": "s21",
+        "kind": "tafsir",
+        "work": "Mafatih al-Ghayb",
+        "author": "Fakhr al-Din al-Razi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Ma'aarij 36",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=4&tSoraNo=70&tAyahNo=36&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقال أبو مسلم: ظاهر الآية يدل على أنهم هم المنافقون"
+        },
+        "gloss": "Abu Muslim said: the plain sense of the verse indicates that they were the hypocrites."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:11:11Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T17:28:43Z",
+      "assembled_at": "2026-10-06T18:06:45Z"
+    }
+  }
+}

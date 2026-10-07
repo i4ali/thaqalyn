@@ -234,15 +234,28 @@ struct PaywallView: View {
 
     // MARK: - Hero
 
-    /// Band-local text colors: the hero sits on the night-shrine art, which is
-    /// dark in BOTH themes, so these are fixed to the emerald-dark palette
-    /// instead of following the (possibly light) active theme.
     private enum HeroBand {
-        static let ivory = Color(hex: "F1E8D6")
-        static let gold = Color(hex: "ECD49A")
-        static let ivorySoft = Color(hex: "F1E8D6").opacity(0.78)
         static let height: CGFloat = 348
     }
+
+    /// The hero art's asset: the locked thing's own cover, else the night shrine.
+    private var heroAsset: String { context?.coverAssetName ?? "PaywallHeroDome" }
+
+    /// The hero's day art under Sage Dawn, when the cover has one (`CoverArt`). nil = the
+    /// night art, which keeps its dark card and cream type in both themes.
+    private var dayHero: String? {
+        colorScheme == .light ? CoverArt.lightVariant(of: heroAsset) : nil
+    }
+
+    /// Band-local type colors. Over night art they are fixed to the emerald-dark palette
+    /// whatever the theme; over the day art they take the Sage Dawn ink and deep gold.
+    private var heroIvory: Color { dayHero == nil ? Color(hex: "F1E8D6") : Color(hex: "14261E") }
+    private var heroGold: Color { dayHero == nil ? Color(hex: "ECD49A") : Color(hex: "7A5B1E") }
+    private var heroIvorySoft: Color {
+        dayHero == nil ? Color(hex: "F1E8D6").opacity(0.78) : Color(hex: "14261E").opacity(0.74)
+    }
+    /// The legibility shadow under hero type: needed on night art, none on the pale day art.
+    private func heroShadow(_ opacity: Double) -> Color { .black.opacity(dayHero == nil ? opacity : 0) }
 
     private var heroSection: some View {
         ZStack(alignment: .top) {
@@ -251,21 +264,21 @@ struct PaywallView: View {
             VStack(spacing: 9) {
                 Text((context?.eyebrow ?? "Thaqalayn Premium").uppercased())
                     .font(.system(size: 11, weight: .bold)).tracking(3)
-                    .foregroundColor(HeroBand.gold)
+                    .foregroundColor(heroGold)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal, 24)
-                    .shadow(color: .black.opacity(0.5), radius: 8, x: 0, y: 1)
+                    .shadow(color: heroShadow(0.5), radius: 8, x: 0, y: 1)
 
                 VStack(spacing: -4) {
                     Text("Everything.")
                         .font(EmType.serif(40, .semiBold))
-                        .foregroundColor(HeroBand.ivory)
+                        .foregroundColor(heroIvory)
                     Text("Forever.")
                         .font(EmType.serif(40, .semiBold))
-                        .foregroundColor(HeroBand.gold)
+                        .foregroundColor(heroGold)
                 }
-                .shadow(color: .black.opacity(0.45), radius: 14, x: 0, y: 2)
+                .shadow(color: heroShadow(0.45), radius: 14, x: 0, y: 2)
 
                 anchorLine
 
@@ -275,10 +288,10 @@ struct PaywallView: View {
 
                 Text("One payment. No renewals. Yours for life.")
                     .font(.system(size: 13, weight: .medium))
-                    .foregroundColor(HeroBand.ivorySoft)
+                    .foregroundColor(heroIvorySoft)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
-                    .shadow(color: .black.opacity(0.5), radius: 8, x: 0, y: 1)
+                    .shadow(color: heroShadow(0.5), radius: 8, x: 0, y: 1)
             }
             .padding(.top, 8)
             .frame(height: HeroBand.height)
@@ -292,9 +305,10 @@ struct PaywallView: View {
     /// thing, it is that thing's own cover instead - the well, the olive tree, the
     /// lantern road. In dark it bleeds past the content padding to full width and
     /// edge-fades into the background so it reads as part of the emerald night, not a
-    /// pasted photo. On the light ground a fade would leave the price row's ivory and
-    /// gold text on sage, so Sage Dawn shows the art as a rounded card instead, with a
-    /// night scrim under the price.
+    /// pasted photo. On the light ground a fade would leave the price row on sage, so
+    /// Sage Dawn shows the art as a rounded card instead: the cover's day art under a
+    /// pale scrim with ink type when it has one, else the night art with a night scrim
+    /// under the price.
     @ViewBuilder
     private var heroArt: some View {
         if colorScheme == .dark {
@@ -311,6 +325,23 @@ struct PaywallView: View {
                     )
                 )
                 .padding(.horizontal, -20)
+                .allowsHitTesting(false)
+                .accessibilityHidden(true)
+        } else if dayHero != nil {
+            heroImage
+                .overlay(
+                    LinearGradient(
+                        stops: [
+                            .init(color: Color(hex: "F7FBF6").opacity(0.55), location: 0),
+                            .init(color: Color(hex: "F7FBF6").opacity(0.15), location: 0.30),
+                            .init(color: Color(hex: "F7FBF6").opacity(0.40), location: 0.62),
+                            .init(color: Color(hex: "F7FBF6").opacity(0.85), location: 1),
+                        ],
+                        startPoint: .top, endPoint: .bottom
+                    )
+                )
+                .clipShape(RoundedRectangle(cornerRadius: 26, style: .continuous))
+                .emShadow(.raised)
                 .allowsHitTesting(false)
                 .accessibilityHidden(true)
         } else {
@@ -334,7 +365,7 @@ struct PaywallView: View {
     }
 
     private var heroImage: some View {
-        Image(context?.coverAssetName ?? "PaywallHeroDome")
+        Image(dayHero ?? heroAsset)
             .resizable()
             .scaledToFill()
             // Slow Ken Burns push - the one moment on this otherwise still screen. The
@@ -361,32 +392,32 @@ struct PaywallView: View {
     private var anchorLine: some View {
         (
             Text("Libraries this deep charge every year. ")
-                .foregroundColor(HeroBand.ivorySoft)
+                .foregroundColor(heroIvorySoft)
             + Text("Yours is a single payment.")
                 .fontWeight(.semibold)
-                .foregroundColor(HeroBand.ivory)
+                .foregroundColor(heroIvory)
         )
         .font(.system(size: 13.5, weight: .medium))
         .multilineTextAlignment(.center)
         .fixedSize(horizontal: false, vertical: true)
-        .shadow(color: .black.opacity(0.5), radius: 8, x: 0, y: 1)
+        .shadow(color: heroShadow(0.5), radius: 8, x: 0, y: 1)
     }
 
     private var priceRow: some View {
         HStack(alignment: .firstTextBaseline, spacing: 9) {
             if let comps = purchaseManager.getPriceComponents() {
                 CountUpPrice(amount: shownPrice, format: comps.format,
-                             font: EmType.serif(38, .semiBold), color: HeroBand.gold)
+                             font: EmType.serif(38, .semiBold), color: heroGold)
             } else {
                 ProgressView()
-                    .tint(HeroBand.gold)
+                    .tint(heroGold)
             }
             Text("ONE-TIME")
                 .font(.system(size: 12, weight: .bold)).tracking(2)
-                .foregroundColor(HeroBand.gold)
+                .foregroundColor(heroGold)
         }
         .padding(.top, 2)
-        .shadow(color: .black.opacity(0.5), radius: 10, x: 0, y: 2)
+        .shadow(color: heroShadow(0.5), radius: 10, x: 0, y: 2)
     }
 
     // MARK: - Understanding depth ladder

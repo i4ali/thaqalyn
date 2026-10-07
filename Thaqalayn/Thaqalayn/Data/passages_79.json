@@ -1,0 +1,608 @@
+{
+  "1": {
+    "id": "79:1",
+    "surah": 79,
+    "index": 1,
+    "range": [
+      1,
+      26
+    ],
+    "title": {
+      "en": "Oaths, resurrection, and Pharaoh"
+    },
+    "essay": {
+      "en": "The surah opens with five oaths: by those who wrest violently, who draw out gently, who swim smoothly, who race and take the lead, and who direct the affairs. Commentators divide sharply over what is being sworn by, and Tabatabai, weighing their views, reads the five as the angels described as they descend to carry out God's command and govern the affairs of this visible world [1]. Majma al-Bayan records the older spread of opinion: the angels tearing the disbeliever's soul out harshly and drawing the believer's out gently, or death, or the stars; and it notes that the oath's own answer is left unspoken, you shall surely be raised and called to account [2].\n\nThen comes the Day. The Quaker quakes and the Successor follows: these are read as the two Blasts of the Trumpet, the first that makes the living die and the second that revives the dead [4]. Hearts tremble and eyes are humbled, while the deniers scoff: 'Are we being returned to our earlier state? What, even after we have been decayed bones? This is, then, a ruinous return!' The answer is that it will be only a single shout, and at once they stand awake on the surface of the earth.\n\nThe passage closes with Moses. 'Did you receive the story of Moses,' when his Lord called him in the holy valley of Tuwa and sent him to Pharaoh, who had rebelled, with a gentle appeal to purify himself from idolatry and be guided to his Lord [3]. Moses showed him the greatest sign, his staff, but Pharaoh denied, turned away, gathered the people, and claimed, 'I am your exalted lord!' So Allah seized him with the punishment of this life and the Hereafter. Majma al-Bayan explains that the story stands here to console the Prophet against his people's denial and to warn them [3], leaving a moral for whoever fears."
+    },
+    "verses": [
+      {
+        "verse": 1,
+        "heading": {
+          "en": "The angels who wrest souls"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "الملائكة تنزع نفوس الكفار إغراقا كما يغرق النازع في القوس",
+            "chain": "al-Shaybani in Nahj al-Bayan, from Ali ibn Abi Talib",
+            "text": {
+              "en": "The angels tear out the souls of the disbelievers, wresting deep the way an archer draws his bow to the full."
+            },
+            "source": "s16"
+          }
+        ]
+      },
+      {
+        "verse": 4,
+        "heading": {
+          "en": "The souls that race ahead"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "يعني أرواح المؤمنين تسبق أرواحهم إلى الجنة بمثل الدنيا وأرواح الكافرين إلى النار بمثل ذلك",
+            "chain": "Abu al-Jarud, from Abu Ja'far",
+            "text": {
+              "en": "The racers are the souls of the believers: their souls race ahead to Paradise, and the souls of the disbelievers race to the Fire."
+            },
+            "source": "s9"
+          }
+        ]
+      },
+      {
+        "verse": 5,
+        "heading": {
+          "en": "Who directs the world's affairs"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": "his companions",
+            "arabic": "إنكم لتقولون هذا، و إن المدبرات أربعة: جبرئيل، و ميكائيل، وإسرافيل، و ملك الموت (عليهم السلام)، ينظرون إلى الأرض، فيرونكم و إخوانكم في أقطار الأرض",
+            "chain": "al-Hasan ibn Ali, from his father, from Muhammad ibn Ali, from his father al-Rida, from his father Musa ibn Ja'far",
+            "text": {
+              "en": "On a moonlit night his companions praised the beauty of the sky and its stars. He said: You say this, yet the directors of affairs are four, Jibra'il, Mika'il, Israfil, and the Angel of Death, who look upon the earth and see you and your brethren across its regions."
+            },
+            "source": "s17"
+          }
+        ]
+      },
+      {
+        "verse": 6,
+        "heading": {
+          "en": "When the Quaker quakes"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "تنشق الأرض بأهلها والرادفة الصيحة",
+            "chain": null,
+            "text": {
+              "en": "The earth is torn open with its people, and the Successor is the Cry."
+            },
+            "source": "s10"
+          },
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "الراجفة: الحسين بن علي (صلوات الله عليهما)، والرادفة: علي بن أبي طالب (عليه السلام)، و أول من ينفض عن رأسه التراب الحسين بن علي (عليهما السلام) في خمسة و سبعين ألفا",
+            "chain": "Sulayman ibn Khalid, from Abu Abdillah",
+            "text": {
+              "en": "The Quaker is al-Husayn ibn Ali, and the Successor is Ali ibn Abi Talib; the first to shake the dust from his head is al-Husayn ibn Ali, among seventy-five thousand."
+            },
+            "source": "s17"
+          }
+        ]
+      },
+      {
+        "verse": 12,
+        "heading": {
+          "en": "A ruinous return"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Prophet Muhammad",
+            "addressee": null,
+            "arabic": "الكرة المباركة النافعة لأهلها يوم الحساب ولايتي و اتباع أمري و ولاية علي و الأوصياء من بعده … و الكرة الخاسرة عداوتي و ترك أمري و عداوة علي و الأوصياء من بعده",
+            "chain": "Jabir ibn Yazid, from Abu Ja'far, from the Messenger of God",
+            "text": {
+              "en": "The blessed, beneficial return for its people on the Day of Reckoning is loyalty to me and following my command, and loyalty to Ali and the heirs after him; the losing return is enmity to me and to them."
+            },
+            "source": "s18"
+          }
+        ]
+      },
+      {
+        "verse": 24,
+        "heading": {
+          "en": "I am your exalted lord"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Prophet Muhammad",
+            "addressee": null,
+            "arabic": "قال جبرئيل (عليه السلام): قلت: يا رب، تدع فرعون و قد قال: { أَنَاْ رَبُّكُمُ ٱلأَعْلَىٰ }! فقال: إنما يقول هذا مثلك من يخاف الفوت",
+            "chain": "Abu Basir, from Abu Ja'far, from the Messenger of God",
+            "text": {
+              "en": "Jibra'il said: I asked, 'My Lord, do You leave Pharaoh when he has said, I am your exalted lord?' He said: Only one like you, who fears missing his chance, speaks so."
+            },
+            "source": "s19"
+          }
+        ]
+      },
+      {
+        "verse": 25,
+        "heading": {
+          "en": "Seized for two sayings"
+        },
+        "narrations": [
+          {
+            "id": "n8",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "والنكال العقوبة والآخرة هو قوله أنا ربكم الأعلى والأولى قوله ما علمت لكم من إله غيري فأهلكه الله بهذين القولين",
+            "chain": null,
+            "text": {
+              "en": "The punishment is the chastisement. The later saying is 'I am your exalted lord,' and the earlier is 'I know of no god for you other than me'; God destroyed him for these two sayings."
+            },
+            "source": "s15"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On the two quakes of verses 6 and 7 the traditions share the plain sense but part on a further one. Sunni exegesis reads them only as the Trumpet's two Blasts: al-Tabari relays from Ibn Abbas that the Quaker is the first Blast and the Successor the second [23]. Shia hadith keep that meaning and add an inner reading: Furat al-Kufi records from al-Sadiq that the Quaker is al-Husayn ibn Ali and the Successor is Ali ibn Abi Talib, al-Husayn being the first to shake the dust from his head at the rising [22]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on An-Naazi'aat 1 to 26",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=79&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فالآيات الخمس إقسام بما يتلبس به الملائكة من الصفات عندما يؤمرون بتدبير أمر من أمور هذا العالم المشهود من حين يأخذون في النزول إليه إلى تمام التدبير."
+        },
+        "gloss": "The five verses are an oath by the qualities the angels take on when they are commanded to govern some affair of this visible world, from when they begin their descent to it until the governing is complete."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naazi'aat 1 to 14",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=79&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وجواب القسم محذوف فكأنه سبحانه أقسم فقال وهذه الأشياء لتبعثن ولتحاسبن."
+        },
+        "gloss": "The answer to the oath is omitted; it is as though God, having sworn, said: by these things, you shall surely be raised and called to account."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naazi'aat 15 to 26",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=79&tAyahNo=15&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "عقَّبه بحديث موسى وتكذيب قومه إياه وما قاساه من الشدائد تسلية لنبينا صلى الله عليه وسلم وعدة له بالنصر وحثّاً إياه على الصبر"
+        },
+        "gloss": "He followed it with the story of Moses, his people's denial of him, and the hardships he endured, as a consolation to our Prophet, a promise of victory to him, and an urging to patience."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naazi'aat 1 to 14",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=79&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقال الحسن وقتادة: هما النفختان: أما الاولى فتميت الاحياء، وأما الثانية فتحي الموتى باذن الله."
+        },
+        "gloss": "al-Hasan and Qatada said: they are the two Blasts; the first makes the living die, and the second revives the dead by God's leave."
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naazi'aat 4",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=79&tAyahNo=4&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يعني أرواح المؤمنين تسبق أرواحهم إلى الجنة بمثل الدنيا وأرواح الكافرين إلى النار بمثل ذلك"
+        },
+        "gloss": "It means the souls of the believers race ahead to Paradise, and the souls of the disbelievers to the Fire."
+      },
+      {
+        "id": "s10",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naazi'aat 7",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=79&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "تنشق الأرض بأهلها والرادفة الصيحة"
+        },
+        "gloss": "The earth is torn open with its people, and the Successor is the Cry."
+      },
+      {
+        "id": "s15",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naazi'aat 23 to 25",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=79&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والنكال العقوبة والآخرة هو قوله أنا ربكم الأعلى والأولى قوله ما علمت لكم من إله غيري فأهلكه الله بهذين القولين"
+        },
+        "gloss": "The punishment is the chastisement; the later word is 'I am your exalted lord' and the earlier is 'I know of no god for you other than me,' and God destroyed him for these two sayings."
+      },
+      {
+        "id": "s16",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naazi'aat 1 to 4",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=79&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الملائكة تنزع نفوس الكفار إغراقا كما يغرق النازع في القوس"
+        },
+        "gloss": "The angels tear out the souls of the disbelievers, wresting deep as an archer draws his bow to the full."
+      },
+      {
+        "id": "s17",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naazi'aat 5 to 7",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=79&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إن المدبرات أربعة: جبرئيل، و ميكائيل، وإسرافيل، و ملك الموت"
+        },
+        "gloss": "The directors of affairs are four: Jibra'il, Mika'il, Israfil, and the Angel of Death."
+      },
+      {
+        "id": "s18",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naazi'aat 8 to 16",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=79&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الكرة المباركة النافعة لأهلها يوم الحساب ولايتي و اتباع أمري و ولاية علي و الأوصياء من بعده … و الكرة الخاسرة عداوتي و ترك أمري و عداوة علي و الأوصياء من بعده"
+        },
+        "gloss": "The blessed, beneficial return on the Day of Reckoning is loyalty to me and my command and to Ali and the heirs after him … and the losing return is enmity to me and to them."
+      },
+      {
+        "id": "s19",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naazi'aat 23 to 25",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=79&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال جبرئيل (عليه السلام): قلت: يا رب، تدع فرعون و قد قال: { أَنَاْ رَبُّكُمُ ٱلأَعْلَىٰ }! فقال: إنما يقول هذا مثلك من يخاف الفوت"
+        },
+        "gloss": "Jibra'il said: I asked, 'My Lord, do You leave Pharaoh when he has said, I am your exalted lord?' He said: Only one like you, who fears missing his chance, speaks so."
+      },
+      {
+        "id": "s22",
+        "kind": "hadith",
+        "work": "Tafsir Furat al-Kufi",
+        "author": "Furat ibn Ibrahim al-Kufi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naazi'aat 6 to 7",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=45&tSoraNo=79&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الراجفة الحسين بن علي والرادفة علي بن أبي طالب"
+        },
+        "gloss": "The Quaker is al-Husayn ibn Ali and the Successor is Ali ibn Abi Talib."
+      },
+      {
+        "id": "s23",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on An-Naazi'aat 1 to 9",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=79&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يوم ترجف الراجفة يقول النفخة الأولى … تتبعها الرادفة يقول النفخة الثانية"
+        },
+        "gloss": "'The day the Quaker quakes' means the first Blast … 'followed by the Successor' means the second Blast."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:39:56Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T18:02:31Z",
+      "assembled_at": "2026-10-06T18:02:55Z"
+    }
+  },
+  "2": {
+    "id": "79:2",
+    "surah": 79,
+    "index": 2,
+    "range": [
+      27,
+      46
+    ],
+    "title": {
+      "en": "Creation, resurrection, and the Hour"
+    },
+    "essay": {
+      "en": "These verses close the surah by turning on those who deny the resurrection. God asks whether their own making is harder than the heaven He built, a rebuke to deniers who found a second creation far-fetched [1]. He then unfolds that building: He raised its vault and set it in order, darkened its night and drew out its forenoon, spread the earth after that, and brought from it water, pasture and firm mountains, all as provision for people and their livestock. Tabatabai reads this survey of creation and its governance as the proof of the resurrection itself, for a Lord who orders all of this must call His servants to account; that is why the next verse opens with the Greatest Catastrophe [1]. al-Tusi adds that the things here enumerated are among the clearest evidence of God's oneness [4].\n\nWhen that Catastrophe comes, the Day of Resurrection, named so because it overwhelms every dreadful calamity [3], man will remember everything he did, and hell will be brought into open view. Tabatabai notes the wording implies hell already exists and is only uncovered on that Day [1]. The verses then divide humanity by a single measure: whoever rebelled and preferred this world has hell for a refuge, while whoever feared standing before his Lord and restrained his soul from desire has paradise [1]. al-Tabrisi glosses that fear as dread of being questioned by one's Lord about what one must do or avoid [3].\n\nThe surah ends with the deniers' mocking question about the Hour: when will it arrive? The answer withholds its timing from everyone. Its final term rests with God alone, and the Prophet is sent only as a warner to those who fear it, not as one who can name its day [2]. al-Tusi notes the warning is tied to those who fear because they alone profit by it [5]. The closing image shrinks the whole of worldly life: on the day they see it, they will feel they lingered no longer than an evening or its forenoon [2]."
+    },
+    "verses": [
+      {
+        "verse": 30,
+        "heading": {
+          "en": "Heaven raised before the earth"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "خلق الشيء الذي جميع الأشياء منه، و هو الماء الذي خلق الأشياء منه … فرفع السماء قبل دحو الأرض، فذلك قوله عز ذكره: { وَٱلأَرْضَ بَعْدَ ذَلِكَ دَحَاهَا }",
+            "chain": "Muhammad ibn Yahya, from Ahmad ibn Muhammad, from al-Husayn ibn Sa'id, from Muhammad ibn Dawud, from Muhammad ibn Atiyya",
+            "text": {
+              "en": "God created water, the thing from which all things are made. He raised the sky before He spread out the earth; that is His saying, 'Thereafter He spread out the earth,' meaning He extended it."
+            },
+            "source": "s14"
+          }
+        ]
+      },
+      {
+        "verse": 34,
+        "heading": {
+          "en": "The Greatest Catastrophe"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "انّ الطامّة الكبرى خروج دابّة الأرض",
+            "chain": null,
+            "text": {
+              "en": "The Greatest Catastrophe is the emergence of the Beast of the earth."
+            },
+            "source": "s15"
+          }
+        ]
+      },
+      {
+        "verse": 37,
+        "heading": {
+          "en": "He who rebelled"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Ibn Abbas",
+            "addressee": null,
+            "arabic": "{ فَأَمَّا مَن طَغَىٰ * وَآثَرَ ٱلْحَيَاةَ ٱلدُّنْيَا } فهو علقمة بن الحارث بن عبد الدار، و أما من خاف مقام ربه: علي بن أبي طالب (عليه السلام)، خاف و انتهى عن المعصية، و نهى عن الهوى نفسه { فَإِنَّ ٱلْجَنَّةَ هِيَ ٱلْمَأْوَىٰ } خاصا لعلي و من كان على منهاج علي، هكذا عاما.",
+            "chain": "Ibn Shahr Ashub, from Sufyan ibn Uyayna, from al-Zuhri, from Mujahid, from Ibn Abbas",
+            "text": {
+              "en": "'As for him who rebelled and preferred this world' - that is Alqama ibn al-Harith ibn Abd al-Dar. 'And as for him who feared the station of his Lord' - Ali ibn Abi Talib, who feared and desisted from disobedience and forbade his soul desire; paradise is his refuge, specially for Ali and whoever is on Ali's path."
+            },
+            "source": "s13"
+          }
+        ]
+      },
+      {
+        "verse": 40,
+        "heading": {
+          "en": "Fear that restrains the soul"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "من علم أن الله يراه و يسمع ما يقول و يعلم ما يعلمه من خير أو شر، فيحجزه ذلك عن القبيح من الأعمال، فذلك الذي خاف مقام ربه و نهى النفس عن الهوى",
+            "chain": "Muhammad ibn Yahya, from Ahmad ibn Muhammad, from Ibn Mahbub, from Dawud al-Raqqi, from Abu Abdillah",
+            "text": {
+              "en": "Whoever knows that God sees him, hears what he says, and knows what he does of good or evil, so that this restrains him from vile deeds - that is the one who feared the station of his Lord and restrained his soul from desire."
+            },
+            "source": "s13"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Verses 37 to 41 state a general rule, that the rebellious who prefer this world face hell while the God-fearing who curb their desires gain paradise, and both traditions also carry narrations naming the individuals the verses first described. Sunni commentators such as al-Qurtubi report that the two verses were revealed about Mus'ab ibn Umayr and his brother Amir, with al-Suddi relating a view that named Abu Bakr [25]. A report in the Shia al-Burhan instead identifies the God-fearing one as Ali ibn Abi Talib, and extends the promise to whoever follows Ali's path [13]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on An-Naazi'aat 27 to 41",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=79&tAyahNo=27&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ويتضمن أيضاً الإِشارة إلى الحجة على وقوع البعث حيث يذكر التدبير العام العالمي وارتباطه بالعالم الانساني ولازمه ربوبيته تعالى، ولازم الربوبية صحة النبوة وجعل التكاليف، ولازم ذلك الجزاء الذي موطنه البعث والحشر"
+        },
+        "gloss": "It also points to the proof that the resurrection will occur, since it mentions the all-embracing governance of the world and its link to the human realm, which entails His lordship; and lordship entails the soundness of prophethood and the imposing of duties, which in turn entails the recompense whose place is the resurrection and gathering."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on An-Naazi'aat 42 to 46",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=79&tAyahNo=42&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إنما كلفناك بإنذار من يخشى الساعة دون الإِخبار بوقت قيام الساعة"
+        },
+        "gloss": "We have charged you only with warning whoever fears the Hour, not with announcing the time the Hour will come."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naazi'aat 27 to 46",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=79&tAyahNo=27&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ فإذا جاءت الطامة الكبرى } وهي القيامة لأنها تطم على كل داهية هائلة أي تعلو وتغلب"
+        },
+        "gloss": "'When the Greatest Catastrophe comes' - it is the Resurrection, because it overwhelms every dreadful calamity, that is, it rises over and overcomes it."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naazi'aat 27 to 33",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=79&tAyahNo=27&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ففى الاشياء التي عددها اعظم دلالة واوضح حجة على توحيد الله"
+        },
+        "gloss": "In the things He has enumerated is the greatest indication and the clearest proof of God's oneness."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naazi'aat 34 to 46",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=79&tAyahNo=34&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وإنما خص الانذار بمن يخشى، لانه لما كان المنتفع بالانذار من يخشى فكأنه خص بالانذار"
+        },
+        "gloss": "He singled out the warning for whoever fears, because the one who benefits from the warning is the one who fears, so it is as if the warning was directed to him alone."
+      },
+      {
+        "id": "s13",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naazi'aat 29 to 41",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=79&tAyahNo=29&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "و أما من خاف مقام ربه: علي بن أبي طالب (عليه السلام)، خاف و انتهى عن المعصية، و نهى عن الهوى نفسه { فَإِنَّ ٱلْجَنَّةَ هِيَ ٱلْمَأْوَىٰ } خاصا لعلي و من كان على منهاج علي"
+        },
+        "gloss": "'And as for him who feared the station of his Lord' - Ali ibn Abi Talib, who feared and desisted from disobedience and forbade his soul desire; 'his refuge will indeed be paradise' - specially for Ali and whoever is on Ali's path."
+      },
+      {
+        "id": "s14",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naazi'aat 42 to 46",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=79&tAyahNo=42&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "خلق الشيء الذي جميع الأشياء منه، و هو الماء الذي خلق الأشياء منه"
+        },
+        "gloss": "He created the thing from which all things are made, which is the water from which all things were created."
+      },
+      {
+        "id": "s15",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on An-Naazi'aat 27 to 46",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=79&tAyahNo=27&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "انّ الطامّة الكبرى خروج دابّة الأرض"
+        },
+        "gloss": "The Greatest Catastrophe is the emergence of the Beast of the earth."
+      },
+      {
+        "id": "s25",
+        "kind": "tafsir",
+        "work": "al-Jami li-Ahkam al-Quran",
+        "author": "al-Qurtubi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on An-Naazi'aat 37 to 41",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=5&tSoraNo=79&tAyahNo=37&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والآيتان نزلتا في مصْعَب بن عُمير وأخيه عامر بن عمير"
+        },
+        "gloss": "The two verses were revealed concerning Mus'ab ibn Umayr and his brother Amir ibn Umayr."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:35:45Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T18:01:40Z",
+      "assembled_at": "2026-10-06T18:02:55Z"
+    }
+  }
+}

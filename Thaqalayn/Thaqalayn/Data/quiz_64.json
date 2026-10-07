@@ -1,0 +1,324 @@
+{
+  "1": {
+    "id": "64:1",
+    "surah": 64,
+    "index": 1,
+    "range": [
+      1,
+      10
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 1,
+        "prompt": {
+          "en": "The passage holds that God's most beautiful names and loftiest attributes themselves call for the resurrection and the return of all creation to Him."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reads the opening verses as a preface, holding that God's most beautiful names and loftiest attributes themselves require the resurrection and the return of all creation to Him."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "God's most beautiful names and loftiest attributes themselves require the resurrection and the return of all creation to Him"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 2,
+        "prompt": {
+          "en": "According to Imam al-Sadiq's narration, by what did God know people's faith and their disbelief when He took the covenant?"
+        },
+        "options": [
+          {
+            "en": "By loyalty to the wilaya and abandoning it"
+          },
+          {
+            "en": "By the deeds they did after they were born"
+          },
+          {
+            "en": "By creating some faithful and some faithless"
+          },
+          {
+            "en": "By how they answered the messengers' clear proofs"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Imam al-Sadiq says God knew their faith by loyalty to the wilaya and their disbelief by abandoning it, when He took the covenant while they were particles."
+        },
+        "anchor": {
+          "where": "verses.2.narrations.n1",
+          "quote": "God knew their faith by loyalty to our wilaya and their disbelief by abandoning it, on the day He took the covenant from them, while they were in the realm of particles and in the loins of Adam"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 4,
+        "prompt": {
+          "en": "He knows what is hidden and what is disclosed, which answers those who deny the resurrection as ____."
+        },
+        "options": [
+          {
+            "en": "impossible"
+          },
+          {
+            "en": "pointless"
+          },
+          {
+            "en": "improbable"
+          },
+          {
+            "en": "unnecessary"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says God's knowledge of what is hidden and disclosed answers those who deny the resurrection, dismissing it as improbable rather than certain."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "He knows what is hidden and what is disclosed, which answers those who deny the resurrection as improbable"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 9,
+        "prompt": {
+          "en": "\"The Day of Mutual Loss is the day the people of Paradise outdo the people of the Fire; the Day of Regret is the day death is brought forth and slaughtered.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Sadiq explained the Day of Mutual Loss as the people of Paradise outdoing the people of the Fire, and the Day of Regret as the slaughter of death."
+        },
+        "anchor": {
+          "where": "verses.9.narrations.n4",
+          "quote": "The Day of Mutual Loss is the day the people of Paradise outdo the people of the Fire; the Day of Regret is the day death is brought forth and slaughtered."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 8,
+        "prompt": {
+          "en": "According to the perspectives, how do the Shia commentators treat identifying 'the light' with the Imams of the house of Muhammad?"
+        },
+        "options": [
+          {
+            "en": "As the inner dimension of the verses, not literal exegesis"
+          },
+          {
+            "en": "As the literal meaning that replaces the surface reading"
+          },
+          {
+            "en": "As a later addition the narrations do not support"
+          },
+          {
+            "en": "As the surface meaning both traditions share"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives say Shia narrations add the identification of the light with the Imams as an inner sense, which Tabatabai treats as the verses' inner dimension, not literal exegesis."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Tabatabai treats these identifications, like the gloss of the 'clear proofs' of verse 6 as the Imams, as the inner dimension of the verses, not their literal exegesis"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:58:35Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:59:52Z",
+      "assembled_at": "2026-10-06T13:02:17Z"
+    }
+  },
+  "2": {
+    "id": "64:2",
+    "surah": 64,
+    "index": 2,
+    "range": [
+      11,
+      18
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 11,
+        "prompt": {
+          "en": "\"The heart keeps wavering between the chest and the throat until it ties fast upon faith; once it has tied fast upon faith, it settles.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked about the verse on faith guiding the heart, Imam al-Sadiq described the heart wavering until it ties fast upon faith and then grows still."
+        },
+        "anchor": {
+          "where": "verses.11.narrations.n1",
+          "quote": "The heart keeps wavering between the chest and the throat until it ties fast upon faith; once it has tied fast upon faith, it settles"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 12,
+        "prompt": {
+          "en": "What further dimension do Shia reports give to the command to obey the Apostle?"
+        },
+        "options": [
+          {
+            "en": "That affliction visits no one except by Allah's leave"
+          },
+          {
+            "en": "That the believer's heart is guided to bear affliction"
+          },
+          {
+            "en": "That wealth and children are a test with great reward"
+          },
+          {
+            "en": "That none perished except by abandoning the wilaya of the Prophet's household"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The perspectives say Shia reports give the obedience a further dimension: Imam al-Sadiq taught that none perished except by abandoning the wilaya of the Prophet's household and denying their right."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "al-Sadiq, asked about this verse, taught that none perished except by abandoning the wilaya of the Prophet's household and denying their right, which the Messenger fastened upon the community before he died"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 14,
+        "prompt": {
+          "en": "In the narration, when the men were later reunited with the families who had held them back, they were commanded to cut off ties with them."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The narration says that when Allah reunited the men with their families, He commanded them to keep faith with them, treat them well, and maintain ties, not sever them."
+        },
+        "anchor": {
+          "where": "verses.14.narrations.n4",
+          "quote": "He commanded the man to keep faith with them, treat them well, and maintain ties"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 16,
+        "prompt": {
+          "en": "According to the narration, what can the oppressor do that the miser's conduct rules out?"
+        },
+        "options": [
+          {
+            "en": "Withhold zakat, charity, and kinship"
+          },
+          {
+            "en": "Close every door of good to others"
+          },
+          {
+            "en": "Repent, seek forgiveness, and restore what he wronged"
+          },
+          {
+            "en": "Be forbidden from entering Paradise"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "In the narration Imam Ali says the oppressor may repent, seek forgiveness, and restore what he wronged, while the miser closes every door of good and no miser enters Paradise."
+        },
+        "anchor": {
+          "where": "verses.16.narrations.n7",
+          "quote": "The oppressor may repent, seek forgiveness, and restore what he wronged"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "fillGap",
+        "verse": 17,
+        "prompt": {
+          "en": "Lend Allah a good loan, meaning ____, and He multiplies it and forgives."
+        },
+        "options": [
+          {
+            "en": "bear affliction with patience"
+          },
+          {
+            "en": "spend in His way"
+          },
+          {
+            "en": "guard against hidden enemies"
+          },
+          {
+            "en": "forgive your family their faults"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay glosses 'lend Allah a good loan' as a call to spend in His way, which He then multiplies and rewards with forgiveness."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Lend Allah a good loan, meaning spend in His way, and He multiplies it and forgives"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T13:00:36Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T13:01:59Z",
+      "assembled_at": "2026-10-06T13:02:17Z"
+    }
+  }
+}

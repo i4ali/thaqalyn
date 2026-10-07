@@ -1,0 +1,485 @@
+{
+  "1": {
+    "id": "50:1",
+    "surah": 50,
+    "index": 1,
+    "range": [
+      1,
+      15
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "fillGap",
+        "verse": 1,
+        "prompt": {
+          "en": "The commentators note that the response to this oath is left ____"
+        },
+        "options": [
+          {
+            "en": "obvious"
+          },
+          {
+            "en": "unstated"
+          },
+          {
+            "en": "repeated"
+          },
+          {
+            "en": "delayed"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says the commentators note the oath's response is left unstated; its sense is that what the deniers were promised is true and they shall surely be raised."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The commentators note that the response to this oath is left unstated"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 2,
+        "prompt": {
+          "en": "According to the note on verse 2, what did Ubayy ibn Khalaf do before Abu Jahl?"
+        },
+        "options": [
+          {
+            "en": "He scattered the dust of a grave to deny any return."
+          },
+          {
+            "en": "He snapped a date palm branch and demanded a sign."
+          },
+          {
+            "en": "He crumbled a bone and jeered that it would live again."
+          },
+          {
+            "en": "He pointed to the sky and claimed it had cracks."
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Qummi relates these verses came down about Ubayy ibn Khalaf, who crumbled a bone before Abu Jahl and jeered that Muhammad claimed it would live again."
+        },
+        "anchor": {
+          "where": "verses.2.note",
+          "quote": "who crumbled a bone before Abu Jahl and jeered that Muhammad claimed it would live again"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "trueFalse",
+        "verse": 5,
+        "prompt": {
+          "en": "According to the passage, the deniers' real problem was not ignorance but denial, since they rejected the truth after it came to them."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says their problem is not ignorance but denial: they rejected the truth when it reached them and fell into confusion, calling the Prophet mad, a magician, and a poet."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Their problem, the surah adds, is not ignorance but denial: they rejected the truth when it reached them"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "whoSaid",
+        "verse": 9,
+        "prompt": {
+          "en": "\"There is no water on earth but that the water of the sky has mingled with it.\" Who said this of the rain?"
+        },
+        "options": [
+          {
+            "en": "Prophet Muhammad"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked about the verse on salubrious water, the Messenger of God said there is no water on earth but that the water of the sky has mingled with it."
+        },
+        "anchor": {
+          "where": "verses.9.narrations.n1",
+          "quote": "there is no water on earth but that the water of the sky has mingled with it"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 15,
+        "prompt": {
+          "en": "According to the essay's close, how does the passage turn the deniers' objection back on itself?"
+        },
+        "options": [
+          {
+            "en": "The first creation tired God, so the new one is easier."
+          },
+          {
+            "en": "The ruined nations perished because creation had wearied God."
+          },
+          {
+            "en": "The deniers doubt because the first creation was never finished."
+          },
+          {
+            "en": "The first creation did not tire God, so He can restore."
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay's close turns the denial back on itself: God was not wearied by the first creation, so He is not unable to restore it, yet they still doubt."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "God was not wearied by the first creation, its origination, so He is not unable to restore it"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-04T18:35:43Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-04T19:40:35Z",
+      "assembled_at": "2026-10-04T19:55:29Z"
+    }
+  },
+  "2": {
+    "id": "50:2",
+    "surah": 50,
+    "index": 2,
+    "range": [
+      16,
+      29
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "trueFalse",
+        "verse": 16,
+        "prompt": {
+          "en": "According to the passage, the whisper in man's soul is ascribed to Satan alone, never to the soul itself."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay says Tabatabai ascribes the whisper to the soul itself and not only to Satan, so claiming it belongs to Satan alone reverses his reading."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "the whisper is ascribed to the soul itself, not only to Satan"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 19,
+        "prompt": {
+          "en": "What alternate reading of the death verse does the passage report as the recitation of the Ahl al-Bayt?"
+        },
+        "options": [
+          {
+            "en": "The throes of death bring the truth"
+          },
+          {
+            "en": "The agony of the truth came with death"
+          },
+          {
+            "en": "This is the promised day of resurrection"
+          },
+          {
+            "en": "This is what you used to shun"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The note says Al-Tusi records the Ahl al-Bayt's recitation as 'the agony of the truth came with death,' not the throes of death bringing the truth."
+        },
+        "anchor": {
+          "where": "verses.19.note",
+          "quote": "Al-Tusi records an alternate reading, 'the agony of the truth came with death,' the recitation of the Ahl al-Bayt"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 22,
+        "prompt": {
+          "en": "The veil is lifted, and the man's sight, long dulled by his absorption in worldly ____, becomes acute."
+        },
+        "options": [
+          {
+            "en": "causes"
+          },
+          {
+            "en": "pleasures"
+          },
+          {
+            "en": "affairs"
+          },
+          {
+            "en": "desires"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay says the man's sight was long dulled by his absorption in worldly causes, so once the veil is lifted his eyesight becomes acute."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The veil is lifted, and the man's sight, long dulled by his absorption in worldly causes, becomes acute"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 27,
+        "prompt": {
+          "en": "In the passage, what does the devil who accompanied the man say at the judgment?"
+        },
+        "options": [
+          {
+            "en": "That God had ordered him to tempt the man"
+          },
+          {
+            "en": "That he will share the punishment with the man"
+          },
+          {
+            "en": "That he did not make the man rebel; the man erred himself"
+          },
+          {
+            "en": "That the man forced him into rebellion"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says the companion devil disowns the man at judgment, claiming he did not make him rebel but that the man chose his own far error."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "The devil who accompanied him disowns him: I did not make him rebel, but he chose his own far error"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "whoSaid",
+        "verse": 29,
+        "prompt": {
+          "en": "\"Rather, He gives them a choice and grants them respite until they repent ... How could He, when He says, 'Your Lord is not unjust to the servants'?\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Rida"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked whether God compels people to sin, Imam al-Rida replied that God gives them a choice and respite to repent, and never burdens them beyond their capacity."
+        },
+        "anchor": {
+          "where": "verses.29.narrations.n9",
+          "quote": "Rather, He gives them a choice and grants them respite until they repent"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-04T18:43:33Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-04T19:40:49Z",
+      "assembled_at": "2026-10-04T19:55:29Z"
+    }
+  },
+  "3": {
+    "id": "50:3",
+    "surah": 50,
+    "index": 3,
+    "range": [
+      30,
+      45
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 30,
+        "prompt": {
+          "en": "\"My Lord, You promised to fill the Fire and promised to fill me; why have You not filled me when You have filled the Fire?\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked about Hell's question whether it is full, Imam al-Sadiq described Paradise pleading to be filled as the Fire was, after which God creates a new creation to fill it."
+        },
+        "anchor": {
+          "where": "verses.30.narrations.n1",
+          "quote": "My Lord, You promised to fill the Fire and promised to fill me; why have You not filled me when You have filled the Fire?"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "multipleChoice",
+        "verse": 36,
+        "prompt": {
+          "en": "According to the essay, how does Tabatabai read verse 36 about the mightier nations that were destroyed?"
+        },
+        "options": [
+          {
+            "en": "As a promise of reward to the patient"
+          },
+          {
+            "en": "As praise for nations stronger than these"
+          },
+          {
+            "en": "As capping the argument with a threat"
+          },
+          {
+            "en": "As a sign the deniers will be forgiven"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says Tabatabai reads the question about the destroyed nations as capping the argument with a threat, echoing the warning that opened the surah."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "Tabatabai reads this as capping the argument with a threat, echoing the warning that opened the surah"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "fillGap",
+        "verse": 37,
+        "prompt": {
+          "en": "O Hisham, God says in His Book, 'There is indeed an admonition in that for one who has a heart' - meaning ____."
+        },
+        "options": [
+          {
+            "en": "remembrance"
+          },
+          {
+            "en": "intellect"
+          },
+          {
+            "en": "patience"
+          },
+          {
+            "en": "mercy"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The narration glosses the heart in the verse as the intellect, so the one who has a heart is the one who reasons, not merely an organ."
+        },
+        "anchor": {
+          "where": "verses.37.narrations.n2",
+          "quote": "God says in His Book, 'There is indeed an admonition in that for one who has a heart' - meaning intellect"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "trueFalse",
+        "verse": 41,
+        "prompt": {
+          "en": "According to the passage, the day the caller calls from a close quarter is explained as the Return."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "Asked about the caller, the Cry and the day of rising, Imam al-Sadiq answered that it is the Return, which is what the passage states."
+        },
+        "anchor": {
+          "where": "verses.41.narrations.n6",
+          "quote": "He said: It is the Return."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 45,
+        "prompt": {
+          "en": "According to the essay's closing paragraph, what does it say is the Prophet's task toward those who deny?"
+        },
+        "options": [
+          {
+            "en": "To compel them until they believe"
+          },
+          {
+            "en": "To record what the deniers say against them"
+          },
+          {
+            "en": "To withhold the Quran from those who fear"
+          },
+          {
+            "en": "Only to admonish by the Quran those who fear the threat"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay's close says the Prophet is not there to compel the deniers; his task is only to admonish by the Quran those who fear the threat."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "his task is only to admonish by the Quran those who fear the threat"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-04T19:54:33Z",
+      "review_attempts": 3,
+      "reviewed_at": "2026-10-04T19:55:10Z",
+      "assembled_at": "2026-10-04T19:55:29Z"
+    }
+  }
+}

@@ -1,0 +1,642 @@
+{
+  "1": {
+    "id": "69:1",
+    "surah": 69,
+    "index": 1,
+    "range": [
+      1,
+      37
+    ],
+    "title": {
+      "en": "The Reality and the Reckoning"
+    },
+    "essay": {
+      "en": "The surah opens by naming the Day of Resurrection and asking, in rising awe, what it is: 'The Besieger! What is the Besieger? What will show you what is the Besieger?' al-Tabatabai reads al-Haaqqa as the Resurrection, named thus because its coming is fixed and beyond denial [1], and al-Tabrisi notes that the commentators agree it is one of the names of that Day, so called because its every verdict is bound to come true [3]. al-Tusi adds that it is the hour in which recompense for guidance and misguidance is made certain [6].\n\nTo answer what it is, the surah points to peoples who called the Day a lie and were destroyed: Thamud by 'the Cry,' and Ad by 'a fierce icy gale' loosed on them for seven nights and eight days, until they lay like 'hollow trunks of palm trees' [1]. Then Pharaoh, those before him, and 'the towns that were overturned' - the settlements of Lot's people - 'brought about iniquity' and were seized with a terrible seizing [3]. From ruin the surah turns to rescue: when the Flood rose, God carried their forefathers in the ark, 'that We might make it a reminder, and that receptive ears might remember it' [1].\n\nThe scene then shifts to the Day itself: one blast of the Trumpet, the earth and mountains lifted and levelled, the sky split and frail, the angels on its edges, and the Throne borne by eight, with every secret laid bare [2]. Humankind divides. The one handed his record in his right hand calls out in joy and enters a high garden whose fruit hangs near; the one handed it in his left wishes for death as his wealth and authority fail him [2]. He is seized, fettered, cast into hell and bound in a chain seventy cubits long, for he had no faith in Allah and never urged the feeding of the needy. The passage closes on his portion: no friend, and no food but pus [2]."
+    },
+    "verses": [
+      {
+        "verse": 6,
+        "heading": {
+          "en": "The wind against Ad"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "و أما الريح العقيم فإنها ريح عذاب … فأمر الخزان أن يخرجوا منها على قدر سعة الخاتم، فعتت على الخزان فخرج منها على مقدار منخر الثور تغيظا منها على قوم عاد",
+            "chain": "Muhammad ibn Yaqub, from Muhammad ibn Yahya, from Ahmad ibn Muhammad, from Ibn Mahbub, from Abdillah ibn Sinan, from Maruf ibn Kharrabudh, from Abu Jafar",
+            "text": {
+              "en": "The barren wind is a wind of punishment. God ordered its keepers to release only the measure of a ring's opening; but it defied the keepers and came out the size of a bull's nostril, in fury against the people of Ad."
+            },
+            "source": "s30"
+          }
+        ]
+      },
+      {
+        "verse": 9,
+        "heading": {
+          "en": "Pharaoh and the overturned towns"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "{ وَجَآءَ فِرْعَوْنُ } يعني الثالث، { وَمَن قَبْلَهُ } الأولين { وَٱلْمُؤْتَفِكَاتُ } [أهل البصرة] { بِالْخَاطِئَةِ } [الحميراء] يعني عائشة",
+            "chain": "Sharaf al-Din al-Najafi, from Muhammad al-Barqi, from al-Husayn ibn Sayf ibn Umayra, from his brother, from Mansur ibn Hazim, from Hamran, from Abu Jafar",
+            "text": {
+              "en": "'And Pharaoh came' means the third; 'and those before him,' the former ones; 'and the overturned towns,' the people of Basra; 'with iniquity,' al-Humayra - meaning Aisha."
+            },
+            "source": "s32"
+          }
+        ]
+      },
+      {
+        "verse": 12,
+        "heading": {
+          "en": "The receptive ear"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "وعتها أذن أمير المؤمنين (عليه السلام) من الله و ما كان و ما يكون",
+            "chain": "Sa'd ibn Abdillah, from al-Hasan ibn Musa al-Khashshab, from Ali ibn Hassan, from Abd al-Rahman ibn Kathir, from Abu Abdillah",
+            "text": {
+              "en": "The ear of the Commander of the Faithful retained it from God - all that was and all that will be."
+            },
+            "source": "s35"
+          },
+          {
+            "id": "n4",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "أنا الأذن الواعية، يقول الله عز و جل: { وَتَعِيَهَآ أُذُنٌ وَاعِيَةٌ }",
+            "chain": "Ibn Babawayh, from al-Taliqani, from al-Jaludi, from al-Mughira ibn Muhammad, from Raja ibn Salama, from Amr ibn Shamir, from Jabir al-Ju'fi, from Abu Jafar Muhammad ibn Ali, from Ali",
+            "text": {
+              "en": "I am the retaining ear. God says: 'and that receptive ears might remember it.'"
+            },
+            "source": "s35"
+          }
+        ]
+      },
+      {
+        "verse": 17,
+        "heading": {
+          "en": "The Throne borne by eight"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "حملة العرش- و العرش: العلم- [ثمانية] أربعة منا، و أربعة ممن شاء الله",
+            "chain": "Muhammad ibn Yaqub, from Muhammad ibn Yahya, from Ahmad ibn Muhammad ibn Isa, from Ahmad ibn Muhammad ibn Abi Nasr, from Muhammad ibn al-Fudayl, from Abu Hamza, from Abu Abdillah",
+            "text": {
+              "en": "The bearers of the Throne - and the Throne is knowledge - are eight: four from us and four from whom God wills."
+            },
+            "source": "s37"
+          },
+          {
+            "id": "n6",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "حملة العرش ثمانية أربعة من الأولين وأربعة من الآخرين فأما الأربعة من الأولين فنوح وإبراهيم وموسى وعيسى، والأربعة من الآخرين محمد وعلي والحسن والحسين عليهم السلام، ومعنى يحملون العرش يعني: العلم",
+            "chain": null,
+            "text": {
+              "en": "The bearers of the Throne are eight: four of the former - Noah, Abraham, Moses and Jesus - and four of the latter - Muhammad, Ali, al-Hasan and al-Husayn. Bearing the Throne means bearing knowledge."
+            },
+            "source": "s20"
+          }
+        ]
+      },
+      {
+        "verse": 19,
+        "heading": {
+          "en": "Book in the right hand"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "كل امة يحاسبها إمام زمانها، و يعرف الأئمة أولياءهم و أعداءهم بسيماهم … فيعطون أولياءهم كتبهم بأيمانهم، فيمرون إلى الجنة بغير حساب",
+            "chain": null,
+            "text": {
+              "en": "Every community is reckoned by the Imam of its age. The Imams know their friends and their enemies by their marks; they hand their friends their books in their right hands, and these pass to Paradise without reckoning."
+            },
+            "source": "s38"
+          },
+          {
+            "id": "n8",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "نزلت في علي (عليه السلام)، و جرت في أهل الايمان مثلا",
+            "chain": "Muhammad ibn al-Abbas, from Muhammad ibn al-Husayn, from Jafar ibn Abdillah al-Muhammadi, from Kathir ibn Ayyash, from Abu'l-Jarud, from Abu Jafar",
+            "text": {
+              "en": "It was revealed about Ali, and it runs as a likeness among the people of faith."
+            },
+            "source": "s38"
+          }
+        ]
+      },
+      {
+        "verse": 25,
+        "heading": {
+          "en": "Book in the left hand"
+        },
+        "narrations": [
+          {
+            "id": "n9",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "قال نزلت في معاوية فيقول: { يا ليتني لم أُوت كتابيه ولم أدر ما حسابيه يا ليتها كانت القاضية } … يعني: الموت",
+            "chain": null,
+            "text": {
+              "en": "It was revealed about Mu'awiya, who says: 'I wish I had not been given my book, nor had I ever known what my account is. I wish death had been the end' - meaning death."
+            },
+            "source": "s23"
+          }
+        ]
+      },
+      {
+        "verse": 32,
+        "heading": {
+          "en": "The chain of seventy cubits"
+        },
+        "narrations": [
+          {
+            "id": "n10",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "كان معاوية صاحب السلسلة التي قال الله عز و جل: { ثُمَّ فِي سِلْسِلَةٍ ذَرْعُهَا سَبْعُونَ ذِرَاعاً فَاسْلُكُوهُ } … و كان فرعون هذه الأمة",
+            "chain": "Muhammad ibn Yaqub, from a number of our companions, from Ahmad ibn Muhammad, from Ali ibn al-Hakam, from al-Husayn ibn Abi'l-Ala, from Abu Abdillah",
+            "text": {
+              "en": "Mu'awiya was the owner of the chain that God mentioned - 'Then bind him in a chain, seventy cubits in length' - and he was the Pharaoh of this community."
+            },
+            "source": "s40"
+          },
+          {
+            "id": "n11",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "معنى السلسلة السبعين ذراعاً في الباطن هم الجبابرة السبعون",
+            "chain": null,
+            "text": {
+              "en": "The inner meaning of the chain, seventy cubits long, is the seventy tyrants."
+            },
+            "source": "s26"
+          }
+        ]
+      },
+      {
+        "verse": 33,
+        "heading": {
+          "en": "No faith, no feeding"
+        },
+        "narrations": [
+          {
+            "id": "n12",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "{ إنه كان لا يؤمن بالله العظيم ولا يحض على طعام المسكين } … حقوق آل محمد التى غصبوها",
+            "chain": null,
+            "text": {
+              "en": "'He had no faith in Allah, the All-supreme, and did not urge the feeding of the needy' - these are the rights of the family of Muhammad which they usurped."
+            },
+            "source": "s27"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Shia and Sunni commentary diverge over who is meant in verses 19 and 25. The Shia narrations read the man handed his record in his right hand as Ali and, following him, the people of faith, and the man handed it in his left as his enemies [38]; one report names that figure as Mu'awiya [23]. The Sunni reading keeps the reference general - the saved believer and the wretch - though al-Qurtubi also carries Ibn Abbas's view that the first of this community to be given his book in his right hand is Umar ibn al-Khattab [73]. For one tradition the scene portrays the Imam and his foes; for the other, every believer and wretch."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Haaqqa 1 to 12",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=69&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "المراد بالحاقة القيامة الكبرى سميت بها لثبوتها ثبوتاً لا مردَّ له ولا ريب فيه"
+        },
+        "gloss": "By al-Haaqqa is meant the Great Resurrection, named thus for its fixedness that cannot be repelled and about which there is no doubt."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Haaqqa 13 to 37",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=69&tAyahNo=13&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قد تقدم أن النفخ في الصور كناية عن البعث والإحضار لفصل القضاء"
+        },
+        "gloss": "As mentioned before, the blowing of the Trumpet stands for the raising and the bringing forth for the parting judgment."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Haaqqa 1 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=69&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ الحاقة } اسم من أسماء القيامة في قول جميع المفسرين"
+        },
+        "gloss": "al-Haaqqa is one of the names of the Resurrection, in the view of all the commentators."
+      },
+      {
+        "id": "s6",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Haaqqa 1 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=69&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إن الحاقة اسم من اسماء القيامة وسميت بذلك لانها الساعة التي يحق فيها الجزاء على الاعمال"
+        },
+        "gloss": "al-Haaqqa is one of the names of the Resurrection, so called because it is the hour in which recompense for deeds is made certain."
+      },
+      {
+        "id": "s30",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Haaqqa 1 to 6",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=69&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فعتت على الخزان فخرج منها على مقدار منخر الثور تغيظا منها على قوم عاد"
+        },
+        "gloss": "It defied the keepers and came out the size of a bull's nostril, in fury against the people of Ad."
+      },
+      {
+        "id": "s32",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Haaqqa 9",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=69&tAyahNo=9&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ بِالْخَاطِئَةِ } [الحميراء] يعني عائشة"
+        },
+        "gloss": "'With iniquity,' al-Humayra - meaning Aisha."
+      },
+      {
+        "id": "s35",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Haaqqa 12",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=69&tAyahNo=12&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وعتها أذن أمير المؤمنين (عليه السلام) من الله و ما كان و ما يكون"
+        },
+        "gloss": "The ear of the Commander of the Faithful retained it from God - what was and what will be."
+      },
+      {
+        "id": "s37",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Haaqqa 17",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=69&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "حملة العرش- و العرش: العلم- [ثمانية] أربعة منا، و أربعة ممن شاء الله"
+        },
+        "gloss": "The bearers of the Throne - and the Throne is knowledge - are eight: four from us and four from whom God wills."
+      },
+      {
+        "id": "s20",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Haaqqa 17",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=69&tAyahNo=17&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "حملة العرش ثمانية أربعة من الأولين وأربعة من الآخرين"
+        },
+        "gloss": "The bearers of the Throne are eight: four of the former and four of the latter."
+      },
+      {
+        "id": "s38",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Haaqqa 19 to 23",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=69&tAyahNo=19&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "نزلت في علي (عليه السلام)، و جرت في أهل الايمان مثلا"
+        },
+        "gloss": "It was revealed about Ali, and runs as a likeness among the people of faith."
+      },
+      {
+        "id": "s23",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Haaqqa 25 to 27",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=69&tAyahNo=25&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال نزلت في معاوية"
+        },
+        "gloss": "He said: it was revealed about Mu'awiya."
+      },
+      {
+        "id": "s40",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Haaqqa 25 to 32",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=69&tAyahNo=25&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "كان معاوية صاحب السلسلة التي قال الله عز و جل: { ثُمَّ فِي سِلْسِلَةٍ ذَرْعُهَا سَبْعُونَ ذِرَاعاً فَاسْلُكُوهُ * إِنَّهُ كَانَ لاَ يُؤْمِنُ بِٱللَّهِ ٱلْعَظِيمِ } [الحاقة: 32-33] و كان فرعون هذه الأمة"
+        },
+        "gloss": "Mu'awiya was the owner of the chain that God mentioned - 'Then bind him in a chain seventy cubits in length. Indeed he had no faith in Allah, the All-supreme' - and he was the Pharaoh of this community."
+      },
+      {
+        "id": "s26",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Haaqqa 32",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=69&tAyahNo=32&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "معنى السلسلة السبعين ذراعاً في الباطن هم الجبابرة السبعون"
+        },
+        "gloss": "The inner meaning of the chain, seventy cubits long, is the seventy tyrants."
+      },
+      {
+        "id": "s27",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Haaqqa 33 to 34",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=69&tAyahNo=33&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "حقوق آل محمد التى غصبوها"
+        },
+        "gloss": "The rights of the family of Muhammad which they usurped."
+      },
+      {
+        "id": "s73",
+        "kind": "tafsir",
+        "work": "al-Jami li-Ahkam al-Quran",
+        "author": "al-Qurtubi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Haaqqa 19 to 34",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=5&tSoraNo=69&tAyahNo=19&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أوّلُ مَن يُعطَى كتابه بيمينه من هذه الأمة عمر بن الخطاب"
+        },
+        "gloss": "The first of this community to be given his book in his right hand is Umar ibn al-Khattab."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:08:25Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-10-06T17:34:25Z",
+      "assembled_at": "2026-10-06T17:35:09Z"
+    }
+  },
+  "2": {
+    "id": "69:2",
+    "surah": 69,
+    "index": 2,
+    "range": [
+      38,
+      52
+    ],
+    "title": {
+      "en": "The Qur'an sworn true"
+    },
+    "essay": {
+      "en": "The surah has described the Day of Reckoning; its closing section now swears an oath that confirms what came before and affirms the truth of the Qur'an [1]. God swears by what you see and what you do not see, the whole of creation, seen and unseen, which al-Mizan reads as an oath that does not sweep in God's own exalted Essence, since the Qur'an does not set Creator and creation on one level [1]. Tabatabai sets aside the readings that take 'what you see and what you do not see' to mean the Creator and the creation, or outward and inward blessings; the wording, he holds, is wider than any of these [1]. al-Tabrisi records several senses for the opening particle: that it rebuts the deniers, that it is added for emphasis so the sense is 'I swear,' or that it denies any need for an oath because the matter is plain [2].\n\nThe oath's answer is that the Qur'an is the speech of a noble apostle. al-Mizan takes this apostle to be the Prophet, the Qur'an ascribed to him only as the one who conveys his Sender's word, as 'sent down from the Lord of all the worlds' makes clear; the reading that this apostle is Gabriel, he notes, is not supported by the context here [1]. It is neither a poet's composition nor a soothsayer's rhymed speech: God purified His Prophet of both and set the Qur'an outside the customary forms of speech [2]. 'Little is the faith, little the admonition' rebukes a people who scarcely believe [2].\n\nThen a severe supposition: had the Prophet faked any sayings in God's name, God would have seized him and cut his aorta, with none able to shield him. al-Mizan reads this as a threat voiced on the supposition of fabrication, aimed at the truthful messenger and parallel to Isra 74-75; it does not mean that every false claimant to prophethood is struck down in this world [1]. The Qur'an is then named a reminder for the Godwary, a regret for the faithless, and certain truth, and the surah closes by commanding that the Lord's supreme Name be glorified, which al-Tusi links to the words of the bowing in prayer [3]. Shia reports further read these closing affirmations in light of the wilaya of Ali [9]."
+    },
+    "verses": [
+      {
+        "verse": 40,
+        "heading": {
+          "en": "A noble apostle's speech"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Kazim",
+            "addressee": null,
+            "arabic": "يعني جبرئيل عن الله في ولاية علي (عليه السلام) … إن ولاية علي تنزيل من رب العالمين، و لو تقول علينا بعض الأقاويل، لأخذنا منه باليمين، ثم لقطعنا منه الوتين. ثم عطف القول: [فقال] إن ولاية علي لتذكرة للمتقين- للعالمين- و إنا لنعلم أن منكم مكذبين، و إن عليا لحسرة على الكافرين، و إن ولاية علي لحق اليقين فسبح- يا محمد- باسم ربك العظيم.",
+            "chain": "Muhammad ibn Yaqub, from Ali ibn Muhammad, from certain of our companions, from Ibn Mahbub, from Muhammad ibn al-Fudayl, from Abu al-Hasan al-Madi",
+            "text": {
+              "en": "Asked about 'the speech of a noble apostle,' he said: it means Gabriel, from God, concerning the wilaya of Ali. They had said Muhammad lies about his Lord and was not commanded this about Ali, so God revealed that Ali's wilaya is sent down from the Lord of the worlds, and that Ali is a regret for the faithless."
+            },
+            "source": "s9"
+          }
+        ]
+      },
+      {
+        "verse": 44,
+        "heading": {
+          "en": "Had he faked sayings"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "لما قال النبي (صلى الله عليه و آله): من كنت مولاه فعلي مولاه قال العدوي: لا و الله ما أمره الله بهذا، و ما هو إلا شيء يتقوله، فأنزل الله تعالى: { وَلَوْ تَقَوَّلَ عَلَيْنَا بَعْضَ ٱلأَقَاوِيلِ } إلى قوله: { وَإِنَّهُ لَحَسْرَةٌ عَلَى ٱلْكَافِرِينَ } يعني محمدا { وَإِنَّهُ لَحَقُّ ٱلْيَقِينِ } يعني به عليا (عليه السلام)",
+            "chain": "Ibn Shahr Ashub, from Mu'awiya ibn Ammar, from al-Sadiq",
+            "text": {
+              "en": "When the Prophet said, 'Whoever's master I am, Ali is his master,' al-Adawi said: No, by God, God did not command this; it is only something he fabricates. So God sent down 'Had he faked any sayings in Our name' down to 'a regret for the faithless,' meaning Muhammad, and 'certain truth,' meaning Ali."
+            },
+            "source": "s9"
+          }
+        ]
+      },
+      {
+        "verse": 52,
+        "heading": {
+          "en": "Glorify your Lord's Name"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Prophet Muhammad",
+            "addressee": null,
+            "arabic": "لَمَّا أَنْزَلَ اَللَّهُ تَبَارَكَ وتَعَالَى «فَسَبِّحْ بِاسْمِ رَبِّكَ اَلْعَظِيمِ» قَالَ اَلنَّبِيُّ صَلَّى اَللَّهُ عَلَيْهِ وَ آلِهِ «اِجْعَلُوهَا فِي رُكُوعِكُمْ»",
+            "chain": null,
+            "text": {
+              "en": "When God sent down 'So celebrate the Name of your Lord, the All-supreme,' the Prophet said: Place it in your bowing."
+            },
+            "source": "s38"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On the surface both traditions read the passage alike: God swears the Qur'an is His revelation, not a poet's or a soothsayer's words, and warns against fabrication. They divide over the closing verses. Shia narrations from Imams al-Kazim and al-Sadiq tie 'a revelation from the Lord of all the worlds,' 'a regret for the faithless,' and 'certain truth' to the wilaya of Ali and the Prophet's declaration at Ghadir [9]. Ibn Kathir refers these instead to the Qur'an itself [15], and relates that hearing this very recitation turned Umar toward Islam [14]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Haaqqa 38 to 52",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=69&tAyahNo=38&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والمستفاد من السياق أن المراد برسول كريم النبي صلى الله عليه وآله وسلم وهو تصديق لرسالته قبال ما كانوا يقولون إنه شاعر أو كاهن"
+        },
+        "gloss": "What the context yields is that the noble messenger meant is the Prophet, an affirmation of his messengership against their claim that he is a poet or a soothsayer."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Haaqqa 38 to 52",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=69&tAyahNo=38&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "طهَّره الله سبحانه من الشعر والكهانة وعصمه عنهما"
+        },
+        "gloss": "God purified him of poetry and soothsaying and protected him from both."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Haaqqa 38 to 52",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=69&tAyahNo=38&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وروي انه لما نزلت هذه الآية قال النبي صلى الله عليه وآله … اجعلوها في ركوعكم"
+        },
+        "gloss": "It is narrated that when this verse was sent down, the Prophet said ... place it in your bowing."
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Haaqqa 40 to 52",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=69&tAyahNo=40&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فأنزل الله تعالى: { وَلَوْ تَقَوَّلَ عَلَيْنَا بَعْضَ ٱلأَقَاوِيلِ } إلى قوله: { وَإِنَّهُ لَحَسْرَةٌ عَلَى ٱلْكَافِرِينَ } يعني محمدا { وَإِنَّهُ لَحَقُّ ٱلْيَقِينِ } يعني به عليا"
+        },
+        "gloss": "So God sent down 'Had he faked any sayings in Our name' up to 'a regret for the faithless,' meaning Muhammad, and 'certain truth,' meaning Ali."
+      },
+      {
+        "id": "s14",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Haaqqa 38 to 43",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=69&tAyahNo=38&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فاستفتح سورة الحاقة، فجعلت أعجب من تأليف القرآن … فوقع الإسلام في قلبي كل موقع"
+        },
+        "gloss": "He began reciting Surah al-Haaqqa, and I marvelled at the composition of the Qur'an ... and Islam settled firmly in my heart."
+      },
+      {
+        "id": "s15",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Haaqqa 44 to 52",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=69&tAyahNo=44&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ وَإِنَّهُ لَتَذْكِرَةٌ لِّلْمُتَّقِينَ } يعني القرآن … أي الخبر الصادق الحق الذي لا مرية فيه"
+        },
+        "gloss": "'Indeed it is a reminder for the Godwary' means the Qur'an ... the truthful, certain report in which there is no doubt."
+      },
+      {
+        "id": "s38",
+        "kind": "hadith",
+        "work": "Man La Yahduruh al-Faqih",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 932, cited at Al-Haaqqa 52",
+        "url": "https://thaqalayn.com/book/20",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "لَمَّا أَنْزَلَ اَللَّهُ تَبَارَكَ وتَعَالَى «فَسَبِّحْ بِاسْمِ رَبِّكَ اَلْعَظِيمِ» قَالَ اَلنَّبِيُّ صَلَّى اَللَّهُ عَلَيْهِ وَ آلِهِ «اِجْعَلُوهَا فِي رُكُوعِكُمْ»"
+        },
+        "gloss": "When God sent down 'So celebrate the Name of your Lord, the All-supreme,' the Prophet said: Place it in your bowing."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:12:28Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T17:34:46Z",
+      "assembled_at": "2026-10-06T17:35:09Z"
+    }
+  }
+}

@@ -1,0 +1,502 @@
+{
+  "1": {
+    "id": "73:1",
+    "surah": 73,
+    "index": 1,
+    "range": [
+      1,
+      19
+    ],
+    "title": {
+      "en": "Rise for the night vigil"
+    },
+    "essay": {
+      "en": "The surah opens by addressing the Prophet as the one wrapped in his mantle and calling him to rise. Al-Mizan counts it among the oldest surahs, revealed at the very start of the mission, even said to be the second or third sent down. [1] He is told to stand through the night in prayer, half of it, or a little less, or a little more, and to recite the Quran in a measured, deliberate voice.\n\nThen comes the reason: 'Indeed soon We shall cast on you a weighty discourse.' Majma al-Bayan reads this weighty word as the revelation about to be sent down, heavy both to receive and to live out in its commands, upon the Prophet and upon his community alike. [2] The night watch is singled out because its hours are firmer underfoot and its speech more upright, while the day is taken up with long engagements. So he is to celebrate his Lord's name, devote himself wholly to Him, the Lord of the east and the west, and take Him as his trustee.\n\nThe passage then turns outward. He is to bear patiently what the deniers say and withdraw from them gracefully, leaving their affair to God: 'Leave Me [to deal] with the deniers, the opulent, and give them a little respite.' What awaits them is set out plainly: heavy fetters, a blazing fire, food that chokes, and a painful punishment, on a day when the earth and the mountains quake and the mountains crumble to shifting sand.\n\nA messenger has been sent to them as a witness, just as one was sent to Pharaoh; Pharaoh disobeyed and was seized with a terrible grip. The warning sharpens: if they disbelieve, how will they shield themselves from a Day that turns children grey-headed and tears the sky apart? His promise will be kept. The passage closes by stepping back: this is a reminder, and whoever wishes may take the road to his Lord."
+    },
+    "verses": [
+      {
+        "verse": 2,
+        "heading": {
+          "en": "Pray every night"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "أمره الله أن يصلي كل ليلة، إلا أن يأتي عليه ليلة من الليالي لا يصلي فيها شيئا",
+            "chain": "al-Tusi in al-Tahdhib, by his chain, from Muhammad ibn al-Husayn, from Muhammad ibn Ismail, from Mansur, from Umar ibn Udhayna, from Muhammad ibn Muslim, from Abu Jafar",
+            "text": {
+              "en": "God commanded him to pray every night, except that some night might come upon him in which he prays nothing."
+            },
+            "source": "s13"
+          }
+        ]
+      },
+      {
+        "verse": 3,
+        "heading": {
+          "en": "Half the night"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "القليل النصف أو أنقص من القليل قليلاً أو زد على القليل قليلاً",
+            "chain": null,
+            "text": {
+              "en": "The 'little' here is the half; then reduce from that little a little, or add to that little a little."
+            },
+            "source": "s2"
+          }
+        ]
+      },
+      {
+        "verse": 4,
+        "heading": {
+          "en": "How to recite"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam Ali",
+            "addressee": null,
+            "arabic": "بينه تبيانا و لا تهذه هذ الشعر، و لا تنثره نثر الرمل، و لكن أفزعوا قلوبكم القاسية، و لا يكن هم أحدكم آخر السورة",
+            "chain": "Muhammad ibn Yaqub, from Ali ibn Ibrahim, from his father, from Ali ibn Mabad, from Wasil ibn Sulayman, from Abdullah ibn Sulayman, from Abu Abdillah, from Amir al-Muminin",
+            "text": {
+              "en": "Make it clear, and do not gabble it as poetry is gabbled, nor scatter it as sand is scattered; rather strike your hardened hearts with it, and let none of you make reaching the end of the surah his only concern."
+            },
+            "source": "s14"
+          }
+        ]
+      },
+      {
+        "verse": 6,
+        "heading": {
+          "en": "Rising for God alone"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "يعني بقوله: { وَأَقْوَمُ قِيلاً } قيام الرجل من فراشه يريد به الله لا يريد به غيره",
+            "chain": "Muhammad ibn Yaqub, from Muhammad ibn Yahya, from Ahmad ibn Muhammad, from Ibn Abi Umayr, from Hisham ibn Salim, from Abu Abdillah",
+            "text": {
+              "en": "By 'more upright in speech' is meant a man's rising from his bed intending God by it, intending nothing other than Him."
+            },
+            "source": "s14"
+          }
+        ]
+      },
+      {
+        "verse": 7,
+        "heading": {
+          "en": "The day's free time"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "{ إن لك في النهار سبحاً طويلاً } … فراغاً طويلاً لنومك ولحاجتك",
+            "chain": "In the report of Abu al-Jarud, from Abu Jafar",
+            "text": {
+              "en": "'Indeed during the day you have a long stretch' means a long span of free time for your sleep and your needs."
+            },
+            "source": "s9"
+          }
+        ]
+      },
+      {
+        "verse": 8,
+        "heading": {
+          "en": "Raising the hands"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Baqir and Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "أن التبتل هنا رفع اليدين في الصلاة",
+            "chain": "Muhammad ibn Muslim, Zurara and Humran, from Abu Jafar and Abu Abdillah",
+            "text": {
+              "en": "The 'devoting yourself' here means raising the hands in prayer."
+            },
+            "source": "s15"
+          }
+        ]
+      },
+      {
+        "verse": 11,
+        "heading": {
+          "en": "The deniers"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Imam al-Kazim",
+            "addressee": null,
+            "arabic": "يقولون فيك { وَٱهْجُرْهُمْ هَجْراً جَمِيلاً * وَذَرْنِي وَٱلْمُكَذِّبِينَ } بوصيك { أُوْلِي ٱلنَّعْمَةِ وَمَهِّلْهُمْ قَلِيلاً }",
+            "chain": "Muhammad ibn Yaqub, from Ali ibn Muhammad, from one of our companions, from Ibn Mahbub, from Muhammad ibn al-Fudayl, from Abu al-Hasan al-Madi",
+            "text": {
+              "en": "They say things against you; 'and withdraw from them gracefully. And leave Me with the deniers' - of your successor - 'the opulent, and give them a little respite.'"
+            },
+            "source": "s16"
+          },
+          {
+            "id": "n8",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "هو وعيد توعد الله عز و جل … من كذب بولاية علي أمير المؤمنين",
+            "chain": "Ibn Shahrashob, from Aban ibn Uthman, from Abu Jafar",
+            "text": {
+              "en": "It is a threat with which God Almighty threatens whoever denied the wilaya of Ali, Amir al-Muminin."
+            },
+            "source": "s16"
+          }
+        ]
+      },
+      {
+        "verse": 17,
+        "heading": {
+          "en": "Why children turn grey"
+        },
+        "narrations": [
+          {
+            "id": "n9",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "تشيب الولدان من الفزع حيث يسمعون الصيحة",
+            "chain": null,
+            "text": {
+              "en": "The children turn grey from terror when they hear the Blast."
+            },
+            "source": "s16"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Commentators differ on whether the night vigil was ever strictly binding. Qurtubi reports that the evidence favors its having been a strict duty, later made voluntary once the close of the surah lightened it. [30] Tusi, by contrast, holds that nothing in the wording requires abrogation: the command keeps its apparent sense as a confirmed, strongly emphasized sunna rather than a binding obligation on the community. [4]"
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Muzzammil 1 to 19",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=73&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والسورة مكية من عتائق السور النازلة في أول البعثة حتى قيل إنها ثانية السور النازلة على النبي صلى الله عليه وآله وسلم أو ثالثتها"
+        },
+        "gloss": "The surah is Meccan, among the oldest revealed at the beginning of the mission; it is even said to be the second or third surah sent down to the Prophet."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Muzzammil 1 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=73&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ إنا سنلقي عليك قولاً ثقيلاً } أي سنوحي عليك قولاً يثقل عليك وعلى أمتك"
+        },
+        "gloss": "'Indeed We shall cast on you a weighty discourse' means: We shall reveal to you a word that is heavy upon you and upon your community."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Muzzammil 1 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=73&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والاولى أن يكون على ظاهره، ويكون جميع ذلك على ظاهره مرغباً في جميع ذلك إلا أنه ليس بفرض وإن كانت سنة مؤكدة"
+        },
+        "gloss": "The preferred view is to take it on its apparent sense, all of it being encouraged, except that it is not an obligation, though it is a strongly emphasized sunna."
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Muzzammil 7 to 8",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=73&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فراغاً طويلاً لنومك ولحاجتك"
+        },
+        "gloss": "A long span of free time for your sleep and your needs."
+      },
+      {
+        "id": "s13",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Muzzammil 1 to 3",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=73&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أمره الله أن يصلي كل ليلة، إلا أن يأتي عليه ليلة من الليالي لا يصلي فيها شيئا"
+        },
+        "gloss": "God commanded him to pray every night, except that some night might come upon him in which he prays nothing."
+      },
+      {
+        "id": "s14",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Muzzammil 4 to 6",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=73&tAyahNo=4&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "بينه تبيانا و لا تهذه هذ الشعر، و لا تنثره نثر الرمل، و لكن أفزعوا قلوبكم القاسية، و لا يكن هم أحدكم آخر السورة"
+        },
+        "gloss": "Make it clear, and do not gabble it as poetry is gabbled, nor scatter it as sand is scattered; rather strike your hardened hearts with it, and let none of you make the end of the surah his only concern."
+      },
+      {
+        "id": "s15",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Muzzammil 8",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=73&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أن التبتل هنا رفع اليدين في الصلاة"
+        },
+        "gloss": "The 'devoting yourself' here means raising the hands in prayer."
+      },
+      {
+        "id": "s16",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Muzzammil 10 to 19",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=73&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "من كذب بولاية علي أمير المؤمنين"
+        },
+        "gloss": "Whoever denied the wilaya of Ali, Amir al-Muminin."
+      },
+      {
+        "id": "s30",
+        "kind": "tafsir",
+        "work": "al-Jami li-Ahkam al-Quran",
+        "author": "al-Qurtubi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Muzzammil 1 to 4",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=5&tSoraNo=73&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والدلائل تقوى أن قيامه كان حتماً وفرضاً"
+        },
+        "gloss": "The evidence strengthens that the night vigil was a binding obligation."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:18:09Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-10-06T17:42:11Z",
+      "assembled_at": "2026-10-06T17:42:28Z"
+    }
+  },
+  "2": {
+    "id": "73:2",
+    "surah": 73,
+    "index": 2,
+    "range": [
+      20,
+      20
+    ],
+    "title": {
+      "en": "Lightening the night vigil"
+    },
+    "essay": {
+      "en": "The surah closes by returning to the night vigil it opened with, now to lighten it [1]. God tells His Prophet that He knows he stands nearly two thirds of the night, or a half or a third, and that a group of the believers with him keep the same watch [1]. God measures the night and the day; measuring is His, for to Him all creation returns [1]. He knows the believers cannot calculate these portions exactly, since the nights vary in length across the year [1], so He turned to them in mercy and eased the duty, bidding them recite only what is feasible of the Quran. This widens the obligation rather than cancelling the original [1]. The verse then names the reasons for the relief: some will fall sick, some will travel the land for trade seeking God's bounty, and some will fight in His way, and for all of these an exact measure is hard [1]. Yet it reaffirms the standing duties - establish the prayer, pay the obligatory zakat, and lend God a good loan, which is charitable spending beyond zakat - so none imagines the easing reaches every duty [1]. Whatever good is sent ahead will be found with God, better and greater in reward, and the verse ends by calling for forgiveness. al-Tusi reads the opening as recommendation, so this verse eases rather than abrogates [3]; al-Mizan, from its mention of zakat and fighting, judges it Medinan [1]."
+    },
+    "verses": [
+      {
+        "verse": 20,
+        "heading": {
+          "en": "The night vigil eased"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "ففعل النبي صلى الله عليه وآله ذلك وبشر الناس به فاشتد ذلك عليهم … وكان الرجل يقوم ولا يدري متى ينتصف الليل ومتى يكون الثلثان وكان الرجل يقوم حتى يصبح مخافة ان لا يحفظه … نسخت هذه الآية { فاقرؤا ما تيسر من القرآن }",
+            "chain": "In the narration of Abu al-Jarud, from Abu Jaafar",
+            "text": {
+              "en": "The Prophet did this and announced it to the people, and it grew hard on them. A man would stand not knowing when the night was half gone or two thirds came, standing until morning fearing he could not keep it. So God sent this down; the verse abrogated it: recite what is feasible of the Quran."
+            },
+            "source": "s4"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "ما تيسَّر منه لكم فيه خشوع القلب وصفاء السر",
+            "chain": "from al-Rida, from his father, from his grandfather",
+            "text": {
+              "en": "What is feasible of it for you is that in which there is humility of heart and purity of the innermost self."
+            },
+            "source": "s2"
+          },
+          {
+            "id": "n3",
+            "speaker": "Ibn Abbas",
+            "addressee": null,
+            "arabic": "عن ابن عباس، في قوله: { وَطَآئِفَةٌ مِّنَ ٱلَّذِينَ مَعَكَ } [قال]: علي و أبو ذر",
+            "chain": "al-Hakim al-Haskani, by his isnad, from al-Kalbi, from Abu Salih, from Ibn Abbas",
+            "text": {
+              "en": "Concerning His words 'and a group of those who are with you': they are Ali and Abu Dharr."
+            },
+            "source": "s5"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "The difference here is not between the traditions but within them. The abrogation reading, that this verse lifted a binding night vigil, is carried on both sides: al-Qurtubi calls it the abrogator of the obligation of night vigil [9], al-Tabari reports the vigil became voluntary after the companions stood until their feet swelled [7], and the narration from al-Baqir in al-Qummi likewise says the verse abrogated it [4]. Against this, al-Tusi reads the surah's opening as recommendation from the start [3], and al-Mizan treats the verse as an easing that widens the duty without abrogating it [1]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Muzzammil 20",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=73&tAyahNo=20&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فالظاهر أن الآية مدنية وليست بمكية وقد مال إليه بعضهم."
+        },
+        "gloss": "So what is apparent is that the verse is Medinan and not Meccan, and some have inclined to this."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Muzzammil 20",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=73&tAyahNo=20&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وروي عن الرضا ع عن أبيه عن جده ع قال ما تيسَّر منه لكم فيه خشوع القلب وصفاء السر"
+        },
+        "gloss": "It is narrated from al-Rida, from his father, from his grandfather, who said: what is feasible of it for you is that in which there is humility of heart and purity of the innermost self."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Muzzammil 20",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=73&tAyahNo=20&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقد قلنا: ان الأمر في أول السورة على وجه الندب، فكذلك - ها هنا - فلا وجه للتنافي حتى ينسخ بعضها ببعض"
+        },
+        "gloss": "We have said that the command at the start of the surah is by way of recommendation, and likewise here, so there is no ground for contradiction such that one part abrogates another."
+      },
+      {
+        "id": "s4",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Muzzammil 20",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=73&tAyahNo=20&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "نسخت هذه الآية { فاقرؤا ما تيسر من القرآن }"
+        },
+        "gloss": "This verse abrogated it: recite what is feasible of the Quran."
+      },
+      {
+        "id": "s5",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Muzzammil 20",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=73&tAyahNo=20&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "في قوله: { وَطَآئِفَةٌ مِّنَ ٱلَّذِينَ مَعَكَ } [قال]: علي و أبو ذر"
+        },
+        "gloss": "Concerning His words 'and a group of those who are with you': Ali and Abu Dharr."
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Muzzammil 20",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=73&tAyahNo=20&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ثم أنزل التخفيف في آخرها فصار قيام الليل تطوّعاً بعد فريضة"
+        },
+        "gloss": "Then He sent down the easing at its end, so night vigil became voluntary after having been an obligation."
+      },
+      {
+        "id": "s9",
+        "kind": "tafsir",
+        "work": "al-Jami li-Ahkam al-Quran",
+        "author": "al-Qurtubi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Muzzammil 20",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=5&tSoraNo=73&tAyahNo=20&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وهي الناسخة لفرضية قيام الليل كما تقدّم"
+        },
+        "gloss": "And it is the abrogator of the obligation of night vigil, as has preceded."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:13:03Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-10-06T17:28:22Z",
+      "assembled_at": "2026-10-06T17:42:28Z"
+    }
+  }
+}

@@ -1,0 +1,763 @@
+{
+  "1": {
+    "id": "72:1",
+    "surah": 72,
+    "index": 1,
+    "range": [
+      1,
+      19
+    ],
+    "title": {
+      "en": "The jinn hear the Quran"
+    },
+    "essay": {
+      "en": "Surah al-Jinn opens with a command to the Prophet: announce that a band of jinn listened to the Quran. al-Mizan explains that nafar names a company of three to nine, and that the jinn are a kind of creature veiled from our senses and made of fire [1]. They tell their people they heard a wonderful recitation guiding to rectitude, so they believed in it and will never ascribe a partner to their Lord. They exalt His majesty - He has taken neither spouse nor son - and confess that the foolish one among them, whom al-Tabrisi reports they meant to be Iblis, used to speak atrocious lies against God [3]. They had assumed that neither humans nor jinn would lie about God, and so had followed them until the Quran undeceived them. They recall how some men used to seek the protection of jinn, which only increased the jinn's rebellion, and how, reaching toward heaven, they found it filled with mighty guards and flames where they once sat to eavesdrop. al-Mizan reads this as a new heavenly event, barring the jinn from stealing its news, that coincided with the Prophet's mission [1]. Unsure whether ill or guidance is intended for the people of earth, they describe their own variety: some righteous and some not, some who submit and some who are perverse, the latter becoming firewood for hell. The voice then turns to God's own promise - were they steadfast on the path, He would pour down abundant water to test them, while whoever turns from his Lord's remembrance meets a mounting punishment. al-Mizan takes the path as Islam and the water as a figure for widened provision [1]. The passage closes by declaring that the places of worship belong to God, so none may be invoked beside Him, which al-Mizan relays from Imam al-Jawad as the seven limbs of prostration [2]; and it pictures the servant of God rising to pray while the crowd, which al-Mizan reads as the idolaters, presses almost upon him [2]."
+    },
+    "verses": [
+      {
+        "verse": 3,
+        "heading": {
+          "en": "A word said in ignorance"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "شيء كذبه الجن فقصه الله كما قالوا",
+            "chain": "Ali ibn Ibrahim, from Ali ibn al-Husayn, from Ahmad ibn Abi Abdillah, from al-Husayn ibn Said, from al-Nadr ibn Suwayd, from Abdullah ibn Sinan, from Abu Abdillah",
+            "text": {
+              "en": "It is something the jinn falsely said, and God related it as they said it."
+            },
+            "source": "s20"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "شيئان يفسد الناس بهما صلاتهم: قول الرجل: تبارك اسمك، و تعالى جدك، و لا إله غيرك، و إنما هو شيء قالته الجن بجهالة، فحكى الله عز و جل عنهم",
+            "chain": "al-Tusi in al-Tahdhib, from Ahmad ibn Muhammad, from Ibn Abi Nasr, from Thaalaba ibn Maymun, from Maysar, from Abu Jafar",
+            "text": {
+              "en": "Two things with which people spoil their prayer: a man's saying, 'Blessed is Your name, exalted is Your majesty, there is no god but You' - for that is only something the jinn said in ignorance, which God related from them."
+            },
+            "source": "s20"
+          }
+        ]
+      },
+      {
+        "verse": 6,
+        "heading": {
+          "en": "Seeking refuge in the jinn"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "كان الرجل ينطلق إلى الكاهن الذي يوحي إليه الشيطان فيقول: قل لشيطانك: فلان قد عاذ بك",
+            "chain": "Ali ibn Ibrahim, from Ahmad ibn al-Husayn, from Fadala, from Aban ibn Uthman, from Zurara, from Abu Jafar",
+            "text": {
+              "en": "The man would go to the soothsayer to whom the devil reveals, and say: Tell your devil that so-and-so has sought refuge in you."
+            },
+            "source": "s21"
+          }
+        ]
+      },
+      {
+        "verse": 10,
+        "heading": {
+          "en": "Ill or guidance for earth"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "لا بل والله شر أريد بهم حين بايعوا معاوية وتركوا الحسن بن علي صلوات الله عليهما",
+            "chain": "Muhammad ibn Jafar, from Muhammad ibn Isa, from Ziyad, from al-Hasan ibn Ali ibn Faddal, from Ibn Bukayr, from al-Husayn ibn Ziyad, from Abu Abdillah",
+            "text": {
+              "en": "No - by God, evil was intended for them, when they pledged allegiance to Muawiya and abandoned al-Hasan ibn Ali."
+            },
+            "source": "s11"
+          }
+        ]
+      },
+      {
+        "verse": 13,
+        "heading": {
+          "en": "The guidance is the wilaya"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Kazim",
+            "addressee": null,
+            "arabic": "الهدى: الولاية، آمنا بمولانا فمن آمن بولاية مولاه فلا يخاف بخسا و لا رهقا … قلت: تنزيل؟ قال: لا، تأويل",
+            "chain": "al-Kulayni, from Ali ibn Muhammad, from some of our companions, from Ibn Mahbub, from Muhammad ibn al-Fudayl, from Abu al-Hasan al-Madi",
+            "text": {
+              "en": "The guidance is the wilaya; we believed in our master. Whoever believes in the wilaya of his master fears neither privation nor oppression. I asked: Is this revelation's wording? He said: No, interpretation."
+            },
+            "source": "s22"
+          }
+        ]
+      },
+      {
+        "verse": 14,
+        "heading": {
+          "en": "Those who submit pursue rectitude"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "الذين أقروا بولايتنا فأولئك تحروا رشداً",
+            "chain": "Muhammad ibn Hammam, from Jafar ibn Muhammad ibn Malik, from Jafar ibn Abdullah, from Muhammad ibn Umar, from Abbad ibn Suhayb, from Jafar ibn Muhammad, from his father",
+            "text": {
+              "en": "They are those who affirmed our wilaya; it is they who pursued rectitude."
+            },
+            "source": "s14"
+          }
+        ]
+      },
+      {
+        "verse": 16,
+        "heading": {
+          "en": "Steadfast on the path"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "لو استقاموا على ولاية امير المؤمنين عليّ والأوصياء من ولده عليهم السلام وقبلوا طاعتهم في أمرهم ونهيهم لأسقيناهم ماءاً غدقاً يقول لأشربنا قلوبهم الإِيمان",
+            "chain": null,
+            "text": {
+              "en": "Had they been steadfast on the wilaya of the Commander of the Faithful, Ali, and the executors from his offspring, and accepted their obedience in command and prohibition - 'We would have given them abundant water,' that is, We would have made their hearts drink faith."
+            },
+            "source": "s25"
+          },
+          {
+            "id": "n8",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "معناه لأفدناهم علماً كثيراً يتعلمونه من الأئمة",
+            "chain": "from Burayd al-Ijli, from Abu Abd Allah",
+            "text": {
+              "en": "Its meaning is: We would have granted them abundant knowledge to learn from the Imams."
+            },
+            "source": "s4"
+          }
+        ]
+      },
+      {
+        "verse": 18,
+        "heading": {
+          "en": "The places of prostration"
+        },
+        "narrations": [
+          {
+            "id": "n9",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "وَسَجَدَ عَلَى ثَمَانِيَةِ أَعْظُمٍ الْكَفَّيْنِ وَالرُّكْبَتَيْنِ وَأَنَامِلِ إِبْهَامَيِ الرِّجْلَيْنِ وَالْجَبْهَةِ وَالأنْفِ وَقَالَ سَبْعَةٌ مِنْهَا فَرْضٌ يُسْجَدُ عَلَيْهَا وَهِيَ الَّتِي ذَكَرَهَا الله فِي كِتَابِهِ فَقَالَ وَأَنَّ الْمَساجِدَ لله فَلا تَدْعُوا مَعَ الله أَحَداً وَهِيَ الْجَبْهَةُ وَالْكَفَّانِ وَالرُّكْبَتَانِ وَالإِبْهَامَانِ",
+            "chain": "Ali ibn Ibrahim, from his father, from Hammad ibn Isa",
+            "text": {
+              "en": "He prostrated on eight bones - the two palms, the two knees, the tips of the big toes, the forehead and the nose - and said: seven are obligatory to prostrate upon, those God named in His book, 'The places of worship belong to God, so invoke none with God' - the forehead, the palms, the knees and the big toes."
+            },
+            "source": "s68"
+          },
+          {
+            "id": "n10",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "المساجد الأئمة عليهم السلام",
+            "chain": "from his father, from al-Husayn ibn Khalid, from Abu al-Hasan al-Rida",
+            "text": {
+              "en": "The places of worship are the Imams."
+            },
+            "source": "s18"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "Across verses 13 to 19 the two traditions read the same words very differently. Shia narrations in al-Burhan gloss 'the path' as the wilaya of Ali and 'the perverse' who become hell's firewood as Muawiya and his party [23]; and a report from Imam al-Kazim, reading the guidance of verse 13 as the wilaya, calls this interpretation (tawil), not revelation's wording [22]. al-Tabari keeps to the outward sense: had the perverse turned to the path of truth their provision would have been widened as a worldly trial [33], and the command over the places of worship bids all people to single out God in worship and associate none with Him [34]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Jinn 1 to 17",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=72&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والنفر الجماعة من ثلاثة إلى تسعة على المشهور، وقيل بل إلى أربعين"
+        },
+        "gloss": "Nafar is a company of three to nine by the well-known view, and it is said up to forty."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Jinn 18 to 19",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=72&tAyahNo=18&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وعن الإِمام الجواد عليه السلام أن المراد بالمساجد الأعضاء السبعة التي يسجد عليها في الصلاة وهي الجبهة والكفان والركبتان وأصابع الرجلين"
+        },
+        "gloss": "From Imam al-Jawad: by 'the places of worship' are meant the seven limbs upon which one prostrates in prayer - the forehead, the two palms, the two knees, and the toes of the feet."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Jinn 1 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=72&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أرادوا بسفيههم إبليس عن مجاهد وقتادة"
+        },
+        "gloss": "By 'their foolish one' they meant Iblis - from Mujahid and Qatada."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Jinn 11 to 19",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=72&tAyahNo=11&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "معناه لأفدناهم علماً كثيراً يتعلمونه من الأئمة"
+        },
+        "gloss": "Its meaning is: We would have granted them abundant knowledge to learn from the Imams."
+      },
+      {
+        "id": "s11",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Jinn 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=72&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لا بل والله شر أريد بهم حين بايعوا معاوية وتركوا الحسن بن علي صلوات الله عليهما"
+        },
+        "gloss": "No - by God, evil was intended for them when they pledged allegiance to Muawiya and abandoned al-Hasan ibn Ali."
+      },
+      {
+        "id": "s14",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Jinn 14",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=72&tAyahNo=14&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الذين أقروا بولايتنا فأولئك تحروا رشداً"
+        },
+        "gloss": "They are those who affirmed our wilaya; it is they who pursued rectitude."
+      },
+      {
+        "id": "s18",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Jinn 18",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=72&tAyahNo=18&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "المساجد الأئمة عليهم السلام"
+        },
+        "gloss": "The places of worship are the Imams."
+      },
+      {
+        "id": "s20",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Jinn 1 to 4",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=72&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "شيء كذبه الجن فقصه الله كما قالوا"
+        },
+        "gloss": "It is something the jinn falsely said, and God related it as they said it."
+      },
+      {
+        "id": "s21",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Jinn 6",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=72&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "كان الرجل ينطلق إلى الكاهن الذي يوحي إليه الشيطان فيقول: قل لشيطانك: فلان قد عاذ بك"
+        },
+        "gloss": "The man would go to the soothsayer to whom the devil reveals, and say: Tell your devil that so-and-so has sought refuge in you."
+      },
+      {
+        "id": "s22",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Jinn 10 to 13",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=72&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الهدى: الولاية، آمنا بمولانا فمن آمن بولاية مولاه فلا يخاف بخسا و لا رهقا … قلت: تنزيل؟ قال: لا، تأويل"
+        },
+        "gloss": "The guidance is the wilaya; whoever believes in the wilaya of his master fears neither privation nor oppression. I asked: Is it revelation's wording? He said: No, interpretation."
+      },
+      {
+        "id": "s23",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Jinn 14 to 19",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=72&tAyahNo=14&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وَأَمَّا ٱلْقَاسِطُونَ فَكَانُواْ لِجَهَنَّمَ حَطَباً } [الجن: 14-15] معاوية و أصحابه { وَأَلَّوِ ٱسْتَقَامُواْ عَلَى ٱلطَّرِيقَةِ لأَسْقَيْنَاهُم مَّآءً غَدَقاً } فالطريقة: الولاية لعلي (عليه السلام)"
+        },
+        "gloss": "'As for the perverse, they will be firewood for hell' - Muawiya and his companions. 'And had they been steadfast on the path, We would have given them abundant water' - the path is the wilaya of Ali."
+      },
+      {
+        "id": "s25",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Jinn 11 to 19",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=72&tAyahNo=11&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لو استقاموا على ولاية امير المؤمنين عليّ والأوصياء من ولده عليهم السلام وقبلوا طاعتهم في أمرهم ونهيهم لأسقيناهم ماءاً غدقاً يقول لأشربنا قلوبهم الإِيمان"
+        },
+        "gloss": "Had they been steadfast on the wilaya of the Commander of the Faithful, Ali, and the executors from his offspring, and accepted their obedience in command and prohibition - 'We would have given them abundant water,' that is, We would have made their hearts drink faith."
+      },
+      {
+        "id": "s33",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Jinn 16 to 17",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=72&tAyahNo=16&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وأن لو استقام هؤلاء القاسطون على طريقة الحقّ والاستقامة { لأَسْقَيْناهُمْ ماءً غدَقاً } يقول: لو سَّعنا عليهم في الرزق، وبسطناهم في الدنيا لنفتنهم فيه، يقول لنختبرهم فيه"
+        },
+        "gloss": "Had these perverse ones stood firm on the path of truth and uprightness, 'We would have given them abundant water,' that is, We would have widened their provision and spread them out in this world, 'to test them therein,' that is, to try them."
+      },
+      {
+        "id": "s34",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Jinn 18 to 19",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=72&tAyahNo=18&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولا تشركوا به فيها شيئاً، ولكن أفردوا له التوحيد، وأخلصوا له العبادة"
+        },
+        "gloss": "Do not associate anything with Him therein, but single Him out in oneness and devote worship to Him alone."
+      },
+      {
+        "id": "s68",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 3, hadith 8, cited at Al-Jinn 18",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "حسن"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "سَبْعَةٌ مِنْهَا فَرْضٌ يُسْجَدُ عَلَيْهَا وَهِيَ الَّتِي ذَكَرَهَا الله فِي كِتَابِهِ فَقَالَ وَأَنَّ الْمَساجِدَ لله فَلا تَدْعُوا مَعَ الله أَحَداً وَهِيَ الْجَبْهَةُ وَالْكَفَّانِ وَالرُّكْبَتَانِ وَالإِبْهَامَانِ"
+        },
+        "gloss": "Seven of them are obligatory to prostrate upon, and they are those God named in His book - 'The places of worship belong to God, so do not invoke anyone with God' - the forehead, the two palms, the two knees and the two big toes."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:18:04Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-10-06T17:49:45Z",
+      "assembled_at": "2026-10-06T17:50:06Z"
+    }
+  },
+  "2": {
+    "id": "72:2",
+    "surah": 72,
+    "index": 2,
+    "range": [
+      20,
+      28
+    ],
+    "title": {
+      "en": "The Prophet and the Unseen"
+    },
+    "essay": {
+      "en": "Surah al-Jinn closes by turning from the jinn who had listened to the Qur'an back to the Prophet, giving him a chain of commands that each open with 'Say.' Tabatabai reads these final verses as an affirmation of prophethood and of God's oneness, with the reckoning drawn out of the preceding story, closing on the inviolability of the message itself [1].\n\nHe is first told to declare, 'I pray only to my Lord, and I do not ascribe any partner to Him.' Then he disowns any power of his own: 'I have no power to bring you any harm or good,' for it is God alone who can repel harm or bring good, and the Prophet can only call people and convey what he is sent with [5]. No one can shelter him from God, and he can find no refuge besides Him, nothing 'except to transmit from Allah, and His messages' [5]; and whoever disobeys God and His apostle earns the fire of hell forever.\n\nVerse 24 answers those who belittled his few followers and boasted of their own numbers: when they see what they are promised, they will learn who is really 'weaker in supporters and fewer in numbers' [3]. Pressed on when that will fall, he is to say he does not know whether it is near or whether God has set a long term for it, since the Hour belongs to God alone [3].\n\nThe surah ends on the unseen. God is its Knower, and He 'does not disclose His [knowledge of the] Unseen to anyone' save a messenger He approves, to whom He grants what He wills as a proof of his prophethood [3]. He then posts a sentinel of angels before and behind that messenger, guarding the revelation from the devils so that it reaches people untouched [3]. The passage thus closes, as Tabatabai notes, on the message's inviolability [1]."
+    },
+    "verses": [
+      {
+        "verse": 21,
+        "heading": {
+          "en": "No power of his own"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Kazim",
+            "addressee": null,
+            "arabic": "إِنَّ رَسُولَ الله (صَلَّى اللهُ عَلَيْهِ وَآلِه) دَعَا النَّاسَ إِلَى وَلايَةِ عَلِيٍّ فَاجْتَمَعَتْ إِلَيْهِ قُرَيْشٌ فَقَالُوا يَا مُحَمَّدُ أَعْفِنَا مِنْ هَذَا فَقَالَ لَهُمْ رَسُولُ الله (صَلَّى اللهُ عَلَيْهِ وَآلِه) هَذَا إِلَى الله لَيْسَ إِلَيَّ فَاتَّهَمُوهُ وَخَرَجُوا مِنْ عِنْدِهِ فَأَنْزَلَ الله قُلْ إِنِّي لا أَمْلِكُ لَكُمْ ضَرًّا وَلا رَشَداً",
+            "chain": "Ali ibn Muhammad, from certain of our companions, from Ibn Mahbub, from Muhammad ibn al-Fudayl, from Abu al-Hasan al-Madi",
+            "text": {
+              "en": "The Messenger of God called people to the guardianship of Ali. Quraysh gathered and said, 'O Muhammad, excuse us from this.' He told them, 'This is up to God, not to me.' They accused him and left, so God revealed: 'Say, I have no power to bring you any harm or good.'"
+            },
+            "source": "s34"
+          }
+        ]
+      },
+      {
+        "verse": 23,
+        "heading": {
+          "en": "Only to convey"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "أبلغكم ما أمرني الله به من ولاية علي بن أبي طالب عليه السلام { ومن يعص الله ورسوله } في ولاية علي عليه السلام { فإن له نار جهنم خالدين فيها أبداً } قال: النبي صلى الله عليه وآله يا علي أنت قسيم النار تقول هذا لي وهذا لك",
+            "chain": null,
+            "text": {
+              "en": "'I convey to you what God commanded me regarding the guardianship of Ali. And whoever disobeys God and His messenger in the guardianship of Ali, for him is the fire of hell, abiding forever.' The Prophet said: 'O Ali, you are the divider of the Fire; you say: this is mine and this is yours.'"
+            },
+            "source": "s9"
+          }
+        ]
+      },
+      {
+        "verse": 24,
+        "heading": {
+          "en": "Weaker in helpers"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "{ حتى إذا رأوا ما يوعدون } … يعني الموت والقيامة { فسيعلمون } يعني فلاناً وفلاناً وفلاناً ومعاوية وعمرو بن العاص وأصحاب الضغائن من قريش { من أضعف ناصراً وأقل عدداً }",
+            "chain": null,
+            "text": {
+              "en": "'When they see what they are promised' means death and the Resurrection; 'they will know' means so-and-so, so-and-so, so-and-so, Mu'awiya, Amr ibn al-As, and the people of malice from Quraysh - 'who is weaker in supporters and fewer in number.'"
+            },
+            "source": "s9"
+          }
+        ]
+      },
+      {
+        "verse": 26,
+        "heading": {
+          "en": "He alone knows the unseen"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "إِلا مَنِ ارْتَضى‏ مِنْ رَسُولٍ وَكَانَ وَالله مُحَمَّدٌ مِمَّنِ ارْتَضَاهُ … فَأَمَّا الْعِلْمُ الَّذِي يُقَدِّرُهُ الله عَزَّ وَجَلَّ فَيَقْضِيهِ وَيُمْضِيهِ فَهُوَ الْعِلْمُ الَّذِي انْتَهَى إِلَى رَسُولِ الله (صَلَّى اللهُ عَلَيْهِ وَآلِه) ثُمَّ إِلَيْنَا",
+            "chain": "Muhammad ibn Yahya, from Abdallah ibn Muhammad ibn Isa, from al-Hasan ibn Mahbub, from Ali ibn Riab, from Sadir al-Sayrafi, who heard Humran ask Abu Jafar",
+            "text": {
+              "en": "'except an apostle He approves of' - and Muhammad, by God, was among those He approved. The knowledge that God measures, decrees, and carries out is the knowledge that reached the Messenger of God, and then reached us."
+            },
+            "source": "s39"
+          },
+          {
+            "id": "n5",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "لا يكون المؤمن مؤمنا حتى يكون فيه ثلاث خصال: سنة من ربه، وسنة من نبيه، وسنة من وليه، فأما السنة من ربه فكتمان سره، قال الله جل جلاله: (عالم الغيب فلا يظهر على غيبه أحدا * إلا من ارتضى من رسول)",
+            "chain": "Ali ibn Ahmad ibn Musa, from Muhammad ibn Abi Abdillah al-Kufi, from Sahl ibn Ziyad al-Adami, from Mubarak the servant of al-Rida, from al-Rida Ali ibn Musa",
+            "text": {
+              "en": "A believer is not a believer until he has three traits: one from his Lord, one from his Prophet, and one from his wali. The trait from his Lord is to keep his secret, as God said: 'Knower of the Unseen, He does not disclose His Unseen to anyone except an apostle He approves of.'"
+            },
+            "source": "s38"
+          }
+        ]
+      },
+      {
+        "verse": 27,
+        "heading": {
+          "en": "A messenger He approves"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "يعني علياً المرتضى من الرسول صلى الله عليه وآله وهو منه قال الله: { فإنه يسلك من بين يديه ومن خلفه رصداً } قال في قلبه العلم ومن خلفه الرصد يعلمه علمه ويزقه العلم زقاً ويعلمه الله إلهاماً والرصد التعليم من النبي صلى الله عليه وآله",
+            "chain": null,
+            "text": {
+              "en": "meaning Ali, the one approved, from the Messenger, and he is from him. God said: 'He dispatches before him and behind him a sentinel' - in his heart is knowledge, and behind him is the sentinel; He teaches him His knowledge and inspires it into him, and the sentinel is the teaching from the Prophet."
+            },
+            "source": "s11"
+          }
+        ]
+      },
+      {
+        "verse": 28,
+        "heading": {
+          "en": "That he has conveyed"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Ali ibn Ibrahim al-Qummi",
+            "addressee": null,
+            "arabic": "{ ليعلم } النبي { أن قد أبلغوا رسالات ربهم وأحاط } عليّ بما لدى الرسول من العلم { وأحصى كل شيء عدداً } ما كان وما يكون منذ يوم خلق الله آدم إلى أن تقوم الساعة",
+            "chain": null,
+            "text": {
+              "en": "'That he may know' - the Prophet - 'that they have communicated the messages of their Lord, and He encompassed' - Ali - the knowledge that was with the Messenger, 'and He kept count of all things': all that was and will be from the day God created Adam until the Hour comes."
+            },
+            "source": "s12"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "The divergence falls on verses 26 to 27, on who may be let into the unseen. The Shia narrations read the 'approved messenger' as a channel that reaches beyond the Prophet to the Imams who inherit from him: al-Rida is reported saying the Prophet is the approved one and 'we are the heirs of that Messenger,' knowing what was and what will be [15]. The Sunni commentators keep disclosure of the unseen to the prophets alone. Zamakhshari, quoted by al-Razi, reads the verse to deny the unseen even to approved saints, and to refute soothsaying, sorcery and astrology [31]; al-Qurtubi presses the same point against the astrologers, citing Ali's rebuke of the one who warned him before battle [23]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Jinn 20 to 28",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=72&tAyahNo=20&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "بيان في الآيات تسجيل للنبوة وذكر وحدانيته تعالى والمعاد كالاستنتاج من القصة وتختتم بالإِشارة إلى عصمة الرسالة"
+        },
+        "gloss": "An exposition: in these verses is an affirmation of prophethood, a mention of God's oneness and the return as drawn from the story, and they close with a reference to the inviolability of the message."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Jinn 21 to 28",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=72&tAyahNo=21&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إلا من ارتضى من رسول يعني الرسل فإنه يستدل على نبوتهم بأن يخبروا بالغيب لتكون آية معجزة لهم"
+        },
+        "gloss": "'except an apostle He approves of' means the messengers; their prophethood is established by their telling of the unseen, so that it is a miraculous sign for them."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Jinn 21 to 28",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=72&tAyahNo=21&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إني لا أقدر على دفع الضرر عنكم ولا إيصال الخير اليكم وانما يقدر على ذلك الله تعالى"
+        },
+        "gloss": "I have no power to repel harm from you or to bring good to you; only God is able to do that."
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Jinn 23 to 24",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=72&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أبلغكم ما أمرني الله به من ولاية علي بن أبي طالب عليه السلام … يا علي أنت قسيم النار تقول هذا لي وهذا لك"
+        },
+        "gloss": "'I convey to you what God commanded me regarding the guardianship of Ali ibn Abi Talib' ... The Prophet said: 'O Ali, you are the divider of the Fire; you say: this is mine and this is yours.'"
+      },
+      {
+        "id": "s11",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Jinn 26 to 27",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=72&tAyahNo=26&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يعني علياً المرتضى من الرسول صلى الله عليه وآله وهو منه قال الله: { فإنه يسلك من بين يديه ومن خلفه رصداً } قال في قلبه العلم ومن خلفه الرصد"
+        },
+        "gloss": "It means Ali, the approved one, from the Messenger, and he is from him. God said, 'He dispatches before him and behind him a sentinel' - in his heart is the knowledge, and behind him is the sentinel."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Jinn 28",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=72&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ ليعلم } النبي { أن قد أبلغوا رسالات ربهم وأحاط } عليّ بما لدى الرسول من العلم { وأحصى كل شيء عدداً } ما كان وما يكون منذ يوم خلق الله آدم إلى أن تقوم الساعة"
+        },
+        "gloss": "'That he may know' - the Prophet - 'that they have conveyed the messages of their Lord, and He encompassed' - Ali - the knowledge that was with the Messenger; 'and He counted everything in number': all that was and will be from the day God created Adam until the Hour rises."
+      },
+      {
+        "id": "s15",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Jinn 24 to 28",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=72&tAyahNo=24&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فرسول الله صلّى الله عليه وآله عند الله مرتضى ونحن ورثة ذلك الرسول الذي اطلعه الله على ما يشاء من غيبه فعلمنا ما كان وما يكون الى يوم القيامة"
+        },
+        "gloss": "The Messenger of God is, before God, the approved one, and we are the heirs of that Messenger whom God let look upon what He wills of His unseen, so we know what was and what will be until the Day of Resurrection."
+      },
+      {
+        "id": "s23",
+        "kind": "tafsir",
+        "work": "al-Jami li-Ahkam al-Quran",
+        "author": "al-Qurtubi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Jinn 26 to 27",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=5&tSoraNo=72&tAyahNo=26&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ما كان لمحمد صلى الله عليه وسلم مُنَجِّم ولا لنا من بعده"
+        },
+        "gloss": "Ali said: Muhammad had no astrologer, nor do we after him."
+      },
+      {
+        "id": "s31",
+        "kind": "tafsir",
+        "work": "Mafatih al-Ghayb",
+        "author": "Fakhr al-Din al-Razi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Jinn 26 to 27",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=4&tSoraNo=72&tAyahNo=26&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي هذا إبطال الكرامات لأن الذين تضاف الكرامات إليهم وإن كانوا أولياء مرتضين فليسوا برسل … وفيها أيضاً إبطال الكهانة والسحر والتنجيم"
+        },
+        "gloss": "Zamakhshari: in this is the invalidation of the saints' miracles, since those to whom miracles are ascribed, though approved saints, are not messengers ... and in it too the invalidation of soothsaying, sorcery, and astrology."
+      },
+      {
+        "id": "s34",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 88, cited at Al-Jinn 23",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "إِنَّ رَسُولَ الله (صَلَّى اللهُ عَلَيْهِ وَآلِه) دَعَا النَّاسَ إِلَى وَلايَةِ عَلِيٍّ فَاجْتَمَعَتْ إِلَيْهِ قُرَيْشٌ فَقَالُوا يَا مُحَمَّدُ أَعْفِنَا مِنْ هَذَا … فَأَنْزَلَ الله قُلْ إِنِّي لا أَمْلِكُ لَكُمْ ضَرًّا وَلا رَشَداً"
+        },
+        "gloss": "The Messenger of God called people to the guardianship of Ali. Quraysh gathered and said, 'O Muhammad, excuse us from this' ... so God revealed: 'Say, I have no power to bring you any harm or good.'"
+      },
+      {
+        "id": "s38",
+        "kind": "hadith",
+        "work": "Al-Amali",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 8, cited at Al-Jinn 26",
+        "url": "https://thaqalayn.com/book/15",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "لا يكون المؤمن مؤمنا حتى يكون فيه ثلاث خصال: سنة من ربه، وسنة من نبيه، وسنة من وليه، فأما السنة من ربه فكتمان سره، قال الله جل جلاله: (عالم الغيب فلا يظهر على غيبه أحدا * إلا من ارتضى من رسول)"
+        },
+        "gloss": "A believer is not a believer until he has three traits: one from his Lord, one from his Prophet, and one from his wali. The one from his Lord is to conceal his secret, as God said, 'Knower of the Unseen, He does not disclose His Unseen to anyone except an apostle He approves of.'"
+      },
+      {
+        "id": "s39",
+        "kind": "hadith",
+        "work": "Al-Kafi",
+        "author": "shaykh muhammad b. yaqub al-kulayni",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 2, cited at Al-Jinn 26",
+        "url": "https://thaqalayn.com/book/1",
+        "grades": [
+          "لم يخرجه",
+          "مجهول"
+        ],
+        "excerpt": {
+          "lang": "ar",
+          "text": "إِلا مَنِ ارْتَضى‏ مِنْ رَسُولٍ وَكَانَ وَالله مُحَمَّدٌ مِمَّنِ ارْتَضَاهُ … فَهُوَ الْعِلْمُ الَّذِي انْتَهَى إِلَى رَسُولِ الله (صَلَّى اللهُ عَلَيْهِ وَآلِه) ثُمَّ إِلَيْنَا"
+        },
+        "gloss": "'except an apostle He approves of' - and Muhammad, by God, was among those He approved ... it is the knowledge that reached the Messenger of God, and then reached us."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:13:46Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T17:48:41Z",
+      "assembled_at": "2026-10-06T17:50:06Z"
+    }
+  }
+}

@@ -1,0 +1,663 @@
+{
+  "1": {
+    "id": "67:1",
+    "surah": 67,
+    "index": 1,
+    "range": [
+      1,
+      14
+    ],
+    "title": {
+      "en": "In whose hands is all sovereignty"
+    },
+    "essay": {
+      "en": "Surah al-Mulk opens by blessing the One in whose hands is all sovereignty and who has power over all things. Tabatabai reads the whole surah as an argument for God's lordship over every world, set against idolaters who parceled lordship out among angels and others and left God only as 'Lord of lords'; its call is to the oneness of lordship and to belief in the resurrection [1]. Tabrisi reads the clause 'in whose hands is all sovereignty' as total ownership and free disposal, the hand mentioned only for emphasis [2].\n\nHe created death and life to test which of you is best in conduct. Tusi glosses this as death created so that one may serve God through patience, and life so that one may serve through gratitude [5]. The surah then turns the eye upward: seven heavens in layers, with no flaw in the All-beneficent's creation. Look again, and once more, and the sight comes back humbled and weary, having found nothing amiss.\n\nThe lowest heaven is adorned with lamps that are also missiles against the devils, for whom a blaze is prepared. For those who defy their Lord there is hell, heard blaring and seething, almost exploding with rage. Each time a group is cast in, its keepers ask them in rebuke whether no warner had come [3]; they confess that a warner did come and they denied him, and that had they listened or reasoned they would not be among its inmates. So they admit their sin.\n\nAgainst this the surah sets its promise: for those who fear their Lord in secret there is forgiveness and a great reward. Then it closes on God's knowledge. Speak secretly or openly, He knows what is in the breasts; Tabrisi records that the verse came down when the idolaters, maligning the Prophet, told one another to keep their words secret so that Muhammad's household would not hear [4]. Would He who created not know? He is the All-attentive, the All-aware."
+    },
+    "verses": [
+      {
+        "verse": 2,
+        "heading": {
+          "en": "Death and life as test"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "الحياة و الموت خلقان من خلق الله، فإذا جاء الموت فدخل في الإنسان، لم يدخل في شيء إلا و قد خرجت منه الحياة",
+            "chain": "Muhammad ibn Ya'qub, by his isnad from Fadala, from Musa ibn Bakr, from Zurara, from Abu Ja'far",
+            "text": {
+              "en": "Life and death are two of God's creations. When death comes and enters a human being, it does not enter anything except that life has already gone out of it."
+            },
+            "source": "s15"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "ليس يعني أكثركم عملا، و لكن أصوبكم عملا، و إنما الإصابة خشية الله و النية الصادقة … و النية أفضل من العمل، إلا و إن النية هي العمل",
+            "chain": "Muhammad ibn Ya'qub, from Ali ibn Ibrahim, from his father, from al-Qasim ibn Muhammad, from al-Minqari, from Sufyan ibn Uyayna, from Abu Abdillah",
+            "text": {
+              "en": "It does not mean the most of you in deeds, but the most correct in deed; and correctness is fear of God and a truthful intention ... Intention is better than the deed; indeed, intention is the deed itself."
+            },
+            "source": "s15"
+          }
+        ]
+      },
+      {
+        "verse": 8,
+        "heading": {
+          "en": "Did no warner come?"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "لئلا يكون للناس على الله حجة بعد الرسل، و لئلا يقولوا: ما جاءنا من بشير و لا نذير، و لتكون حجة الله عليهم",
+            "chain": "Ali ibn Ahmad, from Muhammad ibn Abi Abdillah al-Kufi, from Musa ibn Imran, from his uncle al-Husayn ibn Yazid, from Ali ibn Abi Hamza, from Abu Basir, from Abu Abdillah",
+            "text": {
+              "en": "It was so that people would have no argument against God after the messengers, and would not say, 'No bearer of good news or warner came to us,' and so that God's proof would stand over them."
+            },
+            "source": "s16"
+          }
+        ]
+      },
+      {
+        "verse": 10,
+        "heading": {
+          "en": "Had we listened or reasoned"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Prophet Muhammad",
+            "addressee": null,
+            "arabic": "في الاحتجاج في خطبة الغديرية النبوية انّ هذه الآيات في اعداء عليّ واولاده عليهم السلام والتي بعدها في اوليائهم",
+            "chain": null,
+            "text": {
+              "en": "In al-Ihtijaj, from the Prophet's Ghadir sermon: these verses are about the enemies of Ali and his descendants, peace be upon them, and the verse after them is about their friends."
+            },
+            "source": "s21"
+          }
+        ]
+      },
+      {
+        "verse": 11,
+        "heading": {
+          "en": "They admit their sin"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "فيقولون: إن عذبنا ربنا، لم يكن ظلمنا شيئا … فيقول مالك: فاعترفوا بذنبهم فسحقاً لأصحاب السعير",
+            "chain": "Sa'id ibn Janah, from Awf ibn Abdillah al-Azdi, from Jabir ibn Yazid al-Ju'fi, from Abu Ja'far",
+            "text": {
+              "en": "Of the people of the Fire: they will say, 'If our Lord punishes us, He will not have wronged us at all.' Then Malik says, 'So they admitted their sin; away with the inmates of the Blaze.'"
+            },
+            "source": "s17"
+          }
+        ]
+      },
+      {
+        "verse": 14,
+        "heading": {
+          "en": "Would the Creator not know?"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "و أما اللطيف فليس على قلة و قضافة و صغر، و لكن ذلك على النفاذ في الأشياء، و الامتناع من أن يدرك … فهكذا لطف ربنا، تبارك و تعالى عن أن يدرك بحد أو يحد بوصف",
+            "chain": "Ali ibn Ahmad al-Daqqaq, from Muhammad ibn Ya'qub al-Kulayni, from Ali ibn Muhammad, from Muhammad ibn Isa, from al-Husayn ibn Khalid, from Abu al-Hasan al-Rida",
+            "text": {
+              "en": "As for al-Latif, the Subtle: it does not mean littleness, slightness, or smallness, but penetrating into things and being beyond all grasp ... Such is the subtlety of our Lord, exalted above being grasped by any limit or defined by any description."
+            },
+            "source": "s19"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On verse 3's denial of any discordance in creation, the readings part ways. Tusi takes the complete absence of disparity to prove that disbelief and sin are not God's creation, since God has ruled out any discord in what He made [5]. Razi reports the same argument from al-Ka'bi and rejects it, holding that there is no disparity relative to God, since everything lies within His power and nothing He does is unfitting [44]. The split turns on whether a person's wrong deeds are his own doing or God's making."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Mulk 1 to 14",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=67&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "بيان غرض السورة بيان عموم ربوبيته تعالى للعالمين تجاه قول الوثنية إن لكل شطر من العالم رباً من الملائكة وغيرهم وإنه تعالى رب الأرباب فقط."
+        },
+        "gloss": "A statement of the surah's aim: to establish the universality of God's lordship over all the worlds, against the idolaters who claimed that each region of the world has its own lord from the angels and others, and that He is only the Lord of lords."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mulk 1 to 5",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=67&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ومعناه الذي هو المالك وله الملك يؤتيه من يشاء ويتصرف فيه كما يشاء وإنما ذكر اليد تأكيداً."
+        },
+        "gloss": "Its meaning is that He is the Owner, to whom the dominion belongs, giving it to whom He wills and disposing of it as He wills; the hand is mentioned only for emphasis."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mulk 6 to 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=67&tAyahNo=6&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أي تقول لهم الملائكة الموكّلون بالنار على وجه التبكيت لهم في صيغة الاستفهام ألم يجيئكم مُخوِّف من جهة الله سبحانه يُخوّفكم عذاب هذه النار."
+        },
+        "gloss": "That is, the angels charged with the Fire say to them, by way of rebuke, in the form of a question, whether a warner from God had come to them to warn them of this Fire's punishment."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mulk 12 to 14",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=67&tAyahNo=12&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال ابن عباس: كانوا ينالون من رسول الله صلى الله عليه وسلم فيخبره به جبرئيل فقال بعضهم لبعض أسرُّوا قولكم لكيلا يسمع آل محمد فنزلت الآية."
+        },
+        "gloss": "Ibn Abbas: they used to malign the Messenger, and Gabriel would inform him of it; so they said to one another, 'Keep your words secret so that Muhammad's household does not hear,' and the verse came down."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mulk 1 to 5",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=67&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وذلك يدل على ان ما فيه تفاوت من الكفر والمعاصي ليس من خلق الله، لانه نفى نفياً عاماً أن يكون فيما خلقه تفاوت."
+        },
+        "gloss": "This indicates that whatever contains disparity - namely disbelief and sins - is not God's creation, since He has negated, in general terms, that there is any disparity in what He created."
+      },
+      {
+        "id": "s15",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mulk 1 to 2",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=67&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "الحياة و الموت خلقان من خلق الله، فإذا جاء الموت فدخل في الإنسان، لم يدخل في شيء إلا و قد خرجت منه الحياة"
+        },
+        "gloss": "Life and death are two of God's creations; when death comes and enters a person, it does not enter anything except that life has gone out of it."
+      },
+      {
+        "id": "s16",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mulk 3 to 9",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=67&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لئلا يكون للناس على الله حجة بعد الرسل، و لئلا يقولوا: ما جاءنا من بشير و لا نذير، و لتكون حجة الله عليهم"
+        },
+        "gloss": "So that people would have no argument against God after the messengers, and would not say, 'No bearer of good news or warner came to us,' and so that God's proof would stand against them."
+      },
+      {
+        "id": "s17",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mulk 10 to 11",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=67&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "فيقولون: إن عذبنا ربنا، لم يكن ظلمنا شيئا"
+        },
+        "gloss": "They will say, 'If our Lord punishes us, He will not have wronged us at all.'"
+      },
+      {
+        "id": "s19",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mulk 14",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=67&tAyahNo=14&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "و أما اللطيف فليس على قلة و قضافة و صغر، و لكن ذلك على النفاذ في الأشياء، و الامتناع من أن يدرك"
+        },
+        "gloss": "As for al-Latif, the Subtle: it is not about being little, slight, or small, but about penetrating into things and being beyond being grasped."
+      },
+      {
+        "id": "s21",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mulk 9 to 14",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=67&tAyahNo=9&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "في الاحتجاج في خطبة الغديرية النبوية انّ هذه الآيات في اعداء عليّ واولاده عليهم السلام والتي بعدها في اوليائهم."
+        },
+        "gloss": "In al-Ihtijaj, from the Prophet's Ghadir sermon: these verses are about the enemies of Ali and his descendants, and the verse after them is about their friends."
+      },
+      {
+        "id": "s44",
+        "kind": "tafsir",
+        "work": "Mafatih al-Ghayb",
+        "author": "Fakhr al-Din al-Razi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Mulk 3",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=4&tSoraNo=67&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "احتج الكعبي بهذه الآية على أن المعاصي ليست من خلق الله تعالى، قال: لأنه تعالى نفى التفاوت في خلقه"
+        },
+        "gloss": "al-Ka'bi used this verse to argue that sins are not God's creation, saying: because God has negated any disparity in His creation."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T16:54:04Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T17:12:51Z",
+      "assembled_at": "2026-10-06T17:18:47Z"
+    }
+  },
+  "2": {
+    "id": "67:2",
+    "surah": 67,
+    "index": 2,
+    "range": [
+      15,
+      30
+    ],
+    "title": {
+      "en": "Signs of God's sovereignty"
+    },
+    "essay": {
+      "en": "Surah al-Mulk closes by returning, sign after sign, to the proofs of God's lordship, each one set beside a warning [1]. He made the earth tractable, subdued and easy to tread, so its people may walk its flanks and eat His provision - the command to eat being one of permission, not obligation [5] - and to Him, in the end, is the rising. Then the warning: are you secure that He who is in the sky will not make the earth swallow you, or loose a rain of stones? The commentators stress that God is in no place or direction; the phrase names His authority and command over the heaven, or the angel charged with punishment [3]. Earlier peoples denied their messengers, and the verses ask how God's rebuttal fell on them. The birds overhead, spreading and folding their wings, are held aloft by none but the All-beneficent; the One who subdued the air holds every creature [3]. Who, then, is a host to help them besides Him, or a provider should He withhold? Still they persist in defiance. A parable follows: is one who stumbles prone on his face better guided than one who walks upright on a straight road? Tabrisi reads the first as the blind imitator and the second as the believer who knows the way of truth, while others picture the denier driven on his face at the resurrection [4][7]. God then names His gifts - hearing, sight and hearts - for which little thanks are returned, and says He scattered them on the earth and will gather them back. When they mock, asking when the promise will come, the answer is that its timing rests with God alone, and the Prophet is only a clear warner. When they at last see it near, their faces are contorted and they are told this is what they had demanded. Say: whether God destroys me and those with me or shows us mercy, who will shelter you from the painful punishment? The Meccans, the commentators note, had wished the Prophet dead [2]. The surah ends on a single question that weighs one quiet mercy: were your water to sink away into the ground, who could bring you flowing water? [4]"
+    },
+    "verses": [
+      {
+        "verse": 22,
+        "heading": {
+          "en": "The two walkers"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Kazim",
+            "addressee": null,
+            "arabic": "إن الله ضرب مثلا من حاد عن ولاية علي (عليه السلام) كمن يمشي على وجهه، لا يهتدي لأمره، و جعل من تبعه سويا على صراط مستقيم، و الصراط المستقيم أمير المؤمنين (عليه السلام)",
+            "chain": "Muhammad ibn Yaqub, from Ali ibn Muhammad, from one of our companions, from Ibn Mahbub, from Muhammad ibn al-Fudayl, from Abu'l-Hasan al-Madi",
+            "text": {
+              "en": "God struck a likeness: whoever turns away from the guardianship of Ali is like one who walks on his face, not finding his way; and whoever follows him He made to walk upright on a straight path. The straight path is Amir al-Mu'minin."
+            },
+            "source": "s13"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "تلا هذه الآية و هو ينظر إلى الناس … يعني و الله عليا و الأئمة (عليهم السلام)",
+            "chain": "Muhammad ibn al-Abbas, from Humayd ibn Ziyad, from al-Hasan ibn Muhammad ibn Sama'a, from Salih ibn Khalid, from Mansur, from Hariz, from Fudayl ibn Yasar, from Abu Ja'far",
+            "text": {
+              "en": "He recited this verse while looking at the people - Is he who walks prone on his face better guided, or he who walks upright on a straight path? - then said: By God, it means Ali and the Imams."
+            },
+            "source": "s13"
+          }
+        ]
+      },
+      {
+        "verse": 27,
+        "heading": {
+          "en": "Faces of the deniers"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "هذه نزلت في أمير المؤمنين (عليه السلام) و أصحابه الذين عملوا ما عملوا، يرون أمير المؤمنين (عليه السلام) في أغبط الأماكن فيسيء وجوههم، و يقال لهم: هذا الذي كنتم به تدعون، الذي انتحلتم اسمه، أي سميتم أنفسكم بأمير المؤمنين",
+            "chain": "Muhammad ibn Yaqub, from al-Husayn ibn Muhammad, from Mu'alla ibn Muhammad, from Muhammad ibn Jumhur, from Isma'il ibn Sahl, from al-Qasim ibn Urwa, from Abi al-Safatij, from Zurara, from Abu Ja'far",
+            "text": {
+              "en": "This was revealed about Amir al-Mu'minin and his companions who did what they did. They see Amir al-Mu'minin in the most envied of stations, and their faces are distressed, and they are told: This is what you used to claim, whose name you arrogated, calling yourselves Commander of the Faithful."
+            },
+            "source": "s14"
+          },
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "ذلك علي (عليه السلام)، إذا رأوا منزلته و مكانه من الله تعالى أكلوا أكفهم على ما فرطوا في ولايته",
+            "chain": "Muhammad ibn al-Abbas, from Hasan ibn Muhammad, from Muhammad ibn Ali al-Kinani, from Husayn ibn Wahb al-Asadi, from Ubays ibn Hisham, from Dawud ibn Sarhan",
+            "text": {
+              "en": "That is Ali. When they see his station and his place with God, they bite their hands at how they fell short regarding his guardianship."
+            },
+            "source": "s14"
+          },
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إذا دفع الله لواء الحمد إلى محمد صلى الله عليه وآله وسلم تحته كل ملك مقرب وكل نبي مرسل حتى يدفعه إلى علي … سيئت وجوه الذين كفروا وقيل: هذا الذي كنتم به تدعون … أي: باسمه تسمون أمير المؤمنين",
+            "chain": "Furat, from Ja'far, with a continuous chain, from Abu Abdillah",
+            "text": {
+              "en": "When God hands the Banner of Praise to Muhammad - under it every angel brought near and every sent prophet - until he hands it to Ali, the faces of those who disbelieved are distressed, and it is said: This is what you used to claim, naming yourselves Commander of the Faithful by his name."
+            },
+            "source": "s19"
+          }
+        ]
+      },
+      {
+        "verse": 28,
+        "heading": {
+          "en": "If God destroys me"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "هذه الآية مما غيروا و حرفوا، ما كان الله ليهلك محمدا (صلى الله عليه و آله) و لا من كان معه من المؤمنين، و هو خير ولد آدم (عليه السلام)، و لكن قال عز و جل: قل أ رأيتم إن أهلككم الله جميعا أو رحمنا فمن يجير الكافرين من عذاب أليم",
+            "chain": "Sharaf al-Din al-Najafi, from Ali ibn Asbat, from Ali ibn Abi Hamza, from Abu Basir",
+            "text": {
+              "en": "This verse is among what they changed and altered. God would not destroy Muhammad, nor the believers who were with him, and he is the best of the children of Adam. Rather He said: Say, Tell me, if Allah destroys all of you, or has mercy on us, who will shelter the faithless from a painful punishment?"
+            },
+            "source": "s15"
+          }
+        ]
+      },
+      {
+        "verse": 29,
+        "heading": {
+          "en": "Who is in error"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "يا معشر المكذبين حيث أنبأتكم رسالة ربي في ولاية علي و الأئمة (عليهم السلام) من بعده، فستعلمون من هو في ضلال مبين",
+            "chain": "Muhammad ibn Yaqub, from al-Husayn ibn Muhammad, from Mu'alla ibn Muhammad, from Ali ibn Asbat, from Ali ibn Abi Hamza, from Abu Basir, from Abu Abdillah",
+            "text": {
+              "en": "O company of deniers: since I conveyed to you my Lord's message concerning the guardianship of Ali and the Imams after him, soon you will know who is in manifest error."
+            },
+            "source": "s15"
+          }
+        ]
+      },
+      {
+        "verse": 30,
+        "heading": {
+          "en": "If the water sinks"
+        },
+        "narrations": [
+          {
+            "id": "n8",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "ماؤكم أبوابكم، أي الأئمة (عليهم السلام)، و الأئمة أبواب الله بينه و بين خلقه فمن يأتيكم بماء معين يعني بعلم الإمام",
+            "chain": "Ali ibn Ibrahim, from Muhammad ibn Ja'far, from Muhammad ibn Ahmad, from al-Qasim ibn al-Ala, from Isma'il ibn Ali al-Fazari, from Muhammad ibn Jumhur, from Fadala ibn Ayyub",
+            "text": {
+              "en": "Your water is your gates - that is, the Imams; the Imams are the gates of God between Him and His creation. 'Who will bring you running water' means the knowledge of the Imam."
+            },
+            "source": "s16"
+          },
+          {
+            "id": "n9",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "هذه نزلت في الإِمام القائم عليه السلام يقول ان اصبح امامكم غائباً عنكم لا تدرون اين هو فمن يأتيكم بإمام ظاهر يأتيكم باخبار السموات والأرض وحلال الله وحرامه ثمّ قال والله ما جاء تأويل هذه الآية ولا بدّ ان يجيء تأويلها",
+            "chain": null,
+            "text": {
+              "en": "This was revealed about the Qa'im, the standing Imam: if your Imam becomes hidden from you, not knowing where he is, who will bring you a manifest Imam who conveys the tidings of the heavens and earth and God's lawful and forbidden? Its interpretation has not yet come, and it surely must."
+            },
+            "source": "s18"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "The surface sense - the subdued earth, God's power over the sky, the birds held aloft, the parable of the two walkers - is read much alike across the traditions. They part over whom the parable and the scene of verse 27 concern. Shia narrations read the upright walker on the straight path as Ali and the Imams, and the deniers whose faces fall when they 'see it brought near' as those who behold Ali's lofty station on the Day of Judgment [13][14]. Ibn Kathir and the Sunni commentators take the parable as a general likeness of believer and disbeliever, and verse 27 as the deniers seeing the punishment they had mocked draw near [34]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Mulk 15 to 22",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=67&tAyahNo=15&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "بيان في الآيات كرَّة بعد كرَّة بآيات التدبير الدالَّة على ربوبيته تعالى مقرونة بالإِنذار والتخويف"
+        },
+        "gloss": "An exposition: in these verses, time and again, come signs of governance that prove His lordship, joined with warning and alarm."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Mulk 23 to 30",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=67&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قيل إن كفار مكة كانوا يدعون على رسول الله صلى الله عليه وآله وسلم وعلى المؤمنين بالهلاك"
+        },
+        "gloss": "It is said that the disbelievers of Mecca used to pray for the destruction of the Messenger of God and of the believers."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mulk 15 to 21",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=67&tAyahNo=15&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لا بدَّ أن يكون هذا معناه لاستحالة أن يكون الله جل جلاله في مكان أو في جهة"
+        },
+        "gloss": "This must be its meaning, since it is impossible that God, majestic is His glory, be in a place or in a direction."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mulk 22 to 30",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=67&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أي منكساً رأسه إلى الأرض فهو لا يبصر الطريق … وهو الكافر المقلد لا يدري أمحق هو أم مبطل"
+        },
+        "gloss": "That is, with his head bowed to the ground, so he does not see the road; this is the disbelieving imitator, who does not know whether he is in the right or in the wrong."
+      },
+      {
+        "id": "s5",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mulk 15",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=67&tAyahNo=15&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وكلوا من رزقه صورته صورة الأمر والمراد به الاباحة والأذن"
+        },
+        "gloss": "'And eat of His provision': its form is the form of a command, but what is meant is permission and leave."
+      },
+      {
+        "id": "s7",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mulk 22 to 26",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=67&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال ابن عباس: هو مثل ضربه الله عز وجل للكافر وشبهه بمن يمشى مكباً على وجهه. والمؤمن شبهه بمن يمشي سوياً على صراط مستقيم"
+        },
+        "gloss": "Ibn Abbas said: it is a likeness God struck for the disbeliever, likening him to one who walks prone on his face; and the believer He likened to one who walks upright on a straight path."
+      },
+      {
+        "id": "s13",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mulk 22",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=67&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إن الله ضرب مثلا من حاد عن ولاية علي (عليه السلام) كمن يمشي على وجهه … و الصراط المستقيم أمير المؤمنين (عليه السلام)"
+        },
+        "gloss": "God struck a likeness of whoever turns from the guardianship of Ali as one who walks on his face; and the straight path is Amir al-Mu'minin."
+      },
+      {
+        "id": "s14",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mulk 27",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=67&tAyahNo=27&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هذه نزلت في أمير المؤمنين (عليه السلام) و أصحابه الذين عملوا ما عملوا، يرون أمير المؤمنين (عليه السلام) في أغبط الأماكن فيسيء وجوههم"
+        },
+        "gloss": "This was revealed about Amir al-Mu'minin and his companions who did what they did; they see Amir al-Mu'minin in the most envied of stations, and their faces are distressed."
+      },
+      {
+        "id": "s15",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mulk 28 to 29",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=67&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هذه الآية مما غيروا و حرفوا، ما كان الله ليهلك محمدا (صلى الله عليه و آله) و لا من كان معه من المؤمنين"
+        },
+        "gloss": "This verse is among what they changed and altered; God would not destroy Muhammad, nor those believers who were with him."
+      },
+      {
+        "id": "s16",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mulk 30",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=67&tAyahNo=30&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ماؤكم أبوابكم، أي الأئمة (عليهم السلام)، و الأئمة أبواب الله بينه و بين خلقه فمن يأتيكم بماء معين يعني بعلم الإمام"
+        },
+        "gloss": "Your water is your gates - that is, the Imams; the Imams are the gates of God between Him and His creation; meaning the knowledge of the Imam."
+      },
+      {
+        "id": "s18",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mulk 22 to 30",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=67&tAyahNo=22&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هذه نزلت في الإِمام القائم عليه السلام يقول ان اصبح امامكم غائباً عنكم لا تدرون اين هو فمن يأتيكم بإمام ظاهر"
+        },
+        "gloss": "This was revealed about the Qa'im, the standing Imam: he says, if your Imam becomes hidden from you, not knowing where he is, who will bring you a manifest Imam?"
+      },
+      {
+        "id": "s19",
+        "kind": "hadith",
+        "work": "Tafsir Furat al-Kufi",
+        "author": "Furat ibn Ibrahim al-Kufi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Mulk 27",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=45&tSoraNo=67&tAyahNo=27&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إذا دفع الله لواء الحمد إلى محمد صلى الله عليه وآله وسلم … حتى يدفعه إلى علي … أي: باسمه تسمون أمير المؤمنين"
+        },
+        "gloss": "When God hands the Banner of Praise to Muhammad, until he hands it to Ali; that is, by his name you named yourselves Commander of the Faithful."
+      },
+      {
+        "id": "s34",
+        "kind": "tafsir",
+        "work": "Tafsir al-Quran al-Azim",
+        "author": "Ibn Kathir",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Mulk 20 to 27",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=7&tSoraNo=67&tAyahNo=20&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وهذا مثل ضربه الله للمؤمن والكافر، فالكافر مثله فيما هو فيه، كمثل من يمشي مكباً على وجهه … أي لما قامت القيامة، وشاهدها الكفار"
+        },
+        "gloss": "This is a likeness God struck for the believer and the disbeliever: the disbeliever, in his state, is like one who walks prone on his face; that is, when the Resurrection comes and the disbelievers witness it."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T16:56:32Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T17:18:22Z",
+      "assembled_at": "2026-10-06T17:18:47Z"
+    }
+  }
+}

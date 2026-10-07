@@ -19,6 +19,7 @@ struct DuaMiniPlayer: View {
 
     @ObservedObject private var stream = DuaStreamPlayer.shared
     @ObservedObject private var tm = ThemeManager.shared
+    @Environment(\.colorScheme) private var colorScheme
 
     /// Glass tint layered over `.ultraThinMaterial` - mirrors JourneyMiniPlayer /
     /// EmeraldTabBar so the bars read as one floating family.
@@ -88,7 +89,7 @@ struct DuaMiniPlayer: View {
     private func cover(_ dua: SpecialDua) -> some View {
         Group {
             if UIImage(named: "DuasZiyaratCover") != nil {
-                Image("DuasZiyaratCover").resizable().scaledToFill()
+                Image(CoverArt.asset("DuasZiyaratCover", for: colorScheme)).resizable().scaledToFill()
             } else {
                 tm.accentChip.overlay(
                     Image(systemName: SpecialDuaIcon.symbol(for: dua.id))

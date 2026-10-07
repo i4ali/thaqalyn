@@ -1,0 +1,507 @@
+{
+  "1": {
+    "id": "71:1",
+    "surah": 71,
+    "index": 1,
+    "range": [
+      1,
+      20
+    ],
+    "title": {
+      "en": "Noah's call to his people"
+    },
+    "essay": {
+      "en": "Surah Nuh opens with a commission: God sends Noah to warn his people before a painful punishment overtakes them. Noah answers at once, declaring himself a manifest warner who calls them to worship God, to be wary of Him, and to obey him. Al-Tabatabai reads these three commands as a summons to the three roots of religion - the oneness of God, the Return that grounds all God-wariness, and trust in prophethood carried in the call to obey [1]. Al-Tusi adds that Noah asks obedience to himself because a prophet's obedience is bound to God's own [4].\n\nThe promise attached is measured. The forgiveness is of 'some of your sins,' which al-Tabatabai keeps partitive - the sins committed before faith [1] - while the respite 'until a specified time' opens onto two terms, as al-Tabrisi finds: a farther term if they believe, and a nearer term of uprooting if they persist [2].\n\nThen the prophet turns to his Lord. He has called night and day, and the call only drove them to flight; whenever he called, they pushed their fingers into their ears, drew their cloaks over their heads, dug in, and grew proud. He tried every register - aloud, then openly, then in secret - pressing them to seek forgiveness from an all-forgiving Lord who would answer with rain, wealth, sons, gardens and streams. Al-Tabatabai hears in this a real bond between a people's righteousness and the order of their world [1].\n\nThe passage closes with an argument from the sky and the self. What keeps you from revering God, who made you in stages, raised the seven heavens in layers, set the moon as a light and the sun as a lamp, grew you from the earth and will return you to it? Al-Tabatabai treats this whole seven-verse sweep as one proof of God's lordship, and so of His sole right to be worshipped [1]. The people are left stopped before a sign-filled summons they will not hear."
+    },
+    "verses": [
+      {
+        "verse": 7,
+        "heading": {
+          "en": "They stop their ears"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Ali ibn Ibrahim",
+            "addressee": null,
+            "arabic": "{ واستغشوا ثيابهم } قال: استتروا بها { وأصروا واستكبروا استكبارا } أي: عزموا على أن لا يسمعوا شيئاً",
+            "chain": null,
+            "text": {
+              "en": "Of 'and they drew their cloaks over themselves,' he said: they hid behind them. Of 'and they were persistent and disdainful in arrogance,' he said: they resolved not to hear anything."
+            },
+            "source": "s8"
+          }
+        ]
+      },
+      {
+        "verse": 10,
+        "heading": {
+          "en": "Seek forgiveness for offspring"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": "al-Abrash al-Kalbi",
+            "arabic": "استغفر الله في كل يوم أو في كل ليلة مائة مرة، فإن الله يقول: { ٱسْتَغْفِرُواْ رَبَّكُمْ إِنَّهُ كَانَ غَفَّاراً } إلى قوله { وَيُمْدِدْكُمْ بِأَمْوَالٍ وَبَنِينَ }",
+            "chain": "Muhammad ibn Yaqub, from Ali ibn Ibrahim, from his father, from Ibn Abi Umayr, from some of his companions",
+            "text": {
+              "en": "Al-Abrash al-Kalbi complained to him that he had no child and asked to be taught something. He said: Seek Allah's forgiveness a hundred times every day or every night, for Allah says, 'Plead to your Lord for forgiveness,' up to, 'and aid you with wealth and sons.'"
+            },
+            "source": "s16"
+          },
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": "Said ibn Yasar",
+            "arabic": "استغفر ربك في السحر مائة مرة، فإن نسيته فاقضه",
+            "chain": "Muhammad ibn Yaqub, from a number of our companions, from Sahl ibn Ziyad, from Yaqub ibn Yazid, from Muhammad ibn Shuayb, from al-Nadr ibn Shuayb, from Said ibn Yasar",
+            "text": {
+              "en": "Said ibn Yasar told him he had no child. He said: Seek your Lord's forgiveness at dawn a hundred times, and if you forget it, make it up."
+            },
+            "source": "s16"
+          }
+        ]
+      },
+      {
+        "verse": 13,
+        "heading": {
+          "en": "You do not fear God"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "{ لا ترجون لله وقاراً } قال: لا تخافون لله عظمة",
+            "chain": "Abu al-Jarud, from Abu Jafar",
+            "text": {
+              "en": "Of 'you do not look upon Allah with veneration,' he said: you do not fear Allah's greatness."
+            },
+            "source": "s10"
+          }
+        ]
+      },
+      {
+        "verse": 14,
+        "heading": {
+          "en": "Created you in stages"
+        },
+        "note": null,
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Ali ibn Ibrahim",
+            "addressee": null,
+            "arabic": "{ وقد خلقكم أطواراً } قال على اختلاف الأهواء والارادات والمشيات",
+            "chain": null,
+            "text": {
+              "en": "Of 'He has created you in stages,' he said: according to the difference of inclinations, wills, and desires."
+            },
+            "source": "s11"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": null
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Nooh 1 to 20",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=71&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ففي قوله { اعبدوا الله واتقوه وأطيعون } ندب إلى أصول الدين الثلاثة التوحيد المشار إليه بقوله { اعبدوا الله } والمعاد الذي هو أساس التقوى والتصديق بالنبوة المشار إليه بالدعوة إلى الطاعة المطلقة"
+        },
+        "gloss": "In 'Worship Allah, be wary of Him, and obey me' there is a call to the three roots of religion: tawhid, indicated by 'Worship Allah'; the Return, which is the basis of God-wariness; and belief in prophethood, indicated by the call to absolute obedience."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Nooh 1 to 14",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=71&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ ويؤخّركم إلى أجل مسمى } وفي هذا دلالة على ثبوت أجلين"
+        },
+        "gloss": "'and respite you until a specified time' - in this is an indication that there are two terms."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Nooh 1 to 6",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=71&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ وأطيعون } فيما أمركم به لأن طاعتي مقرونة بطاعة الله"
+        },
+        "gloss": "'and obey me' in what I command you, because obedience to me is joined to obedience to Allah."
+      },
+      {
+        "id": "s8",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Nooh 7",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=71&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ وأصروا واستكبروا استكبارا } أي: عزموا على أن لا يسمعوا شيئاً"
+        },
+        "gloss": "'and they were persistent and disdainful in arrogance' - that is, they resolved not to hear anything."
+      },
+      {
+        "id": "s10",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Nooh 13",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=71&tAyahNo=13&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ لا ترجون لله وقاراً } قال: لا تخافون لله عظمة"
+        },
+        "gloss": "'you do not look upon Allah with veneration' - he said: you do not fear Allah's greatness."
+      },
+      {
+        "id": "s11",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Nooh 14",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=71&tAyahNo=14&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ وقد خلقكم أطواراً } قال على اختلاف الأهواء والارادات والمشيات"
+        },
+        "gloss": "'He has created you in stages' - he said: according to the difference of inclinations, wills, and desires."
+      },
+      {
+        "id": "s16",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Nooh 10 to 12",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=71&tAyahNo=10&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "استغفر الله في كل يوم أو في كل ليلة مائة مرة، فإن الله يقول: { ٱسْتَغْفِرُواْ رَبَّكُمْ إِنَّهُ كَانَ غَفَّاراً }"
+        },
+        "gloss": "Seek Allah's forgiveness a hundred times each day or night, for Allah says, 'Plead to your Lord for forgiveness.'"
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:15:56Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T17:28:08Z",
+      "assembled_at": "2026-10-06T17:45:51Z"
+    }
+  },
+  "2": {
+    "id": "71:2",
+    "surah": 71,
+    "index": 2,
+    "range": [
+      21,
+      28
+    ],
+    "title": {
+      "en": "Noah's complaint and final prayers"
+    },
+    "essay": {
+      "en": "These verses close Surah Nooh. Noah turns from his people to his Lord and lays out their refusal: they disobeyed him and followed men whose wealth and children only deepened their loss. Al-Mizan reads this as the affluent elite of his people, who used their standing to turn the people away from him and incite them against him [1]. Their leaders devised an outrageous plot and told the people, 'Do not abandon your gods,' naming five idols - Wadd, Suwa, Yaghuth, Ya'uq and Nasr. Noah adds that these idols, or the chiefs who championed them, had already led many astray, and he asks that the wrongdoers be given nothing but further error. Al-Tibyan, relaying al-Balkhi, stresses that this cannot mean God makes them stray from the truth, which would be folly unworthy of Him [4].\n\nThe next verse announces the outcome. Because of their sins they were drowned and then made to enter a Fire, finding no helper besides God. Noah resumes his prayer, asking that no faithless inhabitant be left on the earth, for if left they would corrupt God's servants and beget only vicious ingrates. He closes by asking forgiveness for himself, his parents, whoever enters his house in faith, and the believing men and women, and asks once more that the wrongdoers be increased in nothing but ruin. Majma al-Bayan frames the ending as two supplications - one against the disbelievers, which God answered by destroying every one of them on the earth, and one for the believers [3]. With this the surah ends, leaving a prophet whose patience has run its course and whose cause is now handed wholly to God."
+    },
+    "verses": [
+      {
+        "verse": 21,
+        "heading": {
+          "en": "Whom they followed"
+        },
+        "note": {
+          "en": "Tafsir al-Qummi glosses the one the people followed - the man whose wealth and children only deepen his loss - as the wealthy [5]."
+        },
+        "narrations": []
+      },
+      {
+        "verse": 23,
+        "heading": {
+          "en": "The idols and their origin"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "كانوا يعبدون الله عز و جل فماتوا، فضج قومهم و شق ذلك عليهم، فجاءهم إبليس لعنه الله، فقال لهم: اتخذ لكم أصناما على صورهم فتنظرون إليهم و تأنسون بهم و تعبدون الله … حتى هلك ذلك القرن و نشأ أولادهم فقالوا: إن آباءنا كانوا يعبدون هؤلاء، فعبدوهم من دون الله عز و جل",
+            "chain": "Ibn Babawayh, from his father, from Sad ibn Abdullah, from Ahmad ibn Muhammad ibn Isa, from Muhammad ibn Khalid al-Barqi, from Hammad ibn Isa, from Hariz ibn Abdullah al-Sijistani, from Jafar ibn Muhammad",
+            "text": {
+              "en": "They used to worship God, then they died, and their people grieved. Iblis came and told them: Make idols in their forms, to look at and take comfort by, while you worship God. When that generation passed, their children said their fathers had worshipped these, and worshipped them instead of God."
+            },
+            "source": "s11"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "كانت ود صنما لكلب، و كانت سواع لهذيل، و كانت يغوث لمراد، و كانت يعوق لهمدان، و كانت نسر لحصين",
+            "chain": "Ali ibn Ibrahim, in the narration of Abu al-Jarud, from Abu Jafar",
+            "text": {
+              "en": "Wadd was an idol of Kalb, Suwa of Hudhayl, Yaghuth of Murad, Ya'uq of Hamdan, and Nasr of Husayn."
+            },
+            "source": "s11"
+          }
+        ]
+      },
+      {
+        "verse": 25,
+        "heading": {
+          "en": "Drowned, then the Fire"
+        },
+        "note": {
+          "en": "Al-Mizan reads the Fire they enter as the fire of the barzakh, with which the guilty are punished between death and resurrection, not the Fire of the Hereafter [2]."
+        },
+        "narrations": []
+      },
+      {
+        "verse": 26,
+        "heading": {
+          "en": "Noah prays against them"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "و لبث نوح (عليه السلام) في قومه ألف سنة إلا خمسين عاما، يدعوهم إلى الله عز ذكره، فيهزءون به و يسخرون منه، فلما رأى ذلك منهم دعا عليهم",
+            "chain": "Ali ibn Ibrahim, from his father, from Ibn Mahbub, from Hisham al-Khurasani, from al-Mufaddal ibn Umar, from Abu Abdillah",
+            "text": {
+              "en": "Noah remained among his people a thousand years all but fifty, calling them to God while they mocked and ridiculed him. When he saw this from them, he prayed against them."
+            },
+            "source": "s11"
+          }
+        ]
+      },
+      {
+        "verse": 27,
+        "heading": {
+          "en": "How Noah knew"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Baqir",
+            "addressee": "Salih ibn Maytham",
+            "arabic": "قلت لأبي جعفر عليه السلام ما كان علم نوح حين دعا قومه أنهم لا يلدون إلا فاجراً كفاراً؟ فقال: أما سمعت قول الله لنوح { إنه لن يؤمن من قومك إلا من قد آمن }",
+            "chain": "Ahmad ibn Muhammad ibn Musa, from Muhammad ibn Hammad, from Ali ibn Ismail al-Taymi, from Fudayl al-Rassam, from Salih ibn Maytham",
+            "text": {
+              "en": "Salih asked: how did Noah know, when he prayed against his people, that they would beget none but vicious ingrates? He answered: Have you not heard God's word to Noah, 'None of your people will believe except those who have already believed'?"
+            },
+            "source": "s8"
+          }
+        ]
+      },
+      {
+        "verse": 28,
+        "heading": {
+          "en": "Forgiveness and the house"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إنما يعني الولاية، من دخل في الولاية دخل في بيت الأنبياء (عليهم السلام)، و قوله تعالى: { إِنَّمَا يُرِيدُ ٱللَّهُ لِيُذْهِبَ عَنكُـمُ ٱلرِّجْسَ أَهْلَ ٱلْبَيْتِ وَيُطَهِّرَكُمْ تَطْهِيـراً } … يعني الأئمة (عليهم السلام) و ولايتهم، من دخل فيها دخل في بيت النبي (صلى الله عليه وآله)",
+            "chain": "Muhammad ibn Yaqub, from a number of our companions, from Ahmad ibn Muhammad ibn Isa, from Ibn Faddal, from al-Mufaddal ibn Salih, from Muhammad ibn Ali al-Halabi, from Abu Abdillah",
+            "text": {
+              "en": "'My house' means wilayah: whoever enters wilayah enters the house of the prophets. And God's word, 'God only wishes to remove all impurity from you, O People of the House, and purify you thoroughly,' means the Imams and their wilayah; whoever enters it enters the house of the Prophet."
+            },
+            "source": "s12"
+          },
+          {
+            "id": "n6",
+            "speaker": "Ibn Abbas",
+            "addressee": null,
+            "arabic": "و قد كان قبر علي بن أبي طالب (عليه السلام) مع نوح (عليه السلام) في السفينة، فلما خرج من السفينة ترك قبره خارج الكوفة، فسأل نوح (عليه السلام) ربه المغفرة لعلي و فاطمة (عليهما السلام) و هو قوله: { وَلِلْمُؤْمِنِينَ وَٱلْمُؤْمِنَاتِ } ، ثم قال: { وَلاَ تَزِدِ ٱلظَّالِمِينَ } يعني الظلمة لأهل بيت محمد (صلى الله عليه و آله) { إِلاَّ تَبَاراً }",
+            "chain": "Ibn Shahr Ashub, from Said ibn Jubayr, from Ibn Abbas",
+            "text": {
+              "en": "The grave of Ali ibn Abi Talib was with Noah in the ark, and when Noah left it he set that grave outside Kufa. Noah asked his Lord to forgive Ali and Fatimah - the meaning of 'the faithful men and women' - then said 'do not increase the wrongdoers,' meaning those who wrong the family of Muhammad, 'except in ruin.'"
+            },
+            "source": "s12"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On 'whoever enters my house in faith,' the traditions part. Shia narrations read 'my house' as wilayah: whoever enters the wilayah of the Imams enters the house of the prophets [12]. Sunni commentators take the house literally - al-Tabari glosses it as Noah's mosque and prayer-place, entered by one who prays there as a believer [18]. Both traditions still read the prayer the same way at its edges: a blessing upon the faithful men and women, and a closing plea that the wrongdoers be given nothing but ruin."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Nooh 21 to 24",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=71&tAyahNo=21&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي الآية دلالة على أن العظماء المترفين من قومه عليه السلام كانوا يصدون الناس عنه ويحرضونهم على مخالفته وإيذائه."
+        },
+        "gloss": "The verse indicates that the affluent elite of his people were turning the people away from him and inciting them to oppose and harm him."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Nooh 25 to 28",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=71&tAyahNo=25&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والمراد بالنار نار البرزخ التي يعذب بها المجرمون بين الموت والبعث دون نار الآخرة."
+        },
+        "gloss": "What is meant by the Fire is the fire of the barzakh, with which the guilty are punished between death and resurrection, not the Fire of the Hereafter."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Nooh 21 to 28",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=71&tAyahNo=21&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "دعا نوح ع دعوتين دعوة على الكافرين ودعوة للمؤمنين فاستجاب الله دعوته على الكافرين فأهلك من كان منهم على وجه الأرض"
+        },
+        "gloss": "Noah made two supplications - one against the disbelievers and one for the believers - and God answered the one against the disbelievers and destroyed every one of them on the face of the earth."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Nooh 21 to 28",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=71&tAyahNo=21&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولا يجوز أن يفعل بهم الضلال عن الحق، لانه سفه فتعالى الله عن ذلك علواً كبيراً."
+        },
+        "gloss": "Al-Balkhi: it is not permissible that He make them stray from the truth, for that would be folly; exalted be God far above that."
+      },
+      {
+        "id": "s5",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Nooh 21",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=71&tAyahNo=21&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "اتبعوا الأغنياء"
+        },
+        "gloss": "They followed the wealthy."
+      },
+      {
+        "id": "s8",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Nooh 27",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=71&tAyahNo=27&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "أما سمعت قول الله لنوح { إنه لن يؤمن من قومك إلا من قد آمن }"
+        },
+        "gloss": "Have you not heard God's word to Noah: 'None of your people will believe except those who have already believed'?"
+      },
+      {
+        "id": "s11",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Nooh 23 to 27",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=71&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "و لبث نوح (عليه السلام) في قومه ألف سنة إلا خمسين عاما، يدعوهم إلى الله عز ذكره، فيهزءون به و يسخرون منه، فلما رأى ذلك منهم دعا عليهم"
+        },
+        "gloss": "Noah remained among his people a thousand years all but fifty, calling them to God; they mocked and ridiculed him, and when he saw this he prayed against them."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Nooh 28",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=71&tAyahNo=28&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "إنما يعني الولاية، من دخل في الولاية دخل في بيت الأنبياء"
+        },
+        "gloss": "It means wilayah: whoever enters the wilayah enters the house of the prophets."
+      },
+      {
+        "id": "s18",
+        "kind": "tafsir",
+        "work": "Jami al-Bayan",
+        "author": "al-Tabari",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Nooh 27 to 28",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=1&tSoraNo=71&tAyahNo=27&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولِمَنْ دَخَلَ بَيِتيَ مُؤْمِناً يقول: ولمن دخل مسجدي ومصلايَ مصلِّياً مؤمناً"
+        },
+        "gloss": "'And whoever enters my house in faith' means whoever enters my mosque and prayer-place praying as a believer."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:12:41Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T17:45:30Z",
+      "assembled_at": "2026-10-06T17:45:51Z"
+    }
+  }
+}

@@ -1,0 +1,617 @@
+{
+  "1": {
+    "id": "76:1",
+    "surah": 76,
+    "index": 1,
+    "range": [
+      1,
+      22
+    ],
+    "title": {
+      "en": "The pious and their reward"
+    },
+    "essay": {
+      "en": "Surah al-Insan opens with a question that works as a statement: has a stretch of time passed over man when he was not anything worthy of mention? Majma al-Bayan reads 'has there been' as 'there has indeed come,' so the verse affirms that man once had no name among created things [2]. Al-Mizan takes 'man' here as the human race, not Adam, since the next verse speaks of a drop of mixed fluid [1]. God shapes that drop, grants hearing and sight, and sets man to the test. He is guided to the way and left free to be grateful or ungrateful; al-Tusi notes that the verse shows God guided every accountable creature, which tells against the determinists [4]. For the faithless there are chains, iron collars and a blaze.\n\nThe verses then turn to the pious, and they stay there: the account of their reward runs for eighteen verses, which al-Mizan reads as the passage's real subject [1]. They drink from a cup seasoned with Kafur, from a gushing spring. They fulfil their vows, fear a day whose ill is widespread, and feed the needy, the orphan and the prisoner for the love of God, wanting neither reward nor thanks. So Allah saves them from that day's ills and rewards their patience with a garden and silk: reclining on couches, facing no scorching sun or biting cold, shade drawn close, fruit hung low, vessels of silver and goblets of crystal, a cup seasoned with Zanjabeel from a spring named Salsabeel, and immortal youths you would suppose to be scattered pearls. Looking on, one sees bliss and a great kingdom, cloaks of green silk and brocade, bracelets of silver, and a pure drink from their Lord. 'This is your reward, and your efforts have been well-appreciated.'\n\nBoth Shia and Sunni narrators, al-Tusi records, relate that these verses came down about Ali, Fatimah, Hasan and Husayn [4]; al-Mizan adds that the reports of the Ahl al-Bayt are unanimous that the surah is Medinan [1]."
+    },
+    "verses": [
+      {
+        "verse": 1,
+        "heading": {
+          "en": "When man was unmentioned"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "كان شيئا و لم يكن مذكورا",
+            "chain": "Ahmad ibn Muhammad ibn Khalid al-Barqi, from his father, from Ismail ibn Ibrahim and Muhammad ibn Abi Umayr, from Abdullah ibn Bukayr, from Zurara, from Humran",
+            "text": {
+              "en": "It was a thing, but it was not mentioned."
+            },
+            "source": "s13"
+          },
+          {
+            "id": "n2",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "كان مقدرا غير مذكور",
+            "chain": "Muhammad ibn Yaqub, from Ahmad ibn Mihran, from Abd al-Azim ibn Abdillah al-Hasani, from Ali ibn Asbat, from Khalaf ibn Hammad, from Ibn Muskan, from Malik al-Juhani",
+            "text": {
+              "en": "It was decreed, but it was not mentioned."
+            },
+            "source": "s13"
+          }
+        ]
+      },
+      {
+        "verse": 3,
+        "heading": {
+          "en": "Guided, grateful or ungrateful"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "أما آخذ فشاكر وإما تارك فكافر",
+            "chain": "Ahmad ibn Idris, from Ahmad ibn Muhammad, from Ibn Abi Umayr",
+            "text": {
+              "en": "Either he takes it, and so is grateful, or he leaves it, and so is ungrateful."
+            },
+            "source": "s9"
+          },
+          {
+            "id": "n4",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "عرفناه إما آخذا وإما تاركا",
+            "chain": "Muhammad ibn Ali Majilawayh, from his uncle Muhammad ibn Abi al-Qasim, from Ahmad ibn Abi Abdillah, from Ibn Faddal, from Thalaba ibn Maymun, from Hamza ibn al-Tayyar",
+            "text": {
+              "en": "We made him recognize the way, whether he takes it or leaves it."
+            },
+            "source": "s63"
+          }
+        ]
+      },
+      {
+        "verse": 6,
+        "heading": {
+          "en": "The spring of the servants"
+        },
+        "narrations": [
+          {
+            "id": "n5",
+            "speaker": "Imam al-Baqir",
+            "addressee": null,
+            "arabic": "هي عين في دار النبيّ صلّى الله عليه وآله يفجّر الى دور الانبياء والمؤمنين",
+            "chain": null,
+            "text": {
+              "en": "It is a spring in the house of the Prophet that bursts forth to the houses of the prophets and the believers."
+            },
+            "source": "s17"
+          }
+        ]
+      },
+      {
+        "verse": 7,
+        "heading": {
+          "en": "Fulfilling the vow"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Kazim",
+            "addressee": null,
+            "arabic": "يوفون بالنذر الذي أخذ عليهم من ولايتنا",
+            "chain": "Muhammad ibn Yaqub, from Ahmad ibn Idris, from Muhammad ibn Ahmad, from Yaqub ibn Yazid, from Ibn Mahbub, from Muhammad ibn al-Fudayl",
+            "text": {
+              "en": "They fulfil the vow laid upon them - allegiance to us."
+            },
+            "source": "s14"
+          }
+        ]
+      },
+      {
+        "verse": 8,
+        "heading": {
+          "en": "Feeding the needy"
+        },
+        "narrations": [
+          {
+            "id": "n7",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "كان عند فاطمة عليها السلام شعير فجعلوه عصيدة، فلما انضجوها ووضعوها بين أيديهم جاء مسكين … في أمير المؤمنين عليه السلام وهي جارية في كل مؤمن فعل مثل ذلك لله عز وجل",
+            "chain": "from his father, from Abdullah ibn Maymun al-Qaddah",
+            "text": {
+              "en": "Fatimah had barley, which they made into porridge. When it was set before them, a beggar came, then an orphan, then a captive; each time Ali gave a third away, and they tasted none. God revealed these verses about the Commander of the Faithful, and they hold for every believer who does likewise."
+            },
+            "source": "s12"
+          }
+        ]
+      },
+      {
+        "verse": 20,
+        "heading": {
+          "en": "A great kingdom"
+        },
+        "narrations": [
+          {
+            "id": "n8",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "إذا أدخل الله أهل الجنة الجنة أرسل رسولا إلى ولي من أوليائه فيجد الحجبة على بابه … فما يصل إليه رسول ربه إلا بإذن",
+            "chain": "from his father, from Sad ibn Abdullah, from al-Hasan ibn Musa al-Khashshab, from Yazid ibn Ishaq, from Abbas ibn Yazid",
+            "text": {
+              "en": "When God admits the people of paradise, He sends a messenger to one of His friends; the messenger finds doorkeepers at his gate who say, 'Wait until we seek leave for you.' The Lord's own messenger reaches him only by his permission. That is the great kingdom."
+            },
+            "source": "s68"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On the occasion of revelation the traditions part. Majma al-Bayan reports from Sunni and Shia narrators alike that the verses on the pious came down after Ali, Fatimah, Hasan, Husayn and their servant Fadda gave away their food for three nights [2], and the Shia commentators treat this as the passage's settled occasion. The Sunni commentators read the verses as general praise of every pious person: al-Razi holds that what counts is the general wording, not the particular occasion [49], while Qurtubi, though granting the verses were revealed about all the pious, judges the detailed story of the household unsound [38]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Insaan 1 to 22",
+        "url": "https://www.greattafsirs.com/Tafsir_Library.aspx?MadhabNo=0&TafsirNo=56&SoraNo=76&AyahNo=1&LanguageID=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "والمراد بالإِنسان الجنس."
+        },
+        "gloss": "What is meant by 'man' here is the human species, not one individual."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Insaan 1 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=76&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قد روى الخاص والعام أن الآيات من هذه السورة وهي قوله { إن الأبرار يشربون } إلى قوله { وكان سعيكم مشكوراً } نزلت في عليّ وفاطمة والحسن والحسين عليهم السلام وجارية لهم تسمى فضة"
+        },
+        "gloss": "Both Sunni and Shia have narrated that these verses, from 'Indeed the pious will drink' to 'your efforts have been well-appreciated,' were revealed about Ali, Fatimah, Hasan, Husayn and a servant of theirs named Fadda."
+      },
+      {
+        "id": "s4",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Insaan 1 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=76&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وفي الآية دلالة على انه تعالى قد هدى جميع خلقه المكلفين"
+        },
+        "gloss": "This verse shows that God has guided all His accountable creatures."
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Insaan 3",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=76&tAyahNo=3&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وهو رد على المجبرة أنهم يزعمون أنهم لا فعل لهم"
+        },
+        "gloss": "This refutes the determinists, who claim that people have no act of their own."
+      },
+      {
+        "id": "s12",
+        "kind": "hadith",
+        "work": "Tafsir al-Qummi",
+        "author": "Ali ibn Ibrahim al-Qummi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Insaan 8 to 22",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=38&tSoraNo=76&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "في أمير المؤمنين عليه السلام وهي جارية في كل مؤمن فعل مثل ذلك لله عز وجل"
+        },
+        "gloss": "Revealed about the Commander of the Faithful, and it holds for every believer who does the like for God."
+      },
+      {
+        "id": "s13",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Insaan 1 to 3",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=76&tAyahNo=1&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "كان شيئا و لم يكن مذكورا"
+        },
+        "gloss": "It was a thing, but it was not mentioned."
+      },
+      {
+        "id": "s14",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Insaan 5 to 9",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=76&tAyahNo=5&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "يوفون بالنذر الذي أخذ عليهم من ولايتنا"
+        },
+        "gloss": "They fulfil the vow laid upon them - allegiance to us."
+      },
+      {
+        "id": "s17",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Insaan 4 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=76&tAyahNo=4&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "هي عين في دار النبيّ صلّى الله عليه وآله يفجّر الى دور الانبياء والمؤمنين"
+        },
+        "gloss": "It is a spring in the house of the Prophet that flows out to the houses of the prophets and the believers."
+      },
+      {
+        "id": "s38",
+        "kind": "tafsir",
+        "work": "al-Jami li-Ahkam al-Quran",
+        "author": "al-Qurtubi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Insaan 7 to 9",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=5&tSoraNo=76&tAyahNo=7&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وقد ذكر النقاش والثّعلبيّ والقشيريّ وغير واحد من المفسّرين في قصة عليّ وفاطمة وجاريتهما حديثاً لا يصح ولا يثبت"
+        },
+        "gloss": "al-Naqqash, al-Thalabi, al-Qushayri and other exegetes related, concerning the story of Ali, Fatimah and their servant, a hadith that is neither sound nor established."
+      },
+      {
+        "id": "s49",
+        "kind": "tafsir",
+        "work": "Mafatih al-Ghayb",
+        "author": "Fakhr al-Din al-Razi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Insaan 8 to 10",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=4&tSoraNo=76&tAyahNo=8&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قد ثبت في أصول الفقه أن العبرة بعموم اللفظ لا بخصوص السبب"
+        },
+        "gloss": "It is established in legal theory that what counts is the generality of the wording, not the particular occasion."
+      },
+      {
+        "id": "s63",
+        "kind": "hadith",
+        "work": "Al-Tawhid",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 4, cited at Al-Insaan 3",
+        "url": "https://thaqalayn.com/book/6",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "عرفناه إما آخذا وإما تاركا"
+        },
+        "gloss": "We made him recognize the way, whether he takes it or leaves it."
+      },
+      {
+        "id": "s68",
+        "kind": "hadith",
+        "work": "Ma'ani al-Akhbar",
+        "author": "shaykh muhammad b. ali al-saduq",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "vol. 1, hadith 1, cited at Al-Insaan 20",
+        "url": "https://thaqalayn.com/book/14",
+        "grades": [],
+        "excerpt": {
+          "lang": "ar",
+          "text": "فما يصل إليه رسول ربه إلا بإذن"
+        },
+        "gloss": "The Lord's messenger reaches him only by his permission."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:29:15Z",
+      "audit_attempts": 2,
+      "audited_at": "2026-10-06T18:01:31Z",
+      "assembled_at": "2026-10-06T18:01:49Z"
+    }
+  },
+  "2": {
+    "id": "76:2",
+    "surah": 76,
+    "index": 2,
+    "range": [
+      23,
+      31
+    ],
+    "title": {
+      "en": "Patience, worship, and God's will"
+    },
+    "essay": {
+      "en": "The surah's closing movement turns from the reward of the righteous to the one who must carry the message. It opens by affirming that God Himself sent down the Quran in gradual portions; al-Mizan reads the heavy emphasis of the wording as recording that what came down piece by piece is from God, with no satanic whispering mixed into it and nothing of the self [1]. Majma al-Bayan adds that the verse honors the Prophet, and that, as Ibn Abbas held, the book came verse after verse rather than all at once [2].\n\nBecause what it contains is the Lord's own ruling, al-Mizan notes, the Prophet is told to submit patiently and to obey no sinner or ingrate [1]. Majma relates the view that the sinner was Utba ibn Rabia and the ingrate Walid ibn Mughira, who offered the Prophet wealth and marriage to abandon his mission, and the view from Qatada that the ingrate was Abu Jahl, who threatened him at prayer; but it prefers reading the words as a general prohibition [2]. Then come the calls to worship: to celebrate God's Name morning and evening, which al-Mizan glosses as the prayer kept up morning and evening [1], and to prostrate and glorify Him through part of the long night, which al-Tusi explains as some, not all, of the night [3].\n\nThe passage then turns on the deniers, who love this fleeting life and leave a heavy day behind them. God reminds them that He created them and firmed their frame, and can replace them with others like them whenever He wills; al-Tusi records that 'their joints' has been read as their creation, their joints, or their strength [3]. The surah then names itself a reminder: whoever wishes may take the way to his Lord, which al-Tusi holds proves that a person has the power to act before he acts, against the determinists [3]. Yet the next verse guards this: no one wills unless God wills, which al-Mizan explains removes any illusion that creatures are independent of their Lord [1]. The surah closes by weighing the two outcomes, admitting whom He wishes into His mercy and preparing a painful punishment for the wrongdoers - a settled way, al-Mizan notes, grounded in His knowledge and wisdom, not caprice [1]."
+    },
+    "verses": [
+      {
+        "verse": 23,
+        "heading": {
+          "en": "The gradual revelation"
+        },
+        "narrations": [
+          {
+            "id": "n1",
+            "speaker": "Imam al-Kazim",
+            "addressee": null,
+            "arabic": "قلت: { إِنَّا نَحْنُ نَزَّلْنَا عَلَيْكَ ٱلْقُرْآنَ تَنزِيلاً }؟ قال: \" بولاية علي تنزيلا \" قلت: هذا تنزيل؟ قال: \" لا، ذا تأويل \".",
+            "chain": "Muhammad ibn Yaqub, from Ali ibn Muhammad, from some of our companions, from Ibn Mahbub, from Muhammad ibn al-Fudayl, from Abu al-Hasan al-Madi",
+            "text": {
+              "en": "I asked him about 'Indeed We have sent down to you the Quran in a gradual descent.' He said: 'It was sent down with the wilaya of Ali.' I said: This is the revelation? He said: 'No, that is its interpretation.'"
+            },
+            "source": "s7"
+          }
+        ]
+      },
+      {
+        "verse": 26,
+        "heading": {
+          "en": "The night prayer"
+        },
+        "narrations": [
+          {
+            "id": "n2",
+            "speaker": "Imam al-Rida",
+            "addressee": null,
+            "arabic": "وروي عن الرضا ع أنه سأله أحمد بن محمد عن هذه الآية وقال ما ذلك التسبيح قال صلاة الليل",
+            "chain": null,
+            "text": {
+              "en": "al-Rida was asked by Ahmad ibn Muhammad about this verse: what is that glorification? He said: the night prayer."
+            },
+            "source": "s2"
+          }
+        ]
+      },
+      {
+        "verse": 29,
+        "heading": {
+          "en": "This is a reminder"
+        },
+        "narrations": [
+          {
+            "id": "n3",
+            "speaker": "Imam al-Kazim",
+            "addressee": null,
+            "arabic": "قلت: { إِنَّ هَـٰذِهِ تَذْكِرَةٌ }؟ قال: \" الولاية \" قلت: { يُدْخِلُ مَن يَشَآءُ فِي رَحْمَتِهِ }؟ قال: \" في ولايتنا \".",
+            "chain": "Muhammad ibn Yaqub, from Ali ibn Muhammad, from some of our companions, from Ibn Mahbub, from Muhammad ibn al-Fudayl, from Abu al-Hasan al-Madi",
+            "text": {
+              "en": "I asked about 'This is indeed a reminder.' He said: 'The wilaya.' I asked about 'He admits whomever He wishes into His mercy.' He said: 'Into our wilaya.'"
+            },
+            "source": "s8"
+          }
+        ]
+      },
+      {
+        "verse": 30,
+        "heading": {
+          "en": "No will but God's"
+        },
+        "narrations": [
+          {
+            "id": "n4",
+            "speaker": "Imam al-Hadi",
+            "addressee": null,
+            "arabic": "إن الله تبارك و تعالى جعل قلوب الأئمة (عليهم السلام) موارد لإرادته، و إذا شاء شيئا شاءوه، و هو قوله تعالى: { وَمَا تَشَآءُونَ إِلاَّ أَن يَشَآءَ ٱللَّهُ }",
+            "chain": "Sa'd ibn Abdullah, from Ahmad ibn Muhammad al-Sayyari, from several of our companions, from Abu al-Hasan al-Thalith",
+            "text": {
+              "en": "God, blessed and exalted, made the hearts of the Imams receptacles for His will, and when He wills a thing, they will it; that is His word: 'you will not wish unless it is willed by Allah.'"
+            },
+            "source": "s8"
+          },
+          {
+            "id": "n5",
+            "speaker": "Imam al-Qa'im",
+            "addressee": null,
+            "arabic": "في الخرائج عن القائم عليه السلام انّه سئل عن المفوّضة قال كذبوا بل قلوبنا اوعية لمشيئة الله عزّ وجلّ فاذا شاء شئنا ثمّ تلا هذه الآية",
+            "chain": null,
+            "text": {
+              "en": "al-Qa'im was asked about the Mufawwida. He said: they lied; rather our hearts are vessels for the will of God, so when He wills, we will. Then he recited this verse."
+            },
+            "source": "s9"
+          }
+        ]
+      },
+      {
+        "verse": 31,
+        "heading": {
+          "en": "Into His mercy"
+        },
+        "narrations": [
+          {
+            "id": "n6",
+            "speaker": "Imam al-Sadiq",
+            "addressee": null,
+            "arabic": "عن جعفر بن محمد عليهما السلام في قوله تعالى: { يدخل من يشاء في رحمته } قال: الرحمة علي بن أبي طالب عليه السلام.",
+            "chain": "Ismail ibn Ibrahim and al-Husayn ibn Said, from Jafar ibn Muhammad",
+            "text": {
+              "en": "On 'He admits whomever He wishes into His mercy': he said: the mercy is Ali ibn Abi Talib."
+            },
+            "source": "s11"
+          }
+        ]
+      }
+    ],
+    "perspectives": {
+      "en": "On 'let anyone who wishes take the way toward his Lord' and 'you will not wish unless it is willed by Allah,' al-Tusi reads the first as proof that the servant has real power before he acts, against the determinists, and holds that God's will in the second does not extend to His servants' sins [3]. Razi instead presents the same two verses as the classic arena over which the determinists and the Qadariyya have fought, each side seizing one of them [25]. Suyuti relays a report in which the Prophet condemns the Qadariyya for not confessing, as the verse does, that nothing is willed but by God [28]."
+    },
+    "sources": [
+      {
+        "id": "s1",
+        "kind": "tafsir",
+        "work": "al-Mizan fi Tafsir al-Quran",
+        "author": "Allamah Muhammad Husayn Tabatabai",
+        "tradition": "shia",
+        "tier": "B",
+        "locus": "on Al-Insaan 23 to 31",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=56&tSoraNo=76&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "ولتسجيل أن الذي نزل من القرآن نجوماً متفرقة هو من الله سبحانه لم يداخله نفث شيطاني ولا هو نفساني"
+        },
+        "gloss": "and to record that what came down of the Quran in scattered portions is from God, with no satanic whispering mixed into it and nothing of the self."
+      },
+      {
+        "id": "s2",
+        "kind": "tafsir",
+        "work": "Majma al-Bayan",
+        "author": "Shaykh al-Tabrisi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Insaan 23 to 31",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=3&tSoraNo=76&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "{ ولا تطع منهم } أي من مشركي مكة { آثماً } يعني عتبة بن ربيعة { أو كفوراً } يعني الوليد بن المغيرة"
+        },
+        "gloss": "'Do not obey from among them' means the polytheists of Mecca; 'any sinner' means Utba ibn Rabia, 'or ingrate' means Walid ibn Mughira."
+      },
+      {
+        "id": "s3",
+        "kind": "tafsir",
+        "work": "al-Tibyan fi Tafsir al-Quran",
+        "author": "Shaykh al-Tusi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Insaan 23 to 31",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=39&tSoraNo=76&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "وذلك يدل على انه قادر على ذلك قبل ان يفعله بخلاف ما يقوله المجبرة"
+        },
+        "gloss": "This shows he is able to do so before he acts, contrary to what the determinists say."
+      },
+      {
+        "id": "s7",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Insaan 23",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=76&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "قال: \" بولاية علي تنزيلا \""
+        },
+        "gloss": "He said: with the wilaya of Ali it was sent down."
+      },
+      {
+        "id": "s8",
+        "kind": "hadith",
+        "work": "al-Burhan fi Tafsir al-Quran",
+        "author": "Sayyid Hashim al-Bahrani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Insaan 29 to 31",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=110&tSoraNo=76&tAyahNo=29&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "جعل قلوب الأئمة (عليهم السلام) موارد لإرادته، و إذا شاء شيئا شاءوه"
+        },
+        "gloss": "He made the hearts of the Imams receptacles for His will, and when He wills a thing, they will it."
+      },
+      {
+        "id": "s9",
+        "kind": "hadith",
+        "work": "Tafsir al-Safi",
+        "author": "Fayd Kashani",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Insaan 23 to 31",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=41&tSoraNo=76&tAyahNo=23&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "في الخرائج عن القائم عليه السلام انّه سئل عن المفوّضة قال كذبوا بل قلوبنا اوعية لمشيئة الله"
+        },
+        "gloss": "In al-Khara'ij, from al-Qa'im, asked about the Mufawwida: he said they lied; rather our hearts are vessels for the will of God."
+      },
+      {
+        "id": "s11",
+        "kind": "hadith",
+        "work": "Tafsir Furat al-Kufi",
+        "author": "Furat ibn Ibrahim al-Kufi",
+        "tradition": "shia",
+        "tier": "A",
+        "locus": "on Al-Insaan 31",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=45&tSoraNo=76&tAyahNo=31&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "في قوله تعالى: { يدخل من يشاء في رحمته } قال: الرحمة علي بن أبي طالب عليه السلام"
+        },
+        "gloss": "On 'He admits whomever He wishes into His mercy': he said the mercy is Ali ibn Abi Talib."
+      },
+      {
+        "id": "s25",
+        "kind": "tafsir",
+        "work": "Mafatih al-Ghayb",
+        "author": "Fakhr al-Din al-Razi",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Insaan 29 to 30",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=4&tSoraNo=76&tAyahNo=29&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "واعلم أن هذه الآية من جملة الآيات التي تلاطمت فيها أمواج الجبر والقدر"
+        },
+        "gloss": "Know that this verse is among those over which the waves of determinism and free-will have clashed."
+      },
+      {
+        "id": "s28",
+        "kind": "tafsir",
+        "work": "al-Durr al-Manthur",
+        "author": "Jalal al-Din al-Suyuti",
+        "tradition": "sunni",
+        "tier": "A",
+        "locus": "on Al-Insaan 24 to 31",
+        "url": "https://www.altafsir.com/Tafasir.asp?tMadhNo=0&tTafsirNo=26&tSoraNo=76&tAyahNo=24&tDisplay=yes&UserProfile=0&LanguageId=1&Page=1",
+        "excerpt": {
+          "lang": "ar",
+          "text": "لعن الله القدرية، وقد فعل"
+        },
+        "gloss": "God has cursed the Qadariyya, and it has come to pass."
+      }
+    ],
+    "status": {
+      "gathered_at": "2026-10-06T17:24:12Z",
+      "audit_attempts": 1,
+      "audited_at": "2026-10-06T17:40:08Z",
+      "assembled_at": "2026-10-06T18:01:49Z"
+    }
+  }
+}

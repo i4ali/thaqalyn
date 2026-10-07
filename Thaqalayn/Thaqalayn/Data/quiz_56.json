@@ -1,0 +1,485 @@
+{
+  "1": {
+    "id": "56:1",
+    "surah": 56,
+    "index": 1,
+    "range": [
+      1,
+      38
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "whoSaid",
+        "verse": 1,
+        "prompt": {
+          "en": "\"Lowering: by God, it casts the enemies of God down into the Fire. Exalting: by God, it raises the friends of God up to the Garden.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "the Prophet"
+          },
+          {
+            "en": "Imam al-Sajjad"
+          },
+          {
+            "en": "Imam al-Baqir"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "Imam al-Sajjad glosses the Hour's lowering and exalting, saying by God it casts the enemies of God down into the Fire and raises His friends up to the Garden."
+        },
+        "anchor": {
+          "where": "verses.1.narrations.n1",
+          "quote": "Lowering: by God, it casts the enemies of God down into the Fire. Exalting: by God, it raises the friends of God up to the Garden."
+        }
+      },
+      {
+        "id": "q2",
+        "type": "trueFalse",
+        "verse": 7,
+        "prompt": {
+          "en": "According to the passage, the sorting into three groups at the Hour is a division addressed to all people."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay calls the three-way sorting at the Hour a division addressed to all people, not a narrower group, so the statement is true."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "mankind is sorted into three: 'you will be three groups,' a division addressed to all people"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "multipleChoice",
+        "verse": 10,
+        "prompt": {
+          "en": "According to the perspectives, what do the Shia and Sunni readings of the Foremost have in common?"
+        },
+        "options": [
+          {
+            "en": "Both record that Ali preceded all others to the Prophet."
+          },
+          {
+            "en": "Both deny any earlier nation had a foremost believer."
+          },
+          {
+            "en": "Both deny that Ali has any parallel among earlier believers."
+          },
+          {
+            "en": "Both place the Foremost outside the gardens of bliss."
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The perspectives note the two readings are not wholly apart: even Ibn Kathir records that Ali preceded all others to the Prophet, like Joshua to Moses and the Ya-Sin believer to Jesus."
+        },
+        "anchor": {
+          "where": "perspectives",
+          "quote": "Ibn Kathir likewise records the report that Ali preceded all others to the Prophet, as Joshua did to Moses and the believer of Ya-Sin to Jesus"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 33,
+        "prompt": {
+          "en": "O Nasr, by God it is not as people suppose. It is only ____ and what issues from it."
+        },
+        "options": [
+          {
+            "en": "mercy"
+          },
+          {
+            "en": "provision"
+          },
+          {
+            "en": "worship"
+          },
+          {
+            "en": "knowledge"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam al-Sadiq tells Nasr the fruits neither cut off nor forbidden are not as people suppose, but stand for knowledge and what issues from it."
+        },
+        "anchor": {
+          "where": "verses.33.narrations.n7",
+          "quote": "O Nasr, by God it is not as people suppose. It is only knowledge and what issues from it."
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 38,
+        "prompt": {
+          "en": "According to the essay's close, whose fate does the passage hold back for later in the surah?"
+        },
+        "options": [
+          {
+            "en": "The People of the Right Hand"
+          },
+          {
+            "en": "The People of the Left Hand"
+          },
+          {
+            "en": "The Foremost Ones"
+          },
+          {
+            "en": "The immortal youths"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "The essay's close says two ranks are fully drawn while the fate of the People of the Left Hand is held back for later in the surah."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "It closes with two of the three ranks fully drawn, the Garden's bliss set against the certainty of the Hour, while the fate of the Left Hand is held back for later in the surah."
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:32:06Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:33:19Z",
+      "assembled_at": "2026-10-06T12:43:30Z"
+    }
+  },
+  "2": {
+    "id": "56:2",
+    "surah": 56,
+    "index": 2,
+    "range": [
+      39,
+      74
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 42,
+        "prompt": {
+          "en": "According to the essay, what awaits the People of the Left?"
+        },
+        "options": [
+          {
+            "en": "A scorching wind, boiling water, and dense black smoke"
+          },
+          {
+            "en": "Cool shade and beneficial springs"
+          },
+          {
+            "en": "A reminder and a boon for the desert-dwellers"
+          },
+          {
+            "en": "Gardens prepared for the former generations"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay's refrain voices horror at the People of the Left's fate, setting their torment as a scorching wind, boiling water, and the shadow of a dense black smoke, neither cool nor beneficial."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "a scorching wind, boiling water, and the shadow of a dense black smoke, neither cool nor beneficial"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "fillGap",
+        "verse": 57,
+        "prompt": {
+          "en": "From here the surah presses the ____ the deniers rejected."
+        },
+        "options": [
+          {
+            "en": "mercy"
+          },
+          {
+            "en": "warning"
+          },
+          {
+            "en": "proof"
+          },
+          {
+            "en": "comfort"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "The essay says that from here the surah presses the proof the deniers rejected, setting creation's signs - the seed, the crop, the water, the fire - before them as evidence that God can raise the dead."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "From here the surah presses the proof the deniers rejected"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 62,
+        "prompt": {
+          "en": "\"It is utterly astonishing that someone denies the other genesis while he sees the first genesis.\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam al-Sajjad"
+          },
+          {
+            "en": "Imam Ali"
+          },
+          {
+            "en": "the Prophet"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Reflecting on the first genesis, Imam al-Sajjad finds it utterly astonishing that anyone who sees the first creation could still deny the next one, the resurrection."
+        },
+        "anchor": {
+          "where": "verses.62.narrations.n4",
+          "quote": "It is utterly astonishing that someone denies the other genesis while he sees the first genesis"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "multipleChoice",
+        "verse": 73,
+        "prompt": {
+          "en": "According to the passage, how does the worldly fire relate to the fire of Hell?"
+        },
+        "options": [
+          {
+            "en": "It is a separate fire with no link to Hell"
+          },
+          {
+            "en": "It is hotter than the fire of Hell"
+          },
+          {
+            "en": "It is the same fire the People of the Left endure"
+          },
+          {
+            "en": "It is one part of seventy parts of Hell's fire"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "Imam al-Sadiq says the fire people kindle is one part of seventy parts of the fire of Hell, quenched with water seventy times, far weaker than Hell's fire itself."
+        },
+        "anchor": {
+          "where": "verses.73.narrations.n6",
+          "quote": "This fire of yours is one part of seventy parts of the fire of Hell"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "trueFalse",
+        "verse": 74,
+        "prompt": {
+          "en": "According to the essay, the passage closes by addressing the deniers one last time."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "False. The essay says that at the close God turns away from the deniers to His Prophet, commanding him to celebrate the Name of his Lord, the All-supreme."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "At the close God turns from the deniers to His Prophet"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:31:58Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:32:54Z",
+      "assembled_at": "2026-10-06T12:43:30Z"
+    }
+  },
+  "3": {
+    "id": "56:3",
+    "surah": 56,
+    "index": 3,
+    "range": [
+      75,
+      96
+    ],
+    "questions": [
+      {
+        "id": "q1",
+        "type": "multipleChoice",
+        "verse": 75,
+        "prompt": {
+          "en": "According to the essay, al-Tabrisi gives two readings of what the mighty oath is sworn by. Which pair does he give?"
+        },
+        "options": [
+          {
+            "en": "Risings and settings of the stars, or the Quran's descent in portions"
+          },
+          {
+            "en": "The guarded Book, or the Lord of all the worlds"
+          },
+          {
+            "en": "The deathbed, or the three ranks at death"
+          },
+          {
+            "en": "The age of ignorance, or the places of worship"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The essay reports al-Tabrisi offering two readings of the oath: the risings and settings of the stars, or the Quran's descent to earth in separate portions."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "al-Tabrisi reports two readings of what is sworn by: the risings and settings of the stars, or the Quran's descent in separate portions"
+        }
+      },
+      {
+        "id": "q2",
+        "type": "trueFalse",
+        "verse": 82,
+        "prompt": {
+          "en": "According to the narration, Ali recited this verse so it reads that people turn their thanksgiving into a denial."
+        },
+        "options": [
+          {
+            "en": "True"
+          },
+          {
+            "en": "False"
+          }
+        ],
+        "answer": 0,
+        "explanation": {
+          "en": "The narration reports Ali reciting al-Waqia with the wording that people make their thanksgiving a denial, a reading he said he learned from hearing the Messenger recite it."
+        },
+        "anchor": {
+          "where": "verses.82.narrations.n5",
+          "quote": "Ali led them reciting al-Waqia as 'you make your thanksgiving a denial.'"
+        }
+      },
+      {
+        "id": "q3",
+        "type": "whoSaid",
+        "verse": 83,
+        "prompt": {
+          "en": "\"When the dying person's soul reaches the throat and he is a believer, he sees his place in Paradise and says, 'Return me to the world.'\" Who said this?"
+        },
+        "options": [
+          {
+            "en": "Imam al-Baqir"
+          },
+          {
+            "en": "Imam al-Kazim"
+          },
+          {
+            "en": "Imam al-Sadiq"
+          },
+          {
+            "en": "Imam Ali"
+          }
+        ],
+        "answer": 2,
+        "explanation": {
+          "en": "In this narration Imam al-Sadiq tells Abu Basir that the dying believer sees his place in Paradise and asks to return, but is told there is no way back."
+        },
+        "anchor": {
+          "where": "verses.83.narrations.n6",
+          "quote": "When the dying person's soul reaches the throat and he is a believer, he sees his place in Paradise and says, 'Return me to the world so I may tell its people what I see.'"
+        }
+      },
+      {
+        "id": "q4",
+        "type": "fillGap",
+        "verse": 88,
+        "prompt": {
+          "en": "Asked about 'the impugners, the astray ones,' he said: the deniers of the ____."
+        },
+        "options": [
+          {
+            "en": "Prophet"
+          },
+          {
+            "en": "Imam"
+          },
+          {
+            "en": "Quran"
+          },
+          {
+            "en": "truth"
+          }
+        ],
+        "answer": 1,
+        "explanation": {
+          "en": "Imam al-Baqir glossed the three groups by their link to the Imam, naming the impugners who go astray as the deniers of the Imam, the brought-near as those with a station before him."
+        },
+        "anchor": {
+          "where": "verses.88.narrations.n9",
+          "quote": "Asked about 'the impugners, the astray ones,' he said: the deniers of the Imam"
+        }
+      },
+      {
+        "id": "q5",
+        "type": "multipleChoice",
+        "verse": 90,
+        "prompt": {
+          "en": "According to the essay's close, how does al-Tabrisi read the three ranks of ease, peace, and boiling water?"
+        },
+        "options": [
+          {
+            "en": "As an oath God swears by the setting stars"
+          },
+          {
+            "en": "As readings of the guarded Book's safekeeping"
+          },
+          {
+            "en": "As God drawing the soul out through His angels"
+          },
+          {
+            "en": "As the state of each soul at the moment of death"
+          }
+        ],
+        "answer": 3,
+        "explanation": {
+          "en": "The essay's close reports al-Tabrisi reading the three outcomes, from ease to boiling water, as describing the state of each soul at the very moment of death."
+        },
+        "anchor": {
+          "where": "essay",
+          "quote": "al-Tabrisi reads these as the state of each soul at the very moment of death"
+        }
+      }
+    ],
+    "status": {
+      "written_at": "2026-10-06T12:41:53Z",
+      "review_attempts": 1,
+      "reviewed_at": "2026-10-06T12:43:16Z",
+      "assembled_at": "2026-10-06T12:43:30Z"
+    }
+  }
+}
